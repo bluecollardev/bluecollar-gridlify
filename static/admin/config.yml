@@ -38,6 +38,24 @@ collections:
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
 
+      - name: "hero"
+          label: "Heros"
+          file: "src/data/Hero.yml"
+          fields:
+            - { label: "Title", name: "title", widget: "string", default: "Hero" }
+            - name: "items"
+              label: "Items"
+              widget: "list"
+              fields:
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Subtitle", name: "subtitle", widget: "string" }
+                - { label: "Description", name: "description", widget: "string" }
+                - { label: "Link", name: "link", widget: "string" }
+                - { label: "LinkText", name: "linkText", widget: "string" }
+                - { label: "Image", name: "imagePath", widget: "text" }
+                - { label: "Caption", name: "imageCaption", widget: "text" }
+                - { label: "Sub-Caption", name: "subCaption", widget: "text" }
+
       - name: "company"
         label: "Company"
         file: "src/data/Company.yml"
