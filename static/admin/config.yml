@@ -34,7 +34,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
-              - { label: "Meta Description", name: "metaDescription", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "text" }
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
 
@@ -49,12 +49,12 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
               - { label: "Link", name: "link", widget: "string" }
               - { label: "LinkText", name: "linkText", widget: "string" }
-              - { label: "Image", name: "imagePath", widget: "text" }
-              - { label: "Caption", name: "imageCaption", widget: "text" }
-              - { label: "Sub-Caption", name: "subCaption", widget: "text" }
+              - { label: "Image", name: "imagePath", widget: "string" }
+              - { label: "Caption", name: "imageCaption", widget: "string" }
+              - { label: "Sub-Caption", name: "subCaption", widget: "string" }
 
       - name: "company"
         label: "Company"
@@ -67,7 +67,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
-              - { label: "Meta Description", name: "metaDescription", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "text" }
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
 
@@ -82,7 +82,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
-              - { label: "Meta Description", name: "metaDescription", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "text" }
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
 
@@ -97,7 +97,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
-              - { label: "Meta Description", name: "metaDescription", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "text" }
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
 
@@ -107,7 +107,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Contact" }
           - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
-          - { label: "Meta Description", name: "metaDescription", widget: "string" }
+          - { label: "Meta Description", name: "metaDescription", widget: "text" }
           - { label: "Summary", name: "summary", widget: "text" }
           - { label: "Description", name: "description", widget: "text" }
 
@@ -129,9 +129,9 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
-              - { label: "Meta Description", name: "metaDescription", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "text" }
               - { label: "Summary", name: "summary", widget: "text" }
-              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image", name: "image", widget: "string" }
 
       - name: "socialmedia"
         label: "Social Media"
