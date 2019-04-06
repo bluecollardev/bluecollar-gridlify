@@ -111,13 +111,6 @@ collections:
           - { label: "Summary", name: "summary", widget: "text" }
           - { label: "Description", name: "description", widget: "text" }
 
-      - name: "hero"
-        label: "Hero"
-        file: "src/data/Hero.yml"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-
       - name: "portfolio"
         label: "Portfolio"
         file: "src/data/Portfolio.yml"
