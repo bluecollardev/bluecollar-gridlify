@@ -9,7 +9,7 @@
       </li>
       <li class="Header__Profile__Image">
         <g-link to="/">
-          <g-image src="~/assets/images/gridsome.png"/>
+          <g-image src="~/assets//images/gridsome.png"/>
         </g-link>
       </li>
       <li style="text-align: right">
@@ -23,7 +23,7 @@
   <header class="ampstart-headerbar fixed flex sm-flex-justify-start items-center top-0 left-0 right-0">
     <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger md-hide lg-hide pr2">☰</div>
     <a href="/" class="flex-auto flex xs-flex-justify-center">
-      <img class="logo" src="images/firebrand-logo.png" />
+      <img class="logo" src="/images/firebrand-logo.png" />
     </a>
     <nav class="space-left ampstart-headerbar-nav ampstart-nav xs-hide sm-hide flex flex-center">
       <ul class="list-reset center m0 p0 flex flex-auto nowrap">

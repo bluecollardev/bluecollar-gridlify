@@ -28,7 +28,7 @@
         <!-- Position relatively, or absolute positioning of the caption will fail -->
         <div class="relative flex-basis-half sm-flex flex-justify-end">
           <div class="content-block">
-            <img class="banner-image right" src="images/woman-in-casual-office_4460x4460.jpg" />
+            <img class="banner-image right" src="/images/woman-in-casual-office_4460x4460.jpg" />
           </div>
         </div>
 
@@ -135,7 +135,7 @@
           <div class="space-all">
             <div class="sm-flex flex-column flex-end">
               <div class="content-block">
-                <img class="bg-white image-fill" src="images/lucas-lopatka-profile.png" />
+                <img class="bg-white image-fill" src="/images/lucas-lopatka-profile.png" />
                 <div class="pad-all">
                   <div class="space-bottom-half g-help-with-digital-marketing">
                     <p class="g-pstyle9 text-center">Lucas Lopatka, B. Sc.</p>
@@ -154,7 +154,7 @@
           <div class="space-all">
             <div class="sm-flex flex-column flex-start">
               <div class="content-block">
-                <img class="bg-white image-fill" src="images/businessman-580b585b2edbce24c47b29f8.png" />
+                <img class="bg-white image-fill" src="/images/businessman-580b585b2edbce24c47b29f8.png" />
                 <div class="pad-all">
                   <div class="space-bottom-half g-help-with-digital-marketing">
                     <p class="g-pstyle9 text-center">Chris Shannon, MBA</p>

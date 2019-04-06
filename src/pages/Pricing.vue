@@ -17,7 +17,7 @@
 
       <!-- Position relatively, or absolute positioning of the caption will fail -->
       <div class="relative flex-basis-half">
-        <img class="banner-image right" src="images/hero-julia.png" />
+        <img class="banner-image right" src="/images/hero-julia.png" />
         <div class="figure-caption figure-caption-right bg-cherry g-hero">
           <p class="g-pstyle4">Julia</p>
           <p class="g-pstyle5">Onboarding at Firebrand</p>

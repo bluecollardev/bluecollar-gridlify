@@ -28,7 +28,7 @@
 
       <!-- Position relatively, or absolute positioning of the caption will fail -->
       <div class="relative flex-basis-half">
-        <img class="banner-image right" src="images/hero-realtor.png" />
+        <img class="banner-image right" src="/images/hero-realtor.png" />
         <div class="figure-caption figure-caption-right bg-cherry g-hero">
           <p class="g-pstyle4">Vicki Li</p>
           <p class="g-pstyle5">Realtor</p>
@@ -49,7 +49,7 @@
     <section class="sm-flex pad-top xs-hide">
       <!-- Position relatively, or absolute positioning of the caption will fail -->
       <div class="relative flex-basis-half">
-        <img class="banner-image left" src="images/how-does-it-work-person.png" />
+        <img class="banner-image left" src="/images/how-does-it-work-person.png" />
         <div class="figure-caption figure-caption-left bg-cherry g-how-does-it-work">
           <p class="g-pstyle4">Thomas</p>
           <p class="g-pstyle5">Onboarding at Firebrand</p>
@@ -86,7 +86,7 @@
 
       <div class="sm-flex flex-column flex-center">
         <div class="bg-salmon content-block">
-          <img class="bg-white banner-image" src="images/digital-marketing-testimonial-person.png" />
+          <img class="bg-white banner-image" src="/images/digital-marketing-testimonial-person.png" />
           <div class="pad-all">
             <div class="space-bottom-half g-help-with-digital-marketing">
               <p class="g-pstyle6">Firebrand has been hugely beneficial to our business.  They handle all our online marketing &ndash; the results have been amazing!</p>
@@ -140,7 +140,7 @@
             <p class="g-pstyle10">Cafe Leva / Caffetech.com</p>
           </div>
         </div>
-        <img src="images/services-card-testimonial-person-top.png" />
+        <img src="/images/services-card-testimonial-person-top.png" />
       </div>
     </section>
 
@@ -155,7 +155,7 @@
             <p class="g-pstyle10">RE/MAX Elite (Edmonton)</p>
           </div>
         </div>
-        <img src="images/services-card-testimonial-person-bottom.png" />
+        <img src="/images/services-card-testimonial-person-bottom.png" />
       </div>
 
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
@@ -245,7 +245,7 @@
       </div>
       <div class="flex-basis-half">
         <!-- TODO: Conditionally use image-fill OR banner-image -->
-        <img class="image-fill banner-image" src="images/get-started-feature-image.png" />
+        <img class="image-fill banner-image" src="/images/get-started-feature-image.png" />
       </div>
     </section>
     <Footer/>

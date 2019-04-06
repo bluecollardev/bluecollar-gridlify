@@ -5,7 +5,7 @@
     <ul class="Hero__Content__Icons">
       <li v-for="item in SocialMedia.items" :key="item.name">
         <a :href="item.link">
-          <g-image immediate="true" :alt="item.name" :src="'/images/' + item.name + '.svg'" />
+          <g-image immediate="true" :alt="item.name" :src="'//images/' + item.name + '.svg'" />
         </a>
       </li>
     </ul>

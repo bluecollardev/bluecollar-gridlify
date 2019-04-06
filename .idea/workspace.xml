@@ -2,162 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44dce8b-5746-448e-a137-25611bb2caf1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/css/firebrand/basscss.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/css/firebrand/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Company.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Contact.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Pricing.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Services.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/35mm-aerial-analog-1105766.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/Listerine-Amp---smaller.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/accelerated-mobile-pages-info-graphic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/accelerated-mobile-pages.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/adult-business-chart-1181346.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/adults-collaborate-collaboration-1036641.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/andrea.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/artistic-thinking-512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/asian-businesswoman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/businessman-580b585b2edbce24c47b29f8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/businessman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/casestudy-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/digital-marketing-icon-and-sphere-with-navigation-vector-19462055.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/digital-marketing-testimonial-person.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/facebook-canvas-ad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/fb-home_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/firebrand-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/get-started-feature-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/google-accelerated-mobile-pages-iPhone.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/greg-and-steph-jimmy-poblanos.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/hero-julia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/hero-michael.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/hero-old-businessman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/hero-realtor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/how-does-it-work-person.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/idea-filter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/instant-experiences.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/joe-parottino.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/lucas-lopatka-full.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/lucas-lopatka-profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/lucas-lopatka-profile.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/lucas-lopatka.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/modern-business-woman-portrait_4460x4460.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/official-amp-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/services-card-testimonial-background-bottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/services-card-testimonial-background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/services-card-testimonial-person-bottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/services-card-testimonial-person-top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/authentic-tapas.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/authentic-tapas@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/bake-traditional-sweet-bread.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/bake-traditional-sweet-bread@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/beer-excursion-mexico-city.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/beer-excursion-mexico-city@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/best-coffee-mexico.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/best-coffee-mexico@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/bike-around-volcano.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/bike-around-volcano@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/dinner-in-sky.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/dinner-in-sky@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/discover-electronic-scene.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/discover-electronic-scene@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/golfing-with-pro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/golfing-with-pro@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/kait-loggins-294474.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/kait-loggins-294474@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/learn-photography.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/learn-photography@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/mexican-meat-market.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/mexican-meat-market@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/motorcycle-coast.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/motorcycle-coast@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/national-museum-archeologist.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/national-museum-archeologist@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/parque-zoologico.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/parque-zoologico@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/roads-of-city.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/roads-of-city@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/run-through-mexico.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/run-through-mexico@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/sail-around-coast.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/sail-around-coast@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/skateboard-around-city.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/skateboard-around-city@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/surf-day.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/surf-day@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/swim-with-dolphins.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/swim-with-dolphins@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/top-fashion-instagram.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/top-fashion-instagram@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/tour-beaches-cancun.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/activity/tour-beaches-cancun@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/blogpost-thumbnail.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/city/barcelona.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/city/cancun.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/city/chicago.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/city/la-paz.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/city/mexico-city.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/city/new-york.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/city/oaxaca.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/city/paris.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/city/reykjavik.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/city/tijuana.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/city/tokyo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/hero-1-preview.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/hero-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/hero-2-preview.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/hero-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/hero-3-preview.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/hero-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/boat.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/bus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/calendar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/caret-down-small.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/checkmark-purple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/checkmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/cocktail.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/cutlery.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/filters.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/guitar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/heart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/jacket.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/map-pin-outline-gray.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/map-pin-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/map-pin-transparent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/map-pin.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/menu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/moon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/paintbrush.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/pine.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/plane-landing-transparent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/plane-landing.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/plane-taking-off-transparent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/plane-taking-off.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/run.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/sad-face-gray.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/star-green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/star-silver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/template/icon/star.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/what-is-google-amp-facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/woman-in-casual-office_4460x4460.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gridsome.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gridsome.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/style.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Blog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Portfolio.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Portfolio.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/Portfolio.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Portfolio.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Company.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Company.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/BlogPost.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/BlogPost.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Pricing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Pricing.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Services.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Services.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -168,135 +21,249 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <splitter split-orientation="horizontal" split-proportion="0.36607143">
+            <split-first>
+              <leaf>
+                <file pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/blocks.scss">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="405">
+                        <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-first>
+            <split-second>
+              <splitter split-orientation="horizontal" split-proportion="0.5">
+                <split-first>
+                  <leaf>
+                    <file pinned="false" current-in-tab="false">
+                      <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/theme-typography.scss">
+                        <provider selected="true" editor-type-id="text-editor">
+                          <state relative-caret-position="262">
+                            <caret line="62" column="11" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+                          </state>
+                        </provider>
+                      </entry>
+                    </file>
+                    <file pinned="false" current-in-tab="false">
+                      <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/text-utils.scss">
+                        <provider selected="true" editor-type-id="text-editor">
+                          <state relative-caret-position="150">
+                            <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+                          </state>
+                        </provider>
+                      </entry>
+                    </file>
+                    <file pinned="false" current-in-tab="true">
+                      <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/style-colors.scss">
+                        <provider selected="true" editor-type-id="text-editor">
+                          <state relative-caret-position="675">
+                            <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+                          </state>
+                        </provider>
+                      </entry>
+                    </file>
+                  </leaf>
+                </split-first>
+                <split-second>
+                  <leaf>
+                    <file pinned="false" current-in-tab="true">
+                      <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/image-utils.scss">
+                        <provider selected="true" editor-type-id="text-editor">
+                          <state relative-caret-position="150">
+                            <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+                          </state>
+                        </provider>
+                      </entry>
+                    </file>
+                  </leaf>
+                </split-second>
+              </splitter>
+            </split-second>
+          </splitter>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Index.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3735">
-              <caret line="249" column="14" selection-start-line="249" selection-start-column="14" selection-end-line="249" selection-end-column="14" />
-              <folding>
-                <element signature="e#162#207#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/About.yml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/Portfolio.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Header.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Services.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-              <folding>
-                <element signature="e#2115#2122#0" expanded="true" />
-                <element signature="e#2229#2235#1" expanded="true" />
-                <element signature="e#2289#2296#0" expanded="true" />
-                <element signature="e#2306#2313#0" expanded="true" />
-                <element signature="e#3679#3686#0" expanded="true" />
-                <element signature="e#3697#3704#0" expanded="true" />
-                <element signature="e#4300#4307#0" expanded="true" />
-                <element signature="e#5268#5275#0" expanded="true" />
-                <element signature="e#5928#5935#0" expanded="true" />
-                <element signature="e#6042#6048#1" expanded="true" />
-                <element signature="e#6102#6109#0" expanded="true" />
-                <element signature="e#6119#6126#0" expanded="true" />
-                <element signature="e#6785#6791#1" expanded="true" />
-                <element signature="e#8366#8373#0" expanded="true" />
-                <element signature="e#8397#8404#0" expanded="true" />
-                <element signature="e#8958#8965#0" expanded="true" />
-                <element signature="e#8996#9002#1" expanded="true" />
-                <element signature="e#10070#10077#0" expanded="true" />
-                <element signature="e#10083#10090#0" expanded="true" />
-                <element signature="e#10191#10198#0" expanded="true" />
-                <element signature="e#10307#10314#0" expanded="true" />
-                <element signature="e#10333#10340#0" expanded="true" />
-                <element signature="e#11919#11926#0" expanded="true" />
-                <element signature="e#13500#13506#1" expanded="true" />
-                <element signature="e#13535#13542#0" expanded="true" />
-                <element signature="e#14218#14225#0" expanded="true" />
-                <element signature="e#14776#14783#0" expanded="true" />
-                <element signature="e#14815#14822#0" expanded="true" />
-                <element signature="e#15189#15196#0" expanded="true" />
-                <element signature="e#15240#15247#0" expanded="true" />
-                <element signature="e#15275#15282#0" expanded="true" />
-                <element signature="e#15996#16002#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Company.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="156" column="69" selection-start-line="156" selection-start-column="69" selection-end-line="156" selection-end-column="69" />
-              <folding>
-                <element signature="e#1836#1842#1" expanded="true" />
-                <element signature="e#2212#2218#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Pricing.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="785" column="44" lean-forward="true" selection-start-line="785" selection-start-column="44" selection-end-line="785" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/Contact.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Footer.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-              <folding>
-                <element signature="e#520#526#1" expanded="true" />
-                <element signature="e#650#656#1" expanded="true" />
-                <element signature="e#778#784#1" expanded="true" />
-                <element signature="e#904#910#1" expanded="true" />
-                <element signature="e#1406#1412#1" expanded="true" />
-                <element signature="e#1498#1504#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.49605057">
+      <split-first>
+        <splitter split-orientation="horizontal" split-proportion="0.5217853">
+          <split-first>
+            <leaf>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/pages/Index.vue">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="3735">
+                      <caret line="249" column="14" selection-start-line="249" selection-start-column="14" selection-end-line="249" selection-end-column="14" />
+                      <folding>
+                        <element signature="e#162#207#0" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/pages/Services.vue">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="116">
+                      <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+                      <folding>
+                        <element signature="e#2115#2122#0" expanded="true" />
+                        <element signature="e#2229#2235#1" expanded="true" />
+                        <element signature="e#2289#2296#0" expanded="true" />
+                        <element signature="e#2306#2313#0" expanded="true" />
+                        <element signature="e#3679#3686#0" expanded="true" />
+                        <element signature="e#3697#3704#0" expanded="true" />
+                        <element signature="e#4300#4307#0" expanded="true" />
+                        <element signature="e#5268#5275#0" expanded="true" />
+                        <element signature="e#5928#5935#0" expanded="true" />
+                        <element signature="e#6042#6048#1" expanded="true" />
+                        <element signature="e#6102#6109#0" expanded="true" />
+                        <element signature="e#6119#6126#0" expanded="true" />
+                        <element signature="e#6785#6791#1" expanded="true" />
+                        <element signature="e#8366#8373#0" expanded="true" />
+                        <element signature="e#8397#8404#0" expanded="true" />
+                        <element signature="e#8958#8965#0" expanded="true" />
+                        <element signature="e#8996#9002#1" expanded="true" />
+                        <element signature="e#10070#10077#0" expanded="true" />
+                        <element signature="e#10083#10090#0" expanded="true" />
+                        <element signature="e#10191#10198#0" expanded="true" />
+                        <element signature="e#10307#10314#0" expanded="true" />
+                        <element signature="e#10333#10340#0" expanded="true" />
+                        <element signature="e#11919#11926#0" expanded="true" />
+                        <element signature="e#13500#13506#1" expanded="true" />
+                        <element signature="e#13535#13542#0" expanded="true" />
+                        <element signature="e#14218#14225#0" expanded="true" />
+                        <element signature="e#14776#14783#0" expanded="true" />
+                        <element signature="e#14815#14822#0" expanded="true" />
+                        <element signature="e#15189#15196#0" expanded="true" />
+                        <element signature="e#15240#15247#0" expanded="true" />
+                        <element signature="e#15275#15282#0" expanded="true" />
+                        <element signature="e#15996#16002#1" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/pages/Company.vue">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="274">
+                      <caret line="156" column="70" selection-start-line="156" selection-start-column="70" selection-end-line="156" selection-end-column="70" />
+                      <folding>
+                        <element signature="e#1836#1842#1" expanded="true" />
+                        <element signature="e#2212#2218#1" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/pages/Pricing.vue">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="48">
+                      <caret line="785" column="44" selection-start-line="785" selection-start-column="44" selection-end-line="785" selection-end-column="44" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/pages/Contact.vue">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="334">
+                      <caret line="80" column="49" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/elements/cards.scss">
+                  <provider selected="true" editor-type-id="text-editor" />
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/elements/buttons.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="225">
+                      <caret line="15" selection-start-line="15" selection-end-line="15" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/theme.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="227">
+                      <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/style.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="165">
+                      <caret line="11" selection-start-line="11" selection-end-line="11" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/responsive.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="241">
+                      <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
+      </split-first>
+      <split-second>
+        <splitter split-orientation="horizontal" split-proportion="0.57156676">
+          <split-first>
+            <leaf>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/flex-utils.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="220">
+                      <caret line="34" selection-start-line="34" selection-end-line="34" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/spacing-utils.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="355">
+                      <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -311,21 +278,25 @@
       <find>&lt;/style</find>
       <find>container</find>
       <find>max-width: 64em;</find>
-      <find>static/images/</find>
       <find>routerLink</find>
       <find>./assets/images</find>
+      <find>static/images/</find>
+      <find>images/</find>
+      <find>~images/</find>
     </findStrings>
     <replaceStrings>
       <replace>static/images/</replace>
       <replace>images/</replace>
       <replace>href</replace>
       <replace>images</replace>
+      <replace>~images/</replace>
+      <replace>/images/</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
-      <dir>$PROJECT_DIR$/src/assets</dir>
       <dir>$PROJECT_DIR$/src/components</dir>
       <dir>$PROJECT_DIR$/src/assets/css/firebrand/scss</dir>
+      <dir>$PROJECT_DIR$/src/assets</dir>
       <dir>$PROJECT_DIR$/src</dir>
     </dirStrings>
   </component>
@@ -395,34 +366,6 @@
               <item name="firebrand-gridlify" type="b2602c69:ProjectViewProjectNode" />
               <item name="firebrand-gridlify" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="firebrand-gridlify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="firebrand-gridlify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="firebrand-gridlify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="firebrand-gridlify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="firebrand" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="firebrand-gridlify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="firebrand-gridlify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="firebrand-gridlify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="firebrand-gridlify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -470,15 +413,15 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/assets/css/firebrand/scss" />
-      <recent name="$PROJECT_DIR$/static/images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/assets/css/firebrand" />
       <recent name="$PROJECT_DIR$/src/assets/css" />
       <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/css/firebrand/scss" />
+      <recent name="$PROJECT_DIR$/static/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -508,27 +451,27 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13845000" />
+    <option name="totallyTimeSpent" value="13979000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="963" extended-state="0" />
+    <frame x="-1921" y="24" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="npm" side_tool="true" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15060559" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15060559" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32920355" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.4270953" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.38549224" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32920355" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -538,21 +481,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/data/Hero.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/2016-09-14-god-zilla.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/sectional.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1475">
@@ -574,122 +502,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/ampstart-base/base-page.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/style.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/components/dropdown/dropdown-vars.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/components/dropdown/dropdown.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/components/dropdown/dropdown.snip.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/ampstart-base/base-page.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/ampstart-base/base-page-vars.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/page-vars.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1393" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/page.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="44" column="2" lean-forward="true" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/_pages.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/template.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/elements/_container.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/elements/_inline-list.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/elements/_date-input.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/elements/_btn.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/vars.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/typography.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/template-results.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/core.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/ampstart-base/base-page.css" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/core.css" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/style.sass" />
+    <entry file="file://$PROJECT_DIR$/webpack.config.js" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/components/dropdown/dropdown-vars.css" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/components/dropdown/dropdown.css" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/components/dropdown/dropdown.snip.html" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/ampstart-base/base-page.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/ampstart-base/base-page-vars.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/page-vars.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/page.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/_pages.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/template.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/elements/_container.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/elements/_inline-list.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/elements/_date-input.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/elements/_btn.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/vars.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/typography.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/template/template-results.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/scss/core.scss" />
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -763,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="584" column="29" selection-start-line="584" selection-start-column="29" selection-end-line="584" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/basscss.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -839,7 +665,7 @@
     <entry file="file://$PROJECT_DIR$/src/pages/Services.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
-          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
             <element signature="e#2115#2122#0" expanded="true" />
             <element signature="e#2229#2235#1" expanded="true" />
@@ -880,14 +706,14 @@
     <entry file="file://$PROJECT_DIR$/src/pages/Pricing.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="785" column="44" lean-forward="true" selection-start-line="785" selection-start-column="44" selection-end-line="785" selection-end-column="44" />
+          <caret line="785" column="44" selection-start-line="785" selection-start-column="44" selection-end-line="785" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Company.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
-          <caret line="156" column="69" selection-start-line="156" selection-start-column="69" selection-end-line="156" selection-end-column="69" />
+          <caret line="156" column="70" selection-start-line="156" selection-start-column="70" selection-end-line="156" selection-end-column="70" />
           <folding>
             <element signature="e#1836#1842#1" expanded="true" />
             <element signature="e#2212#2218#1" expanded="true" />
@@ -897,8 +723,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Contact.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
+        <state relative-caret-position="334">
+          <caret line="80" column="49" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/spacing-utils.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/style-colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/firebrand/responsive.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>

@@ -70,7 +70,7 @@
     <div class="space-top space-bottom">
       <div class="flex flex-center xs-flex-justify-center">
         <div class="logo space-bottom">
-          <img src="images/firebrand-logo.png" />
+          <img src="/images/firebrand-logo.png" />
         </div>
       </div>
 
