@@ -23,16 +23,64 @@ collections:
   - name: "data"
     label: "Data"
     files:
-      - name: "about"
-        label: "About"
-        file: "src/data/About.yml"
+      - name: "general"
+        label: "General"
+        file: "src/data/General.yml"
         fields:
-          - { label: "Title", name: "title", widget: "string", default: "About" }
+          - { label: "Title", name: "title", widget: "string", default: "General" }
           - name: "items"
             label: "Items"
             widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      - name: "company"
+        label: "Company"
+        file: "src/data/Company.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "Company" }
+          - name: "items"
+            label: "Items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      - name: "services"
+        label: "Services"
+        file: "src/data/Services.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "Services" }
+          - name: "items"
+            label: "Items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      - name: "Pricing"
+        label: "Pricing"
+        file: "src/data/Pricing.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "Pricing" }
+          - name: "items"
+            label: "Items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
 
       - name: "contact"
@@ -40,6 +88,9 @@ collections:
         file: "src/data/Contact.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Contact" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+          - { label: "Meta Description", name: "metaDescription", widget: "string" }
+          - { label: "Summary", name: "summary", widget: "text" }
           - { label: "Description", name: "description", widget: "text" }
 
       - name: "hero"
@@ -59,6 +110,9 @@ collections:
             widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
 
       - name: "socialmedia"

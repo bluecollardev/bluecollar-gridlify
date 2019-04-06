@@ -1,6 +1,6 @@
 <template>
-  <!--<ul id="about">
-    <li v-for="item in About.items" :key="item.title">
+  <!--<ul id="services">
+    <li v-for="item in Services.items" :key="item.title">
       <h3>{{ item.title }}</h3>
       <p>
         {{ item.description }}
@@ -10,12 +10,12 @@
 </template>
 
 <script>
-  import About from '~/data/About.yml'
+  import Services from '~/data/Services.yml'
 
 	export default {
 		computed: {
-			About () {
-				return About
+			Services () {
+				return Services
 			}
 		}
 	}
