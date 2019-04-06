@@ -1,0 +1,766 @@
+body {
+  font-family: sans-serif;;
+}
+
+#main .g-artboard {
+  margin:0 auto;
+}
+#main .g-artboard p {
+  margin:0;
+}
+
+.g-aiPointText p { white-space: nowrap; }
+
+#fb {
+  position:relative;
+  overflow:hidden;
+}
+
+p {
+  font-weight:500;
+  font-size:18px;
+  line-height:22px;
+  filter:alpha(opacity=100);
+  -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity:1;
+  letter-spacing:0em;
+  text-align:left;
+  text-transform:none;
+  padding-bottom:0;
+  padding-top:0;
+  mix-blend-mode:normal;
+  font-style:normal;
+  height:auto;
+}
+.g-pstyle0 {
+  font-weight:700;
+  font-size:21px;
+  line-height:25px;
+  text-align:center;
+  color:rgb(255,255,255);
+}
+.g-pstyle1 {
+  font-size:17px;
+  line-height:21px;
+}
+.g-pstyle2 {
+  font-weight:700;
+  font-size:40px;
+  line-height:48px;
+}
+.g-pstyle3 {
+  font-weight:700;
+  color:rgb(224,56,43);
+}
+.g-pstyle4 {
+  font-weight:700;
+  font-size:27px;
+  line-height:33px;
+  padding-bottom:3px;
+  color:rgb(255,255,255);
+}
+.g-pstyle5 {
+  font-size:21px;
+  line-height:25px;
+  padding-bottom:3px;
+  color:rgb(255,255,255);
+}
+.g-pstyle6 {
+  font-weight:700;
+  font-size:24px;
+  line-height:29px;
+  color:rgb(255,255,255);
+}
+.g-pstyle7 {
+  color:rgb(255,255,255);
+}
+.g-pstyle8 {
+  font-weight:700;
+  font-size:27px;
+  line-height:33px;
+}
+.g-pstyle9 {
+  font-weight:700;
+  font-size:27px;
+  line-height:33px;
+}
+.g-pstyle10 {
+  text-align:center;
+}
+.g-pstyle11 {
+  color:rgb(224,56,43);
+}
+.g-pstyle12 {
+  font-weight:700;
+  font-size:46px;
+  line-height:55px;
+}
+.g-pstyle13 {
+  font-weight:700;
+  font-size:27px;
+  line-height:33px;
+  color:rgb(255,255,255);
+}
+.g-pstyle14 {
+  font-size:17px;
+  line-height:21px;
+  text-align:right;
+  color:rgb(255,255,255);
+}
+.g-pstyle15 {
+  font-size:17px;
+  line-height:21px;
+  color:rgb(255,255,255);
+}
+
+.flex-basis-two-thirds,
+.flex-basis-666 {
+  flex-basis: 66.66667%;
+}
+
+.flex-basis-half,
+.flex-basis-50 {
+  flex-basis: 50%;
+}
+
+.flex-basis-third,
+.flex-basis-333 {
+  flex-basis: 33.33333%;
+}
+
+.flex-basis-quarter,
+.flex-basis-25 {
+  flex-basis: 25%;
+}
+
+.md-flex-basis-half,
+.md-flex-basis-50 {
+  flex-basis: 100%;
+}
+
+.md-flex-basis-third,
+.md-flex-basis-333 {
+  flex-basis: 100%;
+}
+
+.md-flex-basis-quarter,
+.md-flex-basis-25 {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 52.06rem) {
+  .md-flex-basis-half,
+  .md-flex-basis-50 {
+    flex-basis: 50%;
+  }
+
+  .md-flex-basis-third,
+  .md-flex-basis-333 {
+    flex-basis: 33.33333%;
+  }
+
+  .md-flex-basis-quarter,
+  .md-flex-basis-25 {
+    flex-basis: 25%;
+  }
+}
+
+/* Colors */
+.salmon {
+  color: #e7655b;
+}
+
+.cherry {
+  color: #720500; /* rgb(114, 5, 0) */
+}
+
+.firebrand-red {
+  color: #e0382b;
+}
+
+.firebrand-blue {
+  color: #147AC2;
+}
+
+/* Background Colors */
+.bg-white{
+  background-color: #ffffff;
+}
+
+.bg-salmon {
+  background-color: #e7655b;
+}
+
+.bg-cherry {
+  background-color: #720500; /* rgb(114, 5, 0) */
+}
+
+/* TODO: Important styles are not AMP compatible! */
+.bg-firebrand-red {
+  background-color: #e0382b !important;
+}
+
+.bg-firebrand-blue {
+  background-color: #147AC2 !important;
+}
+
+.bg-light-grey {
+  background-color: #f2f1ed;
+}
+
+.bg-hero-grey {
+  background-color: #f6f5f1;
+}
+
+/* Borders */
+.border-black-1px {
+  border: 1px solid #000000;
+}
+
+/* Custom Margins */
+.space-all {
+  margin: 3rem;
+}
+
+.space-top {
+  margin-top: 3rem;
+}
+
+.space-top-half {
+  margin-top: 1.5rem;
+}
+
+.space-bottom {
+  margin-bottom: 3rem;
+}
+
+.space-bottom-half {
+  margin-bottom: 1.5rem;
+}
+
+.space-left {
+  margin-left: 3rem;
+}
+
+.space-right {
+  margin-right: 3rem;
+}
+
+.no-space-bottom {
+  margin-bottom: 0;
+}
+
+/* Custom Padding */
+.pad-all {
+  padding: 3rem;
+}
+
+.pad-all-2x {
+  padding: 6rem 3rem;
+}
+
+.pad-top {
+  padding-top: 3rem;
+}
+
+.pad-top-2x {
+  padding-top: 6rem;
+}
+
+.pad-bottom {
+  padding-bottom: 3rem;
+}
+
+.pad-left-half {
+  padding-left: 1.5rem;
+}
+
+.pad-right-half {
+  padding-right: 1.5rem;
+}
+
+.height-half,
+.height-50 {
+  height: 50vh;
+}
+
+.height-third,
+.height-333 {
+  height: 33.33333vh;
+}
+
+.height-two-thirds,
+.height-666 {
+  height: 66.66667vh;
+}
+
+/* Fix flex utils */
+.inline-flex { display: inline-flex; }
+.flex-column { flex-direction: column }
+.flex-wrap { flex-wrap: wrap }
+.flex-center { align-items: center }
+.flex-justify { justify-content: space-around }
+.flex-justify-stretch { justify-content: stretch }
+.flex-justify-center { justify-content: center }
+.flex-justify-end { justify-content: flex-end }
+.flex-justify-between { justify-content: space-between }
+.flex-justify-evenly { justify-content: space-evenly }
+.flex-baseline { align-items: baseline }
+/*.flex-around { align-items: space-around }
+.flex-between { align-items: space-between }*/
+.flex-stretch { align-items: stretch }
+.flex-start { align-items: flex-start }
+.flex-end { align-items: flex-end }
+
+.image-fill {
+  object-fit: contain;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.image-fit {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* General Site Styles */
+header {
+  /*padding: 1rem 2rem;*/ /* Use amp-start spacing */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+footer {
+  padding: 1rem 2rem;
+  background: black;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile first plz */
+
+/* From bass-override-vars... */
+
+/*
+@custom-media --breakpoint-xs (max-width: 40rem);
+@custom-media --breakpoint-sm (min-width: 40.06rem);
+@custom-media --breakpoint-md (min-width: 52.06rem);
+@custom-media --breakpoint-lg (min-width: 64.06rem);
+@custom-media --breakpoint-sm-md (min-width: 40.06rem) and (max-width: 52rem);
+@custom-media --breakpoint-md-lg (min-width: 52.06rem) and (max-width: 64rem);
+*/
+
+@media screen and (max-width: 40rem) {
+  .hero-block {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .content-block {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .banner-block {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  /* Fix cases where we nest blocks */
+  .hero-block .banner-block {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .banner-block .banner-block {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 40.06rem) {
+  .hero-block {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .content-block {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .banner-block {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  /* Fix cases where we nest blocks */
+  .hero-block .banner-block {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .banner-block .banner-block {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 52.06rem) {
+  .hero-block {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 70%;
+  }
+
+  .content-block {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 50%;
+  }
+
+  .banner-block {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 65%;
+  }
+}
+
+.banner-image {
+  max-width: 100%;
+}
+
+.contact-cta {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* Make sure the container is relatively positioned */
+.figure-caption {
+  position: absolute;
+  bottom: 0;
+  width: 25rem; /* TODO: Responsive plz! */
+  padding: 1rem 2rem;
+}
+
+.figure-caption-full {
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* TODO: Responsive plz! */
+  padding: 1rem 2rem;
+}
+
+.figure-caption-left {
+  left: 0;
+}
+
+.figure-caption.bg-cherry,
+.figure-caption-full.bg-cherry {
+  background-color: rgba(114, 5, 0, 0.777);
+}
+
+
+.figure-caption-right {
+  right: 0;
+}
+
+.action-link,
+.action-button {
+  display: inline-block;
+  background: white;
+  padding: 1rem 2rem;
+  border: 1px solid #e0382b; /* Firebrand Red */
+  text-decoration: none;
+}
+
+a.action-link,
+a.action-link:active,
+a.action-link:visited,
+a.action-link:hover,
+a.action-button:active,
+a.action-button:visited,
+a.action-button:hover {
+  color: #e0382b;
+}
+
+.more-info-link {
+  display: inline-block;
+}
+
+/* Menu Customization */
+.ampstart-nav-item.highlighted {
+  background-color: #e0382b;
+  color: white;
+}
+
+.contact-us-nav-item {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+/* TODO: Figure out how to toggle these menu dropdowns (hint check out amp-start components) */
+.ampstart-dropdown-items {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center-force {
+  text-align: center !important;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* Social */
+.ampstart-icon {
+  /*fill: #e0382b;*/
+  fill: white;
+}
+
+/* Cards */
+.card-list {
+  /* Override base ul styles for card lists */
+  list-style-type: disc;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  /* TODO: This needs to scale with font! */
+  padding-inline-start: 20px;
+}
+
+.card-content-body {
+  /* TODO: Something is screwed up, this is a hack to normalize block sizing */
+  max-width: 22rem;
+}
+
+/* Quick fix to get action to drop to bottom of cards without JavaScript or complex layout changes */
+.card-content-action > div {
+  position: absolute;
+  bottom: 100px;
+}
+
+.fb-card {
+  padding-bottom: 100px;
+}
+/* Done */
+
+/* Firebrand card styling */
+.fb-card {
+  padding: 1rem;
+  padding-bottom: 120px;
+  border: 1px solid #ccc;
+}
+
+/* Kill travel styles for our display */
+/* TODO: We shouldn't be killing styles like this */
+.travel-overflow-container {
+  display: inline-block;
+  min-width: auto;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  /* min-width: 100vw; */
+  /* padding-left: calc((100vw - var(--width-3)) / 2); */
+  /* padding-right: calc((100vw - var(--width-3)) / 2); */
+}
+
+.travel-overflow-container .flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+
+/* Quick disable overflow scrolling on containers */
+.travel-overflow-container {
+  /* TODO: Cross browser fix accounting for vertical scrollbar width */
+  min-width: auto;
+  overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: hidden;
+}
+/* Done */
+
+/* Fix background color, uses var */
+.travel-search {
+  /* TODO: Override color vars */
+  /*background-color: var(--color-purple);*/
+  background-color: transparent;
+}
+
+.travel-results-result-link {
+  display: none;
+}
+
+.travel-results-result-like {
+  display: none;
+}
+
+.travel-results-result-flags {
+  display: none;
+}
+
+.travel-results-result-subtext {
+  margin-left: 1rem;
+}
+
+[class*=travel-popular-tilt-] {
+  display: none;
+}
+
+.alp-form-container.ampstart-card {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 40rem) {
+  h1, h2, h3, h4, h5, h6,
+  p {
+    text-align: center;
+  }
+
+  header .logo {
+    position: relative;
+    left: -1rem;
+  }
+
+  .banner-image.left,
+  .banner-image.right {
+    float: none;
+  }
+
+  .figure-caption {
+    position: absolute;
+    bottom: 6px;
+    width: 25rem;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+
+  .figure-caption p {
+    text-align: center;
+  }
+
+  .content-block {
+    margin-top: 3rem;
+  }
+
+  .g-footer {
+    margin-top: 3rem;
+  }
+
+  .action-link-block {
+    text-align: center;
+  }
+
+  .contact-cta .g-cta-contact,
+  .contact-cta .g-cta-contact p {
+    text-align:  center;
+  }
+
+  /* TODO: Specify! */
+  footer .logo,
+  footer .copyright,
+  footer .copyright p,
+  footer .site-info,
+  footer .site-info p {
+    text-align: center;
+    font-size: 100%;
+  }
+
+  .g-pstyle12 {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 48px;
+  }
+
+  .g-pstyle2 {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 48px;
+  }
+
+  .space-all {
+    margin: 3rem 1rem;
+  }
+
+  .pad-all {
+    padding: 3rem 1rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .xs-inline-flex { display: inline-flex; }
+  .xs-flex-column { flex-direction: column }
+  .xs-flex-wrap { flex-wrap: wrap }
+  .xs-flex-center { align-items: center }
+  .xs-flex-justify { justify-content: space-around }
+  .xs-flex-justify-stretch { justify-content: stretch }
+  .xs-flex-justify-center { justify-content: center }
+  .xs-flex-justify-end { justify-content: flex-end }
+  .xs-flex-justify-between { justify-content: space-between }
+  .xs-flex-baseline { align-items: baseline }
+  /*.xs-flex-around { align-items: space-around }
+  .xs-flex-between { align-items: space-between }*/
+  .xs-flex-stretch { align-items: stretch }
+  .xs-flex-start { align-items: flex-start }
+  .xs-flex-end { align-items: flex-end }
+
+  .height-half,
+  .height-50 {
+    height: auto;
+  }
+
+  .height-third,
+  .height-333 {
+    height: auto;
+  }
+
+  .homepage-hero-title {
+    order: 1;
+  }
+
+  .homepage-hero-text {
+    order: 3;
+  }
+
+  .homepage-hero-action {
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 52.06rem) {
+  .sm-inline-flex { display: inline-flex; }
+  .sm-flex-column { flex-direction: column }
+  .sm-flex-wrap { flex-wrap: wrap }
+  .sm-flex-center { align-items: center }
+  .sm-flex-justify { justify-content: space-around }
+  .sm-flex-justify-stretch { justify-content: stretch }
+  .sm-flex-justify-center { justify-content: center }
+  .sm-flex-justify-end { justify-content: flex-end }
+  .sm-flex-justify-between { justify-content: space-between }
+  .sm-flex-baseline { align-items: baseline }
+  /*.sm-flex-around { align-items: space-around }
+  .sm-flex-between { align-items: space-between }*/
+  .sm-flex-stretch { align-items: stretch }
+  .sm-flex-start { align-items: flex-start }
+  .sm-flex-end { align-items: flex-end }
+}
