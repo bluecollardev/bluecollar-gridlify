@@ -1,2 +1,11 @@
+/* Base package */
 @import 'basscss';
-@import './style';
+@import './flex-utils';
+@import './spacing-utils';
+@import './image-utils';
+@import './style-colors';
+@import './blocks';
+/* TODO: Import as a separate package */
+@import './theme';
+@import './theme-typography';
+@import './responsive';

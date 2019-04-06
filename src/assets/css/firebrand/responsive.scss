@@ -1,0 +1,86 @@
+/* Responsive */
+@media screen and (max-width: 40rem) {
+    h1, h2, h3, h4, h5, h6,
+    p {
+        text-align: center;
+    }
+
+    header .logo {
+        position: relative;
+        left: -1rem;
+    }
+
+    .banner-image.left,
+    .banner-image.right {
+        float: none;
+    }
+
+    .figure-caption {
+        position: absolute;
+        bottom: 6px;
+        width: 25rem;
+        padding: 1rem 2rem;
+        text-align: center;
+    }
+
+    .figure-caption p {
+        text-align: center;
+    }
+
+    .content-block {
+        margin-top: 3rem;
+    }
+
+    .g-footer {
+        margin-top: 3rem;
+    }
+
+    .action-link-block {
+        text-align: center;
+    }
+
+    .contact-cta .g-cta-contact,
+    .contact-cta .g-cta-contact p {
+        text-align:  center;
+    }
+
+    /* TODO: Specify! */
+    footer .logo,
+    footer .copyright,
+    footer .copyright p,
+    footer .site-info,
+    footer .site-info p {
+        text-align: center;
+        font-size: 100%;
+    }
+
+    .g-pstyle12 {
+        font-weight: 700;
+        font-size: 27px;
+        line-height: 48px;
+    }
+
+    .g-pstyle2 {
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 48px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+
+
+    .homepage-hero-title {
+        order: 1;
+    }
+
+    .homepage-hero-text {
+        order: 3;
+    }
+
+    .homepage-hero-action {
+        order: 2;
+    }
+}
