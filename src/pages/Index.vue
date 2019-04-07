@@ -87,16 +87,6 @@
           :organization="getTestimonial(1).organization"
           :image="getTestimonial(1).image"
         />
-        <div class="content-block space-top space-bottom">
-          <div class="space-bottom-half g-services">
-            <p class="g-pstyle8"></p>
-          </div>
-          <div class="g-services">
-            <p class="g-pstyle10"></p>
-            <p class="g-pstyle10"> </p>
-          </div>
-        </div>
-        <img src="" />
       </div>
 
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
