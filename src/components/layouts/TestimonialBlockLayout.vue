@@ -17,7 +17,7 @@
 export default {
   // TODO: Supply models via props??
   props: {
-    class: {
+    className: {
       type: String,
       default: null
     },
@@ -56,7 +56,7 @@ export default {
   },
   computed: {
     classNameString() {
-      return (typeof this.className === 'string' && this.className.length > 0) ? `content-block ${this.className}` : '';
+      return (typeof this.className === 'string' && this.className.length > 0) ? `${this.className}` : '';
     }
   }
 };

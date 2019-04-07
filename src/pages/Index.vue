@@ -61,27 +61,31 @@
         </div>
       </div>
 
-      <div class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
+      <div
+        v-if="getTestimonial(0)"
+        class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
         <testimonial-block-layout
           className="space-top space-bottom"
-          testimonial="Firebrand is our trusted partner for web design, social media, and SEO. They&rsquo;ve really helped to set our business apart and increase our online presence in our community."
-          reviewedBy="Joe Parrottino"
-          position="Cafe Leva"
-          organization="Caffetech.com"
-          image="/images/services-card-testimonial-person-top.png"
+          :testimonial="getTestimonial(0).testimonial"
+          :reviewedBy="getTestimonial(0).reviewedBy"
+          :position="getTestimonial(0).position"
+          :organization="getTestimonial(0).organization"
+          :image="getTestimonial(0).image"
         />
       </div>
     </section>
 
     <section class="lg-flex">
-      <div class="bg-light-grey flex flex-column flex-center flex-basis-half pad-top">
+      <div
+        v-if="getTestimonial(1)"
+        class="bg-light-grey flex flex-column flex-center flex-basis-half pad-top">
         <testimonial-block-layout
           className="space-top space-bottom"
-          testimonial="Firebrand saves me hours of work per week handing my social media. We now generate more quality sales leads from mobile users than our old website ever did."
-          reviewedBy="Marla Livingston"
-          position="Realtor"
-          organization="RE/MAX Elite (Edmonton)"
-          image="/images/services-card-testimonial-person-bottom.png"
+          :testimonial="getTestimonial(1).testimonial"
+          :reviewedBy="getTestimonial(1).reviewedBy"
+          :position="getTestimonial(1).position"
+          :organization="getTestimonial(1).organization"
+          :image="getTestimonial(1).image"
         />
         <div class="content-block space-top space-bottom">
           <div class="space-bottom-half g-services">
@@ -240,6 +244,17 @@
 
         if (items instanceof Array && items.length > 0) {
           return items[0];
+        }
+
+        return null
+      },
+    },
+    methods: {
+      getTestimonial(idx) {
+        let items = this.heroContent.items;
+
+        if (items instanceof Array && items.length > idx) {
+          return items[idx];
         }
 
         return null

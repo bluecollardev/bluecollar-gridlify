@@ -1,14 +1,34 @@
 title: Testimonial Block
 items:
   - testimonial: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    reviewedBy: John Doe
-    position: Manager
-    organization: ACME Inc.
+      The people at Firebrand just really wants to make sure that their customers are satisfied. I'm looking forward to working with Lucas and the team at Firebrand again on future projects.
+    reviewedBy: Leigh W.
+    position: President
+    organization: Phase 3 Development, Inc.
     link: ""
     linkText: ""
-    image: ""
-
+    image: /images/digital-marketing-testimonial-person.png
+  - testimonial: >-
+      Working with Firebrand was positive experience. Their work was of high standard and met our expecations. Their high availabilty made working with them across timezones easy. I would hire Firebrand again for similar tasks.
+    reviewedBy: Dirk S.
+    position: Enterprise Architect
+    organization: Visma / Active24
+    link: ""
+    linkText: ""
+    image: /images/digital-marketing-testimonial-person.png
+  - testimonial: >-
+      Firebrand has done great work with us on Carsgone.com. We recommend Firebrand as a competent and valuable partner in web development.
+    reviewedBy: Ray R.
+    position: President
+    organization: Carsgone.com
+    link: ""
+    linkText: ""
+    image: /images/digital-marketing-testimonial-person.png
+  - testimonial: >-
+      Firebrand designed and implemented an amazing website for our business. Firebrand managed to combine the effective elements of a solid technical design with the functionality and visual appeal to engage our customers. We've seen an immediate increase in sales and flow through business.
+    reviewedBy: Greg L.
+    position: Owner
+    organization: Jimmy Poblanos
+    link: ""
+    linkText: ""
+    image: /images/digital-marketing-testimonial-person.png
