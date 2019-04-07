@@ -12,11 +12,11 @@
 <script>
   import Home from '~/data/Home.yml'
 
-	export default {
-		computed: {
-			Home () {
-				return Home
-			}
-		}
-	}
+  export default {
+      computed: {
+          Home () {
+              return Home
+          }
+      }
+  }
 </script>
