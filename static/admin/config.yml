@@ -92,6 +92,7 @@ collections:
             label: "Work"
             widget: "list"
             fields:
+              - { label: "ID", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
               - { label: "Meta Description", name: "metaDescription", widget: "text" }
