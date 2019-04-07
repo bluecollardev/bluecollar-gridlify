@@ -161,7 +161,7 @@ collections:
               - { label: "Image", name: "imagePath", widget: "string" }
               - { label: "Caption", name: "imageCaption", widget: "string" }
               - { label: "Sub-Caption", name: "subCaption", widget: "string" }
-              -
+
       - name: "socialmedia"
         label: "Social Media"
         file: "src/data/SocialMedia.yml"
@@ -174,13 +174,28 @@ collections:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
 
-      - name: "contact"
-        label: "Contact"
-        file: "src/data/Contact.yml"
-        fields:
-          - { label: "Title", name: "title", widget: "string", default: "Contact" }
-          - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
-          - { label: "Meta Description", name: "metaDescription", widget: "text" }
-          - { label: "Summary", name: "summary", widget: "text" }
-          - { label: "Description", name: "description", widget: "text" }
+      - name: "site"
+        label: "Site"
+        files:
+          - name: "contact"
+            label: "Contact"
+            file: "src/data/Contact.yml"
+            fields:
+              - { label: "Title", name: "title", widget: "string", default: "Contact" }
+              - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "text" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - name: "socialmedia"
+            label: "Social Media"
+            file: "src/data/SocialMedia.yml"
+            fields:
+              - { label: "Title", name: "title", widget: "string", default: "Social Media" }
+              - name: "items"
+                label: "Social Media"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
 
