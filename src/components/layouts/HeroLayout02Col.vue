@@ -9,9 +9,7 @@
             </p>
           </div>
           <div class="homepage-hero-text g-hero xs-hide">
-            <p>
-              {{ this.description }}
-            </p>
+            <p v-html="this.description"></p>
           </div>
           <div
             class="homepage-hero-action action-link-block sm-hide md-hide lg-hide"
@@ -44,9 +42,7 @@
       <div class="hero-block">
         <div class="flex flex-column">
           <div class="homepage-hero-text g-hero">
-            <p>
-              {{ this.description }}
-            </p>
+            <p v-html="this.description"></p>
           </div>
         </div>
       </div>

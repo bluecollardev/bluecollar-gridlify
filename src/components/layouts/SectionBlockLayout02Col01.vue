@@ -16,7 +16,7 @@
             <p class="g-pstyle2">{{ this.title }}</p>
           </div>
           <div class="g-how-does-it-work">
-            <p>{{ this.description }}</p>
+            <p v-html="this.description"></p>
           </div>
         </div>
       </div>

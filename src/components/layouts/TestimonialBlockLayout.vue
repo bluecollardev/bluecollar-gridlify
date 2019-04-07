@@ -2,7 +2,7 @@
   <div class="content-block testimonial-block-wrapper">
     <div v-bind:class="classNameString">
       <div class="space-bottom-half g-services">
-        <p class="g-pstyle8">{{ this.testimonial }}</p>
+        <p class="g-pstyle8" v-html="this.testimonial"></p>
       </div>
       <div class="g-services">
         <p class="g-pstyle10">{{ this.reviewedBy }}</p>

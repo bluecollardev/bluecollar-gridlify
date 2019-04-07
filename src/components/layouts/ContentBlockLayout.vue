@@ -4,7 +4,7 @@
       <p class="g-pstyle9">{{ this.title }}</p>
     </div>
     <div class="g-services">
-      <p>{{ this.description }}</p>
+      <p v-html="this.description"></p>
     </div>
     <div class="g-services">
       <a class="space-top-half more-info-link g-pstyle11" v-bind:href="this.link">{{ this.linkText }}</a>

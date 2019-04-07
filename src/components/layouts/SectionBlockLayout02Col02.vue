@@ -7,7 +7,7 @@
             <p class="g-pstyle2">{{ this.title }}</p>
           </div>
           <div class="g-help-with-digital-marketing">
-            <p>{{ this.description }}</p>
+            <p v-html="this.description"></p>
           </div>
         </div>
       </div>
