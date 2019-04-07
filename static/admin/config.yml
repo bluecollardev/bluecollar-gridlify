@@ -111,6 +111,7 @@ collections:
             label: "Items"
             widget: "list"
             fields:
+              - { label: "ID", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
@@ -126,10 +127,10 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Content Block" }
           - name: "items"
-            id: "id"
             label: "Items"
             widget: "list"
             fields:
+              - { label: "ID", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
@@ -149,6 +150,7 @@ collections:
             label: "Items"
             widget: "list"
             fields:
+              - { label: "ID", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
