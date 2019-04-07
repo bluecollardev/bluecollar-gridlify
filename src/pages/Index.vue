@@ -29,7 +29,8 @@
       subCaption="Onboarding at Firebrand"
     />
 
-    <section-block-layout02-col02
+    <!-- TODO: Move digital marketing to its own section -->
+    <!--<section-block-layout02-col02
       title="Need help with your digital marketing? We do the heavy lifting for you."
       subtitle=""
       description="Need help posting your content to the right channels online? Our digital marketing team works with our devs to create relevant and highly targeted mobile and in-app experiences for your potential clients.  We save you time, optimize your return on marketing spend, and generate more qualified leads for your business!"
@@ -39,7 +40,7 @@
       testimonial="Firebrand has been hugely beneficial to our business. They handle all our online marketing &ndash; the results have been amazing!"
       caption="Chet Williams"
       subCaption="CarsGone"
-    />
+    />-->
 
     <section class="lg-flex">
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
