@@ -7,14 +7,15 @@
     <Blog/>
     <Contact/>-->
     <hero-layout02-col
-      title="Firebrand is your trusted provider for accelerated mobile websites and marketing solutions"
+      v-if="homepageHero"
+      :title="homepageHero.title"
       subtitle=""
-      description="Are you looking for more engagement from your online content?  Times have changed &ndash; providing superior mobile and in-app social media experiences is now more important than linking back to traditional websites.  We specialize in ultra-fast mobile-optimized pages, helping you to engage with the right clients and convert more leads!"
-      link="/services"
-      linkText="Learn More"
-      image="/images/hero-realtor.png"
-      caption="Vicki Li"
-      subCaption="Realtor"
+      :description="homepageHero.description"
+      :link="homepageHero.link"
+      :linkText="homepageHero.linkText"
+      :image="homepageHero.image"
+      :caption="homepageHero.caption"
+      :subCaption="homepageHero.subCaption"
     />
 
     <section-block-layout02-col01
@@ -197,7 +198,10 @@
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
 
   // Import static data
-  import Home from '~/data/Home.yml';
+  import HomeData from '~/data/Home.yml';
+  import HeroData from '~/data/Hero.yml';
+  import GeneralData from '~/data/General.yml';
+  import TestimonialData from '~/data/Testimonial.yml';
 
   export default {
     components: {
@@ -217,8 +221,28 @@
       TestimonialBlockLayout,
     },
     computed: {
-      Home () {
-        return Home
+      homeContent() {
+        return HomeData;
+      },
+      heroContent() {
+        return HeroData;
+      },
+      generalContent() {
+        return GeneralData;
+      },
+      testominialContent() {
+        return TestimonialData;
+      },
+      homepageHero() {
+        let items = this.heroContent.items.filter(item => {
+          return item.id === 'homepage-hero';
+        });
+
+        if (items instanceof Array && items.length > 0) {
+          return items[0];
+        }
+
+        return null
       }
     }
   }

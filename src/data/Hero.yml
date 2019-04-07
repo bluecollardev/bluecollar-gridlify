@@ -1,14 +1,12 @@
 title: Hero Items
 items:
-  - description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+  - id: homepage-hero
+    description: >-
+      Are you looking for more engagement from your online content?  Times have changed &ndash; providing superior mobile and in-app social media experiences is now more important than linking back to traditional websites.  We specialize in ultra-fast mobile-optimized pages, helping you to engage with the right clients and convert more leads!
     title: Firebrand is your trusted provider for accelerated mobile websites and marketing solutions
-    subtitle: consectetur adipiscing elit
-    link: /
+    subtitle:
+    link: /services
     linkText: Learn More
-    image: test.png
-    caption: Incididunt ut labore
-    subCaption: Quis nostrud exercitation
+    image: /images/hero-realtor.png
+    caption: Vicki Li
+    subCaption: Realtor
