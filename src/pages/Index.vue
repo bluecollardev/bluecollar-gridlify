@@ -24,23 +24,10 @@
       description="It&rsquo;s simple.  We build web pages with the latest AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates.  Firebrand sites offer blazing fast loading speeds favored by major platforms like Google , Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
       link="/services"
       linkText="Learn More"
-      image="/images/how-does-it-work-person.png"
-      caption="Thomas"
-      subCaption="Onboarding at Firebrand"
+      image="/images/hero-michael.png"
+      caption="Sean Huntington"
+      subCaption="Software Architect, Firebrand"
     />
-
-    <!-- TODO: Move digital marketing to its own section -->
-    <!--<section-block-layout02-col02
-      title="Need help with your digital marketing? We do the heavy lifting for you."
-      subtitle=""
-      description="Need help posting your content to the right channels online? Our digital marketing team works with our devs to create relevant and highly targeted mobile and in-app experiences for your potential clients.  We save you time, optimize your return on marketing spend, and generate more qualified leads for your business!"
-      link="/services"
-      linkText="Learn More"
-      image="/images/digital-marketing-testimonial-person.png"
-      testimonial="Firebrand has been hugely beneficial to our business. They handle all our online marketing &ndash; the results have been amazing!"
-      caption="Chet Williams"
-      subCaption="CarsGone"
-    />-->
 
     <section class="lg-flex">
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
