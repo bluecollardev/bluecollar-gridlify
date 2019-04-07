@@ -51,7 +51,7 @@
           />
 
           <content-block-layout
-            class="space-top"
+            className="space-top"
             title="Social Media"
             description="New to social media marketing?  We can get you set up on the major platforms with professional business pages continually updated with quality posts, promotions, and sales announcements to drive engagement with your brand and generate qualified leads."
             link="/services"
@@ -61,31 +61,37 @@
       </div>
 
       <div class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
-        <div class="content-block space-top space-bottom">
-          <div class="space-bottom-half g-services">
-            <p class="g-pstyle8">Firebrand is our trusted partner for web design, social media, and SEO.  They&rsquo;ve really helped to set our business apart and increase our online presence in our community.</p>
-          </div>
-          <div class="g-services">
-            <p class="g-pstyle10">Joe Parrottino</p>
-            <p class="g-pstyle10">Cafe Leva / Caffetech.com</p>
-          </div>
-        </div>
-        <img src="/images/services-card-testimonial-person-top.png" />
+        <testimonial-block-layout
+          className="space-top space-bottom"
+          testimonial="Firebrand is our trusted partner for web design, social media, and SEO. They&rsquo;ve really helped to set our business apart and increase our online presence in our community."
+          reviewedBy="Joe Parrottino"
+          position="Cafe Leva"
+          organization="Caffetech.com"
+          image="/images/services-card-testimonial-person-top.png"
+        />
       </div>
     </section>
 
     <section class="lg-flex">
       <div class="bg-light-grey flex flex-column flex-center flex-basis-half pad-top">
+        <testimonial-block-layout
+          className="space-top space-bottom"
+          testimonial="Firebrand saves me hours of work per week handing my social media. We now generate more quality sales leads from mobile users than our old website ever did."
+          reviewedBy="Marla Livingston"
+          position="Realtor"
+          organization="RE/MAX Elite (Edmonton)"
+          image="/images/services-card-testimonial-person-bottom.png"
+        />
         <div class="content-block space-top space-bottom">
           <div class="space-bottom-half g-services">
-            <p class="g-pstyle8">Firebrand saves me hours of work per week handing my social media.  We now generate more quality sales leads from mobile users than our old website ever did.</p>
+            <p class="g-pstyle8"></p>
           </div>
           <div class="g-services">
-            <p class="g-pstyle10">Marla Livingston</p>
-            <p class="g-pstyle10">RE/MAX Elite (Edmonton)</p>
+            <p class="g-pstyle10"></p>
+            <p class="g-pstyle10"> </p>
           </div>
         </div>
-        <img src="/images/services-card-testimonial-person-bottom.png" />
+        <img src="" />
       </div>
 
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
@@ -98,7 +104,7 @@
           />
 
           <content-block-layout
-            class="space-top"
+            className="space-top"
             title="SEO"
             description="Accelerated mobile sites aren&rsquo;t just great for social media platforms &ndash; according to Google, nearly 50% of online searches are done on mobile devices. Our pages are favored by Google&rsquo;s algorithms, improving your site&rsquo;s search rankings."
             link="/services"
@@ -188,6 +194,7 @@
   import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
   import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
+  import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
 
   // Import static data
   import Home from '~/data/Home.yml';
@@ -207,6 +214,7 @@
       SectionBlockLayout02Col01,
       SectionBlockLayout02Col02,
       ContentBlockLayout,
+      TestimonialBlockLayout,
     },
     computed: {
       Home () {

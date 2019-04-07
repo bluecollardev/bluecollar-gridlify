@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:class="className">
+  <div v-bind:class="classNameString">
     <div class="space-bottom-half g-services">
       <p class="g-pstyle9">{{ this.title }}</p>
     </div>
@@ -16,7 +16,7 @@
 export default {
   // TODO: Supply models via props??
   props: {
-    class: {
+    className: {
       type: String,
       default: null
     },
@@ -58,11 +58,8 @@ export default {
     },
   },
   computed: {
-    Home() {
-      return Home;
-    },
-    className() {
-      return (typeof this.class === 'string' && this.class.length > 0) ? this.class : '';
+    classNameString() {
+      return (typeof this.className === 'string' && this.className.length > 0) ? this.className : '';
     }
   }
 };

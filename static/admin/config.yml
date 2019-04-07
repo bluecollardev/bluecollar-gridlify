@@ -153,14 +153,13 @@ collections:
               - { label: "ID", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Testimonial", name: "testimonial", widget: "text" }
               - { label: "Reviewed By", name: "reviewedBy", widget: "string" }
               - { label: "Position", name: "reviewedByPosition", widget: "string" }
+              - { label: "Organization", name: "organization", widget: "string" }
               - { label: "Link", name: "link", widget: "string" }
               - { label: "LinkText", name: "linkText", widget: "string" }
               - { label: "Image", name: "imagePath", widget: "string" }
-              - { label: "Caption", name: "imageCaption", widget: "string" }
-              - { label: "Sub-Caption", name: "subCaption", widget: "string" }
 
       - name: "socialmedia"
         label: "Social Media"
