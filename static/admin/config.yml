@@ -117,8 +117,8 @@ collections:
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Link", name: "link", widget: "string" }
               - { label: "LinkText", name: "linkText", widget: "string" }
-              - { label: "Image", name: "imagePath", widget: "string" }
-              - { label: "Caption", name: "imageCaption", widget: "string" }
+              - { label: "Image", name: "image", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "string" }
               - { label: "Sub-Caption", name: "subCaption", widget: "string" }
 
       - name: "block"

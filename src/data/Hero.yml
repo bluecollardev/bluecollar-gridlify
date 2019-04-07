@@ -1,10 +1,10 @@
 title: Hero Items
 items:
   - id: homepage-hero
-    description: >-
-      Are you looking for more engagement from your online content?  Times have changed &ndash; providing superior mobile and in-app social media experiences is now more important than linking back to traditional websites.  We specialize in ultra-fast mobile-optimized pages, helping you to engage with the right clients and convert more leads!
     title: Firebrand is your trusted provider for accelerated mobile websites and marketing solutions
     subtitle:
+    description: >-
+      Are you looking for more engagement from your online content?  Times have changed &ndash; providing superior mobile and in-app social media experiences is now more important than linking back to traditional websites.  We specialize in ultra-fast mobile-optimized pages, helping you to engage with the right clients and convert more leads!
     link: /services
     linkText: Learn More
     image: /images/hero-realtor.png
