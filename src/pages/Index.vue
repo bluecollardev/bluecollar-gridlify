@@ -224,7 +224,7 @@
       generalContent() {
         return GeneralData;
       },
-      testominialContent() {
+      testimonialContent() {
         return TestimonialData;
       },
       homepageHero() {
@@ -241,7 +241,7 @@
     },
     methods: {
       getTestimonial(idx) {
-        let items = this.heroContent.items;
+        let items = this.testimonialContent.items;
 
         if (items instanceof Array && items.length > idx) {
           return items[idx];
