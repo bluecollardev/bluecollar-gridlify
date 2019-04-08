@@ -1,12 +1,49 @@
 title: Home
-items:
-  - description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    title: Lorem ipsum dolor
+services:
+  - title: Web Design
     metaKeywords: >-
       Coming soon...
     metaDescription: >-
       Coming soon...
+    description: >-
+      We work with you to deliver a professionally designed accelerated mobile website, with landing pages, lead-gen fields, and your company&rsquo;s branding built in. Your website is optimized for mobile usage, but works on desktop as well.
+    link: /services-web
+    linkText: Learn More
+  - title: Social Media
+    metaKeywords: >-
+      Coming soon...
+    metaDescription: >-
+      Coming soon...
+    description: >-
+      New to social media marketing?  We can get you set up on the major platforms with professional business pages continually updated with quality posts, promotions, and sales announcements to drive engagement with your brand and generate qualified leads.
+    link: /services-digital-marketing#social-media
+    linkText: Learn More
+  - title: Advertising
+    metaKeywords: >-
+      Coming soon...
+    metaDescription: >-
+      Coming soon...
+    description: >-
+      Paid social content is fast becoming the most effective channel for connecting with qualified leads. Firebrand&rsquo;s team are experts at creating social ad campaigns, with professionally designed, chat-enabled landing pages.
+    link: /services-digital-marketing#advertising
+    linkText: Learn More
+  - title: SEO / SEM
+    metaKeywords: >-
+      Coming soon...
+    metaDescription: >-
+      Coming soon...
+    description: >-
+      Accelerated mobile sites aren&rsquo;t just great for social media platforms &ndash; according to Google, nearly 50% of online searches are done on mobile devices. Our pages are favored by Google&rsquo;s algorithms, improving your site&rsquo;s search rankings.
+    link: /services-digital-marketing#advertising
+    linkText: Learn More
+process:
+  - title: Web Design
+    metaKeywords: >-
+      Coming soon...
+    metaDescription: >-
+      Coming soon...
+    description: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.

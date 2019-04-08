@@ -33,18 +33,19 @@
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
         <div class="content-block">
           <content-block-layout
-            title="Web Design"
-            description="We work with you to deliver a professionally designed accelerated mobile website, with landing pages, lead-gen fields, and your company&rsquo;s branding built in. Your website is optimized for mobile usage, but works on desktop as well."
-            link="/services"
-            linkText="Learn More"
+            v-if="getService(0).linkText"
+            :title="getService(0).linkText"
+            :description="getService(0).linkText"
+            :link="getService(0).linkText"
+            :linkText="getService(0).linkText"
           />
 
           <content-block-layout
-            className="space-top"
-            title="Social Media"
-            description="New to social media marketing?  We can get you set up on the major platforms with professional business pages continually updated with quality posts, promotions, and sales announcements to drive engagement with your brand and generate qualified leads."
-            link="/services"
-            linkText="Learn More"
+            v-if="getService(1).linkText"
+            :title="getService(1).linkText"
+            :description="getService(1).linkText"
+            :link="getService(1).linkText"
+            :linkText="getService(1).linkText"
           />
         </div>
       </div>
@@ -80,18 +81,19 @@
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
         <div class="content-block">
           <content-block-layout
-            title="Advertising"
-            description="Paid social content is fast becoming the most effective channel for connecting with qualified leads. Firebrand&rsquo;s team are experts at creating social ad campaigns, with professionally designed, chat-enabled landing pages."
-            link="/services"
-            linkText="Learn More"
+            v-if="getService(2).linkText"
+            :title="getService(2).linkText"
+            :description="getService(2).linkText"
+            :link="getService(2).linkText"
+            :linkText="getService(2).linkText"
           />
 
           <content-block-layout
-            className="space-top"
-            title="SEO"
-            description="Accelerated mobile sites aren&rsquo;t just great for social media platforms &ndash; according to Google, nearly 50% of online searches are done on mobile devices. Our pages are favored by Google&rsquo;s algorithms, improving your site&rsquo;s search rankings."
-            link="/services"
-            linkText="Learn More"
+            v-if="getService(3).linkText"
+            :title="getService(3).linkText"
+            :description="getService(3).linkText"
+            :link="getService(3).linkText"
+            :linkText="getService(3).linkText"
           />
         </div>
       </div>
@@ -230,6 +232,15 @@
     methods: {
       getTestimonial(idx) {
         let items = this.testimonialContent.items;
+
+        if (items instanceof Array && items.length > idx) {
+          return items[idx];
+        }
+
+        return null
+      },
+      getService(idx) {
+        let items = this.homeContent.services;
 
         if (items instanceof Array && items.length > idx) {
           return items[idx];
