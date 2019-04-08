@@ -75,19 +75,6 @@
 </template>
 
 <script>
-  function closeAllMenus() {
-    var lis = document.getElementById('menu').getElementsByTagName('li');
-    Array.from(lis).forEach(function(e) {
-      e.style.marginTop = 0;
-    });
-
-    let dropMenus = document.getElementsByClassName('drop-menu');
-
-    Array.from(dropMenus).forEach(function(e) {
-      e.classList.remove('display');
-    });
-  }
-
   export default {
     mounted() {
       window.addEventListener("resize", function(event) {
@@ -113,7 +100,12 @@
       displayMenu() {
         let body = document.getElementsByTagName('body')[0];
 
-        (!body.classList.contains('display-menu')) ? body.classList.add('display-menu'): body.classList.remove('display-menu');
+        (!body.classList.contains('display-menu')) ? body.classList.add('display-menu') : body.classList.remove('display-menu');
+      },
+      hideMenu() {
+        let body = document.getElementsByTagName('body')[0];
+
+        (body.classList.contains('display-menu')) ? body.classList.remove('display-menu') : body.classList.add('display-menu');
       },
       displayDropMenu() {
         let dropMenu = event.target.parentElement.getElementsByClassName('drop-menu')[0];
@@ -137,7 +129,18 @@
         }
       },
       hideDropMenu() {
-        closeAllMenus();
+        let lis = document.getElementById('menu').getElementsByTagName('li');
+        Array.from(lis).forEach(function(e) {
+          e.style.marginTop = 0;
+        });
+
+        let dropMenus = document.getElementsByClassName('drop-menu');
+
+        Array.from(dropMenus).forEach(function(e) {
+          e.classList.remove('display');
+        });
+
+        this.hideMenu();
       },
       loaded: function() {
         document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
@@ -321,14 +324,14 @@
     opacity: 0.5;
   }
   @media screen and (max-width: 660px) {
-    body {padding-top: 70px;}
+    body {padding-top: 52px;}
     header .wrap {
       justify-content: center;
       align-items: center;
       flex-direction: column;
       padding: 0;
     }
-    header img {width: 50px;}
+
     header #hamburger {
       display: block;
     }
@@ -435,8 +438,8 @@
       flex: 1 1 100%;
       justify-content: space-around;
       max-width: 100%;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding-top: 0rem;
+      padding-bottom: 0rem;
     }
   }
 
