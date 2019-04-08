@@ -112,10 +112,10 @@
             <div class="flex-basis-half">
               <div class="space-all">
                 <div class="space-bottom-half g-get-started">
-                  <p class="g-pstyle9">Let's chat!</p>
+                  <p class="g-pstyle9" v-html="getProcessStep(0).title"></p>
                 </div>
                 <div class="g-get-started">
-                  <p>The first step is to get in touch with us.  We will ask about your interests, professional goals, and your vision for your online business.</p>
+                  <p v-html="getProcessStep(0).description"></p>
                 </div>
               </div>
             </div>
@@ -123,10 +123,10 @@
             <div class="flex-basis-half">
               <div class="space-all">
                 <div class="space-bottom-half g-get-started">
-                  <p class="g-pstyle9">We build your online presence</p>
+                  <p class="g-pstyle9" v-html="getProcessStep(1).title"></p>
                 </div>
                 <div class="g-get-started">
-                  <p>After completing our designs we will share samples with you to approve before launching and marketing your new online presence.</p>
+                  <p v-html="getProcessStep(1).description"></p>
                 </div>
               </div>
             </div>
@@ -134,10 +134,10 @@
             <div class="flex-basis-half">
               <div class="space-all">
                 <div class="space-bottom-half g-get-started">
-                  <p class="g-pstyle9">Preparation</p>
+                  <p class="g-pstyle9" v-html="getProcessStep(2).title"></p>
                 </div>
                 <div class="g-get-started">
-                  <p>After consulting with you we will create an accelerated mobile website and/or digital marketing strategy suited to the needs of your business.</p>
+                  <p v-html="getProcessStep(2).description"></p>
                 </div>
               </div>
             </div>
@@ -145,10 +145,10 @@
             <div class="flex-basis-half">
               <div class="space-all">
                 <div class="space-bottom-half g-get-started">
-                  <p class="g-pstyle9">You grow your business</p>
+                  <p class="g-pstyle9" v-html="getProcessStep(3).title"></p>
                 </div>
                 <div class="g-get-started">
-                  <p>We will continue to consult with you each month to manage and fine-tune your online presence.  We are committed to helping you continue to grow your business over time!</p>
+                  <p v-html="getProcessStep(3).description"></p>
                 </div>
               </div>
             </div>
@@ -241,6 +241,15 @@
       },
       getService(idx) {
         let items = this.homeContent.services;
+
+        if (items instanceof Array && items.length > idx) {
+          return items[idx];
+        }
+
+        return null
+      },
+      getProcessStep(idx) {
+        let items = this.homeContent.processSteps;
 
         if (items instanceof Array && items.length > idx) {
           return items[idx];

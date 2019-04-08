@@ -28,6 +28,8 @@ collections:
         file: "src/data/General.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "General" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+          - { label: "Meta Description", name: "metaDescription", widget: "text" }
           - name: "items"
             label: "Items"
             widget: "list"
@@ -38,18 +40,40 @@ collections:
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
 
+      - name: "home"
+        label: "Home"
+        file: "src/data/Home.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "Home" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+          - { label: "Meta Description", name: "metaDescription", widget: "text" }
+          - name: "services"
+            label: "Services"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Description", name: "description", widget: "text" }
+          - name: "processSteps"
+              label: "Process Steps"
+              widget: "list"
+              fields:
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Description", name: "description", widget: "text" }
+
       - name: "company"
         label: "Company"
         file: "src/data/Company.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Company" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+          - { label: "Meta Description", name: "metaDescription", widget: "text" }
           - name: "items"
             label: "Items"
             widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
-              - { label: "Meta Description", name: "metaDescription", widget: "text" }
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
 
@@ -58,13 +82,13 @@ collections:
         file: "src/data/Services.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Services" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+          - { label: "Meta Description", name: "metaDescription", widget: "text" }
           - name: "items"
             label: "Items"
             widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
-              - { label: "Meta Description", name: "metaDescription", widget: "text" }
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
 
@@ -73,13 +97,13 @@ collections:
         file: "src/data/Pricing.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Pricing" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+          - { label: "Meta Description", name: "metaDescription", widget: "text" }
           - name: "items"
             label: "Items"
             widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
-              - { label: "Meta Description", name: "metaDescription", widget: "text" }
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
 
@@ -88,14 +112,14 @@ collections:
         file: "src/data/Portfolio.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Portfolio" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+          - { label: "Meta Description", name: "metaDescription", widget: "text" }
           - name: "items"
             label: "Work"
             widget: "list"
             fields:
               - { label: "ID", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
-              - { label: "Meta Description", name: "metaDescription", widget: "text" }
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Image", name: "image", widget: "string" }
 
