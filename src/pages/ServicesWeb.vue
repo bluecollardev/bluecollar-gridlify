@@ -40,9 +40,42 @@
       </div>
     </section>
 
-    <section id="websites" class="lg-flex pad-top">
-      <div class="sm-flex flex-center flex-justify-center flex-basis-third">
-        <div class="content-block">
+    <section id="intro" class="lg-flex pad-top-2x">
+      <div class="sm-flex flex-center flex-justify-center flex-basis-full">
+        <div class="sm-flex flex-column">
+          <div class="sm-flex flex-start height-third">
+            <div class="sm-flex flex-center flex-justify-center flex-basis-third">
+              <div class="content-block">
+                <content-block-layout
+                  title="Branded for you"
+                  description="Your site reflects your unique vision for your brand. We will create a highly polished website that represents you and reflects your values."
+                />
+              </div>
+            </div>
+            <div class="sm-flex flex-center flex-justify-center flex-basis-third">
+              <div class="content-block">
+                <content-block-layout
+                  title="Creative design"
+                  description="Image is everything. We produce stunning creative work that tells a story to your customer. When customers understand how associating with you can define who they are, they have a compelling reason to buy."
+                />
+              </div>
+            </div>
+            <div class="sm-flex flex-center flex-justify-center flex-basis-third">
+              <div class="content-block">
+                <content-block-layout
+                  title="Exceptional support"
+                  description="We offer ongoing monthly support to continually improve your online business. No advanced technical knowledge of coding is required on your end, and we are always here to help!"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="websites" class="lg-flex">
+      <div class="sm-flex flex-end flex-justify-center flex-basis-third">
+        <div class="content-block space-bottom-2x">
           <div class="space-bottom-half">
             <p class="g-pstyle9">Accelerated<br />Mobile Websites</p>
           </div>
@@ -56,43 +89,16 @@
           </div>
         </div>
       </div>
-      <div class="sm-flex flex-center flex-justify-center flex-basis-two-thirds">
-        <div class="sm-flex flex-column">
-          <div class="sm-flex flex-start height-third">
-            <div class="flex-basis-half">
-              <div class="space-all">
-                <div class="space-bottom-half">
-                  <p class="g-pstyle9">Your website, your brand</p>
-                </div>
-                <div>
-                  <p>Your site reflects your unique vision for your brand.  We will create a highly polished website that represents you and reflects your values.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-basis-half">
-              <div class="space-all">
-                <div class="space-bottom-half">
-                  <p class="g-pstyle9">All the support you need</p>
-                </div>
-                <div>
-                  <p>We offer ongoing monthly support to continually improve your online business.  No advanced technical knowledge of coding is required on your end &ndash;  your site&rsquo;s performance is continually monitored, and we are always here to help!</p>
-                </div>
-              </div>
-            </div>
+      <div class="bg-firebrand-blue sm-flex flex-center flex-justify-center flex-basis-two-thirds pad-top">
+        <div class="content-block space-all">
+          <div class="space-bottom-half">
+            <p class="g-pstyle6">Instant.  Everywhere.</p>
           </div>
-          <div
-                  class="bg-firebrand-blue sm-flex flex-center flex-justify-center pad-top">
-            <div class="content-block space-all">
-              <div class="space-bottom-half">
-                <p class="g-pstyle6">Instant.  Everywhere.</p>
-              </div>
-              <div>
-                <p class="g-pstyle7">For many, reading on the mobile web is a slow, clunky and frustrating experience - but it doesn&rsquo;t have to be that way.  The Accelerated Mobile Pages (AMP) Project is an open source initiative that embodiees the vision that publishers can create mobile optimized content once and have it load instantly everywhere. </p>
-              </div>
-            </div>
-            <img src="/images/accelerated-mobile-pages.png" />
+          <div>
+            <p class="g-pstyle7">For many, reading on the mobile web is a slow, clunky and frustrating experience - but it doesn&rsquo;t have to be that way.  The Accelerated Mobile Pages (AMP) Project is an open source initiative that embodiees the vision that publishers can create mobile optimized content once and have it load instantly everywhere. </p>
           </div>
         </div>
+        <img src="/images/accelerated-mobile-pages.png" />
       </div>
     </section>
 
