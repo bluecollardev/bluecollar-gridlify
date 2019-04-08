@@ -9,7 +9,7 @@
               <p class="g-pstyle2">Pricing suited to your business needs</p>
             </div>
             <div class="action-link-block">
-              <a class="action-link space-top g-pstyle3" routerLink="/contact">Get Started</a>
+              <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@
 
               <div class="card-content-action flex">
                 <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                  <a class="action-link g-pstyle3" routerLink="/contact">Get Started</a>
+                  <a class="action-link g-pstyle3" href="/contact">Get Started</a>
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@
 
               <div class="card-content-action flex">
                 <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                  <a class="action-link g-pstyle3" routerLink="/contact">Get Started</a>
+                  <a class="action-link g-pstyle3" href="/contact">Get Started</a>
                 </div>
               </div>
             </div>
@@ -224,7 +224,7 @@
 
               <div class="card-content-action flex">
                 <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                  <a class="action-link g-pstyle3" routerLink="/contact">Contact Us</a>
+                  <a class="action-link g-pstyle3" href="/contact">Contact Us</a>
                 </div>
               </div>
             </div>
@@ -318,7 +318,7 @@
 
               <div class="card-content-action flex">
                 <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                  <a class="action-link g-pstyle3" routerLink="/contact">Get Started</a>
+                  <a class="action-link g-pstyle3" href="/contact">Get Started</a>
                 </div>
               </div>
             </div>
@@ -387,7 +387,7 @@
 
               <div class="card-content-action flex">
                 <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                  <a class="action-link g-pstyle3" routerLink="/contact">Get Started</a>
+                  <a class="action-link g-pstyle3" href="/contact">Get Started</a>
                 </div>
               </div>
             </div>
@@ -443,7 +443,7 @@
 
               <div class="card-content-action flex">
                 <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                  <a class="action-link g-pstyle3" routerLink="/contact">Contact Us</a>
+                  <a class="action-link g-pstyle3" href="/contact">Contact Us</a>
                 </div>
               </div>
             </div>
@@ -540,7 +540,7 @@
 
               <div class="card-content-action flex">
                 <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                  <a class="action-link g-pstyle3" routerLink="/contact">Get Started</a>
+                  <a class="action-link g-pstyle3" href="/contact">Get Started</a>
                 </div>
               </div>
             </div>
@@ -607,7 +607,7 @@
 
               <div class="card-content-action flex">
                 <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                  <a class="action-link g-pstyle3" routerLink="/contact">Get Started</a>
+                  <a class="action-link g-pstyle3" href="/contact">Get Started</a>
                 </div>
               </div>
             </div>
@@ -663,7 +663,7 @@
 
               <div class="card-content-action flex">
                 <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                  <a class="action-link g-pstyle3" routerLink="/contact">Contact Us</a>
+                  <a class="action-link g-pstyle3" href="/contact">Contact Us</a>
                 </div>
               </div>
             </div>
@@ -760,7 +760,7 @@
 
 
     <!-- Search -->
-    <section class="travel-search py4 xs-hide sm-hide relative pad-top pad-bottom space-top bg-firebrand-red">
+    <!--<section class="travel-search py4 xs-hide sm-hide relative pad-top pad-bottom space-top bg-firebrand-red">
       <div class="px1 md-px2 pb1 relative">
         <h3 class="travel-search-heading travel-spacing-none h1 bold mb2 center">Sign up for our AMP Blogging App Demo</h3>
 
@@ -793,7 +793,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
     <Footer/>
   </Layout>
 </template>

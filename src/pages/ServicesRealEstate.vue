@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="action-link-block">
-          <a class="action-link space-top g-pstyle3" routerLink="/contact">Contact Us</a>
+          <a class="action-link space-top g-pstyle3" href="/contact">Contact Us</a>
         </div>
       </div>
       <!-- TODO: There's a pattern for this in index -->

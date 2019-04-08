@@ -52,7 +52,7 @@
             <p>Firebrand goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
           </div>
           <div class="action-link-block">
-            <a class="action-link space-top g-pstyle3" routerLink="/contact">Get Started</a>
+            <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
           </div>
         </div>
       </div>
@@ -129,7 +129,7 @@
             <p>Firebrand goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
           </div>
           <div class="action-link-block">
-            <a class="action-link space-top g-pstyle3" routerLink="/contact">Get Started</a>
+            <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
           </div>
         </div>
       </div>

@@ -65,7 +65,7 @@
             <p>Firebrand goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
           </div>
           <div class="action-link-block">
-            <a class="action-link space-top g-pstyle3" routerLink="/contact">Get Started</a>
+            <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
           </div>
         </div>
       </div>
@@ -142,7 +142,7 @@
             <p>Firebrand goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
           </div>
           <div class="action-link-block">
-            <a class="action-link space-top g-pstyle3" routerLink="/contact">Get Started</a>
+            <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
           </div>
         </div>
       </div>
@@ -201,7 +201,7 @@
             <p>We then create and post interesting content that is relevant to your target audience to keep them engaged and improve conversion rates over time.</p>
           </div>
           <div class="action-link-block">
-            <a class="action-link space-top g-pstyle3" routerLink="/contact">Get Started</a>
+            <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
           </div>
         </div>
       </div>
@@ -225,7 +225,7 @@
                   <p class="g-pstyle7">Facebook&rsquo;s newest ad format offers the fastest, most engaging experience yet for mobile users.  We build high quality &lsquo;Instant Experiences&rsquo; for clients marketing their products and services on Facebook.</p>
                 </div>
                 <div class="action-link-block">
-                  <a class="action-link space-top g-pstyle3" routerLink="/contact">Contact Us to Learn More</a>
+                  <a class="action-link space-top g-pstyle3" href="/contact">Contact Us to Learn More</a>
                 </div>
               </div>
             </div>
@@ -293,7 +293,7 @@
             <p>Firebrand&rsquo;s digital marketing experts make sure your ad content is relevant and targeted, driving more qualified lead traffic to your website.</p>
           </div>
           <div class="action-link-block">
-            <a class="action-link space-top g-pstyle3" routerLink="/contact">Get Started</a>
+            <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
           </div>
         </div>
       </div>
@@ -344,7 +344,7 @@
           </div>
         </div>
         <div class="action-link-block">
-          <a class="action-link space-top g-pstyle3" routerLink="/contact">Contact Us</a>
+          <a class="action-link space-top g-pstyle3" href="/contact">Contact Us</a>
         </div>
       </div>
       <!-- TODO: There's a pattern for this in index -->

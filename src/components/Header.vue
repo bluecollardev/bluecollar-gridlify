@@ -21,17 +21,17 @@
     </ul>
   </header>-->
   <header class="ampstart-headerbar fixed flex sm-flex-justify-start items-center top-0 left-0 right-0">
-    <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger md-hide lg-hide pr2">☰</div>
-    <a href="/" class="flex-auto flex xs-flex-justify-center">
+    <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger pr2">☰</div>
+    <a href="/" class="flex-auto flex flex-center xs-flex-justify-center">
       <img class="logo" src="/images/firebrand-logo.png" />
     </a>
-    <nav class="space-left ampstart-headerbar-nav ampstart-nav xs-hide sm-hide flex flex-center">
+    <nav class="space-left ampstart-headerbar-nav ampstart-nav flex flex-center">
       <ul class="list-reset center m0 p0 flex flex-auto nowrap">
         <li class="ampstart-nav-item display-none">
           <a href="/" class="text-decoration-none block">Home</a>
         </li>
         <li class="ampstart-nav-item ampstart-nav-dropdown relative">
-          <a href="/services" class="text-decoration-none block">Services</a>
+          <a href="/services-web" class="text-decoration-none block">Services</a>
         </li>
         <li class="ampstart-nav-item ampstart-nav-dropdown relative">
           <a href="/pricing" class="text-decoration-none block">Pricing</a>
