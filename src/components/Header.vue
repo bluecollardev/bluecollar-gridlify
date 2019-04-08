@@ -150,7 +150,7 @@
 
 <style lang="scss">
   :root {
-    --cblue: #41B883;
+    --ccherry: #720500;
     --cgrey : #3E3A37;
     --cwhite : #ffffff;
     --ccream : #FAFBFC;
@@ -296,16 +296,16 @@
       border-width: 0px 0px 10px 10px;
       border-style: solid;
       border-color: transparent;
-      &:nth-child(0) {border-left-color: var(--cblue);}
-      &:nth-child(1) {transform: rotate(-40deg); border-left-color: var(--cblue);}
-      &:nth-child(2) {transform: rotate(-80deg); border-left-color: var(--cblue);}
+      &:nth-child(0) {border-left-color: var(--ccherry);}
+      &:nth-child(1) {transform: rotate(-40deg); border-left-color: var(--ccherry);}
+      &:nth-child(2) {transform: rotate(-80deg); border-left-color: var(--ccherry);}
       &:nth-child(3) {transform: rotate(-130deg); border-left-color: var(--cgrey_green);}
       &:nth-child(4) {transform: rotate(-170deg); border-left-color: var(--cgrey_green);}
       &:nth-child(5) {transform: rotate(-210deg); border-left-color: var(--cgrey_green);}
       &:nth-child(6) {transform: rotate(-250deg); border-left-color: var(--cgrey);}
       &:nth-child(7) {transform: rotate(-280deg); border-left-color: var(--cgrey);}
       &:nth-child(8) {transform: rotate(-320deg); border-left-color: var(--cgrey);}
-      &:nth-child(9) {transform: rotate(-360deg); border-left-color: var(--cblue);}
+      &:nth-child(9) {transform: rotate(-360deg); border-left-color: var(--ccherry);}
     }
   }
   @keyframes spin { from {transform: rotate(0deg);} to {transform: rotate(-360deg);}}
@@ -367,7 +367,7 @@
         display: block;
         &:hover {
           color: var(--cwhite);
-          background-color: var(--cblue);
+          background-color: var(--ccherry);
           i {background-color: var(--cwhite);}
         }
       }
@@ -380,7 +380,8 @@
       }
     }
     header .drop-menu {
-      top: var(--body_height_8);
+      //top: var(--body_height_8);
+      top: 135px;
       box-shadow: none;
       left: 0;
       padding-bottom: 0;
@@ -421,4 +422,23 @@
     display: inline-block;
     background-repeat: no-repeat;
   }
+
+  @media screen and (max-width: 660px) {
+    header .drop-menu {
+      top: 8rem;
+      box-shadow: none;
+      left: 0;
+      padding-bottom: 0;
+      width: 100%;
+    }
+
+    #menu {
+      flex: 1 1 100%;
+      justify-content: space-around;
+      max-width: 100%;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+
 </style>
