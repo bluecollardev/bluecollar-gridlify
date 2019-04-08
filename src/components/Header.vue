@@ -49,7 +49,7 @@
   </header>-->
   <header class="fixed">
     <div class="wrap">
-      <div id="hamburger" v-on:click="display_menu()">
+      <div id="hamburger" v-on:click="displayMenu()">
         <span></span>
         <span></span>
         <span></span>
@@ -58,30 +58,32 @@
         <img class="logo" src="/images/firebrand-logo.png" />
       </a>
       <nav id="menu">
-        <li href="/"><a>Company</a></li>
-        <li class="drop"><a v-on:click="display_drop_menu()">Services  <i class="icon-arrow"></i></a>
+        <li><a href="/company">Company</a></li>
+        <li class="drop"><a v-on:click="displayDropMenu()">Services  <i class="icon-arrow"></i></a>
           <ul class="drop_menu">
             <a href="/services-web">Websites + Landing Pages</a>
             <a href="/services-digital-marketing">Digital Marketing</a>
             <a href="/services-software">Custom Software</a>
           </ul>
         </li>
-        <li href="/pricing"><a>Pricing</a></li>
+        <li><a href="/pricing">Pricing</a></li>
         <li><a>Projects</a></li>
-        <li href="/contact"><a>Contact</a></li>
+        <li><a href="/contact">Contact</a></li>
       </nav>
     </div>
   </header>
 </template>
 
 <script>
-  function close_all_menu() {
+  function closeAllMenus() {
     var lis = document.getElementById('menu').getElementsByTagName('li');
     Array.from(lis).forEach(function(e) {
       e.style.marginTop = 0;
     });
-    var drop_menus = document.getElementsByClassName('drop_menu');
-    Array.from(drop_menus).forEach(function(e) {
+
+    let dropMenus = document.getElementsByClassName('drop-menu');
+
+    Array.from(dropMenus).forEach(function(e) {
       e.classList.remove('display');
     });
   }
@@ -89,46 +91,54 @@
   export default {
     mounted() {
       window.addEventListener("resize", function(event) {
-        close_all_menu();
-        document.getElementsByTagName("body")[0].classList.remove("display_menu");
+        closeAllMenus();
+        document.getElementsByTagName("body")[0].classList.remove("display-menu");
       });
-      var last_scroll = 0;
+      let lastScroll = 0;
       window.onscroll = function() {
         if (!document.getElementById("loader")) {
-          close_all_menu();
-          var header = document.getElementsByTagName("header")[0];
-          if (Math.abs(last_scroll - this.scrollY) <= 5) return;
-          (this.scrollY < last_scroll) ? header.style.top = "0": header.style.top = "-" + header.clientHeight + "px";
-          last_scroll = this.scrollY;
+          closeAllMenus();
+
+          let header = document.getElementsByTagName("header")[0];
+
+          if (Math.abs(lastScroll - this.scrollY) <= 5) return;
+
+          (this.scrollY < lastScroll) ? header.style.top = "0": header.style.top = "-" + header.clientHeight + "px";
+
+          lastScroll = this.scrollY;
         }
       }
     },
     methods: {
-      display_menu: function() {
-        var body = document.getElementsByTagName('body')[0];
-        (!body.classList.contains('display_menu')) ? body.classList.add('display_menu'): body.classList.remove('display_menu');
-      },
-      display_drop_menu: function() {
-        var drop_menu = event.target.parentElement.getElementsByClassName('drop_menu')[0];
-        var drop_menus = document.getElementsByClassName('drop_menu');
+      displayMenu: function() {
+        let body = document.getElementsByTagName('body')[0];
 
-        Array.from(drop_menus).forEach(function(e) {
-          if (e != drop_menu) {
+        (!body.classList.contains('display-menu')) ? body.classList.add('display-menu'): body.classList.remove('display-menu');
+      },
+      displayDropMenu: function() {
+        let dropMenu = event.target.parentElement.getElementsByClassName('drop-menu')[0];
+        let dropMenus = document.getElementsByClassName('drop-menu');
+
+        Array.from(dropMenus).forEach(function(e) {
+          if (e != dropMenu) {
             e.classList.remove('display');
           }
         });
-        var lis = document.getElementById('menu').getElementsByTagName('li');
+
+        let lis = document.getElementById('menu').getElementsByTagName('li');
         Array.from(lis).forEach(function(e) {
           e.style.marginTop = 0;
         });
-        (!drop_menu.classList.contains('display')) ? drop_menu.classList.add('display'): drop_menu.classList.remove('display');
-        if (window.innerWidth < 660 && drop_menu.classList.contains('display')) {
-          event.target.parentElement.nextSibling.nextSibling.style.marginTop = drop_menu.clientHeight + 'px';
+
+        (!dropMenu.classList.contains('display')) ? dropMenu.classList.add('display'): dropMenu.classList.remove('display');
+
+        if (window.innerWidth < 660 && dropMenu.classList.contains('display')) {
+          event.target.parentElement.nextSibling.nextSibling.style.marginTop = dropMenu.clientHeight + 'px';
         }
       },
       loaded: function() {
         document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
-        console.log('t');
+
         (this.load) ? this.load = false: this.load = true;
       }
     }
@@ -209,7 +219,7 @@
       }
     }
   }
-  header .drop_menu {
+  header .drop-menu {
     position: absolute;
     display: block;
     top: 149%;
@@ -230,7 +240,7 @@
     }
   }
 
-  header .drop_menu.display {
+  header .drop-menu.display {
     transform: scaleY(1);
     a {
       opacity: 1;
@@ -256,7 +266,7 @@
     &:nth-child(2) {width: 24px;}
     &:nth-child(3) {width: 12px;}
   }
-  .display_menu header #hamburger {
+  .display-menu header #hamburger {
     span:nth-child(1) {transform: rotate(45deg) translate(2px, 1px); }
     span:nth-child(2) {transform: rotate(-45deg) ;}
     span:nth-child(3) {transform: rotate(45deg) translate(6px, -9px);}
@@ -327,7 +337,7 @@
       transition: 0.33s ease;
       flex-direction: column;
     }
-    .display_menu header #menu {
+    .display-menu header #menu {
       height: calc(100vh - 64px);
       li {
         height: var(--body_height_8);
@@ -366,7 +376,7 @@
         background-color: var(--cgrey);
       }
     }
-    header .drop_menu {
+    header .drop-menu {
       top: var(--body_height_8);
       box-shadow: none;
       left: 0;
@@ -385,11 +395,11 @@
   and(max-width: 660px)
   and(max-height: 500px){
 
-    .display_menu header  {
+    .display-menu header  {
       max-height: 100vh;
       overflow-y: scroll;
     }
-    .display_menu header #menu {
+    .display-menu header #menu {
       li {
         height: var(--body_height_4);
       }
@@ -399,7 +409,7 @@
         line-height: var(--body_height_4);
       }
     }
-    header .drop_menu {
+    header .drop-menu {
       top: var(--body_height_4);
     }
   }
