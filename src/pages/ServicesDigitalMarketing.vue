@@ -107,7 +107,7 @@
         </div>
       </div>
       <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
-        <div class="flex-basis-half">
+        <div>
           <div class="space-all">
             <div class="g-services">
               <p class="g-pstyle8">Firebrand shaved hours per week off my social media schedule.  Now I get more leads from my social channels than any other source.</p>
