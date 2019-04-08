@@ -49,7 +49,7 @@
       linkText="Learn More"
     />-->
 
-    <section id="advertising" class="lg-flex">
+    <section id="advertising" class="lg-flex space-top">
       <div class="sm-flex flex-center flex-justify-center flex-basis-third">
         <div class="content-block">
           <div class="space-bottom-half">
