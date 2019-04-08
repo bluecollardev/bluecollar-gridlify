@@ -107,11 +107,11 @@
         <div>
           <div class="space-all">
             <div class="g-services">
-              <p class="g-pstyle8">Firebrand shaved hours per week off my social media schedule.  Now I get more leads from my social channels than any other source.</p>
+              <p class="g-pstyle8">Firebrand designed and implemented an amazing website for our business, combining the effective elements of a solid technical design with the functionality and visual appeal to engage our customers. We've seen an immediate increase in sales and flow through business.</p>
             </div>
             <div class="g-services">
-              <p>Greg Lane</p>
-              <p>Restaurant Owner</p>
+              <p>Greg L.</p>
+              <p>Jimmy Poblanos</p>
             </div>
           </div>
         </div>
@@ -170,28 +170,6 @@
               <div>
                 <p>Our landing pages are built with social media in mind, using layouts and content optimized for Facebook, Twitter, Instagram, and other major platforms with mobile apps.  This ensures your posts that are linked to landing pages show up on peoples&rsquo; feeds at a higher rate &ndash; generating more engagement with your online business.</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="hero-section bg-hero-grey sm-flex flex-justify-center pad-top pad-bottom">
-      <!-- Position relatively, or absolute positioning of the caption will fail -->
-      <div class="sm-flex flex-center flex-justify-center flex-basis-third">
-        <div class="content-block">
-          <img class="banner-image" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
-        </div>
-      </div>
-      <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
-        <div>
-          <div class="space-all">
-            <div class="g-services">
-              <p class="g-pstyle8">Our previous website took forever to build and wasn&rsquo;t what we wanted.  Firebrand had a perfect site up for us in no time.</p>
-            </div>
-            <div class="g-services">
-              <p>Greg Lane</p>
-              <p>Restaurant Owner</p>
             </div>
           </div>
         </div>
