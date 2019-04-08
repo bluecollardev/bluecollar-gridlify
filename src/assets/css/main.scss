@@ -1,2 +1,9 @@
+/* Load vars first! */
 @import './vars';
 @import './firebrand/style';
+
+/* Load ampstart components after vars */
+@import './ampstart/inputs/inputs';
+@import './ampstart/navbar/navbar';
+@import './ampstart/footer/footer';
+@import './ampstart/dropdown/dropdown';

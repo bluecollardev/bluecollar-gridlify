@@ -2,6 +2,15 @@ body {
   font-family: sans-serif;;
 }
 
+.logo {
+  margin-left: 1rem;
+}
+
+/* Override ampstart defaults */
+.ampstart-headerbar .ampstart-navbar-trigger {
+  color: #e0382b;
+}
+
 #main .g-artboard {
   margin:0 auto;
 }
