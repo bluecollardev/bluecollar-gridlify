@@ -54,7 +54,7 @@
         <span></span>
         <span></span>
       </div>
-      <a href="/" class="flex-auto flex flex-center xs-flex-justify-center">
+      <a href="/" class="flex flex-center xs-flex-justify-center">
         <img class="logo" src="/images/firebrand-logo.png" />
       </a>
       <nav id="menu">
@@ -189,7 +189,7 @@
     transition: 0.33s;
   }
   header .wrap {
-    padding: 0 2%;
+    padding: 0 10% 0 14%;
     width: 100%;
     display: flex;
     align-items: flex-end;

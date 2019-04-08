@@ -1,5 +1,5 @@
 <template>
-  <section class="hero-section bg-hero-grey sm-flex pad-top">
+  <section class="hero-section bg-hero-grey sm-flex pad-top-2x">
     <div class="sm-flex flex-center flex-justify-end flex-basis-half">
       <div class="hero-block">
         <div class="flex flex-column">
