@@ -95,6 +95,7 @@
           />
 
           <content-block-layout
+            className="pad-top"
             v-if="getService(1).linkText"
             :title="getService(1).title"
             :description="getService(1).description"
@@ -143,6 +144,7 @@
           />
 
           <content-block-layout
+            className="pad-top"
             v-if="getService(3).linkText"
             :title="getService(3).title"
             :description="getService(3).description"
