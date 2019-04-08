@@ -197,7 +197,6 @@
           </div>
           <div>
             <p>Your Firebrand team will create a professional social media profile to match your company&rsquo;s branding.</p>
-            <p>&nbsp;</p>
             <p>We then create and post interesting content that is relevant to your target audience to keep them engaged and improve conversion rates over time.</p>
           </div>
           <div class="action-link-block">
@@ -289,7 +288,6 @@
           </div>
           <div>
             <p>In recent years social media traffic to business pages has shifted from organic to sponsored.  Social ads are a cost-effective way to reach potential new clients.</p>
-            <p>&nbsp;</p>
             <p>Firebrand&rsquo;s digital marketing experts make sure your ad content is relevant and targeted, driving more qualified lead traffic to your website.</p>
           </div>
           <div class="action-link-block">
