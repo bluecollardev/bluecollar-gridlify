@@ -9,7 +9,7 @@
           </div>
           <div>
             <p>Before co-founding Firebrand, Chris spent years working in the real estate web software industry, bringing his advanced knowledge of the unique marketing challenges Realtors face.</p>
-            <p>&nbsp;</p>
+
             <p>Firebrand is currently the only company offering accelerated landing pages integrated with MLS data (RESO Web API compliant).  We offer advanced solutions to Realtors wanting to take their digital marketing to the next level.</p>
           </div>
         </div>
@@ -47,7 +47,7 @@
           </div>
           <div>
             <p>Your business page&rsquo;s Messenger is connected to an embedded button on your listing landing pages, enabling your potential customers to reach out to you directly.</p>
-            <p>&nbsp;</p>
+
             <p>Targeted ad placement ensures most leads are qualified - giving you a huge leg up in converting new prospects to sales!</p>
           </div>
         </div>

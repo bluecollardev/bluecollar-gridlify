@@ -9,9 +9,9 @@
             </div>
             <div class="g-footer">
               <p class="g-pstyle7"><a href="/services-web" fragment="websites">Websites</a></p>
-              <p>&nbsp;</p>
+
               <p class="g-pstyle7"><a href="/services-web#landing-pages" fragment="landing-pages">Landing Pages</a></p>
-              <p>&nbsp;</p>
+
               <p class="g-pstyle7"><a href="/services-digital-marketing#social-media" fragment="social-media">Custom Software</a></p>
             </div>
           </div>
@@ -24,9 +24,9 @@
             </div>
             <div class="g-footer">
               <p class="g-pstyle7"><a href="/services-digital-marketing#social-media" fragment="social-media">Social Media</a></p>
-              <p>&nbsp;</p>
+
               <p class="g-pstyle7"><a href="/services-web#landing-pages" fragment="landing-pages">Landing Pages</a></p>
-              <p>&nbsp;</p>
+
               <p class="g-pstyle7"><a href="/services-digital-marketing#advertising" fragment="advertising">Advertising</a></p>
             </div>
           </div>
@@ -39,9 +39,9 @@
             </div>
             <div class="g-footer">
               <p class="g-pstyle7"><a href="/company">About Us</a></p>
-              <p>&nbsp;</p>
+
               <p class="g-pstyle7"><a href="/">Projects</a></p>
-              <p>&nbsp;</p>
+
               <p class="g-pstyle7"><a href="/">Testimonials</a></p>
             </div>
           </div>

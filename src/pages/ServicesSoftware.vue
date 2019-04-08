@@ -48,7 +48,7 @@
           </div>
           <div>
             <p>Your website will be built with AMP HTML coding &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
-            <p>&nbsp;</p>
+
             <p>Firebrand goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
           </div>
           <div class="action-link-block">
@@ -125,7 +125,7 @@
           </div>
           <div>
             <p>Your website will be built with AMP HTML coding &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
-            <p>&nbsp;</p>
+
             <p>Firebrand goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
           </div>
           <div class="action-link-block">
@@ -139,7 +139,7 @@
             <div class="flex-basis-half">
               <div class="space-all">
                 <p class="g-pstyle9 firebrand-red">Includes</p>
-                <p>&nbsp;</p>
+
                 <p>Accelerated Mobile Pages (AMPs)</p>
                 <p>Instant Experiences (Facebook)</p>
                 <p>Embedded Messenger Buttons</p>

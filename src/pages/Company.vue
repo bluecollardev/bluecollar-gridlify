@@ -51,9 +51,9 @@
             <div class="space-all">
               <div class="space-bottom-half g-services">
                 <p>Firebrand has been in the business of web design since 2008. Starting as a web design agency building sites for clients in Canada, the US, and Asia, we have evolved over time.</p>
-                <p>&nbsp;</p>
+
                 <!--<p>Today our focus is exclusively on building next-generation accelerated mobile page web solutions for clients who want to share their content with the ever growing global mobile audience, and take advantage of the tremendous opportunities for highly targeted marketing now available on social media platforms like Facebook.</p>
-                <p>&nbsp;</p>-->
+                -->
                 <p>Whether it’s parsing MLS listing data to AMP landing pages, or running creative social media campaigns for e-commerce businesses, we are obsessed with innovating new solutions for the mobile web and continually bringing new value to our clients.</p>
               </div>
             </div>

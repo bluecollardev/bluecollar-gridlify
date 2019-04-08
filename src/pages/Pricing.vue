@@ -315,7 +315,7 @@
               </div>
               <div class="g-banner">
                 <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $50 - $100. This will cover the cost for ad placements on social media platforms where your business is being promoted.</p>
-                <p>&nbsp;</p>
+
                 <p>To learn more about how the social media ad spend is used, please contact us.</p>
               </div>
             </div>
@@ -752,7 +752,7 @@
               </div>
               <div class="g-banner">
                 <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $200 - $300. This will cover the cost for ad placements on digital ad platforms (Google, Bing, etc.) where your business is being promoted.</p>
-                <p>&nbsp;</p>
+
                 <p>To learn more about how the PPC ad spend is used, please contact us.</p>
               </div>
             </div>
