@@ -78,13 +78,13 @@
   export default {
     mounted() {
       window.addEventListener("resize", function(event) {
-        closeAllMenus();
+        this.hideMenu();
         document.getElementsByTagName("body")[0].classList.remove("display-menu");
       });
       let lastScroll = 0;
       window.onscroll = function() {
         if (!document.getElementById("loader")) {
-          closeAllMenus();
+          this.hideMenu();
 
           let header = document.getElementsByTagName("header")[0];
 
@@ -195,7 +195,7 @@
     padding: 0 10% 0 14%;
     width: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
   }
   /*header img {
