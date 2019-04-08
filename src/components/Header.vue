@@ -57,10 +57,10 @@
       <a href="/" class="flex-auto flex flex-center xs-flex-justify-center">
         <img class="logo" src="/images/firebrand-logo.png" />
       </a>
-      <nav id="menu" v-on:mouseleave="hideDropMenu()">
+      <nav id="menu">
         <li><a href="/company">Company</a></li>
         <li class="drop"><a v-on:mouseover="displayDropMenu()">Services  <i class="icon-arrow"></i></a>
-          <ul class="drop-menu">
+          <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
             <a href="/services-web">Websites + Landing Pages</a>
             <a href="/services-digital-marketing">Digital Marketing</a>
             <a href="/services-software">Custom Software</a>
