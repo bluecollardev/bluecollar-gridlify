@@ -80,7 +80,7 @@
             <p class="g-pstyle9">Accelerated<br />Mobile Websites</p>
           </div>
           <div>
-            <p>Your website will be built with AMP HTML coding &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
+            <p>Your website will be built with either JAMStack or AMP HTML code &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
             <p>Firebrand goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
           </div>
           <div class="action-link-block">
@@ -130,7 +130,7 @@
             <p class="g-pstyle9">Accelerated<br />Landing Pages</p>
           </div>
           <div>
-            <p>Your website will be built with AMP HTML coding &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
+            <p>Your landing pages will be built with either JAMStack or AMP HTML code &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
 
             <p>Firebrand goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
           </div>
