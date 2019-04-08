@@ -98,7 +98,7 @@
       </div>
     </section>
 
-    <section id="social-media" class="lg-flex">
+    <section id="social-media" class="lg-flex space-top">
       <div class="sm-flex flex-center flex-column flex-basis-third">
         <div class="content-block">
           <div class="space-bottom-half">
