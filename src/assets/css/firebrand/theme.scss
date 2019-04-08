@@ -166,7 +166,7 @@ a.action-button:hover {
 /* Quick fix to get action to drop to bottom of cards without JavaScript or complex layout changes */
 .card-content-action > div {
   position: absolute;
-  bottom: 100px;
+  bottom: 30px;
 }
 
 .fb-card {
