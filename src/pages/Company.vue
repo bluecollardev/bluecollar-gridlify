@@ -17,7 +17,7 @@
     </section>
 
     <section class="hero-section bg-hero-grey sm-flex flex-column">
-      <div class="sm-flex flex-column flex-center flex-justify-stretch flex-basis-two-thirds">
+      <!--<div class="sm-flex flex-column flex-center flex-justify-stretch flex-basis-two-thirds">
         <div class="sm-flex space-all">
           <div class="sm-flex flex-center">
             <div class="space-bottom">
@@ -38,9 +38,8 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
       <div class="hero-section bg-hero-grey sm-flex">
-        <!-- Position relatively, or absolute positioning of the caption will fail -->
         <div class="relative flex-basis-half sm-flex flex-justify-end">
           <div class="content-block">
             <img class="banner-image right" src="/images/woman-in-casual-office_4460x4460.jpg" />
@@ -124,7 +123,7 @@
       </div>
     </section>-->
 
-    <section class="hero-section bg-hero-grey sm-flex flex-column pad-top">
+    <!--<section class="hero-section bg-hero-grey sm-flex flex-column pad-top">
       <div class="sm-flex flex-column flex-center flex-justify-stretch flex-basis-two-thirds">
         <div class="sm-flex space-all">
           <div class="sm-flex flex-center">
@@ -137,7 +136,6 @@
         </div>
       </div>
       <div class="hero-section bg-light-grey sm-flex flex-justify-center pad-bottom">
-        <!-- Position relatively, or absolute positioning of the caption will fail -->
         <div class="sm-flex flex-center flex-justify-start flex-basis-half">
           <div class="space-all">
             <div class="sm-flex flex-column flex-end">
@@ -176,7 +174,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
     <Footer/>
   </Layout>
 </template>
