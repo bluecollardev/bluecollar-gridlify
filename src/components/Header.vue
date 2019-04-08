@@ -192,7 +192,7 @@
     transition: 0.33s;
   }
   header .wrap {
-    padding: 0 10% 0 14%;
+    padding: 0 10% 0 9%;
     width: 100%;
     display: flex;
     align-items: center;

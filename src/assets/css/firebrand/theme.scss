@@ -71,8 +71,28 @@ footer a:hover {
 @custom-media --breakpoint-md-lg (min-width: 52.06rem) and (max-width: 64rem);
 */
 
-.banner-image {
-  max-width: 100%;
+.homepage-hero {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image-wrapper {
+  max-width: 50vw;
+}
+
+@media screen and (min-width: 1400px) {
+  .home-page-banner-image {
+    position: relative;
+    left: -15vw;
+    top: 10vh;
+    max-width: none;
+    object-fit: contain;
+  }
+
+  .testimonial-block-wrapper img {
+    position: relative;
+    bottom: -7px;
+  }
 }
 
 .contact-cta {

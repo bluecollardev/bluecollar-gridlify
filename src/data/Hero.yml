@@ -1,18 +1,18 @@
 title: Hero Items
 items:
-  - caption: Vicki Li
+  - title: >-
+      Firebrand is your trusted provider for accelerated mobile websites, apps and
+      marketing solutions
     description: >-
-      Test. Are you looking for more engagement from your online content?  Times
+      Are you looking for more engagement from your online content?  Times
       have changed &ndash; providing superior mobile and in-app social media
       experiences is now more important than linking back to traditional
       websites.  We specialize in ultra-fast mobile-optimized pages, helping you
       to engage with the right clients and convert more leads!
     id: homepage-hero
-    image: /images/hero-realtor.png
+    image: /images/banners/responsive-banner-jimmy-poblanos.png
     link: /services
     linkText: Learn More
-    subCaption: Realtor
-    subtitle: Test
-    title: >-
-      Firebrand is your trusted provider for accelerated mobile websites and
-      marketing solutions
+    caption:
+    subCaption:
+

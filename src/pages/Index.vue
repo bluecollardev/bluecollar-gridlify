@@ -14,6 +14,7 @@
       :link="homepageHero.link"
       :linkText="homepageHero.linkText"
       :image="homepageHero.image"
+      imageClass="home-page-banner-image"
       :caption="homepageHero.caption"
       :subCaption="homepageHero.subCaption"
     />
