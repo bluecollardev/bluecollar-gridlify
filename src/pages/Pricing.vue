@@ -25,6 +25,42 @@
       </div>
     </section>
 
+    <section class="hero-section bg-light-grey sm-flex pad-top pad-bottom height-quarter">
+      <div class="sm-flex flex-auto flex-center flex-justify-center">
+        <div class="content-block">
+          <div>
+            <div class="space-bottom">
+              <p class="g-pstyle2 text-center-force">Websites & Custom Software</p>
+            </div>
+            <div class="g-banner">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero-section bg-hero-grey sm-flex flex-justify-center pad-top pad-bottom">
+      <!-- Position relatively, or absolute positioning of the caption will fail -->
+      <div class="sm-flex flex-center flex-justify-center flex-basis-third">
+        <div class="content-block">
+          <img class="banner-image" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
+        </div>
+      </div>
+      <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
+        <div>
+          <div class="space-all">
+            <div class="g-services">
+              <p class="g-pstyle8">Firebrand designed and implemented an amazing website for our business, combining the effective elements of a solid technical design with the functionality and visual appeal to engage our customers. We've seen an immediate increase in sales and flow through business.</p>
+            </div>
+            <div class="g-services">
+              <p>Greg L.</p>
+              <p>Jimmy Poblanos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Popular -->
     <section id="web-development" class="travel-popular pb4 pt3 relative">
       <header class="max-width-3 mx-auto px1 md-px2">
@@ -234,7 +270,7 @@
     </section>
     <!--/ Popular -->
 
-    <section class="hero-section bg-light-grey sm-flex pad-top pad-bottom height-half">
+    <!--<section class="hero-section bg-light-grey sm-flex pad-top pad-bottom height-half">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="content-block">
           <div>
@@ -246,6 +282,43 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>-->
+
+    <section class="hero-section bg-light-grey sm-flex pad-top pad-bottom height-half">
+      <div class="sm-flex flex-auto flex-center flex-justify-center">
+        <div class="content-block">
+          <div>
+            <div class="space-bottom">
+              <p class="g-pstyle2 text-center-force">Social Ad Budgets</p>
+            </div>
+            <div class="g-banner">
+              <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $50 - $100. This will cover the cost for ad placements on social media platforms where your business is being promoted.</p>
+              <p>&nbsp;</p>
+              <p>To learn more about how the social media ad spend is used, please contact us.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero-section bg-hero-grey sm-flex pad-top">
+      <div class="sm-flex flex-center flex-justify-center flex-basis-two-thirds">
+        <div class="content-block">
+          <div class="space-all">
+            <div class="space-bottom-half g-services">
+              <p class="g-pstyle8">Firebrand shaved hours per week off my social media schedule.  Now I get more leads from my social channels than any other source.</p>
+            </div>
+            <div class="g-services">
+              <p>Carl Stevens</p>
+              <p>Ace Coffee Roasters</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Position relatively, or absolute positioning of the caption will fail -->
+      <div class="relative flex-basis-third">
+        <img class="banner-image left" src="/images/hero-old-businessman.png" />
       </div>
     </section>
 
@@ -458,12 +531,12 @@
         <div class="content-block">
           <div>
             <div class="space-bottom">
-              <p class="g-pstyle2 text-center-force">Social Ad Budgets</p>
+              <p class="g-pstyle2 text-center-force">PPC Ad Budgets</p>
             </div>
             <div class="g-banner">
-              <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $50 - $100. This will cover the cost for ad placements on social media platforms where your business is being promoted.</p>
+              <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $200 - $300. This will cover the cost for ad placements on digital ad platforms (Google, Bing, etc.) where your business is being promoted.</p>
               <p>&nbsp;</p>
-              <p>To learn more about how the social media ad spend is used, please contact us.</p>
+              <p>To learn more about how the PPC ad spend is used, please contact us.</p>
             </div>
           </div>
         </div>
@@ -672,128 +745,6 @@
       </div>
     </section>
     <!--/ Popular -->
-
-    <section class="hero-section bg-light-grey sm-flex pad-top pad-bottom height-half">
-      <div class="sm-flex flex-auto flex-center flex-justify-center">
-        <div class="content-block">
-          <div>
-            <div class="space-bottom">
-              <p class="g-pstyle2 text-center-force">PPC Ad Budgets</p>
-            </div>
-            <div class="g-banner">
-              <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $200 - $300. This will cover the cost for ad placements on digital ad platforms (Google, Bing, etc.) where your business is being promoted.</p>
-              <p>&nbsp;</p>
-              <p>To learn more about how the PPC ad spend is used, please contact us.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured -->
-    <section class="travel-featured pt3 relative clearfix hide">
-      <header class="max-width-2 mx-auto px1 md-px2 relative">
-        <h3 class="travel-featured-heading h1 bold line-height-2 mb2 center">Featured Categories</h3>
-      </header>
-      <div class="max-width-3 mx-auto relative">
-        <div class="travel-featured-grid sm-flex flex-wrap items-stretch">
-          <div class="col-12 md-col-6 sm-flex items-stretch flex-auto">
-            <a href="travel-results.amp" class="travel-featured-tile sm-flex flex-auto relative travel-featured-color-blue" on="tap:AMP.setState({fields_query: 'New York', query_query: 'New York'})">
-              <div class="travel-object-cover flex-auto bg-firebrand-red" style="width: 336px; height: 507px"></div>
-              <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="" srcset=""></amp-img>-->
-              <div class="travel-featured-overlay absolute z1 center top-0 right-0 bottom-0 left-0 white p2">
-                <div class="travel-featured-tile-heading caps bold line-height-2 h3">New York</div>
-                <div class="h5">379 adventures</div>
-              </div>
-            </a>
-            <div class="sm-flex flex-column items-stretch flex-auto">
-              <a href="travel-results.amp" class="travel-featured-tile sm-flex flex-auto relative travel-featured-color-cyan" on="tap:AMP.setState({fields_query: 'Barcelona', query_query: 'Barcelona'})">
-                <div class="travel-object-cover flex-auto bg-firebrand-red" style="width: 246px; height: 246px"></div>
-                <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="" srcset=""></amp-img>-->
-                <div class="travel-featured-overlay absolute z1 center top-0 right-0 bottom-0 left-0 white p2">
-                  <div class="travel-featured-tile-heading bold caps line-height-2 h3">Barcelona</div>
-                  <div class="h5">68 adventures</div>
-                </div>
-              </a>
-              <a href="travel-results.amp" class="travel-featured-tile sm-flex flex-auto pointer relative travel-featured-color-orange" on="tap:AMP.setState({fields_query: 'Paris', query_query: 'Paris'})">
-                <div class="travel-object-cover flex-auto bg-firebrand-red" style="width: 264px; height: 264px"></div>
-                <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="" srcset=""></amp-img>-->
-                <div class="travel-featured-overlay absolute z1 center top-0 right-0 bottom-0 left-0 white p2">
-                  <div class="travel-featured-tile-heading bold caps line-height-2 h3">Paris</div>
-                  <div class="h5">221 adventures</div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 md-col-6 sm-flex items-stretch flex-auto">
-            <div class="sm-flex flex-column items-stretch flex-auto">
-              <a href="travel-results.amp" class="travel-featured-tile sm-flex flex-auto pointer relative travel-featured-color-purple" on="tap:AMP.setState({fields_query: 'Tokyo', query_query: 'Tokyo'})">
-                <div class="travel-object-cover flex-auto bg-firebrand-red" style="width: 276px; height: 207px"></div>
-                <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="" srcset=""></amp-img>-->
-                <div class="travel-featured-overlay absolute z1 center top-0 right-0 bottom-0 left-0 white p2">
-                  <div class="travel-featured-tile-heading caps bold line-height-2 h3">Tokyo</div>
-                  <div class="h5">500+ adventures</div>
-                </div>
-              </a>
-              <a href="travel-results.amp" class="travel-featured-tile sm-flex flex-auto relative travel-featured-color-cornflower" on="tap:AMP.setState({fields_query: 'Chicago', query_query: 'Chicago'})">
-                <div class="travel-object-cover flex-auto bg-firebrand-red" style="width: 264px; height: 286px"></div>
-                <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="" srcset=""></amp-img>-->
-                <div class="travel-featured-overlay absolute z1 center top-0 right-0 bottom-0 left-0 white p2">
-                  <div class="travel-featured-tile-heading caps bold line-height-2 h3">Chicago</div>
-                  <div class="h5">143 adventures</div>
-                </div>
-              </a>
-            </div>
-            <a href="travel-results.amp" class="travel-featured-tile sm-flex flex-auto relative travel-featured-color-teal" on="tap:AMP.setState({fields_query: 'Reykjavik', query_query: 'Reykjavik'})">
-              <div class="travel-object-cover flex-auto bg-firebrand-red" style="width: 312px; height: 507px"></div>
-              <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="" srcset=""></amp-img>-->
-              <div class="travel-featured-overlay absolute z1 center top-0 right-0 bottom-0 left-0 white p2">
-                <div class="travel-featured-tile-heading caps bold h3">Reykjavik</div>
-                <div class="h5">87 adventures</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/ Featured -->
-
-
-    <!-- Search -->
-    <!--<section class="travel-search py4 xs-hide sm-hide relative pad-top pad-bottom space-top bg-firebrand-red">
-      <div class="px1 md-px2 pb1 relative">
-        <h3 class="travel-search-heading travel-spacing-none h1 bold mb2 center">Sign up for our AMP Blogging App Demo</h3>
-
-        <div class="sm-flex justify-center pb2">
-          <div class="travel-input-group sm-flex items-center col-8">
-            <input class="travel-input travel-input-big line-height-2 block col-12 flex-auto rounded-left" type="text" name="query" placeholder="Please enter your e-mail address. Don't worry, we won't spam you." on="change:AMP.setState({fields_query: event.value})" value="" [value]="fields_query">
-            <span class="travel-input-group-sep travel-border-gray relative z1 block"></span>
-            <a href="travel-results.amp" class="travel-link travel-input travel-input-big line-height-2 link rounded-right nowrap text-decoration-none" on="
-              tap:AMP.setState({
-                  ui_reset: false,
-                  ui_filterPane: false,
-                  query_query: fields_query,
-                  fields_query_edited: false,
-                  query_departure: fields_departure,
-                  fields_departure_edited: false,
-                  query_return: fields_return,
-                  fields_return_edited: false,
-                  query_maxPrice: fields_maxPrice,
-                  fields_maxPrice_edited: false,
-                  query_city: fields_city,
-                  fields_city_edited: false,
-                  query_type: fields_type,
-                  fields_type_edited: false,
-                  query_sort: fields_sort,
-                  fields_sort_edited: false,
-              })
-            ">
-              Subscribe
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>-->
     <Footer/>
   </Layout>
 </template>
