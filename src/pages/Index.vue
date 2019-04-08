@@ -34,17 +34,17 @@
         <div class="content-block">
           <content-block-layout
             v-if="getService(0).linkText"
-            :title="getService(0).linkText"
-            :description="getService(0).linkText"
-            :link="getService(0).linkText"
+            :title="getService(0).title"
+            :description="getService(0).description"
+            :link="getService(0).link"
             :linkText="getService(0).linkText"
           />
 
           <content-block-layout
             v-if="getService(1).linkText"
-            :title="getService(1).linkText"
-            :description="getService(1).linkText"
-            :link="getService(1).linkText"
+            :title="getService(1).title"
+            :description="getService(1).description"
+            :link="getService(1).link"
             :linkText="getService(1).linkText"
           />
         </div>
@@ -82,17 +82,17 @@
         <div class="content-block">
           <content-block-layout
             v-if="getService(2).linkText"
-            :title="getService(2).linkText"
-            :description="getService(2).linkText"
-            :link="getService(2).linkText"
+            :title="getService(2).title"
+            :description="getService(2).description"
+            :link="getService(2).link"
             :linkText="getService(2).linkText"
           />
 
           <content-block-layout
             v-if="getService(3).linkText"
-            :title="getService(3).linkText"
-            :description="getService(3).linkText"
-            :link="getService(3).linkText"
+            :title="getService(3).title"
+            :description="getService(3).description"
+            :link="getService(3).link"
             :linkText="getService(3).linkText"
           />
         </div>
