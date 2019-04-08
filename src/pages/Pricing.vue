@@ -64,30 +64,9 @@
       </div>
     </section>
 
-    <div class="pricing pad-top">
-      <!--<section class="hero-section bg-hero-grey sm-flex flex-justify-center pad-top pad-bottom">
-      <div class="sm-flex flex-center flex-justify-center flex-basis-third">
-        <div class="content-block">
-          <img class="banner-image" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
-        </div>
-      </div>
-      <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
-        <div>
-          <div class="space-all">
-            <div class="g-services">
-              <p class="g-pstyle8">Firebrand designed and implemented an amazing website for our business, combining the effective elements of a solid technical design with the functionality and visual appeal to engage our customers. We've seen an immediate increase in sales and flow through business.</p>
-            </div>
-            <div class="g-services">
-              <p>Greg L.</p>
-              <p>Jimmy Poblanos</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>-->
-
+    <div class="pricing">
       <!-- Popular -->
-      <section v-if="pricingFor === 'WEB_SOFTWARE'" id="web-development" class="travel-popular pb4 pt3 relative">
+      <section v-if="pricingFor === 'WEB_SOFTWARE'" id="web-development" class="pad-top travel-popular pb4 pt3 relative">
         <div class="overflow-scroll">
           <div class="travel-overflow-container">
             <div class="sm-flex px1 md-px2 mxn1 flex-justify-evenly">
@@ -291,6 +270,27 @@
       </section>
       <!--/ Popular -->
 
+      <section v-if="pricingFor === 'WEB_SOFTWARE'" class="hero-section bg-hero-grey sm-flex pad-top space-top">
+        <div class="sm-flex flex-center flex-justify-center flex-basis-third">
+          <div class="content-block">
+            <img class="banner-image" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
+          </div>
+        </div>
+        <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
+          <div>
+            <div class="space-all">
+              <div class="g-services">
+                <p class="g-pstyle8">Firebrand designed and implemented an amazing website for our business, combining the effective elements of a solid technical design with the functionality and visual appeal to engage our customers. We've seen an immediate increase in sales and flow through business.</p>
+              </div>
+              <div class="g-services">
+                <p>Greg L.</p>
+                <p>Jimmy Poblanos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!--<section class="hero-section bg-light-grey sm-flex pad-top pad-bottom height-half">
         <div class="sm-flex flex-auto flex-center flex-justify-center">
           <div class="content-block">
@@ -306,7 +306,7 @@
         </div>
       </section>-->
 
-      <section v-if="pricingFor === 'SOCIAL_ADS'" class="hero-section bg-light-grey sm-flex pad-top pad-bottom height-half">
+      <section v-if="pricingFor === 'SOCIAL_ADS'" class="hero-section bg-light-grey sm-flex pad-bottom height-half">
         <div class="sm-flex flex-auto flex-center flex-justify-center">
           <div class="content-block">
             <div>
@@ -323,25 +323,8 @@
         </div>
       </section>
 
-      <section v-if="pricingFor === 'SOCIAL_ADS'" class="hero-section bg-light-grey sm-flex pad-top pad-bottom height-half">
-        <div class="sm-flex flex-auto flex-center flex-justify-center">
-          <div class="content-block">
-            <div>
-              <div class="space-bottom">
-                <p class="g-pstyle2 text-center-force">PPC Ad Budgets</p>
-              </div>
-              <div class="g-banner">
-                <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $200 - $300. This will cover the cost for ad placements on digital ad platforms (Google, Bing, etc.) where your business is being promoted.</p>
-                <p>&nbsp;</p>
-                <p>To learn more about how the PPC ad spend is used, please contact us.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Popular -->
-      <section v-if="pricingFor === 'SOCIAL_MEDIA'" id="social-media" class="travel-popular pb4 pt3 relative">
+      <section v-if="pricingFor === 'SOCIAL_MEDIA'" id="social-media" class="pad-top travel-popular pb4 pt3 relative">
         <div class="overflow-scroll">
           <div class="travel-overflow-container">
             <div class="sm-flex px1 md-px2 mxn1 flex-justify-evenly">
@@ -562,7 +545,7 @@
       </section>
 
       <!-- Popular -->
-      <section v-if="pricingFor === 'SEO'" id="seo-ppc" class="travel-popular pb4 pt3 relative">
+      <section v-if="pricingFor === 'SEO'" id="seo-ppc" class="pad-top travel-popular pb4 pt3 relative">
         <div class="overflow-scroll">
           <div class="travel-overflow-container">
             <div class="sm-flex px1 md-px2 mxn1 flex-justify-evenly">
@@ -759,6 +742,23 @@
         </div>
       </section>
       <!--/ Popular -->
+
+      <section v-if="pricingFor === 'SEO'" class="hero-section bg-hero-grey sm-flex pad-top pad-bottom space-top">
+        <div class="sm-flex flex-auto flex-center flex-justify-center">
+          <div class="content-block">
+            <div>
+              <div class="space-bottom">
+                <p class="g-pstyle2 text-center-force">PPC Ad Budgets</p>
+              </div>
+              <div class="g-banner">
+                <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $200 - $300. This will cover the cost for ad placements on digital ad platforms (Google, Bing, etc.) where your business is being promoted.</p>
+                <p>&nbsp;</p>
+                <p>To learn more about how the PPC ad spend is used, please contact us.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <Footer/>
   </Layout>
@@ -876,10 +876,10 @@
   .pricing-switcher-item {
     cursor: pointer;
   }
-  
+
   .pricing-switcher-item.is-active {
-    border-right: 1px solid white;
-    border-left: 1px solid white;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    border-left: 1px solid rgba(255,255,255,0.15);
     background: #e0382b;
   }
 
