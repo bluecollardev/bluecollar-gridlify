@@ -1,5 +1,5 @@
 <template>
-  <div class="content-block testimonial-block-wrapper text-center space-bottom-half">
+  <div class="content-block testimonial-block-wrapper text-center sm-space-bottom-half">
     <div v-bind:class="classNameString">
       <div class="space-bottom-half g-services">
         <p class="g-pstyle8 text-center" v-html="this.testimonial"></p>

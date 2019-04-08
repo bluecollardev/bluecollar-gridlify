@@ -41,7 +41,7 @@
     >
       <div class="hero-block">
         <div class="flex flex-column">
-          <div class="homepage-hero-text g-hero">
+          <div class="homepage-hero-text g-hero xs-hide">
             <p v-html="this.description"></p>
           </div>
         </div>
