@@ -99,3 +99,9 @@
     </div>
   </footer>
 </template>
+
+<style>
+  footer {
+    padding: 1rem 10rem;
+  }
+</style>
