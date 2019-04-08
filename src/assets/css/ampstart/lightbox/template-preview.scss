@@ -211,7 +211,7 @@
  * Ideally one should never get in this mode as the view template button
  * for cellphone/very small screen mode opens the template in a new tab.
  */
-@media (--breakpoint-xs), (max-height: 599px) {
+@media (var(--breakpoint-xs)), (max-height: 599px) {
   .ampstart-tablet-frame,
   .ampstart-mobile-frame,
   [option="mobile"][selected] + .ampstart-mobile-frame,

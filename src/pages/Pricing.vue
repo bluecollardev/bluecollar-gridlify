@@ -27,7 +27,7 @@
 
     <section class="lg-flex" style="box-shadow: 1px 0 5px rgba(11,11,11,0.6);">
       <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-cherry transparent ${pricingIsActive('WEB_SOFTWARE') ? 'is-active' : '' }`">
-        <div class="content-block pad-top pad-bottom" v-on:click="setPricing('WEB_SOFTWARE')">
+        <div class="pad-top pad-bottom" v-on:click="setPricing('WEB_SOFTWARE')">
           <content-block-layout
             className="py-0"
             v-if="getService(0).linkText"
@@ -36,7 +36,7 @@
         </div>
       </div>
       <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-cherry transparent ${pricingIsActive('SOCIAL_MEDIA') ? 'is-active' : '' }`">
-        <div class="content-block pad-top pad-bottom" v-on:click="setPricing('SOCIAL_MEDIA')">
+        <div class="pad-top pad-bottom" v-on:click="setPricing('SOCIAL_MEDIA')">
           <content-block-layout
             v-if="getService(1).linkText"
             :title="getService(1).title"
@@ -45,7 +45,7 @@
       </div>
 
       <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-cherry transparent ${pricingIsActive('SOCIAL_ADS') ? 'is-active' : '' }`">
-        <div class="content-block pad-top pad-bottom" v-on:click="setPricing('SOCIAL_ADS')">
+        <div class="pad-top pad-bottom" v-on:click="setPricing('SOCIAL_ADS')">
           <content-block-layout
             v-if="getService(2).linkText"
             :title="getService(2).title"
@@ -54,7 +54,7 @@
         </div>
       </div>
       <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-cherry transparent ${pricingIsActive('SEO') ? 'is-active' : '' }`">
-        <div class="content-block pad-top pad-bottom" v-on:click="setPricing('SEO')">
+        <div class="pad-top pad-bottom" v-on:click="setPricing('SEO')">
           <content-block-layout
             v-if="getService(3).linkText"
             :title="getService(3).title"
@@ -66,7 +66,7 @@
 
     <div class="pricing">
       <!-- Popular -->
-      <section v-if="pricingFor === 'WEB_SOFTWARE'" id="web-development" class="pad-top travel-popular pb4 pt3 relative">
+      <section v-if="pricingFor === 'WEB_SOFTWARE'" id="web-development" class="sm-pad-top travel-popular pb4 pt3 relative">
         <div class="overflow-scroll">
           <div class="travel-overflow-container">
             <div class="sm-flex px1 md-px2 mxn1 flex-justify-evenly">

@@ -58,7 +58,7 @@
   background: var(--color-primary);
 }
 
-@media (--breakpoint-md) {
+@media (var(--breakpoint-md)) {
   .ampstart-image-fullpage-hero > amp-img {
     height: 60vh;
   }

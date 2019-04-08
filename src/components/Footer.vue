@@ -64,7 +64,7 @@
       </div>
       <div class="sm-flex flex-basis-third flex-justify-end">
         <div class="social">
-          <ul class="ampstart-social-follow list-reset flex justify-around items-center flex-wrap m0">
+          <ul class="ampstart-social-follow list-reset flex justify-around xs-flex-justify-center items-center flex-wrap m0">
             <li>
               <a href="https://www.facebook.com/firebrandwebsolutions/" target="_blank" class="inline-block p1" aria-label="Link to Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="47.2" viewBox="0 0 56 55"><title>Facebook</title><path d="M47.5 43c0 1.2-.9 2.1-2.1 2.1h-10V30h5.1l.8-5.9h-5.9v-3.7c0-1.7.5-2.9 3-2.9h3.1v-5.3c-.6 0-2.4-.2-4.6-.2-4.5 0-7.5 2.7-7.5 7.8v4.3h-5.1V30h5.1v15.1H10.7c-1.2 0-2.2-.9-2.2-2.1V8.3c0-1.2 1-2.2 2.2-2.2h34.7c1.2 0 2.1 1 2.1 2.2V43" class="ampstart-icon ampstart-icon-fb"></path></svg></a>
             </li>
@@ -103,5 +103,11 @@
 <style>
   footer {
     padding: 1rem 10rem;
+  }
+
+  @media screen and (max-width: 660px) {
+    footer {
+      padding: 1px;
+    }
   }
 </style>

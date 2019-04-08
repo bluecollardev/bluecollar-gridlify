@@ -16,7 +16,7 @@
       </div>
     </section>
 
-    <section class="hero-section bg-hero-grey sm-flex flex-column">
+    <section class="hero-section bg-hero-grey sm-flex flex-column pad-bottom-2x">
       <!--<div class="sm-flex flex-column flex-center flex-justify-stretch flex-basis-two-thirds">
         <div class="sm-flex space-all">
           <div class="sm-flex flex-center">
@@ -41,7 +41,7 @@
       </div>-->
       <div class="hero-section bg-hero-grey sm-flex">
         <div class="relative flex-basis-half sm-flex flex-justify-end">
-          <div class="content-block">
+          <div class="content-block xs-no-space-top">
             <img class="banner-image right" src="/images/woman-in-casual-office_4460x4460.jpg" />
           </div>
         </div>

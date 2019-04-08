@@ -1,6 +1,24 @@
+:root {
+  --spacing-base: 1.5rem;
+  --breakpoint-xs: '(max-width: 40em)';
+  --breakpoint-sm: '(min-width: 40em)';
+  --breakpoint-sm-md: '(min-width: 40em) and (max-width: 52em)';
+  --breakpoint-md-lg: '(min-width: 52em) and (max-width: 64em)';
+  --breakpoint-lg: '(min-width: 64em)';
+  --prefix-xs: 'xs';
+  --prefix-sm: 'sm';
+  --prefix-sm-md: 'sm-md';
+  --prefix-md-lg: 'md-lg';
+  --prefix-lg: 'lg';
+}
+
 /* Custom Margins */
 .space-all {
   margin: 3rem;
+}
+
+.no-space-top {
+  margin-top: 0;
 }
 
 .space-top {
@@ -52,12 +70,100 @@
   padding-bottom: 3rem;
 }
 
+.pad-bottom-2x {
+  padding-bottom: 6rem;
+}
+
 .pad-left-half {
   padding-left: 1.5rem;
 }
 
 .pad-right-half {
   padding-right: 1.5rem;
+}
+
+$breakpoints: xs sm sm-md md-lg lg;
+$breakpoint-xs: (max-width: 40em);
+$breakpoint-sm: (min-width: 40em);
+$breakpoint-sm-md: (min-width: 40em) and (max-width: 52em);
+$breakpoint-md-lg: (min-width: 52em) and (max-width: 64em);
+$breakpoint-lg: (min-width: 64em);
+
+$queries: $breakpoint-xs $breakpoint-sm $breakpoint-sm-md $breakpoint-md-lg $breakpoint-lg;
+@for $i from 1 through 4 {
+  @media screen and #{nth($queries, $i)} {
+    .#{nth($breakpoints, $i)}-space-all {
+      margin: 3rem;
+    }
+
+    .#{nth($breakpoints, $i)}-no-space-top {
+      margin-top: 0rem !important;
+    }
+
+    .#{nth($breakpoints, $i)}-space-top {
+      margin-top: 3rem;
+    }
+
+    .#{nth($breakpoints, $i)}-space-top-half {
+      margin-top: 1.5rem;
+    }
+
+    .#{nth($breakpoints, $i)}-space-bottom {
+      margin-bottom: 3rem;
+    }
+
+    .#{nth($breakpoints, $i)}-space-bottom-half {
+      margin-bottom: 1.5rem;
+    }
+
+    .#{nth($breakpoints, $i)}-space-left {
+      margin-left: 3rem;
+    }
+
+    .#{nth($breakpoints, $i)}-space-right {
+      margin-right: 3rem;
+    }
+
+    .#{nth($breakpoints, $i)}-no-space-bottom {
+      margin-bottom: 0;
+    }
+
+    .#{nth($breakpoints, $i)}-pad-all {
+      padding: 3rem;
+    }
+
+    .#{nth($breakpoints, $i)}-pad-all-2x {
+      padding: 6rem 3rem;
+    }
+
+    .#{nth($breakpoints, $i)}-no-pad-top {
+      padding-top: 0rem;
+    }
+
+    .#{nth($breakpoints, $i)}-pad-top {
+      padding-top: 3rem;
+    }
+
+    .#{nth($breakpoints, $i)}-pad-top-2x {
+      padding-top: 6rem;
+    }
+
+    .#{nth($breakpoints, $i)}-pad-bottom {
+      padding-bottom: 3rem;
+    }
+
+    .#{nth($breakpoints, $i)}-pad-bottom-2x {
+      padding-bottom: 3rem;
+    }
+
+    .#{nth($breakpoints, $i)}-pad-left-half {
+      padding-left: 1.5rem;
+    }
+
+    .#{nth($breakpoints, $i)}-pad-right-half {
+      padding-right: 1.5rem;
+    }
+  }
 }
 
 .height-half,

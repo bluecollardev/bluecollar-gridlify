@@ -23,13 +23,13 @@ amp-consent .ampstart-btn {
 }
 
 /* phones */
-@media (--breakpoint-xs) {
+@media (var(--breakpoint-xs)) {
   amp-consent a.ampstart-consent-close-btn {
     font-size: var(--h3);
     top: 15px;
     right: 13px;
   }
-  
+
   .ampstart-consent-content {
     flex-flow: column wrap;
     align-items: center;
@@ -43,7 +43,7 @@ amp-consent .ampstart-btn {
 }
 
 /* tablets and desktop */
-@media (--breakpoint-sm) {
+@media (var(--breakpoint-sm)) {
  .ampstart-consent-popup a.ampstart-consent-close-btn {
     font-size: var(--h3);
     left: 2.5rem;
