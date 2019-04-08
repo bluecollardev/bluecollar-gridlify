@@ -139,11 +139,12 @@
       </div>
       <div class="sm-flex flex-column flex-basis-two-thirds">
         <div class="sm-flex flex-column bg-firebrand-red pad-top pad-bottom">
-          <div class="sm-flex">
+          <!-- This doesn't space out well -->
+          <!--<div class="sm-flex">
             <div class="space-all space-bottom-half">
               <p class="g-pstyle6">Facebook Instant Experiences</p>
             </div>
-          </div>
+          </div>-->
           <div class="sm-flex">
             <div class="sm-flex">
               <div class="flex-basis-half space-all">

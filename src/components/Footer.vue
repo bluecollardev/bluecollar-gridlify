@@ -25,6 +25,8 @@
             <div class="g-footer">
               <p class="g-pstyle7"><a href="/services-digital-marketing#social-media" fragment="social-media">Social Media</a></p>
               <p>&nbsp;</p>
+              <p class="g-pstyle7"><a href="/services-web#landing-pages" fragment="landing-pages">Landing Pages</a></p>
+              <p>&nbsp;</p>
               <p class="g-pstyle7"><a href="/services-digital-marketing#advertising" fragment="advertising">Advertising</a></p>
             </div>
           </div>
