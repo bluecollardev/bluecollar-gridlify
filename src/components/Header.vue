@@ -66,9 +66,9 @@
             <a href="/services-software">Custom Software</a>
           </ul>
         </li>
-        <li><a>Pricing</a></li>
+        <li href="/pricing"><a>Pricing</a></li>
         <li><a>Projects</a></li>
-        <li><a>Contact</a></li>
+        <li href="/contact"><a>Contact</a></li>
       </nav>
     </div>
   </header>
