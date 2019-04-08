@@ -60,7 +60,7 @@
       <nav id="menu">
         <li><a href="/company">Company</a></li>
         <li class="drop"><a v-on:click="displayDropMenu()">Services  <i class="icon-arrow"></i></a>
-          <ul class="drop_menu">
+          <ul class="drop-menu">
             <a href="/services-web">Websites + Landing Pages</a>
             <a href="/services-digital-marketing">Digital Marketing</a>
             <a href="/services-software">Custom Software</a>

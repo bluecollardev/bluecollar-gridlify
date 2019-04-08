@@ -63,10 +63,6 @@
 
     <!-- Popular -->
     <section id="web-development" class="travel-popular pb4 pt3 relative">
-      <header class="max-width-3 mx-auto px1 md-px2">
-        <h3 class="h1 bold line-height-2 md-hide lg-hide" aria-hidden="true">Web<br>Development</h3>
-        <h3 class="h1 bold line-height-2 xs-hide sm-hide center">Web Development</h3>
-      </header>
       <div class="overflow-scroll">
         <div class="travel-overflow-container">
           <div class="sm-flex px1 md-px2 mxn1 flex-justify-evenly">
@@ -324,10 +320,6 @@
 
     <!-- Popular -->
     <section id="social-media" class="travel-popular pb4 pt3 relative">
-      <header class="max-width-3 mx-auto px1 md-px2">
-        <h3 class="h1 bold line-height-2 md-hide lg-hide" aria-hidden="true">Social<br>Media</h3>
-        <h3 class="h1 bold line-height-2 xs-hide sm-hide center">Social Media</h3>
-      </header>
       <div class="overflow-scroll">
         <div class="travel-overflow-container">
           <div class="sm-flex px1 md-px2 mxn1 flex-justify-evenly">
@@ -545,10 +537,6 @@
 
     <!-- Popular -->
     <section id="seo-ppc" class="travel-popular pb4 pt3 relative">
-      <header class="max-width-3 mx-auto px1 md-px2">
-        <h3 class="h1 bold line-height-2 md-hide lg-hide" aria-hidden="true">SEO + PPC</h3>
-        <h3 class="h1 bold line-height-2 xs-hide sm-hide center">SEO + PPC</h3>
-      </header>
       <div class="overflow-scroll">
         <div class="travel-overflow-container">
           <div class="sm-flex px1 md-px2 mxn1 flex-justify-evenly">
