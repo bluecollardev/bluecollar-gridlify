@@ -12,12 +12,12 @@
                 <br />
                 <span class="no-wrap">digital marketing with</span>
                 <br />
-                <span class="no-wrap">Firebrand Web Solutions</span>
+                <span class="no-wrap">Firebrand</span>
               </span>
                 <span class="xs-hide sm-hide">
               <span class="no-wrap">AMP-lify your digital marketing</span>
               <br />
-              <span class="no-wrap">with Firebrand Web Solutions</span>
+              <span class="no-wrap">with Firebrand</span>
             </span>
               </p>
             </div>

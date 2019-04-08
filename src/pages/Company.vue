@@ -147,7 +147,7 @@
                     <p class="text-center">Technical Director</p>
                   </div>
                   <div class="g-help-with-digital-marketing">
-                    <p>Michael has made a career of creating innovative and impactful solutions for clients, specializing in e-commerce, data and API integrations, and mobile technology. As co-founder of Firebrand Web Solutions, he leads the team’s development and creative efforts.</p>
+                    <p>Michael has made a career of creating innovative and impactful solutions for clients, specializing in e-commerce, data and API integrations, and mobile technology. As the founder of Firebrand, he leads the team’s development and creative efforts.</p>
                   </div>
                 </div>
               </div>
@@ -166,7 +166,7 @@
                     <p class="text-center">Marketing Director</p>
                   </div>
                   <div class="g-help-with-digital-marketing">
-                    <p>Chris founded Firebrand Web Solutions after a successful career in product managment for real estate software and digital marketing strategy. Chris brings over 10 years of marketing experience to his clients, combined with deep knowledge of the latest social media technology and trends.</p>
+                    <p>Chris founded Firebrand after a successful career in product managment for real estate software and digital marketing strategy. Chris brings over 10 years of marketing experience to his clients, combined with deep knowledge of the latest social media technology and trends.</p>
                   </div>
                 </div>
               </div>

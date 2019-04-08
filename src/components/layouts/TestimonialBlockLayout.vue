@@ -1,15 +1,17 @@
 <template>
-  <div class="content-block testimonial-block-wrapper text-center">
+  <div class="content-block testimonial-block-wrapper text-center space-bottom-half">
     <div v-bind:class="classNameString">
       <div class="space-bottom-half g-services">
         <p class="g-pstyle8 text-center" v-html="this.testimonial"></p>
       </div>
+    </div>
+    <img class="circle space-bottom-half testimonial-profile-circle" v-bind:src="this.image" />
+    <div v-bind:class="classNameString">
       <div class="g-services">
-        <p class="g-pstyle10 text-center">{{ this.reviewedBy }}</p>
-        <p class="g-pstyle10 text-center">{{ this.position }} / {{ this.organization }}</p>
+        <p class="g-pstyle10 text-center"><strong>{{ this.reviewedBy }} - {{ this.position }}</strong></p>
+        <p class="g-pstyle10 text-center"><em>{{ this.organization }}</em></p>
       </div>
     </div>
-    <img class="circle space-bottom" v-bind:src="this.image" />
   </div>
 </template>
 
@@ -61,3 +63,10 @@ export default {
   }
 };
 </script>
+
+
+<style>
+  .testimonial-profile-circle {
+    width: 50%;
+  }
+</style>
