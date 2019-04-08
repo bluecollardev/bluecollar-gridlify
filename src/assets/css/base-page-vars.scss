@@ -1,0 +1,42 @@
+@import './bass-override-vars';
+@import './ampstart-spacing-vars';
+@import './components/inputs/input-vars';
+@import './components/navbar/navbar-vars';
+@import './components/footer/footer-vars';
+@import './components/dropdown/dropdown-vars';
+
+
+:root {
+  --color-white: #fff;
+  --color-dark-grey: #4a4a4a;
+  --color-grey: #6e6e6e;
+  --color-black: #000;
+
+  --color-body-background: #fff;
+
+  --color-primary: #000;
+  --color-font-primary: #fff;
+
+  --color-secondary: #fff;
+  --color-font-secondary: #000;
+
+  --color-font-default: var(--color-dark-grey);
+  --color-font-subtitle: #4f4f4f;
+  --color-font-accent: #003f93;
+
+  --color-disabled: #9b9b9b;
+  --color-border: var(--color-dark-grey);
+
+  --color-navbar-primary: #fff;
+  --color-navbar-font-primary: #000;
+
+  --color-input-primary: var(--color-font-accent);
+  --color-input-font-secondary: var(--color-font-accent);
+
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+
+  --zindex-max: 999;
+
+  --body-min-width: 315px;
+  --content-max-width: 700px;
+}
