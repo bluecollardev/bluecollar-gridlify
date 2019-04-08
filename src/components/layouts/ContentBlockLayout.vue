@@ -6,7 +6,7 @@
     <div class="g-services">
       <p v-html="this.description"></p>
     </div>
-    <div class="g-services">
+    <div v-if="typeof this.linkText === string && this.linkText.length > 0" class="g-services">
       <a class="space-top-half more-info-link g-pstyle11" v-bind:href="this.link">{{ this.linkText }}</a>
     </div>
   </div>

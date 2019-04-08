@@ -26,6 +26,12 @@
 
 .bg-cherry {
   background-color: #720500; /* rgb(114, 5, 0) */
+  color: white;
+}
+
+.bg-cherry.transparent {
+  background-color: rgba(114, 5, 0, 0.777);
+  color: white;
 }
 
 /* TODO: Important styles are not AMP compatible! */
