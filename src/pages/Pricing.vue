@@ -270,7 +270,7 @@
       </section>
       <!--/ Popular -->
 
-      <section v-if="pricingFor === 'WEB_SOFTWARE'" class="hero-section bg-hero-grey sm-flex pad-top space-top">
+      <section v-if="pricingFor === 'WEB_SOFTWARE'" class="hero-section bg-hero-grey sm-flex pad-top pad-bottom space-top">
         <div class="sm-flex flex-center flex-justify-center flex-basis-third">
           <div class="content-block">
             <img class="banner-image" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
