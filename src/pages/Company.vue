@@ -1,7 +1,22 @@
 <template>
   <Layout>
     <Header/>
-    <section class="hero-section bg-hero-grey sm-flex flex-column pad-top">
+    <section class="hero-section bg-hero-grey sm-flex pad-top height-half">
+      <div class="sm-flex flex-auto flex-center flex-justify-center">
+        <div class="content-block">
+          <div>
+            <div class="space-bottom">
+              <p class="g-pstyle2 text-center-force">Our Vision</p>
+            </div>
+            <div class="g-banner">
+              <p>At Firebrand we understand that the online world is undergoing a paradigm shift away from traditional HTML websites to a system of content pages shared across social media platforms and mobile devices. Already, more people on earth view their online content on mobile devices than on desktop browsers. We recognize the tremendous opportunities available for businesses who adapt to this shift and adopt tools that will enable them to take advantage of these new platforms and devices. It is our goal to be at the forefront of these new technologies and make use of them to deliver value to our clients.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-section bg-hero-grey sm-flex flex-column">
       <div class="sm-flex flex-column flex-center flex-justify-stretch flex-basis-two-thirds">
         <div class="sm-flex space-all">
           <div class="sm-flex flex-center">
@@ -24,7 +39,7 @@
           </div>
         </div>
       </div>
-      <div class="hero-section bg-hero-grey sm-flex pad-top">
+      <div class="hero-section bg-hero-grey sm-flex">
         <!-- Position relatively, or absolute positioning of the caption will fail -->
         <div class="relative flex-basis-half sm-flex flex-justify-end">
           <div class="content-block">
@@ -38,8 +53,8 @@
               <div class="space-bottom-half g-services">
                 <p>Firebrand has been in the business of web design since 2008. Starting as a web design agency building sites for clients in Canada, the US, and Asia, we have evolved over time.</p>
                 <p>&nbsp;</p>
-                <p>Today our focus is exclusively on building next-generation accelerated mobile page web solutions for clients who want to share their content with the ever growing global mobile audience, and take advantage of the tremendous opportunities for highly targeted marketing now available on social media platforms like Facebook.</p>
-                <p>&nbsp;</p>
+                <!--<p>Today our focus is exclusively on building next-generation accelerated mobile page web solutions for clients who want to share their content with the ever growing global mobile audience, and take advantage of the tremendous opportunities for highly targeted marketing now available on social media platforms like Facebook.</p>
+                <p>&nbsp;</p>-->
                 <p>Whether it’s parsing MLS listing data to AMP landing pages, or running creative social media campaigns for e-commerce businesses, we are obsessed with innovating new solutions for the mobile web and continually bringing new value to our clients.</p>
               </div>
             </div>
@@ -48,74 +63,66 @@
       </div>
     </section>
 
-    <section class="hero-section bg-light-grey sm-flex pad-top pad-bottom height-half">
-      <div class="sm-flex flex-auto flex-center flex-justify-center">
-        <div class="content-block">
-          <div>
-            <div class="space-bottom">
-              <p class="g-pstyle2 text-center-force">Our Vision</p>
-            </div>
-            <div class="g-banner">
-              <p>At Firebrand we understand that the online world is undergoing a paradigm shift away from traditional HTML websites to a system of content pages shared across social media platforms and mobile devices. Already, more people on earth view their online content on mobile devices than on desktop browsers. We recognize the tremendous opportunities available for businesses who adapt to this shift and adopt tools that will enable them to take advantage of these new platforms and devices. It is our goal to be at the forefront of these new technologies and make use of them to deliver value to our clients.</p>
+    <!--<section class="lg-flex bg-hero-grey pad-top">
+      <div class="sm-flex flex-center flex-basis-half">
+        <div>
+          <div class="sm-flex flex-wrap">
+            <div class="space-all no-space-bottom g-get-started">
+              <p class="g-pstyle12">How to get started?</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="lg-flex flex-center flex-justify-center space-top space-bottom">
-      <div class="hero-block">
-        <div class="sm-flex flex-center flex-justify-center">
-          <div>
-            <div class="md-flex flex-wrap">
-              <div class="flex-basis-half">
-                <div class="space-all">
-                  <div class="space-bottom-half g-get-started">
-                    <p class="g-pstyle9">AMP HTML</p>
-                  </div>
-                  <div class="g-get-started">
-                    <p>Traditional HTML used to build standard websites for desktop browsers will inevitably be replaced by mobile-first languages. Enter AMP, the open source project spearheaded by Google, which is changing the nature of webpages to a truly mobile-first experience. Firebrand places this language at the heart of all our web projects.</p>
-                  </div>
+          <div class="md-flex flex-wrap">
+            <div class="flex-basis-half">
+              <div class="space-all">
+                <div class="space-bottom-half g-get-started">
+                  <p class="g-pstyle9" v-html="getProcessStep(0).title"></p>
+                </div>
+                <div class="g-get-started">
+                  <p v-html="getProcessStep(0).description"></p>
                 </div>
               </div>
+            </div>
 
-              <div class="flex-basis-half">
-                <div class="space-all">
-                  <div class="space-bottom-half g-get-started">
-                    <p class="g-pstyle9">Data Parsing</p>
-                  </div>
-                  <div class="g-get-started">
-                    <p>In the era of big data, it makes sense to funnel data content into landing pages to provide accurate information to consumers. We are experts at taking MLS listing data, auto dealership data, e-commerce data, etc. and accurately funneling it into landing pages that our clients share with their customers across social media and web platforms.</p>
-                  </div>
+            <div class="flex-basis-half">
+              <div class="space-all">
+                <div class="space-bottom-half g-get-started">
+                  <p class="g-pstyle9" v-html="getProcessStep(1).title"></p>
+                </div>
+                <div class="g-get-started">
+                  <p v-html="getProcessStep(1).description"></p>
                 </div>
               </div>
+            </div>
 
-              <div class="flex-basis-half">
-                <div class="space-all">
-                  <div class="space-bottom-half g-get-started">
-                    <p class="g-pstyle9">Creative</p>
-                  </div>
-                  <div class="g-get-started">
-                    <p>Image is everything. We produce stunning creative work that tells a story to your customer. When customers understand how associating with you can define who they are, they have a compelling reason to buy (and are likely willing to pay a higher price).</p>
-                  </div>
+            <div class="flex-basis-half">
+              <div class="space-all">
+                <div class="space-bottom-half g-get-started">
+                  <p class="g-pstyle9" v-html="getProcessStep(2).title"></p>
+                </div>
+                <div class="g-get-started">
+                  <p v-html="getProcessStep(2).description"></p>
                 </div>
               </div>
+            </div>
 
-              <div class="flex-basis-half">
-                <div class="space-all">
-                  <div class="space-bottom-half g-get-started">
-                    <p class="g-pstyle9">Digital Marketing</p>
-                  </div>
-                  <div class="g-get-started">
-                    <p>Integrating new technological features for its own sake is rarely at the heart of creating real value for clients. Effective solutions require a deep understanding of marketing principles, in particular the behavior of audiences consuming digital content. We use data-driven analysis to measure and validate the effectiveness of all our marketing campaigns.</p>
-                  </div>
+            <div class="flex-basis-half">
+              <div class="space-all">
+                <div class="space-bottom-half g-get-started">
+                  <p class="g-pstyle9" v-html="getProcessStep(3).title"></p>
+                </div>
+                <div class="g-get-started">
+                  <p v-html="getProcessStep(3).description"></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      <div class="flex-basis-half">
+       <img class="image-fill banner-image" src="/images/get-started-feature-image.png" />
+      </div>
+    </section>-->
 
     <section class="hero-section bg-hero-grey sm-flex flex-column pad-top">
       <div class="sm-flex flex-column flex-center flex-justify-stretch flex-basis-two-thirds">
@@ -175,6 +182,7 @@
 </template>
 
 <script>
+  // Import components
   import Header from '~/components/Header.vue';
   import Hero from '~/components/Hero.vue';
   import Portfolio from '~/components/Portfolio.vue';
@@ -183,15 +191,89 @@
   import Contact from '~/components/Contact.vue';
   import Footer from '~/components/Footer.vue';
 
+  // Import generic component layouts
+  import HeroLayout02Col from '~/components/layouts/HeroLayout02Col.vue';
+  import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
+  import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
+  import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
+  import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
+
+  // Import static data
+  import HomeData from '~/data/Home.yml';
+  import HeroData from '~/data/Hero.yml';
+  import GeneralData from '~/data/General.yml';
+  import TestimonialData from '~/data/Testimonial.yml';
+
   export default {
     components: {
+      // Inject components
       Header,
       Hero,
       Portfolio,
       About,
       Blog,
       Contact,
-      Footer
+      Footer,
+      // Inject generic component layouts
+      HeroLayout02Col,
+      SectionBlockLayout02Col01,
+      SectionBlockLayout02Col02,
+      ContentBlockLayout,
+      TestimonialBlockLayout,
     },
+    computed: {
+      homeContent() {
+        return HomeData;
+      },
+      heroContent() {
+        return HeroData;
+      },
+      generalContent() {
+        return GeneralData;
+      },
+      testimonialContent() {
+        return TestimonialData;
+      },
+      homepageHero() {
+        let items = this.heroContent.items.filter(item => {
+          return item.id === 'homepage-hero';
+        });
+
+        if (items instanceof Array && items.length > 0) {
+          return items[0];
+        }
+
+        return null
+      },
+    },
+    methods: {
+      getTestimonial(idx) {
+        let items = this.testimonialContent.items;
+
+        if (items instanceof Array && items.length > idx) {
+          return items[idx];
+        }
+
+        return null
+      },
+      getService(idx) {
+        let items = this.homeContent.services;
+
+        if (items instanceof Array && items.length > idx) {
+          return items[idx];
+        }
+
+        return null
+      },
+      getProcessStep(idx) {
+        let items = this.homeContent.processSteps;
+
+        if (items instanceof Array && items.length > idx) {
+          return items[idx];
+        }
+
+        return null
+      }
+    }
   }
 </script>

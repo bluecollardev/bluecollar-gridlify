@@ -29,6 +29,60 @@
       subCaption="Software Architect, Firebrand"
     />
 
+    <!--<section class="lg-flex flex-center flex-justify-center space-top space-bottom">
+      <div class="hero-block">
+        <div class="sm-flex flex-center flex-justify-center">
+          <div>
+            <div class="md-flex flex-wrap">
+              <div class="flex-basis-half">
+                <div class="space-all">
+                  <div class="space-bottom-half g-get-started">
+                    <p class="g-pstyle9">AMP HTML</p>
+                  </div>
+                  <div class="g-get-started">
+                    <p>Traditional HTML used to build standard websites for desktop browsers will inevitably be replaced by mobile-first languages. Enter AMP, the open source project spearheaded by Google, which is changing the nature of webpages to a truly mobile-first experience. Firebrand places this language at the heart of all our web projects.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-basis-half">
+                <div class="space-all">
+                  <div class="space-bottom-half g-get-started">
+                    <p class="g-pstyle9">Data Parsing</p>
+                  </div>
+                  <div class="g-get-started">
+                    <p>In the era of big data, it makes sense to funnel data content into landing pages to provide accurate information to consumers. We are experts at taking MLS listing data, auto dealership data, e-commerce data, etc. and accurately funneling it into landing pages that our clients share with their customers across social media and web platforms.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-basis-half">
+                <div class="space-all">
+                  <div class="space-bottom-half g-get-started">
+                    <p class="g-pstyle9">Creative</p>
+                  </div>
+                  <div class="g-get-started">
+                    <p>Image is everything. We produce stunning creative work that tells a story to your customer. When customers understand how associating with you can define who they are, they have a compelling reason to buy (and are likely willing to pay a higher price).</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-basis-half">
+                <div class="space-all">
+                  <div class="space-bottom-half g-get-started">
+                    <p class="g-pstyle9">Digital Marketing</p>
+                  </div>
+                  <div class="g-get-started">
+                    <p>Integrating new technological features for its own sake is rarely at the heart of creating real value for clients. Effective solutions require a deep understanding of marketing principles, in particular the behavior of audiences consuming digital content. We use data-driven analysis to measure and validate the effectiveness of all our marketing campaigns.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>-->
+
     <section class="lg-flex">
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
         <div class="content-block">
@@ -98,67 +152,6 @@
         </div>
       </div>
     </section>
-
-    <!--<section class="lg-flex bg-hero-grey pad-top">
-      <div class="sm-flex flex-center flex-basis-half">
-        <div>
-          <div class="sm-flex flex-wrap">
-            <div class="space-all no-space-bottom g-get-started">
-              <p class="g-pstyle12">How to get started?</p>
-            </div>
-          </div>
-
-          <div class="md-flex flex-wrap">
-            <div class="flex-basis-half">
-              <div class="space-all">
-                <div class="space-bottom-half g-get-started">
-                  <p class="g-pstyle9" v-html="getProcessStep(0).title"></p>
-                </div>
-                <div class="g-get-started">
-                  <p v-html="getProcessStep(0).description"></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex-basis-half">
-              <div class="space-all">
-                <div class="space-bottom-half g-get-started">
-                  <p class="g-pstyle9" v-html="getProcessStep(1).title"></p>
-                </div>
-                <div class="g-get-started">
-                  <p v-html="getProcessStep(1).description"></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex-basis-half">
-              <div class="space-all">
-                <div class="space-bottom-half g-get-started">
-                  <p class="g-pstyle9" v-html="getProcessStep(2).title"></p>
-                </div>
-                <div class="g-get-started">
-                  <p v-html="getProcessStep(2).description"></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex-basis-half">
-              <div class="space-all">
-                <div class="space-bottom-half g-get-started">
-                  <p class="g-pstyle9" v-html="getProcessStep(3).title"></p>
-                </div>
-                <div class="g-get-started">
-                  <p v-html="getProcessStep(3).description"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex-basis-half">
-        <img class="image-fill banner-image" src="/images/get-started-feature-image.png" />
-      </div>
-    </section>-->
     <Footer/>
   </Layout>
 </template>
