@@ -1,15 +1,15 @@
 <template>
-  <div class="content-block testimonial-block-wrapper">
+  <div class="content-block testimonial-block-wrapper text-center">
     <div v-bind:class="classNameString">
       <div class="space-bottom-half g-services">
-        <p class="g-pstyle8" v-html="this.testimonial"></p>
+        <p class="g-pstyle8 text-center" v-html="this.testimonial"></p>
       </div>
       <div class="g-services">
-        <p class="g-pstyle10">{{ this.reviewedBy }}</p>
-        <p class="g-pstyle10">{{ this.position }} / {{ this.organization }}</p>
+        <p class="g-pstyle10 text-center">{{ this.reviewedBy }}</p>
+        <p class="g-pstyle10 text-center">{{ this.position }} / {{ this.organization }}</p>
       </div>
     </div>
-    <img v-bind:src="this.image" />
+    <img class="circle space-bottom" v-bind:src="this.image" />
   </div>
 </template>
 
