@@ -96,21 +96,22 @@
       </div>
     </section>
 
-    <section class="hero-section bg-hero-grey sm-flex pad-top">
+    <section class="hero-section bg-hero-grey sm-flex flex-justify-center pad-top pad-bottom">
       <!-- Position relatively, or absolute positioning of the caption will fail -->
-      <div class="relative flex-basis-half">
-        <img class="banner-image right" src="/images/hero-old-businessman.png" />
-      </div>
-
-      <div class="sm-flex flex-center flex-justify-start flex-basis-half">
+      <div class="sm-flex flex-center flex-justify-center flex-basis-third">
         <div class="content-block">
+          <img class="banner-image" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
+        </div>
+      </div>
+      <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
+        <div>
           <div class="space-all">
-            <div class="space-bottom-half g-services">
-              <p class="g-pstyle8">Our previous website took forever to build and wasn&rsquo;t what we wanted.  Firebrand had a perfect site up for us in no time.</p>
+            <div class="g-services">
+              <p class="g-pstyle8">Firebrand shaved hours per week off my social media schedule.  Now I get more leads from my social channels than any other source.</p>
             </div>
             <div class="g-services">
-              <p>Carl Stevens</p>
-              <p>Ace Coffee Roasters</p>
+              <p>Greg Lane</p>
+              <p>Restaurant Owner</p>
             </div>
           </div>
         </div>
@@ -171,7 +172,28 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="hero-section bg-hero-grey sm-flex flex-justify-center pad-top pad-bottom">
+      <!-- Position relatively, or absolute positioning of the caption will fail -->
+      <div class="sm-flex flex-center flex-justify-center flex-basis-third">
+        <div class="content-block">
+          <img class="banner-image" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
+        </div>
+      </div>
+      <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
+        <div>
+          <div class="space-all">
+            <div class="g-services">
+              <p class="g-pstyle8">Our previous website took forever to build and wasn&rsquo;t what we wanted.  Firebrand had a perfect site up for us in no time.</p>
+            </div>
+            <div class="g-services">
+              <p>Greg Lane</p>
+              <p>Restaurant Owner</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
