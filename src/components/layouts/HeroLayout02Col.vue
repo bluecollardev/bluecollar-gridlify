@@ -1,6 +1,6 @@
 <template>
   <section class="hero-section bg-hero-grey sm-flex pad-top">
-    <div class="sm-flex flex-center flex-justify-center flex-basis-half">
+    <div class="sm-flex flex-center flex-justify-end flex-basis-half">
       <div class="hero-block">
         <div class="flex flex-column">
           <div class="homepage-hero-title space-bottom">
@@ -28,11 +28,11 @@
     </div>
 
     <!-- Position relatively, or absolute positioning of the caption will fail -->
-    <div class="relative flex-basis-half">
-      <img class="banner-image right" v-bind:src="this.image" />
-      <div class="figure-caption figure-caption-right bg-cherry g-hero">
-        <p class="g-pstyle4">{{ this.caption }}</p>
-        <p class="g-pstyle5">{{ this.subCaption }}</p>
+    <div class="relative flex flex-basis-half flex-justify-center">
+      <img class="banner-image" v-bind:src="this.image" />
+      <div class="figure-caption bg-cherry g-hero">
+        <p class="g-pstyle4" style="text-align: right;">{{ this.caption }}</p>
+        <p class="g-pstyle5" style="text-align: right;">{{ this.subCaption }}</p>
       </div>
     </div>
 
