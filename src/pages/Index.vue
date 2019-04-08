@@ -99,7 +99,7 @@
       </div>
     </section>
 
-    <section class="lg-flex bg-hero-grey pad-top">
+    <!--<section class="lg-flex bg-hero-grey pad-top">
       <div class="sm-flex flex-center flex-basis-half">
         <div>
           <div class="sm-flex flex-wrap">
@@ -156,10 +156,9 @@
         </div>
       </div>
       <div class="flex-basis-half">
-        <!-- TODO: Conditionally use image-fill OR banner-image -->
         <img class="image-fill banner-image" src="/images/get-started-feature-image.png" />
       </div>
-    </section>
+    </section>-->
     <Footer/>
   </Layout>
 </template>
