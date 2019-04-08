@@ -53,7 +53,10 @@
               <p class="g-pstyle13">Resources</p>
             </div>
             <div class="g-footer">
-              <p class="g-pstyle7">Blog</p>
+              <p class="g-pstyle7"><a href="/blog">Blog</a></p>
+            </div>
+            <div class="g-footer">
+              <p class="g-pstyle7"><a href="https://github.com/firebrandsolutions">GitHub</a></p>
             </div>
           </div>
 
