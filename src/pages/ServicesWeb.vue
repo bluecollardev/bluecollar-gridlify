@@ -105,7 +105,7 @@
       <!-- Position relatively, or absolute positioning of the caption will fail -->
       <div class="sm-flex flex-center flex-justify-center flex-basis-third">
         <div class="content-block">
-          <img class="banner-image" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
+          <img class="banner-image circle" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
         </div>
       </div>
       <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
