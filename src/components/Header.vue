@@ -57,9 +57,9 @@
       <a href="/" class="flex-auto flex flex-center xs-flex-justify-center">
         <img class="logo" src="/images/firebrand-logo.png" />
       </a>
-      <nav id="menu">
+      <nav id="menu" v-on:mouseleave="hideDropMenu()">
         <li><a href="/company">Company</a></li>
-        <li class="drop"><a v-on:click="displayDropMenu()">Services  <i class="icon-arrow"></i></a>
+        <li class="drop"><a v-on:mouseover="displayDropMenu()">Services  <i class="icon-arrow"></i></a>
           <ul class="drop-menu">
             <a href="/services-web">Websites + Landing Pages</a>
             <a href="/services-digital-marketing">Digital Marketing</a>
@@ -110,12 +110,12 @@
       }
     },
     methods: {
-      displayMenu: function() {
+      displayMenu() {
         let body = document.getElementsByTagName('body')[0];
 
         (!body.classList.contains('display-menu')) ? body.classList.add('display-menu'): body.classList.remove('display-menu');
       },
-      displayDropMenu: function() {
+      displayDropMenu() {
         let dropMenu = event.target.parentElement.getElementsByClassName('drop-menu')[0];
         let dropMenus = document.getElementsByClassName('drop-menu');
 
@@ -135,6 +135,9 @@
         if (window.innerWidth < 660 && dropMenu.classList.contains('display')) {
           event.target.parentElement.nextSibling.nextSibling.style.marginTop = dropMenu.clientHeight + 'px';
         }
+      },
+      hideDropMenu() {
+        closeAllMenus();
       },
       loaded: function() {
         document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
