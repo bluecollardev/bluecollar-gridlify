@@ -58,17 +58,17 @@
         <img class="logo" src="/images/firebrand-logo.png" />
       </a>
       <nav id="menu">
-        <li><a href="/company">Company</a></li>
+        <li><a href="/company" v-on:click="hideDropMenu()">Company</a></li>
         <li class="drop"><a v-on:mouseover="displayDropMenu()">Services  <i class="icon-arrow"></i></a>
           <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
-            <a href="/services-web">Websites + Landing Pages</a>
-            <a href="/services-digital-marketing">Digital Marketing</a>
-            <a href="/services-software">Custom Software</a>
+            <li><a href="/services-web" v-on:click="hideDropMenu()">Websites + Landing Pages</a></li>
+            <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Digital Marketing</a></li>
+            <li><a href="/services-software" v-on:click="hideDropMenu()">Custom Software</a></li>
           </ul>
         </li>
-        <li><a href="/pricing">Pricing</a></li>
-        <li><a>Projects</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/pricing" v-on:click="hideDropMenu()">Pricing</a></li>
+        <li><a v-on:click="hideDropMenu()">Projects</a></li>
+        <li><a href="/contact" v-on:click="hideDropMenu()">Contact</a></li>
       </nav>
     </div>
   </header>
@@ -381,7 +381,7 @@
     }
     header .drop-menu {
       //top: var(--body_height_8);
-      top: 135px;
+      top: 200%;
       box-shadow: none;
       left: 0;
       padding-bottom: 0;
@@ -414,7 +414,7 @@
       }
     }
     header .drop-menu {
-      top: var(--body_height_4);
+      top: 67px;
     }
   }
   i {
@@ -425,7 +425,6 @@
 
   @media screen and (max-width: 660px) {
     header .drop-menu {
-      top: 8rem;
       box-shadow: none;
       left: 0;
       padding-bottom: 0;
