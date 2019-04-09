@@ -153,6 +153,7 @@
 
 <style lang="scss">
   :root {
+    --cblue: #5c7e9e;
     --ccherry: #720500;
     --cgrey : #3E3A37;
     --cwhite : #ffffff;
@@ -261,6 +262,18 @@
     display: none;
     transform: translateY(-50%);
   }
+  @media screen and (max-width: 40rem) {
+    header #hamburger {
+      cursor: pointer;
+      border-radius: 50%;
+      position: absolute;
+      left: 3%;
+      top: 25px;
+      display: none;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
   header #hamburger span {
     height: 2px;
     margin-top: 5px;
@@ -299,16 +312,16 @@
       border-width: 0px 0px 10px 10px;
       border-style: solid;
       border-color: transparent;
-      &:nth-child(0) {border-left-color: var(--ccherry);}
-      &:nth-child(1) {transform: rotate(-40deg); border-left-color: var(--ccherry);}
-      &:nth-child(2) {transform: rotate(-80deg); border-left-color: var(--ccherry);}
+      &:nth-child(0) {border-left-color: var(--cblue);}
+      &:nth-child(1) {transform: rotate(-40deg); border-left-color: var(--cblue);}
+      &:nth-child(2) {transform: rotate(-80deg); border-left-color: var(--cblue);}
       &:nth-child(3) {transform: rotate(-130deg); border-left-color: var(--cgrey_green);}
       &:nth-child(4) {transform: rotate(-170deg); border-left-color: var(--cgrey_green);}
       &:nth-child(5) {transform: rotate(-210deg); border-left-color: var(--cgrey_green);}
       &:nth-child(6) {transform: rotate(-250deg); border-left-color: var(--cgrey);}
       &:nth-child(7) {transform: rotate(-280deg); border-left-color: var(--cgrey);}
       &:nth-child(8) {transform: rotate(-320deg); border-left-color: var(--cgrey);}
-      &:nth-child(9) {transform: rotate(-360deg); border-left-color: var(--ccherry);}
+      &:nth-child(9) {transform: rotate(-360deg); border-left-color: var(--cblue);}
     }
   }
   @keyframes spin { from {transform: rotate(0deg);} to {transform: rotate(-360deg);}}
@@ -370,7 +383,7 @@
         display: block;
         &:hover {
           color: var(--cwhite);
-          background-color: var(--ccherry);
+          background-color: var(--cblue);
           i {background-color: var(--cwhite);}
         }
       }

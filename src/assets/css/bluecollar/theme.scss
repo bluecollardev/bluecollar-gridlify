@@ -15,6 +15,13 @@ body {
   height: 40px;
 }
 
+@media screen and (max-width: 40rem) {
+  .logo {
+    margin-left: 1rem;
+    height: 30px;
+  }
+}
+
 /* Override ampstart defaults */
 .ampstart-headerbar .ampstart-navbar-trigger {
   color: #5c7e9e;
