@@ -1,8 +1,8 @@
 module.exports = {
-	siteName: 'Gridsome Starter NetlifyCMS',
-	siteUrl: 'https://www.gridsome.org',
-	siteDescription: 'Gridsome is a blazing-fast static site generator...',
-	titleTemplate: `%s - Gridsome`,
+	siteName: 'Blue Collar Development',
+	siteUrl: 'https://www.bluecollardev.com',
+	siteDescription: 'Blue Collar Development, Victoria, BC',
+	titleTemplate: `%s - Blue Collar`,
 
 	plugins: [
 		{
