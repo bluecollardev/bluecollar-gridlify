@@ -18,15 +18,15 @@
       <!-- Position relatively, or absolute positioning of the caption will fail -->
       <div class="relative flex-basis-half">
         <img class="banner-image right" src="/images/hero-julia.png" />
-        <!--<div class="figure-caption figure-caption-right bg-cherry g-hero">
+        <!--<div class="figure-caption figure-caption-right bg-bc-blue g-hero">
           <p class="g-pstyle4">Julia</p>
-          <p class="g-pstyle5">Onboarding at Firebrand</p>
+          <p class="g-pstyle5">Onboarding at Blue Collar</p>
         </div>-->
       </div>
     </section>
 
     <section class="lg-flex" style="box-shadow: 1px 0 5px rgba(11,11,11,0.6);">
-      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-cherry transparent ${pricingIsActive('WEB_SOFTWARE') ? 'is-active' : '' }`">
+      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('WEB_SOFTWARE') ? 'is-active' : '' }`">
         <div class="pad-top pad-bottom" v-on:click="setPricing('WEB_SOFTWARE')">
           <content-block-layout
             className="py-0"
@@ -35,7 +35,7 @@
           ></content-block-layout>
         </div>
       </div>
-      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-cherry transparent ${pricingIsActive('SOCIAL_MEDIA') ? 'is-active' : '' }`">
+      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('SOCIAL_MEDIA') ? 'is-active' : '' }`">
         <div class="pad-top pad-bottom" v-on:click="setPricing('SOCIAL_MEDIA')">
           <content-block-layout
             v-if="getService(1).linkText"
@@ -44,7 +44,7 @@
         </div>
       </div>
 
-      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-cherry transparent ${pricingIsActive('SOCIAL_ADS') ? 'is-active' : '' }`">
+      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('SOCIAL_ADS') ? 'is-active' : '' }`">
         <div class="pad-top pad-bottom" v-on:click="setPricing('SOCIAL_ADS')">
           <content-block-layout
             v-if="getService(2).linkText"
@@ -53,7 +53,7 @@
           ></content-block-layout>
         </div>
       </div>
-      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-cherry transparent ${pricingIsActive('SEO') ? 'is-active' : '' }`">
+      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('SEO') ? 'is-active' : '' }`">
         <div class="pad-top pad-bottom" v-on:click="setPricing('SEO')">
           <content-block-layout
             v-if="getService(3).linkText"
@@ -75,7 +75,7 @@
                 <div class="travel-popular-tilt-right mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-firebrand-red" style="width: 346px; height: 200px"></div>
+                      <div class="bg-#5c7e9ered" style="width: 346px; height: 200px"></div>
                       <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="" srcset=""></amp-img>-->
                       <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="../img/travel/activity/surf-day.jpg" srcset="../img/travel/activity/surf-day@2x.jpg 2x, ../img/travel/activity/surf-day.jpg 1x"></amp-img>-->
                     </a>
@@ -141,7 +141,7 @@
                 <div class="travel-results-result relative mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-firebrand-red" style="width: 346px; height: 200px"></div>
+                      <div class="bg-#5c7e9ered" style="width: 346px; height: 200px"></div>
                     </a>
                     <div class="travel-results-result-flags absolute top-0 left-0">
                       <div class="p1"><span class="travel-pill bold">NEW</span></div>
@@ -214,7 +214,7 @@
                 <div class="travel-popular-tilt-left mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-firebrand-red" style="width: 346px; height: 200px"></div>
+                      <div class="bg-bc-red" style="width: 346px; height: 200px"></div>
                     </a>
                     <div class="travel-results-result-like absolute top-0 right-0">
                       <div class="p1">
@@ -271,16 +271,17 @@
       <!--/ Popular -->
 
       <section v-if="pricingFor === 'WEB_SOFTWARE'" class="hero-section bg-hero-grey sm-flex pad-top pad-bottom space-top">
+        <!-- Position relatively, or absolute positioning of the caption will fail -->
         <div class="sm-flex flex-center flex-justify-center flex-basis-third">
           <div class="content-block">
-            <img class="banner-image" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
+            <img class="banner-image circle" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
           </div>
         </div>
         <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
           <div>
             <div class="space-all">
               <div class="g-services">
-                <p class="g-pstyle8">Firebrand designed and implemented an amazing website for our business, combining the effective elements of a solid technical design with the functionality and visual appeal to engage our customers. We've seen an immediate increase in sales and flow through business.</p>
+                <p class="g-pstyle8">Blue Collar designed and implemented an amazing website for our business, combining the effective elements of a solid technical design with the functionality and visual appeal to engage our customers. We've seen an immediate increase in sales and flow through business.</p>
               </div>
               <div class="g-services">
                 <p>Greg L.</p>
@@ -333,7 +334,7 @@
                 <div class="travel-popular-tilt-right mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-firebrand-red" style="width: 346px; height: 200px"></div>
+                      <div class="bg-bc-red" style="width: 346px; height: 200px"></div>
                       <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="" srcset=""></amp-img>-->
                       <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="../img/travel/activity/surf-day.jpg" srcset="../img/travel/activity/surf-day@2x.jpg 2x, ../img/travel/activity/surf-day.jpg 1x"></amp-img>-->
                     </a>
@@ -398,7 +399,7 @@
                 <div class="travel-results-result relative mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-firebrand-red" style="width: 346px; height: 200px"></div>
+                      <div class="bg-bc-red" style="width: 346px; height: 200px"></div>
                     </a>
                     <div class="travel-results-result-flags absolute top-0 left-0">
                       <div class="p1"><span class="travel-pill bold">NEW</span></div>
@@ -467,7 +468,7 @@
                 <div class="travel-popular-tilt-left mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-firebrand-red" style="width: 346px; height: 200px"></div>
+                      <div class="bg-bc-red" style="width: 346px; height: 200px"></div>
                     </a>
                     <div class="travel-results-result-like absolute top-0 right-0">
                       <div class="p1">
@@ -528,7 +529,7 @@
           <div class="content-block">
             <div class="space-all">
               <div class="space-bottom-half g-services">
-                <p class="g-pstyle8">Firebrand shaved hours per week off my social media schedule.  Now I get more leads from my social channels than any other source.</p>
+                <p class="g-pstyle8">Blue Collar shaved hours per week off my social media schedule.  Now I get more leads from my social channels than any other source.</p>
               </div>
               <div class="g-services">
                 <p>Carl Stevens</p>
@@ -544,8 +545,25 @@
         </div>
       </section>
 
+      <section v-if="pricingFor === 'SEO'" class="hero-section bg-hero-grey sm-flex pad-top pad-bottom">
+        <div class="sm-flex flex-auto flex-center flex-justify-center">
+          <div class="content-block">
+            <div>
+              <div class="space-bottom">
+                <p class="g-pstyle2 text-center-force">PPC Ad Budgets</p>
+              </div>
+              <div class="g-banner">
+                <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $200 - $300. This will cover the cost for ad placements on digital ad platforms (Google, Bing, etc.) where your business is being promoted.</p>
+
+                <p>To learn more about how the PPC ad spend is used, please contact us.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Popular -->
-      <section v-if="pricingFor === 'SEO'" id="seo-ppc" class="pad-top travel-popular pb4 pt3 relative">
+      <section v-if="pricingFor === 'SEO'" id="seo-ppc" class="space-bottom pad-top travel-popular pb4 pt3 relative">
         <div class="overflow-scroll">
           <div class="travel-overflow-container">
             <div class="sm-flex px1 md-px2 mxn1 flex-justify-evenly">
@@ -554,7 +572,7 @@
                 <div class="travel-popular-tilt-right mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-firebrand-red" style="width: 346px; height: 200px"></div>
+                      <div class="bg-bc-red" style="width: 346px; height: 200px"></div>
                       <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="" srcset=""></amp-img>-->
                       <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="../img/travel/activity/surf-day.jpg" srcset="../img/travel/activity/surf-day@2x.jpg 2x, ../img/travel/activity/surf-day.jpg 1x"></amp-img>-->
                     </a>
@@ -620,7 +638,7 @@
                 <div class="travel-results-result relative mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-firebrand-red" style="width: 346px; height: 200px"></div>
+                      <div class="bg-bc-red" style="width: 346px; height: 200px"></div>
                     </a>
                     <div class="travel-results-result-flags absolute top-0 left-0">
                       <div class="p1"><span class="travel-pill bold">NEW</span></div>
@@ -687,7 +705,7 @@
                 <div class="travel-popular-tilt-left mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-firebrand-red" style="width: 346px; height: 200px"></div>
+                      <div class="bg-bc-red" style="width: 346px; height: 200px"></div>
                     </a>
                     <div class="travel-results-result-like absolute top-0 right-0">
                       <div class="p1">
@@ -742,23 +760,6 @@
         </div>
       </section>
       <!--/ Popular -->
-
-      <section v-if="pricingFor === 'SEO'" class="hero-section bg-hero-grey sm-flex pad-top pad-bottom space-top">
-        <div class="sm-flex flex-auto flex-center flex-justify-center">
-          <div class="content-block">
-            <div>
-              <div class="space-bottom">
-                <p class="g-pstyle2 text-center-force">PPC Ad Budgets</p>
-              </div>
-              <div class="g-banner">
-                <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $200 - $300. This will cover the cost for ad placements on digital ad platforms (Google, Bing, etc.) where your business is being promoted.</p>
-
-                <p>To learn more about how the PPC ad spend is used, please contact us.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
     <Footer/>
   </Layout>
@@ -880,11 +881,11 @@
   .pricing-switcher-item.is-active {
     border-right: 1px solid rgba(255,255,255,0.15);
     border-left: 1px solid rgba(255,255,255,0.15);
-    background: #e0382b;
+    background: #5c7e9e;
   }
 
-  .bg-cherry .g-pstyle11 a,
-  .bg-cherry .g-pstyle11 {
+  .bg-bc-blue .g-pstyle11 a,
+  .bg-bc-blue .g-pstyle11 {
     color: white;
   }
 </style>

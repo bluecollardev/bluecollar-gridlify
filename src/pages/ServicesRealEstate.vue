@@ -8,9 +8,9 @@
             <p class="g-pstyle9">Real Estate</p>
           </div>
           <div>
-            <p>Before co-founding Firebrand, Chris spent years working in the real estate web software industry, bringing his advanced knowledge of the unique marketing challenges Realtors face.</p>
+            <p>Before co-founding Blue Collar, Chris spent years working in the real estate web software industry, bringing his advanced knowledge of the unique marketing challenges Realtors face.</p>
 
-            <p>Firebrand is currently the only company offering accelerated landing pages integrated with MLS data (RESO Web API compliant).  We offer advanced solutions to Realtors wanting to take their digital marketing to the next level.</p>
+            <p>Blue Collar is currently the only company offering accelerated landing pages integrated with MLS data (RESO Web API compliant).  We offer advanced solutions to Realtors wanting to take their digital marketing to the next level.</p>
           </div>
         </div>
         <div class="action-link-block">
@@ -21,9 +21,9 @@
       <div class="sm-flex flex-column flex-basis-third">
         <div class="bg-salmon space-all no-space-bottom relative">
           <img class="bg-white image-fill" src="/images/andrea.jpg" />
-          <div class="figure-caption-full bg-cherry pad-all">
+          <div class="figure-caption-full bg-bc-blue pad-all">
             <div class="space-bottom-half g-help-with-digital-marketing">
-              <p class="g-pstyle6">Firebrand has been hugely beneficial to our business.  They handle all our online marketing &ndash; the results have been amazing!</p>
+              <p class="g-pstyle6">Blue Collar has been hugely beneficial to our business.  They handle all our online marketing &ndash; the results have been amazing!</p>
             </div>
             <div class="g-help-with-digital-marketing">
               <p class="g-pstyle7">Andrea Jurgens</p>

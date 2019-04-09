@@ -22,12 +22,12 @@
     <section-block-layout02-col01
       title="How does it work?"
       subtitle=""
-      description="It&rsquo;s simple.  We build web pages with the latest AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates.  Firebrand sites offer blazing fast loading speeds favored by major platforms like Google , Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
+      description="It&rsquo;s simple.  We build web pages with the latest AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates.  Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google , Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
       link="/services"
       linkText="Learn More"
       image="/images/hero-michael.png"
       caption="Sean Huntington"
-      subCaption="Software Architect, Firebrand"
+      subCaption="Software Architect, Blue Collar"
     />
 
     <!--<section class="lg-flex flex-center flex-justify-center space-top space-bottom">
@@ -41,7 +41,7 @@
                     <p class="g-pstyle9">AMP HTML</p>
                   </div>
                   <div class="g-get-started">
-                    <p>Traditional HTML used to build standard websites for desktop browsers will inevitably be replaced by mobile-first languages. Enter AMP, the open source project spearheaded by Google, which is changing the nature of webpages to a truly mobile-first experience. Firebrand places this language at the heart of all our web projects.</p>
+                    <p>Traditional HTML used to build standard websites for desktop browsers will inevitably be replaced by mobile-first languages. Enter AMP, the open source project spearheaded by Google, which is changing the nature of webpages to a truly mobile-first experience. Blue Collar places this language at the heart of all our web projects.</p>
                   </div>
                 </div>
               </div>

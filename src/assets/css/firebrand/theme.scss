@@ -12,11 +12,12 @@ body {
 
 .logo {
   margin-left: 1rem;
+  height: 40px;
 }
 
 /* Override ampstart defaults */
 .ampstart-headerbar .ampstart-navbar-trigger {
-  color: #e0382b;
+  color: #5c7e9e;
 }
 
 #main .g-artboard {
@@ -149,7 +150,7 @@ img.circle {
   display: inline-block;
   background: white;
   padding: 1rem 2rem;
-  border: 1px solid #e0382b; /* Firebrand Red */
+  border: 1px solid #5c7e9e; /* Blue Collar Red */
   text-decoration: none;
 }
 
@@ -160,7 +161,7 @@ a.action-link:hover,
 a.action-button:active,
 a.action-button:visited,
 a.action-button:hover {
-  color: #e0382b;
+  color: #5c7e9e;
 }
 
 .more-info-link {
@@ -169,7 +170,7 @@ a.action-button:hover {
 
 /* Menu Customization */
 .ampstart-nav-item.highlighted {
-  background-color: #e0382b;
+  background-color: #5c7e9e;
   color: white;
 }
 
@@ -185,7 +186,7 @@ a.action-button:hover {
 
 /* Social */
 .ampstart-icon {
-  /*fill: #e0382b;*/
+  /*fill: #5c7e9e;*/
   fill: white;
 }
 
@@ -217,7 +218,7 @@ a.action-button:hover {
 }
 /* Done */
 
-/* Firebrand card styling */
+/* Blue Collar card styling */
 .fb-card {
   padding: 1rem;
   padding-bottom: 120px;

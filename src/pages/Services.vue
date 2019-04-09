@@ -12,12 +12,12 @@
                 <br />
                 <span class="no-wrap">digital marketing with</span>
                 <br />
-                <span class="no-wrap">Firebrand</span>
+                <span class="no-wrap">Blue Collar</span>
               </span>
                 <span class="xs-hide sm-hide">
               <span class="no-wrap">AMP-lify your digital marketing</span>
               <br />
-              <span class="no-wrap">with Firebrand</span>
+              <span class="no-wrap">with Blue Collar</span>
             </span>
               </p>
             </div>
@@ -30,11 +30,11 @@
       <div class="sm-flex flex-center flex-justify-center flex-basis-third pad-bottom">
         <div class="space-all no-space-bottom">
           <div class="space-bottom-half g-services">
-            <p class="g-pstyle8">Firebrand sets your online business apart with ultra fast-loading landing pages, and targeted branding that engages potential customers.</p>
+            <p class="g-pstyle8">Blue Collar sets your online business apart with ultra fast-loading landing pages, and targeted branding that engages potential customers.</p>
           </div>
           <div class="g-services">
             <p class="g-pstyle10">Michael</p>
-            <p class="g-pstyle10">Designer at Firebrand</p>
+            <p class="g-pstyle10">Designer at Blue Collar</p>
           </div>
         </div>
       </div>

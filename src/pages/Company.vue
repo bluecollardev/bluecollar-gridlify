@@ -9,7 +9,7 @@
               <p class="g-pstyle2 text-center-force">Our Vision</p>
             </div>
             <div class="g-banner">
-              <p>At Firebrand we understand that the online world is undergoing a paradigm shift away from traditional HTML websites to a system of content pages shared across social media platforms and mobile devices. Already, more people on earth view their online content on mobile devices than on desktop browsers. We recognize the tremendous opportunities available for businesses who adapt to this shift and adopt tools that will enable them to take advantage of these new platforms and devices. It is our goal to be at the forefront of these new technologies and make use of them to deliver value to our clients.</p>
+              <p>At Blue Collar we understand that the online world is undergoing a paradigm shift away from traditional HTML websites to a system of content pages shared across social media platforms and mobile devices. Already, more people on earth view their online content on mobile devices than on desktop browsers. We recognize the tremendous opportunities available for businesses who adapt to this shift and adopt tools that will enable them to take advantage of these new platforms and devices. It is our goal to be at the forefront of these new technologies and make use of them to deliver value to our clients.</p>
             </div>
           </div>
         </div>
@@ -23,14 +23,14 @@
             <div class="space-bottom">
               <p class="text-center g-pstyle2">
             <span class="md-hide lg-hide">
-              <span class="no-wrap">Firebrand builds next-gen</span>
+              <span class="no-wrap">Blue Collar builds next-gen</span>
               <br />
               <span class="no-wrap">solutions for the mobile</span>
               <br />
               <span class="no-wrap">web and social media</span>
             </span>
                 <span class="xs-hide sm-hide">
-              <span class="no-wrap">Firebrand builds next-generation solutions </span>
+              <span class="no-wrap">Blue Collar builds next-generation solutions </span>
               <br />
               <span class="no-wrap">for the mobile web and social media</span>
             </span>
@@ -50,7 +50,7 @@
           <div class="content-block">
             <div class="space-all">
               <div class="space-bottom-half g-services">
-                <p>Firebrand has been in the business of web design since 2008. Starting as a web design agency building sites for clients in Canada, the US, and Asia, we have evolved over time.</p>
+                <p>Blue Collar has been in the business of web design since 2008. Starting as a web design agency building sites for clients in Canada, the US, and Asia, we have evolved over time.</p>
 
                 <!--<p>Today our focus is exclusively on building next-generation accelerated mobile page web solutions for clients who want to share their content with the ever growing global mobile audience, and take advantage of the tremendous opportunities for highly targeted marketing now available on social media platforms like Facebook.</p>
                 -->
@@ -147,7 +147,7 @@
                     <p class="text-center">Technical Director</p>
                   </div>
                   <div class="g-help-with-digital-marketing">
-                    <p>Michael has made a career of creating innovative and impactful solutions for clients, specializing in e-commerce, data and API integrations, and mobile technology. As the founder of Firebrand, he leads the team’s development and creative efforts.</p>
+                    <p>Michael has made a career of creating innovative and impactful solutions for clients, specializing in e-commerce, data and API integrations, and mobile technology. As the founder of Blue Collar, he leads the team’s development and creative efforts.</p>
                   </div>
                 </div>
               </div>
@@ -166,7 +166,7 @@
                     <p class="text-center">Marketing Director</p>
                   </div>
                   <div class="g-help-with-digital-marketing">
-                    <p>Chris founded Firebrand after a successful career in product managment for real estate software and digital marketing strategy. Chris brings over 10 years of marketing experience to his clients, combined with deep knowledge of the latest social media technology and trends.</p>
+                    <p>Chris founded Blue Collar after a successful career in product managment for real estate software and digital marketing strategy. Chris brings over 10 years of marketing experience to his clients, combined with deep knowledge of the latest social media technology and trends.</p>
                   </div>
                 </div>
               </div>

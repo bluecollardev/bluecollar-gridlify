@@ -18,7 +18,7 @@
         <img class="bg-white banner-image" src="/images/digital-marketing-testimonial-person.png" />
         <div class="pad-all">
           <div class="space-bottom-half g-help-with-digital-marketing">
-            <p class="g-pstyle6">Firebrand has been hugely beneficial to our business.  They handle all our online marketing &ndash; the results have been amazing!</p>
+            <p class="g-pstyle6">Blue Collar has been hugely beneficial to our business.  They handle all our online marketing &ndash; the results have been amazing!</p>
           </div>
           <div class="g-help-with-digital-marketing">
             <p class="g-pstyle7">Chet Williams</p>

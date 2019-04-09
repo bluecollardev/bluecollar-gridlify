@@ -12,12 +12,12 @@
                 <br />
                 <span class="no-wrap">digital marketing with</span>
                 <br />
-                <span class="no-wrap">Firebrand</span>
+                <span class="no-wrap">Blue Collar</span>
               </span>
                 <span class="xs-hide sm-hide">
               <span class="no-wrap">AMP-lify your digital marketing</span>
               <br />
-              <span class="no-wrap">with Firebrand</span>
+              <span class="no-wrap">with Blue Collar</span>
             </span>
               </p>
             </div>
@@ -30,11 +30,11 @@
       <div class="sm-flex flex-center flex-justify-center flex-basis-third pad-bottom">
         <div class="space-all no-space-bottom">
           <div class="space-bottom-half g-services">
-            <p class="g-pstyle8">Firebrand sets your online business apart with ultra fast-loading landing pages, and targeted branding that engages potential customers.</p>
+            <p class="g-pstyle8">Blue Collar sets your online business apart with ultra fast-loading landing pages, and targeted branding that engages potential customers.</p>
           </div>
           <div class="g-services">
             <p class="g-pstyle10">Michael</p>
-            <p class="g-pstyle10">Designer at Firebrand</p>
+            <p class="g-pstyle10">Designer at Blue Collar</p>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@
       link="/services"
       linkText="Learn More"
       image="/images/digital-marketing-testimonial-person.png"
-      testimonial="Firebrand has been hugely beneficial to our business. They handle all our online marketing &ndash; the results have been amazing!"
+      testimonial="Blue Collar has been hugely beneficial to our business. They handle all our online marketing &ndash; the results have been amazing!"
       caption="Chet Williams"
       subCaption="CarsGone"
     />
@@ -62,7 +62,7 @@
           <div>
             <p>Your website will be built with AMP HTML coding &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
 
-            <p>Firebrand goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
+            <p>Blue Collar goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
           </div>
           <div class="action-link-block">
             <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
@@ -94,7 +94,7 @@
             </div>
           </div>
           <div
-                  class="bg-firebrand-blue sm-flex flex-center flex-justify-center pad-top">
+                  class="bg-bc-blue sm-flex flex-center flex-justify-center pad-top">
             <div class="content-block space-all">
               <div class="space-bottom-half">
                 <p class="g-pstyle6">Instant.  Everywhere.</p>
@@ -119,7 +119,7 @@
         <div class="content-block">
           <div class="space-all">
             <div class="space-bottom-half g-services">
-              <p class="g-pstyle8">Our previous website took forever to build and wasn&rsquo;t what we wanted.  Firebrand had a perfect site up for us in no time.</p>
+              <p class="g-pstyle8">Our previous website took forever to build and wasn&rsquo;t what we wanted.  Blue Collar had a perfect site up for us in no time.</p>
             </div>
             <div class="g-services">
               <p>Carl Stevens</p>
@@ -139,7 +139,7 @@
           <div>
             <p>Your website will be built with AMP HTML coding &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
 
-            <p>Firebrand goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
+            <p>Blue Collar goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
           </div>
           <div class="action-link-block">
             <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
@@ -151,7 +151,7 @@
           <div class="sm-flex flex-center flex-justify-center">
             <div class="flex-basis-half">
               <div class="space-all">
-                <p class="g-pstyle9 firebrand-red">Includes</p>
+                <p class="g-pstyle9 bc-red">Includes</p>
 
                 <p>Accelerated Mobile Pages (AMPs)</p>
                 <p>Instant Experiences (Facebook)</p>
@@ -172,7 +172,7 @@
                 <p class="g-pstyle9">Blazing fast speeds.</p>
               </div>
               <div>
-                <p>Did you know that nearly half of mobile users will navigate away from a page that takes longer than 5 seconds to load?  Slow loading mobile pages result in a poor user experience - which is why companies like Google invented AMPs (accelerated mobile pages).  Firebrand uses the latest technology to make your pages load at blazing speeds on all mobile devices.</p>
+                <p>Did you know that nearly half of mobile users will navigate away from a page that takes longer than 5 seconds to load?  Slow loading mobile pages result in a poor user experience - which is why companies like Google invented AMPs (accelerated mobile pages).  Blue Collar uses the latest technology to make your pages load at blazing speeds on all mobile devices.</p>
               </div>
             </div>
             <div class="space-all">
@@ -196,7 +196,7 @@
             <p class="g-pstyle9">Social Media Management</p>
           </div>
           <div>
-            <p>Your Firebrand team will create a professional social media profile to match your company&rsquo;s branding.</p>
+            <p>Your Blue Collar team will create a professional social media profile to match your company&rsquo;s branding.</p>
             <p>We then create and post interesting content that is relevant to your target audience to keep them engaged and improve conversion rates over time.</p>
           </div>
           <div class="action-link-block">
@@ -205,7 +205,7 @@
         </div>
       </div>
       <div class="sm-flex flex-column flex-basis-two-thirds">
-        <div class="sm-flex flex-column bg-firebrand-red pad-top pad-bottom">
+        <div class="sm-flex flex-column bg-bc-red pad-top pad-bottom">
           <div class="sm-flex">
             <div class="space-all space-bottom-half">
               <p class="g-pstyle6">Facebook Instant Experiences</p>
@@ -233,7 +233,7 @@
         <div class="sm-flex">
           <div class="sm-flex flex-column flex-center flex-justify-center flex-basis-half">
             <div class="space-top space-bottom">
-              <p class="g-pstyle9 firebrand-red">We create a minimum of three custom posts for you per week.</p>
+              <p class="g-pstyle9 bc-red">We create a minimum of three custom posts for you per week.</p>
             </div>
           </div>
           <div class="sm-flex flex-center flex-column flex-basis-half">
@@ -242,7 +242,7 @@
                 <p class="g-pstyle9">Facebook Business Page</p>
               </div>
               <div>
-                <p>Firebrand will set up a professional Facebook Business profile for you.  We ensure that everything is properly designed and laid out according to best practices, and make sure the branding is consistent with your vision.</p>
+                <p>Blue Collar will set up a professional Facebook Business profile for you.  We ensure that everything is properly designed and laid out according to best practices, and make sure the branding is consistent with your vision.</p>
               </div>
             </div>
             <div class="space-all">
@@ -250,7 +250,7 @@
                 <p class="g-pstyle9">Sharing Relevant Content</p>
               </div>
               <div>
-                <p>What matters most to your audience?  Helpful advice and tips? Sales promotions? Events?  Firebrand works with you to keep your followers updated with your company&rsquo;s latest news.</p>
+                <p>What matters most to your audience?  Helpful advice and tips? Sales promotions? Events?  Blue Collar works with you to keep your followers updated with your company&rsquo;s latest news.</p>
               </div>
             </div>
           </div>
@@ -269,7 +269,7 @@
         <div class="flex-basis-half">
           <div class="space-all">
             <div class="g-services">
-              <p class="g-pstyle8">Firebrand shaved hours per week off my social media schedule.  Now I get more leads from my social channels than any other source.</p>
+              <p class="g-pstyle8">Blue Collar shaved hours per week off my social media schedule.  Now I get more leads from my social channels than any other source.</p>
             </div>
             <div class="g-services">
               <p>Greg Lane</p>
@@ -288,7 +288,7 @@
           </div>
           <div>
             <p>In recent years social media traffic to business pages has shifted from organic to sponsored.  Social ads are a cost-effective way to reach potential new clients.</p>
-            <p>Firebrand&rsquo;s digital marketing experts make sure your ad content is relevant and targeted, driving more qualified lead traffic to your website.</p>
+            <p>Blue Collar&rsquo;s digital marketing experts make sure your ad content is relevant and targeted, driving more qualified lead traffic to your website.</p>
           </div>
           <div class="action-link-block">
             <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
@@ -302,7 +302,7 @@
               <p class="g-pstyle9">Dedicated ad campaigns</p>
             </div>
             <div>
-              <p>When it comes to paid digital marketing, Firebrand&rsquo;s experts are the best in the business.  We plan and manage ad campaigns that work for your business 24/7, with always fresh content to keep new leads coming in.</p>
+              <p>When it comes to paid digital marketing, Blue Collar&rsquo;s experts are the best in the business.  We plan and manage ad campaigns that work for your business 24/7, with always fresh content to keep new leads coming in.</p>
             </div>
           </div>
         </div>
@@ -312,7 +312,7 @@
               <p class="g-pstyle9">Premium Ads</p>
             </div>
             <div>
-              <p>When you sign up for Premium, you get a high- detail social media rollout.  Custom calls to action and ad design &ndash; handled by your Firebrand team &ndash; are proven to increase traffic five to eight times the Basic experience.</p>
+              <p>When you sign up for Premium, you get a high- detail social media rollout.  Custom calls to action and ad design &ndash; handled by your Blue Collar team &ndash; are proven to increase traffic five to eight times the Basic experience.</p>
             </div>
           </div>
         </div>
@@ -336,9 +336,9 @@
             <p class="g-pstyle9">Real Estate</p>
           </div>
           <div>
-            <p>Before co-founding Firebrand, Chris spent years working in the real estate web software industry, bringing his advanced knowledge of the unique marketing challenges Realtors face.</p>
+            <p>Before co-founding Blue Collar, Chris spent years working in the real estate web software industry, bringing his advanced knowledge of the unique marketing challenges Realtors face.</p>
 
-            <p>Firebrand is currently the only company offering accelerated landing pages integrated with MLS data (RESO Web API compliant).  We offer advanced solutions to Realtors wanting to take their digital marketing to the next level.</p>
+            <p>Blue Collar is currently the only company offering accelerated landing pages integrated with MLS data (RESO Web API compliant).  We offer advanced solutions to Realtors wanting to take their digital marketing to the next level.</p>
           </div>
         </div>
         <div class="action-link-block">
@@ -349,9 +349,9 @@
       <div class="sm-flex flex-column flex-basis-third">
         <div class="bg-salmon space-all no-space-bottom relative">
           <img class="bg-white image-fill" src="/images/andrea.jpg" />
-          <div class="figure-caption-full bg-cherry pad-all">
+          <div class="figure-caption-full bg-bc-blue pad-all">
             <div class="space-bottom-half g-help-with-digital-marketing">
-              <p class="g-pstyle6">Firebrand has been hugely beneficial to our business.  They handle all our online marketing &ndash; the results have been amazing!</p>
+              <p class="g-pstyle6">Blue Collar has been hugely beneficial to our business.  They handle all our online marketing &ndash; the results have been amazing!</p>
             </div>
             <div class="g-help-with-digital-marketing">
               <p class="g-pstyle7">Andrea Jurgens</p>

@@ -30,7 +30,7 @@
     <!-- Position relatively, or absolute positioning of the caption will fail -->
     <div class="relative flex flex-basis-half flex-justify-center">
       <div class="hero-image-wrapper"><img :class="`banner-image ${this.imageClass}`" v-bind:src="this.image" /></div>
-      <div v-if="typeof this.caption === 'string' && this.caption.length >0" class="figure-caption bg-cherry g-hero">
+      <div v-if="typeof this.caption === 'string' && this.caption.length >0" class="figure-caption bg-bc-blue g-hero">
         <p class="g-pstyle4" style="text-align: right;">{{ this.caption }}</p>
         <p class="g-pstyle5" style="text-align: right;">{{ this.subCaption }}</p>
       </div>

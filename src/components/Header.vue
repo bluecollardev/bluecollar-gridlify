@@ -23,7 +23,7 @@
   <!--<header class="ampstart-headerbar fixed flex sm-flex-justify-start items-center top-0 left-0 right-0">
     <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger pr2">☰</div>
     <a href="/" class="flex-auto flex flex-center xs-flex-justify-center">
-      <img class="logo" src="/images/firebrand-logo.png" />
+      <img class="logo" src="/images/blue-collar-dev.png" />
     </a>
     <nav class="space-left ampstart-headerbar-nav ampstart-nav flex flex-center">
       <ul class="list-reset center m0 p0 flex flex-auto nowrap">
@@ -55,7 +55,7 @@
         <span></span>
       </div>
       <a href="/" class="flex flex-center xs-flex-justify-center">
-        <img class="logo" src="/images/firebrand-logo.png" />
+        <img class="logo" src="/images/blue-collar-dev.png" />
       </a>
       <nav id="menu">
         <li><a href="/company" v-on:click="hideDropMenu()">Company</a></li>
@@ -67,7 +67,7 @@
           </ul>
         </li>
         <li><a href="/pricing" v-on:click="hideDropMenu()">Pricing</a></li>
-        <li><a v-on:click="hideDropMenu()">Projects</a></li>
+        <li><a href="/projects"  v-on:click="hideDropMenu()">Projects</a></li>
         <li><a href="/contact" v-on:click="hideDropMenu()">Contact</a></li>
       </nav>
     </div>

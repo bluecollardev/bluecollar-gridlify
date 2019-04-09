@@ -12,12 +12,12 @@
                 <br />
                 <span class="no-wrap">website with</span>
                 <br />
-                <span class="no-wrap">Firebrand</span>
+                <span class="no-wrap">Blue Collar</span>
               </span>
                 <span class="xs-hide sm-hide">
               <span class="no-wrap">AMP-lify your digital marketing</span>
               <br />
-              <span class="no-wrap">with Firebrand</span>
+              <span class="no-wrap">with Blue Collar</span>
             </span>
               </p>
             </div>
@@ -30,11 +30,11 @@
       <div class="sm-flex flex-center flex-justify-center flex-basis-third pad-bottom">
         <div class="space-all no-space-bottom">
           <div class="space-bottom-half g-services">
-            <p class="g-pstyle8">Firebrand sets your online business apart with ultra fast-loading landing pages, and targeted branding that engages potential customers.</p>
+            <p class="g-pstyle8">Blue Collar sets your online business apart with ultra fast-loading landing pages, and targeted branding that engages potential customers.</p>
           </div>
           <div class="g-services">
             <p class="g-pstyle10">Michael</p>
-            <p class="g-pstyle10">Designer at Firebrand</p>
+            <p class="g-pstyle10">Designer at Blue Collar</p>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@
           <div>
             <p>Your website will be built with AMP HTML coding &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
 
-            <p>Firebrand goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
+            <p>Blue Collar goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
           </div>
           <div class="action-link-block">
             <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
@@ -81,7 +81,7 @@
             </div>
           </div>
           <div
-                  class="bg-firebrand-blue sm-flex flex-center flex-justify-center pad-top">
+                  class="bg-bc-blue sm-flex flex-center flex-justify-center pad-top">
             <div class="content-block space-all">
               <div class="space-bottom-half">
                 <p class="g-pstyle6">Instant.  Everywhere.</p>
@@ -106,7 +106,7 @@
         <div class="content-block">
           <div class="space-all">
             <div class="space-bottom-half g-services">
-              <p class="g-pstyle8">Our previous website took forever to build and wasn&rsquo;t what we wanted.  Firebrand had a perfect site up for us in no time.</p>
+              <p class="g-pstyle8">Our previous website took forever to build and wasn&rsquo;t what we wanted.  Blue Collar had a perfect site up for us in no time.</p>
             </div>
             <div class="g-services">
               <p>Carl Stevens</p>
@@ -126,7 +126,7 @@
           <div>
             <p>Your website will be built with AMP HTML coding &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
 
-            <p>Firebrand goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
+            <p>Blue Collar goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
           </div>
           <div class="action-link-block">
             <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
@@ -138,7 +138,7 @@
           <div class="sm-flex flex-center flex-justify-center">
             <div class="flex-basis-half">
               <div class="space-all">
-                <p class="g-pstyle9 firebrand-red">Includes</p>
+                <p class="g-pstyle9 bc-red">Includes</p>
 
                 <p>Accelerated Mobile Pages (AMPs)</p>
                 <p>Instant Experiences (Facebook)</p>
@@ -159,7 +159,7 @@
                 <p class="g-pstyle9">Blazing fast speeds.</p>
               </div>
               <div>
-                <p>Did you know that nearly half of mobile users will navigate away from a page that takes longer than 5 seconds to load?  Slow loading mobile pages result in a poor user experience - which is why companies like Google invented AMPs (accelerated mobile pages).  Firebrand uses the latest technology to make your pages load at blazing speeds on all mobile devices.</p>
+                <p>Did you know that nearly half of mobile users will navigate away from a page that takes longer than 5 seconds to load?  Slow loading mobile pages result in a poor user experience - which is why companies like Google invented AMPs (accelerated mobile pages).  Blue Collar uses the latest technology to make your pages load at blazing speeds on all mobile devices.</p>
               </div>
             </div>
             <div class="space-all">
