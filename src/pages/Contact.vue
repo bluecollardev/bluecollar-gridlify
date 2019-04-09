@@ -49,7 +49,7 @@
                   id="fullname"
                   class="block border-none p0 m0"
                   placeholder="Full name"
-                  v-model="formData.fullnamme"
+                  v-model="formData.fullname"
                 />
                 <label
                   for="fullname"
@@ -170,7 +170,7 @@ export default {
           ...this.formData
         })
       })
-        .then(() => this.$router.push('/success')); 
+        .then(() => this.$router.push('/success'));
         //.catch(error => alert(error));
     }
   }
