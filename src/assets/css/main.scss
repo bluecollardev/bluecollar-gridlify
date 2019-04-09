@@ -7,3 +7,41 @@
 @import './ampstart/navbar/navbar';
 @import './ampstart/footer/footer';
 @import './ampstart/dropdown/dropdown';
+
+
+/* Form hacks to get ampstart to play with basscss */
+input[type=text],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week] {
+  height: 2.5rem;
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+select {
+  height: 2.5rem;
+}
+
+select:not([multiple]) {
+  height: 2.5rem;
+  vertical-align: middle;
+}
+
+textarea {
+  line-height: 1.75;
+}
+
+/* Hack */
+.ampstart-input > label {
+  line-height: 0;
+}

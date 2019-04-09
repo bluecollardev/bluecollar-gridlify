@@ -49,13 +49,13 @@
                   <input
                     type="text"
                     value=""
-                    name="fullnameid"
-                    id="fullnameid"
+                    name="fullname"
+                    id="fullname"
                     class="block border-none p0 m0"
                     placeholder="Full name"
                   />
                   <label
-                    for="fullnameid"
+                    for="fullname"
                     class="absolute top-0 right-0 bottom-0 left-0"
                     aria-hidden="true"
                     >Full name</label
@@ -68,13 +68,13 @@
                   <input
                     type="text"
                     value=""
-                    name="stateid"
-                    id="stateid"
+                    name="location"
+                    id="location"
                     class="block border-none p0 m0"
                     placeholder="Location"
                   />
                   <label
-                    for="stateid"
+                    for="location"
                     class="absolute top-0 right-0 bottom-0 left-0"
                     aria-hidden="true"
                     >Location</label
@@ -85,15 +85,15 @@
                 <!-- Start Input -->
                 <div class="ampstart-input inline-block relative m0 p0 mb3 ">
                   <input
-                    type="phone"
+                    type="tel"
                     value=""
-                    name="phoneid"
-                    id="phoneid"
+                    name="phone"
+                    id="phone"
                     class="block border-none p0 m0"
                     placeholder="Phone"
                   />
                   <label
-                    for="phoneid"
+                    for="phone"
                     class="absolute top-0 right-0 bottom-0 left-0"
                     aria-hidden="true"
                     >Phone</label
@@ -106,13 +106,13 @@
                   <input
                     type="email"
                     value=""
-                    name="emailid"
-                    id="emailid"
+                    name="email"
+                    id="email"
                     class="block border-none p0 m0"
                     placeholder="Email"
                   />
                   <label
-                    for="emailid"
+                    for="email"
                     class="absolute top-0 right-0 bottom-0 left-0"
                     aria-hidden="true"
                     >Email</label
@@ -126,7 +126,7 @@
                   name="submit"
                   value="Submit"
                   id="submit"
-                  class="ampstart-btn mb3 "
+                  class="action-link space-top g-pstyle3"
                 />
                 <!-- End Submit -->
               </fieldset>
@@ -163,21 +163,11 @@
 
 <script>
 import Header from '~/components/Header.vue';
-import Hero from '~/components/Hero.vue';
-import Portfolio from '~/components/Portfolio.vue';
-import About from '~/components/Home.vue';
-import Blog from '~/components/Blog.vue';
-import Contact from '~/components/Contact.vue';
 import Footer from '~/components/Footer.vue';
 
 export default {
   components: {
     Header,
-    Hero,
-    Portfolio,
-    About,
-    Blog,
-    Contact,
     Footer
   },
   data() {
@@ -194,6 +184,7 @@ export default {
         .join('&');
     },
     handleSubmit(e) {
+      debugger;
       fetch('https://bluecollardev.netlify.com/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

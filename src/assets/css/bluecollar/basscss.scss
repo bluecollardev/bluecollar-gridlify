@@ -30,7 +30,8 @@ label {
   vertical-align: middle;
 }
 
-input[type=text],
+/* Disable form styles, use ampstart */
+/*input[type=text],
 input[type=date],
 input[type=datetime],
 input[type=datetime-local],
@@ -62,7 +63,7 @@ select:not([multiple]) {
 textarea {
   line-height: 1.75;
   padding: .5rem .5rem;
-}
+}*/
 
 table {
   border-collapse: separate;
