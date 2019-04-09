@@ -1,67 +1,134 @@
 <template>
   <Layout>
-    <Header/>
+    <Header />
     <section class="hero-section bg-hero-grey sm-flex flex-column pad-top-2x">
-      <div class="sm-flex flex-center flex-justify-stretch flex-basis-two-thirds">
-        <div class="sm-flex flex-basis-two-thirds flex-center flex-justify-center space-all">
+      <div
+        class="sm-flex flex-center flex-justify-stretch flex-basis-two-thirds"
+      >
+        <div
+          class="sm-flex flex-basis-two-thirds flex-center flex-justify-center space-all"
+        >
           <div class="sm-flex">
             <div class="space-bottom">
               <p class="text-center g-pstyle2">
-            <span class="md-hide lg-hide">
-              <span class="no-wrap">Have a question?</span>
-            </span>
+                <span class="md-hide lg-hide">
+                  <span class="no-wrap">Have a question?</span>
+                </span>
                 <span class="xs-hide sm-hide">
-              <span class="no-wrap">Have a question?</span>
-            </span>
+                  <span class="no-wrap">Have a question?</span>
+                </span>
               </p>
             </div>
           </div>
         </div>
         <div class="sm-flex flex-basis-third content-block">
-          <div class="bg-white ampstart-card alp-form-container pt3 mx2 relative flex justify-center center">
-
-            <form method="GET" action="/" target="_top" class="p0 m0 px3 mb4">
+          <div
+            class="bg-white ampstart-card alp-form-container pt3 mx2 relative flex justify-center center"
+          >
+            <form
+              target="_top"
+              class="p0 m0 px3 mb4"
+              name="contact"
+              method="post"
+              v-on:submit.prevent="handleSubmit"
+              action="/"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
               <fieldset class="flex flex-column border-none p0 m0 pad-all">
-                <h2 class="h3 block mb4 space-top">Contact us for a free consultation</h2>
+                <h2 class="h3 block mb4 space-top">
+                  Contact us for a free consultation
+                </h2>
+                <div class="hide">
+                  <label>Hello bee:</label>
+                  <input name="bot-field" />
+                </div>
 
                 <!-- Start Input -->
                 <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-                  <input type="text" value="" name="fullnameid" id="fullnameid" class="block border-none p0 m0"
-                         placeholder="Full name">
-                  <label for="fullnameid" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">Full name</label>
+                  <input
+                    type="text"
+                    value=""
+                    name="fullnameid"
+                    id="fullnameid"
+                    class="block border-none p0 m0"
+                    placeholder="Full name"
+                  />
+                  <label
+                    for="fullnameid"
+                    class="absolute top-0 right-0 bottom-0 left-0"
+                    aria-hidden="true"
+                    >Full name</label
+                  >
                 </div>
                 <!-- End Input-->
-
 
                 <!-- Start Input -->
                 <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-                  <input type="text" value="" name="stateid" id="stateid" class="block border-none p0 m0" placeholder="Location">
-                  <label for="stateid" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">Location</label>
+                  <input
+                    type="text"
+                    value=""
+                    name="stateid"
+                    id="stateid"
+                    class="block border-none p0 m0"
+                    placeholder="Location"
+                  />
+                  <label
+                    for="stateid"
+                    class="absolute top-0 right-0 bottom-0 left-0"
+                    aria-hidden="true"
+                    >Location</label
+                  >
                 </div>
                 <!-- End Input-->
-
 
                 <!-- Start Input -->
                 <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-                  <input type="phone" value="" name="phoneid" id="phoneid" class="block border-none p0 m0" placeholder="Phone">
-                  <label for="phoneid" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">Phone</label>
+                  <input
+                    type="phone"
+                    value=""
+                    name="phoneid"
+                    id="phoneid"
+                    class="block border-none p0 m0"
+                    placeholder="Phone"
+                  />
+                  <label
+                    for="phoneid"
+                    class="absolute top-0 right-0 bottom-0 left-0"
+                    aria-hidden="true"
+                    >Phone</label
+                  >
                 </div>
                 <!-- End Input-->
-
 
                 <!-- Start Input -->
                 <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-                  <input type="email" value="" name="emailid" id="emailid" class="block border-none p0 m0" placeholder="Email">
-                  <label for="emailid" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">Email</label>
+                  <input
+                    type="email"
+                    value=""
+                    name="emailid"
+                    id="emailid"
+                    class="block border-none p0 m0"
+                    placeholder="Email"
+                  />
+                  <label
+                    for="emailid"
+                    class="absolute top-0 right-0 bottom-0 left-0"
+                    aria-hidden="true"
+                    >Email</label
+                  >
                 </div>
                 <!-- End Input-->
-
 
                 <!-- Start Submit -->
-                <input type="submit" name="submit" value="Submit" id="submit" class="ampstart-btn mb3 ">
+                <input
+                  type="submit"
+                  name="submit"
+                  value="Submit"
+                  id="submit"
+                  class="ampstart-btn mb3 "
+                />
                 <!-- End Submit -->
-
-
               </fieldset>
             </form>
           </div>
@@ -90,28 +157,54 @@
                  class="col-5"></amp-img>
       </div>
     </section>-->
-    <Footer/>
+    <Footer />
   </Layout>
 </template>
 
 <script>
-  import Header from '~/components/Header.vue';
-  import Hero from '~/components/Hero.vue';
-  import Portfolio from '~/components/Portfolio.vue';
-  import About from '~/components/Home.vue';
-  import Blog from '~/components/Blog.vue';
-  import Contact from '~/components/Contact.vue';
-  import Footer from '~/components/Footer.vue';
+import Header from '~/components/Header.vue';
+import Hero from '~/components/Hero.vue';
+import Portfolio from '~/components/Portfolio.vue';
+import About from '~/components/Home.vue';
+import Blog from '~/components/Blog.vue';
+import Contact from '~/components/Contact.vue';
+import Footer from '~/components/Footer.vue';
 
-  export default {
-    components: {
-      Header,
-      Hero,
-      Portfolio,
-      About,
-      Blog,
-      Contact,
-      Footer
+export default {
+  components: {
+    Header,
+    Hero,
+    Portfolio,
+    About,
+    Blog,
+    Contact,
+    Footer
+  },
+  data() {
+    return {
+      formData: {}
+    };
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&');
     },
+    handleSubmit(e) {
+      fetch('https://bluecollardev.netlify.com/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData
+        })
+      })
+        .then(() => this.$router.push('/success'))
+        .catch(error => alert(error));
+    }
   }
+};
 </script>
