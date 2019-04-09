@@ -91,7 +91,7 @@
       <div class="bg-bc-blue sm-flex flex-center flex-justify-center flex-basis-two-thirds pad-top">
         <div class="content-block space-all">
           <div class="space-bottom-half">
-            <p class="g-pstyle6">Instant.  Everywhere.</p>
+            <p class="g-pstyle6">Instant. Everywhere.</p>
           </div>
           <div>
             <p class="g-pstyle7">For many, reading on the mobile web is a slow, clunky and frustrating experience - but it doesn&rsquo;t have to be that way.  The Accelerated Mobile Pages (AMP) Project is an open source initiative that embodiees the vision that publishers can create mobile optimized content once and have it load instantly everywhere. </p>
@@ -104,7 +104,7 @@
     <section class="hero-section bg-hero-grey sm-flex flex-justify-center pad-top pad-bottom">
       <!-- Position relatively, or absolute positioning of the caption will fail -->
       <div class="sm-flex flex-center flex-justify-center flex-basis-third">
-        <div class="content-block">
+        <div class="content-block text-center">
           <img class="banner-image circle" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
         </div>
       </div>
