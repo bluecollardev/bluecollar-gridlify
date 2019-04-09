@@ -9,6 +9,16 @@ services:
       We work with you to deliver a professionally designed accelerated mobile website, with landing pages, lead-gen fields, and your company&rsquo;s branding built in. Your website is optimized for mobile usage, but works on desktop as well.
     link: /services-web
     linkText: Learn More
+  - title: Hybrid Apps + PWAs
+    description: >-
+      We work with you to deliver a professionally designed accelerated mobile website, with landing pages, lead-gen fields, and your company&rsquo;s branding built in. Your website is optimized for mobile usage, but works on desktop as well.
+    link: /services-custom-software
+    linkText: Learn More
+  - title: Enterprise Applications
+    description: >-
+      We work with you to deliver a professionally designed accelerated mobile website, with landing pages, lead-gen fields, and your company&rsquo;s branding built in. Your website is optimized for mobile usage, but works on desktop as well.
+    link: /services-custom-software
+    linkText: Learn More
   - title: Social Media
     description: >-
       New to social media marketing?  We can get you set up on the major platforms with professional business pages continually updated with quality posts, promotions, and sales announcements to drive engagement with your brand and generate qualified leads.

@@ -22,7 +22,7 @@
     <section-block-layout02-col01
       title="How does it work?"
       subtitle=""
-      description="It&rsquo;s simple.  We build web pages with the latest AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates.  Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google , Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
+      description="It&rsquo;s simple.  We build web pages with the latest JAMStack and AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates. Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google, Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
       link="/services"
       linkText="Learn More"
       image="/images/hero-michael.png"
@@ -88,6 +88,7 @@
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
         <div class="content-block">
           <content-block-layout
+            className="pad-top"
             v-if="getService(0).linkText"
             :title="getService(0).title"
             :description="getService(0).description"
@@ -102,6 +103,15 @@
             :description="getService(1).description"
             :link="getService(1).link"
             :linkText="getService(1).linkText"
+          />
+
+          <content-block-layout
+            className="pad-top pad-bottom"
+            v-if="getService(2).linkText"
+            :title="getService(2).title"
+            :description="getService(2).description"
+            :link="getService(2).link"
+            :linkText="getService(2).linkText"
           />
         </div>
       </div>
@@ -137,20 +147,30 @@
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
         <div class="content-block">
           <content-block-layout
-            v-if="getService(2).linkText"
-            :title="getService(2).title"
-            :description="getService(2).description"
-            :link="getService(2).link"
-            :linkText="getService(2).linkText"
-          />
-
-          <content-block-layout
             className="pad-top"
             v-if="getService(3).linkText"
             :title="getService(3).title"
             :description="getService(3).description"
             :link="getService(3).link"
             :linkText="getService(3).linkText"
+          />
+
+          <content-block-layout
+            className="pad-top"
+            v-if="getService(4).linkText"
+            :title="getService(4).title"
+            :description="getService(4).description"
+            :link="getService(4).link"
+            :linkText="getService(4).linkText"
+          />
+
+          <content-block-layout
+            className="pad-top pad-bottom"
+            v-if="getService(5).linkText"
+            :title="getService(5).title"
+            :description="getService(5).description"
+            :link="getService(5).link"
+            :linkText="getService(5).linkText"
           />
         </div>
       </div>
