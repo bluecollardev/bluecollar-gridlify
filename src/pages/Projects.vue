@@ -1,27 +1,18 @@
 <template>
   <Layout>
     <Header/>
-    <section class="hero-section bg-hero-grey sm-flex pad-top">
-      <div class="sm-flex flex-center flex-justify-center flex-basis-half">
-        <div class="hero-block">
+    <section class="hero-section bg-hero-grey sm-flex pad-top height-half">
+      <div class="sm-flex flex-auto flex-center flex-justify-center">
+        <div class="content-block">
           <div>
             <div class="space-bottom">
-              <p class="g-pstyle2">Our Portfolio</p>
+              <p class="g-pstyle2 text-center-force">Client Projects</p>
             </div>
-            <div class="action-link-block">
-              <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
+            <div class="g-banner">
+              <p>At Blue Collar we understand that the online world is undergoing a paradigm shift away from traditional HTML websites to a system of content pages shared across social media platforms and mobile devices. Already, more people on earth view their online content on mobile devices than on desktop browsers. We recognize the tremendous opportunities available for businesses who adapt to this shift and adopt tools that will enable them to take advantage of these new platforms and devices. It is our goal to be at the forefront of these new technologies and make use of them to deliver value to our clients.</p>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Position relatively, or absolute positioning of the caption will fail -->
-      <div class="relative flex-basis-half">
-        <img class="banner-image right" src="/images/hero-julia.png"/>
-        <!--<div class="figure-caption figure-caption-right bg-bc-blue g-hero">
-          <p class="g-pstyle4">Julia</p>
-          <p class="g-pstyle5">Onboarding at Blue Collar</p>
-        </div>-->
       </div>
     </section>
     <section class="clearfix bg-light-grey">
