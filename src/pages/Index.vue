@@ -19,17 +19,6 @@
       :subCaption="homepageHero.subCaption"
     />
 
-    <section-block-layout02-col01
-      title="How does it work?"
-      subtitle=""
-      description="It&rsquo;s simple.  We build web pages with the latest JAMStack and AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates. Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google, Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
-      link="/services"
-      linkText="Learn More"
-      image="/images/hero-michael.png"
-      caption="Sean Huntington"
-      subCaption="Software Architect, Blue Collar"
-    />
-
     <!--<section class="lg-flex flex-center flex-justify-center space-top space-bottom">
       <div class="hero-block">
         <div class="sm-flex flex-center flex-justify-center">
@@ -83,6 +72,17 @@
         </div>
       </div>
     </section>-->
+
+    <section-block-layout02-col01
+      title="How does it work?"
+      subtitle=""
+      description="It&rsquo;s simple. We build web pages with the latest JAMStack and AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates. Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google, Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
+      link="/services"
+      linkText="Learn More"
+      image="/images/hero-michael.png"
+      caption="Sean Huntington"
+      subCaption="Software Architect, Blue Collar"
+    />
 
     <section class="lg-flex">
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">

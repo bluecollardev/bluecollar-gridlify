@@ -1,31 +1,16 @@
 <template>
   <Layout>
     <Header/>
-    <section class="hero-section bg-hero-grey sm-flex pad-top">
-      <div class="sm-flex flex-column flex-center flex-justify-stretch flex-basis-two-thirds">
-        <div class="sm-flex space-all no-space-bottom">
-          <div class="sm-flex flex-center">
-            <div class="space-bottom">
-              <p class="text-center g-pstyle2">
-              <span >
-                <span class="no-wrap">AMP-lify your</span>
-                <br />
-                <span class="no-wrap">digital marketing with</span>
-                <br />
-                <span class="no-wrap">Blue Collar</span>
-              </span>
-                <span class="xs-hide sm-hide">
-              <span class="no-wrap">AMP-lify your digital marketing</span>
-              <br />
-              <span class="no-wrap">with Blue Collar</span>
-            </span>
-              </p>
-            </div>
-          </div>
-          <!-- Position relatively, or absolute positioning of the caption will fail -->
-          <img class="banner-image right" src="/images/hero-michael.png" />
-        </div>
-      </div>
+    <section-block-layout02-col01
+      title="How does it work?"
+      subtitle=""
+      description="It&rsquo;s simple. We build web pages with the latest JAMStack and AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates. Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google, Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
+      link="/services"
+      linkText="Learn More"
+      image="/images/hero-michael.png"
+      caption="Sean Hamilton"
+      subCaption="Software Architect, Blue Collar"
+    />
 
       <div class="sm-flex flex-center flex-justify-center flex-basis-third pad-bottom">
         <div class="space-all no-space-bottom">

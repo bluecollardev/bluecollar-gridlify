@@ -58,17 +58,25 @@
         <img class="logo" src="/images/blue-collar-dev.png" />
       </a>
       <nav id="menu">
-        <li><a href="/company" v-on:click="hideDropMenu()">Company</a></li>
-        <li class="drop"><a v-on:mouseover="displayDropMenu()">Services  <i class="icon-arrow"></i></a>
+        <li class="drop"><a v-on:mouseover="displayDropMenu()">Web  <i class="icon-arrow"></i></a>
           <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
-            <li><a href="/services-web" v-on:click="hideDropMenu()">Websites + Landing Pages</a></li>
-            <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Digital Marketing</a></li>
-            <li><a href="/services-software" v-on:click="hideDropMenu()">Custom Software</a></li>
+            <li><a href="/services-web" v-on:click="hideDropMenu()">Websites</a></li>
+            <li><a href="/services-software" v-on:click="hideDropMenu()">Hybrid Apps + PWAs</a></li>
+            <li><a href="/services-landing-pages" v-on:click="hideDropMenu()">Landing Pages</a></li>
+            <li><a href="/pricing" v-on:click="hideDropMenu()">Pricing</a></li>
           </ul>
         </li>
-        <li><a href="/pricing" v-on:click="hideDropMenu()">Pricing</a></li>
+        <!--<li class="drop"><a v-on:mouseover="displayDropMenu()">Marketing  <i class="icon-arrow"></i></a>
+          <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
+            <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Targeted Ads</a></li>
+            <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Social Media Ads</a></li>
+            <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Social Media Concierge</a></li>
+            <li><a href="/pricing" v-on:click="hideDropMenu()">Pricing</a></li>
+          </ul>
+        </li>-->
         <li><a href="/projects"  v-on:click="hideDropMenu()">Projects</a></li>
-        <li><a href="/contact" v-on:click="hideDropMenu()">Contact</a></li>
+        <li><a href="/company" v-on:click="hideDropMenu()">Company</a></li>
+        <!--<li><a href="/contact" v-on:click="hideDropMenu()">Contact</a></li>-->
       </nav>
     </div>
   </header>

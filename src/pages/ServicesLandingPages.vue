@@ -12,11 +12,11 @@
       subCaption="Software Architect, Blue Collar"
     />
 
-    <section id="websites" class="lg-flex pad-top">
+    <section id="landing-pages" class="lg-flex">
       <div class="sm-flex flex-center flex-justify-center flex-basis-third">
         <div class="content-block">
           <div class="space-bottom-half">
-            <p class="g-pstyle9">Accelerated<br />Mobile Websites</p>
+            <p class="g-pstyle9">Accelerated<br />Landing Pages</p>
           </div>
           <div>
             <p>Your website will be built with AMP HTML coding &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
@@ -30,61 +30,43 @@
       </div>
       <div class="sm-flex flex-center flex-justify-center flex-basis-two-thirds">
         <div class="sm-flex flex-column">
-          <div class="sm-flex flex-start height-third">
+          <div class="sm-flex flex-center flex-justify-center">
             <div class="flex-basis-half">
               <div class="space-all">
-                <div class="space-bottom-half">
-                  <p class="g-pstyle9">Your website, your brand</p>
-                </div>
-                <div>
-                  <p>Your site reflects your unique vision for your brand.  We will create a highly polished website that represents you and reflects your values.</p>
-                </div>
+                <p class="g-pstyle9 bc-red">Includes</p>
+
+                <p>Accelerated Mobile Pages (AMPs)</p>
+                <p>Instant Experiences (Facebook)</p>
+                <p>Embedded Messenger Buttons</p>
+                <p>Optimization for Social Media</p>
               </div>
             </div>
             <div class="flex-basis-half">
               <div class="space-all">
-                <div class="space-bottom-half">
-                  <p class="g-pstyle9">All the support you need</p>
-                </div>
-                <div>
-                  <p>We offer ongoing monthly support to continually improve your online business.  No advanced technical knowledge of coding is required on your end &ndash;  your site&rsquo;s performance is continually monitored, and we are always here to help!</p>
-                </div>
+                <img src="/images/accelerated-mobile-pages-info-graphic.png" />
               </div>
             </div>
           </div>
-          <div
-                  class="bg-bc-blue sm-flex flex-center flex-justify-center pad-top">
-            <div class="content-block space-all">
+
+          <div class="sm-flex">
+            <div class="space-all">
               <div class="space-bottom-half">
-                <p class="g-pstyle6">Instant.  Everywhere.</p>
+                <p class="g-pstyle9">Blazing fast speeds.</p>
               </div>
               <div>
-                <p class="g-pstyle7">For many, reading on the mobile web is a slow, clunky and frustrating experience - but it doesn&rsquo;t have to be that way.  The Accelerated Mobile Pages (AMP) Project is an open source initiative that embodiees the vision that publishers can create mobile optimized content once and have it load instantly everywhere. </p>
+                <p>Did you know that nearly half of mobile users will navigate away from a page that takes longer than 5 seconds to load?  Slow loading mobile pages result in a poor user experience - which is why companies like Google invented AMPs (accelerated mobile pages).  Blue Collar uses the latest technology to make your pages load at blazing speeds on all mobile devices.</p>
               </div>
             </div>
-            <img src="/images/accelerated-mobile-pages.png" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="hero-section bg-hero-grey sm-flex pad-top">
-      <!-- Position relatively, or absolute positioning of the caption will fail -->
-      <div class="relative flex-basis-half">
-        <img class="banner-image right" src="/images/hero-old-businessman.png" />
-      </div>
-
-      <div class="sm-flex flex-center flex-justify-start flex-basis-half">
-        <div class="content-block">
-          <div class="space-all">
-            <div class="space-bottom-half g-services">
-              <p class="g-pstyle8">Our previous website took forever to build and wasn&rsquo;t what we wanted.  Blue Collar had a perfect site up for us in no time.</p>
-            </div>
-            <div class="g-services">
-              <p>Carl Stevens</p>
-              <p>Ace Coffee Roasters</p>
+            <div class="space-all">
+              <div class="space-bottom-half">
+                <p class="g-pstyle9">Built with Social Media in Mind</p>
+              </div>
+              <div>
+                <p>Our landing pages are built with social media in mind, using layouts and content optimized for Facebook, Twitter, Instagram, and other major platforms with mobile apps.  This ensures your posts that are linked to landing pages show up on peoples&rsquo; feeds at a higher rate &ndash; generating more engagement with your online business.</p>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

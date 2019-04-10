@@ -1,44 +1,16 @@
 <template>
   <Layout>
     <Header/>
-    <section class="hero-section bg-hero-grey sm-flex pad-top">
-      <div class="sm-flex flex-column flex-center flex-justify-stretch flex-basis-two-thirds">
-        <div class="sm-flex space-all no-space-bottom">
-          <div class="sm-flex flex-center">
-            <div class="space-bottom">
-              <p class="text-center g-pstyle2">
-              <span >
-                <span class="no-wrap">AMP-lify your</span>
-                <br />
-                <span class="no-wrap">website with</span>
-                <br />
-                <span class="no-wrap">Blue Collar</span>
-              </span>
-                <span class="xs-hide sm-hide">
-              <span class="no-wrap">AMP-lify your digital marketing</span>
-              <br />
-              <span class="no-wrap">with Blue Collar</span>
-            </span>
-              </p>
-            </div>
-          </div>
-          <!-- Position relatively, or absolute positioning of the caption will fail -->
-          <img class="banner-image right" src="/images/hero-michael.png" />
-        </div>
-      </div>
-
-      <div class="sm-flex flex-center flex-justify-center flex-basis-third pad-bottom">
-        <div class="space-all no-space-bottom">
-          <div class="space-bottom-half g-services">
-            <p class="g-pstyle8">Blue Collar sets your online business apart with ultra fast-loading landing pages, and targeted branding that engages potential customers.</p>
-          </div>
-          <div class="g-services">
-            <p class="g-pstyle10">Michael</p>
-            <p class="g-pstyle10">Designer at Blue Collar</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section-block-layout02-col01
+      title="How does it work?"
+      subtitle=""
+      description="It&rsquo;s simple. We build web pages with the latest JAMStack and AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates. Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google, Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
+      link="/services"
+      linkText="Learn More"
+      image="/images/hero-michael.png"
+      caption="Sean Hamilton"
+      subCaption="Software Architect, Blue Collar"
+    />
 
     <section id="intro" class="lg-flex pad-top-2x">
       <div class="sm-flex flex-center flex-justify-center flex-basis-full">
@@ -117,64 +89,6 @@
             <div class="g-services">
               <p>Greg L.</p>
               <p>Jimmy Poblanos</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="landing-pages" class="lg-flex">
-      <div class="sm-flex flex-center flex-justify-center flex-basis-third">
-        <div class="content-block">
-          <div class="space-bottom-half">
-            <p class="g-pstyle9">Accelerated<br />Landing Pages</p>
-          </div>
-          <div>
-            <p>Your landing pages will be built with either JAMStack or AMP HTML code &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
-
-            <p>Blue Collar goes beyond traditional &lsquo;responsive&rsquo; web design.  We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
-          </div>
-          <div class="action-link-block">
-            <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
-          </div>
-        </div>
-      </div>
-      <div class="sm-flex flex-center flex-justify-center flex-basis-two-thirds">
-        <div class="sm-flex flex-column">
-          <div class="sm-flex flex-center flex-justify-center">
-            <div class="flex-basis-half">
-              <div class="space-all">
-                <p class="g-pstyle9 bc-red">Includes</p>
-
-                <p>Accelerated Mobile Pages (AMPs)</p>
-                <p>Instant Experiences (Facebook)</p>
-                <p>Embedded Messenger Buttons</p>
-                <p>Optimization for Social Media</p>
-              </div>
-            </div>
-            <div class="flex-basis-half">
-              <div class="space-all">
-                <img src="/images/accelerated-mobile-pages-info-graphic.png" />
-              </div>
-            </div>
-          </div>
-
-          <div class="sm-flex">
-            <div class="space-all">
-              <div class="space-bottom-half">
-                <p class="g-pstyle9">Blazing fast speeds.</p>
-              </div>
-              <div>
-                <p>Did you know that nearly half of mobile users will navigate away from a page that takes longer than 5 seconds to load?  Slow loading mobile pages result in a poor user experience - which is why companies like Google invented AMPs (accelerated mobile pages).  Blue Collar uses the latest technology to make your pages load at blazing speeds on all mobile devices.</p>
-              </div>
-            </div>
-            <div class="space-all">
-              <div class="space-bottom-half">
-                <p class="g-pstyle9">Built with Social Media in Mind</p>
-              </div>
-              <div>
-                <p>Our landing pages are built with social media in mind, using layouts and content optimized for Facebook, Twitter, Instagram, and other major platforms with mobile apps.  This ensures your posts that are linked to landing pages show up on peoples&rsquo; feeds at a higher rate &ndash; generating more engagement with your online business.</p>
-              </div>
             </div>
           </div>
         </div>
