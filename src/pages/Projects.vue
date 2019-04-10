@@ -253,10 +253,9 @@
   /* _timeline.css */
   .timeline {
     position: relative;
-    padding: 100px 0;
     max-width: 50%;
     margin: 0 auto;
-    height: 1895vh;
+    height: 1600vh;
 
     &::before {
       content: "";
@@ -264,7 +263,7 @@
       top: 0;
       left: 50%;
       width: 4px;
-      height: 1895vh;
+      height: 1600vh;
       background-color: $timeline-line-color;
     }
 
@@ -336,7 +335,8 @@
     }
 
     &__item {
-      margin-bottom: 100px;
+      /*margin-bottom: 100px;*/
+      margin-bottom: 30px;
       position: relative;
 
       &:nth-child(2n) {
@@ -393,7 +393,7 @@
     @for $i from 1 through 42 {
       &__item:nth-child(#{$i}),
       &__item_date:nth-child(#{$i}) {
-        top: calc(#{$i} * 25vh);
+        top: calc(#{$i} * 20vh);
       }
     }
   }
