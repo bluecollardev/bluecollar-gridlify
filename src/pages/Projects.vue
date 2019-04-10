@@ -27,7 +27,7 @@
     <section class="clearfix bg-light-grey">
       <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix" >
         <div v-for="project in portfolioItems" class="timeline__item clearfix">
-          <div class="timeline__item__date">{{ new Date(project.startDate).getMonth() }} <strong>{{ new Date(project.startDate).getYear() }}</strong></div>
+          <div class="timeline__item__date">{{ getFormattedDate(project) }}</div>
           <div class="timeline__item__content">
             <div class="timeline__item__content__logo">
               <span class="icon icon--content-logo"></span>
@@ -127,6 +127,18 @@
       },
     },
     methods: {
+      getFormattedDate(project) {
+        const startDate = new Date(project.startDate);
+        const endDate = new Date(project.endDate);
+        // Normalize dates, we don't care about exact time anyway
+        startDate.setHours(0,0,0,0);
+        endDate.setHours(0,0,0,0);
+
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+        // TODO: Display a range for long term projects?
+        return `${months[startDate.getMonth()]} ${startDate.getFullYear()}`;
+      },
       getTestimonial(idx) {
         let items = this.testimonialContent.items;
 
@@ -354,7 +366,7 @@
 
       .timeline__item__content {
         float: left;
-        left: -50%;
+        left: -45%;
         right: auto;
         padding: 30px 30px 25px 30px;
         margin-left: 30px;
@@ -371,7 +383,7 @@
 
       .timeline__item__content {
         float: right;
-        right: -50%;
+        right: -45%;
         left: auto;
         padding: 30px 30px 25px 30px;
         margin-right: 30px;

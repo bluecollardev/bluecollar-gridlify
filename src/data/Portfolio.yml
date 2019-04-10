@@ -2,15 +2,15 @@ title: Portfolio
 items:
   #- projectName:
   #  client:
-  #  startDate: 2019-04-09 12:00:00
-  #  endDate: 2019-04-09 12:00:00
+  #  startDate: 2019-04-01 12:00:00
+  #  endDate: 2019-04-01 12:00:00
   #  url:
   #  image: //images/ruslan-bardash-351288-unsplash.jpg
   #  description: >-
   - projectName: Procurement Services Division Time Machine Pilot
     client: AOT Technologies / Government of British Columbia
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2019-03-01 12:00:00
+    endDate: 2019-04-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -19,8 +19,8 @@ items:
       Division’s billing processes.
   - projectName: Ideal Automotive Finance Solutions
     client: Interdynamix
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2017-07-01 12:00:00
+    endDate: 2019-02-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -32,10 +32,20 @@ items:
       in Java using Spring Boot and Hibernate, and communicate with each other using RabbitMQ message broker
       software; information is stored in PostgreSQL databases. SSO-style authentication is handled using Red
       Hat’s Keycloak.
+  - projectName: Phobulous Restaurant Website
+    client: Phobulous Noodle House
+    startDate: 2017-04-01 12:00:00
+    endDate: 2017-04-01 12:00:00
+    url:
+    image: //images/ruslan-bardash-351288-unsplash.jpg
+    description: >-
+      I designed a custom SPA-style mobile-friendly Asian-styled theme for their website featuring CSS
+      animations and a custom menu component. A customized build of OpenCart is used on the backend for content
+      and product management.
   - projectName: VEST Tablet & Kiosk Apps
     client: Video Entertainment Systems Technology Ltd.
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2016-05-01 12:00:00
+    endDate: 2016-11-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -48,10 +58,20 @@ items:
       contracted to develop a hybrid mobile application for deployment on tablets, Linux kiosks and smart
       televisions which replicates (and furthers) the functionality available in their existing kiosk system.
       These tablets are currently being deployed in multiple off-track-betting locations in the continental USA.
+  - projectName: Jimmy Poblanos Food Truck Website
+    client: Jimmy Poblano's Mexican Cantina
+    startDate: 2016-05-01 12:00:00
+    endDate: 2016-05-01 12:00:00
+    url:
+    image: //images/ruslan-bardash-351288-unsplash.jpg
+    description: >-
+      I designed a custom SPA-style mobile-friendly Mexican-styled theme for their website featuring completely
+      custom artwork, parallax scrolling effects and a custom menu component. A customized build of OpenCart is
+      used on the backend for content and product management.
   - projectName: Caffe Tech Data Bridge
     client: Caffe Tech 2004 Ltd.
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2015-09-01 12:00:00
+    endDate: 2016-04-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -66,30 +86,10 @@ items:
       micro-service, and custom ‘client’ extensions for Magento and OpenCart, that automatically handled
       synchronization of all data across multiple installations and software systems using a combination of PHP,
       Slim, Doctrine ORM/DBAL, MySQL and the QuickBooks Online API and Desktop SDK.
-  - projectName: Phobulous Restaurant Website
-    client: Phobulous Noodle House
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
-    url:
-    image: //images/ruslan-bardash-351288-unsplash.jpg
-    description: >-
-      I designed a custom SPA-style mobile-friendly Asian-styled theme for their website featuring CSS
-      animations and a custom menu component. A customized build of OpenCart is used on the backend for content
-      and product management.
   - projectName: Leva Website
     client: Caffe Tech / Cafe Leva
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
-    url:
-    image: //images/ruslan-bardash-351288-unsplash.jpg
-    description: >-
-      I designed a custom SPA-style mobile-friendly Mexican-styled theme for their website featuring completely
-      custom artwork, parallax scrolling effects and a custom menu component. A customized build of OpenCart is
-      used on the backend for content and product management.
-  - projectName: Jimmy Poblanos Food Truck Website
-    client: Jimmy Poblano's Mexican Cantina
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2015-08-01 12:00:00
+    endDate: 2015-08-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -98,8 +98,8 @@ items:
       used on the backend for content and product management.
   - projectName: Corrpro Corrosion Reporting Application
     client: Corrpro (Canada)
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2015-05-01 12:00:00
+    endDate: 2015-05-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -109,8 +109,8 @@ items:
       of pipelines and storage tanks at thousands of industrial locations across Alberta.
   - projectName: Challenger Fleet Management System
     client: Challenger Fleet Management Solutions
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2015-04-01 12:00:00
+    endDate: 2015-04-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -122,8 +122,8 @@ items:
       basic accounting, and the generation of customized reports to clients while vehicle units are on rent.
   - projectName: Caffe Tech Magento Store
     client: Caffe Tech 2004 Ltd.
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2015-01-01 12:00:00
+    endDate: 2015-01-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -137,8 +137,8 @@ items:
       generation, and automatically scheduled package pickups.
   - projectName: AgentView Insurance Policy Management System
     client: Alberta Motor Association
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2013-08-01 12:00:00
+    endDate: 2014-11-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -152,8 +152,8 @@ items:
       applications.
   - projectName: Home Insurance Quote Web Application
     client: Alberta Motor Association
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2013-05-01 12:00:00
+    endDate: 2013-05-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -166,8 +166,8 @@ items:
       where possible.
   - projectName: Auto Insurance Quote Web Application
     client: Alberta Motor Association
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2013-03-01 12:00:00
+    endDate: 2013-03-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -180,8 +180,8 @@ items:
       where possible.
   - projectName: Carsgone.com
     client: Carsgone (Magazine)
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2012-03-01 12:00:00
+    endDate: 2012-03-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -195,8 +195,8 @@ items:
       display.
   - projectName: Spasation Website and Online Store
     client: Spasation
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2011-11-01 12:00:00
+    endDate: 2011-11-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -204,8 +204,8 @@ items:
       management.
   - projectName: RMG Selection Recruitment Portal v3
     client: RMG Selection
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2011-09-01 12:00:00
+    endDate: 2011-09-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -215,8 +215,8 @@ items:
       Recruiter Asia Pacific Awards ceremony in Singapore.
   - projectName: Product Matrix WordPress Extension
     client: Active24
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2011-06-01 12:00:00
+    endDate: 2011-06-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -225,8 +225,8 @@ items:
       standardized products.
   - projectName: ExtremeAudio E-Commerce Website
     client: SoftControl
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2011-04-01 12:00:00
+    endDate: 2011-04-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -238,8 +238,8 @@ items:
       administration. I also assisted with QA testing and debugging of (other) Magento e-commerce installations.
   - projectName: Online Affiliate Portal
     client: Xtend-Life
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2010-09-01 12:00:00
+    endDate: 2010-09-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -248,16 +248,16 @@ items:
       or Imagick, and export to major publishing formats including TIFF, EPS and PDF.
   - projectName: MyFoneRecycle E-Commerce Website
     client: Smart Traffic/Smart Site
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2010-06-01 12:00:00
+    endDate: 2010-06-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
       Designed and implemented a custom e-commerce theme and several extensions for the OpenCart e-commerce system.
   - projectName: Gorilla Print UK E-Commerce Website
     client: Smart Traffic/Smart Site
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2010-04-01 12:00:00
+    endDate: 2010-04-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -267,8 +267,8 @@ items:
       image processing via GD or Imagick, and export to major publishing formats including TIFF, EPS and PDF.
   - projectName: Wholesale Silver Jewelry E-Commerce Website
     client: Smart Traffic/Smart Site
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2010-01-01 12:00:00
+    endDate: 2010-01-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -276,8 +276,8 @@ items:
       Customizations include a one-step checkout system as well as a custom payment extension for ‘Thai e-Payments’.
   - projectName: BincVFX Website and Asset Management System
     client: Nfineon
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2009-08-01 12:00:00
+    endDate: 2009-08-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -286,8 +286,8 @@ items:
       the TACGA (Thai Animation and Computer Graphics Association) Media Management System.
   - projectName: Kantana Animation Studios Website
     client: Nfineon
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2009-03-01 12:00:00
+    endDate: 2009-03-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -297,8 +297,8 @@ items:
       managing photo/video assets.
   - projectName: R1 Club Website
     client: Nfineon
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2008-10-01 12:00:00
+    endDate: 2008-10-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -307,8 +307,8 @@ items:
       and a custom-made membership component.
   - projectName: LUXE Galleria Website
     client: Nfineon
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2008-07-01 12:00:00
+    endDate: 2008-07-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
@@ -317,8 +317,8 @@ items:
       membership component.
   - projectName: Bangkok International Film Festival 2008 Website
     client: Nfineon
-    startDate: 2019-04-09 12:00:00
-    endDate: 2019-04-09 12:00:00
+    startDate: 2008-04-01 12:00:00
+    endDate: 2008-04-01 12:00:00
     url:
     image: //images/ruslan-bardash-351288-unsplash.jpg
     description: >-
