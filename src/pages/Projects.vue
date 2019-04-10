@@ -15,7 +15,7 @@
         </div>
       </div>
     </section>
-    <section class="clearfix bg-light-grey">
+    <section class="portfolio-items clearfix">
       <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix" >
         <div v-for="project in portfolioItems" class="timeline__item clearfix">
           <div class="timeline__item__date">{{ getFormattedDate(project) }}</div>
@@ -23,12 +23,15 @@
             <div class="timeline__item__content__logo">
               <span class="icon icon--content-logo"></span>
             </div>
+            <h4 class="timeline__item__content__subtitle">
+              Client: {{ project.client }}
+            </h4>
             <h3 class="timeline__item__content__title">
               {{ project.projectName }}
             </h3>
-            <h4 class="timeline__item__content__title">
-              Client: {{ project.client }}
-            </h4>
+            <span class="timeline__item__content__subtitle">
+              {{ `${getFormattedStartDate(project)} - ${getFormattedEndDate(project)}` }}
+            </span>
             <p class="timeline__item__content__description">
               {{ project.description }}
             </p>
@@ -130,6 +133,30 @@
         // TODO: Display a range for long term projects?
         return `${months[startDate.getMonth()]} ${startDate.getFullYear()}`;
       },
+      getFormattedStartDate(project) {
+        const startDate = new Date(project.startDate);
+        const endDate = new Date(project.endDate);
+        // Normalize dates, we don't care about exact time anyway
+        startDate.setHours(0,0,0,0);
+        endDate.setHours(0,0,0,0);
+
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+        // TODO: Display a range for long term projects?
+        return `${months[startDate.getMonth()]} ${startDate.getFullYear()}`;
+      },
+      getFormattedEndDate(project) {
+        const startDate = new Date(project.startDate);
+        const endDate = new Date(project.endDate);
+        // Normalize dates, we don't care about exact time anyway
+        startDate.setHours(0,0,0,0);
+        endDate.setHours(0,0,0,0);
+
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+        // TODO: Display a range for long term projects?
+        return `${months[endDate.getMonth()]} ${endDate.getFullYear()}`;
+      },
       getTestimonial(idx) {
         let items = this.testimonialContent.items;
 
@@ -178,7 +205,7 @@
   $timeline-line-color: #DFDFDF;
   $timeline-date-color: #adadad;
   $timeline-content-title-color: #464545;
-  $timeline-content-description-color: #A7A7A6;
+  $timeline-content-description-color: #333;
 
   /* _page-section.css */
   .page-section {
@@ -201,62 +228,12 @@
     }
   }
 
-  /* _sprite.css */
-  .icon {
-    /*background-image: url('http://mehmetguler.xyz/codepen/responsive-timeline/sprite-fbf7a24a.svg');*/
-    display: inline-block;
-  }
-
-  .no-svg .icon {
-    /*background-image: url('http://mehmetguler.xyz/codepen/responsive-timeline/sprite-fbf7a24a.png');*/
-  }
-
-  .icon--content-logo {
-    width: 74px;
-    height: 69px;
-    background-position: 0 0;
-  }
-
-  .icon--css3 {
-    width: 24px;
-    height: 27px;
-    background-position: 92.5% 39.130434782608695%;
-  }
-
-  .icon--html5 {
-    width: 25px;
-    height: 27px;
-    background-position: 0 100%;
-  }
-
-  .icon--javascript {
-    width: 25px;
-    height: 27px;
-    background-position: 31.645569620253166% 100%;
-  }
-
-  .icon--sketch {
-    width: 30px;
-    height: 27px;
-    background-position: 100% 0;
-  }
-
   /* _timeline.css */
   .timeline {
     position: relative;
     max-width: 50%;
     margin: 0 auto;
     height: 1600vh;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 4px;
-      height: 1600vh;
-      background-color: $timeline-line-color;
-    }
 
     &__item__date {
       background-color: $timeline-line-color;
@@ -284,18 +261,6 @@
       transition: all .3s ease-out;
       padding: 30px 30px 25px 30px;
       position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 30px;
-        right: -20px;
-        width: 0;
-        height: 0;
-        border-top: 20px solid transparent;
-        border-bottom: 20px solid transparent;
-        border-left: 20px solid $main-white;
-      }
     }
 
     &__item__content__logo {
@@ -311,8 +276,16 @@
       color: $timeline-content-title-color;
     }
 
-    &__item__content__description {
+    &__item__content__subtitle {
       margin: 0;
+      padding: 0;
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: $timeline-content-title-color;
+    }
+
+    &__item__content__description {
+      margin: 1rem 0 0;
       padding: 0;
       font-size: 16px;
       line-height: 24px;
@@ -330,62 +303,138 @@
       margin-bottom: 30px;
       position: relative;
 
-      &:nth-child(2n) {
-        .timeline__item__content {
-          &::before {
-            left: -20px;
-            border-right: 20px solid $main-white;
-            border-left: 0;
-          }
-        }
-      }
+    }
+  }
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-
+  @media screen and (max-width: 40rem) {
+    .timeline {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+      height: 1600vh;
     }
 
-    &__item:nth-child(1n) {
-      .timeline__item__date {
-        left: 50%;
-        right: auto;
-        margin-left: 30px;
-        top: 27.5px;
-      }
-
-
+    .timeline__item {
       .timeline__item__content {
-        float: left;
-        left: -45%;
+        width: auto;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        left: auto;
         right: auto;
-        padding: 30px 30px 25px 30px;
-        margin-left: 30px;
       }
-    }
 
-    &__item:nth-child(2n) {
       .timeline__item__date {
-        right: 50%;
-        left: auto;
-        margin-right: 30px;
-        top: 27.5px;
-      }
-
-      .timeline__item__content {
-        float: right;
-        right: -45%;
-        left: auto;
-        padding: 30px 30px 25px 30px;
-        margin-right: 30px;
-      }
-    }
-
-    @for $i from 1 through 42 {
-      &__item:nth-child(#{$i}),
-      &__item_date:nth-child(#{$i}) {
-        top: calc(#{$i} * 20vh);
+        left: 1rem;
       }
     }
   }
+
+  @media screen and (min-width: 40rem) {
+    .portfolio-items {
+      background-color: #f2f1ed; /* bg-light-grey */
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 50%;
+      margin: 0 auto;
+      height: 1600vh;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 4px;
+        height: 1600vh;
+        background-color: $timeline-line-color;
+      }
+
+      &__item__content {
+        width: 80%;
+        background: $main-white;
+        border-radius: 6px;
+        transition: all .3s ease-out;
+        padding: 30px 30px 25px 30px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 30px;
+          right: -20px;
+          width: 0;
+          height: 0;
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          border-left: 20px solid $main-white;
+        }
+      }
+
+      &__item {
+        /*margin-bottom: 100px;*/
+        margin-bottom: 30px;
+        position: relative;
+
+        &:nth-child(2n) {
+          .timeline__item__content {
+            &::before {
+              left: -20px;
+              border-right: 20px solid $main-white;
+              border-left: 0;
+            }
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+      }
+
+      &__item:nth-child(1n) {
+        .timeline__item__date {
+          left: 50%;
+          right: auto;
+          margin-left: 30px;
+          top: 27.5px;
+        }
+
+
+        .timeline__item__content {
+          float: left;
+          left: -45%;
+          right: auto;
+          padding: 30px 30px 25px 30px;
+          margin-left: 30px;
+        }
+      }
+
+      &__item:nth-child(2n) {
+        .timeline__item__date {
+          right: 50%;
+          left: auto;
+          margin-right: 30px;
+          top: 27.5px;
+        }
+
+        .timeline__item__content {
+          float: right;
+          right: -45%;
+          left: auto;
+          padding: 30px 30px 25px 30px;
+          margin-right: 30px;
+        }
+      }
+
+      @for $i from 1 through 42 {
+        &__item:nth-child(#{$i}),
+        &__item_date:nth-child(#{$i}) {
+          top: calc(#{$i} * 20vh);
+        }
+      }
+    }
+  }
+
 </style>
