@@ -76,7 +76,7 @@
         </li>-->
         <li><a href="/projects"  v-on:click="hideDropMenu()">Projects</a></li>
         <li><a href="/company" v-on:click="hideDropMenu()">Company</a></li>
-        <!--<li><a href="/contact" v-on:click="hideDropMenu()">Contact</a></li>-->
+        <li><a href="/contact" v-on:click="hideDropMenu()">Contact</a></li>
       </nav>
     </div>
   </header>
