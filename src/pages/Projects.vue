@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Header/>
-    <section class="hero-section bg-hero-grey sm-flex pad-top height-half">
+    <section class="hero-section bg-bc-blue sm-flex pad-top height-half">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="content-block">
           <div>

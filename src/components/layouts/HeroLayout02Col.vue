@@ -1,5 +1,6 @@
 <template>
-  <section class="homepage-hero hero-section bg-hero-grey sm-flex xs-pad-top-2x">
+  <section class="homepage-hero hero-section bg-bc-blue sm-flex xs-pad-top-2x">
+    <!-- TODO: Allow changing of bg colors -->
     <div class="sm-flex flex-center flex-justify-center flex-basis-half">
       <div class="hero-block">
         <div class="flex flex-column">
