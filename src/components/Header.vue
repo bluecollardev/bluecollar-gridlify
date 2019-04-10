@@ -75,7 +75,7 @@
           </ul>
         </li>-->
         <li><a href="/projects"  v-on:click="hideDropMenu()">Projects</a></li>
-        <li><a href="/company" v-on:click="hideDropMenu()">Team</a>
+        <li class="drop"><a href="/company" v-on:click="hideDropMenu()">Team</a>
           <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
             <li><a href="/" v-on:click="hideDropMenu()">Our Process</a></li>
             <li><a href="/" v-on:click="hideDropMenu()">Young Dev Program</a></li>
