@@ -99,7 +99,7 @@
 
       let lastScroll = 0;
       window.onscroll = function() {
-        if (!document.getElementById('loader')) {
+        /*if (!document.getElementById('loader')) {
           that.hideMenu();
 
           let header = document.getElementsByTagName('header')[0];
@@ -109,7 +109,7 @@
           (this.scrollY < lastScroll) ? header.style.top = '0': header.style.top = '-' + header.clientHeight + 'px';
 
           lastScroll = this.scrollY;
-        }
+        }*/
       }
     },
     methods: {
