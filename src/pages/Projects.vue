@@ -247,7 +247,7 @@
       color: $timeline-date-color;
       border-radius: 6px;
       font-size: 14px;
-      z-index: 1;
+      z-index: 0;
     }
 
     &__item__date strong {
@@ -315,6 +315,14 @@
     }
 
     .timeline__item {
+      &__content__title {
+        font-size: 16px;
+      }
+
+      &__content__subtitle {
+        font-size: 14px;
+      }
+
       .timeline__item__content {
         width: auto;
         float: none;
@@ -322,10 +330,12 @@
         margin-right: auto;
         left: auto;
         right: auto;
+        border-radius: 0;
       }
 
       .timeline__item__date {
-        left: 1rem;
+        left: 1rem; /* Line up away from edges */
+        display: none; /* Disable, it's just clutter on mobile */
       }
     }
   }
