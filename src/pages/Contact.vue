@@ -50,6 +50,7 @@
                         class="block border-none p0 m0"
                         placeholder="Full name"
                         v-model="formData.fullname"
+                        required
                       />
                       <label
                         for="fullname"
@@ -70,6 +71,7 @@
                         class="block border-none p0 m0"
                         placeholder="Phone"
                         v-model="formData.phone"
+                        required
                       />
                       <label
                         for="phone"
@@ -90,6 +92,7 @@
                         class="block border-none p0 m0"
                         placeholder="Email"
                         v-model="formData.email"
+                        required
                       />
                       <label
                         for="email"
@@ -111,6 +114,7 @@
                         class="block border-none p0 m0"
                         placeholder="Project Budget"
                         v-model="formData.budget"
+                        required
                       />
                       <label
                         for="budget"
@@ -154,10 +158,10 @@
                         v-model="formData.country"
                       />
                       <label
-                        for="city"
+                        for="country"
                         class="absolute top-0 right-0 bottom-0 left-0"
                         aria-hidden="true"
-                        >City</label
+                        >Country</label
                       >
                     </div>
                     <!-- End Input-->
@@ -172,6 +176,7 @@
                       class="block border-none p0 m0"
                       placeholder="Message"
                       v-model="formData.message"
+                      required
                     />
                     <label
                       for="message"
@@ -222,9 +227,9 @@
               <h3 class="h3 block mb4 space-top">General Inquiries</h3>
               <br />
               <br />
-              <p>For information on job opportunities or informational interviews please email: careers@bluecollardev.com</p>
-              <p>For sponsorship, media, events, and opportunities to help us grow please email: marketing@bluecollardev.com</p>
-              <p>For other inquiries that don’t fit the descriptions above, ask us who you’d like to connect with by sending an email to: info@bluecollardev.com</p>
+              <p>For information on job opportunities or informational interviews please email: <b>careers@bluecollardev.com</b></p>
+              <p>For sponsorship, media, events, and opportunities to help us grow please email: <b>marketing@bluecollardev.com</b></p>
+              <p>For other inquiries that don’t fit the descriptions above, ask us who you’d like to connect with by sending an email to: <b>info@bluecollardev.com</b></p>
             </div>
           </div>
         </div>
