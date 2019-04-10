@@ -24,9 +24,9 @@
         </div>-->
       </div>
     </section>
-    <section class="clearfix">
-      <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline" >
-        <div v-for="project in portfolioItems" class="timeline__item">
+    <section class="clearfix bg-light-grey">
+      <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix" >
+        <div v-for="project in portfolioItems" class="timeline__item clearfix">
           <div class="timeline__item__date">{{ new Date(project.startDate).getMonth() }} <strong>{{ new Date(project.startDate).getYear() }}</strong></div>
           <div class="timeline__item__content">
             <div class="timeline__item__content__logo">
@@ -200,12 +200,12 @@
 
   /* _sprite.css */
   .icon {
-    background-image: url('http://mehmetguler.xyz/codepen/responsive-timeline/sprite-fbf7a24a.svg');
+    /*background-image: url('http://mehmetguler.xyz/codepen/responsive-timeline/sprite-fbf7a24a.svg');*/
     display: inline-block;
   }
 
   .no-svg .icon {
-    background-image: url('http://mehmetguler.xyz/codepen/responsive-timeline/sprite-fbf7a24a.png');
+    /*background-image: url('http://mehmetguler.xyz/codepen/responsive-timeline/sprite-fbf7a24a.png');*/
   }
 
   .icon--content-logo {
@@ -242,37 +242,18 @@
   .timeline {
     position: relative;
     padding: 100px 0;
+    max-width: 50%;
+    margin: 0 auto;
+    height: 1895vh;
 
     &::before {
       content: "";
       position: absolute;
       top: 0;
-      left: 10%;
+      left: 50%;
       width: 4px;
-      height: 100%;
+      height: 1895vh;
       background-color: $timeline-line-color;
-    }
-
-    &__item {
-      margin-bottom: 100px;
-      position: relative;
-
-      &:nth-child(2n) {
-
-        .timeline__item__content {
-          float: right;
-
-          &::before {
-          }
-
-        }
-
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
     }
 
     &__item__date {
@@ -282,8 +263,6 @@
       position: absolute;
       padding: 10px;
       top: -18px;
-      left: 10%;
-      margin-left: -33px;
       transition: all .3s ease-out;
       text-align: center;
       color: $timeline-date-color;
@@ -300,14 +279,21 @@
       width: 80%;
       background: $main-white;
       border-radius: 6px;
-      float: right;
       transition: all .3s ease-out;
       padding: 30px 30px 25px 30px;
       position: relative;
 
       &::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        right: -20px;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid $main-white;
       }
-
     }
 
     &__item__content__logo {
@@ -337,5 +323,66 @@
       text-align: right;
     }
 
+    &__item {
+      margin-bottom: 100px;
+      position: relative;
+
+      &:nth-child(2n) {
+        .timeline__item__content {
+          &::before {
+            left: -20px;
+            border-right: 20px solid $main-white;
+            border-left: 0;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+
+    &__item:nth-child(1n) {
+      .timeline__item__date {
+        left: 50%;
+        right: auto;
+        margin-left: 30px;
+        top: 27.5px;
+      }
+
+
+      .timeline__item__content {
+        float: left;
+        left: -50%;
+        right: auto;
+        padding: 30px 30px 25px 30px;
+        margin-left: 30px;
+      }
+    }
+
+    &__item:nth-child(2n) {
+      .timeline__item__date {
+        right: 50%;
+        left: auto;
+        margin-right: 30px;
+        top: 27.5px;
+      }
+
+      .timeline__item__content {
+        float: right;
+        right: -50%;
+        left: auto;
+        padding: 30px 30px 25px 30px;
+        margin-right: 30px;
+      }
+    }
+
+    @for $i from 1 through 42 {
+      &__item:nth-child(#{$i}),
+      &__item_date:nth-child(#{$i}) {
+        top: calc(#{$i} * 25vh);
+      }
+    }
   }
 </style>

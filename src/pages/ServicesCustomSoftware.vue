@@ -12,18 +12,17 @@
       subCaption="Principal Architect, Blue Collar"
     />
 
-      <div class="sm-flex flex-center flex-justify-center flex-basis-third pad-bottom">
-        <div class="space-all no-space-bottom">
-          <div class="space-bottom-half g-services">
-            <p class="g-pstyle8">Blue Collar sets your online business apart with ultra fast-loading landing pages, and targeted branding that engages potential customers.</p>
-          </div>
-          <div class="g-services">
-            <p class="g-pstyle10">Michael</p>
-            <p class="g-pstyle10">Designer at Blue Collar</p>
-          </div>
+    <div class="sm-flex flex-center flex-justify-center flex-basis-third pad-bottom">
+      <div class="space-all no-space-bottom">
+        <div class="space-bottom-half g-services">
+          <p class="g-pstyle8">Blue Collar sets your online business apart with ultra fast-loading landing pages, and targeted branding that engages potential customers.</p>
+        </div>
+        <div class="g-services">
+          <p class="g-pstyle10">Michael</p>
+          <p class="g-pstyle10">Designer at Blue Collar</p>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- TODO: Move digital marketing to its own section -->
     <section-block-layout02-col02

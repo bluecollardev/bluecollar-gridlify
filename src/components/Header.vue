@@ -61,8 +61,8 @@
         <li class="drop"><a v-on:mouseover="displayDropMenu()">Web  <i class="icon-arrow"></i></a>
           <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
             <li><a href="/services-web" v-on:click="hideDropMenu()">Websites</a></li>
-            <li><a href="/services-software" v-on:click="hideDropMenu()">Hybrid Apps + PWAs</a></li>
-            <li><a href="/services-landing-pages" v-on:click="hideDropMenu()">Landing Pages</a></li>
+            <li><a href="/services-apps" v-on:click="hideDropMenu()">Hybrid Apps + PWAs</a></li>
+            <li><a href="/services-software" v-on:click="hideDropMenu()">Custom Software</a></li>
             <li><a href="/pricing" v-on:click="hideDropMenu()">Pricing</a></li>
           </ul>
         </li>
@@ -74,13 +74,13 @@
             <li><a href="/pricing" v-on:click="hideDropMenu()">Pricing</a></li>
           </ul>
         </li>-->
-        <li><a href="/projects"  v-on:click="hideDropMenu()">Projects</a></li>
-        <li class="drop"><a href="/company" v-on:click="hideDropMenu()">Team</a>
+        <li class="drop"><a a v-on:mouseover="displayDropMenu()" href="/company">Team  <i class="icon-arrow"></i></a>
           <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
             <li><a href="/" v-on:click="hideDropMenu()">Our Process</a></li>
             <li><a href="/" v-on:click="hideDropMenu()">Young Dev Program</a></li>
           </ul>
         </li>
+        <li><a href="/projects"  v-on:click="hideDropMenu()">Projects</a></li>
         <li><a href="/contact" v-on:click="hideDropMenu()">Contact</a></li>
       </nav>
     </div>
@@ -90,20 +90,23 @@
 <script>
   export default {
     mounted() {
-      window.addEventListener("resize", function(event) {
-        this.hideMenu();
-        document.getElementsByTagName("body")[0].classList.remove("display-menu");
+      const that = this;
+
+      window.addEventListener('resize', function(event) {
+        that.hideMenu();
+        document.getElementsByTagName('body')[0].classList.remove('display-menu');
       });
+
       let lastScroll = 0;
       window.onscroll = function() {
-        if (!document.getElementById("loader")) {
-          this.hideMenu();
+        if (!document.getElementById('loader')) {
+          that.hideMenu();
 
-          let header = document.getElementsByTagName("header")[0];
+          let header = document.getElementsByTagName('header')[0];
 
           if (Math.abs(lastScroll - this.scrollY) <= 5) return;
 
-          (this.scrollY < lastScroll) ? header.style.top = "0": header.style.top = "-" + header.clientHeight + "px";
+          (this.scrollY < lastScroll) ? header.style.top = '0': header.style.top = '-' + header.clientHeight + 'px';
 
           lastScroll = this.scrollY;
         }
