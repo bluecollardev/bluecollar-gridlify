@@ -18,7 +18,7 @@
     </section>
     <section>
       <div class="sm-flex flex-auto flex-center flex-justify-center">
-        <div class="flex-basis-two-thirds flex">
+        <div class="sm-flex flex-basis-two-thirds">
           <div class="sm-flex flex-basis-two-thirds">
             <form
               target="_top"
@@ -38,8 +38,8 @@
                   <input name="bot-field" />
                 </div>
 
-                <div class="flex flex-justify">
-                  <div class="flex flex-column flex-basis-half flex-start">
+                <div class="sm-flex flex-justify">
+                  <div class="sm-flex flex-column flex-basis-half flex-start">
                     <!-- Start Input -->
                     <div class="ampstart-input relative m0 p0 mb3 ">
                       <input
@@ -103,7 +103,7 @@
                     </div>
                     <!-- End Input-->
                   </div>
-                  <div class="flex flex-column flex-basis-half flex-end">
+                  <div class="sm-flex flex-column flex-basis-half flex-end">
                     <!-- Start Input -->
                     <div class="ampstart-input relative m0 p0 mb3 ">
                       <input
