@@ -9,7 +9,7 @@
       linkText="Learn More"
       image="/images/hero-michael.png"
       caption="Sean Hamilton"
-      subCaption="Software Architect, Blue Collar"
+      subCaption="Principal Architect, Blue Collar"
     />
 
       <div class="sm-flex flex-center flex-justify-center flex-basis-third pad-bottom">

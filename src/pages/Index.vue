@@ -81,7 +81,7 @@
       linkText="Learn More"
       image="/images/hero-michael.png"
       caption="Sean Huntington"
-      subCaption="Software Architect, Blue Collar"
+      subCaption="Principal Architect, Blue Collar"
     />
 
     <section class="lg-flex">
