@@ -7,7 +7,7 @@
       <p v-html="this.description"></p>
     </div>
     <div v-if="typeof this.linkText === 'string' && this.linkText.length > 0" class="g-services">
-      <a class="space-top-half more-info-link g-pstyle11" v-bind:href="this.link">{{ this.linkText }}</a>
+      <a class="space-top-half more-info-link g-pstyle11" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
     </div>
   </div>
 </template>

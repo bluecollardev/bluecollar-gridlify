@@ -15,12 +15,12 @@
           <div
             class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
           >
-            <a class="action-link space-bottom g-pstyle3" v-bind:href="this.link"
+            <a class="action-link space-bottom g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText"
               >{{ this.linkText }}</a
             >
           </div>
           <div class="homepage-hero-action action-link-block xs-hide text-center">
-            <a class="action-link space-top g-pstyle3" v-bind:href="this.link"
+            <a class="action-link space-top g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText"
               >{{ this.linkText }}</a
             >
           </div>
