@@ -19,7 +19,7 @@ footer .logo {
     margin-left: 0;
   }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 40em) {
   .logo {
     height: 30px;
   }
@@ -79,12 +79,12 @@ footer a:hover {
 /* From bass-override-vars... */
 
 /*
-@custom-media --breakpoint-xs (max-width: 40rem);
-@custom-media --breakpoint-sm (min-width: 40.06rem);
-@custom-media --breakpoint-md (min-width: 52.06rem);
-@custom-media --breakpoint-lg (min-width: 64.06rem);
-@custom-media --breakpoint-sm-md (min-width: 40.06rem) and (max-width: 52rem);
-@custom-media --breakpoint-md-lg (min-width: 52.06rem) and (max-width: 64rem);
+@custom-media --breakpoint-xs (max-width: 40em);
+@custom-media --breakpoint-sm (min-width: 40.06em);
+@custom-media --breakpoint-md (min-width: 52.06em);
+@custom-media --breakpoint-lg (min-width: 64.06em);
+@custom-media --breakpoint-sm-md (min-width: 40.06em) and (max-width: 52em);
+@custom-media --breakpoint-md-lg (min-width: 52.06em) and (max-width: 64em);
 */
 
 .homepage-hero {

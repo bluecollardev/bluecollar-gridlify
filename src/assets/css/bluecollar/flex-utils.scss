@@ -33,7 +33,7 @@
   flex-basis: 100%;
 }
 
-@media screen and (min-width: 52.06rem) {
+@media screen and (min-width: 52.06em) {
   .md-flex-basis-half,
   .md-flex-basis-50 {
     flex-basis: 50%;
@@ -69,7 +69,7 @@
 .flex-end { align-items: flex-end }
 
 /* Responsive flex util adjustments */
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 40em) {
   .xs-inline-flex { display: inline-flex; }
   .xs-flex-column { flex-direction: column }
   .xs-flex-wrap { flex-wrap: wrap }
@@ -87,7 +87,7 @@
   .xs-flex-end { align-items: flex-end }
 }
 
-@media screen and (min-width: 52.06rem) {
+@media screen and (min-width: 52.06em) {
   .sm-inline-flex { display: inline-flex; }
   .sm-flex-column { flex-direction: column }
   .sm-flex-wrap { flex-wrap: wrap }

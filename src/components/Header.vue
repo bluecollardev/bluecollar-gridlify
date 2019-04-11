@@ -172,14 +172,16 @@
   /*header img {
     width: 100px;
   }*/
-  header #menu, header #menu > ul {
-    display: flex;
-    flex-direction: row;
-  }
+  @media screen and (min-width: 40em) {
+    header #menu, header #menu > ul {
+      display: flex;
+      flex-direction: row;
+    }
 
-  header #menu > ul > li {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    header #menu > ul > li {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
   }
 
   header #menu li {
@@ -239,7 +241,7 @@
     display: none;
     transform: translateY(-50%);
   }
-  @media screen and (max-width: 40rem) {
+  @media screen and (max-width: 40em) {
     header #hamburger {
       cursor: pointer;
       border-radius: 50%;

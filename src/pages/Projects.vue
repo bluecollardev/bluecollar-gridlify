@@ -338,7 +338,7 @@
     }
   }
 
-  @media screen and (max-width: 40rem) {
+  @media screen and (max-width: 40em) {
     .timeline {
       position: relative;
       max-width: 100%;
@@ -372,7 +372,7 @@
     }
   }
 
-  @media screen and (min-width: 40rem) {
+  @media screen and (min-width: 40em) {
     .portfolio-items {
       background-color: #f2f1ed; /* bg-light-grey */
     }

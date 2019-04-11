@@ -105,7 +105,7 @@
     padding: 1rem 12rem;
   }
 
-  @media screen and (max-width: 40rem) {
+  @media screen and (max-width: 40em) {
     footer {
       padding: 1px;
 
