@@ -74,7 +74,7 @@
                 <div class="travel-popular-tilt-right mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-#5c7e9ered" style="width: 346px; height: 200px"></div>
+                      <div class="bg-bc-blue" style="width: 346px; height: 200px"></div>
                       <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="" srcset=""></amp-img>-->
                       <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="../img/travel/activity/surf-day.jpg" srcset="../img/travel/activity/surf-day@2x.jpg 2x, ../img/travel/activity/surf-day.jpg 1x"></amp-img>-->
                     </a>
@@ -143,7 +143,7 @@
                 <div class="travel-results-result relative mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-#5c7e9ered" style="width: 346px; height: 200px"></div>
+                      <div class="bg-bc-blue" style="width: 346px; height: 200px"></div>
                     </a>
                     <div class="travel-results-result-flags absolute top-0 left-0">
                       <div class="p1"><span class="travel-pill bold">NEW</span></div>
@@ -320,7 +320,7 @@
                 <div class="travel-popular-tilt-right mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-#5c7e9ered" style="width: 346px; height: 200px"></div>
+                      <div class="bg-bc-blue" style="width: 346px; height: 200px"></div>
                       <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="" srcset=""></amp-img>-->
                       <!--<amp-img class="block rounded" width="346" height="200" noloading="" src="../img/travel/activity/surf-day.jpg" srcset="../img/travel/activity/surf-day@2x.jpg 2x, ../img/travel/activity/surf-day.jpg 1x"></amp-img>-->
                     </a>
@@ -386,7 +386,7 @@
                 <div class="travel-results-result relative mb1">
                   <div class="relative travel-results-result">
                     <a class="travel-results-result-link block relative" href="#">
-                      <div class="bg-#5c7e9ered" style="width: 346px; height: 200px"></div>
+                      <div class="bg-bc-blue" style="width: 346px; height: 200px"></div>
                     </a>
                     <div class="travel-results-result-flags absolute top-0 left-0">
                       <div class="p1"><span class="travel-pill bold">NEW</span></div>
@@ -1105,7 +1105,7 @@
   .pricing-switcher-item.is-active {
     border-right: 1px solid rgba(255,255,255,0.15);
     border-left: 1px solid rgba(255,255,255,0.15);
-    background: #5c7e9e;
+    background: #33587a;
   }
 
   .bg-bc-blue .g-pstyle11 a,

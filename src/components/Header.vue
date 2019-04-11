@@ -58,7 +58,8 @@
         <img class="logo" src="/images/blue-collar-dev.png" />
       </a>
       <nav id="menu">
-        <li class="drop"><a v-on:mouseover="displayDropMenu()">Web  <i class="icon-arrow"></i></a>
+        <ul>
+          <li class="drop"><a v-on:mouseover="displayDropMenu()">Web  <i class="icon-arrow"></i></a>
           <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
             <li><a href="/services-web" v-on:click="hideDropMenu()">Websites</a></li>
             <li><a href="/services-apps" v-on:click="hideDropMenu()">Hybrid Apps + PWAs</a></li>
@@ -82,6 +83,7 @@
         </li>
         <li><a href="/projects"  v-on:click="hideDropMenu()">Projects</a></li>
         <li><a href="/contact" v-on:click="hideDropMenu()">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -169,7 +171,7 @@
 
 <style lang="scss">
   :root {
-    --cblue: #5c7e9e;
+    --cblue: #33587a;
     --ccherry: #720500;
     --cgrey : #3E3A37;
     --cwhite : #ffffff;
@@ -218,14 +220,21 @@
   /*header img {
     width: 100px;
   }*/
-  header #menu {
+  header #menu, header #menu > ul {
     display: flex;
     flex-direction: row;
   }
+
+  header #menu > ul > li {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
   header #menu li {
     position: relative;
     user-select: none;
     margin-left: 20px;
+    margin-right: 20px;
     i {width: 12px; height: 12px; background-color: var(--cgrey);}
     a {
       color: var(--cgrey);
