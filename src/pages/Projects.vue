@@ -32,6 +32,9 @@
             <span class="timeline__item__content__subtitle">
               {{ `${getFormattedStartDate(project)} - ${getFormattedEndDate(project)}` }}
             </span>
+            <div v-if="typeof project.image === 'string' && project.image.length > 3" class="project-image pad-top pad-bottom">
+              <img v-bind:src="project.image" />
+            </div>
             <p class="timeline__item__content__description">
               {{ project.description }}
             </p>
@@ -419,6 +422,13 @@
           padding: 30px 30px 25px 30px;
           margin-left: 30px;
         }
+
+        .project-image img {
+          position: absolute;
+          top: -5%;
+          left: 115%;
+          right: auto;
+        }
       }
 
       &__item:nth-child(2n) {
@@ -435,6 +445,13 @@
           left: auto;
           padding: 30px 30px 25px 30px;
           margin-right: 30px;
+        }
+
+        .project-image img {
+          position: absolute;
+          top: -5%;
+          right: 115%;
+          left: auto;
         }
       }
 
