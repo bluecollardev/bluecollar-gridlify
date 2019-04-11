@@ -78,7 +78,7 @@
       subtitle=""
       description="Drawing on deep experience in solution design and combining it with great listening, we work closely with your team to define a solution for the business challenge at hand. Then, we infuse user feedback and priorities into every stage of the software development process."
       image="/images/hero-michael.png"
-      caption="Sean Hamilton"
+      caption="Sean Huntington"
       subCaption="Principal Architect, Blue Collar"
     />
 

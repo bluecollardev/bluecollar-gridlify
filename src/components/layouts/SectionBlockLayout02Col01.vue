@@ -15,8 +15,11 @@
           <div class="space-bottom g-how-does-it-work">
             <p class="g-pstyle2 text-center">{{ this.title }}</p>
           </div>
-          <div class="g-how-does-it-work">
+          <div v-if="!(this.description instanceof Array)" class="g-how-does-it-work">
             <p v-html="this.description"></p>
+          </div>
+          <div v-else-if="this.description instanceof Array" class="g-how-does-it-work">
+            <p v-for="description in this.description" v-html="description"></p>
           </div>
         </div>
       </div>

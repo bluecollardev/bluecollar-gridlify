@@ -4,11 +4,14 @@
     <section-block-layout02-col01
       title="Experts in Progressive and Mobile App Development"
       subtitle=""
-      description="We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work."
+      :description="[
+        'We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.',
+        'With extensive expertise in React.js, React Native, Angular.js, Vue.js, JavaScript, CSS3, HTML5, and Responsive Web Design, software developers at Blue Collar can build cross-platform solutions to suit the custom needs of any project. Benefit from building isomorphic, progressive, dynamic, and mobile-friendly applications with reusable components.'
+      ]"
       link="/services"
       linkText="Learn More"
       image="/images/hero-michael.png"
-      caption="Sean Hamilton"
+      caption="Sean Huntington"
       subCaption="Principal Architect, Blue Collar"
     />
 
@@ -19,8 +22,7 @@
             <p class="g-pstyle9">Progressive Apps</p>
           </div>
           <div>
-            <p>In recent years social media traffic to business pages has shifted from organic to sponsored.  Social ads are a cost-effective way to reach potential new clients.</p>
-            <p>Blue Collar&rsquo;s digital marketing experts make sure your ad content is relevant and targeted, driving more qualified lead traffic to your website.</p>
+            <p>With the new application model offered by Google progressive web apps (PWAs), we help you to build engaging solutions that deliver native mobile experience right from your browser.</p>
           </div>
           <div class="action-link-block">
             <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
@@ -78,8 +80,7 @@
             <p class="g-pstyle9">Mobile Apps</p>
           </div>
           <div>
-            <p>Your Blue Collar team will create a professional social media profile to match your company&rsquo;s branding.</p>
-            <p>We then create and post interesting content that is relevant to your target audience to keep them engaged and improve conversion rates over time.</p>
+            <p>We build native and cross-platform mobile applications for iOS and Android to provide businesses with effective means to reach their customers anywhere they go.</p>
           </div>
           <div class="action-link-block">
             <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>

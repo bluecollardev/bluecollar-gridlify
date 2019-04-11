@@ -8,7 +8,7 @@
       link="/services"
       linkText="Learn More"
       image="/images/hero-michael.png"
-      caption="Sean Hamilton"
+      caption="Sean Huntington"
       subCaption="Principal Architect, Blue Collar"
     />
 
