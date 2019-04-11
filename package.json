@@ -15,6 +15,7 @@
 		"basscss-type-scale": "^1.0.6",
 		"basscss-typography": "^3.0.4",
 		"gridsome": "^0.5.0",
+		"lozad": "^1.9.0",
 		"node-sass": "^4.11.0",
 		"normalize.css": "^5.0.0",
 		"postcss": "5.2.14",

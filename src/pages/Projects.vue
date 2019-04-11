@@ -8,7 +8,7 @@
             <div class="space-bottom space-top">
               <p class="g-pstyle2 text-center-force">Client Projects</p>
             </div>
-            <img src="/images/portfolio/bc-showcase-responsive.png" />
+            <img class="lozad" src="/images/portfolio/bc-showcase-responsive.png" />
             <div
             class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
           >
@@ -43,7 +43,7 @@
               {{ `${getFormattedStartDate(project)} - ${getFormattedEndDate(project)}` }}
             </span>
             <div v-if="typeof project.image === 'string' && project.image.length > 3" class="project-image pad-top pad-bottom">
-              <img v-bind:src="project.image" v-bind:srcset="getImagesSrcSet(project.image)" />
+              <img class="lozad" v-bind:src="project.image" v-bind:srcset="getImagesSrcSet(project.image)" />
             </div>
             <p class="timeline__item__content__description">
               {{ project.description }}
@@ -62,6 +62,9 @@
 </template>
 
 <script>
+  // Image lazy loader, just add class="lozad" to elements
+  import lozad from 'lozad';
+
   // Import components
   import Header from '~/components/Header.vue';
   import Hero from '~/components/Hero.vue';
@@ -215,6 +218,10 @@
       pricingIsActive(pricing) {
         return this.pricingFor === pricing;
       }
+    },
+    mounted() {
+      const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+      observer.observe();
     }
   }
 </script>

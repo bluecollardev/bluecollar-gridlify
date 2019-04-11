@@ -2,7 +2,7 @@
   <section class="sm-flex pad-top xs-hide">
     <!-- Position relatively, or absolute positioning of the caption will fail -->
     <div class="relative flex flex-justify-center flex-basis-half">
-      <img class="banner-image" v-bind:src="this.image" />
+      <img class="lozad banner-image" v-bind:src="this.image" />
       <div class="figure-caption bg-bc-blue g-how-does-it-work">
         <p class="g-pstyle4">{{ this.caption }}</p>
         <p class="g-pstyle5">{{ this.subCaption }}</p>
