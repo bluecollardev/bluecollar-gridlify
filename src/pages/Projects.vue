@@ -43,7 +43,7 @@
               {{ `${getFormattedStartDate(project)} - ${getFormattedEndDate(project)}` }}
             </span>
             <div v-if="typeof project.image === 'string' && project.image.length > 3" class="project-image pad-top pad-bottom">
-              <img v-bind:src="project.image" />
+              <img v-bind:src="project.image" v-bind:srcset="getImagesSrcSet(project.image)" />
             </div>
             <p class="timeline__item__content__description">
               {{ project.description }}
@@ -134,6 +134,18 @@
       },
     },
     methods: {
+      /**
+       * Allows the browser to choose an appropriate resolution image by using srcset with x-descriptors and without sizes.
+       * @param path
+       */
+      getImagesSrcSet(path) {
+        const parts = path.split('.');
+        let ext = parts.pop();
+        let base = parts.join('.');
+
+
+        return `${base}.${ext}, ${base}@2x.${ext} 2x, ${base}@3x.${ext} 3x`;
+      },
       getFormattedDate(project) {
         const startDate = new Date(project.startDate);
         const endDate = new Date(project.endDate);
