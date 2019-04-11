@@ -25,6 +25,10 @@
   margin-top: 3rem;
 }
 
+.space-top-2x {
+  margin-top: 6rem;
+}
+
 .space-top-half {
   margin-top: 1.5rem;
 }
@@ -168,6 +172,11 @@ $queries: $breakpoint-xs $breakpoint-sm $breakpoint-sm-md $breakpoint-md-lg $bre
       padding-right: 1.5rem;
     }
   }
+}
+
+.height-full,
+.height-100 {
+  height: 100vh;
 }
 
 .height-half,

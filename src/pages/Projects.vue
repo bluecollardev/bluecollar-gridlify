@@ -1,21 +1,31 @@
 <template>
   <Layout>
     <Header/>
-    <section class="hero-section bg-bc-blue sm-flex pad-top height-half">
+    <section class="hero-section bg-bc-blue sm-flex pad-top pad-bottom-2x height-full">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="content-block">
           <div>
-            <div class="space-bottom">
+            <div class="space-bottom space-top">
               <p class="g-pstyle2 text-center-force">Client Projects</p>
             </div>
-            <div class="g-banner">
-              <p>At Blue Collar we understand that the online world is undergoing a paradigm shift away from traditional HTML websites to a system of content pages shared across social media platforms and mobile devices. Already, more people on earth view their online content on mobile devices than on desktop browsers. We recognize the tremendous opportunities available for businesses who adapt to this shift and adopt tools that will enable them to take advantage of these new platforms and devices. It is our goal to be at the forefront of these new technologies and make use of them to deliver value to our clients.</p>
-            </div>
+            <img src="/images/portfolio/bc-showcase-responsive.png" />
+            <div
+            class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
+          >
+            <a class="action-link space-bottom g-pstyle3" href="/projects#portfolio"
+              >Take the Tour</a
+            >
+          </div>
+          <div class="homepage-hero-action action-link-block xs-hide text-center">
+            <a class="action-link space-top g-pstyle3" href="/projects#portfolio"
+              >Take the Tour</a
+            >
+          </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="portfolio-items clearfix">
+    <section id="portfolio" class="portfolio-items clearfix">
       <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix" >
         <div v-for="project in portfolioItems" class="timeline__item clearfix">
           <div class="timeline__item__date">{{ getFormattedDate(project) }}</div>
