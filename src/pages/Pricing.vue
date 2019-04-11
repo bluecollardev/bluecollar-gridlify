@@ -102,7 +102,7 @@
                 <div class="h2 line-height-2 mb1">
                   <span class="travel-results-result-text">Template Design</span>
                   <span class="travel-results-result-subtext h3">&bull;</span>
-                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">1500 +</span>
+                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">1,500 +</span>
                 </div>
 
                 <hr class="space-top-half space-bottom-half" />
@@ -119,7 +119,10 @@
                   <ul class="card-list">
                     <li>Accelerated mobile website (template)</li>
                     <li>Consultation on choosing template</li>
+                    <li>Custom forms*</li>
+                    <li>Profession photo sourcing*</li>
                     <li>Social media integration</li>
+                    <li>Google Analytics<sup>&reg;</sup></li>
                     <li>Includes up to 5 free pages*</li>
                     <hr class="space-top-half space-bottom-half" />
                     <li>Extra pages are $200 each</li>
@@ -169,7 +172,7 @@
                 <div class="h2 line-height-2 mb1">
                   <span class="travel-results-result-text">Custom Website</span>
                   <span class="travel-results-result-subtext h3">&bull;</span>
-                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">4500 +</span>
+                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">4,500 +</span>
                 </div>
 
                 <hr class="space-top-half space-bottom-half" />
@@ -184,16 +187,17 @@
 
                 <div class="card-content-body space-top-half flex">
                   <ul class="card-list">
-                    <li>Unique site with customized AMP components</li>
+                    <li>Unique site with customized components</li>
                     <li>Mockup-provided (2-pages included)</li>
                     <li>In-depth consultation and strategic planning</li>
                     <li>Online payments integration possible</li>
+                    <li>Accelerated mobile website (template)</li>
                     <li>Custom forms*</li>
                     <li>Profession photo sourcing*</li>
                     <li>Social media integration</li>
                     <li>Google Analytics<sup>&reg;</sup></li>
                     <li>XML Sitemap</li>
-                    <li>Includes up to 8 free pages*</li>
+                    <li>Includes up to 10 free pages*</li>
                     <hr class="space-top-half space-bottom-half" />
                     <li>Extra pages are $200 each</li>
                     <li>Extra products or services are $15 each</li>
@@ -344,7 +348,7 @@
                 <div class="h2 line-height-2 mb1">
                   <span class="travel-results-result-text">Progressive Apps</span>
                   <span class="travel-results-result-subtext h3">&bull;</span>
-                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">7,500 +</span>
+                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">5,000 +</span>
                 </div>
 
                 <hr class="space-top-half space-bottom-half" />
@@ -359,8 +363,8 @@
 
                 <div class="card-content-body space-top-half flex">
                   <ul class="card-list">
-                    <li>Accelerated mobile website (template)</li>
                     <li>Consultation on choosing template</li>
+                    <li>Accelerated mobile website (template)</li>
                     <li>Social media integration</li>
                     <li>Includes up to 5 free pages*</li>
                     <hr class="space-top-half space-bottom-half" />
@@ -411,7 +415,7 @@
                 <div class="h2 line-height-2 mb1">
                   <span class="travel-results-result-text">Mobile Apps</span>
                   <span class="travel-results-result-subtext h3">&bull;</span>
-                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">15,000 +</span>
+                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">9,500 +</span>
                 </div>
 
                 <hr class="space-top-half space-bottom-half" />
@@ -426,9 +430,9 @@
 
                 <div class="card-content-body space-top-half flex">
                   <ul class="card-list">
+                    <li>In-depth consultation and strategic planning</li>
                     <li>Unique site with customized AMP components</li>
                     <li>Mockup-provided (2-pages included)</li>
-                    <li>In-depth consultation and strategic planning</li>
                     <li>Online payments integration possible</li>
                     <li>Custom forms*</li>
                     <li>Profession photo sourcing*</li>

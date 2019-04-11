@@ -2,9 +2,9 @@
   <Layout>
     <Header/>
     <section-block-layout02-col01
-      title="How does it work?"
+      title="Experts in Progressive and Mobile App Development"
       subtitle=""
-      description="It&rsquo;s simple. We build web pages with the latest JAMStack and AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates. Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google, Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
+      description="We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work."
       link="/services"
       linkText="Learn More"
       image="/images/hero-michael.png"
@@ -12,57 +12,91 @@
       subCaption="Principal Architect, Blue Collar"
     />
 
-    <section id="websites" class="lg-flex pad-top">
+    <section id="advertising" class="lg-flex space-top">
       <div class="sm-flex flex-center flex-justify-center flex-basis-third">
         <div class="content-block">
           <div class="space-bottom-half">
-            <p class="g-pstyle9">Accelerated<br />Mobile Websites</p>
+            <p class="g-pstyle9">Progressive Apps</p>
           </div>
           <div>
-            <p>Your website will be built with AMP HTML coding &ndash; increasing load speed of mobile pages by up to 85% compared to traditional HTML pages.</p>
-
-            <p>Blue Collar goes beyond traditional &lsquo;responsive&rsquo; web design. We build next-generation sites for businesses with mobile-focused digital marketing in mind.</p>
+            <p>In recent years social media traffic to business pages has shifted from organic to sponsored.  Social ads are a cost-effective way to reach potential new clients.</p>
+            <p>Blue Collar&rsquo;s digital marketing experts make sure your ad content is relevant and targeted, driving more qualified lead traffic to your website.</p>
           </div>
           <div class="action-link-block">
             <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
           </div>
         </div>
       </div>
-      <div class="sm-flex flex-center flex-justify-center flex-basis-two-thirds">
-        <div class="sm-flex flex-column">
-          <div class="sm-flex flex-start height-third">
-            <div class="flex-basis-half">
-              <div class="space-all">
-                <div class="space-bottom-half">
-                  <p class="g-pstyle9">Your website, your brand</p>
-                </div>
-                <div>
-                  <p>Your site reflects your unique vision for your brand. We will create a highly polished website that represents you and reflects your values.</p>
-                </div>
-              </div>
+      <div class="sm-flex flex-basis-two-thirds flex-wrap">
+        <div class="flex-basis-half">
+          <div class="space-all">
+            <div class="space-bottom-half">
+              <p class="g-pstyle9">Mobile strategy</p>
             </div>
-            <div class="flex-basis-half">
-              <div class="space-all">
-                <div class="space-bottom-half">
-                  <p class="g-pstyle9">All the support you need</p>
-                </div>
-                <div>
-                  <p>We offer ongoing monthly support to continually improve your online business. No advanced technical knowledge of coding is required on your end &ndash;  your site&rsquo;s performance is continually monitored, and we are always here to help!</p>
-                </div>
-              </div>
+            <div>
+              <p>Drawing on deep experience in mobile solution design and combining it with great listening, we work closely with your team to define a solution for the business challenge at hand. Then, we infuse user feedback and priorities into every stage of the mobile development process.</p>
             </div>
           </div>
-          <div class="bg-bc-blue sm-flex flex-center flex-justify-center pad-top">
-            <div class="content-block space-all">
-              <div class="space-bottom-half">
-                <p class="g-pstyle6">Instant.  Everywhere.</p>
-              </div>
-              <div>
-                <p class="g-pstyle7">For many, reading on the mobile web is a slow, clunky and frustrating experience - but it doesn&rsquo;t have to be that way.  The Accelerated Mobile Pages (AMP) Project is an open source initiative that embodiees the vision that publishers can create mobile optimized content once and have it load instantly everywhere. </p>
-              </div>
+        </div>
+        <div class="flex-basis-half">
+          <div class="space-all">
+            <div class="space-bottom-half">
+              <p class="g-pstyle9">User experience</p>
             </div>
-            <img src="/images/accelerated-mobile-pages.png" />
+            <div>
+              <p>We put UX at the heart of every project.  Understanding how your target audience moves through your application will have a profound effect on its success.  Our team considers user actions from the moment they engage through to attainment of your objectives and conversions.</p>
+            </div>
           </div>
+        </div>
+        <div class="flex-basis-half">
+          <div class="space-all">
+            <div class="space-bottom-half">
+              <p class="g-pstyle9">User interface design</p>
+            </div>
+            <div>
+              <p>Great UI design enhances the usability and appeal of your products.  Our UI team will ensure the look and feel, the presentation and interactivity of your product are fresh and modern every time.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-basis-half">
+          <div class="space-all">
+            <div class="space-bottom-half">
+              <p class="g-pstyle9">API engineering</p>
+            </div>
+            <div>
+              <p>Developing great mobile experiences often requires tapping into enterprise data. Our team can engineer API connections and ensure your mobile solutions have power and flexibility.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="social-media" class="lg-flex space-top">
+      <div class="sm-flex flex-center flex-column flex-basis-third">
+        <div class="content-block">
+          <div class="space-bottom-half">
+            <p class="g-pstyle9">Mobile Apps</p>
+          </div>
+          <div>
+            <p>Your Blue Collar team will create a professional social media profile to match your company&rsquo;s branding.</p>
+            <p>We then create and post interesting content that is relevant to your target audience to keep them engaged and improve conversion rates over time.</p>
+          </div>
+          <div class="action-link-block">
+            <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
+          </div>
+        </div>
+      </div>
+      <div class="sm-flex flex-column flex-basis-two-thirds">
+        <div class="bg-bc-blue sm-flex flex-center flex-justify-center pad-top">
+          <div class="content-block space-all">
+            <div class="space-bottom-half">
+              <p class="g-pstyle6">Instant.  Everywhere.</p>
+            </div>
+            <div>
+              <p class="g-pstyle7">For many, reading on the mobile web is a slow, clunky and frustrating experience - but it doesn&rsquo;t have to be that way.  The Accelerated Mobile Pages (AMP) Project is an open source initiative that embodiees the vision that publishers can create mobile optimized content once and have it load instantly everywhere. </p>
+            </div>
+          </div>
+          <img src="/images/accelerated-mobile-pages.png" />
         </div>
       </div>
     </section>

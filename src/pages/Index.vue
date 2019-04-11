@@ -74,9 +74,9 @@
     </section>-->
 
     <section-block-layout02-col01
-      title="How does it work?"
+      title="Experience matters"
       subtitle=""
-      description="It&rsquo;s simple. We build web pages with the latest JAMStack and AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates. Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google, Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
+      description="Drawing on deep experience in solution design and combining it with great listening, we work closely with your team to define a solution for the business challenge at hand. Then, we infuse user feedback and priorities into every stage of the software development process."
       image="/images/hero-michael.png"
       caption="Sean Hamilton"
       subCaption="Principal Architect, Blue Collar"
