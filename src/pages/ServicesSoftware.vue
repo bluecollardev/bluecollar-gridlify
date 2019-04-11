@@ -2,9 +2,9 @@
   <Layout>
     <Header/>
     <section-block-layout02-col01
-      title="Enterprise software"
+      title="Custom software development"
       subtitle=""
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      description="Custom software serves the unique processes of your business, solves your specific problems, satisfies your exclusive needs and makes your workflows easier, faster, and more efficient. Our team of versatile custom software developers can architect & develop software for even the most complex business logic & workflow."
       link="/services"
       linkText="Learn More"
       image="/images/hero-michael.png"

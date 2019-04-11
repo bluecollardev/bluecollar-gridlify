@@ -6,11 +6,13 @@
         <div class="content-block">
           <div>
             <div class="space-bottom pad-top">
-              <p class="g-pstyle2 text-center-force">Get Started!</p>
+              <h1 class="g-pstyle2 text-center-force">Get Started!</h1>
             </div>
             <div class="g-banner pad-bottom-2x">
-              <p class="text-center">We’d love to help you bring an idea to life in our application development studio in the heart of downtown Victoria.</p>
-              <p class="text-center">We want to be your technology services partner —not just a developer. </p>
+              <p class="text-center">
+                At Blue Collar, every challenge is just a puzzle waiting to be solved! We strive to create innovative solutions for our clients using the latest advances
+                in technology and development. Let us help take your business idea to the next level.
+              </p>
             </div>
           </div>
         </div>
