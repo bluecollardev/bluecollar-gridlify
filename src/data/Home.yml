@@ -12,12 +12,17 @@ services:
   - title: Hybrid Apps + PWAs
     description: >-
       We work with you to deliver a professionally designed accelerated mobile website, with landing pages, lead-gen fields, and your company&rsquo;s branding built in. Your website is optimized for mobile usage, but works on desktop as well.
+    link: /services-apps
+    linkText: Learn More
+  - title: Custom Software
+    description: >-
+      We work with you to deliver a professionally designed accelerated mobile website, with landing pages, lead-gen fields, and your company&rsquo;s branding built in. Your website is optimized for mobile usage, but works on desktop as well.
     link: /services-custom-software
     linkText: Learn More
   - title: Landing Pages
     description: >-
       We work with you to deliver a professionally designed accelerated mobile website, with landing pages, lead-gen fields, and your company&rsquo;s branding built in. Your website is optimized for mobile usage, but works on desktop as well.
-    link: /services-custom-software
+    link: /services-landing-pages
     linkText: Learn More
   - title: Social Media
     description: >-
@@ -29,11 +34,11 @@ services:
       Paid social content is fast becoming the most effective channel for connecting with qualified leads. Blue Collar&rsquo;s team are experts at creating social ad campaigns, with professionally designed, chat-enabled landing pages.
     link: /services-digital-marketing#advertising
     linkText: Learn More
-  - title: SEO / SEM
-    description: >-
-      Accelerated mobile sites aren&rsquo;t just great for social media platforms &ndash; according to Google, nearly 50% of online searches are done on mobile devices. Our pages are favored by Google&rsquo;s algorithms, improving your site&rsquo;s search rankings.
-    link: /services-digital-marketing#advertising
-    linkText: Learn More
+  #- title: SEO / SEM
+  #  description: >-
+  #    Accelerated mobile sites aren&rsquo;t just great for social media platforms &ndash; according to Google, nearly 50% of online searches are done on mobile devices. Our pages are favored by Google&rsquo;s algorithms, improving your site&rsquo;s search rankings.
+  #  link: /services-digital-marketing#advertising
+  #  linkText: Learn More
 processSteps:
   - title: Let's chat!
     description: >-

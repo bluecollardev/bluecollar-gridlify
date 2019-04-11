@@ -5,14 +5,14 @@
         <div class="flex-basis-quarter flex flex-justify-center">
           <div>
             <div class="g-footer space-bottom">
-              <p class="g-pstyle13"><a href="/services">Development</a></p>
+              <p class="g-pstyle13"><a href="/#services">Development</a></p>
             </div>
             <div class="g-footer">
-              <p class="g-pstyle7"><a href="/services-web" fragment="websites">Websites</a></p>
+              <p class="g-pstyle7"><a href="/services-web">Websites</a></p>
 
-              <p class="g-pstyle7"><a href="/services-web#landing-pages" fragment="landing-pages">Landing Pages</a></p>
+              <p class="g-pstyle7"><a href="/services-apps">Hybrid Apps + PWAs</a></p>
 
-              <p class="g-pstyle7"><a href="/services-digital-marketing#social-media" fragment="social-media">Custom Software</a></p>
+              <p class="g-pstyle7"><a href="/services-software">Custom Software</a></p>
             </div>
           </div>
         </div>
@@ -20,14 +20,14 @@
         <div class="flex-basis-quarter flex flex-justify-center">
           <div>
             <div class="g-footer space-bottom">
-              <p class="g-pstyle13"><a href="/services">Marketing</a></p>
+              <p class="g-pstyle13"><a href="/services-digital-marketing">Marketing</a></p>
             </div>
             <div class="g-footer">
-              <p class="g-pstyle7"><a href="/services-digital-marketing#social-media" fragment="social-media">Social Media</a></p>
+              <p class="g-pstyle7"><a href="/services-landing-pages">Landing Pages</a></p>
 
-              <p class="g-pstyle7"><a href="/services-web#landing-pages" fragment="landing-pages">Landing Pages</a></p>
+              <p class="g-pstyle7"><a href="/services-digital-marketing#social-media">Social Media</a></p>
 
-              <p class="g-pstyle7"><a href="/services-digital-marketing#advertising" fragment="advertising">Advertising</a></p>
+              <p class="g-pstyle7"><a href="/services-digital-marketing#advertising">Advertising</a></p>
             </div>
           </div>
         </div>
@@ -35,14 +35,14 @@
         <div class="flex-basis-quarter flex flex-justify-center">
           <div>
             <div class="g-footer space-bottom">
-              <p class="g-pstyle13"><a href="/company">Company</a></p>
+              <p class="g-pstyle13"><a href="/company">Team</a></p>
             </div>
             <div class="g-footer">
-              <p class="g-pstyle7"><a href="/company">About Us</a></p>
+              <p class="g-pstyle7"><a href="/company">Our Story</a></p>
 
-              <p class="g-pstyle7"><a href="/">Projects</a></p>
+              <p class="g-pstyle7"><a href="/company">Our Process</a></p>
 
-              <p class="g-pstyle7"><a href="/">Testimonials</a></p>
+              <p class="g-pstyle7"><a href="/">Junior Devs</a></p>
             </div>
           </div>
         </div>

@@ -77,7 +77,7 @@
         <li class="drop"><a a v-on:mouseover="displayDropMenu()" href="/company">Team  <i class="icon-arrow"></i></a>
           <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
             <li><a href="/" v-on:click="hideDropMenu()">Our Process</a></li>
-            <li><a href="/" v-on:click="hideDropMenu()">Young Dev Program</a></li>
+            <li><a href="/" v-on:click="hideDropMenu()">Junior Dev Program</a></li>
           </ul>
         </li>
         <li><a href="/projects"  v-on:click="hideDropMenu()">Projects</a></li>
