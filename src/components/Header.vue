@@ -1,52 +1,4 @@
 <template>
-  <!--<header>
-    <ul>
-      <li>
-        <a href="/#work">Work</a>
-      </li>
-      <li>
-        <a href="/#about">About</a>
-      </li>
-      <li class="Header__Profile__Image">
-        <g-link to="/">
-          <g-image src="~/assets//images/gridsome.png"/>
-        </g-link>
-      </li>
-      <li style="text-align: right">
-        <a href="/#blog">Blogs</a>
-      </li>
-      <li style="text-align: right">
-        <a href="/#contact">Contact</a>
-      </li>
-    </ul>
-  </header>-->
-  <!--<header class="ampstart-headerbar fixed flex sm-flex-justify-start items-center top-0 left-0 right-0">
-    <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger pr2">☰</div>
-    <a href="/" class="flex-auto flex flex-center xs-flex-justify-center">
-      <img class="logo" src="/images/blue-collar-dev.png" alt="" />
-    </a>
-    <nav class="space-left ampstart-headerbar-nav ampstart-nav flex flex-center">
-      <ul class="list-reset center m0 p0 flex flex-auto nowrap">
-        <li class="ampstart-nav-item display-none">
-          <a href="/" class="text-decoration-none block">Home</a>
-        </li>
-        <li class="ampstart-nav-item ampstart-nav-dropdown relative">
-          <a href="/services-web" class="text-decoration-none block">Services</a>
-        </li>
-        <li class="ampstart-nav-item ampstart-nav-dropdown relative">
-          <a href="/pricing" class="text-decoration-none block">Pricing</a>
-        </li>
-        <li class="ampstart-nav-item ampstart-nav-dropdown relative">
-          <a href="/company" class="text-decoration-none block">Company</a>
-        </li>
-      </ul>
-      <ul class="list-reset center m0 p0 flex flex-auto flex-justify-end nowrap space-right">
-        <li class="ampstart-nav-item highlighted contact-us-nav-item">
-          <a href="/contact" class="text-decoration-none block">Contact Us</a>
-        </li>
-      </ul>
-    </nav>
-  </header>-->
   <header class="fixed">
     <div class="wrap">
       <div id="hamburger" v-on:click="displayMenu()">
@@ -54,17 +6,17 @@
         <span></span>
         <span></span>
       </div>
-      <a href="/" class="flex flex-center xs-flex-justify-center">
+      <a href="/" aria-label="Home Page" class="flex flex-center xs-flex-justify-center">
         <img class="logo" src="/images/blue-collar-dev.png" alt="" />
       </a>
       <nav id="menu">
         <ul>
-          <li class="drop"><a v-on:mouseover="displayDropMenu()">Web  <i class="icon-arrow"></i></a>
+          <li class="drop"><a href="/services-web" aria-label="Websites" v-on:mouseover="displayDropMenu()">Web  <i class="icon-arrow"></i></a>
           <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
-            <li><a href="/services-web" v-on:click="hideDropMenu()">Websites</a></li>
-            <li><a href="/services-apps" v-on:click="hideDropMenu()">Hybrid Apps + PWAs</a></li>
-            <li><a href="/services-software" v-on:click="hideDropMenu()">Custom Software</a></li>
-            <li><a href="/pricing" v-on:click="hideDropMenu()">Pricing</a></li>
+            <li><a href="/services-web" aria-label="Websites" v-on:click="hideDropMenu()">Websites</a></li>
+            <li><a href="/services-apps" aria-label="Hybrid Apps and PWAs" v-on:click="hideDropMenu()">Hybrid Apps + PWAs</a></li>
+            <li><a href="/services-software" aria-label="Custom Software" v-on:click="hideDropMenu()">Custom Software</a></li>
+            <li><a href="/pricing" aria-label="Pricing" v-on:click="hideDropMenu()">Pricing</a></li>
           </ul>
         </li>
         <!--<li class="drop"><a v-on:mouseover="displayDropMenu()">Marketing  <i class="icon-arrow"></i></a>
@@ -75,14 +27,14 @@
             <li><a href="/pricing" v-on:click="hideDropMenu()">Pricing</a></li>
           </ul>
         </li>-->
-        <li class="drop"><a a v-on:mouseover="displayDropMenu()" href="/company">Team  <i class="icon-arrow"></i></a>
+        <li class="drop"><a href="/company" aria-label="Team" v-on:mouseover="displayDropMenu()">Team  <i class="icon-arrow"></i></a>
           <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
-            <li><a href="/" v-on:click="hideDropMenu()">Our Process</a></li>
-            <li><a href="/" v-on:click="hideDropMenu()">Junior Dev Program</a></li>
+            <li><a href="/" aria-label="Our Process" v-on:click="hideDropMenu()">Our Process</a></li>
+            <li><a href="/" aria-label="Junior Dev Program" v-on:click="hideDropMenu()">Junior Dev Program</a></li>
           </ul>
         </li>
-        <li><a href="/projects"  v-on:click="hideDropMenu()">Projects</a></li>
-        <li><a href="/contact" v-on:click="hideDropMenu()">Contact</a></li>
+        <li><a href="/projects" aria-label="Projects" v-on:click="hideDropMenu()">Projects</a></li>
+        <li><a href="/contact" aria-label="Contact" v-on:click="hideDropMenu()">Contact</a></li>
         </ul>
       </nav>
     </div>
