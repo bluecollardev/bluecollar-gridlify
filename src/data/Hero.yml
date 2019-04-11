@@ -1,8 +1,8 @@
 title: Hero Items
 items:
   - title: >-
-      Blue Collar is your trusted provider for accelerated mobile websites, apps and
-      marketing solutions
+      Blue Collar is your trusted provider for mobile websites, progressive or hybrid apps and
+      custom software
     description: >-
       Are you looking for more engagement from your online content?  Times
       have changed &ndash; providing superior mobile and in-app social media
@@ -11,7 +11,7 @@ items:
       to engage with the right clients and convert more leads!
     id: homepage-hero
     image: /images/banners/responsive-banner-jimmy-poblanos.png
-    link: /services
+    link: "/#services"
     linkText: Learn More
     caption:
     subCaption:

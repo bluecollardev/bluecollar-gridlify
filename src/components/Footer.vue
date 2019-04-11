@@ -82,11 +82,11 @@
     <hr style="width: 100%" />
 
     <div class="space-top space-bottom">
-      <div class="flex flex-center xs-flex-justify-center">
+      <!--<div class="flex flex-center xs-flex-justify-center">
         <div class="space-bottom">
           <img src="/images/blue-collar-dev.png" class="logo" />
         </div>
-      </div>
+      </div>-->
 
       <div class="sm-flex flex-justify-between">
         <div class="copyright g-footer">
@@ -102,17 +102,13 @@
 
 <style lang="scss">
   footer {
-    padding: 1rem 10rem;
-  }
-
-  @media screen and (max-width: 660px) {
-    footer {
-      padding: 1px;
-    }
+    padding: 1rem 12rem;
   }
 
   @media screen and (max-width: 40rem) {
     footer {
+      padding: 1px;
+
       h1, h2, h3, h4, h5, h6, p {
         text-align: center;
       }

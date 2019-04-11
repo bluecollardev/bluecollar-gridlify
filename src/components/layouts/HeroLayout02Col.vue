@@ -5,7 +5,7 @@
       <div class="hero-block">
         <div class="flex flex-column">
           <div class="homepage-hero-title space-bottom">
-            <p class="g-pstyle2">
+            <p class="g-pstyle2 text-center">
               {{ this.title }}
             </p>
           </div>
@@ -13,13 +13,13 @@
             <p v-html="this.description"></p>
           </div>
           <div
-            class="homepage-hero-action action-link-block sm-hide md-hide lg-hide"
+            class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
           >
             <a class="action-link space-bottom g-pstyle3" v-bind:href="this.link"
               >{{ this.linkText }}</a
             >
           </div>
-          <div class="homepage-hero-action action-link-block xs-hide">
+          <div class="homepage-hero-action action-link-block xs-hide text-center">
             <a class="action-link space-top g-pstyle3" v-bind:href="this.link"
               >{{ this.linkText }}</a
             >
@@ -105,3 +105,9 @@ export default {
   }
 };
 </script>
+
+<style>
+  .text-justify {
+    text-align: justify;
+  }
+</style>

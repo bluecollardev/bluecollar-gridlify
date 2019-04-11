@@ -77,14 +77,12 @@
       title="How does it work?"
       subtitle=""
       description="It&rsquo;s simple. We build web pages with the latest JAMStack and AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates. Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google, Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
-      link="/services"
-      linkText="Learn More"
       image="/images/hero-michael.png"
       caption="Sean Hamilton"
       subCaption="Principal Architect, Blue Collar"
     />
 
-    <section class="lg-flex">
+    <section id="services" class="lg-flex">
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
         <div class="content-block">
           <content-block-layout
