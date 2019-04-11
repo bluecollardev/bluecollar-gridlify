@@ -8,7 +8,7 @@
             <div class="space-bottom space-top">
               <p class="g-pstyle2 text-center-force">Client Projects</p>
             </div>
-            <img class="lozad" src="/images/portfolio/bc-showcase-responsive.png" />
+            <img class="lozad" src="/images/portfolio/bc-showcase-responsive.png" alt="" />
             <div
             class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
           >
@@ -43,7 +43,7 @@
               {{ `${getFormattedStartDate(project)} - ${getFormattedEndDate(project)}` }}
             </span>
             <div v-if="typeof project.image === 'string' && project.image.length > 3" class="project-image pad-top pad-bottom">
-              <img class="lozad" v-bind:src="project.image" v-bind:srcset="getImagesSrcSet(project.image)" />
+              <img class="lozad" v-bind:src="project.image" v-bind:srcset="getImagesSrcSet(project.image)" alt="" />
             </div>
             <p class="timeline__item__content__description">
               {{ project.description }}

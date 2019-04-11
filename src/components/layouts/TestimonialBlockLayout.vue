@@ -5,7 +5,7 @@
         <p class="g-pstyle8 text-center" v-html="this.testimonial"></p>
       </div>
     </div>
-    <img class="circle space-bottom-half testimonial-profile-circle" v-bind:src="this.image" />
+    <img class="circle space-bottom-half testimonial-profile-circle" v-bind:src="this.image" alt="" />
     <div v-bind:class="classNameString">
       <div class="g-services">
         <p class="g-pstyle10 text-center"><strong>{{ this.reviewedBy }} - {{ this.position }}</strong></p>

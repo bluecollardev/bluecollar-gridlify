@@ -42,7 +42,7 @@
       <div class="hero-section bg-hero-grey sm-flex">
         <div class="relative flex-basis-half sm-flex flex-justify-end">
           <div class="content-block xs-no-space-top">
-            <img class="banner-image right" src="/images/woman-in-casual-office_4460x4460.jpg" />
+            <img class="banner-image right" src="/images/woman-in-casual-office_4460x4460.jpg" alt="" />
           </div>
         </div>
 
@@ -119,7 +119,7 @@
         </div>
       </div>
       <div class="flex-basis-half">
-       <img class="image-fill banner-image" src="/images/get-started-feature-image.png" />
+       <img class="image-fill banner-image" src="/images/get-started-feature-image.png" alt="" />
       </div>
     </section>-->
 
@@ -140,7 +140,7 @@
           <div class="space-all">
             <div class="sm-flex flex-column flex-end">
               <div class="content-block">
-                <img class="bg-white image-fill" src="/images/lucas-lopatka-profile.png" />
+                <img class="bg-white image-fill" src="/images/lucas-lopatka-profile.png" alt="" />
                 <div class="pad-all">
                   <div class="space-bottom-half g-help-with-digital-marketing">
                     <p class="g-pstyle9 text-center">Lucas Lopatka, B. Sc.</p>
@@ -159,7 +159,7 @@
           <div class="space-all">
             <div class="sm-flex flex-column flex-start">
               <div class="content-block">
-                <img class="bg-white image-fill" src="/images/businessman-580b585b2edbce24c47b29f8.png" />
+                <img class="bg-white image-fill" src="/images/businessman-580b585b2edbce24c47b29f8.png" alt="" />
                 <div class="pad-all">
                   <div class="space-bottom-half g-help-with-digital-marketing">
                     <p class="g-pstyle9 text-center">Chris Shannon, MBA</p>

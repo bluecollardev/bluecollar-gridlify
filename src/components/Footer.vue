@@ -84,7 +84,7 @@
     <div class="space-top space-bottom">
       <!--<div class="flex flex-center xs-flex-justify-center">
         <div class="space-bottom">
-          <img src="/images/blue-collar-dev.png" class="logo" />
+          <img src="/images/blue-collar-dev.png" class="logo" alt="" />
         </div>
       </div>-->
 

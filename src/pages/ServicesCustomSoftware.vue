@@ -87,7 +87,7 @@
                 <p class="g-pstyle7">For many, reading on the mobile web is a slow, clunky and frustrating experience - but it doesn&rsquo;t have to be that way.  The Accelerated Mobile Pages (AMP) Project is an open source initiative that embodiees the vision that publishers can create mobile optimized content once and have it load instantly everywhere. </p>
               </div>
             </div>
-            <img src="/images/accelerated-mobile-pages.png" />
+            <img src="/images/accelerated-mobile-pages.png" alt="" />
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@
     <section class="hero-section bg-hero-grey sm-flex pad-top">
       <!-- Position relatively, or absolute positioning of the caption will fail -->
       <div class="relative flex-basis-half">
-        <img class="banner-image right" src="/images/hero-old-businessman.png" />
+        <img class="banner-image right" src="/images/hero-old-businessman.png" alt="" />
       </div>
 
       <div class="sm-flex flex-center flex-justify-start flex-basis-half">
@@ -145,7 +145,7 @@
             </div>
             <div class="flex-basis-half">
               <div class="space-all">
-                <img src="/images/accelerated-mobile-pages-info-graphic.png" />
+                <img src="/images/accelerated-mobile-pages-info-graphic.png" alt="" />
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@
           <div class="sm-flex">
             <div class="sm-flex">
               <div class="flex-basis-half space-all">
-                <img class="image-fit" src="/images/instant-experiences.png" />
+                <img class="image-fit" src="/images/instant-experiences.png" alt="" />
               </div>
               <div class="flex-basis-half space-all">
                 <div class="space-bottom-half">
@@ -246,7 +246,7 @@
       <!-- Position relatively, or absolute positioning of the caption will fail -->
       <div class="sm-flex flex-center flex-justify-center flex-basis-third">
         <div class="content-block">
-          <img class="banner-image" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
+          <img class="banner-image" src="/images/greg-and-steph-jimmy-poblanos.jpg" alt="" />
         </div>
       </div>
       <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
@@ -332,7 +332,7 @@
       <!-- TODO: There's a pattern for this in index -->
       <div class="sm-flex flex-column flex-basis-third">
         <div class="bg-salmon space-all no-space-bottom relative">
-          <img class="bg-white image-fill" src="/images/andrea.jpg" />
+          <img class="bg-white image-fill" src="/images/andrea.jpg" alt="" />
           <div class="figure-caption-full bg-bc-blue pad-all">
             <div class="space-bottom-half g-help-with-digital-marketing">
               <p class="g-pstyle6">Blue Collar has been hugely beneficial to our business.  They handle all our online marketing &ndash; the results have been amazing!</p>

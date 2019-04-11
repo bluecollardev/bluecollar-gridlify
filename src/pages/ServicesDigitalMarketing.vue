@@ -23,7 +23,7 @@
             </div>
           </div>
           <!-- Position relatively, or absolute positioning of the caption will fail -->
-          <img class="banner-image right" src="/images/hero-michael.png" />
+          <img class="banner-image right" src="/images/hero-michael.png" alt="" />
         </div>
       </div>
 
@@ -124,7 +124,7 @@
           <div class="sm-flex">
             <div class="sm-flex">
               <div class="flex-basis-half space-all">
-                <img class="image-fit" src="/images/instant-experiences.png" />
+                <img class="image-fit" src="/images/instant-experiences.png" alt="" />
               </div>
               <div class="flex-basis-half space-all">
                 <div class="space-bottom-half">
@@ -180,7 +180,7 @@
 
       <!-- Position relatively, or absolute positioning of the caption will fail -->
       <div class="relative flex-basis-third">
-        <img class="banner-image left" src="/images/hero-old-businessman.png" />
+        <img class="banner-image left" src="/images/hero-old-businessman.png" alt="" />
       </div>
     </section>
     <Footer/>

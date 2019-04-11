@@ -69,7 +69,7 @@
             <p class="g-pstyle7">For many, reading on the mobile web is a slow, clunky and frustrating experience - but it doesn&rsquo;t have to be that way.  The Accelerated Mobile Pages (AMP) Project is an open source initiative that embodiees the vision that publishers can create mobile optimized content once and have it load instantly everywhere. </p>
           </div>
         </div>
-        <img src="/images/accelerated-mobile-pages.png" />
+        <img src="/images/accelerated-mobile-pages.png" alt="" />
       </div>
     </section>
 
@@ -77,7 +77,7 @@
       <!-- Position relatively, or absolute positioning of the caption will fail -->
       <div class="sm-flex flex-center flex-justify-center flex-basis-third">
         <div class="content-block text-center">
-          <img class="banner-image circle" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
+          <img class="banner-image circle" src="/images/greg-and-steph-jimmy-poblanos.jpg" alt="" />
         </div>
       </div>
       <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">

@@ -43,7 +43,7 @@
             </div>
             <div class="flex-basis-half">
               <div class="space-all">
-                <img src="/images/accelerated-mobile-pages-info-graphic.png" />
+                <img src="/images/accelerated-mobile-pages-info-graphic.png" alt="" />
               </div>
             </div>
           </div>

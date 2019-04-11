@@ -15,7 +15,7 @@
 
     <div class="sm-flex flex-column flex-center">
       <div class="bg-salmon content-block">
-        <img class="bg-white banner-image" src="/images/digital-marketing-testimonial-person.png" />
+        <img class="bg-white banner-image" src="/images/digital-marketing-testimonial-person.png" alt="" />
         <div class="pad-all">
           <div class="space-bottom-half g-help-with-digital-marketing">
             <p class="g-pstyle6">Blue Collar has been hugely beneficial to our business.  They handle all our online marketing &ndash; the results have been amazing!</p>

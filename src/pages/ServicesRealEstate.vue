@@ -20,7 +20,7 @@
       <!-- TODO: There's a pattern for this in index -->
       <div class="sm-flex flex-column flex-basis-third">
         <div class="bg-salmon space-all no-space-bottom relative">
-          <img class="bg-white image-fill" src="/images/andrea.jpg" />
+          <img class="bg-white image-fill" src="/images/andrea.jpg" alt="" />
           <div class="figure-caption-full bg-bc-blue pad-all">
             <div class="space-bottom-half g-help-with-digital-marketing">
               <p class="g-pstyle6">Blue Collar has been hugely beneficial to our business.  They handle all our online marketing &ndash; the results have been amazing!</p>

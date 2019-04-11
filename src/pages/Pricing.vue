@@ -17,7 +17,7 @@
 
       <!-- Position relatively, or absolute positioning of the caption will fail -->
       <div class="relative flex-basis-half">
-        <img class="banner-image right" src="/images/hero-julia.png" />
+        <img class="banner-image right" src="/images/hero-julia.png" alt="" />
         <!--<div class="figure-caption figure-caption-right bg-bc-blue g-hero">
           <p class="g-pstyle4">Julia</p>
           <p class="g-pstyle5">Onboarding at Blue Collar</p>
@@ -277,7 +277,7 @@
         <!-- Position relatively, or absolute positioning of the caption will fail -->
         <div class="sm-flex flex-center flex-justify-center flex-basis-third">
           <div class="content-block">
-            <img class="banner-image circle text-center" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
+            <img class="banner-image circle text-center" src="/images/greg-and-steph-jimmy-poblanos.jpg" alt="" />
           </div>
         </div>
         <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
@@ -519,7 +519,7 @@
         <!-- Position relatively, or absolute positioning of the caption will fail -->
         <div class="sm-flex flex-center flex-justify-center flex-basis-third">
           <div class="content-block">
-            <img class="banner-image circle text-center" src="/images/greg-and-steph-jimmy-poblanos.jpg" />
+            <img class="banner-image circle text-center" src="/images/greg-and-steph-jimmy-poblanos.jpg" alt="" />
           </div>
         </div>
         <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
