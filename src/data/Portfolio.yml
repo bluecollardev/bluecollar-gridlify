@@ -12,7 +12,7 @@ items:
     startDate: 2019-03-01 12:00:00
     endDate: 2019-04-01 12:00:00
     url:
-    image:
+    image: /images/portfolio/bc-showcase-app-timemachine.png
     description: >-
       The Ministry of Citizens' Services, Procurement Services Division's TimeMachine system is an operationally
       critical application that provides time tracking and project information to support the Procurement Services
@@ -22,7 +22,7 @@ items:
     startDate: 2017-07-01 12:00:00
     endDate: 2019-02-01 12:00:00
     url:
-    image:
+    image: /images/portfolio/bc-showcase-app-ideal.png
     description: >-
       Ideal is a automotive fintech startup (incubated in-house by a company called Interdynamix) whose main
       product offering is a SaaS-style machine-learning enhanced Business Intelligence platform for automotive
@@ -47,7 +47,7 @@ items:
     startDate: 2016-05-01 12:00:00
     endDate: 2016-11-01 12:00:00
     url:
-    image:
+    image: /images/portfolio/bc-showcase-app-vest.png
     description: >-
       Video Systems Entertainment Technology (VEST) is an Edmonton company that provides self-serve program
       kiosks to (horse/harness/greyhound) racetracks and off-track-betting sites in Canada, the US and the
@@ -68,12 +68,12 @@ items:
       I designed a custom SPA-style mobile-friendly Mexican-styled theme for their website featuring completely
       custom artwork, parallax scrolling effects and a custom menu component. A customized build of OpenCart is
       used on the backend for content and product management.
-  - projectName: Caffe Tech Data Bridge
+  - projectName: Caffe Tech Inventory Management and Data Bridge
     client: Caffe Tech 2004 Ltd.
     startDate: 2015-09-01 12:00:00
     endDate: 2016-04-01 12:00:00
     url:
-    image:
+    image: /images/portfolio/bc-showcase-app-quickcommerce.png
     description: >-
       Caffe Tech is an Edmonton based importer and distributor of premium (primarily Italian and Swiss)
       commercial and home coffee equipment which provides many popular Albertan establishments with their
@@ -101,7 +101,7 @@ items:
     startDate: 2015-05-01 12:00:00
     endDate: 2015-05-01 12:00:00
     url:
-    image:
+    image: /images/portfolio/bc-showcase-app-corrpro.png
     description: >-
       Corrpro provides corrosion control materials and services including - engineering, pipeline integrity,
       construction and protective coating inspection - throughout North America, Europe, the Middle East and
@@ -112,7 +112,7 @@ items:
     startDate: 2015-04-01 12:00:00
     endDate: 2015-04-01 12:00:00
     url:
-    image:
+    image: /images/portfolio/bc-showcase-app-challenger-02.png
     description: >-
       Challenger Fleet Management Solutions specializes in long term vehicle rentals for industrial projects.
       I architected, designed and spearheaded the development of a custom fleet-management application which
@@ -140,7 +140,7 @@ items:
     startDate: 2013-08-01 12:00:00
     endDate: 2014-11-01 12:00:00
     url:
-    image:
+    image: /images/portfolio/bc-showcase-app-agentview.png
     description: >-
       The Alberta Motor Association was looking to replace its legacy and end-of-life ‘FrontTier’ insurance
       policy management system with an in-house, web-based application and backend service network.
@@ -155,7 +155,7 @@ items:
     startDate: 2013-05-01 12:00:00
     endDate: 2013-05-01 12:00:00
     url:
-    image:
+    image: /images/portfolio/bc-showcase-app-homequote.png
     description: >-
       The Alberta Motor Association needed a new web-based and mobile friendly system to provide customers with
       customized home and tenant insurance quotes. The new application replaced their legacy web application,
@@ -169,7 +169,7 @@ items:
     startDate: 2013-03-01 12:00:00
     endDate: 2013-03-01 12:00:00
     url:
-    image:
+    image: /images/portfolio/bc-showcase-app-autoquote.png
     description: >-
       The Alberta Motor Association needed a new web-based and mobile friendly system to provide customers with
       customized automobile insurance quotes. The new application replaced their legacy web application,
