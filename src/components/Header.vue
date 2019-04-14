@@ -11,7 +11,7 @@
       </a>
       <nav id="menu">
         <ul>
-          <li class="drop"><a href="/services-web" aria-label="Websites" v-on:mouseover="displayDropMenu()">Web  <i class="icon-arrow"></i></a>
+          <li class="drop"><a href="/services" aria-label="Websites" v-on:mouseover="displayDropMenu()">Services  <i class="icon-arrow"></i></a>
           <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
             <li><a href="/services-web" aria-label="Websites" v-on:click="hideDropMenu()">Websites</a></li>
             <li><a href="/services-apps" aria-label="Hybrid Apps and PWAs" v-on:click="hideDropMenu()">Hybrid Apps + PWAs</a></li>
