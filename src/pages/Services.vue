@@ -1,13 +1,12 @@
 <template>
   <Layout>
     <Header/>
-    <hero-layout02-col
+    <hero-layout02-col02
       v-if="servicesHero"
+      bgColor="bg-bc-blue"
       :title="servicesHero.title"
       subtitle=""
       :description="servicesHero.description"
-      :link="servicesHero.link"
-      :linkText="servicesHero.linkText"
       :image="servicesHero.image"
       imageClass="home-page-banner-image"
       :caption="servicesHero.caption"
@@ -121,6 +120,7 @@
 
   // Import generic component layouts
   import HeroLayout02Col from '~/components/layouts/HeroLayout02Col.vue';
+  import HeroLayout02Col02 from '~/components/layouts/HeroLayout02Col02.vue';
   import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
   import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
@@ -144,6 +144,7 @@
       Footer,
       // Inject generic component layouts
       HeroLayout02Col,
+      HeroLayout02Col02,
       SectionBlockLayout02Col01,
       SectionBlockLayout02Col02,
       ContentBlockLayout,
