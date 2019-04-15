@@ -244,6 +244,10 @@
     transform: translateY(-50%);
   }
   @media screen and (max-width: 40em) {
+    header {
+      position: absolute !important;
+    }
+
     header #hamburger {
       cursor: pointer;
       border-radius: 50%;
