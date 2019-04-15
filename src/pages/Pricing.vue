@@ -1000,7 +1000,6 @@
   import Footer from '~/components/Footer.vue';
 
   // Import generic component layouts
-  import HeroLayout02Col from '~/components/layouts/HeroLayout02Col.vue';
   import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
   import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
@@ -1023,7 +1022,6 @@
       Contact,
       Footer,
       // Inject generic component layouts
-      HeroLayout02Col,
       SectionBlockLayout02Col01,
       SectionBlockLayout02Col02,
       ContentBlockLayout,

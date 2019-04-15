@@ -305,3 +305,145 @@ a.action-button:hover {
     object-fit: contain;
   }
 }
+
+.text-justify {
+  text-align: justify;
+}
+
+.flip-x {
+  flex-direction: row-reverse;
+}
+
+section.hero-section-01-col {
+  position: relative;
+}
+
+section.hero-section-01-col .hero-block {
+  position: relative;
+  top: 2rem;
+  /*top: 6rem;*/
+}
+
+@media screen and (min-width: 1400px) {
+  section.hero-section-01-col + section.hero-section:after,
+  section.hero-section-01-col + section.hero-section-01-col:after {
+    background: inherit;
+    /*top: 0;*/
+    top: -5px;
+    content: '';
+    display: block;
+    height: 120px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    -webkit-transform: skewY(3.5deg);
+    transform: skewY(3.5deg);
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%;
+    z-index: 1;
+  }
+
+  section.hero-section-01-col.angle + section.hero-section:before,
+  section.hero-section-01-col.angle + section.hero-section-01-col:before {
+    background: inherit;
+    top: -120px;
+    content: '';
+    display: block;
+    height: 120px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    -webkit-transform: skewY(-3.5deg);
+    transform: skewY(-3.5deg);
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%;
+    z-index: 2;
+  }
+
+  section.hero-section-01-col.angle + section.hero-section,
+  section.hero-section-01-col.angle + section.hero-section-01-col {
+    padding-bottom: 120px;
+  }
+
+  .hero-section-01-col:nth-child(even) .hero-image-wrapper img {
+    position: relative;
+    /* left: -15vw; */
+    right: auto;
+    top: 20vh;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  .hero-section-01-col:nth-child(odd) .hero-image-wrapper img {
+    position: relative;
+    /* right: 8vw; */
+    left: auto;
+    top: 20vh;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+}
+
+section.hero-section {
+  position: relative;
+}
+
+@media screen and (min-width: 1400px) {
+  section.hero-section.angle + section.hero-section:after {
+    background: inherit;
+    top: -5px;
+    content: '';
+    display: block;
+    height: 120px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    -webkit-transform: skewY(3.5deg);
+    transform: skewY(3.5deg);
+    transform-origin: 100%;
+    z-index: 1;
+
+  }
+
+  section.hero-section.angle + section.hero-section:before {
+    background: inherit;
+    top: -120px;
+    content: '';
+    display: block;
+    height: 120px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    -webkit-transform: skewY(-3.5deg);
+    transform: skewY(-3.5deg);
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%;
+    z-index: 2;
+  }
+
+  section.hero-section.angle + section.hero-section {
+    padding-top: 120px;
+  }
+
+  .hero-section:nth-child(even) .hero-image-wrapper img {
+    position: relative;
+    /* left: -15vw; */
+    right: auto;
+    top: 20vh;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  .hero-section:nth-child(odd) .hero-image-wrapper img {
+    position: relative;
+    /* right: 8vw; */
+    left: auto;
+    top: 20vh;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+}
