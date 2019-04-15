@@ -244,9 +244,9 @@
     transform: translateY(-50%);
   }
   @media screen and (max-width: 40em) {
-    header {
+    /*header {
       position: absolute !important;
-    }
+    }*/
 
     header #hamburger {
       cursor: pointer;
