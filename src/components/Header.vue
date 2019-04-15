@@ -154,7 +154,7 @@
   header {
     height: 48px;
     display: flex;
-    z-index: 5;
+    z-index: 20;
     padding: 0;
     background-color: var(--cwhite);
     /*position: fixed;*/
