@@ -18,7 +18,7 @@
             </p>
           </div>
           <div class="homepage-hero-text g-hero">
-            <p v-html="this.description"></p>
+            <p class=" text-center" v-html="this.description"></p>
           </div>
           <slot></slot>
           <div
