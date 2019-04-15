@@ -45,3 +45,8 @@ textarea {
 .ampstart-input > label {
   line-height: 0;
 }
+
+/* z-index content fix */
+section > * {
+    z-index: 10;
+}
