@@ -34,8 +34,9 @@
       :subCaption="servicesSection.subCaption"
       :flipX="true"
       :angle="false"
+      className="xs-pad-top"
     >
-      <div class="sm-flex flex-center flex-justify-center space-top-half">
+      <div class="xs-hide sm-flex flex-center flex-justify-center space-top-half">
         <div>
           <div class="md-flex flex-wrap">
             <div class="flex-basis-half">
@@ -56,7 +57,7 @@
             </div>
 
             <div class="flex-basis-half">
-              <div class="space-left">
+              <div class="sm-space-left">
                 <div class="space-bottom-half g-get-started">
                   <p><b>Design</b></p>
                   <ul class="bullets">
@@ -90,7 +91,7 @@
             </div>
 
             <div class="flex-basis-half">
-              <div class="space-left">
+              <div class="sm-space-left">
                 <div class="space-bottom-half g-get-started">
                   <p><b>Launch</b></p>
                   <ul class="bullets">
@@ -124,6 +125,7 @@
       :subCaption="projectsSection.subCaption"
       :flipX="false"
       :angle="false"
+      className="xs-pad-top"
     />
 
     <!--<section-block-layout02-col01

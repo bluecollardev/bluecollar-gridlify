@@ -1,5 +1,5 @@
 <template>
-  <section :class="`homepage-hero hero-section ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex xs-pad-top-2x ${this.angle ? 'angle' : 'no-angle'}  ${this.flipX ? 'flip-x' : 'no-flip' }`">
+  <section :class="`homepage-hero hero-section ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`">
     <!-- Position relatively, or absolute positioning of the caption will fail -->
     <div class="relative flex flex-basis-half flex-justify-center">
       <div class="hero-image-wrapper"><img :class="`banner-image ${this.imageClass}`" v-bind:src="this.image" alt="" /></div>
@@ -13,19 +13,19 @@
     <div class="sm-flex flex-center flex-justify-center flex-basis-half">
       <div class="hero-block">
         <div class="flex flex-column">
-          <div class="homepage-hero-title space-bottom">
+          <div class="homepage-hero-title sm-space-bottom">
             <p class="g-pstyle2 text-center">
               {{ this.title }}
             </p>
           </div>
-          <div class="homepage-hero-text g-hero xs-hide">
+          <div class="homepage-hero-text g-hero">
             <p v-html="this.description"></p>
           </div>
           <slot></slot>
           <div
             class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
           >
-            <a class="action-link space-bottom g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText"
+            <a class="action-link xs-space-top space-bottom g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText"
               >{{ this.linkText }}</a
             >
           </div>
@@ -33,19 +33,6 @@
             <a class="action-link space-top g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText"
               >{{ this.linkText }}</a
             >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile display -->
-    <div
-      class="sm-flex flex-center flex-justify-center flex-basis-half sm-hide md-hide lg-hide space-top pad-bottom"
-    >
-      <div class="hero-block">
-        <div class="flex flex-column">
-          <div class="homepage-hero-text g-hero xs-hide">
-            <p v-html="this.description"></p>
           </div>
         </div>
       </div>
@@ -59,6 +46,10 @@ import Home from '~/data/Home.yml';
 export default {
   // TODO: Supply models via props??
   props: {
+    className: {
+      type: String,
+      default: '',
+    },
     angle: {
       type: Boolean,
       default: false,
