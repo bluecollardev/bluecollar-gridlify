@@ -30,7 +30,9 @@
               >{{ this.linkText }}</a
             >
           </div>
-          <div class="homepage-hero-action action-link-block xs-hide text-center">
+          <div
+            v-if="typeof this.link === 'string' && this.link.length >0"
+            class="homepage-hero-action action-link-block xs-hide text-center">
             <a class="action-link space-top g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText"
               >{{ this.linkText }}</a
             >
