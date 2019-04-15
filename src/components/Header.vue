@@ -95,7 +95,8 @@
         (!dropMenu.classList.contains('display')) ? dropMenu.classList.add('display'): dropMenu.classList.remove('display');
 
         if (window.innerWidth < 660 && dropMenu.classList.contains('display')) {
-          event.target.parentElement.nextSibling.nextSibling.style.marginTop = dropMenu.clientHeight + 'px';
+          //event.target.parentElement.nextSibling.nextSibling.style.marginTop = dropMenu.clientHeight + 'px';
+          event.target.parentElement.nextSibling.style.marginTop = dropMenu.clientHeight + 'px';
         }
       },
       hideDropMenu() {
@@ -209,7 +210,7 @@
   header .drop-menu {
     position: absolute;
     display: block;
-    top: 149%;
+    top: 37px;
     transform: scaleY(0);
     width: auto;
     transform-origin: top;
@@ -388,8 +389,7 @@
       }
     }
     header .drop-menu {
-      //top: var(--body_height_8);
-      top: 200%;
+      top: var(--body_height_8);
       box-shadow: none;
       left: 0;
       padding-bottom: 0;
