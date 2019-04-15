@@ -351,9 +351,7 @@
       flex-direction: column;
     }
     .display-menu header #menu {
-      height: calc(100vh - 64px);
-      /*position: absolute;
-      top: 48px;*/
+      height: calc(100vh - 48px);
       background: white;
       li {
         height: var(--body_height_8);
