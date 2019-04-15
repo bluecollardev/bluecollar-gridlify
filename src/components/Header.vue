@@ -44,27 +44,25 @@
 <script>
   export default {
     mounted() {
-      const that = this;
-
-      window.addEventListener('resize', function(event) {
-        that.hideMenu();
+      window.addEventListener('resize', ((event) => {
+        this.hideMenu();
         document.getElementsByTagName('body')[0].classList.remove('display-menu');
-      });
+      }).bind(this));
 
       let lastScroll = 0;
-      window.onscroll = function() {
-        /*if (!document.getElementById('loader')) {
-          that.hideMenu();
+      window.addEventListener('scroll', (() => {
+        if (!document.getElementById('loader')) {
+          this.hideMenu();
 
           let header = document.getElementsByTagName('header')[0];
 
-          if (Math.abs(lastScroll - this.scrollY) <= 5) return;
+          if (Math.abs(lastScroll - window.scrollY) <= 5) return;
 
-          (this.scrollY < lastScroll) ? header.style.top = '0': header.style.top = '-' + header.clientHeight + 'px';
+          (window.scrollY < lastScroll) ? header.style.top = '0': header.style.top = '-' + header.clientHeight + 'px';
 
-          lastScroll = this.scrollY;
-        }*/
-      }
+          lastScroll = window.scrollY;
+        }
+      }).bind(this));
     },
     methods: {
       displayMenu() {
@@ -81,14 +79,14 @@
         let dropMenu = event.target.parentElement.getElementsByClassName('drop-menu')[0];
         let dropMenus = document.getElementsByClassName('drop-menu');
 
-        Array.from(dropMenus).forEach(function(e) {
+        Array.from(dropMenus).forEach((e) => {
           if (e != dropMenu) {
             e.classList.remove('display');
           }
         });
 
         let lis = document.getElementById('menu').getElementsByTagName('li');
-        Array.from(lis).forEach(function(e) {
+        Array.from(lis).forEach((e) => {
           e.style.marginTop = 0;
         });
 
@@ -101,13 +99,13 @@
       },
       hideDropMenu() {
         let lis = document.getElementById('menu').getElementsByTagName('li');
-        Array.from(lis).forEach(function(e) {
+        Array.from(lis).forEach((e) => {
           e.style.marginTop = 0;
         });
 
         let dropMenus = document.getElementsByClassName('drop-menu');
 
-        Array.from(dropMenus).forEach(function(e) {
+        Array.from(dropMenus).forEach((e) => {
           e.classList.remove('display');
         });
 

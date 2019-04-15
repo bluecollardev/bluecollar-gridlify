@@ -1,7 +1,8 @@
 <template>
   <section
+    ref="heroLayout"
     :class="`homepage-hero hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
-    :style="`background: url(${this.image}) no-repeat; background-size: cover;`"
+    :style="`background-image: url(${this.image});`"
   >
     <!-- TODO: Allow changing of bg colors -->
     <div class="sm-flex flex-center flex-justify-center flex-basis-half">
@@ -101,6 +102,20 @@ export default {
       default: '',
     },
   },
+  mounted() {
+    let hero = this.$refs.heroLayout;
+    const speedMultiplier = 0.5;
+
+    /*window.addEventListener('resize', function(event) {
+    });*/
+
+    //let lastScroll = 0;
+    window.addEventListener('scroll', (() => {
+      //if (Math.abs(lastScroll - window.scrollY) <= 5) return;
+      const propValue = `50% -${(window.scrollY * speedMultiplier)}px`;
+      hero.style.backgroundPosition = propValue;
+    }).bind(this));
+  },
   computed: {
     Home() {
       return Home;
@@ -108,4 +123,14 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .hero-section-01-col {
+    /* Smooth parallax scrolling */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    transition: 0s linear;
+    transition-property: background-position;
+  }
+</style>
 
