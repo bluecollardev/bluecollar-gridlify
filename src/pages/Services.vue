@@ -1,15 +1,17 @@
 <template>
   <Layout>
     <Header/>
-    <section-block-layout02-col01
-      title="What we can do for you"
+    <hero-layout02-col
+      v-if="servicesHero"
+      :title="servicesHero.title"
       subtitle=""
-      description="We design, build, and ship products for growing businesses in Canada and around the world. Here's how."
-      link="/services"
-      linkText="Learn More"
-      image="/images/hero-michael.png"
-      caption="Sean Huntington"
-      subCaption="Principal Architect, Blue Collar"
+      :description="servicesHero.description"
+      :link="servicesHero.link"
+      :linkText="servicesHero.linkText"
+      :image="servicesHero.image"
+      imageClass="home-page-banner-image"
+      :caption="servicesHero.caption"
+      :subCaption="servicesHero.subCaption"
     />
 
     <section id="services" class="lg-flex">
@@ -103,27 +105,6 @@
         </div>
       </div>
     </section>
-
-    <section class="hero-section bg-hero-grey sm-flex pad-top">
-      <!-- Position relatively, or absolute positioning of the caption will fail -->
-      <div class="relative flex-basis-half">
-        <img class="lozad banner-image right" src="/images/hero-old-businessman.png" alt="" />
-      </div>
-
-      <div class="sm-flex flex-center flex-justify-start flex-basis-half">
-        <div class="content-block">
-          <div class="space-all">
-            <div class="space-bottom-half g-services">
-              <p class="g-pstyle8">Our previous website took forever to build and wasn&rsquo;t what we wanted.  Blue Collar had a perfect site up for us in no time.</p>
-            </div>
-            <div class="g-services">
-              <p>Carl Stevens</p>
-              <p>Ace Coffee Roasters</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <Footer/>
   </Layout>
 </template>
@@ -184,6 +165,17 @@
       homepageHero() {
         let items = this.heroContent.items.filter(item => {
           return item.id === 'homepage-hero';
+        });
+
+        if (items instanceof Array && items.length > 0) {
+          return items[0];
+        }
+
+        return null
+      },
+      servicesHero() {
+        let items = this.heroContent.items.filter(item => {
+          return item.id === 'services-hero';
         });
 
         if (items instanceof Array && items.length > 0) {

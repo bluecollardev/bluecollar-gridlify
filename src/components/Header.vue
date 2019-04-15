@@ -152,7 +152,7 @@
 
   header {
     display: flex;
-    z-index: 1;
+    z-index: 5;
     padding: 10px 0;
     background-color: var(--cwhite);
     position: fixed;

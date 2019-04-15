@@ -1,11 +1,11 @@
 <template>
-  <section class="sm-flex pad-top xs-hide">
+  <section :class="`sm-flex pad-top xs-hide ${this.bgColor ? this.bgColor : 'bg-light-grey' } ${this.flipX ? 'flip-x' : 'no-flip' }`">
     <!-- Position relatively, or absolute positioning of the caption will fail -->
-    <div class="relative flex flex-justify-center flex-basis-half">
+    <div :class="`relative flex flex-justify-center flex-basis-half`">
       <img class="lozad banner-image" v-bind:src="this.image" alt="" />
-      <div class="figure-caption bg-bc-blue g-how-does-it-work">
-        <p class="g-pstyle4">{{ this.caption }}</p>
-        <p class="g-pstyle5">{{ this.subCaption }}</p>
+      <div v-if="(typeof this.caption === 'string' && this.caption.length > 0) || (typeof this.subCaption === 'string' && this.subCaption.length > 0)"  class="figure-caption bg-bc-blue g-how-does-it-work">
+        <p v-if="(typeof this.caption === 'string' && this.caption.length > 0)" class="g-pstyle4">{{ this.caption }}</p>
+        <p v-if="(typeof this.subCaption === 'string' && this.subCaption.length > 0)" class="g-pstyle5">{{ this.subCaption }}</p>
       </div>
     </div>
 
@@ -38,9 +38,13 @@ import Home from '~/data/Home.yml';
 export default {
   // TODO: Supply models via props??
   props: {
-    flipLayout: {
+    flipX: {
       type: Boolean,
       default: false,
+    },
+    bgColor: {
+      type: String,
+      default: 'bg-light-grey',
     },
     title: {
       type: String,
@@ -82,3 +86,9 @@ export default {
   }
 };
 </script>
+
+<style>
+  .flip-x {
+    flex-direction: row-reverse;
+  }
+</style>

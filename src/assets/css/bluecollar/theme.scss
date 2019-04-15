@@ -1,5 +1,6 @@
 body {
-  font-family: sans-serif;;
+  font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 #menu {
@@ -88,8 +89,10 @@ footer a:hover {
 */
 
 .homepage-hero {
+
   height: 100vh;
-  overflow: hidden;
+
+  /*overflow-x: hidden;*/
 }
 
 .hero-image-wrapper {
@@ -112,14 +115,6 @@ img.circle {
 }
 
 @media screen and (min-width: 1400px) {
-  .home-page-banner-image {
-    position: relative;
-    left: -15vw;
-    top: 10vh;
-    max-width: none;
-    object-fit: contain;
-  }
-
   .testimonial-block-wrapper img {
     position: relative;
     bottom: -7px;
