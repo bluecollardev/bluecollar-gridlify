@@ -22,6 +22,18 @@ footer .logo {
 
 @media screen and (max-width: 40em) {
   .logo {
+    left: 0;
+    height: 30px;
+  }
+
+  footer .logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .logo {
     height: 30px;
   }
 

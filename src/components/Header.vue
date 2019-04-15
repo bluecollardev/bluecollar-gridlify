@@ -6,7 +6,7 @@
         <span></span>
         <span></span>
       </div>
-      <a href="/" aria-label="Home Page" class="flex flex-center xs-flex-justify-center">
+      <a href="/" aria-label="Home Page" class="logo-wrapper flex flex-center xs-flex-justify-center">
         <img class="logo" src="/images/blue-collar-dev.png" alt="" />
       </a>
       <nav id="menu">
@@ -151,11 +151,12 @@
   .wrap {min-width: 320px;}
 
   header {
+    height: 48px;
     display: flex;
     z-index: 5;
-    padding: 10px 0;
+    padding: 0;
     background-color: var(--cwhite);
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
     top: 0;
     justify-content: center;
@@ -252,6 +253,14 @@
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
     }
+
+    header .logo-wrapper {
+      display: flex;
+      height: 48px;
+      flex: 1 1 auto;
+      justify-content: center;
+      align-items: center;
+    }
   }
   header #hamburger span {
     height: 2px;
@@ -316,11 +325,12 @@
     opacity: 0.5;
   }
   @media screen and (max-width: 660px) {
-    body {padding-top: 52px;}
+    body {padding-top: 48px;}
     header .wrap {
+      height: 48px;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
+      flex-flow: row wrap;
       padding: 0;
     }
 
@@ -337,6 +347,9 @@
     }
     .display-menu header #menu {
       height: calc(100vh - 64px);
+      position: absolute;
+      top: 48px;
+      background: white;
       li {
         height: var(--body_height_8);
         border-bottom: 1px solid var(--clightgrey);
