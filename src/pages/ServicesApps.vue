@@ -5,7 +5,6 @@
       title="Experts in Progressive and Mobile App Development"
       subtitle=""
       :description="[
-        'We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.',
         'With extensive expertise in React.js, React Native, Angular.js, Vue.js, JavaScript, CSS3, HTML5, and Responsive Web Design, software developers at Blue Collar can build cross-platform solutions to suit the custom needs of any project. Benefit from building isomorphic, progressive, dynamic, and mobile-friendly applications with reusable components.'
       ]"
       link="/services"

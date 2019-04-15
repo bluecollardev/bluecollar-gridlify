@@ -110,14 +110,30 @@
       </div>
     </hero-layout02-col02>
 
-    <section-block-layout02-col01
+    <hero-layout02-col02
+      v-if="projectsSection"
+      bgColor="bg-bc-blue"
+      :title="projectsSection.title"
+      subtitle=""
+      :description="projectsSection.description"
+      :link="projectsSection.link"
+      :linkText="projectsSection.linkText"
+      :image="projectsSection.image"
+      imageClass="home-page-banner-image"
+      :caption="projectsSection.caption"
+      :subCaption="projectsSection.subCaption"
+      :flipX="false"
+      :angle="false"
+    />
+
+    <!--<section-block-layout02-col01
       bgColor="bg-bc-blue"
       title="Experience matters"
       subtitle=""
-      description="Drawing on deep experience in solution design and combining it with great listening, we work closely with your team to define a solution for the business challenge at hand. Then, we infuse user feedback and priorities into every stage of the software development process."
+      description=""
       image="/images/hero-michael.png"
       :flipX="false"
-    />
+    />-->
 
     <!--<section class="hero-section bg-light-grey sm-flex pad-top">
       <div class="relative flex-basis-half">
@@ -214,6 +230,17 @@
       servicesSection() {
         let items = this.heroContent.items.filter(item => {
           return item.id === 'services-hero';
+        });
+
+        if (items instanceof Array && items.length > 0) {
+          return items[0];
+        }
+
+        return null
+      },
+      projectsSection() {
+        let items = this.heroContent.items.filter(item => {
+          return item.id === 'projects-hero';
         });
 
         if (items instanceof Array && items.length > 0) {
