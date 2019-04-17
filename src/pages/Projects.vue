@@ -43,7 +43,7 @@
               {{ `${getFormattedStartDate(project)} - ${getFormattedEndDate(project)}` }}
             </span>
             <div v-if="typeof project.image === 'string' && project.image.length > 3" class="project-image pad-top pad-bottom">
-              <img class="lozad" v-bind:src="project.image" v-bind:srcset="getImagesSrcSet(project.image)" alt="" />
+              <img class="lozad" v-bind:src="project.image" sizes="(max-width: 40rem) 320px, 1280px" v-bind:srcset="getImagesSrcSet(project.image)" alt="" />
             </div>
             <p class="timeline__item__content__description">
               {{ project.description }}
@@ -146,7 +146,7 @@
 
 
         // Load srcset small to large
-        return `${base}-small.${ext}, ${base}-small@2x.${ext} 2x, ${base}-small@3x.${ext} 3x, ${base}.${ext}, ${base}@2x.${ext} 2x, ${base}@3x.${ext} 3x`;
+        return `${base}-small.${ext} 100vw, ${base}-small@2x.${ext} 100vw 2x, ${base}-small@3x.${ext} 100vw 3x, ${base}.${ext} 1280px, ${base}@2x.${ext} 1280px 2x, ${base}@3x.${ext} 1280px 3x`;
       },
       getFormattedDate(project) {
         const startDate = new Date(project.startDate);
