@@ -34,11 +34,11 @@
       :subCaption="servicesSection.subCaption"
       :flipX="true"
       :angle="true"
-      className="xs-pad-top"
+      className="xs-pad-top sm-pad-top sm-pad-bottom"
     >
       <div class="xs-hide sm-flex flex-center flex-justify-center space-top-half">
         <div>
-          <div class="md-flex flex-wrap">
+          <div class="sm-flex flex-wrap">
             <div class="flex-basis-half">
               <div>
                 <div class="space-bottom-half g-get-started">
@@ -125,7 +125,7 @@
       :subCaption="projectsSection.subCaption"
       :flipX="false"
       :angle="false"
-      className="xs-pad-top"
+      className="xs-pad-top sm-pad-bottom"
     />
 
     <!--<section-block-layout02-col01

@@ -6,9 +6,19 @@ body {
 #menu {
   flex: 1 1 100%;
   justify-content: space-around;
-  max-width: 40%;
+  max-width: 75%;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 84em) {
+  #menu {
+    flex: 1 1 100%;
+    justify-content: space-around;
+    max-width: 40%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .logo {
@@ -417,6 +427,7 @@ section.hero-section-01-col .hero-block {
 
 section.hero-section {
   position: relative;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 1400px) {

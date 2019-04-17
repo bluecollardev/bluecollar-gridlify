@@ -162,8 +162,8 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
     transition: 0.33s;
   }
+
   header .wrap {
-    padding: 0 10% 0 11%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -176,6 +176,17 @@
     header #menu, header #menu > ul {
       display: flex;
       flex-direction: row;
+    }
+
+    header #menu > ul > li {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+  }
+
+  @media screen and (min-width: 102em) {
+    header .wrap {
+      padding: 0 10% 0 11%;
     }
 
     header #menu > ul > li {

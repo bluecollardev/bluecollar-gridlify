@@ -1,7 +1,7 @@
 <template>
   <footer class="flex flex-column">
-    <div class="sm-flex space-top space-bottom">
-      <div class="sm-flex flex-basis-two-thirds space-bottom">
+    <div class="sm-flex space-top flex-wrap space-bottom">
+      <div class="sm-flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-two-thirds lg-flex-basis-two-thirds space-bottom">
         <div class="flex-basis-quarter flex flex-justify-center">
           <div>
             <div class="g-footer space-bottom">
@@ -62,7 +62,7 @@
 
         </div>
       </div>
-      <div class="sm-flex flex-basis-third flex-justify-end">
+      <div class="sm-flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-third xl-flex-basis-third flex-justify-end">
         <div class="social">
           <ul class="ampstart-social-follow list-reset flex justify-around xs-flex-justify-center items-center flex-wrap m0">
             <li>
@@ -101,10 +101,6 @@
 </template>
 
 <style lang="scss">
-  footer {
-    padding: 1rem 12rem;
-  }
-
   @media screen and (max-width: 40em) {
     footer {
       padding: 1px;
@@ -112,6 +108,12 @@
       h1, h2, h3, h4, h5, h6, p {
         text-align: center;
       }
+    }
+  }
+
+  @media screen and (min-width: 102em) {
+    footer {
+      padding: 1rem 12rem;
     }
   }
 </style>
