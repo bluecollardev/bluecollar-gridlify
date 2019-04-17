@@ -145,7 +145,8 @@
         let base = parts.join('.');
 
 
-        return `${base}.${ext}, ${base}@2x.${ext} 2x, ${base}@3x.${ext} 3x`;
+        // Load srcset small to large
+        return `${base}-small.${ext}, ${base}-small@2x.${ext} 2x, ${base}-small@3x.${ext} 3x, ${base}.${ext}, ${base}@2x.${ext} 2x, ${base}@3x.${ext} 3x`;
       },
       getFormattedDate(project) {
         const startDate = new Date(project.startDate);
