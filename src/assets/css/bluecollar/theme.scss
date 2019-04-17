@@ -107,9 +107,7 @@ footer a:hover {
   /*overflow-x: hidden;*/
 }
 
-.hero-image-wrapper {
-  max-width: 50vw;
-}
+
 
 /* TODO: Don't apply these set widths everywhere... target testimonials only? */
 img.circle {
@@ -120,11 +118,30 @@ img.circle {
   object-fit: cover;
 }
 
-@media screen and (max-width: 40em) {
+.hero-image-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 40em) {
   .hero-image-wrapper {
     max-width: 100vw;
   }
 }
+
+@media screen and (max-width: 52em) {
+  .hero-image-wrapper {
+    max-width: 100vw;
+  }
+}
+
+@media screen and (min-width: 102em) {
+  .hero-image-wrapper {
+    display: block;
+    max-width: 50vw;
+  }
+}
+
 
 @media screen and (min-width: 1400px) {
   .testimonial-block-wrapper img {
