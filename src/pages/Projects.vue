@@ -264,7 +264,6 @@
     position: relative;
     max-width: 50%;
     margin: 0 auto;
-    height: 1600vh;
 
     &__item__date {
       background-color: $timeline-line-color;
@@ -380,7 +379,6 @@
       position: relative;
       max-width: 50%;
       margin: 0 auto;
-      height: 1850vh;
 
       &::before {
         content: "";
@@ -492,4 +490,101 @@
     }
   }
 
+  .timeline {
+    height: 1600vh;
+  }
+
+  @media screen and (min-width: 40em) and (max-width: 52em) and (orientation: landscape) {
+    .timeline {
+      position: relative;
+      max-width: 50%;
+      margin: 0 auto;
+      height: 3420vh;
+    }
+  }
+
+  @media screen and (min-width: 52em) and (max-width: 64em) and (orientation: landscape) {
+    .timeline {
+      position: relative;
+      max-width: 50%;
+      margin: 0 auto;
+      height: 2420vh;
+    }
+  }
+
+  @media screen and (min-width: 64em) and (max-width: 84em) and (orientation: landscape) {
+    .timeline {
+      position: relative;
+      max-width: 50%;
+      margin: 0 auto;
+      height: 2420vh;
+    }
+  }
+
+  @media screen and (min-width: 84em) and (max-width: 102em) and (orientation: landscape) {
+    .timeline {
+      position: relative;
+      max-width: 50%;
+      margin: 0 auto;
+      height: 1800vh;
+    }
+  }
+
+  @media screen and (min-width: 102em) and (orientation: landscape) {
+    .timeline {
+      position: relative;
+      max-width: 50%;
+      margin: 0 auto;
+      height: 1850vh;
+    }
+  }
+
+  /* Portrait */
+  @media screen and (max-width: 40em) and (orientation: portrait) {
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      height: 2320vh;
+    }
+  }
+
+  @media screen and (min-width: 40em) and (max-width: 52em) and (orientation: portrait) {
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      height: 2180vh;
+    }
+  }
+
+  @media screen and (min-width: 52em) and (max-width: 64em) and (orientation: portrait) {
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      height: 1920vh;
+    }
+  }
+
+  @media screen and (min-width: 64em) and (max-width: 84em) and (orientation: portrait) {
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      height: 1610vh;
+    }
+  }
+
+  @media screen and (min-width: 84em) and (max-width: 102em) and (orientation: portrait) {
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      height: 1800vh;
+    }
+  }
+
+  @media screen and (min-width: 102em) and (orientation: portrait) {
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      height: 1850vh;
+    }
+  }
 </style>
