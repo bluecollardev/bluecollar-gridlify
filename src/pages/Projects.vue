@@ -380,7 +380,7 @@
       position: relative;
       max-width: 50%;
       margin: 0 auto;
-      height: 1600vh;
+      height: 1750vh;
 
       &::before {
         content: "";
