@@ -29,9 +29,9 @@
         </li>-->
         <li class="drop"><a href="/company" aria-label="Team" v-on:mouseover="displayDropMenu()">Team  <i class="icon-arrow"></i></a>
           <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
-            <li><a href="/" aria-label="Our Process" v-on:click="hideDropMenu()">Our Process</a></li>
-            <li><a href="/" aria-label="Consulting" v-on:click="hideDropMenu()">Consulting Services</a></li>
-            <li><a href="/" aria-label="Junior Dev Program" v-on:click="hideDropMenu()">Junior Dev Program</a></li>
+            <!--<li><a href="/" aria-label="Our Process" v-on:click="hideDropMenu()">Our Process</a></li>-->
+            <li><a href="/consulting" aria-label="Consulting" v-on:click="hideDropMenu()">Consulting Services</a></li>
+            <li><a href="/junior-dev-program" aria-label="Junior Dev Program" v-on:click="hideDropMenu()">Junior Dev Program</a></li>
           </ul>
         </li>
         <li><a href="/projects" aria-label="Projects" v-on:click="hideDropMenu()">Projects</a></li>
