@@ -99,20 +99,15 @@ collections:
                 label: "Hero"
                 widget: "list"
                 fields:
-                  - { label: "Title", name: "title", widget: "string", default: "Hero" }
-                  - name: "items"
-                    label: "Items"
-                    widget: "list"
-                    fields:
-                      - { label: "ID", name: "id", widget: "string" }
-                      - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
-                      - { label: "Description", name: "description", widget: "markdown" }
-                      - { label: "Link", name: "link", widget: "string" }
-                      - { label: "Link Text", name: "linkText", widget: "string" }
-                      - { label: "Image", name: "image", widget: "string" }
-                      - { label: "Caption", name: "caption", widget: "string", required: false }
-                      - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
+                  - { label: "ID", name: "id", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+                  - { label: "Description", name: "description", widget: "markdown" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Link Text", name: "linkText", widget: "string" }
+                  - { label: "Image", name: "image", widget: "string" }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
+                  - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
               - name: "backup"
                 label: "Backup"
                 widget: "list"
