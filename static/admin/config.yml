@@ -156,6 +156,7 @@ collections:
               - { label: "URL", name: "url", widget: "string", required: false }
               - { label: "Description", name: "description", widget: "markdown", required: false }
               - { label: "Image", name: "image", widget: "string", required: false }
+              - { label: "Testimonial ID", name: "testimonialId", widget: "string", required: false }
 
   - name: "widgets"
     label: "Widgets"
