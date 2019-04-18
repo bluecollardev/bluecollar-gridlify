@@ -38,11 +38,11 @@
               <p class="g-pstyle13"><a href="/company">Team</a></p>
             </div>
             <div class="g-footer">
-              <p class="g-pstyle7"><a href="/company">Our Story</a></p>
+              <p class="g-pstyle7"><a href="/company#story">Our Story</a></p>
 
-              <p class="g-pstyle7"><a href="/company">Our Process</a></p>
+              <p class="g-pstyle7"><a href="/consulting">Consulting Services</a></p>
 
-              <p class="g-pstyle7"><a href="/">Junior Devs</a></p>
+              <p class="g-pstyle7"><a href="/junior-dev-program">Junior Dev Program</a></p>
             </div>
           </div>
         </div>
