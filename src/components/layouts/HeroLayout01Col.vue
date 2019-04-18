@@ -19,7 +19,7 @@
             </p>
           </div>
           <div class="homepage-hero-text g-hero">
-            <p class=" text-center" v-html="this.description"></p>
+            <div class="text-center" v-html="compiledDescription"></div>
           </div>
           <slot></slot>
           <div
@@ -44,9 +44,16 @@
 </template>
 
 <script>
+// vue-markdown is broken, babel deps issues...
+// import VueMarkdown from 'vue-markdown'
+// Use marked instead
+import marked from 'marked';
 import Home from '~/data/Home.yml';
 
 export default {
+  //components: {
+  //  VueMarkdown
+  //},
   // TODO: Supply models via props??
   props: {
     className: {
@@ -119,6 +126,9 @@ export default {
   computed: {
     Home() {
       return Home;
+    },
+    compiledDescription() {
+      return marked(this.description);
     }
   }
 };

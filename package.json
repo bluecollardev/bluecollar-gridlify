@@ -16,6 +16,7 @@
 		"basscss-typography": "^3.0.4",
 		"gridsome": "^0.5.0",
 		"lozad": "^1.9.0",
+		"marked": "^0.6.2",
 		"node-sass": "^4.11.0",
 		"normalize.css": "^5.0.0",
 		"postcss": "5.2.14",
@@ -25,6 +26,9 @@
 		"sass-loader": "^7.1.0",
 		"style-loader": "^0.23.1",
 		"vue-markdown": "^2.2.4"
+	},
+	"devDependencies": {
+		"@babel/runtime": "^7.4.3"
 	},
 	"license": "MIT"
 }

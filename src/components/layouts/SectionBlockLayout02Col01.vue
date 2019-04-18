@@ -16,7 +16,7 @@
             <p class="g-pstyle2 text-center">{{ this.title }}</p>
           </div>
           <div v-if="!(this.description instanceof Array)" class="g-how-does-it-work">
-            <p v-html="this.description"></p>
+            <div class="text-center" v-html="compiledDescription"></div>
           </div>
           <div v-else-if="this.description instanceof Array" class="g-how-does-it-work">
             <p v-for="description in this.description" v-html="description"></p>
@@ -28,6 +28,10 @@
 </template>
 
 <script>
+// vue-markdown is broken, babel deps issues...
+// import VueMarkdown from 'vue-markdown'
+// Use marked instead
+import marked from 'marked';
 /**
  * This variant of the SectionBlockLayout has two columns,
  * a right column with the heading and text content,
@@ -82,6 +86,9 @@ export default {
   computed: {
     Home() {
       return Home;
+    },
+    compiledDescription() {
+      return marked(this.description);
     }
   }
 };
