@@ -4,11 +4,6 @@ metaKeywords: >-
 metaDescription: >-
   Coming soon...
 services:
-  - title: Web Design
-    description: >-
-      We work with you to deliver a professionally designed accelerated mobile website, with landing pages, lead-gen fields, and your company&rsquo;s branding built in. Your website is optimized for mobile usage, but works on desktop as well.
-    link: /services-web
-    linkText: Learn More
   - title: Apps + PWAs
     description: >-
       We create amazing experiences for iOS, Android and Responsive Web. Front-end to back-end development, we do it all. With our user-first approach and API-driven architecture, we create apps that can evolve to take advantage of new capabilities.
@@ -18,6 +13,11 @@ services:
     description: >-
       Custom software serves the unique processes of your business, solves your specific problems, satisfies your exclusive needs and makes your workflows easier, faster, and more efficient. Our team of versatile custom software developers can architect & develop software for even the most complex business logic & workflow.
     link: /services-custom-software
+    linkText: Learn More
+  - title: Web Design
+    description: >-
+      We collaborate with our clients to deliver a professionally designed accelerated mobile website, integrated with high conversion landing pages and the client company’s branding. Our talent comes the Victoria community, all of whom are passionate about building products optimized for both desktop and mobile utilization.
+    link: /services-web
     linkText: Learn More
   - title: Advertising
     description: >-

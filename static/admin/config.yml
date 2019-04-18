@@ -85,13 +85,52 @@ collections:
           - { label: "Title", name: "title", widget: "string", default: "Services" }
           - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
           - { label: "Meta Description", name: "metaDescription", widget: "text" }
-          - name: "items"
-            label: "Items"
+          - name: "services"
+            label: "List Services"
             widget: "list"
             fields:
+              - { label: "ID", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Meta Keywords", name: "metaKeywords", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "text" }
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
+              - name: "hero"
+                label: "Hero"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string", default: "Hero" }
+                  - name: "items"
+                    label: "Items"
+                    widget: "list"
+                    fields:
+                      - { label: "ID", name: "id", widget: "string" }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Subtitle", name: "subtitle", widget: "string" }
+                      - { label: "Description", name: "description", widget: "text" }
+                      - { label: "Link", name: "link", widget: "string" }
+                      - { label: "Link Text", name: "linkText", widget: "string" }
+                      - { label: "Image", name: "image", widget: "string" }
+                      - { label: "Caption", name: "caption", widget: "string" }
+                      - { label: "Sub-Caption", name: "subCaption", widget: "string" }
+              - name: "backup"
+                label: "Backup"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string", default: "Backup" }
+                  - name: "items"
+                    label: "Items"
+                    widget: "list"
+                    fields:
+                      - { label: "ID", name: "id", widget: "string" }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Subtitle", name: "subtitle", widget: "string" }
+                      - { label: "Description", name: "description", widget: "text" }
+                      - { label: "Link", name: "link", widget: "string" }
+                      - { label: "Link Text", name: "linkText", widget: "string" }
+                      - { label: "Image", name: "image", widget: "string" }
+                      - { label: "Caption", name: "caption", widget: "string" }
+                      - { label: "Sub-Caption", name: "subCaption", widget: "string" }
 
       - name: "Pricing"
         label: "Pricing"

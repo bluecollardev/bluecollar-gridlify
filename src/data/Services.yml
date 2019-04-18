@@ -1,12 +1,173 @@
 title: Services
-items:
-  - description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    title: Lorem ipsum dolor
+metaKeywords: >-
+  Coming soon...
+metaDescription: >-
+  Coming soon...
+services:
+  - id: websites
+    title: Websites
     metaKeywords: >-
       Coming soon...
     metaDescription: >-
       Coming soon...
+    summary:
+    description: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    home:
+    hero:
+      - id: services-hero
+        title: >-
+          We’re about software. Software is about people.
+        description: >-
+          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
+        image: /images/heroes/blue-collar-home-hero-cool.jpg
+        link: "/company"
+        linkText: Our Story
+        caption:
+        subCaption:
+    backup:
+      - id: services-hero
+        title: >-
+          We’re about software. Software is about people.
+        description: >-
+          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
+        image: /images/heroes/blue-collar-home-hero-cool.jpg
+        link: "/company"
+        linkText: Our Story
+        caption:
+        subCaption:
+      - id: services-hero
+        title: >-
+          We’re about software. Software is about people.
+        description: >-
+          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
+        image: /images/heroes/blue-collar-home-hero-cool.jpg
+        link: "/company"
+        linkText: Our Story
+        caption:
+        subCaption:
+      - id: services-hero
+        title: >-
+          We’re about software. Software is about people.
+        description: >-
+          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
+        image: /images/heroes/blue-collar-home-hero-cool.jpg
+        link: "/company"
+        linkText: Our Story
+        caption:
+        subCaption:
+  - id: apps
+    title: Hybrid Apps + PWAs
+    metaKeywords: >-
+      Coming soon...
+    metaDescription: >-
+      Coming soon...
+    summary:
+    description: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    home:
+    hero:
+      - id: services-hero
+        title: >-
+          We’re about software. Software is about people.
+        description: >-
+          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
+        image: /images/heroes/blue-collar-home-hero-cool.jpg
+        link: "/company"
+        linkText: Our Story
+        caption:
+        subCaption:
+    backup:
+      - id: services-hero
+        title: >-
+          We’re about software. Software is about people.
+        description: >-
+          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
+        image: /images/heroes/blue-collar-home-hero-cool.jpg
+        link: "/company"
+        linkText: Our Story
+        caption:
+        subCaption:
+      - id: services-hero
+        title: >-
+          We’re about software. Software is about people.
+        description: >-
+          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
+        image: /images/heroes/blue-collar-home-hero-cool.jpg
+        link: "/company"
+        linkText: Our Story
+        caption:
+        subCaption:
+      - id: services-hero
+        title: >-
+          We’re about software. Software is about people.
+        description: >-
+          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
+        image: /images/heroes/blue-collar-home-hero-cool.jpg
+        link: "/company"
+        linkText: Our Story
+        caption:
+        subCaption:
+  - id: software
+    title: Custom Software
+    metaKeywords: >-
+      Coming soon...
+    metaDescription: >-
+      Coming soon...
+    summary:
+    description: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    home:
+    hero:
+      - id: services-hero
+        title: >-
+          We’re about software. Software is about people.
+        description: >-
+          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
+        image: /images/heroes/blue-collar-home-hero-cool.jpg
+        link: "/company"
+        linkText: Our Story
+        caption:
+        subCaption:
+    backup:
+      - id: services-hero
+        title: >-
+          We’re about software. Software is about people.
+        description: >-
+          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
+        image: /images/heroes/blue-collar-home-hero-cool.jpg
+        link: "/company"
+        linkText: Our Story
+        caption:
+        subCaption:
+      - id: services-hero
+        title: >-
+          We’re about software. Software is about people.
+        description: >-
+          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
+        image: /images/heroes/blue-collar-home-hero-cool.jpg
+        link: "/company"
+        linkText: Our Story
+        caption:
+        subCaption:
+      - id: services-hero
+        title: >-
+          We’re about software. Software is about people.
+        description: >-
+          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
+        image: /images/heroes/blue-collar-home-hero-cool.jpg
+        link: "/company"
+        linkText: Our Story
+        caption:
+        subCaption:
+
+
