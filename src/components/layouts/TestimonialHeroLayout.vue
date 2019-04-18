@@ -8,7 +8,7 @@
         <p class="g-pstyle5" style="text-align: right;">{{ this.subCaption }}</p>
       </div>
       <!-- Testimonial -->
-      <div class="hero-block testimonial flex space-top-2x">
+      <div class="hero-block testimonial flex">
         <div class="space-all">
           <div class="g-services">
             <p class="g-pstyle8">"Blue Collar designed and implemented an amazing website for our business."</p>
@@ -132,7 +132,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
   img.badge {
     width: 100px;
     height: 100px;
@@ -143,5 +143,16 @@ export default {
 
   .badge {
       border-radius: 50%;
+  }
+
+  @media screen and (min-width: 1400px) {
+    .hero-section:nth-child(2n) .hero-image-wrapper img {
+        position: relative;
+        right: auto;
+        top: 20vh;
+        max-width: 100%;
+        -o-object-fit: contain;
+        object-fit: contain;
+    }
   }
 </style>
