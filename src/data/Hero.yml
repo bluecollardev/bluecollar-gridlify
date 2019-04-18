@@ -23,10 +23,12 @@ items:
     linkText: Learn More
     title: Applications crafted with precision and care
   - description: >-
-      Drawing on deep experience in solution design and combining it with great
-      listening, we work closely with your team to define a solution for the
-      business challenge at hand. Then, we infuse user feedback and priorities
-      into every stage of the software development process. 
+      We have a long history of designing and developing amazing experiences
+      for iOS, Android, and Responsive Web. Drawing on deep experience in
+      solution design and combining it with great listening, we work closely
+      with your team to define a solution for the business challenge at hand.
+      Then, we infuse user feedback and priorities into every stage of the
+      software development process.
 
 
       But that's not where we stop. At Blue Collar, we don’t leave clients once
@@ -37,5 +39,5 @@ items:
     id: projects-hero
     image: /images/banners/responsive-banner-jimmy-poblanos.png
     link: /projects
-    linkText: Browse Projects
-    title: Customers love our work
+    linkText: Browse Our Portfolio
+    title: Why Blue Collar? Because customers love our work!

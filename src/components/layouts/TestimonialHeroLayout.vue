@@ -1,5 +1,5 @@
 <template>
-  <section :class="`homepage-hero hero-section ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`">
+  <section :class="`homepage-hero hero-section hero-testimonial ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`">
     <!-- Position relatively, or absolute positioning of the caption will fail -->
     <div class="relative flex flex-wrap xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center">
       <div class="hero-image-wrapper"><img :class="`banner-image ${this.imageClass}`" v-bind:src="this.image" alt="" /></div>
@@ -8,10 +8,10 @@
         <p class="g-pstyle5" style="text-align: right;">{{ this.subCaption }}</p>
       </div>
       <!-- Testimonial -->
-      <div class="hero-block testimonial flex">
+      <div class="banner-block testimonial flex">
         <div class="space-all">
           <div class="g-services">
-            <p class="g-pstyle8">"Blue Collar designed and implemented an amazing website for our business."</p>
+            <p class="g-pstyle8">"Blue Collar designed and implemented an amazing website for our business. We've seen an immediate increase in sales and flow through business."</p>
           </div>
           <div class="g-services flex flex-center space-top">
             <img class="banner-image badge" src="/images/greg-and-steph-jimmy-poblanos.jpg" alt="" />
@@ -146,13 +146,13 @@ export default {
   }
 
   @media screen and (min-width: 1400px) {
-    .hero-section:nth-child(2n) .hero-image-wrapper img {
-        position: relative;
-        right: auto;
-        top: 20vh;
-        max-width: 100%;
-        -o-object-fit: contain;
-        object-fit: contain;
+    .hero-testimonial .hero-image-wrapper img {
+      top: 10vh !important;
+    }
+
+    .hero-testimonial .testimonial {
+      position: relative;
+      top: -7vh;
     }
   }
 </style>
