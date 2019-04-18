@@ -39,7 +39,7 @@ items:
     url:
     image: /images/portfolio/bc-showcase-phobulous.png
     description: >-
-      I designed a custom SPA-style mobile-friendly Asian-styled theme for their website featuring CSS
+      We designed a custom SPA-style mobile-friendly Asian-styled theme for their website featuring CSS
       animations and a custom menu component. A customized build of OpenCart is used on the backend for content
       and product management.
   - projectName: iOS Tablet Point-of-Sale
@@ -79,7 +79,7 @@ items:
       Caribbean. Some of the products offered on the kiosks are full programs, profile sheets, singles races and
       IP sheets.
   
-      At the behest of the LSE-listed (London Stock Exchange) Sportech PLC – one of VEST’s clients – I was
+      At the behest of the LSE-listed (London Stock Exchange) Sportech PLC – one of VEST’s clients – we were
       contracted to develop a hybrid mobile application for deployment on tablets, Linux kiosks and smart
       televisions which replicates (and furthers) the functionality available in their existing kiosk system.
       These tablets are currently being deployed in multiple off-track-betting locations in the continental USA.
@@ -91,7 +91,7 @@ items:
     url:
     image: /images/portfolio/bc-showcase-jimmy-poblanos.png
     description: >-
-      I designed a custom SPA-style mobile-friendly Mexican-styled theme for their website featuring completely
+      We designed a custom SPA-style mobile-friendly Mexican-styled theme for their website featuring completely
       custom artwork, parallax scrolling effects and a custom menu component. A customized build of OpenCart is
       used on the backend for content and product management.
     testimonialId: jimmyp
@@ -109,7 +109,7 @@ items:
       As Caffe Tech was expanding their business and opening multiple new locations, they needed an inventory
       management solution that would synchronize their QuickBooks Desktop / Online customers, inventory and
       stock levels, invoices, work orders and more with their existing e-commerce websites (Caffe Tech, Leva,
-      ACE Coffee Roasters). I designed an event-driven software bridge, composed of an OAuth2 secured RESTful
+      ACE Coffee Roasters). We designed an event-driven software bridge, composed of an OAuth2 secured RESTful
       micro-service, and custom ‘client’ extensions for Magento and OpenCart, that automatically handled
       synchronization of all data across multiple installations and software systems using a combination of PHP,
       Slim, Doctrine ORM/DBAL, MySQL and the QuickBooks Online API and Desktop SDK.
@@ -120,7 +120,7 @@ items:
     url:
     image: /images/portfolio/bc-showcase-cafe-leva.png
     description: >-
-      I designed a custom SPA-style mobile-friendly Mexican-styled theme for their website featuring completely
+      We designed a custom SPA-style mobile-friendly Mexican-styled theme for their website featuring completely
       custom artwork, parallax scrolling effects and a custom menu component. A customized build of OpenCart is
       used on the backend for content and product management.
   - projectName: Corrpro Corrosion Reporting Application
@@ -132,7 +132,7 @@ items:
     description: >-
       Corrpro provides corrosion control materials and services including - engineering, pipeline integrity,
       construction and protective coating inspection - throughout North America, Europe, the Middle East and
-      South Africa. I designed and developed a custom Windows Desktop application to help track corrosion levels
+      South Africa. We designed and developed a custom Windows Desktop application to help track corrosion levels
       of pipelines and storage tanks at thousands of industrial locations across Alberta.
   - projectName: Challenger Fleet Management System
     client: Challenger Fleet Management Solutions
@@ -142,7 +142,7 @@ items:
     image: /images/portfolio/bc-showcase-app-challenger-02.png
     description: >-
       Challenger Fleet Management Solutions specializes in long term vehicle rentals for industrial projects.
-      I architected, designed and spearheaded the development of a custom fleet-management application which
+      We architected, designed and spearheaded the development of a custom fleet-management application which
       served to streamline business processes including tracking vehicle inventory, coordinating the equipment
       of vehicles with specialized accessories required for industrial projects, coordinating deliveries on or
       before the time vehicle units are required on site, monitoring manufacturer recall programs, invoicing and
@@ -158,7 +158,7 @@ items:
       commercial and home coffee equipment which provides many popular Albertan establishments with their
       restaurant and coffee making equipment.
 
-      I designed a custom theme and a suite of custom extensions for Magento including a custom payment
+      We designed a custom theme and a suite of custom extensions for Magento including a custom payment
       extension for Global Payments (Canada) and a shipping extension for Purolator’s Shipping API (SOAP)
       featuring item tracking, support for multiple items per package, label printing, international documents
       generation, and automatically scheduled package pickups.
@@ -172,10 +172,10 @@ items:
       The Alberta Motor Association was looking to replace its legacy and end-of-life ‘FrontTier’ insurance
       policy management system with an in-house, web-based application and backend service network.
 
-      I spearheaded the overhaul of AMA’s web-based AgentView insurance management system and the network of
+      We spearheaded the overhaul of AMA’s web-based AgentView insurance management system and the network of
       .NET Web API and WCF services that supports it. The scope of work involved a complete rewrite of
       AgentView’s client and server applications as well as complete UI redesign (a previous external contractor
-      had failed). I was also responsible for UI/UX design related to internal and external web-based
+      had failed). We was also responsible for UI/UX design related to internal and external web-based
       applications.
   - projectName: Home Insurance Quote Web Application
     client: Alberta Motor Association
@@ -188,7 +188,7 @@ items:
       customized home and tenant insurance quotes. The new application replaced their legacy web application,
       developed in C# using ASP.NET Web Forms, which was not mobile friendly.
 
-      I designed and developed a new web application consisting of a responsive, mobile-friendly JavaScript
+      We designed and developed a new web application consisting of a responsive, mobile-friendly JavaScript
       client and a ASP.NET Web API backend, re-using code for certain procedures, functions and business logic
       where possible.
   - projectName: Auto Insurance Quote Web Application
@@ -202,7 +202,7 @@ items:
       customized automobile insurance quotes. The new application replaced their legacy web application,
       developed in C# using ASP.NET Web Forms, which was not mobile friendly.
 
-      I designed and developed a new web application consisting of a responsive, mobile-friendly JavaScript
+      We designed and developed a new web application consisting of a responsive, mobile-friendly JavaScript
       client and a ASP.NET Web API backend, re-using code for certain procedures, functions and business logic
       where possible.
   - projectName: Carsgone.com
@@ -216,7 +216,7 @@ items:
       print distribution network across Alberta and Ontario. At the time, they had over 90,000 vehicles from
       over 600 dealerships listed on their website.
 
-      I created an online marketplace/classifieds site for listing vehicles serving independent buyers and
+      We created an online marketplace/classifieds site for listing vehicles serving independent buyers and
       sellers as well as hundreds of dealerships across Canada. Vehicle listings were either posted by end-users
       or aggregated using data providers from organizations including Strathcom Media and Boost Motor Group for
       display.
@@ -239,7 +239,7 @@ items:
     image: /images/portfolio/bc-showcase-rmg-selection.png
     description: >-
       RMG Selection is an award-winning, China-focused international recruitment and HR consultancy business with over
-      30 offices around the world. I designed, developed and helped maintain the RMG Selection’s HR recruitment website
+      30 offices around the world. We designed, developed and helped maintain the RMG Selection’s HR recruitment website
       for over 6 years. This 2014 rebuild of the site was the winner of the ‘Best Job Board’ award at the 2014 Global
       Recruiter Asia Pacific Awards ceremony in Singapore.
   - projectName: Product Matrix WordPress Extension
@@ -264,8 +264,8 @@ items:
       solutions to more than 200 local and international customers including small and medium size companies as well as
       enterprise level businesses. SoftControl is a Microsoft Gold solutions partner.
   
-      I developed a custom Magento theme and several Magento extensions for product display, inventory management and
-      administration. I also assisted with QA testing and debugging of (other) Magento e-commerce installations.
+      We developed a custom Magento theme and several Magento extensions for product display, inventory management and
+      administration. We also assisted with QA testing and debugging of (other) Magento e-commerce installations.
   - projectName: Online Affiliate Portal
     client: Xtend-Life
     startDate: 2010-09-01 12:00:00
@@ -311,8 +311,8 @@ items:
     url:
     image:
     description: >-
-      Binc VFX was a boutique visual effects studio in Bangkok, Thailand. I designed a custom website that integrated
-      with their custom asset management platform, which I also built, based on a project I helped contribute to called
+      Binc VFX was a boutique visual effects studio in Bangkok, Thailand. We designed a custom website that integrated
+      with their custom asset management platform, which we also built, based on a project we helped contribute to called
       the TACGA (Thai Animation and Computer Graphics Association) Media Management System.
     testimonialId: bincvfx
   - projectName: Kantana Animation Studios Website
@@ -322,9 +322,9 @@ items:
     url:
     image:
     description: >-
-      Kantana PCL (Public Company Limited) is Thailand's largest media organization. I was contracted to redesign their
+      Kantana PCL (Public Company Limited) is Thailand's largest media organization. We was contracted to redesign their
       animation studio’s website to correspond with the release of Khan Kluay 2 (a domestic CG movie featuring a family
-      of elephants). I designed a custom theme and several custom extensions for Joomla CMS, including extensions for
+      of elephants). We designed a custom theme and several custom extensions for Joomla CMS, including extensions for
       managing photo/video assets.
   - projectName: R1 Club Website
     client: Nfineon
@@ -333,7 +333,7 @@ items:
     url:
     image:
     description: >-
-      R1 Club was a membership-based luxury vehicle/yacht rental club in Thailand, Malaysia and Singapore. I designed a
+      R1 Club was a membership-based luxury vehicle/yacht rental club in Thailand, Malaysia and Singapore. We designed a
       custom theme and several custom extensions for Joomla CMS, including extensions for managing photo/video assets,
       and a custom-made membership component.
   - projectName: LUXE Galleria Website
@@ -343,7 +343,7 @@ items:
     url:
     image:
     description: >-
-      LUXE was a membership-based publication targeting haute-couture in South East Asia. I designed a custom theme and
+      LUXE was a membership-based publication targeting haute-couture in South East Asia. We designed a custom theme and
       several custom extensions for Joomla CMS, including extensions for managing photo/video assets, and a custom-made
       membership component.
   - projectName: Bangkok International Film Festival 2008 Website
@@ -353,5 +353,5 @@ items:
     url:
     image:
     description: >-
-      I designed a custom theme and several custom extensions for Joomla CMS, including extensions for managing
+      We designed a custom theme and several custom extensions for Joomla CMS, including extensions for managing
       photo/video assets.
