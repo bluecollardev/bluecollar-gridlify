@@ -1,11 +1,11 @@
 title: Hero Items
 items:
   - description: >-
-      **Test RICH TEXT + markdown.** We have a long history of designing and
-      developing amazing experiences for iOS, Android, and Responsive Web. We’re
-      a team of industry leading experts who create solutions and build
-      applications using cutting edge technology to help your business succeed.
-      We love what we do and it shows in our work.
+      We have a long history of designing and developing amazing experiences for
+      iOS, Android, and Responsive Web. We’re a team of industry leading experts
+      who create solutions and build applications using cutting edge technology
+      to help your business succeed. We love what we do and it shows in our
+      work.
     id: homepage-hero
     image: /images/heroes/blue-collar-home-hero-cool.jpg
     link: /company
