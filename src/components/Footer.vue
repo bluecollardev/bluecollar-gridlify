@@ -58,6 +58,9 @@
             <div class="g-footer">
               <p class="g-pstyle7"><a href="https://github.com/bluecollardev">GitHub</a></p>
             </div>
+            <div class="g-footer">
+              <p class="g-pstyle7"><a href="https://github.com/bluecollardev/bluecollar-gridlify">Source Code</a></p>
+            </div>
           </div>
 
         </div>
