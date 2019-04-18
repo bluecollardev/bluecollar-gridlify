@@ -41,6 +41,11 @@ items:
       their website featuring CSS animations and a custom menu component. A
       customized build of OpenCart is used on the backend for content and
       product management.
+
+
+      **Technologies:** HTML5, ReactJS, SASS, Webpack, Gulp, Customized OpenCart
+      build, PHP, Sim, Doctrine ORM/DBAL, MySQL, RESTful APIs, Adobe CC
+      (Photoshop, Illustrator, etc.), Git
     endDate: 2017-04-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-phobulous.png
     projectName: Phobulous Restaurant Website
@@ -108,6 +113,11 @@ items:
       their website featuring completely custom artwork, parallax scrolling
       effects and a custom menu component. A customized build of OpenCart is
       used on the backend for content and product management.
+
+
+      **Technologies:**  HTML5, jQuery, LESS, Webpack, Gulp, Customized OpenCart
+      build, PHP, Sim, Doctrine ORM/DBAL, MySQL, RESTful APIs, Adobe CC
+      (Photoshop, Illustrator, etc.), Git
     endDate: 2016-05-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-jimmy-poblanos.png
     projectName: Jimmy Poblanos Food Truck Website
@@ -157,6 +167,10 @@ items:
       Africa. We designed and developed a custom Windows Desktop application to
       help track corrosion levels of pipelines and storage tanks at thousands of
       industrial locations across Alberta.
+
+
+      **Technologies:** C#, WinForms, Windows User Interface, T-SQL, SQL Server,
+      SSRS, SVN
     endDate: 2015-05-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-corrpro.png
     projectName: Corrpro Corrosion Reporting Application
@@ -172,6 +186,11 @@ items:
       time vehicle units are required on site, monitoring manufacturer recall
       programs, invoicing and basic accounting, and the generation of customized
       reports to clients while vehicle units are on rent.
+
+
+      **Technologies:** HTML5, JavaScript, Angular, LESS, Require.js, C#,
+      ASP.NET Web API, ASP.NET MVC, Razer, Entity Framework, T-SQL, SQL Server,
+      Visual Studio, Windows Server, IIS, SVN
     endDate: 2015-04-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-challenger-02.png
     projectName: Challenger Fleet Management System
@@ -189,6 +208,10 @@ items:
       tracking, support for multiple items per package, label printing,
       international documents generation, and automatically scheduled package
       pickups.
+
+
+      **Technologies:** Magento, Linux, Apache, PHP, MySQL, Prototype, GD,
+      ImageMagick & Imagick for PHP, GhostScript (PDF), Git
     endDate: 2015-01-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-caffe-tech.png
     projectName: Caffe Tech Magento Store
@@ -205,6 +228,12 @@ items:
       client and server applications as well as complete UI redesign (a previous
       external contractor had failed). We was also responsible for UI/UX design
       related to internal and external web-based applications.
+
+
+      **Technologies:** HTML5, Modular JavaScript, Kendo UI, Foundation, jQuery,
+      LESS, Require.js, C#, ASP.NET Web API, ASP.NET Web Forms, Entity
+      Framework, WCF, N-Tier, T-SQL, SQL Server, Visual Studio, Windows Server,
+      IIS, RTC, TFS
     endDate: 2014-11-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-agentview.png
     projectName: AgentView Insurance Policy Management System
@@ -220,6 +249,12 @@ items:
       responsive, mobile-friendly JavaScript client and a ASP.NET Web API
       backend, re-using code for certain procedures, functions and business
       logic where possible.
+
+
+      **Technologies:** HTML5, Modular JavaScript, Kendo UI, Foundation, jQuery,
+      LESS, Require.js, C#, ASP.NET Web API, ASP.NET Web Forms, Entity
+      Framework, WCF, N-Tier, T-SQL, SQL Server, Visual Studio, Windows Server,
+      IIS, RTC, TFS
     endDate: 2013-05-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-homequote.png
     projectName: Home Insurance Quote Web Application
@@ -235,6 +270,12 @@ items:
       responsive, mobile-friendly JavaScript client and a ASP.NET Web API
       backend, re-using code for certain procedures, functions and business
       logic where possible.
+
+
+      **Technologies:** HTML5, Modular JavaScript, Kendo UI, Foundation, jQuery,
+      LESS, Require.js, C#, ASP.NET Web API, ASP.NET Web Forms, Entity
+      Framework, WCF, N-Tier, T-SQL, SQL Server, Visual Studio, Windows Server,
+      IIS, RTC, TFS
     endDate: 2013-03-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-autoquote.png
     projectName: Auto Insurance Quote Web Application
@@ -251,6 +292,14 @@ items:
       across Canada. Vehicle listings were either posted by end-users or
       aggregated using data providers from organizations including Strathcom
       Media and Boost Motor Group for display.
+
+
+      **Technologies:** HTML, CSS, JavaScript, jQuery, PHP, Kohana/CodeIgniter,
+      Kohana ORM, SOAP, REST, XML,MySQL, Sphinx OSSS, Memcached, GD,
+      ImageMagick, Photoshop, Illustrator, Git
+
+
+      ****
     endDate: 2012-03-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-carsgone.png
     projectName: Carsgone.com
@@ -259,6 +308,9 @@ items:
     description: >-
       Spasation is an Alberta-based chain of spas/salons. Uses a customized
       build of OpenCart for content and product management.
+
+
+      **Technologies:** OpenCart, Linux, Apache, PHP, MySQL, jQuery
     endDate: 2011-11-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-spasation.png
     projectName: Spasation Website and Online Store
@@ -271,6 +323,10 @@ items:
       website for over 6 years. This 2014 rebuild of the site was the winner of
       the ‘Best Job Board’ award at the 2014 Global Recruiter Asia Pacific
       Awards ceremony in Singapore.
+
+
+      **Technologies:** WordPress, Linux, Apache, PHP, MySQL, jQuery,
+      GhostScript (PDF)
     endDate: 2011-09-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-rmg-selection.png
     projectName: RMG Selection Recruitment Portal v3
