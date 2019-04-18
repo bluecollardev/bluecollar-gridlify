@@ -186,7 +186,7 @@
         }
 
         return null
-      },
+      }
     },
     methods: {
       getTestimonial(idx) {

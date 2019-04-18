@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Header/>
-    <section-block-layout02-col01
+    <!--<section-block-layout02-col01
       title="Experts in Progressive and Mobile App Development"
       subtitle=""
       :description="[
@@ -12,12 +12,23 @@
       image="/images/hero-michael.png"
       caption="Sean Huntington"
       subCaption="Principal Architect, Blue Collar"
+    />-->
+    <section-block-layout02-col01
+      v-if="getServiceHeroById('apps')"
+      :title="getServiceHeroById('apps').title"
+      subtitle=""
+      :description="getServiceHeroById('apps').description"
+      :link="getServiceHeroById('apps').link"
+      :linkText="getServiceHeroById('apps').linkText"
+      :image="getServiceHeroById('apps').image"
+      :caption="getServiceHeroById('apps').caption"
+      :subCaption="getServiceHeroById('apps').subCaption"
     />
 
     <section id="advertising" class="lg-flex space-top">
       <div class="sm-flex flex-center flex-column flex-basis-third">
         <div class="content-block">
-          <div class="space-top space-bottom-half">
+          <!--<div class="space-top space-bottom-half">
             <p class="g-pstyle9">Progressive Apps</p>
           </div>
           <div>
@@ -25,7 +36,7 @@
           </div>
           <div class="action-link-block">
             <a class="action-link space-top g-pstyle3" href="/contact">Get Started</a>
-          </div>
+          </div>-->
         </div>
       </div>
       <div class="sm-flex flex-basis-two-thirds flex-wrap">
@@ -147,6 +158,7 @@
   // Import static data
   import HomeData from '~/data/Home.yml';
   import HeroData from '~/data/Hero.yml';
+  import ServiceData from '~/data/Services.yml';
   import GeneralData from '~/data/General.yml';
   import TestimonialData from '~/data/Testimonial.yml';
 
@@ -173,6 +185,9 @@
       heroContent() {
         return HeroData;
       },
+      servicesContent() {
+        return ServiceData
+      },
       generalContent() {
         return GeneralData;
       },
@@ -189,7 +204,7 @@
         }
 
         return null
-      },
+      }
     },
     methods: {
       getTestimonial(idx) {
@@ -197,6 +212,65 @@
 
         if (items instanceof Array && items.length > idx) {
           return items[idx];
+        }
+
+        return null
+      },
+      getService(idx) {
+        let items = this.servicesContent;
+
+        if (items instanceof Array && items.length > idx) {
+          return items[idx];
+        }
+
+        return null
+      },
+      getServiceById(id) {
+        let content = this.servicesContent;
+
+        if (content && content.services instanceof Array && content.services.length > 0) {
+          let items = content.services.filter(item => {
+            return item.id === id;
+          });
+
+          if (items instanceof Array && items.length > 0) {
+            return items[0];
+          }
+        }
+
+        return null
+      },
+      getServiceHeroById(id) {
+        let content = this.servicesContent;
+
+        if (content && content.services instanceof Array && content.services.length > 0) {
+          let items = content.services.filter(item => {
+            return item.id === id;
+          });
+
+          if (items instanceof Array && items.length > 0) {
+            if (items[0].hero instanceof Array && items[0].hero.length > 0) {
+              return items[0].hero[0] // TODO: Support for multiple heroes!
+            }
+          }
+        }
+
+        return null
+      },
+      getServiceBackupsByIdx(id, idx) {
+        let content = this.servicesContent;
+        idx = idx || 0;
+
+        if (content && content.services instanceof Array && content.services.length > 0) {
+          let items = content.services.filter(item => {
+            return item.id === id;
+          });
+
+          if (items instanceof Array && items.length > 0) {
+            if (items[0].backup instanceof Array && items[0].backup.length > 0) {
+              return items[0].backup[idx] // TODO: Support for multiple heroes!
+            }
+          }
         }
 
         return null
