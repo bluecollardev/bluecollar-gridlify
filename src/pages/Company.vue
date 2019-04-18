@@ -16,7 +16,7 @@
       </div>
     </section>
 
-    <section class="hero-section bg-hero-grey sm-flex flex-column pad-bottom-2x">
+    <section class="hero-section bg-hero-grey sm-flex flex-column">
       <!--<div class="sm-flex flex-column flex-center flex-justify-stretch flex-basis-two-thirds">
         <div class="sm-flex space-all">
           <div class="sm-flex flex-center">
@@ -41,14 +41,14 @@
       </div>-->
       <div class="hero-section bg-hero-grey sm-flex">
         <div class="relative flex-basis-half sm-flex flex-justify-end">
-          <div class="content-block xs-no-space-top">
+          <div class="content-block xs-no-space-top lg-space-top">
             <img class="banner-image right" src="/images/woman-in-casual-office_4460x4460.jpg" alt="" />
           </div>
         </div>
 
         <div class="sm-flex flex-center flex-justify-start flex-basis-half">
           <div class="content-block">
-            <div class="space-all">
+            <div class="space-left space-right">
               <div class="space-bottom-half g-services">
                 <p>Blue Collar has been in the business of web design since 2008. Starting as a web design agency building sites for clients in Canada, the US, and Asia, we have evolved over time.</p>
 
@@ -166,7 +166,7 @@
                     <p class="text-center">Marketing Director</p>
                   </div>
                   <div class="g-help-with-digital-marketing">
-                    <p>Chris founded Blue Collar after a successful career in product managment for real estate software and digital marketing strategy. Chris brings over 10 years of marketing experience to his clients, combined with deep knowledge of the latest social media technology and trends.</p>
+                    <p>Chris co-founded Blue Collar after a successful career in product managment for real estate software and digital marketing strategy. Chris brings over 10 years of marketing experience to his clients, combined with deep knowledge of the latest social media technology and trends.</p>
                   </div>
                 </div>
               </div>
@@ -175,6 +175,80 @@
         </div>
       </div>
     </section>-->
+
+    <section id="services" class="lg-flex">
+      <div class="sm-flex flex-center flex-justify-center flex-basis-half">
+        <div class="content-block">
+          <content-block-layout
+            className="pad-top"
+            title="Our Story"
+            description="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+            link="/"
+            linkText="Back to Home"
+          />
+        </div>
+      </div>
+
+      <div
+        v-if="getTestimonial(0)"
+        class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
+        <testimonial-block-layout
+          className="space-top space-bottom"
+          testimonial="Blue Collar Dev #1"
+          reviewedBy="Lucas Lopatka"
+          position="Software Architect"
+          organization="Hello! I'm Lucas, and I am a Full-Stack Solutions Architect with 15 years of experience designing and building custom software applications. I design, wireframe, prototype, and develop mobile, hybrid and progressive apps. I also architect, implement and deploy scalable, cloud-based RESTful services and multi-tier micro-services for clients of all sizes located in Canada and abroad."
+          image="/images/lucas-lopatka-profile.png"
+        />
+      </div>
+    </section>
+
+    <!--<section class="lg-flex">
+      <div
+        v-if="getTestimonial(1)"
+        class="bg-light-grey flex flex-column flex-center flex-basis-half pad-top">
+        <testimonial-block-layout
+          className="space-top space-bottom"
+          :testimonial="getTestimonial(1).testimonial"
+          :reviewedBy="getTestimonial(1).reviewedBy"
+          :position="getTestimonial(1).position"
+          :organization="getTestimonial(1).organization"
+          :image="getTestimonial(1).image"
+        />
+      </div>
+
+      <div class="sm-flex flex-center flex-justify-center flex-basis-half">
+        <div class="content-block">
+          <content-block-layout
+            className="pad-top"
+            v-if="getService(3).linkText"
+            :title="getService(3).title"
+            :description="getService(3).description"
+            :link="getService(3).link"
+            :linkText="getService(3).linkText"
+          />
+
+          <content-block-layout
+            className="pad-top"
+            v-if="getService(4).linkText"
+            :title="getService(4).title"
+            :description="getService(4).description"
+            :link="getService(4).link"
+            :linkText="getService(4).linkText"
+          />
+
+          <content-block-layout
+            className="pad-top pad-bottom"
+            v-if="getService(5).linkText"
+            :title="getService(5).title"
+            :description="getService(5).description"
+            :link="getService(5).link"
+            :linkText="getService(5).linkText"
+          />
+        </div>
+      </div>
+    </section>-->
+
     <Footer/>
   </Layout>
 </template>
