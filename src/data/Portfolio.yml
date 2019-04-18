@@ -25,12 +25,12 @@ items:
       handled using Red Hat’s Keycloak.
 
 
-      **TOOLS AND TECHNOLOGIES:** HTML5, ES6, ES7, SASS, JSX, ReactJS, Flux,
-      Material-UI, MobX, React-Bootstrap, DevExpress, Bluebird, Java, Spring
-      Boot, Hibernate, Swagger, Swagger Codegen, OpenAPI, PostgreSQL, RabbitMQ,
-      Keycloak, Gulp, Webpack, Karma, Mocha, Chai, Expect.js, Jest, Docker,
-      Kubernetes, VirtualBox, WebStorm, Spring Tool Suite, Adobe CC (Photoshop,
-      Illustrator, etc.), RESTful API design, UI Design, GitLab, Git
+      **Technologies:** HTML5, ES6, ES7, SASS, JSX, ReactJS, Flux, Material-UI,
+      MobX, React-Bootstrap, DevExpress, Bluebird, Java, Spring Boot, Hibernate,
+      Swagger, Swagger Codegen, OpenAPI, PostgreSQL, RabbitMQ, Keycloak, Gulp,
+      Webpack, Karma, Mocha, Chai, Expect.js, Jest, Docker, Kubernetes,
+      VirtualBox, WebStorm, Spring Tool Suite, Adobe CC (Photoshop, Illustrator,
+      etc.), RESTful API design, UI Design, GitLab, Git
     endDate: 2019-02-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-ideal.png
     projectName: Ideal Automotive Finance Solutions
@@ -58,6 +58,12 @@ items:
       replace their existing PixelPoint point-of-sale systems. Supported
       peripheral devices included Star Micronics Bluetooth and Wireless cash
       drawers, ticket and receipt printers, and barcode scanners.
+
+
+      **Technologies:** ReactJS, Redux, Material-UI, MobX, React-Bootstrap,
+      Bluebird, Star Micronics Android/iOS SDKs, SQLite, OAuth2, RESTful APIs,
+      Cordova, PhoneGap Build, Gulp, Webpack, Mocha, Chai, Expect.js, Jest,
+      Adobe CC (Photoshop, Illustrator, etc.), Git, Jira, Sketch
     endDate: 2016-04-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-quickcommerce.png
     projectName: iOS Tablet Point-of-Sale
@@ -86,6 +92,12 @@ items:
       which replicates (and furthers) the functionality available in their
       existing kiosk system. These tablets are currently being deployed in
       multiple off-track-betting locations in the continental USA.
+
+
+      **Technologies:** HTML5, SASS, Angular, Kendo UI for Angular, JavaScript,
+      Webpack, Karma, Mocha, Chai, Expect.js, Cordova, PhoneGap Build, PHP,
+      Slim, Doctrine DBAL/ORM, PHPUnit, REST, XML, Bash, MySQL, Sphinx OSSS,
+      Memcached, GD, ImageMagick, Docker, CentOS, Git
     endDate: 2016-11-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-vest.png
     projectName: VEST Tablet & Kiosk Apps
@@ -117,6 +129,12 @@ items:
       that automatically handled synchronization of all data across multiple
       installations and software systems using a combination of PHP, Slim,
       Doctrine ORM/DBAL, MySQL and the QuickBooks Online API and Desktop SDK.
+
+
+      **Technologies:** HTML5, SASS, JavaScript, jQuery, PHP, Slim, Doctrine
+      ORM/DBAL, QuickBooks PHP SDK, QuickBooks Online API, OpenCart, Magento,
+      Bash, PHPUnit, REST, JSON, Swagger, Swagger Codegen, OAuth2, MySQL,
+      CentOS, Windows Small Business Server, Git
     endDate: 2016-04-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-quickcommerce.png
     projectName: Caffe Tech Inventory Management and Data Bridge
