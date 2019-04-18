@@ -338,6 +338,9 @@ items:
       services. The company focuses on providing small and medium-sized
       companies and private individuals with hosted solutions that combine
       scalable and standardized products.
+
+
+      **Technologies:** WordPress, Linux, Apache, PHP, MySQL, ProtoType
     endDate: 2011-06-01T12:00:00.000Z
     projectName: Product Matrix WordPress Extension
     startDate: 2011-06-01T12:00:00.000Z
@@ -353,6 +356,10 @@ items:
       We developed a custom Magento theme and several Magento extensions for
       product display, inventory management and administration. We also assisted
       with QA testing and debugging of (other) Magento e-commerce installations.
+
+
+      **Technologies:** Magento, Linux, Apache, PHP, MySQL, Prototype, GD,
+      ImageMagick & Imagick for PHP, GhostScript (PDF), SVN
     endDate: 2011-04-01T12:00:00.000Z
     projectName: ExtremeAudio E-Commerce Website
     startDate: 2011-04-01T12:00:00.000Z
@@ -363,6 +370,12 @@ items:
       live style editing, adjustable print resolution output, image processing
       via GD or Imagick, and export to major publishing formats including TIFF,
       EPS and PDF.
+
+
+      **Technologies:** WordPress, Linux, Apache, PHP, MySQL, jQuery, Mootools,
+      Moo4Q, GD, ImageMagick & Imagick for PHP, GhostScript (PDF), C#, ASP.NET
+      MVC, Entity Framework, T-SQL, SQL Server, Visual Studio, Windows Server,
+      IIS, SVN
     endDate: 2010-09-01T12:00:00.000Z
     projectName: Online Affiliate Portal
     startDate: 2010-09-01T12:00:00.000Z
@@ -370,6 +383,10 @@ items:
     description: >-
       Designed and implemented a custom e-commerce theme and several extensions
       for the OpenCart e-commerce system.
+
+
+      **Technologies:** OpenCart, Linux, Apache, PHP, MySQL, jQuery, GD,
+      ImageMagick & Imagick for PHP, GhostScript (PDF)
     endDate: 2010-06-01T12:00:00.000Z
     projectName: MyFoneRecycle E-Commerce Website
     startDate: 2010-06-01T12:00:00.000Z
@@ -382,6 +399,10 @@ items:
       style editing, adjustable print resolution output, image processing via GD
       or Imagick, and export to major publishing formats including TIFF, EPS and
       PDF.
+
+
+      **Technologies:** OpenCart, Linux, Apache, PHP, MySQL, jQuery, Mootools,
+      Moo4Q, GD, ImageMagick & Imagick for PHP, GhostScript (PDF)
     endDate: 2010-04-01T12:00:00.000Z
     projectName: Gorilla Print UK E-Commerce Website
     startDate: 2010-04-01T12:00:00.000Z
@@ -391,6 +412,10 @@ items:
       for the OpenCart e-commerce system. Customizations include a one-step
       checkout system as well as a custom payment extension for ‘Thai
       e-Payments’.
+
+
+      **Technologies:** OpenCart, Linux, Apache, PHP, MySQL, jQuery, GD,
+      ImageMagick & Imagick for PHP, GhostScript (PDF)
     endDate: 2010-01-01T12:00:00.000Z
     projectName: Wholesale Silver Jewelry E-Commerce Website
     startDate: 2010-01-01T12:00:00.000Z
@@ -401,6 +426,9 @@ items:
       management platform, which we also built, based on a project we helped
       contribute to called the TACGA (Thai Animation and Computer Graphics
       Association) Media Management System.
+
+
+      **Technologies:** Linux, Apache, PHP, MySQL, jQuery, FFmpeg, Adobe Flash
     endDate: 2009-08-01T12:00:00.000Z
     projectName: Binc VFX Website and Asset Management System
     startDate: 2009-08-01T12:00:00.000Z
@@ -412,6 +440,10 @@ items:
       movie featuring a family of elephants). We designed a custom theme and
       several custom extensions for Joomla CMS, including extensions for
       managing photo/video assets.
+
+
+      **Technologies:** Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg,
+      Adobe Flash
     endDate: 2009-03-01T12:00:00.000Z
     projectName: Kantana Animation Studios Website
     startDate: 2009-03-01T12:00:00.000Z
@@ -421,6 +453,10 @@ items:
       Thailand, Malaysia and Singapore. We designed a custom theme and several
       custom extensions for Joomla CMS, including extensions for managing
       photo/video assets, and a custom-made membership component.
+
+
+      **Technologies:** Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg,
+      Adobe Flash
     endDate: 2008-10-01T12:00:00.000Z
     projectName: R1 Club Website
     startDate: 2008-10-01T12:00:00.000Z
@@ -430,6 +466,10 @@ items:
       East Asia. We designed a custom theme and several custom extensions for
       Joomla CMS, including extensions for managing photo/video assets, and a
       custom-made membership component.
+
+
+      **Technologies:** Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg,
+      Adobe Flash
     endDate: 2008-07-01T12:00:00.000Z
     projectName: LUXE Galleria Website
     startDate: 2008-07-01T12:00:00.000Z
@@ -437,6 +477,10 @@ items:
     description: >-
       We designed a custom theme and several custom extensions for Joomla CMS,
       including extensions for managing photo/video assets.
+
+
+      **Technologies:** Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg,
+      Adobe Flash
     endDate: 2008-04-01T12:00:00.000Z
     projectName: Bangkok International Film Festival 2008 Website
     startDate: 2008-04-01T12:00:00.000Z
