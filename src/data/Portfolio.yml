@@ -1,357 +1,366 @@
 title: Portfolio
 items:
-  #- projectName:
-  #  client:
-  #  startDate: 2019-04-01 12:00:00
-  #  endDate: 2019-04-01 12:00:00
-  #  url:
-  #  image:
-  #  description: >-
-  - projectName: Procurement Services Division Time Machine
-    client: AOT Technologies / Government of British Columbia
-    startDate: 2019-03-01 12:00:00
-    endDate: 2019-04-01 12:00:00
-    url:
-    image: /images/portfolio/bc-showcase-app-timemachine.png
+  - client: AOT Technologies / Government of British Columbia
     description: >-
-      The Ministry of Citizens' Services, Procurement Services Division's TimeMachine system is an operationally
-      critical application that provides time tracking and project information to support the Procurement Services
+      The Ministry of Citizens' Services, Procurement Services Division's
+      TimeMachine system is an operationally critical application that provides
+      time tracking and project information to support the Procurement Services
       Division’s billing processes.
-  - projectName: Ideal Automotive Finance Solutions
-    client: Interdynamix
-    startDate: 2017-07-01 12:00:00
-    endDate: 2019-02-01 12:00:00
-    url:
+    endDate: 2019-04-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-app-timemachine.png
+    projectName: Procurement Services Division Time Machine
+    startDate: 2019-03-01T12:00:00.000Z
+  - client: Interdynamix
+    description: >-
+      Ideal is a automotive fintech startup (incubated in-house by a company
+      called Interdynamix) whose main product offering is a SaaS-style
+      machine-learning enhanced Business Intelligence platform for automotive
+      inventory holders, retailers, and lenders. Each platform ‘pod’ consists of
+      a custom hybrid client-side app which communicates using RESTful APIs with
+      headless web API service instances representing the inventory holders,
+      retailers, and lenders to a particular organization. The distributed
+      backends (API) are written in Java using Spring Boot and Hibernate, and
+      communicate with each other using RabbitMQ message broker software;
+      information is stored in PostgreSQL databases. SSO-style authentication is
+      handled using Red Hat’s Keycloak.
+
+
+      **TOOLS AND TECHNOLOGIES:** HTML5, ES6, ES7, SASS, JSX, ReactJS, Flux,
+      Material-UI, MobX, React-Bootstrap, DevExpress, Bluebird, Java, Spring
+      Boot, Hibernate, Swagger, Swagger Codegen, OpenAPI, PostgreSQL, RabbitMQ,
+      Keycloak, Gulp, Webpack, Karma, Mocha, Chai, Expect.js, Jest, Docker,
+      Kubernetes, VirtualBox, WebStorm, Spring Tool Suite, Adobe CC (Photoshop,
+      Illustrator, etc.), RESTful API design, UI Design, GitLab, Git
+    endDate: 2019-02-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-ideal.png
+    projectName: Ideal Automotive Finance Solutions
+    startDate: 2017-07-01T12:00:00.000Z
+  - client: Phobulous Noodle House
     description: >-
-      Ideal is a automotive fintech startup (incubated in-house by a company called Interdynamix) whose main
-      product offering is a SaaS-style machine-learning enhanced Business Intelligence platform for automotive
-      inventory holders, retailers, and lenders. Each platform ‘pod’ consists of a custom hybrid client-side app
-      which communicates using RESTful APIs with headless web API service instances representing the inventory
-      holders, retailers, and lenders to a particular organization. The distributed backends (API) are written
-      in Java using Spring Boot and Hibernate, and communicate with each other using RabbitMQ message broker
-      software; information is stored in PostgreSQL databases. SSO-style authentication is handled using Red
-      Hat’s Keycloak.
-  - projectName: Phobulous Restaurant Website
-    client: Phobulous Noodle House
-    startDate: 2017-04-01 12:00:00
-    endDate: 2017-04-01 12:00:00
-    url:
+      We designed a custom SPA-style mobile-friendly Asian-styled theme for
+      their website featuring CSS animations and a custom menu component. A
+      customized build of OpenCart is used on the backend for content and
+      product management.
+    endDate: 2017-04-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-phobulous.png
+    projectName: Phobulous Restaurant Website
+    startDate: 2017-04-01T12:00:00.000Z
+  - client: Caffe Tech 2004 Ltd.
     description: >-
-      We designed a custom SPA-style mobile-friendly Asian-styled theme for their website featuring CSS
-      animations and a custom menu component. A customized build of OpenCart is used on the backend for content
-      and product management.
-  - projectName: iOS Tablet Point-of-Sale
-    client: Caffe Tech 2004 Ltd.
-    startDate: 2015-09-01 12:00:00
-    endDate: 2016-04-01 12:00:00
-    url:
+      Caffe Tech is an Edmonton based importer and distributor of premium
+      (primarily Italian and Swiss) commercial and home coffee equipment which
+      provides many popular Albertan establishments with their restaurant and
+      coffee making equipment.
+
+      Caffe Tech required a tablet-based point-of-sale app, supporting
+      peripheral devices including Star Micronics point-of-sale equipment, that
+      would integrate with their existing e-commerce/accounting APIs, and
+      replace their existing PixelPoint point-of-sale systems. Supported
+      peripheral devices included Star Micronics Bluetooth and Wireless cash
+      drawers, ticket and receipt printers, and barcode scanners.
+    endDate: 2016-04-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-quickcommerce.png
+    projectName: iOS Tablet Point-of-Sale
+    startDate: 2015-09-01T12:00:00.000Z
+  - client: Baan Saowanee
     description: >-
-      Caffe Tech is an Edmonton based importer and distributor of premium (primarily Italian and Swiss)
-      commercial and home coffee equipment which provides many popular Albertan establishments with their
-      restaurant and coffee making equipment.
-  
-      Caffe Tech required a tablet-based point-of-sale app, supporting peripheral devices including
-      Star Micronics point-of-sale equipment, that would integrate with their existing e-commerce/accounting
-      APIs, and replace their existing PixelPoint point-of-sale systems. Supported peripheral devices included
-      Star Micronics Bluetooth and Wireless cash drawers, ticket and receipt printers, and barcode scanners.
-  - projectName: Baan Saowanee
-    client: Baan Saowanee
-    startDate: 2015-09-01 12:00:00
-    endDate: 2016-04-01 12:00:00
-    url:
+      Baan Saowanee is a collection of holiday home rentals situated on the
+      north side of Ko Samui island, a short 2 minute drive to scenic Mae Nam
+      Beach. Baan Saowanee guests have a range of rental options to choose from,
+      dependent upon the number of persons and quality of accommodation.
+    endDate: 2016-04-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-baansao.png
+    projectName: Baan Saowanee
+    startDate: 2015-09-01T12:00:00.000Z
+  - client: Video Entertainment Systems Technology Ltd.
     description: >-
-      Baan Saowanee is a collection of holiday home rentals situated on the north side of Ko Samui island,
-      a short 2 minute drive to scenic Mae Nam Beach. Baan Saowanee guests have a range of rental options to choose
-      from, dependent upon the number of persons and quality of accommodation.
-  - projectName: VEST Tablet & Kiosk Apps
-    client: Video Entertainment Systems Technology Ltd.
-    startDate: 2016-05-01 12:00:00
-    endDate: 2016-11-01 12:00:00
-    url:
+      Video Systems Entertainment Technology (VEST) is an Edmonton company that
+      provides self-serve program kiosks to (horse/harness/greyhound) racetracks
+      and off-track-betting sites in Canada, the US and the Caribbean. Some of
+      the products offered on the kiosks are full programs, profile sheets,
+      singles races and IP sheets.
+
+      At the behest of the LSE-listed (London Stock Exchange) Sportech PLC – one
+      of VEST’s clients – we were contracted to develop a hybrid mobile
+      application for deployment on tablets, Linux kiosks and smart televisions
+      which replicates (and furthers) the functionality available in their
+      existing kiosk system. These tablets are currently being deployed in
+      multiple off-track-betting locations in the continental USA.
+    endDate: 2016-11-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-vest.png
+    projectName: VEST Tablet & Kiosk Apps
+    startDate: 2016-05-01T12:00:00.000Z
+  - client: Jimmy Poblano's Mexican Cantina
     description: >-
-      Video Systems Entertainment Technology (VEST) is an Edmonton company that provides self-serve program
-      kiosks to (horse/harness/greyhound) racetracks and off-track-betting sites in Canada, the US and the
-      Caribbean. Some of the products offered on the kiosks are full programs, profile sheets, singles races and
-      IP sheets.
-  
-      At the behest of the LSE-listed (London Stock Exchange) Sportech PLC – one of VEST’s clients – we were
-      contracted to develop a hybrid mobile application for deployment on tablets, Linux kiosks and smart
-      televisions which replicates (and furthers) the functionality available in their existing kiosk system.
-      These tablets are currently being deployed in multiple off-track-betting locations in the continental USA.
-    testimonialId: phase3
-  - projectName: Jimmy Poblanos Food Truck Website
-    client: Jimmy Poblano's Mexican Cantina
-    startDate: 2016-05-01 12:00:00
-    endDate: 2016-05-01 12:00:00
-    url:
+      We designed a custom SPA-style mobile-friendly Mexican-styled theme for
+      their website featuring completely custom artwork, parallax scrolling
+      effects and a custom menu component. A customized build of OpenCart is
+      used on the backend for content and product management.
+    endDate: 2016-05-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-jimmy-poblanos.png
+    projectName: Jimmy Poblanos Food Truck Website
+    startDate: 2016-05-01T12:00:00.000Z
+  - client: Caffe Tech 2004 Ltd.
     description: >-
-      We designed a custom SPA-style mobile-friendly Mexican-styled theme for their website featuring completely
-      custom artwork, parallax scrolling effects and a custom menu component. A customized build of OpenCart is
-      used on the backend for content and product management.
-    testimonialId: jimmyp
-  - projectName: Caffe Tech Inventory Management and Data Bridge
-    client: Caffe Tech 2004 Ltd.
-    startDate: 2015-09-01 12:00:00
-    endDate: 2016-04-01 12:00:00
-    url:
+      Caffe Tech is an Edmonton based importer and distributor of premium
+      (primarily Italian and Swiss) commercial and home coffee equipment which
+      provides many popular Albertan establishments with their restaurant and
+      coffee making equipment.
+
+      As Caffe Tech was expanding their business and opening multiple new
+      locations, they needed an inventory management solution that would
+      synchronize their QuickBooks Desktop / Online customers, inventory and
+      stock levels, invoices, work orders and more with their existing
+      e-commerce websites (Caffe Tech, Leva, ACE Coffee Roasters). We designed
+      an event-driven software bridge, composed of an OAuth2 secured RESTful
+      micro-service, and custom ‘client’ extensions for Magento and OpenCart,
+      that automatically handled synchronization of all data across multiple
+      installations and software systems using a combination of PHP, Slim,
+      Doctrine ORM/DBAL, MySQL and the QuickBooks Online API and Desktop SDK.
+    endDate: 2016-04-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-quickcommerce.png
+    projectName: Caffe Tech Inventory Management and Data Bridge
+    startDate: 2015-09-01T12:00:00.000Z
+  - client: Caffe Tech / Cafe Leva
     description: >-
-      Caffe Tech is an Edmonton based importer and distributor of premium (primarily Italian and Swiss)
-      commercial and home coffee equipment which provides many popular Albertan establishments with their
-      restaurant and coffee making equipment.
-
-      As Caffe Tech was expanding their business and opening multiple new locations, they needed an inventory
-      management solution that would synchronize their QuickBooks Desktop / Online customers, inventory and
-      stock levels, invoices, work orders and more with their existing e-commerce websites (Caffe Tech, Leva,
-      ACE Coffee Roasters). We designed an event-driven software bridge, composed of an OAuth2 secured RESTful
-      micro-service, and custom ‘client’ extensions for Magento and OpenCart, that automatically handled
-      synchronization of all data across multiple installations and software systems using a combination of PHP,
-      Slim, Doctrine ORM/DBAL, MySQL and the QuickBooks Online API and Desktop SDK.
-  - projectName: Leva Website
-    client: Caffe Tech / Cafe Leva
-    startDate: 2015-08-01 12:00:00
-    endDate: 2015-08-01 12:00:00
-    url:
-    image: /images/portfolio/bc-showcase-cafe-leva.png
-    description: >-
-      We designed a custom SPA-style mobile-friendly Mexican-styled theme for their website featuring completely
-      custom artwork, parallax scrolling effects and a custom menu component. A customized build of OpenCart is
+      We designed a custom SPA-style mobile-friendly Mexican-styled theme for
+      their website featuring completely custom artwork, parallax scrolling
+      effects and a custom menu component. A customized build of OpenCart is
       used on the backend for content and product management.
-  - projectName: Corrpro Corrosion Reporting Application
-    client: Corrpro (Canada)
-    startDate: 2015-05-01 12:00:00
-    endDate: 2015-05-01 12:00:00
-    url:
+    endDate: 2015-08-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-cafe-leva.png
+    projectName: Leva Website
+    startDate: 2015-08-01T12:00:00.000Z
+  - client: Corrpro (Canada)
+    description: >-
+      Corrpro provides corrosion control materials and services including -
+      engineering, pipeline integrity, construction and protective coating
+      inspection - throughout North America, Europe, the Middle East and South
+      Africa. We designed and developed a custom Windows Desktop application to
+      help track corrosion levels of pipelines and storage tanks at thousands of
+      industrial locations across Alberta.
+    endDate: 2015-05-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-corrpro.png
+    projectName: Corrpro Corrosion Reporting Application
+    startDate: 2015-05-01T12:00:00.000Z
+  - client: Challenger Fleet Management Solutions
     description: >-
-      Corrpro provides corrosion control materials and services including - engineering, pipeline integrity,
-      construction and protective coating inspection - throughout North America, Europe, the Middle East and
-      South Africa. We designed and developed a custom Windows Desktop application to help track corrosion levels
-      of pipelines and storage tanks at thousands of industrial locations across Alberta.
-  - projectName: Challenger Fleet Management System
-    client: Challenger Fleet Management Solutions
-    startDate: 2015-04-01 12:00:00
-    endDate: 2015-04-01 12:00:00
-    url:
+      Challenger Fleet Management Solutions specializes in long term vehicle
+      rentals for industrial projects. We architected, designed and spearheaded
+      the development of a custom fleet-management application which served to
+      streamline business processes including tracking vehicle inventory,
+      coordinating the equipment of vehicles with specialized accessories
+      required for industrial projects, coordinating deliveries on or before the
+      time vehicle units are required on site, monitoring manufacturer recall
+      programs, invoicing and basic accounting, and the generation of customized
+      reports to clients while vehicle units are on rent.
+    endDate: 2015-04-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-challenger-02.png
+    projectName: Challenger Fleet Management System
+    startDate: 2015-04-01T12:00:00.000Z
+  - client: Caffe Tech 2004 Ltd.
     description: >-
-      Challenger Fleet Management Solutions specializes in long term vehicle rentals for industrial projects.
-      We architected, designed and spearheaded the development of a custom fleet-management application which
-      served to streamline business processes including tracking vehicle inventory, coordinating the equipment
-      of vehicles with specialized accessories required for industrial projects, coordinating deliveries on or
-      before the time vehicle units are required on site, monitoring manufacturer recall programs, invoicing and
-      basic accounting, and the generation of customized reports to clients while vehicle units are on rent.
-  - projectName: Caffe Tech Magento Store
-    client: Caffe Tech 2004 Ltd.
-    startDate: 2015-01-01 12:00:00
-    endDate: 2015-01-01 12:00:00
-    url:
+      Caffe Tech is an Edmonton based importer and distributor of premium
+      (primarily Italian and Swiss) commercial and home coffee equipment which
+      provides many popular Albertan establishments with their restaurant and
+      coffee making equipment.
+
+      We designed a custom theme and a suite of custom extensions for Magento
+      including a custom payment extension for Global Payments (Canada) and a
+      shipping extension for Purolator’s Shipping API (SOAP) featuring item
+      tracking, support for multiple items per package, label printing,
+      international documents generation, and automatically scheduled package
+      pickups.
+    endDate: 2015-01-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-caffe-tech.png
+    projectName: Caffe Tech Magento Store
+    startDate: 2015-01-01T12:00:00.000Z
+  - client: Alberta Motor Association
     description: >-
-      Caffe Tech is an Edmonton based importer and distributor of premium (primarily Italian and Swiss)
-      commercial and home coffee equipment which provides many popular Albertan establishments with their
-      restaurant and coffee making equipment.
+      The Alberta Motor Association was looking to replace its legacy and
+      end-of-life ‘FrontTier’ insurance policy management system with an
+      in-house, web-based application and backend service network.
 
-      We designed a custom theme and a suite of custom extensions for Magento including a custom payment
-      extension for Global Payments (Canada) and a shipping extension for Purolator’s Shipping API (SOAP)
-      featuring item tracking, support for multiple items per package, label printing, international documents
-      generation, and automatically scheduled package pickups.
-  - projectName: AgentView Insurance Policy Management System
-    client: Alberta Motor Association
-    startDate: 2013-08-01 12:00:00
-    endDate: 2014-11-01 12:00:00
-    url:
+      We spearheaded the overhaul of AMA’s web-based AgentView insurance
+      management system and the network of .NET Web API and WCF services that
+      supports it. The scope of work involved a complete rewrite of AgentView’s
+      client and server applications as well as complete UI redesign (a previous
+      external contractor had failed). We was also responsible for UI/UX design
+      related to internal and external web-based applications.
+    endDate: 2014-11-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-agentview.png
+    projectName: AgentView Insurance Policy Management System
+    startDate: 2013-08-01T12:00:00.000Z
+  - client: Alberta Motor Association
     description: >-
-      The Alberta Motor Association was looking to replace its legacy and end-of-life ‘FrontTier’ insurance
-      policy management system with an in-house, web-based application and backend service network.
+      The Alberta Motor Association needed a new web-based and mobile friendly
+      system to provide customers with customized home and tenant insurance
+      quotes. The new application replaced their legacy web application,
+      developed in C# using ASP.NET Web Forms, which was not mobile friendly.
 
-      We spearheaded the overhaul of AMA’s web-based AgentView insurance management system and the network of
-      .NET Web API and WCF services that supports it. The scope of work involved a complete rewrite of
-      AgentView’s client and server applications as well as complete UI redesign (a previous external contractor
-      had failed). We was also responsible for UI/UX design related to internal and external web-based
-      applications.
-  - projectName: Home Insurance Quote Web Application
-    client: Alberta Motor Association
-    startDate: 2013-05-01 12:00:00
-    endDate: 2013-05-01 12:00:00
-    url:
+      We designed and developed a new web application consisting of a
+      responsive, mobile-friendly JavaScript client and a ASP.NET Web API
+      backend, re-using code for certain procedures, functions and business
+      logic where possible.
+    endDate: 2013-05-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-homequote.png
+    projectName: Home Insurance Quote Web Application
+    startDate: 2013-05-01T12:00:00.000Z
+  - client: Alberta Motor Association
     description: >-
-      The Alberta Motor Association needed a new web-based and mobile friendly system to provide customers with
-      customized home and tenant insurance quotes. The new application replaced their legacy web application,
-      developed in C# using ASP.NET Web Forms, which was not mobile friendly.
+      The Alberta Motor Association needed a new web-based and mobile friendly
+      system to provide customers with customized automobile insurance quotes.
+      The new application replaced their legacy web application, developed in C#
+      using ASP.NET Web Forms, which was not mobile friendly.
 
-      We designed and developed a new web application consisting of a responsive, mobile-friendly JavaScript
-      client and a ASP.NET Web API backend, re-using code for certain procedures, functions and business logic
-      where possible.
-  - projectName: Auto Insurance Quote Web Application
-    client: Alberta Motor Association
-    startDate: 2013-03-01 12:00:00
-    endDate: 2013-03-01 12:00:00
-    url:
+      We designed and developed a new web application consisting of a
+      responsive, mobile-friendly JavaScript client and a ASP.NET Web API
+      backend, re-using code for certain procedures, functions and business
+      logic where possible.
+    endDate: 2013-03-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-autoquote.png
+    projectName: Auto Insurance Quote Web Application
+    startDate: 2013-03-01T12:00:00.000Z
+  - client: Carsgone (Magazine)
     description: >-
-      The Alberta Motor Association needed a new web-based and mobile friendly system to provide customers with
-      customized automobile insurance quotes. The new application replaced their legacy web application,
-      developed in C# using ASP.NET Web Forms, which was not mobile friendly.
+      CarsGone is an Edmonton-based, nationally spanning automotive classifieds
+      magazine and website with a print distribution network across Alberta and
+      Ontario. At the time, they had over 90,000 vehicles from over 600
+      dealerships listed on their website.
 
-      We designed and developed a new web application consisting of a responsive, mobile-friendly JavaScript
-      client and a ASP.NET Web API backend, re-using code for certain procedures, functions and business logic
-      where possible.
-  - projectName: Carsgone.com
-    client: Carsgone (Magazine)
-    startDate: 2012-03-01 12:00:00
-    endDate: 2012-03-01 12:00:00
-    url:
+      We created an online marketplace/classifieds site for listing vehicles
+      serving independent buyers and sellers as well as hundreds of dealerships
+      across Canada. Vehicle listings were either posted by end-users or
+      aggregated using data providers from organizations including Strathcom
+      Media and Boost Motor Group for display.
+    endDate: 2012-03-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-carsgone.png
+    projectName: Carsgone.com
+    startDate: 2012-03-01T12:00:00.000Z
+  - client: Spasation
     description: >-
-      CarsGone is an Edmonton-based, nationally spanning automotive classifieds magazine and website with a
-      print distribution network across Alberta and Ontario. At the time, they had over 90,000 vehicles from
-      over 600 dealerships listed on their website.
-
-      We created an online marketplace/classifieds site for listing vehicles serving independent buyers and
-      sellers as well as hundreds of dealerships across Canada. Vehicle listings were either posted by end-users
-      or aggregated using data providers from organizations including Strathcom Media and Boost Motor Group for
-      display.
-    testimonialId: carsgone
-  - projectName: Spasation Website and Online Store
-    client: Spasation
-    startDate: 2011-11-01 12:00:00
-    endDate: 2011-11-01 12:00:00
-    url:
+      Spasation is an Alberta-based chain of spas/salons. Uses a customized
+      build of OpenCart for content and product management.
+    endDate: 2011-11-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-spasation.png
+    projectName: Spasation Website and Online Store
+    startDate: 2011-11-01T12:00:00.000Z
+  - client: RMG Selection
     description: >-
-      Spasation is an Alberta-based chain of spas/salons. Uses a customized build of OpenCart for content and product
-      management.
-    testimonialId: spasation
-  - projectName: RMG Selection Recruitment Portal v3
-    client: RMG Selection
-    startDate: 2011-09-01 12:00:00
-    endDate: 2011-09-01 12:00:00
-    url:
+      RMG Selection is an award-winning, China-focused international recruitment
+      and HR consultancy business with over 30 offices around the world. We
+      designed, developed and helped maintain the RMG Selection’s HR recruitment
+      website for over 6 years. This 2014 rebuild of the site was the winner of
+      the ‘Best Job Board’ award at the 2014 Global Recruiter Asia Pacific
+      Awards ceremony in Singapore.
+    endDate: 2011-09-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-rmg-selection.png
+    projectName: RMG Selection Recruitment Portal v3
+    startDate: 2011-09-01T12:00:00.000Z
+  - client: Active24
     description: >-
-      RMG Selection is an award-winning, China-focused international recruitment and HR consultancy business with over
-      30 offices around the world. We designed, developed and helped maintain the RMG Selection’s HR recruitment website
-      for over 6 years. This 2014 rebuild of the site was the winner of the ‘Best Job Board’ award at the 2014 Global
-      Recruiter Asia Pacific Awards ceremony in Singapore.
-  - projectName: Product Matrix WordPress Extension
-    client: Active24
-    startDate: 2011-06-01 12:00:00
-    endDate: 2011-06-01 12:00:00
-    url:
-    image:
+      Active 24 is an independent pan-European provider of Internet hosting
+      services. The company focuses on providing small and medium-sized
+      companies and private individuals with hosted solutions that combine
+      scalable and standardized products.
+    endDate: 2011-06-01T12:00:00.000Z
+    projectName: Product Matrix WordPress Extension
+    startDate: 2011-06-01T12:00:00.000Z
+  - client: SoftControl
     description: >-
-      Active 24 is an independent pan-European provider of Internet hosting services. The company focuses on providing
-      small and medium-sized companies and private individuals with hosted solutions that combine scalable and
-      standardized products.
-    testimonialId: active24
-  - projectName: ExtremeAudio E-Commerce Website
-    client: SoftControl
-    startDate: 2011-04-01 12:00:00
-    endDate: 2011-04-01 12:00:00
-    url:
-    image:
+      Founded in Bangkok in 1993 by a team of German and Thai entrepreneurs,
+      SoftControl delivers IT services and solutions to more than 200 local and
+      international customers including small and medium size companies as well
+      as enterprise level businesses. SoftControl is a Microsoft Gold solutions
+      partner.
+
+      We developed a custom Magento theme and several Magento extensions for
+      product display, inventory management and administration. We also assisted
+      with QA testing and debugging of (other) Magento e-commerce installations.
+    endDate: 2011-04-01T12:00:00.000Z
+    projectName: ExtremeAudio E-Commerce Website
+    startDate: 2011-04-01T12:00:00.000Z
+  - client: Xtend-Life
     description: >-
-      Founded in Bangkok in 1993 by a team of German and Thai entrepreneurs, SoftControl delivers IT services and
-      solutions to more than 200 local and international customers including small and medium size companies as well as
-      enterprise level businesses. SoftControl is a Microsoft Gold solutions partner.
-  
-      We developed a custom Magento theme and several Magento extensions for product display, inventory management and
-      administration. We also assisted with QA testing and debugging of (other) Magento e-commerce installations.
-  - projectName: Online Affiliate Portal
-    client: Xtend-Life
-    startDate: 2010-09-01 12:00:00
-    endDate: 2010-09-01 12:00:00
-    url:
-    image:
+      Developed a business card publishing plugin for WordPress CMS with
+      features including AJAX WYSIWYG editing, custom file upload and placement,
+      live style editing, adjustable print resolution output, image processing
+      via GD or Imagick, and export to major publishing formats including TIFF,
+      EPS and PDF.
+    endDate: 2010-09-01T12:00:00.000Z
+    projectName: Online Affiliate Portal
+    startDate: 2010-09-01T12:00:00.000Z
+  - client: Smart Traffic/Smart Site
     description: >-
-      Developed a business card publishing plugin for WordPress CMS with features including AJAX WYSIWYG editing,
-      custom file upload and placement, live style editing, adjustable print resolution output, image processing via GD
-      or Imagick, and export to major publishing formats including TIFF, EPS and PDF.
-  - projectName: MyFoneRecycle E-Commerce Website
-    client: Smart Traffic/Smart Site
-    startDate: 2010-06-01 12:00:00
-    endDate: 2010-06-01 12:00:00
-    url:
-    image:
+      Designed and implemented a custom e-commerce theme and several extensions
+      for the OpenCart e-commerce system.
+    endDate: 2010-06-01T12:00:00.000Z
+    projectName: MyFoneRecycle E-Commerce Website
+    startDate: 2010-06-01T12:00:00.000Z
+  - client: Smart Traffic/Smart Site
     description: >-
-      Designed and implemented a custom e-commerce theme and several extensions for the OpenCart e-commerce system.
-  - projectName: Gorilla Print UK E-Commerce Website
-    client: Smart Traffic/Smart Site
-    startDate: 2010-04-01 12:00:00
-    endDate: 2010-04-01 12:00:00
-    url:
-    image:
+      Designed and implemented a custom e-commerce theme and several extensions
+      for the OpenCart e-commerce system. Customizations include a one-step
+      checkout system as well a publishing plugin for OpenCart with features
+      including AJAX WYSIWYG editing, custom file upload and placement, live
+      style editing, adjustable print resolution output, image processing via GD
+      or Imagick, and export to major publishing formats including TIFF, EPS and
+      PDF.
+    endDate: 2010-04-01T12:00:00.000Z
+    projectName: Gorilla Print UK E-Commerce Website
+    startDate: 2010-04-01T12:00:00.000Z
+  - client: Smart Traffic/Smart Site
     description: >-
-      Designed and implemented a custom e-commerce theme and several extensions for the OpenCart e-commerce system.
-      Customizations include a one-step checkout system as well a publishing plugin for OpenCart with features including
-      AJAX WYSIWYG editing, custom file upload and placement, live style editing, adjustable print resolution output,
-      image processing via GD or Imagick, and export to major publishing formats including TIFF, EPS and PDF.
-  - projectName: Wholesale Silver Jewelry E-Commerce Website
-    client: Smart Traffic/Smart Site
-    startDate: 2010-01-01 12:00:00
-    endDate: 2010-01-01 12:00:00
-    url:
-    image:
+      Designed and implemented a custom e-commerce theme and several extensions
+      for the OpenCart e-commerce system. Customizations include a one-step
+      checkout system as well as a custom payment extension for ‘Thai
+      e-Payments’.
+    endDate: 2010-01-01T12:00:00.000Z
+    projectName: Wholesale Silver Jewelry E-Commerce Website
+    startDate: 2010-01-01T12:00:00.000Z
+  - client: Nfineon
     description: >-
-      Designed and implemented a custom e-commerce theme and several extensions for the OpenCart e-commerce system.
-      Customizations include a one-step checkout system as well as a custom payment extension for ‘Thai e-Payments’.
-  - projectName: Binc VFX Website and Asset Management System
-    client: Nfineon
-    startDate: 2009-08-01 12:00:00
-    endDate: 2009-08-01 12:00:00
-    url:
-    image:
+      Binc VFX was a boutique visual effects studio in Bangkok, Thailand. We
+      designed a custom website that integrated with their custom asset
+      management platform, which we also built, based on a project we helped
+      contribute to called the TACGA (Thai Animation and Computer Graphics
+      Association) Media Management System.
+    endDate: 2009-08-01T12:00:00.000Z
+    projectName: Binc VFX Website and Asset Management System
+    startDate: 2009-08-01T12:00:00.000Z
+  - client: Nfineon
     description: >-
-      Binc VFX was a boutique visual effects studio in Bangkok, Thailand. We designed a custom website that integrated
-      with their custom asset management platform, which we also built, based on a project we helped contribute to called
-      the TACGA (Thai Animation and Computer Graphics Association) Media Management System.
-    testimonialId: bincvfx
-  - projectName: Kantana Animation Studios Website
-    client: Nfineon
-    startDate: 2009-03-01 12:00:00
-    endDate: 2009-03-01 12:00:00
-    url:
-    image:
-    description: >-
-      Kantana PCL (Public Company Limited) is Thailand's largest media organization. We was contracted to redesign their
-      animation studio’s website to correspond with the release of Khan Kluay 2 (a domestic CG movie featuring a family
-      of elephants). We designed a custom theme and several custom extensions for Joomla CMS, including extensions for
+      Kantana PCL (Public Company Limited) is Thailand's largest media
+      organization. We was contracted to redesign their animation studio’s
+      website to correspond with the release of Khan Kluay 2 (a domestic CG
+      movie featuring a family of elephants). We designed a custom theme and
+      several custom extensions for Joomla CMS, including extensions for
       managing photo/video assets.
-  - projectName: R1 Club Website
-    client: Nfineon
-    startDate: 2008-10-01 12:00:00
-    endDate: 2008-10-01 12:00:00
-    url:
-    image:
+    endDate: 2009-03-01T12:00:00.000Z
+    projectName: Kantana Animation Studios Website
+    startDate: 2009-03-01T12:00:00.000Z
+  - client: Nfineon
     description: >-
-      R1 Club was a membership-based luxury vehicle/yacht rental club in Thailand, Malaysia and Singapore. We designed a
-      custom theme and several custom extensions for Joomla CMS, including extensions for managing photo/video assets,
-      and a custom-made membership component.
-  - projectName: LUXE Galleria Website
-    client: Nfineon
-    startDate: 2008-07-01 12:00:00
-    endDate: 2008-07-01 12:00:00
-    url:
-    image:
+      R1 Club was a membership-based luxury vehicle/yacht rental club in
+      Thailand, Malaysia and Singapore. We designed a custom theme and several
+      custom extensions for Joomla CMS, including extensions for managing
+      photo/video assets, and a custom-made membership component.
+    endDate: 2008-10-01T12:00:00.000Z
+    projectName: R1 Club Website
+    startDate: 2008-10-01T12:00:00.000Z
+  - client: Nfineon
     description: >-
-      LUXE was a membership-based publication targeting haute-couture in South East Asia. We designed a custom theme and
-      several custom extensions for Joomla CMS, including extensions for managing photo/video assets, and a custom-made
-      membership component.
-  - projectName: Bangkok International Film Festival 2008 Website
-    client: Nfineon
-    startDate: 2008-04-01 12:00:00
-    endDate: 2008-04-01 12:00:00
-    url:
-    image:
+      LUXE was a membership-based publication targeting haute-couture in South
+      East Asia. We designed a custom theme and several custom extensions for
+      Joomla CMS, including extensions for managing photo/video assets, and a
+      custom-made membership component.
+    endDate: 2008-07-01T12:00:00.000Z
+    projectName: LUXE Galleria Website
+    startDate: 2008-07-01T12:00:00.000Z
+  - client: Nfineon
     description: >-
-      We designed a custom theme and several custom extensions for Joomla CMS, including extensions for managing
-      photo/video assets.
+      We designed a custom theme and several custom extensions for Joomla CMS,
+      including extensions for managing photo/video assets.
+    endDate: 2008-04-01T12:00:00.000Z
+    projectName: Bangkok International Film Festival 2008 Website
+    startDate: 2008-04-01T12:00:00.000Z
