@@ -7,7 +7,7 @@ items:
   #  url:
   #  image:
   #  description: >-
-  - projectName: Procurement Services Division Time Machine Pilot
+  - projectName: Procurement Services Division Time Machine
     client: AOT Technologies / Government of British Columbia
     startDate: 2019-03-01 12:00:00
     endDate: 2019-04-01 12:00:00
@@ -83,6 +83,7 @@ items:
       contracted to develop a hybrid mobile application for deployment on tablets, Linux kiosks and smart
       televisions which replicates (and furthers) the functionality available in their existing kiosk system.
       These tablets are currently being deployed in multiple off-track-betting locations in the continental USA.
+    testimonialId: phase3
   - projectName: Jimmy Poblanos Food Truck Website
     client: Jimmy Poblano's Mexican Cantina
     startDate: 2016-05-01 12:00:00
@@ -93,6 +94,7 @@ items:
       I designed a custom SPA-style mobile-friendly Mexican-styled theme for their website featuring completely
       custom artwork, parallax scrolling effects and a custom menu component. A customized build of OpenCart is
       used on the backend for content and product management.
+    testimonialId: jimmyp
   - projectName: Caffe Tech Inventory Management and Data Bridge
     client: Caffe Tech 2004 Ltd.
     startDate: 2015-09-01 12:00:00
@@ -218,6 +220,7 @@ items:
       sellers as well as hundreds of dealerships across Canada. Vehicle listings were either posted by end-users
       or aggregated using data providers from organizations including Strathcom Media and Boost Motor Group for
       display.
+    testimonialId: carsgone
   - projectName: Spasation Website and Online Store
     client: Spasation
     startDate: 2011-11-01 12:00:00
@@ -227,6 +230,7 @@ items:
     description: >-
       Spasation is an Alberta-based chain of spas/salons. Uses a customized build of OpenCart for content and product
       management.
+    testimonialId: spasation
   - projectName: RMG Selection Recruitment Portal v3
     client: RMG Selection
     startDate: 2011-09-01 12:00:00
@@ -248,6 +252,7 @@ items:
       Active 24 is an independent pan-European provider of Internet hosting services. The company focuses on providing
       small and medium-sized companies and private individuals with hosted solutions that combine scalable and
       standardized products.
+    testimonialId: active24
   - projectName: ExtremeAudio E-Commerce Website
     client: SoftControl
     startDate: 2011-04-01 12:00:00
@@ -299,16 +304,17 @@ items:
     description: >-
       Designed and implemented a custom e-commerce theme and several extensions for the OpenCart e-commerce system.
       Customizations include a one-step checkout system as well as a custom payment extension for ‘Thai e-Payments’.
-  - projectName: BincVFX Website and Asset Management System
+  - projectName: Binc VFX Website and Asset Management System
     client: Nfineon
     startDate: 2009-08-01 12:00:00
     endDate: 2009-08-01 12:00:00
     url:
     image:
     description: >-
-      BincVFX was a boutique visual effects studio in Bangkok, Thailand. I designed a custom website that integrated
-      with their custom asset management platform, which was largely based on a project I helped contribute to called
+      Binc VFX was a boutique visual effects studio in Bangkok, Thailand. I designed a custom website that integrated
+      with their custom asset management platform, which I also built, based on a project I helped contribute to called
       the TACGA (Thai Animation and Computer Graphics Association) Media Management System.
+    testimonialId: bincvfx
   - projectName: Kantana Animation Studios Website
     client: Nfineon
     startDate: 2009-03-01 12:00:00

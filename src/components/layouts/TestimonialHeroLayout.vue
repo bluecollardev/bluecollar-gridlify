@@ -17,7 +17,7 @@
             <img class="banner-image badge" src="/images/greg-and-steph-jimmy-poblanos.jpg" alt="" />
             <div class="space-left">
               <p><strong>Greg L.</strong></p>
-              <p>Jimmy Poblanos</p>
+              <p><small>Jimmy Poblanos</small></p>
             </div>
           </div>
         </div>

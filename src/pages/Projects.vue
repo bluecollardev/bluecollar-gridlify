@@ -32,6 +32,7 @@
           :key="project.projectName"
           class="timeline__item clearfix"
           :project="project"
+          :testimonial="getTestimonialById(project.testimonialId)"
         />
       </div>
     </section>
@@ -160,6 +161,19 @@
 
         if (items instanceof Array && items.length > idx) {
           return items[idx];
+        }
+
+        return null
+      },
+      getTestimonialById(id) {
+        if (!id) return null;
+
+        let items = this.testimonialContent.items.filter(item => {
+          return item.id === id;
+        });
+
+        if (items instanceof Array && items.length > 0) {
+          return items[0];
         }
 
         return null

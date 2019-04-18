@@ -18,6 +18,27 @@
         <img class="lozad" v-bind:src="this.project.image" sizes="(max-width: 40rem) 320px, 1280px" v-bind:srcset="getImagesSrcSet(this.project.image)" alt="" />
       </div>
       <div class="timeline__item__content__description" v-html="compiledDescription"></div>
+      <hr v-if="this.testimonial" class="space-top-half space-bottom-half" />
+      <div v-if="this.testimonial" class="timeline__item__content__description">
+        <!-- Testimonial -->
+        <div class="testimonial flex">
+          <div>
+            <div class="g-services">
+              <p><strong>{{ this.testimonial.testimonial }}</strong></p>
+            </div>
+            <div class="g-services flex flex-center space-top">
+              <img class="banner-image badge" v-bind:src="this.testimonial.image" alt="" />
+              <div class="space-left">
+                <p><strong>{{ `${this.testimonial.reviewedBy}` }}</strong></p>
+                <p>
+                  <small>{{ `${this.testimonial.position}` }}</small><br />
+                  <small>{{ `${this.testimonial.organization}` }}</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="timeline__item__content__techs">
         <span class="icon icon--html5"></span>
         <span class="icon icon--css3"></span>
@@ -41,6 +62,9 @@
 	export default {
 	  props: {
 	    project: {
+	      type: Object
+      },
+      testimonial: {
 	      type: Object
       }
     },
@@ -109,3 +133,28 @@
     }
   }
 </script>
+
+<style lang="scss">
+  img.badge {
+    width: 100px;
+    height: 100px;
+    -o-object-fit: cover;
+    max-width: none;
+    object-fit: cover;
+  }
+
+  .badge {
+      border-radius: 50%;
+  }
+
+  @media screen and (min-width: 1400px) {
+    .hero-testimonial .hero-image-wrapper img {
+      top: 10vh !important;
+    }
+
+    .hero-testimonial .testimonial {
+      position: relative;
+      top: -7vh;
+    }
+  }
+</style>

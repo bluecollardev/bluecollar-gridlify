@@ -1,6 +1,7 @@
 title: Testimonial Block
 items:
-  - testimonial: >-
+  - id: phase3
+    testimonial: >-
       "The people at Blue Collar just really want to make sure that their customers are satisfied. I'm looking forward to working with Blue Collar again on future projects."
     reviewedBy: Leigh W.
     position: President
@@ -8,7 +9,8 @@ items:
     link: ""
     linkText: ""
     image: /images/testimonials/phase3.leigh-w.jpg
-  - testimonial: >-
+  - id: active24
+    testimonial: >-
       "Working with Blue Collar was a positive experience. Their work was of high standard and their high availabilty made working with them across timezones easy."
     reviewedBy: Dirk S.
     position: Enterprise Architect
@@ -16,19 +18,39 @@ items:
     link: ""
     linkText: ""
     image: /images/testimonials/active24.dirk-s.jpg
-  - testimonial: >-
+  - id: carsgone
+    testimonial: >-
       "Blue Collar has done great work with us on Carsgone.com. We recommend Blue Collar as a competent and valuable partner in web development."
     reviewedBy: Ray R.
     position: President
     organization: Carsgone.com
     link: ""
     linkText: ""
-    image: /images/digital-marketing-testimonial-person.png
-  - testimonial: >-
+    image: /images/testimonials/carsgone.ray-r.jpg
+  - id: jimmyp
+    testimonial: >-
       "Blue Collar designed and implemented an amazing website for our business, combining the effective elements of a solid technical design with the functionality and visual appeal to engage our customers. We've seen an immediate increase in sales and flow through business."
     reviewedBy: Greg L.
     position: Owner
     organization: Jimmy Poblanos
     link: ""
     linkText: ""
-    image: /images/digital-marketing-testimonial-person.png
+    image: /images/greg-and-steph-jimmy-poblanos.jpg
+  - id: spasation
+    testimonial: >-
+      "I would highly recommend Blue Collar!"
+    reviewedBy: Danny A.
+    position: Director
+    organization: Spasation
+    link: ""
+    linkText: ""
+    image: /images/testimonials/spasation.danny-a.jpg
+  - id: bincvfx
+    testimonial: >-
+      "Blue Collar designed our current application and database for client management and asset tracking. We have also collaborated on several prototyping projects where their participation was enthusiastic and their contributions were innovative and valued."
+    reviewedBy: Brynley C.
+    position: Director
+    organization: Binc BKK VFX
+    link: ""
+    linkText: ""
+    image: /images/testimonials/bincvfx.bryn-c.jpg
