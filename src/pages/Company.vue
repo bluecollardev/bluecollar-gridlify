@@ -197,7 +197,7 @@
           testimonial="Blue Collar Dev #1"
           reviewedBy="Lucas Lopatka"
           position="Software Architect"
-          organization="Hello! I'm Lucas, and I am a Full-Stack Solutions Architect with 15 years of experience designing and building custom software applications. I design, wireframe, prototype, and develop mobile, hybrid and progressive apps. I also architect, implement and deploy scalable, cloud-based RESTful services and multi-tier micro-services for clients of all sizes located in Canada and abroad."
+          organization="Hello! I'm Lucas, and I am a Full-Stack Solutions Architect with 15 years of experience designing and building custom software applications. I design, wireframe, prototype, and develop mobile, hybrid and progressive apps. I also architect, implement and deploy scalable, cloud-based RESTful services and multi-tier micro-services for clients of all sizes located in Canada and abroad. When I'm not coding you'll probably find me shredding some pow, scuba diving, or trekking through the bush."
           image="/images/company/me-ski.jpg"
         />
       </div>
