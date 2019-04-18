@@ -27,34 +27,12 @@
     </section>
     <section id="portfolio" class="portfolio-items clearfix">
       <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix" >
-        <div v-for="project in portfolioItems" class="timeline__item clearfix">
-          <div class="timeline__item__date">{{ getFormattedDate(project) }}</div>
-          <div class="timeline__item__content">
-            <div class="timeline__item__content__logo">
-              <span class="icon icon--content-logo"></span>
-            </div>
-            <h4 class="timeline__item__content__subtitle">
-              Client: {{ project.client }}
-            </h4>
-            <h3 class="timeline__item__content__title">
-              {{ project.projectName }}
-            </h3>
-            <span class="timeline__item__content__subtitle">
-              {{ `${getFormattedStartDate(project)} - ${getFormattedEndDate(project)}` }}
-            </span>
-            <div v-if="typeof project.image === 'string' && project.image.length > 3" class="project-image pad-top pad-bottom">
-              <img class="lozad" v-bind:src="project.image" sizes="(max-width: 40rem) 320px, 1280px" v-bind:srcset="getImagesSrcSet(project.image)" alt="" />
-            </div>
-            <p class="timeline__item__content__description">
-              {{ project.description }}
-            </p>
-            <div class="timeline__item__content__techs">
-              <span class="icon icon--html5"></span>
-              <span class="icon icon--css3"></span>
-              <span class="icon icon--javascript"></span>
-            </div>
-          </div>
-        </div>
+        <portfolio-item
+          v-for="project in portfolioItems"
+          :key="project.projectName"
+          class="timeline__item clearfix"
+          :project="project"
+        />
       </div>
     </section>
     <Footer/>
@@ -67,11 +45,6 @@
 
   // Import components
   import Header from '~/components/Header.vue';
-  import Hero from '~/components/Hero.vue';
-  import Portfolio from '~/components/Portfolio.vue';
-  import About from '~/components/Home.vue';
-  import Blog from '~/components/Blog.vue';
-  import Contact from '~/components/Contact.vue';
   import Footer from '~/components/Footer.vue';
 
   // Import generic component layouts
@@ -79,6 +52,7 @@
   import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
+  import PortfolioItem from '~/components/portfolio/PortfolioItem.vue';
 
   // Import static data
   import HomeData from '~/data/Home.yml';
@@ -86,6 +60,8 @@
   import GeneralData from '~/data/General.yml';
   import TestimonialData from '~/data/Testimonial.yml';
   import PortfolioData from '~/data/Portfolio.yml';
+
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   export default {
     components: {
@@ -97,6 +73,7 @@
       SectionBlockLayout02Col02,
       ContentBlockLayout,
       TestimonialBlockLayout,
+      PortfolioItem
     },
     data() {
       return {
@@ -155,8 +132,6 @@
         startDate.setHours(0,0,0,0);
         endDate.setHours(0,0,0,0);
 
-        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
         // TODO: Display a range for long term projects?
         return `${months[startDate.getMonth()]} ${startDate.getFullYear()}`;
       },
@@ -167,8 +142,6 @@
         startDate.setHours(0,0,0,0);
         endDate.setHours(0,0,0,0);
 
-        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
         // TODO: Display a range for long term projects?
         return `${months[startDate.getMonth()]} ${startDate.getFullYear()}`;
       },
@@ -178,8 +151,6 @@
         // Normalize dates, we don't care about exact time anyway
         startDate.setHours(0,0,0,0);
         endDate.setHours(0,0,0,0);
-
-        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
         // TODO: Display a range for long term projects?
         return `${months[endDate.getMonth()]} ${endDate.getFullYear()}`;

@@ -154,7 +154,7 @@ collections:
               - { label: "Start Date", name: "startDate", widget: "datetime", required: false }
               - { label: "End Date", name: "endDate", widget: "datetime", required: false }
               - { label: "URL", name: "url", widget: "string", required: false }
-              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Description", name: "description", widget: "markdown", required: false }
               - { label: "Image", name: "image", widget: "string", required: false }
 
   - name: "widgets"

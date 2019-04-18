@@ -40,6 +40,7 @@
               </div>
             </div>
             <div class="sm-flex flex-center flex-justify-center flex-basis-third">
+            <div class="sm-flex flex-center flex-justify-center flex-basis-third">
               <div class="content-block">
                 <!--<content-block-layout
                   title="Creative design"
@@ -125,7 +126,6 @@
   // Import components
   import Header from '~/components/Header.vue';
   import Hero from '~/components/Hero.vue';
-  import Portfolio from '~/components/Portfolio.vue';
   import About from '~/components/Home.vue';
   import Blog from '~/components/Blog.vue';
   import Contact from '~/components/Contact.vue';
@@ -149,7 +149,6 @@
       // Inject components
       Header,
       Hero,
-      Portfolio,
       About,
       Blog,
       Contact,
