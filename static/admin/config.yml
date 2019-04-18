@@ -28,15 +28,15 @@ collections:
         file: "src/data/General.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "General" }
-          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: "false" }
-          - { label: "Meta Description", name: "metaDescription", widget: "text", required: "false" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
+          - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
           - name: "items"
             label: "Items"
             widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: "false" }
-              - { label: "Meta Description", name: "metaDescription", widget: "text", required: "false" }
+              - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
+              - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "markdown" }
 
@@ -45,8 +45,8 @@ collections:
         file: "src/data/Home.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Home" }
-          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: "false" }
-          - { label: "Meta Description", name: "metaDescription", widget: "text", required: "false" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
+          - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
           - name: "services"
             label: "Services"
             widget: "list"
@@ -68,8 +68,8 @@ collections:
         file: "src/data/Company.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Company" }
-          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: "false" }
-          - { label: "Meta Description", name: "metaDescription", widget: "text", required: "false" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
+          - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
           - name: "items"
             label: "Items"
             widget: "list"
@@ -83,16 +83,16 @@ collections:
         file: "src/data/Services.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Services" }
-          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: "false" }
-          - { label: "Meta Description", name: "metaDescription", widget: "text", required: "false" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
+          - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
           - name: "services"
             label: "List Services"
             widget: "list"
             fields:
               - { label: "ID", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: "false" }
-              - { label: "Meta Description", name: "metaDescription", widget: "text", required: "false" }
+              - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
+              - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Description", name: "description", widget: "markdown" }
               - name: "hero"
@@ -106,13 +106,13 @@ collections:
                     fields:
                       - { label: "ID", name: "id", widget: "string" }
                       - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Subtitle", name: "subtitle", widget: "string", required: "false" }
+                      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
                       - { label: "Description", name: "description", widget: "markdown" }
                       - { label: "Link", name: "link", widget: "string" }
                       - { label: "Link Text", name: "linkText", widget: "string" }
                       - { label: "Image", name: "image", widget: "string" }
-                      - { label: "Caption", name: "caption", widget: "string", required: "false" }
-                      - { label: "Sub-Caption", name: "subCaption", widget: "string", required: "false" }
+                      - { label: "Caption", name: "caption", widget: "string", required: false }
+                      - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
               - name: "backup"
                 label: "Backup"
                 widget: "list"
@@ -124,21 +124,21 @@ collections:
                     fields:
                       - { label: "ID", name: "id", widget: "string" }
                       - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Subtitle", name: "subtitle", widget: "string", required: "false" }
+                      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
                       - { label: "Description", name: "description", widget: "markdown" }
                       - { label: "Link", name: "link", widget: "string" }
                       - { label: "Link Text", name: "linkText", widget: "string" }
                       - { label: "Image", name: "image", widget: "string" }
-                      - { label: "Caption", name: "caption", widget: "string", required: "false" }
-                      - { label: "Sub-Caption", name: "subCaption", widget: "string", required: "false" }
+                      - { label: "Caption", name: "caption", widget: "string", required: false }
+                      - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
 
       - name: "Pricing"
         label: "Pricing"
         file: "src/data/Pricing.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Pricing" }
-          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: "false" }
-          - { label: "Meta Description", name: "metaDescription", widget: "text", required: "false" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
+          - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
           - name: "items"
             label: "Items"
             widget: "list"
@@ -152,8 +152,8 @@ collections:
         file: "src/data/Portfolio.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Portfolio" }
-          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: "false" }
-          - { label: "Meta Description", name: "metaDescription", widget: "text", required: "false" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
+          - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
           - name: "items"
             label: "Work"
             widget: "list"
@@ -177,13 +177,13 @@ collections:
             fields:
               - { label: "ID", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string", required: "false" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
               - { label: "Description", name: "description", widget: "markdown" }
               - { label: "Link", name: "link", widget: "string" }
               - { label: "Link Text", name: "linkText", widget: "string" }
               - { label: "Image", name: "image", widget: "string" }
-              - { label: "Caption", name: "caption", widget: "string", required: "false" }
-              - { label: "Sub-Caption", name: "subCaption", widget: "string", required: "false" }
+              - { label: "Caption", name: "caption", widget: "string", required: false }
+              - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
 
       - name: "block"
         label: "Content Blocks"
@@ -196,13 +196,13 @@ collections:
             fields:
               - { label: "ID", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string", required: "false" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
               - { label: "Description", name: "description", widget: "markdown" }
               - { label: "Link", name: "link", widget: "string" }
               - { label: "Link Text", name: "linkText", widget: "string" }
               - { label: "Image", name: "imagePath", widget: "string" }
               - { label: "Caption", name: "imageCaption", widget: "string" }
-              - { label: "Sub-Caption", name: "subCaption", widget: "string", required: "false" }
+              - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
 
       - name: "testimonials"
         label: "Testimonials"
@@ -216,7 +216,7 @@ collections:
             fields:
               - { label: "ID", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string", required: "false" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
               - { label: "Testimonial", name: "testimonial", widget: "text" }
               - { label: "Reviewed By", name: "reviewedBy", widget: "string" }
               - { label: "Position", name: "reviewedByPosition", widget: "string" }
@@ -245,8 +245,8 @@ collections:
         file: "src/data/Contact.yml"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Contact" }
-          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: "false" }
-          - { label: "Meta Description", name: "metaDescription", widget: "text", required: "false" }
+          - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
+          - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
           - { label: "Summary", name: "summary", widget: "text" }
           - { label: "Description", name: "description", widget: "markdown" }
 
