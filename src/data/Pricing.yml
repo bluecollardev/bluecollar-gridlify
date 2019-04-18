@@ -1,12 +1,32 @@
 title: Pricing
-items:
-  - description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    title: Lorem ipsum dolor
-    metaKeywords: >-
-      Coming soon...
-    metaDescription: >-
-      Coming soon...
+services:
+  - title: Apps + PWAs
+    description: >-
+      We create amazing experiences for iOS, Android and Responsive Web. Front-end to back-end development, we do it all. With our user-first approach and API-driven architecture, we create apps that can evolve to take advantage of new capabilities.
+    link: /services-apps
+    linkText: Learn More
+  - title: Custom Software
+    description: >-
+      Custom software serves the unique processes of your business, solves your specific problems, satisfies your exclusive needs and makes your workflows easier, faster, and more efficient. Our team of versatile custom software developers can architect & develop software for even the most complex business logic & workflow.
+    link: /services-custom-software
+    linkText: Learn More
+  - title: Web Design
+    description: >-
+      We collaborate with our clients to deliver a professionally designed accelerated mobile website, integrated with high conversion landing pages and the client company’s branding. Our talent comes the Victoria community, all of whom are passionate about building products optimized for both desktop and mobile utilization.
+    link: /services-web
+    linkText: Learn More
+  - title: Advertising
+    description: >-
+      Paid social content is fast becoming the most effective channel for connecting with qualified leads. Blue Collar&rsquo;s team are experts at creating social ad campaigns, with professionally designed, chat-enabled landing pages.
+    link: /services-digital-marketing#advertising
+    linkText: Learn More
+  - title: Landing Pages
+    description: >-
+      We work with you to deliver a professionally designed accelerated landing pages complete with lead-gen fields, and your company&rsquo;s branding built in. Your landing pages are optimized for mobile usage, but work on desktop as well.
+    link: /services-landing-pages
+    linkText: Learn More
+  - title: Social Media
+    description: >-
+      New to social media marketing?  We can get you set up on the major platforms with professional business pages continually updated with quality posts, promotions, and sales announcements to drive engagement with your brand and generate qualified leads.
+    link: /services-digital-marketing#social-media
+    linkText: Learn More
