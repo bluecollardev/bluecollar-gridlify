@@ -18,7 +18,7 @@
 }
 
 .no-space-top {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 .space-top {
@@ -31,6 +31,10 @@
 
 .space-top-half {
   margin-top: 1.5rem;
+}
+
+.no-space-bottom {
+  margin-bottom: 0 !important;
 }
 
 .space-bottom {
@@ -53,10 +57,6 @@
   margin-right: 3rem;
 }
 
-.no-space-bottom {
-  margin-bottom: 0;
-}
-
 /* Custom Padding */
 .pad-all {
   padding: 3rem;
@@ -66,12 +66,20 @@
   padding: 6rem 3rem;
 }
 
+.no-pad-top {
+  padding-top: 0 !important;
+}
+
 .pad-top {
   padding-top: 3rem;
 }
 
 .pad-top-2x {
   padding-top: 6rem;
+}
+
+.no-pad-bottom {
+  padding-bottom: 0 !important;
 }
 
 .pad-bottom {

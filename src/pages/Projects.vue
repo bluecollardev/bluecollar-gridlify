@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Header/>
-    <section class="hero-section bg-bc-blue sm-flex pad-top pad-bottom-2x height-full">
+    <section class="hero-section bg-bc-blue sm-flex pad-top pad-bottom-2x height-full angle">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="content-block">
           <div>
@@ -9,23 +9,17 @@
               <p class="g-pstyle2 text-center-force">Client Projects</p>
             </div>
             <img class="lozad" src="/images/portfolio/bc-showcase-responsive.png" alt="" />
-            <div
-            class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
-          >
-            <a class="action-link space-bottom g-pstyle3" href="/projects#portfolio"
-              >Take the Tour</a
-            >
+            <div class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center">
+            <a class="action-link space-bottom g-pstyle3" href="/projects#portfolio">Take the Tour</a>
           </div>
           <div class="homepage-hero-action action-link-block xs-hide text-center">
-            <a class="action-link space-top g-pstyle3" href="/projects#portfolio"
-              >Take the Tour</a
-            >
+            <a class="action-link space-top g-pstyle3" href="/projects#portfolio">Take the Tour</a>
           </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="portfolio" class="portfolio-items clearfix">
+    <section id="portfolio" class="hero-section portfolio-items clearfix">
       <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix" >
         <portfolio-item
           v-for="project in portfolioItems"
@@ -371,8 +365,8 @@
         top: 0;
         left: 50%;
         width: 4px;
-        height: 1600vh;
-        background-color: $timeline-line-color;
+        background-color: #DFDFDF;
+        z-index: 0;
       }
 
       &__item__content {
@@ -485,6 +479,9 @@
       max-width: 50%;
       margin: 0 auto;
       height: 3420vh;
+      &::before {
+        height: 3420vh;
+      }
     }
   }
 
@@ -494,6 +491,9 @@
       max-width: 50%;
       margin: 0 auto;
       height: 2420vh;
+      &::before {
+        height: 2420vh;
+      }
     }
   }
 
@@ -503,6 +503,9 @@
       max-width: 50%;
       margin: 0 auto;
       height: 2420vh;
+      &::before {
+        height: 2420vh;
+      }
     }
   }
 
@@ -512,6 +515,9 @@
       max-width: 50%;
       margin: 0 auto;
       height: 1800vh;
+      &::before {
+        height: 1800vh;
+      }
     }
   }
 
@@ -521,6 +527,9 @@
       max-width: 50%;
       margin: 0 auto;
       height: 1850vh;
+      &::before {
+        height: 1850vh;
+      }
     }
   }
 
@@ -530,6 +539,9 @@
       position: relative;
       margin: 0 auto;
       height: 2320vh;
+      &::before {
+        height: 2320vh;
+      }
     }
   }
 
@@ -538,6 +550,9 @@
       position: relative;
       margin: 0 auto;
       height: 2180vh;
+      &::before {
+        height: 2180vh;
+      }
     }
   }
 
@@ -546,6 +561,9 @@
       position: relative;
       margin: 0 auto;
       height: 1920vh;
+      &::before {
+        height: 1920vh;
+      }
     }
   }
 
@@ -554,6 +572,9 @@
       position: relative;
       margin: 0 auto;
       height: 1610vh;
+      &::before {
+        height: 1610vh;
+      }
     }
   }
 
@@ -562,6 +583,9 @@
       position: relative;
       margin: 0 auto;
       height: 1800vh;
+      &::before {
+        height: 1800vh;
+      }
     }
   }
 
@@ -570,6 +594,9 @@
       position: relative;
       margin: 0 auto;
       height: 1850vh;
+      &::before {
+        height: 1850vh;
+      }
     }
   }
 </style>

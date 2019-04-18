@@ -104,6 +104,11 @@
 </template>
 
 <style lang="scss">
+  footer {
+    position: relative;
+    z-index: 10;
+  }
+
   @media screen and (max-width: 40em) {
     footer {
       padding: 1px;

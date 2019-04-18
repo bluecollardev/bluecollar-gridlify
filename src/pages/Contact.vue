@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Header />
-    <section class="hero-section bg-bc-blue sm-flex pad-top-2x height-half">
+    <section class="hero-section bg-bc-blue sm-flex pad-top-2x height-half angle">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="content-block">
           <div>
@@ -18,7 +18,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="hero-section bg-light-grey">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="sm-flex flex-basis-two-thirds">
           <div class="sm-flex flex-basis-two-thirds">

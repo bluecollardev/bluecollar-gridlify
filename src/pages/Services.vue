@@ -11,9 +11,10 @@
       imageClass="home-page-banner-image"
       :caption="servicesHero.caption"
       :subCaption="servicesHero.subCaption"
+      :angle="false"
     />
 
-    <section id="services" class="lg-flex">
+    <section id="services" class="hero-section bg-white no-pad-bottom lg-flex">
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
         <div class="content-block">
           <content-block-layout
