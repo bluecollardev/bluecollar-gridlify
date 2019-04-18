@@ -12,51 +12,46 @@ services:
       Coming soon...
     summary:
     description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    home:
     hero:
       - id: services-hero
         title: >-
-          We’re about software. Software is about people.
+          Next-gen websites
         description: >-
-          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
-        image: /images/heroes/blue-collar-home-hero-cool.jpg
-        link: "/company"
-        linkText: Our Story
-        caption:
-        subCaption:
+          We build web pages with the latest JAMStack and AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates. Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google, Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more.
+        image: /images/hero-michael.png
+        link: "/services"
+        linkText: Learn More
+        caption: Sean Huntington
+        subCaption: Principal Architect, Blue Collar
     backup:
-      - id: services-hero
+      - id: branding
         title: >-
-          We’re about software. Software is about people.
+          Branded for you
         description: >-
-          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
-        image: /images/heroes/blue-collar-home-hero-cool.jpg
-        link: "/company"
-        linkText: Our Story
+          Your site reflects your unique vision for your brand. We will create a highly polished website that represents you and reflects your values.
+        image:
+        link:
+        linkText:
         caption:
         subCaption:
-      - id: services-hero
+      - id: design
         title: >-
-          We’re about software. Software is about people.
+          Creative design
         description: >-
-          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
-        image: /images/heroes/blue-collar-home-hero-cool.jpg
-        link: "/company"
-        linkText: Our Story
+          Image is everything. We produce stunning creative work that tells a story to your customer. When customers understand how associating with you can define who they are, they have a compelling reason to buy.
+        image:
+        link:
+        linkText:
         caption:
         subCaption:
-      - id: services-hero
+      - id: support
         title: >-
-          We’re about software. Software is about people.
+          Exceptional support
         description: >-
-          We have a long history of designing and developing amazing experiences for iOS, Android, and Responsive Web. We’re a team of industry leading experts who create solutions and build applications using cutting edge technology to help your business succeed. We love what we do and it shows in our work.
-        image: /images/heroes/blue-collar-home-hero-cool.jpg
-        link: "/company"
-        linkText: Our Story
+          We offer ongoing monthly support to continually improve your online business. No advanced technical knowledge of coding is required on your end, and we are always here to help!
+        image:
+        link:
+        linkText:
         caption:
         subCaption:
   - id: apps

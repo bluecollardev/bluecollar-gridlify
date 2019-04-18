@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Header/>
-    <section-block-layout02-col01
+    <!--<section-block-layout02-col01
       title="Next-gen websites"
       subtitle=""
       description="We build web pages with the latest JAMStack and AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates. Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google, Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more."
@@ -10,6 +10,17 @@
       image="/images/hero-michael.png"
       caption="Sean Huntington"
       subCaption="Principal Architect, Blue Collar"
+    />-->
+    <section-block-layout02-col01
+      v-if="getServiceHeroById('websites')"
+      :title="getServiceHeroById('websites').title"
+      subtitle=""
+      :description="getServiceHeroById('websites').description"
+      :link="getServiceHeroById('websites').link"
+      :linkText="getServiceHeroById('websites').linkText"
+      :image="getServiceHeroById('websites').image"
+      :caption="getServiceHeroById('websites').caption"
+      :subCaption="getServiceHeroById('websites').subCaption"
     />
 
     <section id="intro" class="lg-flex pad-top-2x">
@@ -18,25 +29,37 @@
           <div class="sm-flex flex-start height-third">
             <div class="sm-flex flex-center flex-justify-center flex-basis-third">
               <div class="content-block">
-                <content-block-layout
+                <!--<content-block-layout
                   title="Branded for you"
                   description="Your site reflects your unique vision for your brand. We will create a highly polished website that represents you and reflects your values."
+                />-->
+                <content-block-layout
+                  :title="getServiceBackupsByIdx('websites', 0).title"
+                  :description="getServiceBackupsByIdx('websites', 0).description"
                 />
               </div>
             </div>
             <div class="sm-flex flex-center flex-justify-center flex-basis-third">
               <div class="content-block">
-                <content-block-layout
+                <!--<content-block-layout
                   title="Creative design"
                   description="Image is everything. We produce stunning creative work that tells a story to your customer. When customers understand how associating with you can define who they are, they have a compelling reason to buy."
+                />-->
+                <content-block-layout
+                  :title="getServiceBackupsByIdx('websites', 1).title"
+                  :description="getServiceBackupsByIdx('websites', 1).description"
                 />
               </div>
             </div>
             <div class="sm-flex flex-center flex-justify-center flex-basis-third">
               <div class="content-block">
-                <content-block-layout
+                <!--<content-block-layout
                   title="Exceptional support"
                   description="We offer ongoing monthly support to continually improve your online business. No advanced technical knowledge of coding is required on your end, and we are always here to help!"
+                />-->
+                <content-block-layout
+                  :title="getServiceBackupsByIdx('websites', 2).title"
+                  :description="getServiceBackupsByIdx('websites', 2).description"
                 />
               </div>
             </div>
@@ -117,6 +140,7 @@
   // Import static data
   import HomeData from '~/data/Home.yml';
   import HeroData from '~/data/Hero.yml';
+  import ServiceData from '~/data/Services.yml';
   import GeneralData from '~/data/General.yml';
   import TestimonialData from '~/data/Testimonial.yml';
 
@@ -143,6 +167,9 @@
       heroContent() {
         return HeroData;
       },
+      servicesContent() {
+        return ServiceData
+      },
       generalContent() {
         return GeneralData;
       },
@@ -167,6 +194,65 @@
 
         if (items instanceof Array && items.length > idx) {
           return items[idx];
+        }
+
+        return null
+      },
+      getService(idx) {
+        let items = this.servicesContent;
+
+        if (items instanceof Array && items.length > idx) {
+          return items[idx];
+        }
+
+        return null
+      },
+      getServiceById(id) {
+        let content = this.servicesContent;
+
+        if (content && content.services instanceof Array && content.services.length > 0) {
+          let items = content.services.filter(item => {
+            return item.id === id;
+          });
+
+          if (items instanceof Array && items.length > 0) {
+            return items[0];
+          }
+        }
+
+        return null
+      },
+      getServiceHeroById(id) {
+        let content = this.servicesContent;
+
+        if (content && content.services instanceof Array && content.services.length > 0) {
+          let items = content.services.filter(item => {
+            return item.id === id;
+          });
+
+          if (items instanceof Array && items.length > 0) {
+            if (items[0].hero instanceof Array && items[0].hero.length > 0) {
+              return items[0].hero[0] // TODO: Support for multiple heroes!
+            }
+          }
+        }
+
+        return null
+      },
+      getServiceBackupsByIdx(id, idx) {
+        let content = this.servicesContent;
+        idx = idx || 0;
+
+        if (content && content.services instanceof Array && content.services.length > 0) {
+          let items = content.services.filter(item => {
+            return item.id === id;
+          });
+
+          if (items instanceof Array && items.length > 0) {
+            if (items[0].backup instanceof Array && items[0].backup.length > 0) {
+              return items[0].backup[idx] // TODO: Support for multiple heroes!
+            }
+          }
         }
 
         return null
