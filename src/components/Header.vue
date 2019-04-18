@@ -90,7 +90,7 @@
           e.style.marginTop = 0;
         });
 
-        (!dropMenu.classList.contains('display')) ? dropMenu.classList.add('display'): dropMenu.classList.remove('display');
+        (dropMenu && !dropMenu.classList.contains('display')) ? dropMenu.classList.add('display'): dropMenu.classList.remove('display');
 
         if (window.innerWidth < 660 && dropMenu.classList.contains('display')) {
           //event.target.parentElement.nextSibling.nextSibling.style.marginTop = dropMenu.clientHeight + 'px';

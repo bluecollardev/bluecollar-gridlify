@@ -13,20 +13,25 @@ items:
     title: We’re about software. Software is about people.
   - description: >-
       Building beautiful, usable, fast and scalable applications is our thing.
-      Drawing on deep experience in solution design and combining it with great
-      listening, we work closely with your team to define a solution for the
-      business challenge at hand. Then, we infuse user feedback and priorities
-      into every stage of the software development process.
+      Every app is a collection of details, priorities, and tradeoffs, built on
+      some core principles about what makes for a great experience. We
+      collectively have over 150 years of experience, and we use it to make each
+      new app shine.
     id: services-hero
     image: /images/portfolio/bc-showcase-app-quickcommerce.png
     link: /services
     linkText: Learn More
     title: Applications crafted with precision and care
   - description: >-
-      Every app is a collection of details, priorities, and tradeoffs, built on
-      some core principles about what makes for a great experience. We
-      collectively have over 150 years of experience, and we use it to make each
-      new app shine.
+      Drawing on deep experience in solution design and combining it with great
+      listening, we work closely with your team to define a solution for the
+      business challenge at hand. Then, we infuse user feedback and priorities
+      into every stage of the software development process.
+      But that's not where we stop. At Blue Collar, we don’t leave clients once
+      their product is built. We strive to maintain our relationship because we
+      understand the dynamics of the rapidly changing Information Age. Following
+      the delivery of our product, we provide monthly support in order to improve
+      your online business. We are always here to help!
     id: projects-hero
     image: /images/banners/responsive-banner-jimmy-poblanos.png
     link: /projects

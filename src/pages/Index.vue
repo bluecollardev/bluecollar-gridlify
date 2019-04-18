@@ -111,7 +111,7 @@
       </div>
     </hero-layout02-col02>
 
-    <hero-layout02-col02
+    <testimonial-hero-layout
       v-if="projectsSection"
       bgColor="bg-bc-blue"
       :title="projectsSection.title"
@@ -125,7 +125,7 @@
       :subCaption="projectsSection.subCaption"
       :flipX="false"
       :angle="false"
-      className="xs-pad-top sm-pad-bottom"
+      className="xs-pad-top"
     />
 
     <!--<section-block-layout02-col01
@@ -176,6 +176,7 @@
   import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
+  import TestimonialHeroLayout from '~/components/layouts/TestimonialHeroLayout.vue';
 
   // Import static data
   import HomeData from '~/data/Home.yml';
@@ -199,6 +200,7 @@
       SectionBlockLayout02Col02,
       ContentBlockLayout,
       TestimonialBlockLayout,
+      TestimonialHeroLayout
     },
     computed: {
       homeContent() {

@@ -40,7 +40,6 @@
               </div>
             </div>
             <div class="sm-flex flex-center flex-justify-center flex-basis-third">
-            <div class="sm-flex flex-center flex-justify-center flex-basis-third">
               <div class="content-block">
                 <!--<content-block-layout
                   title="Creative design"
