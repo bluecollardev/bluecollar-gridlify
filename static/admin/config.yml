@@ -117,20 +117,15 @@ collections:
                 label: "Backup"
                 widget: "list"
                 fields:
-                  - { label: "Title", name: "title", widget: "string", default: "Backup" }
-                  - name: "items"
-                    label: "Items"
-                    widget: "list"
-                    fields:
-                      - { label: "ID", name: "id", widget: "string" }
-                      - { label: "Title", name: "title", widget: "string", required: false }
-                      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
-                      - { label: "Description", name: "description", widget: "markdown", required: false }
-                      - { label: "Link", name: "link", widget: "string", required: false }
-                      - { label: "Link Text", name: "linkText", widget: "string", required: false }
-                      - { label: "Image", name: "image", widget: "string", required: false }
-                      - { label: "Caption", name: "caption", widget: "string", required: false }
-                      - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
+                  - { label: "ID", name: "id", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string", required: false }
+                  - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+                  - { label: "Description", name: "description", widget: "markdown", required: false }
+                  - { label: "Link", name: "link", widget: "string", required: false }
+                  - { label: "Link Text", name: "linkText", widget: "string", required: false }
+                  - { label: "Image", name: "image", widget: "string", required: false }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
+                  - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
 
       - name: "Pricing"
         label: "Pricing"
