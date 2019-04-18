@@ -148,8 +148,8 @@ collections:
             label: "Projects"
             widget: "list"
             fields:
-              - { label: "ID", name: "id", widget: "string", required: false }
               - { label: "Project Name", name: "projectName", widget: "string" }
+              - { label: "ID", name: "id", widget: "string", required: false }
               - { label: "Client", name: "client", widget: "string", required: false }
               - { label: "Start Date", name: "startDate", widget: "datetime", required: false }
               - { label: "End Date", name: "endDate", widget: "datetime", required: false }
