@@ -145,13 +145,17 @@ collections:
           - { label: "Meta Keywords", name: "metaKeywords", widget: "string", required: false }
           - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
           - name: "items"
-            label: "Work"
+            label: "Projects"
             widget: "list"
             fields:
-              - { label: "ID", name: "id", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Summary", name: "summary", widget: "text" }
-              - { label: "Image", name: "image", widget: "string" }
+              - { label: "ID", name: "id", widget: "string", required: false }
+              - { label: "Project Name", name: "projectName", widget: "string" }
+              - { label: "Client", name: "client", widget: "string", required: false }
+              - { label: "Start Date", name: "startDate", widget: "datetime", required: false }
+              - { label: "End Date", name: "endDate", widget: "datetime", required: false }
+              - { label: "URL", name: "url", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Image", name: "image", widget: "string", required: false }
 
   - name: "widgets"
     label: "Widgets"
