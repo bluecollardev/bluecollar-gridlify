@@ -20,11 +20,11 @@
       </div>
     </section>
     <section id="portfolio" class="hero-section portfolio-items clearfix">
-      <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix" >
+      <div class="vertical-line"></div>
+      <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix">
         <portfolio-item
           v-for="project in portfolioItems"
           :key="project.projectName"
-          class="timeline__item clearfix"
           :project="project"
           :testimonial="getTestimonialById(project.testimonialId)"
         />
@@ -217,6 +217,34 @@
   $timeline-content-title-color: #464545;
   $timeline-content-description-color: #333;
 
+  .clearfix {
+    clear: both;
+    overflow: visible;
+  }
+
+  .clearfix::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+  .vertical-line {
+    width: 4px;
+    background-color: #DFDFDF;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    padding-top: 63px;
+    top: -63px;
+    z-index: 2;
+  }
+
+  @media screen and (max-width: 40em) {
+    .vertical-line {
+      display: none;
+    }
+  }
+
   /* _page-section.css */
   .page-section {
     padding: 50px 0;
@@ -320,7 +348,6 @@
       position: relative;
       max-width: 100%;
       margin: 0 auto;
-      height: 1600vh;
     }
 
     .timeline__item {
@@ -358,15 +385,16 @@
       position: relative;
       max-width: 50%;
       margin: 0 auto;
+      clear:both;
 
       &::before {
-        content: "";
+        /*content: "";
         position: absolute;
         top: 0;
         left: 50%;
         width: 4px;
         background-color: #DFDFDF;
-        z-index: 0;
+        z-index: 0;*/
       }
 
       &__item__content {
@@ -463,139 +491,8 @@
       @for $i from 1 through 42 {
         &__item:nth-child(#{$i}),
         &__item_date:nth-child(#{$i}) {
-          top: calc(#{$i} * 20vh);
+          /*top: calc(#{$i} * 20vh);*/
         }
-      }
-    }
-  }
-
-  .timeline {
-    height: 1600vh;
-  }
-
-  @media screen and (min-width: 40em) and (max-width: 52em) and (orientation: landscape) {
-    .timeline {
-      position: relative;
-      max-width: 50%;
-      margin: 0 auto;
-      height: 3420vh;
-      &::before {
-        height: 3420vh;
-      }
-    }
-  }
-
-  @media screen and (min-width: 52em) and (max-width: 64em) and (orientation: landscape) {
-    .timeline {
-      position: relative;
-      max-width: 50%;
-      margin: 0 auto;
-      height: 2420vh;
-      &::before {
-        height: 2420vh;
-      }
-    }
-  }
-
-  @media screen and (min-width: 64em) and (max-width: 84em) and (orientation: landscape) {
-    .timeline {
-      position: relative;
-      max-width: 50%;
-      margin: 0 auto;
-      height: 2420vh;
-      &::before {
-        height: 2420vh;
-      }
-    }
-  }
-
-  @media screen and (min-width: 84em) and (max-width: 102em) and (orientation: landscape) {
-    .timeline {
-      position: relative;
-      max-width: 50%;
-      margin: 0 auto;
-      height: 1800vh;
-      &::before {
-        height: 1800vh;
-      }
-    }
-  }
-
-  @media screen and (min-width: 102em) and (orientation: landscape) {
-    .timeline {
-      position: relative;
-      max-width: 50%;
-      margin: 0 auto;
-      height: 1850vh;
-      &::before {
-        height: 1850vh;
-      }
-    }
-  }
-
-  /* Portrait */
-  @media screen and (max-width: 40em) and (orientation: portrait) {
-    .timeline {
-      position: relative;
-      margin: 0 auto;
-      height: 2320vh;
-      &::before {
-        height: 2320vh;
-      }
-    }
-  }
-
-  @media screen and (min-width: 40em) and (max-width: 52em) and (orientation: portrait) {
-    .timeline {
-      position: relative;
-      margin: 0 auto;
-      height: 2180vh;
-      &::before {
-        height: 2180vh;
-      }
-    }
-  }
-
-  @media screen and (min-width: 52em) and (max-width: 64em) and (orientation: portrait) {
-    .timeline {
-      position: relative;
-      margin: 0 auto;
-      height: 1920vh;
-      &::before {
-        height: 1920vh;
-      }
-    }
-  }
-
-  @media screen and (min-width: 64em) and (max-width: 84em) and (orientation: portrait) {
-    .timeline {
-      position: relative;
-      margin: 0 auto;
-      height: 1610vh;
-      &::before {
-        height: 1610vh;
-      }
-    }
-  }
-
-  @media screen and (min-width: 84em) and (max-width: 102em) and (orientation: portrait) {
-    .timeline {
-      position: relative;
-      margin: 0 auto;
-      height: 1800vh;
-      &::before {
-        height: 1800vh;
-      }
-    }
-  }
-
-  @media screen and (min-width: 102em) and (orientation: portrait) {
-    .timeline {
-      position: relative;
-      margin: 0 auto;
-      height: 1850vh;
-      &::before {
-        height: 1850vh;
       }
     }
   }
