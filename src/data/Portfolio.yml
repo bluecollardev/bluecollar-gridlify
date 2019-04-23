@@ -46,7 +46,7 @@ items:
       **Technologies:** HTML5, ReactJS, SASS, Webpack, Gulp, Customized OpenCart
       build, PHP, Sim, Doctrine ORM/DBAL, MySQL, RESTful APIs, Adobe CC
       (Photoshop, Illustrator, etc.), Git
-    endDate: 2017-04-01T12:00:00.000Z
+    endDate: 2017-05-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-phobulous.png
     projectName: Phobulous Restaurant Website
     startDate: 2017-04-01T12:00:00.000Z
@@ -69,45 +69,11 @@ items:
       Bluebird, Star Micronics Android/iOS SDKs, SQLite, OAuth2, RESTful APIs,
       Cordova, PhoneGap Build, Gulp, Webpack, Mocha, Chai, Expect.js, Jest,
       Adobe CC (Photoshop, Illustrator, etc.), Git, Jira, Sketch
-    endDate: 2016-04-01T12:00:00.000Z
+    endDate: 2017-07-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-quickcommerce.png
     projectName: iOS Tablet Point-of-Sale
-    startDate: 2015-09-01T12:00:00.000Z
-  - client: Baan Saowanee
-    description: >-
-      Baan Saowanee is a collection of holiday home rentals situated on the
-      north side of Ko Samui island, a short 2 minute drive to scenic Mae Nam
-      Beach. Baan Saowanee guests have a range of rental options to choose from,
-      dependent upon the number of persons and quality of accommodation.
-    endDate: 2016-04-01T12:00:00.000Z
-    image: /images/portfolio/bc-showcase-app-baansao.png
-    projectName: Baan Saowanee
-    startDate: 2015-09-01T12:00:00.000Z
-  - client: Video Entertainment Systems Technology Ltd.
-    description: >-
-      Video Systems Entertainment Technology (VEST) is an Edmonton company that
-      provides self-serve program kiosks to (horse/harness/greyhound) racetracks
-      and off-track-betting sites in Canada, the US and the Caribbean. Some of
-      the products offered on the kiosks are full programs, profile sheets,
-      singles races and IP sheets.
-
-      At the behest of the LSE-listed (London Stock Exchange) Sportech PLC – one
-      of VEST’s clients – we were contracted to develop a hybrid mobile
-      application for deployment on tablets, Linux kiosks and smart televisions
-      which replicates (and furthers) the functionality available in their
-      existing kiosk system. These tablets are currently being deployed in
-      multiple off-track-betting locations in the continental USA.
-
-
-      **Technologies:** HTML5, SASS, Angular, Kendo UI for Angular, JavaScript,
-      Webpack, Karma, Mocha, Chai, Expect.js, Cordova, PhoneGap Build, PHP,
-      Slim, Doctrine DBAL/ORM, PHPUnit, REST, XML, Bash, MySQL, Sphinx OSSS,
-      Memcached, GD, ImageMagick, Docker, CentOS, Git
-    endDate: 2016-11-01T12:00:00.000Z
-    image: /images/portfolio/bc-showcase-app-vest.png
-    projectName: VEST Tablet & Kiosk Apps
-    startDate: 2016-05-01T12:00:00.000Z
-    testimonialId: phase3
+    startDate: 2017-02-01T12:00:00.000Z
+  
   - client: Jimmy Poblano's Mexican Cantina
     description: >-
       We designed a custom SPA-style mobile-friendly Mexican-styled theme for
@@ -119,18 +85,90 @@ items:
       **Technologies:**  HTML5, jQuery, LESS, Webpack, Gulp, Customized OpenCart
       build, PHP, Sim, Doctrine ORM/DBAL, MySQL, RESTful APIs, Adobe CC
       (Photoshop, Illustrator, etc.), Git
-    endDate: 2016-05-01T12:00:00.000Z
+    
     image: /images/portfolio/bc-showcase-jimmy-poblanos.png
     projectName: Jimmy Poblanos Food Truck Website
-    startDate: 2016-05-01T12:00:00.000Z
     testimonialId: jimmyp
+    startDate: 2017-02-01T12:00:00.000Z
+    endDate: 2017-03-01T12:00:00.000Z
+    
+  - client: Caffe Tech / Cafe Leva
+    description: >-
+      We designed a custom SPA-style mobile-friendly Mexican-styled theme for
+      their website featuring completely custom artwork, parallax scrolling
+      effects and a custom menu component. A customized build of OpenCart is
+      used on the backend for content and product management.
+    endDate: 2016-12-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-cafe-leva.png
+    projectName: Leva Website
+    startDate: 2016-11-01T12:00:00.000Z
+    
+  - client: Baan Saowanee
+    description: >-
+      Baan Saowanee is a collection of holiday home rentals situated on the
+      north side of Ko Samui island, a short 2 minute drive to scenic Mae Nam
+      Beach. Baan Saowanee guests have a range of rental options to choose from,
+      dependent upon the number of persons and quality of accommodation.
+
+    image: /images/portfolio/bc-showcase-app-baansao.png
+    projectName: Baan Saowanee
+    startDate: 2016-09-01T12:00:00.000Z
+    endDate: 2016-10-01T12:00:00.000Z
+    
   - client: Caffe Tech 2004 Ltd.
     description: >-
       Caffe Tech is an Edmonton based importer and distributor of premium
       (primarily Italian and Swiss) commercial and home coffee equipment which
       provides many popular Albertan establishments with their restaurant and
       coffee making equipment.
-
+  
+      We designed a custom e-commerce platform including a custom payment
+      extension for Global Payments (Canada) and a shipping extension for
+      Purolator’s Shipping API (SOAP) featuring item tracking, support for
+      multiple items per package, label printing, international documents
+      generation, and automatically scheduled package pickups.
+  
+  
+      **Technologies:** Magento, Linux, Apache, PHP, MySQL, Prototype, GD,
+      ImageMagick & Imagick for PHP, GhostScript (PDF), Git
+    endDate: 2016-08-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-caffe-tech.png
+    projectName: Caffe Tech E-Commerce Store
+    startDate: 2016-03-01T12:00:00.000Z
+    
+  - client: Video Entertainment Systems Technology Ltd.
+    description: >-
+      Video Systems Entertainment Technology (VEST) is an Edmonton company that
+      provides self-serve program kiosks to (horse/harness/greyhound) racetracks
+      and off-track-betting sites in Canada, the US and the Caribbean. Some of
+      the products offered on the kiosks are full programs, profile sheets,
+      singles races and IP sheets.
+  
+      At the behest of the LSE-listed (London Stock Exchange) Sportech PLC – one
+      of VEST’s clients – we were contracted to develop a hybrid mobile
+      application for deployment on tablets, Linux kiosks and smart televisions
+      which replicates (and furthers) the functionality available in their
+      existing kiosk system. These tablets are currently being deployed in
+      multiple off-track-betting locations in the continental USA.
+  
+  
+      **Technologies:** HTML5, SASS, Angular, Kendo UI for Angular, JavaScript,
+      Webpack, Karma, Mocha, Chai, Expect.js, Cordova, PhoneGap Build, PHP,
+      Slim, Doctrine DBAL/ORM, PHPUnit, REST, XML, Bash, MySQL, Sphinx OSSS,
+      Memcached, GD, ImageMagick, Docker, CentOS, Git
+    image: /images/portfolio/bc-showcase-app-vest.png
+    projectName: VEST Tablet & Kiosk Apps
+    testimonialId: phase3
+    startDate: 2015-08-01T12:00:00.000Z
+    endDate: 2016-04-01T12:00:00.000Z
+    
+  - client: Caffe Tech 2004 Ltd.
+    description: >-
+      Caffe Tech is an Edmonton based importer and distributor of premium
+      (primarily Italian and Swiss) commercial and home coffee equipment which
+      provides many popular Albertan establishments with their restaurant and
+      coffee making equipment.
+  
       As Caffe Tech was expanding their business and opening multiple new
       locations, they needed an inventory management solution that would
       synchronize their QuickBooks Desktop / Online customers, inventory and
@@ -141,42 +179,17 @@ items:
       that automatically handled synchronization of all data across multiple
       installations and software systems using a combination of PHP, Slim,
       Doctrine ORM/DBAL, MySQL and the QuickBooks Online API and Desktop SDK.
-
-
+  
+  
       **Technologies:** HTML5, SASS, JavaScript, jQuery, PHP, Slim, Doctrine
       ORM/DBAL, QuickBooks PHP SDK, QuickBooks Online API, OpenCart, Magento,
       Bash, PHPUnit, REST, JSON, Swagger, Swagger Codegen, OAuth2, MySQL,
       CentOS, Windows Small Business Server, Git
-    endDate: 2016-04-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-quickcommerce.png
     projectName: Caffe Tech Inventory Management and Data Bridge
-    startDate: 2015-09-01T12:00:00.000Z
-  - client: Caffe Tech / Cafe Leva
-    description: >-
-      We designed a custom SPA-style mobile-friendly Mexican-styled theme for
-      their website featuring completely custom artwork, parallax scrolling
-      effects and a custom menu component. A customized build of OpenCart is
-      used on the backend for content and product management.
-    endDate: 2015-08-01T12:00:00.000Z
-    image: /images/portfolio/bc-showcase-cafe-leva.png
-    projectName: Leva Website
-    startDate: 2015-08-01T12:00:00.000Z
-  - client: Corrpro (Canada)
-    description: >-
-      Corrpro provides corrosion control materials and services including -
-      engineering, pipeline integrity, construction and protective coating
-      inspection - throughout North America, Europe, the Middle East and South
-      Africa. We designed and developed a custom Windows Desktop application to
-      help track corrosion levels of pipelines and storage tanks at thousands of
-      industrial locations across Alberta.
-
-
-      **Technologies:** C#, WinForms, Windows User Interface, T-SQL, SQL Server,
-      SSRS, SVN
-    endDate: 2015-05-01T12:00:00.000Z
-    image: /images/portfolio/bc-showcase-app-corrpro.png
-    projectName: Corrpro Corrosion Reporting Application
-    startDate: 2015-05-01T12:00:00.000Z
+    endDate: 2016-02-01T12:00:00.000Z
+    startDate: 2015-07-01T12:00:00.000Z
+    
   - client: Challenger Fleet Management Solutions
     description: >-
       Challenger Fleet Management Solutions specializes in long term vehicle
@@ -193,31 +206,28 @@ items:
       **Technologies:** HTML5, JavaScript, Angular, LESS, Require.js, C#,
       ASP.NET Web API, ASP.NET MVC, Razer, Entity Framework, T-SQL, SQL Server,
       Visual Studio, Windows Server, IIS, SVN
-    endDate: 2015-04-01T12:00:00.000Z
+    endDate: 2015-07-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-challenger-02.png
     projectName: Challenger Fleet Management System
-    startDate: 2015-04-01T12:00:00.000Z
-  - client: Caffe Tech 2004 Ltd.
+    startDate: 2015-02-01T12:00:00.000Z
+    
+  - client: Corrpro (Canada)
     description: >-
-      Caffe Tech is an Edmonton based importer and distributor of premium
-      (primarily Italian and Swiss) commercial and home coffee equipment which
-      provides many popular Albertan establishments with their restaurant and
-      coffee making equipment.
-
-      We designed a custom theme and a suite of custom extensions for Magento
-      including a custom payment extension for Global Payments (Canada) and a
-      shipping extension for Purolator’s Shipping API (SOAP) featuring item
-      tracking, support for multiple items per package, label printing,
-      international documents generation, and automatically scheduled package
-      pickups.
-
-
-      **Technologies:** Magento, Linux, Apache, PHP, MySQL, Prototype, GD,
-      ImageMagick & Imagick for PHP, GhostScript (PDF), Git
-    endDate: 2015-01-01T12:00:00.000Z
-    image: /images/portfolio/bc-showcase-caffe-tech.png
-    projectName: Caffe Tech Magento Store
-    startDate: 2015-01-01T12:00:00.000Z
+      Corrpro provides corrosion control materials and services including -
+      engineering, pipeline integrity, construction and protective coating
+      inspection - throughout North America, Europe, the Middle East and South
+      Africa. We designed and developed a custom Windows Desktop application to
+      help track corrosion levels of pipelines and storage tanks at thousands of
+      industrial locations across Alberta.
+  
+  
+      **Technologies:** C#, WinForms, Windows User Interface, T-SQL, SQL Server,
+      SSRS, SVN
+    endDate: 2015-07-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-app-corrpro.png
+    projectName: Corrpro Corrosion Reporting Application
+    startDate: 2015-02-01T12:00:00.000Z
+  
   - client: Alberta Motor Association
     description: >-
       The Alberta Motor Association was looking to replace its legacy and
@@ -236,10 +246,10 @@ items:
       LESS, Require.js, C#, ASP.NET Web API, ASP.NET Web Forms, Entity
       Framework, WCF, N-Tier, T-SQL, SQL Server, Visual Studio, Windows Server,
       IIS, RTC, TFS
-    endDate: 2014-11-01T12:00:00.000Z
+    endDate: 2014-12-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-agentview.png
     projectName: AgentView Insurance Policy Management System
-    startDate: 2013-08-01T12:00:00.000Z
+    startDate: 2013-02-01T12:00:00.000Z
   - client: Alberta Motor Association
     description: >-
       The Alberta Motor Association needed a new web-based and mobile friendly
@@ -260,7 +270,7 @@ items:
     endDate: 2013-05-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-homequote.png
     projectName: Home Insurance Quote Web Application
-    startDate: 2013-05-01T12:00:00.000Z
+    startDate: 2013-02-01T12:00:00.000Z
   - client: Alberta Motor Association
     description: >-
       The Alberta Motor Association needed a new web-based and mobile friendly
@@ -278,32 +288,11 @@ items:
       LESS, Require.js, C#, ASP.NET Web API, ASP.NET Web Forms, Entity
       Framework, WCF, N-Tier, T-SQL, SQL Server, Visual Studio, Windows Server,
       IIS, RTC, TFS
-    endDate: 2013-03-01T12:00:00.000Z
+    endDate: 2013-05-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-autoquote.png
     projectName: Auto Insurance Quote Web Application
-    startDate: 2013-03-01T12:00:00.000Z
-  - client: Carsgone (Magazine)
-    description: >-
-      CarsGone is an Edmonton-based, nationally spanning automotive classifieds
-      magazine and website with a print distribution network across Alberta and
-      Ontario. At the time, they had over 90,000 vehicles from over 600
-      dealerships listed on their website.
-
-      We created an online marketplace/classifieds site for listing vehicles
-      serving independent buyers and sellers as well as hundreds of dealerships
-      across Canada. Vehicle listings were either posted by end-users or
-      aggregated using data providers from organizations including Strathcom
-      Media and Boost Motor Group for display.
-
-
-      **Technologies:** HTML, CSS, JavaScript, jQuery, PHP, Kohana/CodeIgniter,
-      Kohana ORM, SOAP, REST, XML,MySQL, Sphinx OSSS, Memcached, GD,
-      ImageMagick, Photoshop, Illustrator, Git
-    endDate: 2012-03-01T12:00:00.000Z
-    image: /images/portfolio/bc-showcase-carsgone.png
-    projectName: Carsgone.com
-    startDate: 2012-03-01T12:00:00.000Z
-    testimonialId: carsgone
+    startDate: 2013-02-01T12:00:00.000Z
+  
   - client: Spasation
     description: >-
       Spasation is an Alberta-based chain of spas/salons. Uses a customized
@@ -311,11 +300,36 @@ items:
 
 
       **Technologies:** OpenCart, Linux, Apache, PHP, MySQL, jQuery
-    endDate: 2011-11-01T12:00:00.000Z
+    endDate: 2013-01-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-spasation.png
     projectName: Spasation Website and Online Store
-    startDate: 2011-11-01T12:00:00.000Z
+    startDate: 2012-11-01T12:00:00.000Z
     testimonialId: spasation
+    
+
+  - client: Carsgone (Magazine)
+    description: >-
+      CarsGone is an Edmonton-based, nationally spanning automotive classifieds
+      magazine and website with a print distribution network across Alberta and
+      Ontario. At the time, they had over 90,000 vehicles from over 600
+      dealerships listed on their website.
+  
+      We created an online marketplace/classifieds site for listing vehicles
+      serving independent buyers and sellers as well as hundreds of dealerships
+      across Canada. Vehicle listings were either posted by end-users or
+      aggregated using data providers from organizations including Strathcom
+      Media and Boost Motor Group for display.
+  
+  
+      **Technologies:** HTML, CSS, JavaScript, jQuery, PHP, Kohana/CodeIgniter,
+      Kohana ORM, SOAP, REST, XML,MySQL, Sphinx OSSS, Memcached, GD,
+      ImageMagick, Photoshop, Illustrator, Git
+    endDate: 2012-10-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-carsgone.png
+    projectName: Carsgone.com
+    startDate: 2011-05-01T12:00:00.000Z
+    testimonialId: carsgone
+  
   - client: RMG Selection
     description: >-
       RMG Selection is an award-winning, China-focused international recruitment
@@ -328,10 +342,10 @@ items:
 
       **Technologies:** WordPress, Linux, Apache, PHP, MySQL, jQuery,
       GhostScript (PDF)
-    endDate: 2011-09-01T12:00:00.000Z
+    endDate: 2011-06-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-rmg-selection.png
     projectName: RMG Selection Recruitment Portal v3
-    startDate: 2011-09-01T12:00:00.000Z
+    startDate: 2011-04-01T12:00:00.000Z
   - client: Active24
     description: >-
       Active 24 is an independent pan-European provider of Internet hosting
@@ -343,7 +357,7 @@ items:
       **Technologies:** WordPress, Linux, Apache, PHP, MySQL, ProtoType
     endDate: 2011-06-01T12:00:00.000Z
     projectName: Product Matrix WordPress Extension
-    startDate: 2011-06-01T12:00:00.000Z
+    startDate: 2011-04-01T12:00:00.000Z
     testimonialId: active24
   - client: SoftControl
     description: >-
@@ -360,9 +374,9 @@ items:
 
       **Technologies:** Magento, Linux, Apache, PHP, MySQL, Prototype, GD,
       ImageMagick & Imagick for PHP, GhostScript (PDF), SVN
-    endDate: 2011-04-01T12:00:00.000Z
+    endDate: 2011-02-01T12:00:00.000Z
     projectName: ExtremeAudio E-Commerce Website
-    startDate: 2011-04-01T12:00:00.000Z
+    startDate: 2010-11-01T12:00:00.000Z
   - client: Xtend-Life
     description: >-
       Developed a business card publishing plugin for WordPress CMS with
@@ -378,7 +392,7 @@ items:
       IIS, SVN
     endDate: 2010-09-01T12:00:00.000Z
     projectName: Online Affiliate Portal
-    startDate: 2010-09-01T12:00:00.000Z
+    startDate: 2010-04-01T12:00:00.000Z
   - client: Smart Traffic/Smart Site
     description: >-
       Designed and implemented a custom e-commerce theme and several extensions
