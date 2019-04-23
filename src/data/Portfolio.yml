@@ -231,6 +231,7 @@ items:
       the products offered on the kiosks are full programs, profile sheets,
       singles races and IP sheets.
       
+      
       **Our Solution**
       
   
@@ -491,12 +492,23 @@ items:
       **Our Solution**
       
       
-      We created an online marketplace/classifieds site for listing vehicles
+      We rebuilt an online marketplace/classifieds site for listing vehicles
       serving independent buyers and sellers as well as hundreds of dealerships
       across Canada. Vehicle listings were either posted by end-users or
       aggregated using data providers from organizations including Strathcom
       Media and Boost Motor Group for display. At its peak they had over 90,000
       vehicles and vehicles from over 600 dealerships listed on their website.
+  
+      **Scope of Work**
+      •	Re-designed application components and classes
+      •	Re-designed end-user and administrative user interfaces
+      •	Re-designed database and DAL entities, leveraging Doctrine DBAL and Doctrine ORM
+      •	Designed and developed SOAP/REST/XML-RPC solutions for parsing massive data feeds from providers including
+      Boost Motor Group, Strathcom Media, and dozens of independent auto dealerships across Canada
+      •	Optimized search indexing and caching using Sphinx Open Source Search Server and other technologies
+      •	Combined SEO optimization and dynamic content generation
+      •	Designed and built Print->PDF->Web publishing application using Kohana and ImageMagick
+      •	Optimized image caching mechanisms
   
   
       **Technologies**
@@ -517,8 +529,13 @@ items:
       
       
       RMG Selection is an award-winning, China-focused international recruitment
-      and HR consultancy business with over 30 offices around the world. We
-      designed, developed and helped maintain the RMG Selection’s HR recruitment
+      and HR consultancy business with over 30 offices around the world.
+      
+      
+      **Our Solution**
+      
+      
+      We designed, developed and helped maintain the RMG Selection’s HR recruitment
       website for over 6 years. This 2014 rebuild of the site was the winner of
       the ‘Best Job Board’ award at the 2014 Global Recruiter Asia Pacific
       Awards ceremony in Singapore.
@@ -541,7 +558,16 @@ items:
       services. The company focuses on providing small and medium-sized
       companies and private individuals with hosted solutions that combine
       scalable and standardized products.
-
+      
+      **Our Solution**
+  
+  
+      We designed and built WordPress plugins to create, display, and update product matrices
+      which were displayed on their corporate website and online "stores". It featured a GUI
+      to create grid/matrix supporting CRUD functions for resource (product) rows, columns and cells,
+      inline AJAX-based editing, cell content overriding as well as a style editor for formatting
+      resource rows, columns and cells
+      
 
       **Technologies**
       
@@ -782,3 +808,25 @@ items:
     endDate: 2008-04-01T12:00:00.000Z
     projectName: Bangkok International Film Festival 2008 Website
     startDate: 2008-04-01T12:00:00.000Z
+  - client: Nfineon
+    description: >-
+      **The Client**
+  
+  
+      **Our Solution**
+  
+  
+      We developed a community biofuel-centric community portal for GRES, a California, USA based biofuels
+      research think-tank featuring file-sharing, document management, and social media integration with Facebook.
+  
+  
+      **Technologies**
+  
+  
+      Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg, Adobe Flash
+    endDate: 2008-04-01T12:00:00.000Z
+    projectName: Global Renewable Energy Services Portal
+    startDate: 2008-04-01T12:00:00.000Z
+  
+    
+  
