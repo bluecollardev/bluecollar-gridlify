@@ -500,6 +500,8 @@ items:
       vehicles and vehicles from over 600 dealerships listed on their website.
   
       **Scope of Work**
+      
+      
       •	Re-designed application components and classes
       •	Re-designed end-user and administrative user interfaces
       •	Re-designed database and DAL entities, leveraging Doctrine DBAL and Doctrine ORM
