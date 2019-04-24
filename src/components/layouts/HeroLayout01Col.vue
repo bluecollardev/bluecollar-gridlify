@@ -136,6 +136,7 @@ export default {
 
 <style scoped>
   .hero-section-01-col {
+    background-size: cover;
     /* Smooth parallax scrolling */
     background-attachment: fixed;
     background-repeat: no-repeat;
