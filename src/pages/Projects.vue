@@ -21,7 +21,7 @@
     </section>
     <section id="portfolio" class="hero-section portfolio-items clearfix">
       <div class="vertical-line"></div>
-      <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix">
+      <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix pad-top-2x">
         <portfolio-item
           v-for="project in portfolioItems"
           :key="project.projectName"
@@ -234,8 +234,6 @@
     height: 100%;
     position: absolute;
     left: 50%;
-    padding-top: 63px;
-    top: -63px;
     z-index: 2;
   }
 
