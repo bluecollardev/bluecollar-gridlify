@@ -39,27 +39,6 @@
           </div>
         </div>
       </div>-->
-      <div class="hero-section bg-hero-grey sm-flex">
-        <div class="relative flex-basis-half sm-flex flex-justify-end">
-          <div class="content-block xs-no-space-top lg-space-top">
-            <img class="banner-image right" src="/images/woman-in-casual-office_4460x4460.jpg" alt="" />
-          </div>
-        </div>
-
-        <div class="sm-flex flex-center flex-justify-start flex-basis-half">
-          <div class="content-block">
-            <div class="space-left space-right">
-              <div class="space-bottom-half g-services">
-                <p>Blue Collar has been in the business of web design since 2008. Starting as a web design agency building sites for clients in Canada, the US, and Asia, we have evolved over time.</p>
-
-                <!--<p>Today our focus is exclusively on building next-generation accelerated mobile page web solutions for clients who want to share their content with the ever growing global mobile audience, and take advantage of the tremendous opportunities for highly targeted marketing now available on social media platforms like Facebook.</p>
-                -->
-                <p>Whether it’s parsing MLS listing data to AMP landing pages, or running creative social media campaigns for e-commerce businesses, we are obsessed with innovating new solutions for the mobile web and continually bringing new value to our clients.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!--<section class="lg-flex bg-hero-grey pad-top">
@@ -182,7 +161,7 @@
           <content-block-layout
             className="pad-top"
             title="Our Story"
-            description="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+            description="Blue Collar has been in the business of web design since 2008. Starting as a web design agency building sites for clients in Canada, the US, and Asia, we have evolved over time. Whether it’s parsing MLS listing data to AMP landing pages, or running creative social media campaigns for e-commerce businesses, we are obsessed with innovating new solutions for the mobile web and continually bringing new value to our clients."
             link="/"
             linkText="Back to Home"
           />
