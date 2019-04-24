@@ -161,7 +161,7 @@
           <content-block-layout
             className="pad-top"
             title="Our Story"
-            description="Blue Collar has been in the business of web design since 2008. Starting as a web design agency building sites for clients in Canada, the US, and Asia, we have evolved over time. Whether it’s parsing MLS listing data to AMP landing pages, or running creative social media campaigns for e-commerce businesses, we are obsessed with innovating new solutions for the mobile web and continually bringing new value to our clients."
+            description="Blue Collar has been in the business of custom software development and web design since 2008. Starting as a web design agency building sites for clients in Canada, the US, and Asia, we have evolved over time. Whether it’s parsing MLS listing data to AMP landing pages, or running creative social media campaigns for e-commerce businesses, we are obsessed with innovating new solutions for the mobile web and continually bringing new value to our clients."
             link="/"
             linkText="Back to Home"
           />
