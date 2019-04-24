@@ -437,38 +437,29 @@ section.hero-section {
 }
 
 @media screen and (min-width: 1400px) {
-  section.hero-section-01-col + section.hero-section:after,
-  section.hero-section-01-col + section.hero-section-01-col:after {
-    background: inherit;
-    /*top: tan(-3.5deg * 2) + vh;*/
-    content: '';
-    display: block;
-    height: 10%;
-    left: 0;
-    right: 0;
-    position: absolute;
-    //-webkit-transform: skewY(3.5deg);
-    //transform: skewY(3.5deg);
-    //-webkit-transform-origin: 100%;
-    transform-origin: 100%;
-    z-index: 1;
-  }
-
+  section.hero-section.angle + section.hero-section:before,
   section.hero-section-01-col.angle + section.hero-section:before,
   section.hero-section-01-col.angle + section.hero-section-01-col:before {
-    background: inherit;
-    top: tan(3.5deg * 2) - 9%;
-    content: '';
-    display: block;
-    height: 10%;
+    background: transparent;
+    height: 100px;
+    top: -9.3vh;
     left: 0;
     right: 0;
     position: absolute;
-    //-webkit-transform: skewY(-3.5deg);
-    //transform: skewY(-3.5deg);
-    //-webkit-transform-origin: 100%;
-    //transform-origin: 100%;
+    display: block;
+    content: '';
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 1000 0, 1000 100, 0 100' fill='rgb(242, 241, 237)' /></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
     z-index: 2;
+  }
+
+  section.hero-section.angle + section.hero-section.bg-bc-blue:before,
+  section.hero-section-01-col.angle + section.hero-section.bg-bc-blue:before,
+  section.hero-section-01-col.angle + section.hero-section-01-col.bg-bc-blue:before {
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 1000 0, 1000 100, 0 100' fill='rgb(51, 88, 122)' /></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   section.hero-section-01-col.angle + section.hero-section,
@@ -494,40 +485,6 @@ section.hero-section {
     max-width: 100%;
     -o-object-fit: contain;
     object-fit: contain;
-  }
-
-  section.hero-section.angle + section.hero-section:after {
-    background: inherit;
-    top: 0;
-    content: '';
-    display: block;
-    height: 120px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    position: absolute;
-    //-webkit-transform: skewY(3.5deg);
-    //transform: skewY(3.5deg);
-    //transform-origin: 100%;
-    z-index: 1;
-
-  }
-
-  section.hero-section.angle + section.hero-section:before {
-    background: inherit;
-    top: -120px;
-    content: '';
-    display: block;
-    height: 120px !important;
-    left: 0;
-    right: 0;
-    width: 100%;
-    position: absolute;
-    //-webkit-transform: skewY(-3.5deg);
-    //transform: skewY(-3.5deg);
-    //-webkit-transform-origin: 100%;
-    transform-origin: 100%;
-    z-index: 2;
   }
 
   section.hero-section.angle + section.hero-section {
