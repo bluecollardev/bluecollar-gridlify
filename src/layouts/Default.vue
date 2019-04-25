@@ -2,9 +2,9 @@
   <main>
     <div class="container">
       <div class="notifications" v-if="displayNotifications">
-        <img class="under-construction" src="/images/under-construction.svg" alt="" />
+        <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
         <span class="notification">
-          <span>ⓘ Disclaimer - this site is currently under construction and is intended as a starting point for both Blue Collar Development, as well as the personal portfolio of Lucas Lopatka. In-accuracies do exist and some projects are not correctly described, and working relationships have not been identified as contract or employee. Employee relationships will be moved to lucaslopatka.com. I am currently working on customizing the project repeater as to distinguish between client and employee projects, and password protect the project's section. If you have any issue with the content of this site, contact me at lucas@bluecollardev.com.</span>
+          <span>ⓘ Disclaimer - this site is currently under construction<span class="md-hide lg-hide">.</span><span class="xs-hide sm-hide">and is intended as a starting point for both Blue Collar Development, as well as the personal portfolio of Lucas Lopatka. In-accuracies do exist and some projects are not correctly described, and working relationships have not been identified as contract or employee. Employee relationships will be moved to lucaslopatka.com. I am currently working on customizing the project repeater as to distinguish between client and employee projects, and password protect the project's section. If you have any issue with the content of this site, contact me at lucas@bluecollardev.com.</span></span>
           <button class="hide-notification" aria-label="Hide notification" v-on:click="hideNotifications()">&times;</button>
         </span>
       </div>
@@ -41,11 +41,11 @@
 
 .notification {
   display: flex;
-  align-items: flex-start;
-  padding: 0.5rem 14rem;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
   color: white;
   font-weight: bold;
-  font-size: 80%;
   text-align: justify;
   background-color: rgba(17,17,17, 0.777);
 }
@@ -56,6 +56,7 @@
   font-size: 2rem;
   color: white;
   margin-left: 1rem;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -67,5 +68,24 @@
   height: 500px;
   object-fit: cover;
   z-index: 1;
+}
+
+.notification {
+  padding: 0.5rem 1rem;
+  font-size: 70%;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 40em) {
+  .notification {
+    padding: 0.5rem 3.5rem 0.5rem 14rem;
+    font-size: 80%;
+  }
+}
+
+@media screen and (min-width: 102em) {
+  .notification {
+    padding: 0.5rem 1rem 0.5rem 14rem;
+  }
 }
 </style>
