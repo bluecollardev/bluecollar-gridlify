@@ -17,7 +17,7 @@
   export default {
     data() {
       return {
-        displayNotifications: true
+        displayNotifications: false
       }
     },
     methods: {

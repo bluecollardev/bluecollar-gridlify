@@ -1,12 +1,20 @@
 <template>
   <Layout>
     <Header/>
+    <div class="notifications" v-if="displayDisclaimer">
+      <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
+      <span class="notification">
+        <span><span class="disclaimer-icon">ⓘ</span> <strong>Disclaimer!</strong> My portfolio is under construction. Projects details may not be 100% accurate or complete. Please check again in a couple days.</span>
+        <button class="hide-notification" aria-label="Hide notification" v-on:click="hideDisclaimer()">&times;</button>
+      </span>
+    </div>
     <section class="hero-section bg-bc-blue sm-flex pad-top pad-bottom-2x height-full angle">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="content-block">
           <div>
-            <div class="space-bottom space-top">
+            <div class="space-bottom space-top-2x">
               <p class="g-pstyle2 text-center-force">Client Projects</p>
+              <p class="g-pstyle1 text-center-force">Note: Only Blue Collar contract roles are listed here. To view my full work history <a style="text-decoration: underline; color: white;" href="/lucas-profile" alt="View Lucas' profile">click here</a>.</p>
             </div>
             <img class="lozad" src="/images/portfolio/bc-showcase-responsive.png" alt="" />
             <div class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center">
@@ -73,7 +81,8 @@
     },
     data() {
       return {
-        pricingFor: 'WEB_SOFTWARE'
+        pricingFor: 'WEB_SOFTWARE',
+        displayDisclaimer: true
       }
     },
     computed: {
@@ -108,6 +117,9 @@
       },
     },
     methods: {
+      hideDisclaimer() {
+        this.displayDisclaimer = false
+      },
       /**
        * Allows the browser to choose an appropriate resolution image by using srcset with x-descriptors and without sizes.
        * @param path

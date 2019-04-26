@@ -7,6 +7,7 @@
           <div>
             <div class="space-bottom space-top">
               <p class="g-pstyle2 text-center-force">Meet Lucas!</p>
+              <p class="g-pstyle1 text-center-force">Note: This is my personal work history. To view Blue Collar projects <a style="text-decoration: underline; color: white;" href="/projects" alt="View Blue Collar projects">click here</a>.</p>
             </div>
           </div>
         </div>
