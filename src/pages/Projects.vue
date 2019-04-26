@@ -14,7 +14,7 @@
           <div>
             <div class="space-bottom space-top-2x">
               <p class="g-pstyle2 text-center-force">Client Projects</p>
-              <p class="g-pstyle1 text-center-force">Note: Only Blue Collar contract roles are listed here. To view my full work history <a style="text-decoration: underline; color: white;" href="/lucas-profile" alt="View Lucas' profile">click here</a>.</p>
+              <p class="g-pstyle1 text-center-force">Note: Only Blue Collar contract roles are listed here. To view my personal work history <a style="text-decoration: underline; color: white;" href="/lucas-profile" alt="View Lucas' profile">click here</a>.</p>
             </div>
             <img class="lozad" src="/images/portfolio/bc-showcase-responsive.png" alt="" />
             <!--<div class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center">
