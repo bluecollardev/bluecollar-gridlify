@@ -4,7 +4,7 @@
       <div class="notifications" v-if="displayNotifications">
         <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
         <span class="notification">
-          <span>ⓘ Disclaimer! This site is currently under construction and is intended as a starting point for both Blue Collar Development, as well as the personal portfolio of Lucas Lopatka. In-accuracies do exist and some projects may not be as described accurately.</span>
+          <span><span class="disclaimer-icon">ⓘ</span> Disclaimer! This site is currently under construction and is intended as a starting point for both Blue Collar Development, as well as the personal portfolio of Lucas Lopatka. Projects may not be as described.</span>
           <button class="hide-notification" aria-label="Hide notification" v-on:click="hideNotifications()">&times;</button>
         </span>
       </div>
@@ -62,6 +62,11 @@
   flex: 0;
 }
 
+.disclaimer-icon {
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
+
 .under-construction {
   position: absolute;
   top: -161px;
@@ -93,7 +98,7 @@
 
 @media screen and (min-width: 102em) {
   .notification {
-    padding: 0.5rem 3rem 0.5rem 18rem;
+    padding: 0.5rem 3rem 0.5rem 15.5rem;
     text-align: left;
   }
 }
