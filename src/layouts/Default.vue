@@ -64,10 +64,10 @@
 
 .under-construction {
   position: absolute;
-  top: -446px;
-  left: -430px;
-  width: 1000px;
-  height: 1000px;
+  top: -161px;
+  left: -195px;
+  width: 500px;
+  height: 500px;
   -o-object-fit: cover;
   object-fit: cover;
   z-index: 1;
