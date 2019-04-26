@@ -4,7 +4,7 @@
       <div class="notifications" v-if="displayNotifications">
         <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
         <span class="notification">
-          <span>ⓘ Disclaimer - this site is currently under construction<span class="md-hide lg-hide">.</span><span class="xs-hide sm-hide">and is intended as a starting point for both Blue Collar Development, as well as the personal portfolio of Lucas Lopatka. In-accuracies do exist and some projects are not correctly described, and working relationships have not been identified as contract or employee. Employee relationships will be moved to lucaslopatka.com. I am currently working on customizing the project repeater as to distinguish between client and employee projects, and password protect the project's section. If you have any issue with the content of this site, contact me at lucas@bluecollardev.com.</span></span>
+          <span>ⓘ Disclaimer! This site is currently under construction and is intended as a starting point for both Blue Collar Development, as well as the personal portfolio of Lucas Lopatka. In-accuracies do exist and some projects may not be as described accurately.</span>
           <button class="hide-notification" aria-label="Hide notification" v-on:click="hideNotifications()">&times;</button>
         </span>
       </div>
@@ -37,6 +37,7 @@
   height: auto;
   width: 100vw;
   z-index: 100;
+  background-color: rgba(17,17,17, 0.777);
 }
 
 .notification {
@@ -45,9 +46,7 @@
   align-items: center;
   justify-content: space-between;
   color: white;
-  font-weight: bold;
-  text-align: justify;
-  background-color: rgba(17,17,17, 0.777);
+  text-align: center;
 }
 
 .hide-notification {
@@ -56,16 +55,20 @@
   font-size: 2rem;
   color: white;
   margin-left: 1rem;
+  margin-right: 2rem;
   padding: 0;
   cursor: pointer;
+  flex-basis: 2rem;
+  flex: 0;
 }
 
 .under-construction {
   position: absolute;
-  top: -154px;
-  left: -200px;
-  width: 500px;
-  height: 500px;
+  top: -105px;
+  left: -140px;
+  width: 350px;
+  height: 350px;
+  -o-object-fit: cover;
   object-fit: cover;
   z-index: 1;
 }
@@ -76,16 +79,22 @@
   font-weight: normal;
 }
 
+.notification > span {
+  flex: 1;
+}
+
 @media screen and (min-width: 40em) {
   .notification {
     padding: 0.5rem 3.5rem 0.5rem 14rem;
     font-size: 80%;
+    font-weight: bold;
   }
 }
 
 @media screen and (min-width: 102em) {
   .notification {
-    padding: 0.5rem 1rem 0.5rem 14rem;
+    padding: 0.5rem 3rem 0.5rem 18rem;
+    text-align: left;
   }
 }
 </style>

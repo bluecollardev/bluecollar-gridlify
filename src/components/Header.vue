@@ -220,7 +220,7 @@
   header .drop-menu {
     position: absolute;
     display: block;
-    top: 37px;
+    top: 21px;
     transform: scaleY(0);
     width: auto;
     transform-origin: top;
