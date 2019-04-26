@@ -14,7 +14,7 @@
       </div>
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="content-block">
-          <div>
+          <div class="text-center">
             <img class="circle space-bottom-half testimonial-profile-circle" src="/images/company/me-ski.jpg" alt="" />
           </div>
         </div>
