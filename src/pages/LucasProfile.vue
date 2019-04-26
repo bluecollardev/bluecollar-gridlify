@@ -1,6 +1,13 @@
 <template>
   <Layout>
     <Header/>
+    <div class="notifications" v-if="displayDisclaimer">
+      <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
+      <span class="notification">
+        <span><span class="disclaimer-icon">ⓘ</span> <strong>Disclaimer!</strong> My portfolio is under construction. Projects details may not be 100% accurate or complete. Please check again in a couple days.</span>
+        <button class="hide-notification" aria-label="Hide notification" v-on:click="hideDisclaimer()">&times;</button>
+      </span>
+    </div>
     <section class="hero-section bg-bc-blue sm-flex pad-top pad-bottom-2x height-full angle">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="content-block">
@@ -90,7 +97,8 @@
     },
     data() {
       return {
-        pricingFor: 'WEB_SOFTWARE'
+        pricingFor: 'WEB_SOFTWARE',
+        displayDisclaimer: true
       }
     },
     computed: {
@@ -125,6 +133,9 @@
       },
     },
     methods: {
+      hideDisclaimer() {
+        this.displayDisclaimer = false
+      },
       /**
        * Allows the browser to choose an appropriate resolution image by using srcset with x-descriptors and without sizes.
        * @param path
