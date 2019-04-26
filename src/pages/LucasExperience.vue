@@ -10,10 +10,10 @@
             </div>
             <img class="lozad" src="/images/portfolio/bc-showcase-responsive.png" alt="" />
             <div class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center">
-            <a class="action-link space-bottom g-pstyle3" href="/projects#portfolio">Scroll Down</a>
+            <a class="action-link space-bottom g-pstyle3" href="/projects#portfolio">Take the Tour</a>
           </div>
           <div class="homepage-hero-action action-link-block xs-hide text-center">
-            <a class="action-link space-top g-pstyle3" href="/projects#portfolio">Scroll Down</a>
+            <a class="action-link space-top g-pstyle3" href="/projects#portfolio">Take the Tour</a>
           </div>
           </div>
         </div>
@@ -24,7 +24,6 @@
       <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix pad-top-2x">
         <portfolio-item
           v-for="project in portfolioItems"
-          v-if="project.isPublic"
           :key="project.projectName"
           :project="project"
           :testimonial="getTestimonialById(project.testimonialId)"
@@ -442,7 +441,7 @@
         .timeline__item__date {
           left: 50%;
           right: auto;
-          margin-left: -70px;
+          margin-left: 30px;
           top: 27.5px;
         }
 
@@ -467,7 +466,7 @@
         .timeline__item__date {
           right: 50%;
           left: auto;
-          margin-right: -70px;
+          margin-right: 30px;
           top: 27.5px;
         }
 

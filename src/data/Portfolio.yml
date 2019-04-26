@@ -22,6 +22,8 @@ items:
     image: /images/portfolio/bc-showcase-app-timemachine.png
     projectName: Procurement Services Division Time Machine
     startDate: 2019-03-01T12:00:00.000Z
+    isPublic: false
+    displayImage: false
   - client: Interdynamix
     description: >-
       **The Client**
@@ -58,6 +60,8 @@ items:
     image: /images/portfolio/bc-showcase-app-ideal.png
     projectName: Ideal Automotive Finance Solutions
     startDate: 2017-07-01T12:00:00.000Z
+    isPublic: false
+    displayImage: true
   - client: Phobulous Noodle House
     description: >-
       **The Client**
@@ -82,6 +86,8 @@ items:
     image: /images/portfolio/bc-showcase-phobulous.png
     projectName: Phobulous Restaurant Website
     startDate: 2017-04-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Caffe Tech 2004 Ltd.
     description: >-
       **The Client**
@@ -115,7 +121,8 @@ items:
     image: /images/portfolio/bc-showcase-app-quickcommerce.png
     projectName: iOS Tablet Point-of-Sale
     startDate: 2017-02-01T12:00:00.000Z
-  
+    isPublic: true
+    displayImage: true
   - client: Jimmy Poblano's Mexican Cantina
     description: >-
       **The Client**
@@ -142,7 +149,8 @@ items:
     testimonialId: jimmyp
     startDate: 2017-02-01T12:00:00.000Z
     endDate: 2017-03-01T12:00:00.000Z
-    
+    isPublic: true
+    displayImage: true
   - client: Caffe Tech / Cafe Leva
     description: >-
       **The Client**
@@ -165,7 +173,8 @@ items:
     image: /images/portfolio/bc-showcase-cafe-leva.png
     projectName: Leva Website
     startDate: 2016-11-01T12:00:00.000Z
-    
+    isPublic: true
+    displayImage: true
   - client: Baan Saowanee
     description: >-
       **The Client**
@@ -188,7 +197,8 @@ items:
     projectName: Baan Saowanee
     startDate: 2016-09-01T12:00:00.000Z
     endDate: 2016-10-01T12:00:00.000Z
-    
+    isPublic: true
+    displayImage: true
   - client: Caffe Tech 2004 Ltd.
     description: >-
       **The Client**
@@ -219,7 +229,8 @@ items:
     image: /images/portfolio/bc-showcase-caffe-tech.png
     projectName: Caffe Tech E-Commerce Store
     startDate: 2016-03-01T12:00:00.000Z
-    
+    isPublic: true
+    displayImage: true
   - client: Video Entertainment Systems Technology Ltd.
     description: >-
       **The Client**
@@ -254,7 +265,8 @@ items:
     testimonialId: phase3
     startDate: 2015-08-01T12:00:00.000Z
     endDate: 2016-04-01T12:00:00.000Z
-    
+    isPublic: true
+    displayImage: true
   - client: Caffe Tech 2004 Ltd.
     description: >-
       **The Client**
@@ -292,7 +304,8 @@ items:
     projectName: Caffe Tech Inventory Management and Data Bridge
     endDate: 2016-02-01T12:00:00.000Z
     startDate: 2015-07-01T12:00:00.000Z
-    
+    isPublic: true
+    displayImage: true
   - client: Challenger Fleet Management Solutions
     description: >-
       **The Client**
@@ -323,7 +336,8 @@ items:
     image: /images/portfolio/bc-showcase-app-challenger-02.png
     projectName: Challenger Fleet Management System
     startDate: 2015-02-01T12:00:00.000Z
-    
+    isPublic: true
+    displayImage: true
   - client: Corrpro (Canada)
     description: >-
       **The Client**
@@ -352,7 +366,8 @@ items:
     image: /images/portfolio/bc-showcase-app-corrpro.png
     projectName: Corrpro Corrosion Reporting Application
     startDate: 2015-02-01T12:00:00.000Z
-  
+    isPublic: true
+    displayImage: true
   - client: Alberta Motor Association
     description: >-
       **The Client**
@@ -385,6 +400,8 @@ items:
     image: /images/portfolio/bc-showcase-app-agentview.png
     projectName: AgentView Insurance Policy Management System
     startDate: 2013-02-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Alberta Motor Association
     description: >-
       **The Client**
@@ -419,6 +436,8 @@ items:
     image: /images/portfolio/bc-showcase-app-homequote.png
     projectName: Home Insurance Quote Web Application
     startDate: 2013-02-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Alberta Motor Association
     description: >-
       **The Client**
@@ -453,7 +472,8 @@ items:
     image: /images/portfolio/bc-showcase-app-autoquote.png
     projectName: Auto Insurance Quote Web Application
     startDate: 2013-02-01T12:00:00.000Z
-  
+    isPublic: true
+    displayImage: true
   - client: Spasation
     description: >-
       **The Client**
@@ -477,8 +497,8 @@ items:
     projectName: Spasation Website and Online Store
     startDate: 2012-11-01T12:00:00.000Z
     testimonialId: spasation
-    
-
+    isPublic: true
+    displayImage: true
   - client: Carsgone (Magazine)
     description: >-
       **The Client**
@@ -524,7 +544,8 @@ items:
     projectName: Carsgone.com
     startDate: 2011-05-01T12:00:00.000Z
     testimonialId: carsgone
-  
+    isPublic: true
+    displayImage: true
   - client: RMG Selection
     description: >-
       **The Client**
@@ -551,6 +572,8 @@ items:
     image: /images/portfolio/bc-showcase-rmg-selection.png
     projectName: RMG Selection Recruitment Portal v3
     startDate: 2011-04-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Active24
     description: >-
       **The Client**
@@ -579,6 +602,8 @@ items:
     projectName: Product Matrix WordPress Extension
     startDate: 2011-04-01T12:00:00.000Z
     testimonialId: active24
+    isPublic: true
+    displayImage: true
   - client: SoftControl
     description: >-
       **The Client**
@@ -605,6 +630,8 @@ items:
     endDate: 2011-02-01T12:00:00.000Z
     projectName: ExtremeAudio E-Commerce Website
     startDate: 2010-11-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Xtend-Life
     description: >-
       **The Client**
@@ -630,6 +657,8 @@ items:
     endDate: 2010-09-01T12:00:00.000Z
     projectName: Online Affiliate Portal
     startDate: 2010-04-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Smart Traffic/Smart Site
     description: >-
       **The Client**
@@ -650,6 +679,8 @@ items:
     endDate: 2010-06-01T12:00:00.000Z
     projectName: MyFoneRecycle E-Commerce Website
     startDate: 2010-06-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Smart Traffic/Smart Site
     description: >-
       **The Client**
@@ -675,6 +706,8 @@ items:
     endDate: 2010-04-01T12:00:00.000Z
     projectName: Gorilla Print UK E-Commerce Website
     startDate: 2010-04-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Smart Traffic/Smart Site
     description: >-
       **The Client**
@@ -696,6 +729,8 @@ items:
     endDate: 2010-01-01T12:00:00.000Z
     projectName: Wholesale Silver Jewelry E-Commerce Website
     startDate: 2010-01-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Nfineon
     description: >-
       **The Client**
@@ -720,6 +755,8 @@ items:
     endDate: 2009-08-01T12:00:00.000Z
     projectName: Binc VFX Website and Asset Management System
     startDate: 2009-08-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Nfineon
     description: >-
       **The Client**
@@ -769,6 +806,8 @@ items:
     endDate: 2008-10-01T12:00:00.000Z
     projectName: R1 Club Website
     startDate: 2008-10-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Nfineon
     description: >-
       **The Client**
@@ -791,6 +830,8 @@ items:
     endDate: 2008-07-01T12:00:00.000Z
     projectName: LUXE Galleria Website
     startDate: 2008-07-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Nfineon
     description: >-
       **The Client**
@@ -810,6 +851,8 @@ items:
     endDate: 2008-04-01T12:00:00.000Z
     projectName: Bangkok International Film Festival 2008 Website
     startDate: 2008-04-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: Nfineon
     description: >-
       **The Client**
@@ -829,6 +872,8 @@ items:
     endDate: 2008-04-01T12:00:00.000Z
     projectName: Global Renewable Energy Services Portal
     startDate: 2008-04-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   
     
   

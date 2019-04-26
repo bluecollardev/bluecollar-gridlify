@@ -1,5 +1,5 @@
 <template>
-  <div class="timeline__item clearfix">
+  <div class="timeline__item clearfix space-top">
     <div class="timeline__item__date">{{ getFormattedDate(this.project) }}</div>
     <div class="timeline__item__content">
       <div class="timeline__item__content__logo">
@@ -15,7 +15,7 @@
         {{ `${getFormattedStartDate(this.project)} - ${getFormattedEndDate(this.project)}` }}
       </span>
       <div v-if="typeof this.project.image === 'string' && this.project.image.length > 3" class="project-image xs-pad-top xs-pad-bottom">
-        <img class="lozad" v-bind:src="this.project.image" sizes="(max-width: 40rem) 320px, 1280px" v-bind:srcset="getImagesSrcSet(this.project.image)" alt="" />
+        <img v-if="this.project.displayImage" class="lozad space-top" v-bind:src="this.project.image" sizes="(max-width: 40rem) 320px, 1280px" v-bind:srcset="getImagesSrcSet(this.project.image)" alt="" />
       </div>
       <div class="timeline__item__content__description" v-html="compiledDescription"></div>
       <hr v-if="this.testimonial" class="space-top-half space-bottom-half" />
