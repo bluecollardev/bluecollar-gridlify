@@ -172,13 +172,16 @@
         v-if="getTestimonial(0)"
         class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
         <testimonial-block-layout
-          className="space-top space-bottom"
-          testimonial="Blue Collar Dev #1"
+          className="space-top"
           reviewedBy="Lucas Lopatka"
           position="Solutions Architect"
-          organization="Welcome to Blue Collar :) I'm Lucas, and I am a Full-Stack Solutions Architect with 15 years of experience designing and building custom software applications. I design, wireframe, prototype, and develop mobile, hybrid and progressive apps. I also architect, implement and deploy scalable, cloud-based RESTful services and multi-tier micro-services for clients of all sizes located in Canada and abroad. When I'm not coding or learning about the latest and greatest tech, you can often find me shredding some fresh pow, scuba diving, trekking through the bush or just having a good time with my family and friends."
+          organization="Welcome to Blue Collar! I'm Lucas, and I am a Full-Stack Solutions Architect with 15 years of experience designing and building custom software applications. I design, wireframe, prototype, and develop mobile, hybrid and progressive apps. I also architect, implement and deploy scalable, cloud-based RESTful services and multi-tier micro-services for clients of all sizes located in Canada and abroad."
           image="/images/company/me-ski.jpg"
         />
+        <div
+          class="homepage-hero-action action-link-block text-center space-bottom">
+          <a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>
+        </div>
       </div>
     </section>
 

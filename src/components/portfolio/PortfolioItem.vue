@@ -6,7 +6,7 @@
         <span class="icon icon--content-logo"></span>
       </div>
       <h4 class="timeline__item__content__subtitle">
-        Client: {{ this.project.client }}
+        {{ (typeof this.project.jobTypeText === 'string' && this.project.jobTypeText.length > 0) ? this.project.jobTypeText : 'Client' }}: {{ this.project.client }}
       </h4>
       <h3 class="timeline__item__content__title">
         {{ this.project.projectName }}

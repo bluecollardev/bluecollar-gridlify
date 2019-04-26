@@ -6,15 +6,32 @@
         <div class="content-block">
           <div>
             <div class="space-bottom space-top">
-              <p class="g-pstyle2 text-center-force">Client Projects</p>
+              <p class="g-pstyle2 text-center-force">Meet Lucas!</p>
             </div>
-            <img class="lozad" src="/images/portfolio/bc-showcase-responsive.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="sm-flex flex-auto flex-center flex-justify-center">
+        <div class="content-block">
+          <div>
+            <img class="circle space-bottom-half testimonial-profile-circle" src="/images/company/me-ski.jpg" alt="" />
+          </div>
+        </div>
+        <div class="content-block pad-all">
+          <content-block-layout
+            description="Hi, I'm Lucas, and I am a Full-Stack Solutions Architect with 15 years of experience designing and building custom software applications. I design, wireframe, prototype, and develop mobile, hybrid and progressive apps. I also architect, implement and deploy scalable, cloud-based RESTful services and multi-tier micro-services for clients of all sizes located in Canada and abroad. When I'm not coding or learning about the latest and greatest tech, you can often find me shredding some fresh pow, scuba diving, trekking through the bush or just having a good time with my family and friends."
+          ></content-block-layout>
+        </div>
+      </div>
+      <div class="sm-flex flex-auto flex-center flex-justify-center">
+        <div class="content-block">
+          <div>
             <div class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center">
-            <a class="action-link space-bottom g-pstyle3" href="/projects#portfolio">Take the Tour</a>
-          </div>
-          <div class="homepage-hero-action action-link-block xs-hide text-center">
-            <a class="action-link space-top g-pstyle3" href="/projects#portfolio">Take the Tour</a>
-          </div>
+              <a class="action-link space-bottom g-pstyle3" href="/lucas-profile#portfolio">Scroll Down</a>
+            </div>
+            <div class="homepage-hero-action action-link-block xs-hide text-center">
+              <a class="action-link space-top g-pstyle3" href="/lucas-profile#portfolio">Scroll Down</a>
+            </div>
           </div>
         </div>
       </div>
@@ -441,7 +458,7 @@
         .timeline__item__date {
           left: 50%;
           right: auto;
-          margin-left: 30px;
+          margin-left: -70px;
           top: 27.5px;
         }
 
@@ -466,7 +483,7 @@
         .timeline__item__date {
           right: 50%;
           left: auto;
-          margin-right: 30px;
+          margin-right: -70px;
           top: 27.5px;
         }
 

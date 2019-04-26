@@ -2,7 +2,7 @@ title: Portfolio
 items:
   - client: AOT Technologies / Government of British Columbia
     description: >-
-      **The Client**
+      **The Stakeholder**
       
       
       **The Problem**
@@ -22,8 +22,9 @@ items:
     image: /images/portfolio/bc-showcase-app-timemachine.png
     projectName: Procurement Services Division Time Machine
     startDate: 2019-03-01T12:00:00.000Z
+    jobTypeText: Employed By
     isPublic: false
-    displayImage: true
+    displayImage: false
   - client: Interdynamix
     description: >-
       **The Client**
@@ -308,7 +309,7 @@ items:
     displayImage: true
   - client: Challenger Fleet Management Solutions
     description: >-
-      **The Client**
+      **The Stakeholder**
       
       
       Challenger Fleet Management Solutions specializes in long term vehicle
@@ -336,11 +337,12 @@ items:
     image: /images/portfolio/bc-showcase-app-challenger-02.png
     projectName: Challenger Fleet Management System
     startDate: 2015-02-01T12:00:00.000Z
+    jobTypeText: Employed By
     isPublic: false
     displayImage: true
   - client: Corrpro (Canada)
     description: >-
-      **The Client**
+      **The Stakeholder**
       
       
       Corrpro provides corrosion control materials and services including -
@@ -366,11 +368,12 @@ items:
     image: /images/portfolio/bc-showcase-app-corrpro.png
     projectName: Corrpro Corrosion Reporting Application
     startDate: 2015-02-01T12:00:00.000Z
+    jobTypeText: Employed By
     isPublic: false
     displayImage: true
   - client: Alberta Motor Association
     description: >-
-      **The Client**
+      **The Stakeholder**
       
       
       The Alberta Motor Association was looking to replace its legacy and
@@ -400,11 +403,12 @@ items:
     image: /images/portfolio/bc-showcase-app-agentview.png
     projectName: AgentView Insurance Policy Management System
     startDate: 2013-02-01T12:00:00.000Z
+    jobTypeText: Employed By
     isPublic: false
     displayImage: true
   - client: Alberta Motor Association
     description: >-
-      **The Client**
+      **The Stakeholder**
       
       
       **The Problem**
@@ -436,11 +440,12 @@ items:
     image: /images/portfolio/bc-showcase-app-homequote.png
     projectName: Home Insurance Quote Web Application
     startDate: 2013-02-01T12:00:00.000Z
+    jobTypeText: Employed By
     isPublic: false
     displayImage: true
   - client: Alberta Motor Association
     description: >-
-      **The Client**
+      **The Stakeholder**
       
       
       **The Problem**
@@ -472,6 +477,7 @@ items:
     image: /images/portfolio/bc-showcase-app-autoquote.png
     projectName: Auto Insurance Quote Web Application
     startDate: 2013-02-01T12:00:00.000Z
+    jobTypeText: Employed By
     isPublic: false
     displayImage: true
   - client: Spasation
@@ -583,6 +589,7 @@ items:
       services. The company focuses on providing small and medium-sized
       companies and private individuals with hosted solutions that combine
       scalable and standardized products.
+      
       
       **Our Solution**
   
