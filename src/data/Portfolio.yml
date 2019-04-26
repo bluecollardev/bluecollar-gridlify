@@ -23,7 +23,7 @@ items:
     projectName: Procurement Services Division Time Machine
     startDate: 2019-03-01T12:00:00.000Z
     isPublic: false
-    displayImage: false
+    displayImage: true
   - client: Interdynamix
     description: >-
       **The Client**
@@ -336,7 +336,7 @@ items:
     image: /images/portfolio/bc-showcase-app-challenger-02.png
     projectName: Challenger Fleet Management System
     startDate: 2015-02-01T12:00:00.000Z
-    isPublic: true
+    isPublic: false
     displayImage: true
   - client: Corrpro (Canada)
     description: >-
@@ -366,7 +366,7 @@ items:
     image: /images/portfolio/bc-showcase-app-corrpro.png
     projectName: Corrpro Corrosion Reporting Application
     startDate: 2015-02-01T12:00:00.000Z
-    isPublic: true
+    isPublic: false
     displayImage: true
   - client: Alberta Motor Association
     description: >-
@@ -400,7 +400,7 @@ items:
     image: /images/portfolio/bc-showcase-app-agentview.png
     projectName: AgentView Insurance Policy Management System
     startDate: 2013-02-01T12:00:00.000Z
-    isPublic: true
+    isPublic: false
     displayImage: true
   - client: Alberta Motor Association
     description: >-
@@ -436,7 +436,7 @@ items:
     image: /images/portfolio/bc-showcase-app-homequote.png
     projectName: Home Insurance Quote Web Application
     startDate: 2013-02-01T12:00:00.000Z
-    isPublic: true
+    isPublic: false
     displayImage: true
   - client: Alberta Motor Association
     description: >-
@@ -472,7 +472,7 @@ items:
     image: /images/portfolio/bc-showcase-app-autoquote.png
     projectName: Auto Insurance Quote Web Application
     startDate: 2013-02-01T12:00:00.000Z
-    isPublic: true
+    isPublic: false
     displayImage: true
   - client: Spasation
     description: >-
