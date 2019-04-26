@@ -17,12 +17,12 @@
               <p class="g-pstyle1 text-center-force">Note: Only Blue Collar contract roles are listed here. To view my full work history <a style="text-decoration: underline; color: white;" href="/lucas-profile" alt="View Lucas' profile">click here</a>.</p>
             </div>
             <img class="lozad" src="/images/portfolio/bc-showcase-responsive.png" alt="" />
-            <div class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center">
-            <a class="action-link space-bottom g-pstyle3" href="/projects#portfolio">Scroll Down</a>
-          </div>
-          <div class="homepage-hero-action action-link-block xs-hide text-center">
-            <a class="action-link space-top g-pstyle3" href="/projects#portfolio">Scroll Down</a>
-          </div>
+            <!--<div class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center">
+              <a class="action-link space-bottom g-pstyle3" href="/projects#portfolio">Scroll Down</a>
+            </div>
+            <div class="homepage-hero-action action-link-block xs-hide text-center">
+              <a class="action-link space-top g-pstyle3" href="/projects#portfolio">Scroll Down</a>
+            </div>-->
           </div>
         </div>
       </div>
