@@ -6,10 +6,10 @@
         <div class="content-block">
           <div>
             <div class="space-bottom">
-              <p class="g-pstyle2 text-center-force">Our Vision</p>
+              <p class="g-pstyle2 text-center-force">Build Local. Build Blue Collar.</p>
             </div>
             <div class="g-banner">
-              <p>At Blue Collar we understand that the online world is undergoing a paradigm shift away from traditional HTML websites to a system of content pages shared across social media platforms and mobile devices. Already, more people on earth view their online content on mobile devices than on desktop browsers. We recognize the tremendous opportunities available for businesses who adapt to this shift and adopt tools that will enable them to take advantage of these new platforms and devices. It is our goal to be at the forefront of these new technologies and make use of them to deliver value to our clients.</p>
+              <p>Blue Collar delves in the business of custom software development and web design, employing <strong>local, solution orientated professionals</strong>. Originating in web design, we have since evolved with the voluminous experience found within Blue Collar to provide services such as parsing MLS listing data to leading creative social media campaigns for e-commerce business. Our passion is to innovate new solutions for the mobile web and to always provide value to those who seek it.</p>
             </div>
           </div>
         </div>
@@ -155,13 +155,17 @@
       </div>
     </section>-->
 
-    <section id="services" class="lg-flex">
+    <section class="services lg-flex">
       <div class="sm-flex flex-center flex-justify-center flex-basis-half">
         <div class="content-block">
           <content-block-layout
             className="pad-top"
-            title="Our Story"
-            description="Blue Collar has been in the business of custom software development and web design since 2008. Starting as a web design agency building sites for clients in Canada, the US, and Asia, we have evolved over time. Whether it’s parsing MLS listing data to AMP landing pages, or running creative social media campaigns for e-commerce businesses, we are obsessed with innovating new solutions for the mobile web and continually bringing new value to our clients."
+            title="Your Partner for the Future"
+            description="Blue Collar partners with businesses to modernize their digital tool kit for the paradigm shift currently underway.
+
+As of 2018, it was found 58% of site visitors were accessing content through mobile devices. The world is digitizing at an accelerated rate, moving away from traditional HTML websites to a system of content pages shared across social media platforms and mobile devices.
+
+For those businesses that adapt to this shift and adopt a modernized tool kit, there is a larger percentage of success. But the road to efficient digitizing can be arduous and is likely to create business gaps for our clients. Blue Collar strives to create solutions for these gaps by being at the forefront of these new technologies and ensures that our client receives the utmost value from our services."
             link="/"
             linkText="Back to Home"
           />
@@ -181,6 +185,38 @@
         <div
           class="homepage-hero-action action-link-block text-center space-bottom">
           <a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REPEAT and alternate -->
+    <section class="services lg-flex">
+
+      <div
+        v-if="getTestimonial(0)"
+        class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
+        <testimonial-block-layout
+          className="space-top"
+          reviewedBy="Shivagani Murti"
+          position="Business Development"
+          organization="I coach with those who desire to thrive in a diverse and inclusive workplace, those ready to explore their unconscious bias, and those who want to create a positive impact worldwide. Should you choose Blue Collar as your navigator, be assured your potential will become your reality, as will your impact on the world."
+          image="/images/company/zoya.jpg"
+        />
+        <div
+          class="homepage-hero-action action-link-block text-center space-bottom">
+          <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
+        </div>
+      </div>
+
+      <div class="sm-flex flex-center flex-justify-center flex-basis-half">
+        <div class="content-block">
+          <content-block-layout
+            className="pad-top pad-bottom"
+            title="Connect and Develop with IT Pros"
+            description="In conjunction with partnering with the business landscape globally, Blue Collar provides <strong>training for underprivileged youth</strong> – we believe <strong>coding is the future</strong> and we want to empower youth to make their footprint in this vast world."
+            link="/"
+            linkText="Back to Home"
+          />
         </div>
       </div>
     </section>

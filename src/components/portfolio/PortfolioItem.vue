@@ -1,5 +1,5 @@
 <template>
-  <div class="timeline__item clearfix space-top">
+  <div class="timeline__item clearfix space-top-2x">
     <div class="timeline__item__date">{{ getFormattedDate(this.project) }}</div>
     <div class="timeline__item__content">
       <div class="timeline__item__content__logo">
