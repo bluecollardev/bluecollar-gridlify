@@ -26,16 +26,12 @@
             v-if="typeof this.link === 'string' && this.link.length >0"
             class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
           >
-            <a class="action-link xs-space-top space-bottom g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText"
-              >{{ this.linkText }}</a
-            >
+            <a class="action-link xs-space-top space-bottom g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
           </div>
           <div
             v-if="typeof this.link === 'string' && this.link.length >0"
             class="homepage-hero-action action-link-block xs-hide text-center">
-            <a class="action-link space-top g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText"
-              >{{ this.linkText }}</a
-            >
+            <a class="action-link space-top g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
           </div>
         </div>
       </div>

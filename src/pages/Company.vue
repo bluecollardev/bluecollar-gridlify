@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Header/>
-    <section class="hero-section bg-bc-blue sm-flex pad-top height-two-thirds">
+    <!--<section class="hero-section bg-bc-blue sm-flex pad-top height-two-thirds">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="content-block">
           <div>
@@ -9,12 +9,12 @@
               <p class="g-pstyle2 text-center-force">Build Local. Build Blue Collar.</p>
             </div>
             <div class="g-banner">
-              <p>Blue Collar delves in the business of custom software development and web design, employing <strong>local, solution orientated professionals</strong>. Originating in web design, we have since evolved with the voluminous experience found within Blue Collar to provide services such as parsing MLS listing data to leading creative social media campaigns for e-commerce business. Our passion is to innovate new solutions for the mobile web and to always provide value to those who seek it.</p>
+              <p>Blue Collar delves in the business of custom software development and web design, employing <strong>local, solution orientated professionals</strong>. Our passion is to innovate new solutions for the mobile web and to always provide value to those who seek it.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
 
     <section class="hero-section bg-hero-grey sm-flex flex-column">
       <!--<div class="sm-flex flex-column flex-center flex-justify-stretch flex-basis-two-thirds">
