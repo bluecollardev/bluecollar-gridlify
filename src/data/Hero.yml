@@ -13,10 +13,10 @@ items:
     title: We’re about software.
   - description: >-
       Building beautiful, usable, fast and scalable applications is our thing.
-      Every app is a collection of details, priorities, and tradeoffs, built on
-      some core principles about what makes for a great experience. We
-      collectively have over 150 years of experience, and we use it to make each
-      new app shine.
+      We have a long history of designing and developing amazing experiences for
+      iOS, Android, and Responsive Web. Drawing on deep experience in solution
+      design and combining it with great listening, we work closely with your
+      team to define a solution for the business challenge at hand.
     id: services-hero
     image: /images/portfolio/bc-showcase-app-quickcommerce.png
     link: /services
