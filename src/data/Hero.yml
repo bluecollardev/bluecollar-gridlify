@@ -23,13 +23,13 @@ items:
     linkText: Learn More
     title: Applications crafted with precision and care
   - description: >-
-      At Blue Collar, we don’t leave clients once their product is built. We
-      strive to maintain our relationship because we understand the dynamics of
-      the rapidly changing Information Age. Following the delivery of our
-      product, we provide monthly support in order to improve your online
-      business. We are always here to help!
+      Good software starts with good people. At Blue Collar, you're not our
+      customers - **you're our partners.** We know that the dynamics of the
+      rapidly changing Information Age can be tough at times, but nothing great
+      was ever solved without a challenge. We're here to help you level up. It's
+      our thing.
     id: projects-hero
     image: /images/banners/responsive-banner-jimmy-poblanos.png
     link: /projects
     linkText: Browse Our Portfolio
-    title: Why Blue Collar? Because customers love our work!
+    title: ' Customers love us'
