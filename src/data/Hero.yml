@@ -1,15 +1,14 @@
 title: Hero Items
 items:
   - description: >-
-      We have a long history of designing and developing amazing experiences for
-      iOS, Android, and Responsive Web. We’re a team of industry leading experts
-      who create solutions and build applications using cutting edge technology
-      to help your business succeed. We love what we do and it shows in our
-      work.
+      At Blue Collar Development, we build good software. We're not selling
+      lines of code. We’re a team of 21st century artisans who create amazing
+      applications using cutting edge technology to help you bring your concept
+      to life. Good software starts with good people.
     id: homepage-hero
     image: /images/heroes/blue-collar-home-hero-cool.jpg
     link: /company
-    linkText: Our Story
+    linkText: Start Your Adventure
     title: We’re about software. Software is about people.
   - description: >-
       Building beautiful, usable, fast and scalable applications is our thing.
@@ -23,12 +22,12 @@ items:
     linkText: Learn More
     title: Applications crafted with precision and care
   - description: >-
-      We have a long history of designing and developing amazing experiences
-      for iOS, Android, and Responsive Web. Drawing on deep experience in
-      solution design and combining it with great listening, we work closely
-      with your team to define a solution for the business challenge at hand.
-      Then, we infuse user feedback and priorities into every stage of the
-      software development process.
+      We have a long history of designing and developing amazing experiences for
+      iOS, Android, and Responsive Web. Drawing on deep experience in solution
+      design and combining it with great listening, we work closely with your
+      team to define a solution for the business challenge at hand. Then, we
+      infuse user feedback and priorities into every stage of the software
+      development process.
 
 
       But that's not where we stop. At Blue Collar, we don’t leave clients once
