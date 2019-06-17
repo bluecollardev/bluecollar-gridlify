@@ -4,12 +4,13 @@ items:
       At Blue Collar Development, we build good software. We're not selling
       lines of code. We’re a team of 21st century artisans who create amazing
       applications using cutting edge technology to help you bring your concept
-      to life. Good software starts with good people.
+      to life.
     id: homepage-hero
     image: /images/heroes/blue-collar-home-hero-cool.jpg
     link: /company
     linkText: Start Your Adventure
-    title: We’re about software. Software is about people.
+    subtitle: We’re about software.
+    title: We’re about software.
   - description: >-
       Building beautiful, usable, fast and scalable applications is our thing.
       Every app is a collection of details, priorities, and tradeoffs, built on
