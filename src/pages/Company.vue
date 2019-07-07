@@ -156,7 +156,7 @@
     </section>-->
 
     <section class="services lg-flex">
-      <div class="sm-flex flex-center flex-justify-center flex-basis-half">
+      <div class="sm-flex flex-center flex-justify-center flex-basis-half bg-bc-blue">
         <div class="content-block">
           <content-block-layout
             className="pad-top"
@@ -174,7 +174,7 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
 
       <div
         v-if="getTestimonial(0)"
-        class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
+        class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top bg-white">
         <testimonial-block-layout
           className="space-top"
           reviewedBy="Lucas Lopatka"
@@ -191,28 +191,27 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
 
     <!-- REPEAT and alternate -->
     <section class="services lg-flex">
-
       <div
         v-if="getTestimonial(0)"
-        class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
+        class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top bg-white">
         <testimonial-block-layout
           className="space-top"
-          reviewedBy="Shivagani Murti"
-          position="Business Development"
+          reviewedBy="Taz Master"
+          position="Enterprise Solutions"
           organization="I coach with those who desire to thrive in a diverse and inclusive workplace, those ready to explore their unconscious bias, and those who want to create a positive impact worldwide. Should you choose Blue Collar as your navigator, be assured your potential will become your reality, as will your impact on the world."
-          image="/images/company/zoya.jpg"
+          image="/images/company/me-ski.jpg"
         />
         <div
           class="homepage-hero-action action-link-block text-center space-bottom">
-          <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
+          <a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>
         </div>
       </div>
 
-      <div class="sm-flex flex-center flex-justify-center flex-basis-half">
+      <div class="sm-flex flex-center flex-justify-center flex-basis-half bg-bc-blue">
         <div class="content-block">
           <content-block-layout
             className="pad-top pad-bottom"
-            title="Connect and Develop with IT Pros"
+            title="Connect With Local IT Pros"
             description="In conjunction with partnering with the business landscape globally, Blue Collar provides <strong>training for underprivileged youth</strong> – we believe <strong>coding is the future</strong> and we want to empower youth to make their footprint in this vast world."
             link="/"
             linkText="Back to Home"

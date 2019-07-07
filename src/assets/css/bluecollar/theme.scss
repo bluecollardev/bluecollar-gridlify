@@ -83,7 +83,6 @@ body {
   #menu {
     flex: 1 1 100%;
     justify-content: space-around;
-    max-width: 40%;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
@@ -442,7 +441,7 @@ section.hero-section {
   section.hero-section-01-col.angle + section.hero-section-01-col:before {
     background: transparent;
     height: 100px;
-    top: -9.3vh;
+    top: -7.8vh;
     left: 0;
     right: 0;
     position: absolute;

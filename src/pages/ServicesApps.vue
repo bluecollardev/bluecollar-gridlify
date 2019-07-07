@@ -111,27 +111,6 @@
         </div>
       </div>
     </section>
-
-    <section class="hero-section bg-hero-grey sm-flex pad-top">
-      <!-- Position relatively, or absolute positioning of the caption will fail -->
-      <div class="relative flex-basis-half">
-        <img class="lozad banner-image right" src="/images/hero-old-businessman.png" alt="" />
-      </div>
-
-      <div class="sm-flex flex-center flex-justify-start flex-basis-half">
-        <div class="content-block">
-          <div class="space-all">
-            <div class="space-bottom-half g-services">
-              <p class="g-pstyle8">Our previous website took forever to build and wasn&rsquo;t what we wanted.  Blue Collar had a perfect site up for us in no time.</p>
-            </div>
-            <div class="g-services">
-              <p>Carl Stevens</p>
-              <p>Ace Coffee Roasters</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <Footer/>
   </Layout>
 </template>

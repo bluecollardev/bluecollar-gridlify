@@ -8,9 +8,9 @@ items:
     id: homepage-hero
     image: /images/heroes/blue-collar-home-hero-cool.jpg
     link: /company
-    linkText: Start Your Adventure
+    linkText: Continue
     subtitle: 'Can''t be too greedy, gotta love what you do.'
-    title: We’re about software.
+    title: We're About Software
   - description: >-
       Building beautiful, usable, fast and scalable applications is our thing.
       We have a long history of designing and developing amazing experiences for
@@ -18,18 +18,18 @@ items:
       design and combining it with great listening, we work closely with your
       team to define a solution for the business challenge at hand.
     id: services-hero
-    image: /images/portfolio/bc-showcase-app-quickcommerce.png
+    image: /images/heroes/blue-collar-home-hero-cool.jpg
+    # image: /images/portfolio/bc-showcase-app-quickcommerce.png
     link: /services
     linkText: Learn More
-    title: Applications crafted with precision and care
+    title: Applications Crafted with Precision and Care
   - description: >-
-      Good software starts with good people. At Blue Collar, you're not our
-      customers - **you're our partners.** We know that the dynamics of the
-      rapidly changing Information Age can be tough at times, but nothing great
-      was ever solved without a challenge. We're here to help you level up. It's
-      our thing.
+      At Blue Collar, you're not our customers - **you're our partners.**
+      We know that the dynamics of the rapidly changing Information Age can be
+      tough at times, but nothing great was ever solved without a challenge.
+      We're here to help you level up. It's our thing.
     id: projects-hero
     image: /images/banners/responsive-banner-jimmy-poblanos.png
-    link: /projects
-    linkText: Browse Our Portfolio
-    title: ' Customers love us'
+    link: /company
+    linkText: Meet Our Team
+    title: Good Software Starts With Good People

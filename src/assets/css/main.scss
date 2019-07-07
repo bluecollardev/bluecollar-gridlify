@@ -2,6 +2,8 @@
 @import './vars';
 @import './bluecollar/style';
 
+@import './temp.scss';
+
 /* Load ampstart components after vars */
 @import './ampstart/inputs/inputs';
 @import './ampstart/navbar/navbar';
@@ -49,4 +51,14 @@ textarea {
 /* z-index content fix */
 section > * {
     z-index: 10;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.hero-decor-group {
+  position: relative;
+  bottom: -80vh;
+  right: 0;
 }

@@ -5,7 +5,17 @@
         <p class="g-pstyle8 text-center" v-html="this.testimonial"></p>
       </div>
     </div>
-    <img class="circle space-bottom-half testimonial-profile-circle" v-bind:src="this.image" alt="" />
+
+    <div class="circle-composite space-bottom-half ml-auto mr-auto testimonial-profile-circle">
+      <div class="dark-blue-circle-mask">
+        <div class="dark-blue-circle"></div>
+      </div>
+      <div class="inner-circle">
+        <div class="blue-circle"></div>
+        <img class="circle" v-bind:src="this.image" alt="" />
+      </div>
+    </div>
+
     <div v-bind:class="classNameString">
       <div class="g-services">
         <p class="g-pstyle10 text-center"><strong>{{ this.reviewedBy }} - {{ this.position }}</strong></p>

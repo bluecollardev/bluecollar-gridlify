@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Header />
-    <section class="hero-section bg-bc-blue sm-flex pad-top-2x height-half angle">
+    <!--<section class="hero-section bg-bc-blue sm-flex pad-top-2x height-half angle">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="content-block">
           <div>
@@ -10,14 +10,27 @@
             </div>
             <div class="g-banner pad-bottom-2x">
               <p class="text-center">
-                At Blue Collar, every challenge is just a puzzle waiting to be solved! We strive to create innovative solutions for our clients using the latest advances
-                in technology and development. Let us help take your business idea to the next level.
+
               </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
+
+    <video-hero-layout01-col
+      title="Get Started!"
+      subtitle=""
+      description="At Blue Collar, every challenge is just a puzzle waiting to be solved! We strive to create innovative solutions for our clients using the latest advances
+        in technology and development. Let us help take your business idea to the next level."
+      image=""
+      imageClass="home-page-banner-image"
+      caption=""
+      subCaption=""
+      :flipX="false"
+      :angle="true"
+      bgColor="bg-bc-blue"
+    />
     <section class="hero-section bg-light-grey">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="sm-flex flex-basis-two-thirds">
@@ -245,10 +258,16 @@
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 
+// Import generic component layouts
+import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
+
+
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    // Inject generic component layouts
+    VideoHeroLayout01Col,
   },
   data() {
     return {

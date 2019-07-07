@@ -8,25 +8,32 @@
         <button class="hide-notification" aria-label="Hide notification" v-on:click="hideDisclaimer()">&times;</button>
       </span>
     </div>
-    <section class="hero-section bg-bc-blue sm-flex pad-top pad-bottom-2x height-full angle">
+
+    <video-hero-layout01-col
+      bgColor="bg-bc-blue"
+      title="Client Projects"
+      subtitle=""
+      imageClass="home-page-banner-image"
+      :flipX="true"
+      :angle="true"
+      className="xs-pad-top sm-pad-top"
+    >
       <div class="sm-flex flex-auto flex-center flex-justify-center">
-        <div class="content-block">
-          <div>
-            <div class="space-bottom space-top-2x">
-              <p class="g-pstyle2 text-center-force">Client Projects</p>
-              <p class="g-pstyle1 text-center-force">Note: Only Blue Collar contract roles are listed here. To view my personal work history <a style="text-decoration: underline; color: white;" href="/lucas-profile" alt="View Lucas' profile">click here</a>.</p>
-            </div>
-            <img class="lozad" src="/images/portfolio/bc-showcase-responsive.png" alt="" />
-            <!--<div class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center">
-              <a class="action-link space-bottom g-pstyle3" href="/projects#portfolio">Scroll Down</a>
-            </div>
-            <div class="homepage-hero-action action-link-block xs-hide text-center">
-              <a class="action-link space-top g-pstyle3" href="/projects#portfolio">Scroll Down</a>
-            </div>-->
+        <div>
+          <div class="space-bottom">
+            <p class="g-pstyle1 text-center-force">Note: Only Blue Collar contract roles are listed here. To view my personal work history <a style="text-decoration: underline; color: white;" href="/lucas-profile" alt="View Lucas' profile">click here</a>.</p>
           </div>
+          <img class="lozad" src="/images/portfolio/bc-showcase-responsive.png" alt="" />
+          <!--<div class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center">
+            <a class="action-link space-bottom g-pstyle3" href="/projects#portfolio">Scroll Down</a>
+          </div>
+          <div class="homepage-hero-action action-link-block xs-hide text-center">
+            <a class="action-link space-top g-pstyle3" href="/projects#portfolio">Scroll Down</a>
+          </div>-->
         </div>
       </div>
-    </section>
+    </video-hero-layout01-col>
+
     <section id="portfolio" class="hero-section portfolio-items clearfix">
       <div class="vertical-line"></div>
       <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix pad-top-2x">
@@ -52,6 +59,8 @@
   import Footer from '~/components/Footer.vue';
 
   // Import generic component layouts
+  import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
+  import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue';
   import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
   import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
@@ -73,6 +82,7 @@
       Header,
       Footer,
       // Inject generic component layouts
+      VideoHeroLayout01Col,
       SectionBlockLayout02Col01,
       SectionBlockLayout02Col02,
       ContentBlockLayout,
@@ -247,7 +257,7 @@
     height: 100%;
     position: absolute;
     left: 50%;
-    z-index: 2;
+    z-index: 0;
   }
 
   @media screen and (max-width: 40em) {
@@ -452,7 +462,7 @@
 
       &__item:nth-child(1n) {
         .timeline__item__date {
-          left: 50%;
+          left: 63%;
           right: auto;
           margin-left: -70px;
           top: 27.5px;
@@ -477,7 +487,7 @@
 
       &__item:nth-child(2n) {
         .timeline__item__date {
-          right: 50%;
+          right: 63%;
           left: auto;
           margin-right: -70px;
           top: 27.5px;

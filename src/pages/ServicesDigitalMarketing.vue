@@ -162,27 +162,6 @@
         </div>
       </div>
     </section>
-
-    <section class="hero-section bg-hero-grey sm-flex pad-top">
-      <div class="sm-flex flex-center flex-justify-end flex-basis-two-thirds">
-        <div class="content-block">
-          <div class="space-all">
-            <div class="space-bottom-half g-services">
-              <p class="g-pstyle8">Blue Collar shaved hours per week off my social media schedule.  Now I get more leads from my social channels than any other source.</p>
-            </div>
-            <div class="g-services">
-              <p>Carl Stevens</p>
-              <p>Ace Coffee Roasters</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Position relatively, or absolute positioning of the caption will fail -->
-      <div class="relative flex-basis-third">
-        <img class="banner-image left" src="/images/hero-old-businessman.png" alt="" />
-      </div>
-    </section>
     <Footer/>
   </Layout>
 </template>

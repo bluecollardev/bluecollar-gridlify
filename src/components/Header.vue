@@ -9,34 +9,54 @@
       <a href="/" aria-label="Home Page" class="logo-wrapper flex flex-center xs-flex-justify-center">
         <img class="logo" src="/images/blue-collar-dev.png" alt="" />
       </a>
-      <nav id="menu">
-        <ul>
+      <nav id="menu" class="site-navbar align-items-center justify-content-center">
+        <ul class="site-menu mb-0">
           <li class="drop"><a href="/services" aria-label="Websites" v-on:mouseover="displayDropMenu()">Services  <i class="icon-arrow"></i></a>
-          <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
-            <li><a href="/services-apps" aria-label="Hybrid Apps and PWAs" v-on:click="hideDropMenu()">Hybrid Apps + PWAs</a></li>
-            <li><a href="/services-software" aria-label="Custom Software" v-on:click="hideDropMenu()">Custom Software</a></li>
-            <li><a href="/services-web" aria-label="Websites" v-on:click="hideDropMenu()">Websites</a></li>
-            <li><a href="/pricing" aria-label="Pricing" v-on:click="hideDropMenu()">Pricing</a></li>
-          </ul>
-        </li>
-        <!--<li class="drop"><a v-on:mouseover="displayDropMenu()">Marketing  <i class="icon-arrow"></i></a>
-          <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
-            <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Targeted Ads</a></li>
-            <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Social Media Ads</a></li>
-            <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Social Media Concierge</a></li>
-            <li><a href="/pricing" v-on:click="hideDropMenu()">Pricing</a></li>
-          </ul>
-        </li>-->
-        <li><a href="/company" aria-label="Team">Team</a></li>
-        <!--<li class="drop"><a href="/company" aria-label="Team" v-on:mouseover="displayDropMenu()">Team  <i class="icon-arrow"></i></a>
-          <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
-            <li><a href="/consulting" aria-label="Consulting" v-on:click="hideDropMenu()">Consulting Services</a></li>
-            <li><a href="/junior-dev-program" aria-label="Junior Dev Program" v-on:click="hideDropMenu()">Junior Dev Program</a></li>
-          </ul>
-        </li>-->
-        <li><a href="/projects" aria-label="Projects" v-on:click="hideDropMenu()">Projects</a></li>
-        <li><a href="/contact" aria-label="Contact" v-on:click="hideDropMenu()">Contact</a></li>
+            <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
+              <li><a href="/services-apps" aria-label="Hybrid Apps and PWAs" v-on:click="hideDropMenu()">Hybrid Apps + PWAs</a></li>
+              <li><a href="/services-software" aria-label="Custom Software" v-on:click="hideDropMenu()">Custom Software</a></li>
+              <li><a href="/services-web" aria-label="Websites" v-on:click="hideDropMenu()">Websites</a></li>
+              <li><a href="/pricing" aria-label="Pricing" v-on:click="hideDropMenu()">Pricing</a></li>
+            </ul>
+          </li>
+          <!--<li class="drop"><a v-on:mouseover="displayDropMenu()">Marketing  <i class="icon-arrow"></i></a>
+            <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
+              <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Targeted Ads</a></li>
+              <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Social Media Ads</a></li>
+              <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Social Media Concierge</a></li>
+              <li><a href="/pricing" v-on:click="hideDropMenu()">Pricing</a></li>
+            </ul>
+          </li>-->
+          <!--<li><a href="/company" aria-label="Team">Team</a></li>-->
+          <!--<li class="drop"><a href="/company" aria-label="Team" v-on:mouseover="displayDropMenu()">Team  <i class="icon-arrow"></i></a>
+            <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
+              <li><a href="/consulting" aria-label="Consulting" v-on:click="hideDropMenu()">Consulting Services</a></li>
+              <li><a href="/junior-dev-program" aria-label="Junior Dev Program" v-on:click="hideDropMenu()">Junior Dev Program</a></li>
+            </ul>
+          </li>-->
+          <li><a href="/projects" aria-label="Projects" v-on:click="hideDropMenu()">Projects</a></li>
+          <li><a href="/contact" aria-label="Contact" v-on:click="hideDropMenu()">Contact</a></li>
         </ul>
+        <div class="site-navbar-top d-flex">
+          <div class="d-flex ml-auto">
+            <a href="https://www.instagram.com/creativeescapesyeg" class="d-flex align-items-center ml-auto mr-4">
+              <span class="icon-instagram mr-2"></span>
+              <!--<span class="d-none d-md-inline-block">@creativeescapesyeg</span>-->
+            </a>
+            <a href="https://www.facebook.com/BaanSaowanee" class="d-flex align-items-center ml-auto mr-4">
+              <span class="icon-facebook mr-2"></span>
+              <!--<span class="d-none d-md-inline-block">wilderthanthewindcreations</span>-->
+            </a>
+            <a href="#" class="d-flex align-items-center ml-auto mr-4">
+              <span class="icon-phone mr-2"></span>
+              <!--<span class="d-none d-lg-inline-block">(250) 532-0083</span>-->
+            </a>
+            <a href="#" class="d-flex align-items-center">
+              <span class="icon-envelope mr-2"></span>
+              <!--<span class="d-none d-lg-inline-block">info@bluecollardev.com</span>-->
+            </a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -148,19 +168,24 @@
   li {list-style: none;}
 
   //.wrap {max-width: 1024px; min-width: 320px;}
-  .wrap {min-width: 320px;}
+  .wrap {min-width: 320px; height: 100%;}
 
   header {
-    height: 48px;
+    height: 54px;
     display: flex;
     z-index: 200;
     padding: 0;
-    background-color: var(--cwhite);
-    /*position: fixed;*/
+    /*background-color: var(--cwhite);*/
+    position: fixed;
     width: 100%;
     top: 0;
     justify-content: center;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    /*box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);*/
+    transition: 0.33s;
+  }
+
+  header.fixed {
+    background-color: var(--cwhite);
     transition: 0.33s;
   }
 
@@ -177,6 +202,8 @@
     header #menu, header #menu > ul {
       display: flex;
       flex-direction: row;
+      flex: 1;
+      justify-content: flex-end;
     }
 
     header #menu > ul > li {
@@ -201,26 +228,28 @@
     user-select: none;
     margin-left: 20px;
     margin-right: 20px;
-    i {width: 12px; height: 12px; background-color: var(--cgrey);}
+    display: flex;
+    i {margin-left: 0.5rem; width: 12px; height: 12px; background-color: var(--cgrey);}
     a {
       color: var(--cgrey);
       cursor: pointer;
-      font-size: 1.15em;
-      border: none;
-      border-bottom: 2px solid var(--cwhite);
-      transition: 0.15s;
-      background: none;
-      text-decoration: none;
+      display: flex;
       white-space: nowrap;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.9rem;
+      font-weight: normal;
       &:hover {
         text-decoration: none;
       }
     }
   }
+
   header .drop-menu {
     position: absolute;
     display: block;
-    top: 21px;
+    top: 100%;
     transform: scaleY(0);
     width: auto;
     transform-origin: top;
@@ -244,6 +273,7 @@
       opacity: 1;
     }
   }
+
   header #hamburger {
     cursor: pointer;
     border-radius: 50%;
@@ -253,6 +283,7 @@
     display: none;
     transform: translateY(-50%);
   }
+
   @media screen and (max-width: 40em) {
     /*header {
       position: absolute !important;
@@ -276,22 +307,32 @@
       justify-content: center;
       align-items: center;
     }
+
+    .display-menu .site-navbar-top {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .display-menu .site-menu {
+      margin-top: 4rem;
+    }
   }
+
   header #hamburger span {
-    height: 2px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    height: 3px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     background-color: var(--cgrey);
     display: block;
     transition: 0.33s;
-    &:nth-child(1) {width: 12px;}
-    &:nth-child(2) {width: 24px;}
-    &:nth-child(3) {width: 12px;}
+    &:nth-child(1) {width: 32px;}
+    &:nth-child(2) {width: 32px;}
+    &:nth-child(3) {width: 32px;}
   }
   .display-menu header #hamburger {
-    span:nth-child(1) {transform: rotate(45deg) translate(2px, 1px); }
+    span:nth-child(1) {transform: rotate(45deg) translate(8px, 8px); }
     span:nth-child(2) {transform: rotate(-45deg) ;}
-    span:nth-child(3) {transform: rotate(45deg) translate(6px, -9px);}
+    span:nth-child(3) {transform: rotate(45deg) translate(-8px, -8px);}
   }
   #loader {
     display: block;
@@ -355,14 +396,19 @@
     header #menu {
       width: 100%;
       display: block;
-      height: 0;
+      /*height: 0;*/
       transform-origin: 50% 0;
       transition: 0.33s ease;
       flex-direction: column;
     }
+
     .display-menu header #menu {
-      height: calc(100vh - 48px);
+      height: 100vh;
+      /*height: calc(100vh - 48px);*/
       background: white;
+      position: absolute;
+      top: 0; /* Required for Safari/iOS */
+      z-index: -1;
       li {
         height: var(--body_height_8);
         border-bottom: 1px solid var(--clightgrey);
@@ -377,6 +423,7 @@
       height: 0;
       opacity: 0;
       margin-left: 0;
+      margin-right: 0;
       transition: 0.25s ease;
       a {
         left: 0;
@@ -385,10 +432,11 @@
         border: none;
         height: 100%;
         width: 100%;
-        display: block;
+        display: flex;
+
         &:hover {
           color: var(--cwhite);
-          background-color: var(--cblue);
+          background-color: grey;
           i {background-color: var(--cwhite);}
         }
       }
@@ -460,4 +508,31 @@
     }
   }
 
+  .site-navbar-top {
+    text-transform: uppercase;
+    justify-content: space-between;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.5rem;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #menu * {
+    /*font-family: serif;*/
+    text-transform: uppercase !important;
+    color: #5B7E9D !important;
+  }
+
+  #menu li i {
+    background-color: #5B7E9D !important;
+  }
 </style>
