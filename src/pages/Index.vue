@@ -18,7 +18,7 @@
       bgColor="bg-bc-blue"
     >
       <template v-slot:title>
-        <svg version="1.1" class="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 229.2 69.6" style="enable-background:new 0 0 229.2 69.6;" xml:space="preserve">
+        <svg class="space-bottom-2x text" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 229.2 69.6" style="enable-background:new 0 0 229.2 69.6;" xml:space="preserve">
           <defs>
             <clipPath id="websiteClip">
               <path d="M79.7,29.1C74.3,36,67.5,43.8,59.3,52.5c-7.1,7-11.8,11.2-13.8,12.6c-4.6,3.5-7.9,5.3-9.8,5.3h-0.4c-2.9,0-4.8-1-5.6-3
@@ -263,7 +263,8 @@
 
 
   .text-banner .text {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 33vw;
     z-index: 1;
   }

@@ -1,9 +1,9 @@
 <template>
   <section
     ref="heroLayout"
-    :class="`homepage-hero hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
+    :class="`homepage-hero hero-section text-shadow hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
   >
-    <div class="video-banner text-banner bg-bc-blue">
+    <div class="video-banner overlay text-banner bg-bc-blue">
       <video class="is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop="" poster="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.jpg?noresize">
         <source src="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.mp4" type="video/mp4">
         <source src="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.webm" type="video/webm">
@@ -26,9 +26,9 @@
             <div
               v-if="typeof this.title === 'string' && !this.$slots.title"
               class="homepage-hero-title sm-space-bottom-half">
-              <p class="g-pstyle2 text-center">
+              <h1 class="g-pstyle2 text-center">
                 {{ this.title }}
-              </p>
+              </h1>
             </div>
 
             <div class="homepage-hero-text g-hero">
@@ -162,15 +162,25 @@ export default {
     object-fit: cover !important;
   }
 
-  .text-banner {
+  .video-banner.overlay:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0,0,0, 0.25);
+  }
+
+  /* TODO: Adjust for mobile and portrait */
+  .text-banner {
+    width: 100%;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
   }
-
 
   .text-banner .text-content {
     margin: 0 auto;

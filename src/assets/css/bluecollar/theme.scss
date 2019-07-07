@@ -178,9 +178,7 @@ footer a:hover {
 */
 
 .homepage-hero {
-
-  min-height: 85vh;
-
+  min-height: 90vh;
   /*overflow-x: hidden;*/
 }
 
@@ -433,6 +431,22 @@ section.hero-section-01-col .hero-block {
 section.hero-section {
   position: relative;
   flex-wrap: wrap;
+}
+
+section.hero-section.text-shadow * {
+  text-shadow: 1px 0 5px rgba(0,0,0,.666);
+}
+
+section.hero-section.text-shadow a.action-link,
+section.hero-section.text-shadow a.action-button {
+  text-shadow: none;
+}
+
+.homepage-hero p,
+.homepage-hero li,
+.homepage-hero a:not(.action-link),
+.homepage-hero a:not(.action-button) {
+  font-size: 23px;
 }
 
 @media screen and (min-width: 1400px) {

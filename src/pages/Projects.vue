@@ -16,7 +16,6 @@
       imageClass="home-page-banner-image"
       :flipX="true"
       :angle="true"
-      className="xs-pad-top sm-pad-top"
     >
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div>

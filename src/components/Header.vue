@@ -38,24 +38,22 @@
           <li><a href="/contact" aria-label="Contact" v-on:click="hideDropMenu()">Contact</a></li>
         </ul>
         <div class="site-navbar-top d-flex">
-          <div class="d-flex ml-auto">
-            <a href="https://www.instagram.com/creativeescapesyeg" class="d-flex align-items-center ml-auto mr-4">
-              <span class="icon-instagram mr-2"></span>
-              <!--<span class="d-none d-md-inline-block">@creativeescapesyeg</span>-->
-            </a>
-            <a href="https://www.facebook.com/BaanSaowanee" class="d-flex align-items-center ml-auto mr-4">
-              <span class="icon-facebook mr-2"></span>
-              <!--<span class="d-none d-md-inline-block">wilderthanthewindcreations</span>-->
-            </a>
-            <a href="#" class="d-flex align-items-center ml-auto mr-4">
-              <span class="icon-phone mr-2"></span>
-              <!--<span class="d-none d-lg-inline-block">(250) 532-0083</span>-->
-            </a>
-            <a href="#" class="d-flex align-items-center">
-              <span class="icon-envelope mr-2"></span>
-              <!--<span class="d-none d-lg-inline-block">info@bluecollardev.com</span>-->
-            </a>
-          </div>
+          <a href="https://www.instagram.com/creativeescapesyeg" class="d-flex align-items-center mr-4">
+            <span class="icon-instagram mr-2"></span>
+            <!--<span class="d-none d-md-inline-block">@creativeescapesyeg</span>-->
+          </a>
+          <a href="https://www.facebook.com/BaanSaowanee" class="d-flex align-items-center mr-4">
+            <span class="icon-facebook mr-2"></span>
+            <!--<span class="d-none d-md-inline-block">wilderthanthewindcreations</span>-->
+          </a>
+          <a href="#" class="d-flex align-items-center mr-4">
+            <span class="icon-phone mr-2"></span>
+            <!--<span class="d-none d-lg-inline-block">(250) 532-0083</span>-->
+          </a>
+          <a href="#" class="d-flex align-items-center">
+            <span class="icon-envelope mr-2"></span>
+            <!--<span class="d-none d-lg-inline-block">info@bluecollardev.com</span>-->
+          </a>
         </div>
       </nav>
     </div>
@@ -198,6 +196,17 @@
   /*header img {
     width: 100px;
   }*/
+
+  #menu * {
+    /*font-family: serif;*/
+    text-transform: uppercase !important;
+    color: #5B7E9D !important;
+  }
+
+  #menu li i {
+    background-color: #5B7E9D !important;
+  }
+
   @media screen and (min-width: 40em) {
     header #menu, header #menu > ul {
       display: flex;
@@ -308,9 +317,15 @@
       align-items: center;
     }
 
+    .site-navbar-top {
+      display: none;
+      padding-right: 20px;
+    }
+
     .display-menu .site-navbar-top {
       margin-top: 15px;
       margin-bottom: 15px;
+      display: flex;
     }
 
     .display-menu .site-menu {
@@ -322,7 +337,7 @@
     height: 3px;
     margin-top: 8px;
     margin-bottom: 8px;
-    background-color: var(--cgrey);
+    background-color: var(--cblue);
     display: block;
     transition: 0.33s;
     &:nth-child(1) {width: 32px;}
@@ -435,8 +450,8 @@
         display: flex;
 
         &:hover {
-          color: var(--cwhite);
-          background-color: grey;
+          color: var(--cwhite) !important;
+          background-color: var(--cblue);
           i {background-color: var(--cwhite);}
         }
       }
@@ -510,7 +525,7 @@
 
   .site-navbar-top {
     text-transform: uppercase;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
   [class^="icon-"], [class*=" icon-"] {
@@ -524,15 +539,5 @@
     -webkit-font-smoothing: antialiased;
     font-size: 1.5rem;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  #menu * {
-    /*font-family: serif;*/
-    text-transform: uppercase !important;
-    color: #5B7E9D !important;
-  }
-
-  #menu li i {
-    background-color: #5B7E9D !important;
   }
 </style>
