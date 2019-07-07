@@ -87,6 +87,7 @@
       :flipX="false"
       :angle="false"
       className="xs-pad-top"
+      bgColor="bg-white"
     />
 
     <Footer/>

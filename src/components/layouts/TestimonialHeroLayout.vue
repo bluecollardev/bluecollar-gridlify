@@ -9,7 +9,7 @@
       </div>
       <!-- Testimonial -->
       <div class="banner-block testimonial flex">
-        <div class="space-all">
+        <div class="space-top-2x space-all">
           <div class="g-services">
             <p class="g-pstyle8">"Blue Collar designed and implemented an amazing website for our business. We've seen an immediate increase in sales and flow through business."</p>
           </div>

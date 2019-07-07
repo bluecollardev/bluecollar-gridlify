@@ -179,7 +179,7 @@ footer a:hover {
 
 .homepage-hero {
 
-  min-height: 100vh;
+  min-height: 85vh;
 
   /*overflow-x: hidden;*/
 }
@@ -441,7 +441,7 @@ section.hero-section {
   section.hero-section-01-col.angle + section.hero-section-01-col:before {
     background: transparent;
     height: 100px;
-    top: -7.8vh;
+    top: -99px;
     left: 0;
     right: 0;
     position: absolute;
@@ -457,6 +457,14 @@ section.hero-section {
   section.hero-section-01-col.angle + section.hero-section.bg-bc-blue:before,
   section.hero-section-01-col.angle + section.hero-section-01-col.bg-bc-blue:before {
     background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 1000 0, 1000 100, 0 100' fill='rgb(51, 88, 122)' /></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  section.hero-section.angle + section.hero-section.bg-white:before,
+  section.hero-section-01-col.angle + section.hero-section.bg-white:before,
+  section.hero-section-01-col.angle + section.hero-section-01-col.bg-white:before {
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 1000 0, 1000 100, 0 100' fill='rgb(255, 255, 255)' /></svg>");
     background-repeat: no-repeat;
     background-size: cover;
   }
