@@ -3,7 +3,7 @@
     ref="heroLayout"
     :class="`homepage-hero hero-section text-shadow hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
   >
-    <div class="video-banner overlay text-banner bg-bc-blue">
+    <div class="video-banner text-banner bg-bc-blue">
       <video class="is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop="" poster="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.jpg?noresize">
         <source src="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.mp4" type="video/mp4">
         <source src="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.webm" type="video/webm">
@@ -39,12 +39,12 @@
               v-if="typeof this.link === 'string' && this.link.length >0"
               class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
             >
-              <a class="action-link xs-space-top space-bottom g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
+              <a class="action-link transparent xs-space-top space-bottom g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
             </div>
             <div
               v-if="typeof this.link === 'string' && this.link.length >0"
               class="homepage-hero-action action-link-block xs-hide text-center">
-              <a class="action-link space-top g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
+              <a class="action-link transparent space-top g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
             </div>
           </div>
         </div>

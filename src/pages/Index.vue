@@ -18,7 +18,7 @@
       bgColor="bg-bc-blue"
     >
       <template v-slot:title>
-        <svg class="space-bottom-2x text" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 229.2 69.6" style="enable-background:new 0 0 229.2 69.6;" xml:space="preserve">
+        <!--<svg class="space-bottom-2x text" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 229.2 69.6" style="enable-background:new 0 0 229.2 69.6;" xml:space="preserve">
           <defs>
             <clipPath id="websiteClip">
               <path d="M79.7,29.1C74.3,36,67.5,43.8,59.3,52.5c-7.1,7-11.8,11.2-13.8,12.6c-4.6,3.5-7.9,5.3-9.8,5.3h-0.4c-2.9,0-4.8-1-5.6-3
@@ -69,7 +69,13 @@
           <path class="path" clip-path="url(#websiteClip)" d="M85.4,41.5s18.1-5.6,13.35-15.75c-2.89-6.18-9,.9-15.5,8.2,0,0-25.5,39.2,14.25,16,0,0,24.37-22.26,28.5-21.05,1.62,1.09-4.14,11-8,19-2.71,5.63-3,10.83-5.55,9.39-24,.28,15.13-45.9,9.21-48.09S94.4,63,94.4,63" fill="none" stroke="#FFFFFF" stroke-width="9"/>
           <path class="path" clip-path="url(#websiteClip)" d="M150.24,20.5S138,26.75,136,31.75s-4.07,5,.43,13.1a9.25,9.25,0,0,1-.18,7.15c-1.75,3.5-2,9.75-7.75,5.75S134.24,42,150.24,37.5c0,0,4.41-4.3,8.51-8.6s-17.5,26-15.88,31.9L173.5,35.19,186.15,9.13s-28,50.42-25.1,51S178.75,38,195.5,41c0,0,20.9-14.33,5-15.75,0,0-26.5,15.25-17,31.25,0,0,8.5,3,18-4.5s22.5-21.2,24.75-4.1" fill="none" stroke="#FFFFFF" stroke-width="10"/>
           <path class="path" clip-path="url(#websiteClip)" d="M171,9.13s-11.33,10.38-8,11.92,43-2.8,43-2.8" fill="none" stroke="#FFFFFF" stroke-width="13"/>
-        </svg>
+        </svg>-->
+        <h1 class="ml11">
+          <span class="text-wrapper">
+            <span class="line line1"></span>
+            <span class="letters">Experience the Blue Collar Difference</span>
+          </span>
+        </h1>
       </template>
     </video-hero-layout01-col>
 
@@ -231,6 +237,47 @@
         duration: 700,
         delay: (el, i) => { return i * 500 }
       });
+
+      // Wrap every letter in a span
+      document.querySelectorAll('.ml11 .letters').forEach((letters) => {
+        letters.outerHTML = `<span class="letters">${letters.textContent.replace(/([^\x00-\x80]|\w)/g, '<span class="letter">$&</span>')}</span>`;
+      });
+
+      const textTarget = document.querySelector('.ml11');
+      const lineTarget = document.querySelector('.ml11 .line');
+      const lettersTarget = document.querySelector('.ml11 .letters');
+      const letterTargets = document.querySelectorAll('.ml11 .letter');
+
+      anime.timeline({ loop: true })
+        .add({
+          targets: lineTarget,
+          scaleY: [0,1],
+          opacity: [0.5,1],
+          easing: 'easeOutExpo',
+          duration: 700
+        })
+        .add({
+          targets: letterTargets,
+          opacity: [0,1],
+          easing: 'easeOutExpo',
+          duration: 150,
+          offset: '-=775',
+          delay: (el, i) => { return 34 * (i+1) }
+        })
+        .add({
+          targets: lineTarget,
+          translateX: [0, lettersTarget.getBoundingClientRect().width],
+          easing: 'easeOutExpo',
+          duration: 3000,
+          delay: 0
+        });
+        /*.add({
+          targets: textTarget,
+          opacity: 0,
+          duration: 1000,
+          easing: 'easeOutExpo',
+          delay: 1000
+        });*/
     }
   }
 </script>
@@ -267,5 +314,39 @@
     margin-right: auto;
     width: 33vw;
     z-index: 1;
+  }
+
+  /* TODO: This is ripped clean it up */
+  .ml11 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+
+  .ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+
+  .ml11 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+  }
+
+  .ml11 .line1 {
+    top: 0;
+    left: 0;
+  }
+
+  .ml11 .letter {
+    display: inline-block;
+    line-height: 1em;
   }
 </style>
