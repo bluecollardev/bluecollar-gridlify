@@ -34,7 +34,7 @@
               <li><a href="/junior-dev-program" aria-label="Junior Dev Program" v-on:click="hideDropMenu()">Junior Dev Program</a></li>
             </ul>
           </li>-->
-          <li><a href="/projects" aria-label="Projects" v-on:click="hideDropMenu()">Projects</a></li>
+          <li><a href="/projects" aria-label="Portfolio" v-on:click="hideDropMenu()">Portfolio</a></li>
           <li><a href="/contact" aria-label="Contact" v-on:click="hideDropMenu()">Contact</a></li>
         </ul>
         <div class="site-navbar-top d-flex">

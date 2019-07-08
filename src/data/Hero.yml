@@ -1,7 +1,7 @@
 title: Hero Items
 items:
   - description: >-
-      At Blue Collar Development, we build good software. We're not selling
+      At Blue Collar Development, we build amazing software. We're not selling
       lines of code. We’re a team of 21st century artisans who create amazing
       applications using cutting edge technology to help you bring your concept
       to life.
@@ -22,7 +22,7 @@ items:
     # image: /images/portfolio/bc-showcase-app-quickcommerce.png
     link: /services
     linkText: Learn More
-    title: Applications Crafted with Precision and Care
+    title: Crafted with Precision and Care
   - description: >-
       At Blue Collar, you're not our customers - **you're our partners.**
       We know that the dynamics of the rapidly changing Information Age can be
@@ -32,4 +32,4 @@ items:
     image: /images/banners/responsive-banner-jimmy-poblanos.png
     link: /company
     linkText: Meet Our Team
-    title: Good Software Starts With Good People
+    title: Good Design is About Process, Not Product.

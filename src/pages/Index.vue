@@ -70,9 +70,15 @@
           <path class="path" clip-path="url(#websiteClip)" d="M150.24,20.5S138,26.75,136,31.75s-4.07,5,.43,13.1a9.25,9.25,0,0,1-.18,7.15c-1.75,3.5-2,9.75-7.75,5.75S134.24,42,150.24,37.5c0,0,4.41-4.3,8.51-8.6s-17.5,26-15.88,31.9L173.5,35.19,186.15,9.13s-28,50.42-25.1,51S178.75,38,195.5,41c0,0,20.9-14.33,5-15.75,0,0-26.5,15.25-17,31.25,0,0,8.5,3,18-4.5s22.5-21.2,24.75-4.1" fill="none" stroke="#FFFFFF" stroke-width="10"/>
           <path class="path" clip-path="url(#websiteClip)" d="M171,9.13s-11.33,10.38-8,11.92,43-2.8,43-2.8" fill="none" stroke="#FFFFFF" stroke-width="13"/>
         </svg>-->
-        <h1 class="ml11">
+        <h1 class="title">
           <span class="text-wrapper">
-            <span class="line line1"></span>
+            <span class="line blink">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" xml:space="preserve">
+                <g>
+                  <path fill="white" d="M71.129,91.224c0,2.086-1.699,3.776-3.776,3.776h-8.128c-3.606,0-6.864-1.473-9.224-3.852   C47.64,93.527,44.383,95,40.776,95h-8.128c-2.077,0-3.776-1.69-3.776-3.776c0-2.086,1.699-3.776,3.776-3.776h8.128   c3.002,0,5.447-2.445,5.447-5.447V18c0-3.002-2.445-5.447-5.447-5.447h-8.128c-2.077,0-3.776-1.69-3.776-3.776   C28.871,6.69,30.571,5,32.648,5h8.128C44.383,5,47.64,6.473,50,8.852C52.36,6.473,55.617,5,59.224,5h8.128   c2.077,0,3.776,1.69,3.776,3.776c0,2.086-1.699,3.776-3.776,3.776h-8.128c-3.002,0-5.447,2.445-5.447,5.447v64   c0,3.002,2.445,5.447,5.447,5.447h8.128C69.429,87.447,71.129,89.137,71.129,91.224z" />
+                </g>
+              </svg>
+            </span>
             <span class="letters">Experience the Blue Collar Difference</span>
           </span>
         </h1>
@@ -91,11 +97,42 @@
       :caption="projectsSection.caption"
       :subCaption="projectsSection.subCaption"
       :flipX="false"
-      :angle="false"
+      :angle="true"
       className="xs-pad-top"
+      leftPaneClassSuffix="xs-order-2 sm-order-1"
+      rightPaneClassSuffix="xs-order-1 sm-order-2"
       bgColor="bg-white"
     />
 
+   <!-- <section
+      ref="heroLayout"
+      :class="`test homepage-hero hero-section-01-col sm-flex angle flex-center flex-justify-center`"
+      :style="`background-image: url(/images/heroes/blue-collar-home-hero.jpg);`"
+    >
+      <div class="sm-flex flex-center flex-justify-center flex-basis-full">
+        <svg version="1.1" id="poly-content" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="100%" y="500px" viewBox="0 0 480 318.2" xml:space="preserve">
+          <linearGradient id="shade01" gradientUnits="userSpaceOnUse" x1="411.5932" y1="249.9649" x2="426.2599" y2="296.9649">
+            <stop offset="0" style="stop-color:#c6d4db"></stop>
+            <stop offset="1" style="stop-color:#78909c"></stop>
+          </linearGradient>
+          <path class="polybl" d="M197.3,318.2H0l197.3-59V318.2z"></path>
+          <path class="polybr" d="M480,229.4l-295.8,88.7l295.8,0.1V229.4z"></path>
+          <path class="poly" d="M480.2,280.3l-122.2,37.9v-52.3L480,229.4"></path>
+        </svg>
+
+        <svg version="1.1" id="footerShapes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="100%" y="500px" viewBox="0 0 480 124.6" xml:space="preserve">
+          <linearGradient id="shade02" gradientUnits="userSpaceOnUse" x1="51.0681" y1="34.7019" x2="65.4015" y2="83.5353">
+            <stop offset="0" style="stop-color:#78909c"></stop>
+            <stop offset="1" style="stop-color:#c6d4db"></stop>
+          </linearGradient>
+          <path class="shapeG" d="M283.2,59L65.5,124.6V69.4L283.2,3.8V59z"></path>
+          <path class="shapeG" d="M480,55.2L344.9,95.3V40.1L480,0V55.2z"></path>
+          <path class="shape" d="M282.7,0.2H480l-197.3,59V0.2z"></path>
+          <path class="shape" d="M0,89L295.8,0.3L0,0.2V89z"></path>
+          <path class="shapeShade" d="M116.4,53.8L0,89.3v-53L116.4,0.7V53.8z"></path>
+        </svg>
+      </div>
+    </section>-->
     <Footer/>
   </Layout>
 </template>
@@ -239,45 +276,50 @@
       });
 
       // Wrap every letter in a span
-      document.querySelectorAll('.ml11 .letters').forEach((letters) => {
+      document.querySelectorAll('.title .letters').forEach((letters) => {
         letters.outerHTML = `<span class="letters">${letters.textContent.replace(/([^\x00-\x80]|\w)/g, '<span class="letter">$&</span>')}</span>`;
       });
 
-      const textTarget = document.querySelector('.ml11');
-      const lineTarget = document.querySelector('.ml11 .line');
-      const lettersTarget = document.querySelector('.ml11 .letters');
-      const letterTargets = document.querySelectorAll('.ml11 .letter');
+      const textTarget = document.querySelector('.title');
+      const lineTarget = document.querySelector('.title .line');
+      const lettersTarget = document.querySelector('.title .letters');
+      const letterTargets = document.querySelectorAll('.title .letter');
 
-      anime.timeline({ loop: true })
-        .add({
-          targets: lineTarget,
-          scaleY: [0,1],
-          opacity: [0.5,1],
-          easing: 'easeOutExpo',
-          duration: 700
-        })
-        .add({
-          targets: letterTargets,
-          opacity: [0,1],
-          easing: 'easeOutExpo',
-          duration: 150,
-          offset: '-=775',
-          delay: (el, i) => { return 34 * (i+1) }
-        })
-        .add({
-          targets: lineTarget,
-          translateX: [0, lettersTarget.getBoundingClientRect().width],
-          easing: 'easeOutExpo',
-          duration: 3000,
-          delay: 0
-        });
-        /*.add({
-          targets: textTarget,
-          opacity: 0,
-          duration: 1000,
-          easing: 'easeOutExpo',
-          delay: 1000
-        });*/
+      let timeline = anime.timeline({ loop: true });
+
+      timeline.add({
+        targets: lineTarget,
+        scaleY: [1,1],
+        opacity: [0.5,1],
+        easing: 'easeOutExpo',
+        duration: 700
+      })
+      .add({
+        targets: lineTarget,
+        scaleY: [1,1],
+        opacity: [1,0],
+        easing: 'easeOutExpo',
+        duration: 300
+      })
+      .add({
+        targets: letterTargets,
+        scale: [1.5, 1],
+        opacity: [0,1],
+        easing: 'easeOutExpo',
+        duration: 150,
+        //offset: '-=775',
+        delay: (el, i) => {
+          return letterTargets.length * (i+1)
+        }
+      })
+      .add({
+        targets: lettersTarget,
+        scaleY: [1,1],
+        opacity: [1,0],
+        easing: 'easeOutExpo',
+        duration: 700,
+        delay: 10000
+      });
     }
   }
 </script>
@@ -317,12 +359,12 @@
   }
 
   /* TODO: This is ripped clean it up */
-  .ml11 {
+  .title {
     font-weight: 900;
     font-size: 3.5em;
   }
 
-  .ml11 .text-wrapper {
+  .title .text-wrapper {
     position: relative;
     display: inline-block;
     padding-top: 0.1em;
@@ -330,23 +372,59 @@
     padding-bottom: 0.15em;
   }
 
-  .ml11 .line {
+  .title .line {
     opacity: 0;
     position: absolute;
-    left: 0;
-    height: 100%;
-    width: 3px;
-    background-color: #fff;
+    left: -1em;
+    height: auto;
+    width: 1rem;
     transform-origin: 0 50%;
   }
 
-  .ml11 .line1 {
-    top: 0;
-    left: 0;
+  .title .line svg {
+    height: 1.7em;
+    -webkit-filter: drop-shadow(1px 0 5px rgba(0, 0, 0, 0.666));
+    filter: drop-shadow(1px 0 5px rgba(0, 0, 0, 0.666));
   }
 
-  .ml11 .letter {
+  .title .letter {
     display: inline-block;
     line-height: 1em;
+  }
+
+  @keyframes blink {
+  50% {
+      opacity: 0.0;
+    }
+  }
+  @-webkit-keyframes blink {
+    50% {
+      opacity: 0.0;
+    }
+  }
+
+  .test svg {
+    z-index: 10;
+    fill: white;
+  }
+
+  @media (max-width: 40em) {
+    .xs-order-1 {
+      order: 1;
+    }
+
+    .xs-order-2 {
+      order: 2;
+    }
+  }
+
+  @media (min-width: 40em) {
+    .sm-order-1 {
+      order: 1;
+    }
+
+    .sm-order-2 {
+      order: 2;
+    }
   }
 </style>

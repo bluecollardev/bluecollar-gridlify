@@ -19,7 +19,7 @@
     </section>-->
 
     <video-hero-layout01-col
-      title="Get Started!"
+      title="Get Started Today"
       subtitle=""
       description="At Blue Collar, every challenge is just a puzzle waiting to be solved! We strive to create innovative solutions for our clients using the latest advances
         in technology and development. Let us help take your business idea to the next level."
@@ -30,7 +30,23 @@
       :flipX="false"
       :angle="true"
       bgColor="bg-bc-blue"
-    />
+    >
+      <template v-slot:title>
+        <h1 class="title">
+          <span class="text-wrapper">
+            <span class="line blink">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" xml:space="preserve">
+                <g>
+                  <path fill="white" d="M71.129,91.224c0,2.086-1.699,3.776-3.776,3.776h-8.128c-3.606,0-6.864-1.473-9.224-3.852   C47.64,93.527,44.383,95,40.776,95h-8.128c-2.077,0-3.776-1.69-3.776-3.776c0-2.086,1.699-3.776,3.776-3.776h8.128   c3.002,0,5.447-2.445,5.447-5.447V18c0-3.002-2.445-5.447-5.447-5.447h-8.128c-2.077,0-3.776-1.69-3.776-3.776   C28.871,6.69,30.571,5,32.648,5h8.128C44.383,5,47.64,6.473,50,8.852C52.36,6.473,55.617,5,59.224,5h8.128   c2.077,0,3.776,1.69,3.776,3.776c0,2.086-1.699,3.776-3.776,3.776h-8.128c-3.002,0-5.447,2.445-5.447,5.447v64   c0,3.002,2.445,5.447,5.447,5.447h8.128C69.429,87.447,71.129,89.137,71.129,91.224z" />
+                </g>
+              </svg>
+            </span>
+            <span class="letters">Get Started Today</span>
+          </span>
+        </h1>
+      </template>
+    </video-hero-layout01-col>
+
     <section class="hero-section bg-light-grey">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="sm-flex flex-basis-two-thirds">
@@ -255,47 +271,96 @@
 </template>
 
 <script>
-import Header from '~/components/Header.vue';
-import Footer from '~/components/Footer.vue';
+  import anime from 'animejs';
 
-// Import generic component layouts
-import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
+  import Header from '~/components/Header.vue';
+  import Footer from '~/components/Footer.vue';
+
+  // Import generic component layouts
+  import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
 
 
-export default {
-  components: {
-    Header,
-    Footer,
-    // Inject generic component layouts
-    VideoHeroLayout01Col,
-  },
-  data() {
-    return {
-      formData: {}
-    };
-  },
-  methods: {
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-        )
-        .join('&');
+  export default {
+    components: {
+      Header,
+      Footer,
+      // Inject generic component layouts
+      VideoHeroLayout01Col,
     },
-    handleSubmit(e) {
-      fetch('https://bluecollardev.netlify.com/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({
-          'form-name': e.target.getAttribute('name'),
-          ...this.formData
+    data() {
+      return {
+        formData: {}
+      };
+    },
+    methods: {
+      encode(data) {
+        return Object.keys(data)
+          .map(
+            key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+          )
+          .join('&');
+      },
+      handleSubmit(e) {
+        fetch('https://bluecollardev.netlify.com/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: this.encode({
+            'form-name': e.target.getAttribute('name'),
+            ...this.formData
+          })
         })
+          .then(() => this.$router.push('/'));
+          //.catch(error => alert(error));
+      }
+    },
+    mounted() {
+      // Wrap every letter in a span
+      document.querySelectorAll('.title .letters').forEach((letters) => {
+        letters.outerHTML = `<span class="letters">${letters.textContent.replace(/([^\x00-\x80]|\w)/g, '<span class="letter">$&</span>')}</span>`;
+      });
+
+      const textTarget = document.querySelector('.title');
+      const lineTarget = document.querySelector('.title .line');
+      const lettersTarget = document.querySelector('.title .letters');
+      const letterTargets = document.querySelectorAll('.title .letter');
+
+      let timeline = anime.timeline({ loop: true });
+
+      timeline.add({
+        targets: lineTarget,
+        scaleY: [1,1],
+        opacity: [0.5,1],
+        easing: 'easeOutExpo',
+        duration: 700
       })
-        .then(() => this.$router.push('/'));
-        //.catch(error => alert(error));
+      .add({
+        targets: lineTarget,
+        scaleY: [1,1],
+        opacity: [1,0],
+        easing: 'easeOutExpo',
+        duration: 300
+      })
+      .add({
+        targets: letterTargets,
+        scale: [1.5, 1],
+        opacity: [0,1],
+        easing: 'easeOutExpo',
+        duration: 150,
+        //offset: '-=775',
+        delay: (el, i) => {
+          return letterTargets.length * (i+1)
+        }
+      })
+      .add({
+        targets: lettersTarget,
+        scaleY: [1,1],
+        opacity: [1,0],
+        easing: 'easeOutExpo',
+        duration: 700,
+        delay: 10000
+      });
     }
-  }
-};
+  };
 </script>
 
 <style>
@@ -310,5 +375,85 @@ export default {
 
   #message {
     height: 10rem;
+  }
+</style>
+
+<style>
+  ul.bullets {
+    list-style: square inside;
+  }
+
+  ul.bullets li {
+    list-style: square inside;
+  }
+
+  .video-banner video {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    object-fit: cover !important;
+  }
+
+  .text-banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .text-banner .text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 33vw;
+    z-index: 1;
+  }
+
+  /* TODO: This is ripped clean it up */
+  .title {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+
+  .title .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+
+  .title .line {
+    opacity: 0;
+    position: absolute;
+    left: -1em;
+    height: auto;
+    width: 1rem;
+    transform-origin: 0 50%;
+  }
+
+  .title .line svg {
+    height: 1.7em;
+    -webkit-filter: drop-shadow(1px 0 5px rgba(0, 0, 0, 0.666));
+    filter: drop-shadow(1px 0 5px rgba(0, 0, 0, 0.666));
+  }
+
+  .title .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  @keyframes blink {
+  50% {
+      opacity: 0.0;
+    }
+  }
+  @-webkit-keyframes blink {
+    50% {
+      opacity: 0.0;
+    }
   }
 </style>
