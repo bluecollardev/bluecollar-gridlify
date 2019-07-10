@@ -260,6 +260,86 @@
         }
 
         return null
+      },
+      /**
+       * Because we've wrapped the individual letters in span tags, line breaks no longer occur
+       * on word boundaries. For example, if our text says "Ipsum lorem dolor", and the viewport
+       * is only big enough to accommodate "Ipsum lor", "Ipsum lor" will be displayed on the top
+       * line and the rest of the string, "em dolor" would be displayed on the second. The following
+       * mechanism ensures that line breaks will only occur at word boundaries, as would occur with
+       * normal paragraph text.
+       *
+       * @param text String Should correspond to the input for the wrapLetters function
+       * @param lettersTarget Node The wrapper element
+       * @param letterTargets NodeList The individual letters
+       */
+      wrapTitleText(text, lettersTarget, letterTargets) {
+        let letters = [...letterTargets]; // Map NodeList to array
+        let lastLetter = null;
+        let currentLetter = null;
+        let words = text.innerText.split(/\s/); // Explode text on whitespace
+
+        let letterPos = 1;
+        let wordStartPos = null;
+        while ((currentLetter = letters.shift()) && letters.length > -1) {
+          if (lastLetter !== null) {
+            // Is the currentLetter's y position different than lastLetter's?
+            if (currentLetter.getBoundingClientRect().y !== lastLetter.getBoundingClientRect().y) {
+              // If so, detect if the line break is occurring in the middle of a word!
+              let wordLengths = words.map(val => val.length);
+
+              let total = 0;
+              let wordLength = 0;
+              while ((wordLength = wordLengths.shift()) && wordLengths.length > -1) {
+                // If the current letter index is greater than the total word count
+                // add the number of letters in the next word and repeat
+                if (letterPos > total) {
+                  let prevTotal = total;
+                  total += wordLength;
+
+                  // What was the starting index
+                  //console.log('prev total ' + prevTotal);
+                  //console.log('current index ' + letterPos);
+                  //console.log('new total ' + total);
+                  //console.log('-----')
+
+                  wordStartPos = prevTotal++;
+                } else {
+                  break;
+                }
+              }
+            }
+          }
+
+          lastLetter = currentLetter;
+          letterPos++;
+        }
+
+        console.log('word start char pos ' + wordStartPos);
+        // Insert line break on word boundary
+        // Subtract, NodeList is zero-indexed
+        if (wordStartPos !== null) {
+          lettersTarget.insertBefore(document.createElement('br'), letterTargets.item(wordStartPos));
+        }
+      },
+      /**
+       * Wraps each character of a text string in span tags so we can animate the individual letters.
+       *
+       * @param text
+       * @returns {string}
+       */
+      wrapLetters(text) {
+        return `<span class="letters">${text.textContent.replace(/([^\x00-\x80]|\w)/g, '<span class="letter">$&</span>')}</span>`;
+      },
+      /**
+       * @param text
+       * @param lettersTarget
+       * @param letterTargets
+       */
+      rewrapTitleText(text, lettersTarget, letterTargets) {
+        // Sanitize the text first, clear any <br> elements that we previously inserted
+        lettersTarget.querySelectorAll('br').forEach(el => el.remove());
+        this.wrapTitleText(text, lettersTarget, letterTargets);
       }
     },
     mounted() {
@@ -275,15 +355,19 @@
         delay: (el, i) => { return i * 500 }
       });
 
+      const text = document.querySelector('.title .letters');
+
       // Wrap every letter in a span
-      document.querySelectorAll('.title .letters').forEach((letters) => {
-        letters.outerHTML = `<span class="letters">${letters.textContent.replace(/([^\x00-\x80]|\w)/g, '<span class="letter">$&</span>')}</span>`;
-      });
+      text.outerHTML = this.wrapLetters(text);
 
       const textTarget = document.querySelector('.title');
       const lineTarget = document.querySelector('.title .line');
       const lettersTarget = document.querySelector('.title .letters');
       const letterTargets = document.querySelectorAll('.title .letter');
+
+      this.wrapTitleText(text, lettersTarget, letterTargets);
+
+      window.addEventListener('resize', this.rewrapTitleText.bind(this, text, lettersTarget, letterTargets));
 
       let timeline = anime.timeline({ loop: true });
 
@@ -320,6 +404,10 @@
         duration: 700,
         delay: 10000
       });
+    },
+    beforeDestroy() {
+      console.log('remove wrapTitleText resize listener');
+      window.removeEventListener('resize', this.rewrapTitleText);
     }
   }
 </script>
@@ -361,7 +449,6 @@
   /* TODO: This is ripped clean it up */
   .title {
     font-weight: 900;
-    font-size: 3.5em;
   }
 
   .title .text-wrapper {
