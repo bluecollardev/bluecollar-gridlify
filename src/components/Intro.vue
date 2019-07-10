@@ -31,6 +31,9 @@
             duration: 333,
             scale: [1, 6],
             easing: 'easeOutQuad',
+            complete: () => {
+              sessionStorage.setItem('isLoaded', '1')
+            }
           })
           .add({
             targets: intro,

@@ -9,7 +9,7 @@
           <button class="hide-notification" aria-label="Hide notification" v-on:click="hideNotifications()">&times;</button>
         </span>
       </div>
-      <slot/>
+      <slot v-if="sessionStorage.getItem('isLoaded') && parseInt(sessionStorage.getItem('isLoaded')) === 1" />
     </div>
   </main>
 </template>
