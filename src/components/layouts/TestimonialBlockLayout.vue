@@ -76,7 +76,9 @@ export default {
 
 
 <style>
-  .testimonial-profile-circle {
-    width: 50%;
+  @media screen and (min-width: 40em) {
+    .testimonial-profile-circle {
+      width: 50%;
+    }
   }
 </style>
