@@ -2,7 +2,7 @@
   <footer class="flex flex-column">
     <div class="sm-flex space-top flex-wrap space-bottom">
       <div class="sm-flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-three-quarters lg-flex-basis-three-quarters space-bottom">
-        <div class="flex-basis-third flex flex-justify-leftr">
+        <div class="flex-basis-third sm-flex sm-flex-justify-left">
           <div>
             <div class="g-footer space-bottom">
               <p class="g-pstyle13"><a href="/#services">Development</a></p>
@@ -33,7 +33,7 @@
           </div>
         </div>-->
 
-        <div class="flex-basis-third flex flex-justify-center">
+        <div class="flex-basis-third sm-flex sm-flex-justify-center">
           <div>
             <div class="g-footer space-bottom">
               <p class="g-pstyle13"><a href="/company">Team</a></p>
@@ -48,7 +48,7 @@
           </div>
         </div>
 
-        <div class="flex-basis-third flex flex-justify-end">
+        <div class="flex-basis-third sm-flex sm-flex-justify-end">
           <div>
             <div class="g-footer space-bottom">
               <p class="g-pstyle13">Resources</p>
