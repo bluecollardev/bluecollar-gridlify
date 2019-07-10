@@ -1,5 +1,6 @@
 <template>
   <main>
+    <intro></intro>
     <div class="container">
       <div class="notifications" v-if="displayNotifications">
         <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
@@ -14,7 +15,12 @@
 </template>
 
 <script>
+  import Intro from '~/components/Intro.vue';
+
   export default {
+    components: {
+      Intro
+    },
     data() {
       return {
         displayNotifications: false
