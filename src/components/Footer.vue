@@ -1,8 +1,8 @@
 <template>
   <footer class="flex flex-column">
     <div class="sm-flex space-top flex-wrap space-bottom">
-      <div class="sm-flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-two-thirds lg-flex-basis-two-thirds space-bottom">
-        <div class="flex-basis-quarter flex flex-justify-center">
+      <div class="sm-flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-three-quarters lg-flex-basis-three-quarters space-bottom">
+        <div class="flex-basis-third flex flex-justify-leftr">
           <div>
             <div class="g-footer space-bottom">
               <p class="g-pstyle13"><a href="/#services">Development</a></p>
@@ -17,7 +17,8 @@
           </div>
         </div>
 
-        <div class="flex-basis-quarter flex flex-justify-center">
+        <!-- Just leaving this in here for reference if I want to re-introduce these services -->
+        <!--<div class="flex-basis-third flex flex-justify-center">
           <div>
             <div class="g-footer space-bottom">
               <p class="g-pstyle13"><a href="/services-digital-marketing">Marketing</a></p>
@@ -30,9 +31,9 @@
               <p class="g-pstyle7"><a href="/services-digital-marketing#advertising">Advertising</a></p>
             </div>
           </div>
-        </div>
+        </div>-->
 
-        <div class="flex-basis-quarter flex flex-justify-center">
+        <div class="flex-basis-third flex flex-justify-center">
           <div>
             <div class="g-footer space-bottom">
               <p class="g-pstyle13"><a href="/company">Team</a></p>
@@ -47,7 +48,7 @@
           </div>
         </div>
 
-        <div class="flex-basis-quarter flex flex-justify-center">
+        <div class="flex-basis-third flex flex-justify-end">
           <div>
             <div class="g-footer space-bottom">
               <p class="g-pstyle13">Resources</p>
@@ -65,7 +66,7 @@
 
         </div>
       </div>
-      <div class="sm-flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-third xl-flex-basis-third flex-justify-end">
+      <div class="sm-flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-quarter xl-flex-basis-quarter flex-justify-end">
         <div class="social">
           <ul class="ampstart-social-follow list-reset flex justify-around xs-flex-justify-center items-center flex-wrap m0">
             <li>

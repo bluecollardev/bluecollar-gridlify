@@ -3,6 +3,11 @@
   flex-basis: 100%;
 }
 
+.flex-basis-three-quarters,
+.flex-basis-75 {
+  flex-basis: 75%;
+}
+
 .flex-basis-two-thirds,
 .flex-basis-666 {
   flex-basis: 66.66667%;
@@ -117,6 +122,11 @@
     flex-basis: 100%;
   }
 
+  .md-lg-flex-basis-three-quarters,
+  .md-lg-flex-basis-75 {
+    flex-basis: 75%;
+  }
+
   .md-lg-flex-basis-two-thirds,
   .md-lg-flex-basis-666 {
     flex-basis: 66.66667%;
@@ -144,6 +154,11 @@
     flex-basis: 100%;
   }
 
+  .lg-flex-basis-three-quarters,
+  .lg-flex-basis-75 {
+    flex-basis: 75%;
+  }
+
   .lg-flex-basis-two-thirds,
   .lg-flex-basis-666 {
     flex-basis: 66.66667%;
@@ -169,6 +184,16 @@
   .xl-flex-basis-full,
   .xl-flex-basis-100 {
     flex-basis: 100%;
+  }
+
+  .xl-flex-basis-three-quarters,
+  .xl-flex-basis-75 {
+    flex-basis: 75%;
+  }
+
+  .xl-flex-basis-two-thirds,
+  .xl-flex-basis-666 {
+    flex-basis: 66.66667%;
   }
 
   .xl-flex-basis-half,

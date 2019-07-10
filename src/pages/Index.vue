@@ -824,6 +824,50 @@
         duration: 700,
         delay: 10000
       });
+
+      const flipCardSelector = '.service-detail-card-inner';
+      const flipCardsContent = document.querySelectorAll(flipCardSelector);
+
+      flipCardsContent.forEach(((element, index) => {
+        // Set the height of the wrapper, we need to absolute position the content
+        element.style.height = `${element.getBoundingClientRect().height}px`;
+        element.style.width = `${element.getBoundingClientRect().width}px`;
+
+        const cardFaces = element.querySelectorAll('.service-detail-card-front, .service-detail-card-back');
+        cardFaces.forEach((cardFace) => {
+          cardFace.style.position = 'absolute';
+          cardFace.style.top = '0';
+
+          if (cardFace.classList.contains('service-detail-card-back')) {
+            cardFace.style.display = 'block';
+          }
+
+          // Freeze the heights of the faces
+          cardFace.style.height = `${element.getBoundingClientRect().height}px`;
+          cardFace.style.width = `${element.getBoundingClientRect().width}px`;
+        });
+
+        element.animeJS = anime.timeline({
+          autoplay: false
+        });
+
+        element.animeJS.add({
+          targets: element,
+          rotateY: [{ value: '180deg', duration: 100 }]
+        });
+
+        element.querySelectorAll('.more-info-link').forEach(((link) => {
+          link.addEventListener('click', ((e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.onCardEnter(element);
+          }).bind(this));
+        }).bind(this));
+
+        element.addEventListener('mouseleave', (() => {
+          this.onCardLeave(element);
+        }).bind(this));
+      }).bind(this));
     },
     beforeDestroy() {
       console.log('remove wrapTitleText resize listener');
@@ -933,5 +977,31 @@
     .sm-order-2 {
       order: 2;
     }
+  }
+</style>
+
+<style lang="scss">
+  .service-detail-card {
+    perspective: 1000px
+  }
+
+  .service-detail-card-inner {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .service-detail-card-front,
+  .service-detail-card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .service-detail-card-front {
+  }
+
+  .service-detail-card-back {
+    display: none;
+    transform: rotateY(180deg);
   }
 </style>
