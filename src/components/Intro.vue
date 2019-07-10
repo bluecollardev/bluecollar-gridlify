@@ -19,21 +19,31 @@
       PhoneApp
     },
     mounted() {
-      document.body.classList.add('loading');
+      if (!document.body.classList.contains('loading')) {
+        document.body.classList.add('loading');
+      }
 
       const intro = this.$refs.intro;
       setTimeout(() => {
-        anime({
-          targets: intro,
-          opacity: [1, 0],
-          easing: 'easeOutQuad',
-          complete: () => {
-            intro.classList.add('display-none');
-            if (document.body.classList.contains('loading')) {
-              document.body.classList.remove('loading');
+        anime.timeline()
+          .add({
+            targets: intro,
+            duration: 333,
+            scale: [1, 10],
+            easing: 'easeOutQuad',
+          })
+          .add({
+            targets: intro,
+            duration: 333,
+            opacity: [1, 0],
+            easing: 'easeOutQuad',
+            complete: () => {
+              intro.classList.add('display-none');
+              if (document.body.classList.contains('loading')) {
+                document.body.classList.remove('loading');
+              }
             }
-          }
-        });
+          });
       }, 3000);
     }
   }

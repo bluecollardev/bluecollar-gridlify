@@ -237,11 +237,6 @@
 </script>
 
 <style lang="scss" scoped>
-  .phone-app-svg {
-    width: 12vw;
-    height: 100%;
-  }
-
   .phone-app {
     width: 100%;
     display: -webkit-box;
