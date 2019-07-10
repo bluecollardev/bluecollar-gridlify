@@ -1,6 +1,7 @@
 <template>
   <div ref="intro" class="intro bg-bc-blue">
     <div class="wrapper">
+      <img src="/images/blue-collar-dev.png" alt="" class="intro-logo img-whiteify">
       <!--<Maze />-->
       <PhoneApp />
     </div>
@@ -62,6 +63,11 @@
     width: 100vw;
     height: 100vh;
     z-index: 5000;
+
+    .intro-logo {
+      width: 300px;
+      margin-bottom: 3rem;
+    }
   }
 
   .wrapper {
@@ -72,5 +78,6 @@
     z-index: 5001;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 </style>

@@ -80,3 +80,8 @@ img.circle {
     position: relative;
   }
 }
+
+/* TODO: Move to utils */
+.img-whiteify {
+  filter: grayscale(1) brightness(0) invert(1);
+}
