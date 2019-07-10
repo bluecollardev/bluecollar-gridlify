@@ -30,8 +30,10 @@
       isLoaded() {
         let loaded = false;
 
-        if (sessionStorage.getItem('isLoaded')) {
-          loaded = parseInt(sessionStorage.getItem('isLoaded')) === 1;
+        if (typeof document !== 'undefined') {
+          if (sessionStorage.getItem('isLoaded')) {
+            loaded = parseInt(sessionStorage.getItem('isLoaded')) === 1;
+          }
         }
 
         return loaded;
