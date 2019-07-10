@@ -290,24 +290,6 @@
               :link="getService(0).link"
               :linkText="getService(0).linkText"
             />
-
-            <content-block-layout
-              className="pad-top"
-              v-if="getService(1).linkText"
-              :title="getService(1).title"
-              :description="getService(1).description"
-              :link="getService(1).link"
-              :linkText="getService(1).linkText"
-            />
-
-            <content-block-layout
-              className="pad-top pad-bottom"
-              v-if="getService(2).linkText"
-              :title="getService(2).title"
-              :description="getService(2).description"
-              :link="getService(2).link"
-              :linkText="getService(2).linkText"
-            />
           </div>
 
           <!-- Back -->
@@ -324,30 +306,6 @@
               :caption="getServiceHeroById('apps').caption"
               :subCaption="getServiceHeroById('apps').subCaption"
             />
-            <content-block-layout
-              className="pad-bottom"
-              v-if="getServiceHeroById('software')"
-              :title="getServiceHeroById('software').title"
-              subtitle=""
-              :description="getServiceHeroById('software').description"
-              :link="getServiceHeroById('software').link"
-              :linkText="getServiceHeroById('software').linkText"
-              :image="getServiceHeroById('software').image"
-              :caption="getServiceHeroById('software').caption"
-              :subCaption="getServiceHeroById('software').subCaption"
-            />
-            <!--<content-block-layout
-              className="pad-bottom"
-              v-if="getServiceHeroById('websites')"
-              :title="getServiceHeroById('websites').title"
-              subtitle=""
-              :description="getServiceHeroById('websites').description"
-              :link="getServiceHeroById('websites').link"
-              :linkText="getServiceHeroById('websites').linkText"
-              :image="getServiceHeroById('websites').image"
-              :caption="getServiceHeroById('websites').caption"
-              :subCaption="getServiceHeroById('websites').subCaption"
-            />-->
           </div>
         </div>
       </div>
@@ -385,46 +343,16 @@
           <div class="service-detail-card-front bg-white">
             <content-block-layout
               className="pad-top"
-              v-if="getService(3).linkText"
-              :title="getService(3).title"
-              :description="getService(3).description"
-              :link="getService(3).link"
-              :linkText="getService(3).linkText"
-            />
-
-            <content-block-layout
-              className="pad-top"
-              v-if="getService(4).linkText"
-              :title="getService(4).title"
-              :description="getService(4).description"
-              :link="getService(4).link"
-              :linkText="getService(4).linkText"
-            />
-
-            <content-block-layout
-              className="pad-top pad-bottom"
-              v-if="getService(5).linkText"
-              :title="getService(5).title"
-              :description="getService(5).description"
-              :link="getService(5).link"
-              :linkText="getService(5).linkText"
+              v-if="getService(1).linkText"
+              :title="getService(1).title"
+              :description="getService(1).description"
+              :link="getService(1).link"
+              :linkText="getService(1).linkText"
             />
           </div>
 
           <!-- Back -->
           <div class="service-detail-card-back bg-white">
-            <content-block-layout
-              className="pad-top pad-bottom"
-              v-if="getServiceHeroById('apps')"
-              :title="getServiceHeroById('apps').title"
-              subtitle=""
-              :description="getServiceHeroById('apps').description"
-              :link="getServiceHeroById('apps').link"
-              :linkText="getServiceHeroById('apps').linkText"
-              :image="getServiceHeroById('apps').image"
-              :caption="getServiceHeroById('apps').caption"
-              :subCaption="getServiceHeroById('apps').subCaption"
-            />
             <content-block-layout
               className="pad-bottom"
               v-if="getServiceHeroById('software')"
@@ -437,7 +365,28 @@
               :caption="getServiceHeroById('software').caption"
               :subCaption="getServiceHeroById('software').subCaption"
             />
-            <!--<content-block-layout
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-section col-2-squares n1-white n2-light-grey no-pad-bottom lg-flex">
+      <div class="service-detail-card-top bg-white sm-flex flex-center flex-justify-center flex-basis-half">
+        <div class="service-detail-card-inner content-block">
+          <div class="service-detail-card-front bg-white">
+            <content-block-layout
+              className="pad-top pad-bottom"
+              v-if="getService(2).linkText"
+              :title="getService(2).title"
+              :description="getService(2).description"
+              :link="getService(2).link"
+              :linkText="getService(2).linkText"
+            />
+          </div>
+
+          <!-- Back -->
+          <div class="service-detail-card-back bg-white">
+            <content-block-layout
               className="pad-bottom"
               v-if="getServiceHeroById('websites')"
               :title="getServiceHeroById('websites').title"
@@ -448,9 +397,22 @@
               :image="getServiceHeroById('websites').image"
               :caption="getServiceHeroById('websites').caption"
               :subCaption="getServiceHeroById('websites').subCaption"
-            />-->
+            />
           </div>
         </div>
+      </div>
+
+      <div
+        v-if="getTestimonial(0)"
+        class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
+        <testimonial-block-layout
+          className="space-top space-bottom"
+          :testimonial="getTestimonial(0).testimonial"
+          :reviewedBy="getTestimonial(0).reviewedBy"
+          :position="getTestimonial(0).position"
+          :organization="getTestimonial(0).organization"
+          :image="getTestimonial(0).image"
+        />
       </div>
     </section>
 
