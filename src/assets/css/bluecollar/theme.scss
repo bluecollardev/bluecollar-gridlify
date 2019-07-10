@@ -483,7 +483,7 @@ section.hero-section.text-shadow a.action-button {
     position: absolute;
     display: block;
     content: '';
-    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 1000 0, 1000 100, 0 100' fill='rgb(242, 241, 237)' /></svg>");
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(242, 241, 237)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(242, 241, 237)'></polygon></svg>");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 2;
@@ -492,7 +492,7 @@ section.hero-section.text-shadow a.action-button {
   section.hero-section.angle + section.hero-section.bg-bc-blue:before,
   section.hero-section-01-col.angle + section.hero-section.bg-bc-blue:before,
   section.hero-section-01-col.angle + section.hero-section-01-col.bg-bc-blue:before {
-    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 1000 0, 1000 100, 0 100' fill='rgb(51, 88, 122)' /></svg>");
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(51, 88, 122)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(51, 88, 122)'></polygon></svg>");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -500,7 +500,23 @@ section.hero-section.text-shadow a.action-button {
   section.hero-section.angle + section.hero-section.bg-white:before,
   section.hero-section-01-col.angle + section.hero-section.bg-white:before,
   section.hero-section-01-col.angle + section.hero-section-01-col.bg-white:before {
-    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 1000 0, 1000 100, 0 100' fill='rgb(255, 255, 255)' /></svg>");
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(255, 255, 255)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(255, 255, 255)'></polygon></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  section.hero-section.angle + section.hero-section.n1-white.n2-light-grey:before,
+  section.hero-section-01-col.angle + section.hero-section.n1-white.n2-light-grey:before,
+  section.hero-section-01-col.angle + section.hero-section-01-col.n1-white.n2-light-grey:before {
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(255, 255, 255)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(242, 241, 237)'></polygon></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  section.hero-section.angle + section.hero-section.n1-light-grey.n2-white:before,
+  section.hero-section-01-col.angle + section.hero-section.n1-light-grey.n2-white:before,
+  section.hero-section-01-col.angle + section.hero-section-01-col.n1-light-grey.n2-white:before {
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(242, 241, 237)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(255, 255, 255)'></polygon></svg>");
     background-repeat: no-repeat;
     background-size: cover;
   }

@@ -29,9 +29,9 @@
       <div class="hero-block">
         <div class="flex flex-column">
           <div class="homepage-hero-title sm-space-bottom">
-            <p class="g-pstyle2 text-center">
+            <h2 class="title text-center">
               {{ this.title }}
-            </p>
+            </h2>
           </div>
           <div class="homepage-hero-text g-hero">
             <div v-html="compiledDescription"></div>

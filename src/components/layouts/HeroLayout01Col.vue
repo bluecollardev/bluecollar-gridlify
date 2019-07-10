@@ -1,22 +1,22 @@
 <template>
   <section
     ref="heroLayout"
-    :class="`homepage-hero hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
+    :class="`homepage-hero hero-section hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
     :style="`background-image: url(${this.image});`"
   >
     <!-- TODO: Allow changing of bg colors -->
-    <div class="sm-flex flex-center flex-justify-center flex-basis-half">
+    <div class="sm-flex flex-center flex-justify-center flex-basis-two-thirds">
       <!--<div class="hero-image-wrapper"><img :class="`banner-image ${this.imageClass}`" v-bind:src="this.image" alt="" /></div>
       <div v-if="typeof this.caption === 'string' && this.caption.length >0" class="figure-caption bg-bc-blue g-hero">
         <p class="g-pstyle4" style="text-align: right;">{{ this.caption }}</p>
         <p class="g-pstyle5" style="text-align: right;">{{ this.subCaption }}</p>
       </div>-->
-      <div class="hero-block">
+      <div>
         <div class="flex flex-column">
           <div class="homepage-hero-title sm-space-bottom-half">
-            <p class="g-pstyle2 text-center">
+            <h2 class="title text-center">
               {{ this.title }}
-            </p>
+            </h2>
           </div>
           <div class="homepage-hero-text g-hero">
             <div class="text-center" v-html="compiledDescription"></div>
