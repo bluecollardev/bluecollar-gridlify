@@ -10,11 +10,11 @@
     </div>
 
     <!-- TODO: Allow changing of bg colors -->
-    <div class="sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-two-thirds lg-flex-basis-half xl-flex-basis-half">
+    <div class="sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-full xl-flex-basis-two-thirds">
       <div class="hero-block">
         <div class="flex flex-column">
           <div class="homepage-hero-title sm-space-bottom">
-            <p class="g-pstyle2 text-center">
+            <p class="title text-center mr-3 ml-3">
               {{ this.title }}
             </p>
           </div>

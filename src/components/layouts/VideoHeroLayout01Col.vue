@@ -3,7 +3,7 @@
     ref="heroLayout"
     :class="`homepage-hero hero-section text-shadow hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
   >
-    <div class="video-banner text-banner bg-bc-blue">
+    <div class="video-banner text-banner bg-bc-blue sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-full xl-flex-basis-two-thirds">
       <video class="is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop="" poster="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.jpg?noresize">
         <source src="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.mp4" type="video/mp4">
         <source src="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.webm" type="video/webm">
@@ -15,7 +15,7 @@
       <slot name="title" v-if="this.$slots.title" class="sm-space-bottom-half"></slot>
 
       <!-- TODO: Allow changing of bg colors -->
-      <div class="text-content sm-flex flex-center flex-justify-center">
+      <div class="text-content sm-flex flex-center flex-justify-center ">
         <!--<div class="hero-image-wrapper"><img :class="`banner-image ${this.imageClass}`" v-bind:src="this.image" alt="" /></div>
         <div v-if="typeof this.caption === 'string' && this.caption.length >0" class="figure-caption bg-bc-blue g-hero">
           <p class="g-pstyle4" style="text-align: right;">{{ this.caption }}</p>
@@ -26,7 +26,7 @@
             <div
               v-if="typeof this.title === 'string' && !this.$slots.title"
               class="homepage-hero-title sm-space-bottom-half">
-              <h1 class="g-pstyle2 text-center">
+              <h1 class="title text-center mr-3 ml-3">
                 {{ this.title }}
               </h1>
             </div>

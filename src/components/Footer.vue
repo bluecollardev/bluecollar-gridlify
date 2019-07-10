@@ -1,7 +1,7 @@
 <template>
   <footer class="flex flex-column">
     <div class="sm-flex space-top flex-wrap space-bottom">
-      <div class="sm-flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-three-quarters lg-flex-basis-three-quarters space-bottom">
+      <div class="sm-flex xs-flex-basis-full sm-flex-basis-full md-flex-basis-full md-lg-flex-basis-three-quarters lg-flex-basis-three-quarters space-bottom">
         <div class="flex-basis-third sm-flex sm-flex-justify-left">
           <div>
             <div class="g-footer space-bottom">
@@ -48,7 +48,7 @@
           </div>
         </div>
 
-        <div class="flex-basis-third sm-flex sm-flex-justify-end">
+        <div class="flex-basis-third sm-flex sm-flex-justify-center xl-flex-justify-end">
           <div>
             <div class="g-footer space-bottom">
               <p class="g-pstyle13">Resources</p>
@@ -66,7 +66,7 @@
 
         </div>
       </div>
-      <div class="sm-flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-quarter xl-flex-basis-quarter flex-justify-end">
+      <div class="sm-flex xs-flex-basis-full sm-flex-basis-full md-flex-basis-full md-lg-flex-basis-quarter lg-flex-basis-quarter xl-flex-basis-quarter flex-justify-end">
         <div class="social">
           <ul class="ampstart-social-follow list-reset flex justify-around xs-flex-justify-center items-center flex-wrap m0">
             <li>

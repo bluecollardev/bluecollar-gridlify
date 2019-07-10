@@ -5,16 +5,16 @@
     :style="`background-image: url(${this.image});`"
   >
     <!-- TODO: Allow changing of bg colors -->
-    <div class="sm-flex flex-center flex-justify-center flex-basis-two-thirds">
+    <div class="sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-full xl-flex-basis-two-thirds">
       <!--<div class="hero-image-wrapper"><img :class="`banner-image ${this.imageClass}`" v-bind:src="this.image" alt="" /></div>
       <div v-if="typeof this.caption === 'string' && this.caption.length >0" class="figure-caption bg-bc-blue g-hero">
         <p class="g-pstyle4" style="text-align: right;">{{ this.caption }}</p>
         <p class="g-pstyle5" style="text-align: right;">{{ this.subCaption }}</p>
       </div>-->
-      <div>
+      <div class="hero-block">
         <div class="flex flex-column">
           <div class="homepage-hero-title sm-space-bottom-half">
-            <h2 class="title text-center">
+            <h2 class="title text-center mr-3 ml-3">
               {{ this.title }}
             </h2>
           </div>

@@ -14,7 +14,7 @@
       <div class="hero-block">
         <div class="flex flex-column">
           <div class="homepage-hero-title space-bottom">
-            <p class="g-pstyle2 text-center">
+            <p class="title text-center mr-3 ml-3">
               {{ this.title }}
             </p>
           </div>

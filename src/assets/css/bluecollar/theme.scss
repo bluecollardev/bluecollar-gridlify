@@ -464,12 +464,16 @@ section.hero-section.text-shadow a.action-button {
   text-shadow: none;
 }
 
-.homepage-hero p,
-.homepage-hero li,
-.homepage-hero a:not(.action-link),
-.homepage-hero a:not(.action-button) {
-  font-size: 23px;
+
+@media screen and (min-width: 40em) {
+  .homepage-hero p,
+  .homepage-hero li,
+  .homepage-hero a:not(.action-link),
+  .homepage-hero a:not(.action-button) {
+    font-size: 23px;
+  }
 }
+
 
 @media screen and (min-width: 1400px) {
   section.hero-section.angle + section.hero-section:before,

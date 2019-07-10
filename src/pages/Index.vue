@@ -18,7 +18,7 @@
       bgColor="bg-bc-blue"
     >
       <template v-slot:title>
-        <h1 class="title">
+        <h1 class="title text-center mr-3 ml-3">
           <span class="text-wrapper">
             <span class="line blink">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" xml:space="preserve">
@@ -731,6 +731,15 @@
       },
     },
     methods: {
+      isLoaded() {
+        let loaded = false;
+
+        if (sessionStorage.getItem('isLoaded')) {
+          loaded = parseInt(sessionStorage.getItem('isLoaded')) === 1;
+        }
+
+        return loaded;
+      },
       getTestimonial(idx) {
         let items = this.testimonialContent.items;
 
