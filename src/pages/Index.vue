@@ -365,6 +365,7 @@
     </section>
 
     <hero-layout01-col
+      id="contact"
       v-if="servicesHero"
       bgColor="bg-bc-blue"
       title="Get Started Today"
