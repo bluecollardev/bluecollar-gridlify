@@ -34,8 +34,8 @@
               <li><a href="/junior-dev-program" aria-label="Junior Dev Program" v-on:click="hideDropMenu()">Junior Dev Program</a></li>
             </ul>
           </li>-->
+          <li><a href="/#contact" aria-label="Enquire" v-on:click="hideDropMenu()">Contact</a></li>
           <li><a href="/projects" aria-label="Portfolio" v-on:click="hideDropMenu()">Portfolio</a></li>
-          <li><a href="/#contact" aria-label="Contact" v-on:click="hideDropMenu()">Contact</a></li>
         </ul>
         <div class="site-navbar-top d-flex">
           <a href="https://www.instagram.com/creativeescapesyeg" class="d-flex align-items-center mr-4">
