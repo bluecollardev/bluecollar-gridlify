@@ -9,7 +9,7 @@
           <button class="hide-notification" aria-label="Hide notification" v-on:click="hideNotifications()">&times;</button>
         </span>
       </div>
-      <slot v-if="isLoaded" />
+      <slot v-if="loaded" />
     </div>
   </main>
 </template>
@@ -23,25 +23,27 @@
     },
     data() {
       return {
-        displayNotifications: false
-      }
-    },
-    computed: {
-      isLoaded() {
-        let loaded = false;
-
-        if (typeof document !== 'undefined') {
-          if (sessionStorage.getItem('isLoaded')) {
-            loaded = parseInt(sessionStorage.getItem('isLoaded')) === 1;
-          }
-        }
-
-        return loaded;
+        displayNotifications: false,
+        loaded: false
       }
     },
     methods: {
       hideNotifications() {
         this.displayNotifications = false
+      },
+      isLoaded() {
+        let loaded = false;
+
+        if (sessionStorage.getItem('isLoaded')) {
+          loaded = parseInt(sessionStorage.getItem('isLoaded')) === 1;
+        }
+
+        return loaded;
+      }
+    },
+    mounted() {
+      if (this.isLoaded()) {
+        this.loaded = true;
       }
     }
   }
