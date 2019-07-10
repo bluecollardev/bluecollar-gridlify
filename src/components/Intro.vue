@@ -29,7 +29,7 @@
           .add({
             targets: intro,
             duration: 333,
-            scale: [1, 10],
+            scale: [1, 6],
             easing: 'easeOutQuad',
           })
           .add({
