@@ -340,8 +340,9 @@
             <span class="letters">Ready to Rock?</span>
           </span>
         </h2>
-        <div class="bg-bc-blue space-bottom"><maze></maze></div>
       </template>
+
+      <div class="bg-bc-blue space-bottom"><interactive-guitar></interactive-guitar></div>
 
     </hero-layout01-col>
 
@@ -598,7 +599,7 @@
 
   // Import SVG animations
   import AppFactory from '~/components/svg/AppFactory.vue';
-  import Maze from '~/components/svg/Maze.vue';
+  import InteractiveGuitar from '~/components/svg/InteractiveGuitar.vue';
 
   // Import static data
   import HomeData from '~/data/Home.yml';
@@ -626,7 +627,7 @@
       TestimonialHeroLayout,
       // Inject SVG animations
       AppFactory,
-      Maze,
+      InteractiveGuitar,
       // Import static HTML blocks
       ProcessBlock
     },
