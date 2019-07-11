@@ -1,6 +1,6 @@
 <template>
   <!-- Nothing interesting here. Just a long inline SVG spaghetti. -->
-  <div class="svg_box">
+  <div class="app-factory flex">
     <svg width="560px" height="310px" viewBox="0 0 560 310" version="1.1" xmlns="http://www.w3.org/2000/svg"
          xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
       <defs>
@@ -790,7 +790,7 @@
     transition: .6s ease-out all;
   }
 
-  .svg_box:hover #camino_top {
+  .app-factory:hover #camino_top {
     transform: translateY(-6px);
   }
 
@@ -1130,7 +1130,7 @@
     transform-origin: 0 17px;
   }
 
-  .svg_box:hover #shape_chart_1 {
+  .app-factory:hover #shape_chart_1 {
     transform: scaleY(1.6);
   }
 
@@ -1147,7 +1147,7 @@
     transform-origin: 0 45px;
   }
 
-  .svg_box:hover #shape_chart_2 {
+  .app-factory:hover #shape_chart_2 {
     transform: scaleY(1.6);
   }
 
