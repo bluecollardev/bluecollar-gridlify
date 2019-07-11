@@ -6,20 +6,25 @@
       </div>
     </div>
 
-    <div class="circle-composite space-bottom-half ml-auto mr-auto testimonial-profile-circle">
-      <div class="dark-blue-circle-mask">
-        <div class="dark-blue-circle"></div>
+    <div class="g-services flex flex-center">
+      <div class="circle-composite small space-bottom-half ml-auto mr-auto testimonial-profile-circle">
+        <div class="dark-blue-circle-mask">
+          <div class="dark-blue-circle"></div>
+        </div>
+        <div class="inner-circle">
+          <div class="blue-circle"></div>
+          <img class="circle" v-bind:src="this.image" alt="" />
+        </div>
       </div>
-      <div class="inner-circle">
-        <div class="blue-circle"></div>
-        <img class="circle" v-bind:src="this.image" alt="" />
-      </div>
-    </div>
 
-    <div v-bind:class="classNameString">
-      <div class="g-services">
-        <p class="g-pstyle10 text-center"><strong>{{ this.reviewedBy }} - {{ this.position }}</strong></p>
-        <p class="g-pstyle10 text-center"><em>{{ this.organization }}</em></p>
+      <div v-bind:class="classNameString">
+        <div class="g-services">
+          <p class="g-pstyle10 text-center">
+            <strong>{{ this.reviewedBy }}</strong><br />
+            <strong>{{ this.position }}</strong>
+          </p>
+          <p class="g-pstyle10 text-center"><small><em>{{ this.organization }}</em></small></p>
+        </div>
       </div>
     </div>
   </div>

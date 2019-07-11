@@ -281,7 +281,7 @@
         v-if="getTestimonial(0)"
         class="bg-light-grey sm-flex flex-column flex-center flex-basis-third pad-top">
         <testimonial-block-layout
-          className="space-top space-bottom"
+          className="sm-space-top-half sm-space-bottom-half"
           :testimonial="getTestimonial(0).testimonial"
           :reviewedBy="getTestimonial(0).reviewedBy"
           :position="getTestimonial(0).position"
@@ -293,7 +293,7 @@
         v-if="getTestimonial(1)"
         class="bg-light-grey flex flex-column flex-center flex-basis-third pad-top">
         <testimonial-block-layout
-          className="space-top space-bottom"
+          className="sm-space-top-half sm-space-bottom-half"
           :testimonial="getTestimonial(1).testimonial"
           :reviewedBy="getTestimonial(1).reviewedBy"
           :position="getTestimonial(1).position"
@@ -305,7 +305,7 @@
         v-if="getTestimonial(2)"
         class="bg-light-grey sm-flex flex-column flex-center flex-basis-third pad-top">
         <testimonial-block-layout
-          className="space-top space-bottom"
+          className="sm-space-top-half sm-space-bottom-half"
           :testimonial="getTestimonial(2).testimonial"
           :reviewedBy="getTestimonial(2).reviewedBy"
           :position="getTestimonial(2).position"
