@@ -319,10 +319,10 @@
       id="contact"
       v-if="servicesHero"
       bgColor="bg-bc-blue"
-      title="Get Started Today"
+      title="Ready to Rock?"
       subtitle=""
       description="At Blue Collar, every challenge is just a puzzle waiting to be solved! We strive to create innovative solutions for our clients using the latest advances
-        in technology and development. Let us help take your business idea to the next level."
+        in technology and development. Let us help take your business idea to the next level. Get in touch today!"
       imageClass="home-page-banner-image"
       :flipX="true"
       :angle="true"
@@ -338,7 +338,7 @@
                 </g>
               </svg>
             </span>
-            <span class="letters">Get Started Today</span>
+            <span class="letters">Ready to Rock?</span>
           </span>
         </h2>
       </template>
@@ -359,7 +359,7 @@
               data-netlify-honeypot="bot-field"
             >
               <fieldset class="border-none p0 m0 pad-all">
-                <h2 class="h3 block mb4 space-top">
+                <h2 class="block mb4 space-top">
                   Contact us for a free consultation
                 </h2>
                 <div class="hide">
@@ -539,13 +539,16 @@
 
                   <br />
                   <!-- Start Submit -->
-                  <input
-                    type="submit"
-                    name="submit"
-                    value="Submit Form"
-                    id="submit"
-                    class="action-link space-top g-pstyle3"
-                  />
+                  <div class="text-center">
+                    <input
+                      type="submit"
+                      name="submit"
+                      value="Submit Form"
+                      id="submit"
+                      class="action-link space-top g-pstyle3"
+                      style=""
+                    />
+                  </div>
                   <!-- End Submit -->
                 </div>
               </fieldset>
@@ -553,7 +556,7 @@
           </div>
           <div class="sm-flex flex-basis-third">
             <div class="border-none p0 m0 pad-all">
-              <h3 class="h3 block mb4 space-top">General Inquiries</h3>
+              <h2 class="block mb4 space-top">General Inquiries</h2>
               <br />
               <br />
               <p>For information on job opportunities or informational interviews please email: <b>careers@bluecollardev.com</b></p>
