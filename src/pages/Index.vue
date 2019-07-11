@@ -321,7 +321,7 @@
       title="Ready to Rock?"
       subtitle=""
       description="At Blue Collar, every challenge is just a puzzle waiting to be solved! We strive to create innovative solutions for our clients using the latest advances
-        in technology and development. Let us help take your business idea to the next level. Oh... and don't forget to play with the guitar!"
+        in technology and development. Let us help take your business idea to the next level."
       imageClass="home-page-banner-image"
       :flipX="true"
       :angle="true"
@@ -342,7 +342,11 @@
         </h2>
       </template>
 
-      <div class="bg-bc-blue space-bottom"><interactive-guitar></interactive-guitar></div>
+      <div class="bg-bc-blue space-bottom text-center">
+        <interactive-guitar></interactive-guitar>
+        <br />
+        <small><b>Click the strings to ROCK OUT</b></small>
+      </div>
 
     </hero-layout01-col>
 
