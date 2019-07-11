@@ -3,7 +3,9 @@
     <div class="wrapper">
       <img src="/images/blue-collar-dev.png" alt="" class="intro-logo img-whiteify">
       <!--<skull />-->
-      <phone-app />
+      <div class="animation-wrapper">
+        <phone-app />
+      </div>
     </div>
   </div>
 </template>
@@ -32,6 +34,7 @@
           .add({
             targets: intro,
             duration: 333,
+            opacity: [0, 0.6],
             scale: [1, 6],
             easing: 'easeOutQuad',
             complete: () => {
@@ -41,7 +44,7 @@
           .add({
             targets: intro,
             duration: 333,
-            opacity: [1, 0],
+            opacity: [0.6, 0],
             easing: 'easeOutQuad',
             complete: () => {
               intro.classList.add('display-none');
@@ -62,9 +65,10 @@
 
   .intro {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 110%;
     z-index: 5000;
+    top: 0;
 
     .intro-logo {
       width: 300px;
@@ -81,5 +85,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  .wrapper .animation-wrapper {
+    margin: 0 2em 3em;
   }
 </style>
