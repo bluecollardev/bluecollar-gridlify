@@ -4,6 +4,7 @@
 
     <!-- Video Hero -->
     <video-hero-layout01-col
+      className="homepage-hero-main"
       v-if="homepageHero"
       :title="homepageHero.title"
       subtitle=""
@@ -50,7 +51,7 @@
       className="xs-pad-top sm-pad-top"
     >
       <template v-slot:title>
-        <h2 class="title">
+        <h2 class="title text-center pad-bottom">
           <span class="text-wrapper">
             <span class="line blink">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" xml:space="preserve">
