@@ -276,7 +276,7 @@
       bgColor="bg-bc-blue"
     />
 
-    <aside class="sm-flex flex-wrap bg-light-grey pad-bottom-2x">
+    <aside class="sm-flex flex-wrap bg-light-grey pad-top-2x pad-bottom-2x">
       <div
         v-if="getTestimonial(0)"
         class="bg-light-grey sm-flex flex-column flex-center flex-basis-third sm-pad-top">
@@ -375,7 +375,7 @@
                   <input name="bot-field" />
                 </div>
 
-                <div class="sm-flex flex-justify-center space-top">
+                <div class="md-lg-flex flex-justify-center space-top">
 
                   <div class="sm-flex flex-column flex-basis-third flex-start">
                     <!-- Start Input -->
