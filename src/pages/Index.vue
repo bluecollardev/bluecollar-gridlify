@@ -325,10 +325,10 @@
       imageClass="home-page-banner-image"
       :flipX="true"
       :angle="true"
-      className="xs-pad-top sm-pad-top"
+      className="xs-pad-top sm-pad-top pad-bottom-2x"
     >
       <template v-slot:title>
-        <h2 class="title">
+        <h2 class="title text-center pad-bottom">
           <span class="text-wrapper">
             <span class="line blink">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" xml:space="preserve">
@@ -340,9 +340,10 @@
             <span class="letters">Ready to Rock?</span>
           </span>
         </h2>
+        <div class="bg-bc-blue space-bottom"><maze></maze></div>
       </template>
-    </hero-layout01-col>
 
+    </hero-layout01-col>
 
     <section class="hero-section bg-light-grey">
       <div class="sm-flex flex-auto flex-center flex-justify-center">
@@ -597,6 +598,7 @@
 
   // Import SVG animations
   import AppFactory from '~/components/svg/AppFactory.vue';
+  import Maze from '~/components/svg/Maze.vue';
 
   // Import static data
   import HomeData from '~/data/Home.yml';
@@ -624,6 +626,7 @@
       TestimonialHeroLayout,
       // Inject SVG animations
       AppFactory,
+      Maze,
       // Import static HTML blocks
       ProcessBlock
     },

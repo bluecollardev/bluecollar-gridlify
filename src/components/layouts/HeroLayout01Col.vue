@@ -13,7 +13,11 @@
       </div>-->
       <div class="hero-block">
         <div class="flex flex-column">
-          <div class="homepage-hero-title sm-space-bottom-half">
+          <slot name="title" v-if="this.$slots.title" class="sm-space-bottom-half"></slot>
+
+          <div
+            v-if="typeof this.title === 'string' && !this.$slots.title"
+            class="homepage-hero-title sm-space-bottom-half">
             <h2 class="title text-center mr-3 ml-3">
               {{ this.title }}
             </h2>
