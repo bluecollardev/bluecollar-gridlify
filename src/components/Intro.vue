@@ -71,6 +71,7 @@
     top: 0;
 
     .intro-logo {
+      margin-top: 5rem;
       width: 300px;
       margin-bottom: 3rem;
     }
@@ -88,6 +89,6 @@
   }
 
   .wrapper .animation-wrapper {
-    margin: 0 2em 3em;
+    margin: 0 2rem 3rem;
   }
 </style>

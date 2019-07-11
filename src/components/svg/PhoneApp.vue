@@ -1,7 +1,7 @@
 <template>
   <div class="phone-app">
     <svg class="phone-app-svg -x31-" version="1.1" xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%"
+         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80%" height="80%"
          viewBox="0 0 132.093 255.995" enable-background="new 0 0 132.093 255.995" xml:space="preserve">
       <g>
         <g>
