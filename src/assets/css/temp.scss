@@ -132,6 +132,34 @@ form {
   width: 100%;
 }
 
+.top-fields {
+  flex-direction: row !important;
+
+  &> div + div {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .top-fields {
+    flex-direction: row !important;
+
+    &> div + div {
+      margin-left: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 84em) {
+  .top-fields {
+    flex-direction: row !important;
+
+    &> div + div {
+      margin-left: 2rem;
+    }
+  }
+}
+
 #message,
 .message-wrapper {
   width: 100%;
