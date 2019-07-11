@@ -8,15 +8,15 @@
         map-type-id="terrain"
         style="width: 100%; height: 100%"
       >
-        <!--<GmapMarker
-          :key="index"
-          v-for="(m, index) in markers"
-          :position="m.position"
-          :clickable="true"
-          :draggable="true"
-          @click="center=m.position"
-        />-->
       </GmapMap>
+      <!--<GmapMarker
+        :key="index"
+        v-for="(m, index) in markers"
+        :position="m.position"
+        :clickable="true"
+        :draggable="true"
+        @click="center=m.position"
+      />-->
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="150px" height="150px" id="daSVG">
       <clipPath id="chopChop">

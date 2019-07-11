@@ -14,7 +14,7 @@ module.exports = {
 			}
 		}
 	],
-	chainWebpack: config => {
+	chainWebpack: (config, { isServer }) => {
 		config.module
 			.rule('scss')
 				.test(/\.scss$/)
@@ -22,7 +22,10 @@ module.exports = {
 					.use('sass')
 					.loader('sass-loader')
 					.end()
-				.end()
+				.end();
 
+		if (isServer) {
+      config.externals([/^(vue|vue-router|vue-meta)$/])
+    }
 	}
 }

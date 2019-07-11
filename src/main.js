@@ -5,7 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue';
 import '~/assets/css/main.scss';
 import '~/assets/fonts/icomoon/style.css';
 
-import * as VueGoogleMaps from 'vue2-google-maps'
+import * as VueGoogleMaps from 'vue2-google-maps';
 
 export default function (Vue, { head }) {
   //head.link.push({ rel: 'stylesheet', href: 'https://unpkg.com/ace-css/css/ace.min.css' });
