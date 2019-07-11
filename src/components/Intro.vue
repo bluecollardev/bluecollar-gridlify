@@ -3,6 +3,7 @@
     <div class="wrapper">
       <img src="/images/blue-collar-dev.png" alt="" class="intro-logo img-whiteify">
       <!--<Maze />-->
+      <!--<Skull />-->
       <PhoneApp />
     </div>
   </div>
@@ -12,11 +13,13 @@
   import anime from 'animejs';
 
   import Maze from '~/components/svg/Maze.vue';
+  import Skull from '~/components/svg/Skull.vue';
   import PhoneApp from '~/components/svg/PhoneApp.vue';
 
   export default {
     components: {
       Maze,
+      Skull,
       PhoneApp
     },
     mounted() {
