@@ -22,10 +22,8 @@
   import anime from 'animejs';
 
   export default {
-    computed: {
-    },
-    methods: {
-    },
+    computed: {},
+    methods: {},
     mounted() {
       /*function initialize() {
         var mapOptions = {
@@ -51,11 +49,13 @@
     clip-path: url($clip);
   }
 
-  #map-canvas{
+  #map-canvas {
     @include clip-path(#chopChop);
-    .gm-style>div:nth-child(2) {
+
+    .gm-style > div:nth-child(2) {
       bottom: 30px !important;
       left: 195px !important;
+
       &:div div {
         cursor: default;
       }
@@ -74,7 +74,7 @@
       height: 100%;
       content: '';
       z-index: 0;
-      background: rgba(255,255,255,0.666);
+      background: rgba(255, 255, 255, 0.666);
     }
   }
 </style>

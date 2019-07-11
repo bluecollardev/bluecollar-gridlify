@@ -30,6 +30,6 @@ items:
       We're here to help you level up. It's our thing.
     id: projects-hero
     image: /images/banners/responsive-banner-jimmy-poblanos.png
-    link: /company
-    linkText: Meet Our Team
+    link: /projects
+    linkText: View Case Studies
     title: Saddle up, Partner!

@@ -276,7 +276,7 @@
       bgColor="bg-bc-blue"
     />
 
-    <aside class="sm-flex flex-wrap bg-light-grey pad-top-2x pad-bottom-2x">
+    <aside class="sm-flex flex-wrap bg-light-grey pad-bottom-2x bg-inset">
       <div
         v-if="getTestimonial(0)"
         class="bg-light-grey sm-flex flex-column flex-center flex-basis-third sm-pad-top">
@@ -375,8 +375,9 @@
                   <input name="bot-field" />
                 </div>
 
-                <div class="sm-flex flex-justify">
-                  <div class="sm-flex flex-column flex-basis-half flex-start">
+                <div class="sm-flex flex-justify-center space-top">
+
+                  <div class="sm-flex flex-column flex-basis-third flex-start">
                     <!-- Start Input -->
                     <div class="ampstart-input relative m0 p0 mb3 ">
                       <input
@@ -439,8 +440,7 @@
                       >
                     </div>
                     <!-- End Input-->
-                  </div>
-                  <div class="sm-flex flex-column flex-basis-half flex-end">
+
                     <!-- Start Input -->
                     <div class="ampstart-input relative m0 p0 mb3 ">
                       <input
@@ -503,61 +503,59 @@
                     </div>
                     <!-- End Input-->
                   </div>
-                </div>
-                <div>
-                  <!-- Start Input -->
-                  <div class="message-wrapper ampstart-input relative m0 p0 mb3 ">
-                    <textarea
-                      name="message"
-                      id="message"
-                      class="block border-none p0 m0"
-                      placeholder="Message"
-                      v-model="formData.message"
-                      required
-                    />
-                    <label
-                      for="message"
-                      class="absolute top-0 right-0 bottom-0 left-0"
-                      aria-hidden="true"
-                      >Message</label
-                    >
-                  </div>
-                  <!-- End Input-->
 
-                  <!-- Start Input -->
-                  <div class="ampstart-checkbox relative m0 p0 mb3 ">
-                    <input
-                      type="checkbox"
-                      value=""
-                      name="nda"
-                      id="nda"
-                      class="block border-none p0 m0"
-                      placeholder="NDA Required"
-                      v-model="formData.nda"
-                    />
-                    <label
-                      for="nda"
-                      class="absolute top-0 right-0 bottom-0 left-0 space-left"
-                      aria-hidden="true"
-                      >NDA Required</label
-                    >
-                  </div>
-                  <!-- End Input-->
+                  <div class="sm-flex flex-column flex-basis-third flex-start">
+                    <!-- Start Input -->
+                    <div class="message-wrapper ampstart-input relative m0 p0 mb3">
+                      <textarea
+                        name="message"
+                        id="message"
+                        class="block border-none p0 m0"
+                        placeholder="Message"
+                        v-model="formData.message"
+                        required
+                      />
+                      <label
+                        for="message"
+                        class="absolute top-0 right-0 bottom-0 left-0"
+                        aria-hidden="true"
+                        >Message</label
+                      >
+                    </div>
+                    <!-- End Input-->
+                    <!-- Start Input -->
+                    <div class="ampstart-checkbox relative m0 p0 mb3 ">
+                      <input
+                        type="checkbox"
+                        value=""
+                        name="nda"
+                        id="nda"
+                        class="block border-none p0 m0"
+                        placeholder="NDA Required"
+                        v-model="formData.nda"
+                      />
+                      <label
+                        for="nda"
+                        class="absolute top-0 right-0 bottom-0 left-0 space-left"
+                        aria-hidden="true"
+                        >NDA Required</label
+                      >
+                    </div>
+                    <!-- End Input-->
 
-
-                  <br />
-                  <!-- Start Submit -->
-                  <div class="text-center">
-                    <input
-                      type="submit"
-                      name="submit"
-                      value="Submit Form"
-                      id="submit"
-                      class="action-link space-top g-pstyle3"
-                      style=""
-                    />
+                    <!-- Start Submit -->
+                    <div class="text-center">
+                      <input
+                        type="submit"
+                        name="submit"
+                        value="Submit Form"
+                        id="submit"
+                        class="action-link space-top g-pstyle3"
+                        style=""
+                      />
+                    </div>
+                    <!-- End Submit -->
                   </div>
-                  <!-- End Submit -->
                 </div>
               </fieldset>
             </form>
@@ -1152,20 +1150,7 @@
   }
 </style>
 
-<style>
-  form {
-    width: 100%;
-  }
 
-  #message,
-  .message-wrapper {
-    width: 100%;
-  }
-
-  #message {
-    height: 10rem;
-  }
-</style>
 <style lang="scss">
   .background-map {
     position: absolute;
