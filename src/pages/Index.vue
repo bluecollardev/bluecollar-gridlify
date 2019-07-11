@@ -352,10 +352,12 @@
     </hero-layout01-col>
 
     <section class="hero-section bg-light-grey">
+      <google-map-background></google-map-background>
       <div class="sm-flex flex-auto flex-center flex-justify-center">
-        <div class="sm-flex flex-basis-two-thirds">
+        <div class="sm-flex flex-basis-full">
           <div class="sm-flex flex-basis-two-thirds">
             <form
+              id="contact-form"
               target="_top"
               name="contact"
               method="post"
@@ -561,13 +563,16 @@
             </form>
           </div>
           <div class="sm-flex flex-basis-third">
-            <div class="border-none p0 m0 pad-all">
-              <h2 class="block text-center mb-4 space-top">General Inquiries</h2>
-              <br />
-              <br />
-              <p>For information on job opportunities or informational interviews please email: <b>careers@bluecollardev.com</b></p>
-              <p>For sponsorship, media, events, and opportunities to help us grow please email: <b>marketing@bluecollardev.com</b></p>
-              <p>For other inquiries that don’t fit the descriptions above, ask us who you’d like to connect with by sending an email to: <b>info@bluecollardev.com</b></p>
+            <div>
+              <div class="border-none p0 m0 pad-all">
+                <h2 class="block text-center mb-4 space-top">General Inquiries</h2>
+                <br />
+                <br />
+                <p>For information on job opportunities or informational interviews please email: <b>careers@bluecollardev.com</b></p>
+                <p>For sponsorship, media, events, and opportunities to help us grow please email: <b>marketing@bluecollardev.com</b></p>
+                <p>For other inquiries that don’t fit the descriptions above, ask us who you’d like to connect with by sending an email to: <b>info@bluecollardev.com</b></p>
+              </div>
+              <google-map-cutout></google-map-cutout>
             </div>
           </div>
         </div>
@@ -605,6 +610,8 @@
   // Import SVG animations
   import AppFactory from '~/components/svg/AppFactory.vue';
   import InteractiveGuitar from '~/components/svg/InteractiveGuitar.vue';
+  import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
+  import GoogleMapCutout from '~/components/svg/GoogleMapCutout.vue';
 
   // Import static data
   import HomeData from '~/data/Home.yml';
@@ -633,6 +640,8 @@
       // Inject SVG animations
       AppFactory,
       InteractiveGuitar,
+      GoogleMapBackground,
+      GoogleMapCutout,
       // Import static HTML blocks
       ProcessBlock
     },
@@ -1154,5 +1163,17 @@
 
   #message {
     height: 10rem;
+  }
+</style>
+<style lang="scss">
+  .background-map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  #contact-form {
+    position: relative;
+    z-index: 5;
   }
 </style>
