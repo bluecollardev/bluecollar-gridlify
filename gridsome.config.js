@@ -24,6 +24,8 @@ module.exports = {
 					.end()
 				.end();
 
+		// TODO: Document this - https://github.com/gridsome/gridsome/issues/384
+		// It prevents use of vue-google-maps
 		if (isServer) {
       config.externals([/^(vue|vue-router|vue-meta)$/])
     }
