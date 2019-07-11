@@ -71,7 +71,7 @@
 
     <section class="hero-section col-3-squares bg-white no-pad-bottom lg-flex">
       <div class="service-detail-card-top bg-white sm-flex flex-center flex-justify-center flex-basis-third pad-bottom-2x">
-        <div class="service-detail-card-inner">
+        <div class="service-detail-card-inner hero-block">
           <div class="service-detail-card-front bg-white">
             <content-block-layout
               className="pad-top"
@@ -100,7 +100,7 @@
       </div>
 
       <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third pad-bottom-2x">
-        <div class="service-detail-card-inner">
+        <div class="service-detail-card-inner hero-block">
           <div class="service-detail-card-front bg-white">
             <content-block-layout
               className="pad-top"
@@ -129,7 +129,7 @@
       </div>
 
       <div class="service-detail-card-top bg-white sm-flex flex-center flex-justify-center flex-basis-third pad-bottom-2x">
-        <div class="service-detail-card-inner">
+        <div class="service-detail-card-inner hero-block">
           <div class="service-detail-card-front bg-white">
             <content-block-layout
               className="pad-top pad-bottom"
