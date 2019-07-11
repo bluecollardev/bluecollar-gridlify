@@ -15,7 +15,7 @@
       :caption="homepageHero.caption"
       :subCaption="homepageHero.subCaption"
       :flipX="false"
-      :angle="true"
+      :angle="false"
       bgColor="bg-bc-blue"
     >
       <template v-slot:title>
@@ -342,7 +342,7 @@
         </h2>
       </template>
 
-      <div class="bg-bc-blue space-bottom text-center">
+      <div class="space-bottom text-center">
         <interactive-guitar></interactive-guitar>
         <br />
         <small><b>Click the strings to ROCK OUT</b></small>
