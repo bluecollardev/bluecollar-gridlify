@@ -365,7 +365,7 @@
               data-netlify-honeypot="bot-field"
             >
               <fieldset class="border-none p0 m0 pad-all">
-                <h2 class="block mb4 space-top">
+                <h2 class="block text-center mb-4 space-top">
                   Contact us for a free consultation
                 </h2>
                 <div class="hide">
@@ -562,7 +562,7 @@
           </div>
           <div class="sm-flex flex-basis-third">
             <div class="border-none p0 m0 pad-all">
-              <h2 class="block mb4 space-top">General Inquiries</h2>
+              <h2 class="block text-center mb-4 space-top">General Inquiries</h2>
               <br />
               <br />
               <p>For information on job opportunities or informational interviews please email: <b>careers@bluecollardev.com</b></p>
