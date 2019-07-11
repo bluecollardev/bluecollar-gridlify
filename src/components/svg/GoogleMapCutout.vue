@@ -3,10 +3,10 @@
     <div id="map-canvas">
       <GmapMap
         class="map-02"
-        :center="{lat:48.4284, lng:-123.3656}"
-        :zoom="14"
+        :center="{lat:48.432, lng:-123.335}"
+        :zoom="15"
         map-type-id="terrain"
-        style="width: 500px; height: 500px"
+        style="width: 100%; height: 100%"
       >
         <!--<GmapMarker
           :key="index"
@@ -77,5 +77,13 @@
 
   .google-map-cutout {
 
+  }
+
+  .map-02 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    bottom: 0;
+    z-index: 10;
   }
 </style>

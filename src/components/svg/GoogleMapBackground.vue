@@ -2,8 +2,8 @@
   <div class="google-map flex">
     <GmapMap
       class="map-01"
-      :center="{lat:48.4284, lng:-123.3656}"
-      :zoom="12"
+      :center="{lat:48.44, lng:-123.35}"
+      :zoom="14"
       style="width: 100%; height: 100%"
     >
       <!--<GmapMarker
@@ -64,7 +64,7 @@
 
   .map-01 {
     position: absolute;
-    filter: grayscale(1) opacity(0.25);
+    filter: grayscale(0.45) opacity(0.30);
     z-index: 0;
 
 
@@ -74,16 +74,7 @@
       height: 100%;
       content: '';
       z-index: 0;
-      background: rgba(255,255,255,0.777);
+      background: rgba(255,255,255,0.666);
     }
-  }
-
-  .map-02 {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    bottom: 0;
-    left: 60%;
-    z-index: 10;
   }
 </style>

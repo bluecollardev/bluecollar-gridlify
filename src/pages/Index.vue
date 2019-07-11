@@ -563,16 +563,17 @@
             </form>
           </div>
           <div class="sm-flex flex-basis-third">
-            <div>
-              <div class="border-none p0 m0 pad-all">
-                <h2 class="block text-center mb-4 space-top">General Inquiries</h2>
-                <br />
-                <br />
-                <p>For information on job opportunities or informational interviews please email: <b>careers@bluecollardev.com</b></p>
-                <p>For sponsorship, media, events, and opportunities to help us grow please email: <b>marketing@bluecollardev.com</b></p>
-                <p>For other inquiries that don’t fit the descriptions above, ask us who you’d like to connect with by sending an email to: <b>info@bluecollardev.com</b></p>
+            <div class="border-none p0 m0 pad-all">
+
+              <h2 class="block text-center mb-4 space-top">General Inquiries</h2>
+              <br />
+              <br />
+              <p>For information on job opportunities or informational interviews please email: <b>careers@bluecollardev.com</b></p>
+              <p>For sponsorship, media, events, and opportunities to help us grow please email: <b>marketing@bluecollardev.com</b></p>
+              <p>For other inquiries that don’t fit the descriptions above, ask us who you’d like to connect with by sending an email to: <b>info@bluecollardev.com</b></p>
+              <div>
+                <google-map-cutout></google-map-cutout>
               </div>
-              <google-map-cutout></google-map-cutout>
             </div>
           </div>
         </div>
