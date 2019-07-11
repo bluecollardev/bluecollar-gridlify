@@ -270,16 +270,16 @@
       :subCaption="projectsSection.subCaption"
       :flipX="false"
       :angle="true"
-      className="xs-pad-top"
+      className="xs-pad-top pad-bottom-2x"
       leftPaneClassSuffix="xs-order-2 sm-order-1"
       rightPaneClassSuffix="xs-order-1 sm-order-2"
       bgColor="bg-bc-blue"
     />
 
-    <aside class="sm-flex">
+    <aside class="sm-flex flex-wrap">
       <div
         v-if="getTestimonial(0)"
-        class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
+        class="bg-light-grey sm-flex flex-column flex-center flex-basis-third pad-top">
         <testimonial-block-layout
           className="space-top space-bottom"
           :testimonial="getTestimonial(0).testimonial"
@@ -291,7 +291,7 @@
       </div>
       <div
         v-if="getTestimonial(1)"
-        class="bg-light-grey flex flex-column flex-center flex-basis-half pad-top">
+        class="bg-light-grey flex flex-column flex-center flex-basis-third pad-top">
         <testimonial-block-layout
           className="space-top space-bottom"
           :testimonial="getTestimonial(1).testimonial"
@@ -303,7 +303,7 @@
       </div>
       <div
         v-if="getTestimonial(2)"
-        class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
+        class="bg-light-grey sm-flex flex-column flex-center flex-basis-third pad-top">
         <testimonial-block-layout
           className="space-top space-bottom"
           :testimonial="getTestimonial(2).testimonial"

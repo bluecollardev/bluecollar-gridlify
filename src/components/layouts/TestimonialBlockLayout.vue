@@ -2,7 +2,7 @@
   <div class="content-block testimonial-block-wrapper text-center sm-space-bottom-half">
     <div v-bind:class="classNameString">
       <div class="space-bottom-half g-services">
-        <p class="g-pstyle8 text-center" v-html="this.testimonial"></p>
+        <p class="g-pstyle10 text-center" v-html="this.testimonial"></p>
       </div>
     </div>
 
@@ -76,9 +76,4 @@ export default {
 
 
 <style>
-  @media screen and (min-width: 40em) {
-    .testimonial-profile-circle {
-      width: 50%;
-    }
-  }
 </style>
