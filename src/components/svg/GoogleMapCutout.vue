@@ -86,4 +86,10 @@
     bottom: 0;
     z-index: 10;
   }
+
+  @media screen and (max-width: 40em) {
+    .google-map-cutout {
+      display: none;
+    }
+  }
 </style>

@@ -276,7 +276,7 @@
       bgColor="bg-bc-blue"
     />
 
-    <aside class="sm-flex flex-wrap bg-light-grey pad-bottom-2x bg-inset">
+    <aside class="sm-flex flex-wrap bg-light-grey pad-bottom-2x">
       <div
         v-if="getTestimonial(0)"
         class="bg-light-grey sm-flex flex-column flex-center flex-basis-third sm-pad-top">
