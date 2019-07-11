@@ -321,7 +321,7 @@
       title="Ready to Rock?"
       subtitle=""
       description="At Blue Collar, every challenge is just a puzzle waiting to be solved! We strive to create innovative solutions for our clients using the latest advances
-        in technology and development. Let us help take your business idea to the next level. Get in touch today!"
+        in technology and development. Let us help take your business idea to the next level. Oh... and don't forget to play with the guitar!"
       imageClass="home-page-banner-image"
       :flipX="true"
       :angle="true"
