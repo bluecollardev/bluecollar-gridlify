@@ -71,7 +71,7 @@
     </hero-layout01-col>
 
     <section class="hero-section col-3-squares bg-white no-pad-bottom lg-flex flex-start pad-top-2x">
-      <div class="service-detail-card-top bg-white sm-flex flex-center flex-justify-center flex-basis-third pad-bottom-2x">
+      <div class="service-detail-card-top bg-white sm-flex flex-center flex-justify-center flex-basis-third sm-pad-bottom-2x">
         <div class="service-detail-card-inner hero-block">
           <div class="service-detail-card-front bg-white">
             <content-block-layout
@@ -100,7 +100,7 @@
         </div>
       </div>
 
-      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third pad-bottom-2x">
+      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third sm-pad-bottom-2x">
         <div class="service-detail-card-inner hero-block">
           <div class="service-detail-card-front bg-white">
             <content-block-layout
@@ -129,7 +129,7 @@
         </div>
       </div>
 
-      <div class="service-detail-card-top bg-white sm-flex flex-center flex-justify-center flex-basis-third pad-bottom-2x">
+      <div class="service-detail-card-top bg-white sm-flex flex-center flex-justify-center flex-basis-third sm-pad-bottom-2x">
         <div class="service-detail-card-inner hero-block">
           <div class="service-detail-card-front bg-white">
             <content-block-layout
@@ -279,7 +279,7 @@
     <aside class="sm-flex flex-wrap bg-light-grey pad-top-2x pad-bottom-2x">
       <div
         v-if="getTestimonial(0)"
-        class="bg-light-grey sm-flex flex-column flex-center flex-basis-third pad-top">
+        class="bg-light-grey sm-flex flex-column flex-center flex-basis-third sm-pad-top">
         <testimonial-block-layout
           className="sm-space-top-half sm-space-bottom-half"
           :testimonial="getTestimonial(0).testimonial"
@@ -291,7 +291,7 @@
       </div>
       <div
         v-if="getTestimonial(1)"
-        class="bg-light-grey flex flex-column flex-center flex-basis-third pad-top">
+        class="bg-light-grey flex flex-column flex-center flex-basis-third sm-pad-top">
         <testimonial-block-layout
           className="sm-space-top-half sm-space-bottom-half"
           :testimonial="getTestimonial(1).testimonial"
@@ -303,7 +303,7 @@
       </div>
       <div
         v-if="getTestimonial(2)"
-        class="bg-light-grey sm-flex flex-column flex-center flex-basis-third pad-top">
+        class="bg-light-grey sm-flex flex-column flex-center flex-basis-third sm-pad-top">
         <testimonial-block-layout
           className="sm-space-top-half sm-space-bottom-half"
           :testimonial="getTestimonial(2).testimonial"
