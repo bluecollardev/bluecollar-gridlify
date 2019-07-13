@@ -1,46 +1,238 @@
 <template>
-	<!--<div id="contact">
-		<h2>{{ Contact.title }}</h2>
-		<div class="Contact__Content">
-			<div class="Contact__Info">
-				<p>{{ Contact.description }} </p>
-				<ul class="Contact__SocialMedia__Icons">
-					<li v-for="item in SocialMedia.items" :key="item.name">
-						<a :href="item.link">
-							<g-image immediate="true" :alt="item.name" :src="'//images/' + item.name + '.svg'" />
-						</a>
-					</li>
-				</ul>
+	<form
+		id="contact-form"
+		target="_top"
+		name="contact"
+		method="post"
+		v-on:submit.prevent="handleSubmit"
+		action="/"
+		data-netlify="true"
+		data-netlify-honeypot="bot-field"
+	>
+		<fieldset class="border-none p0 m0 pad-all">
+			<h2 class="block text-center mb-4 space-top">
+				Contact us for a free consultation
+			</h2>
+			<div class="hide">
+				<label>Hello bee:</label>
+				<input name="bot-field" />
 			</div>
-			<div class="Contact__Form">
-				<form action="/thank-you">
-					<label for="name">Name</label>
-					<input type="name" placeholder="Incognito">
 
-					<label for="email">Email</label>
-					<input type="email" placeholder="incognito@email.com">
+			<div class="md-lg-flex flex-justify-center space-top">
+				<div class="top-fields sm-flex flex-column flex-basis-third flex-start">
+					<div>
+						<!-- Start Input -->
+						<div class="ampstart-input relative m0 p0 mb3 ">
+							<input
+								type="text"
+								value=""
+								name="fullname"
+								id="fullname"
+								class="block border-none p0 m0"
+								placeholder="Full name"
+								v-model="formData.fullname"
+								required
+							/>
+							<label
+								for="fullname"
+								class="absolute top-0 right-0 bottom-0 left-0"
+								aria-hidden="true"
+								>Full name</label
+							>
+						</div>
+						<!-- End Input-->
 
-					<label for="message">Message</label>
-					<textarea type="message" placeholder="Your message..."/>
-					<button type="submit">Submit</button>
-				</form>
+						<!-- Start Input -->
+						<div class="ampstart-input relative m0 p0 mb3 ">
+							<input
+								type="tel"
+								value=""
+								name="phone"
+								id="phone"
+								class="block border-none p0 m0"
+								placeholder="Phone"
+								v-model="formData.phone"
+								required
+							/>
+							<label
+								for="phone"
+								class="absolute top-0 right-0 bottom-0 left-0"
+								aria-hidden="true"
+								>Phone</label
+							>
+						</div>
+						<!-- End Input-->
+
+						<!-- Start Input -->
+						<div class="ampstart-input relative m0 p0 mb3 ">
+							<input
+								type="email"
+								value=""
+								name="email"
+								id="email"
+								class="block border-none p0 m0"
+								placeholder="Email"
+								v-model="formData.email"
+								required
+							/>
+							<label
+								for="email"
+								class="absolute top-0 right-0 bottom-0 left-0"
+								aria-hidden="true"
+								>Email</label
+							>
+						</div>
+						<!-- End Input-->
+					</div>
+
+					<div>
+						<!-- Start Input -->
+						<div class="ampstart-input relative m0 p0 mb3 ">
+							<input
+								type="text"
+								value=""
+								name="budget"
+								id="budget"
+								class="block border-none p0 m0"
+								placeholder="Project Budget"
+								v-model="formData.budget"
+								required
+							/>
+							<label
+								for="budget"
+								class="absolute top-0 right-0 bottom-0 left-0"
+								aria-hidden="true"
+								>Project Budget</label
+							>
+						</div>
+						<!-- End Input-->
+
+						<!-- Start Input -->
+						<div class="ampstart-input relative m0 p0 mb3 ">
+							<input
+								type="text"
+								value=""
+								name="city"
+								id="city"
+								class="block border-none p0 m0"
+								placeholder="City"
+								v-model="formData.city"
+								required
+							/>
+							<label
+								for="city"
+								class="absolute top-0 right-0 bottom-0 left-0"
+								aria-hidden="true"
+								>City</label
+							>
+						</div>
+						<!-- End Input-->
+
+						<!-- Start Input -->
+						<div class="ampstart-input relative m0 p0 mb3 ">
+							<input
+								type="text"
+								value=""
+								name="country"
+								id="country"
+								class="block border-none p0 m0"
+								placeholder="Country"
+								v-model="formData.country"
+							/>
+							<label
+								for="country"
+								class="absolute top-0 right-0 bottom-0 left-0"
+								aria-hidden="true"
+								>Country</label
+							>
+						</div>
+						<!-- End Input-->
+					</div>
+				</div>
+
+				<div class="sm-flex flex-column flex-basis-third flex-start">
+					<!-- Start Input -->
+					<div class="message-wrapper ampstart-input relative m0 p0 mb3">
+						<textarea
+							name="message"
+							id="message"
+							class="block border-none p0 m0"
+							placeholder="Message"
+							v-model="formData.message"
+							required
+						/>
+						<label
+							for="message"
+							class="absolute top-0 right-0 bottom-0 left-0"
+							aria-hidden="true"
+							>Message</label
+						>
+					</div>
+					<!-- End Input-->
+					<!-- Start Input -->
+					<div class="ampstart-checkbox relative m0 p0 mb3 ">
+						<input
+							type="checkbox"
+							value=""
+							name="nda"
+							id="nda"
+							class="block border-none p0 m0"
+							placeholder="NDA Required"
+							v-model="formData.nda"
+						/>
+						<label
+							for="nda"
+							class="absolute top-0 right-0 bottom-0 left-0 space-left"
+							aria-hidden="true"
+							>NDA Required</label
+						>
+					</div>
+					<!-- End Input-->
+
+					<!-- Start Submit -->
+					<div class="text-center">
+						<input
+							type="submit"
+							name="submit"
+							value="Submit Form"
+							id="submit"
+							class="action-link space-top g-pstyle3"
+							style=""
+						/>
+					</div>
+					<!-- End Submit -->
+				</div>
 			</div>
-		</div>
-	</div>-->
+		</fieldset>
+	</form>
 </template>
 
 <script>
-	import Contact from '~/data/Contact.yml'
-	import SocialMedia from '~/data/SocialMedia.yml'
-
 	export default {
-		computed: {
-			Contact () {
-				return Contact
-			},
-			SocialMedia () {
-				return SocialMedia
-			}
+		props: {
+			formData: Object
+		},
+		// TODO: encode and handleSubmit should be moved to a mixin or something
+		methods: {
+			encode(data) {
+        return Object.keys(data)
+          .map(
+            key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+          )
+          .join('&');
+      },
+      handleSubmit(e) {
+        fetch('https://bluecollardev.netlify.com/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: this.encode({
+            'form-name': e.target.getAttribute('name'),
+            ...this.formData
+          })
+        })
+          .then(() => this.$router.push('/'));
+          //.catch(error => alert(error));
+      }
 		}
 	}
 </script>
