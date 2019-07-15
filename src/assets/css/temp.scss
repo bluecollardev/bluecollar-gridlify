@@ -133,18 +133,14 @@ form {
 }
 
 .top-fields {
-  flex-direction: row !important;
-
-  &> div + div {
+  &> div >  div + div {
     margin-left: 0;
   }
 }
 
 @media screen and (min-width: 40em) {
   .top-fields {
-    flex-direction: row !important;
-
-    &> div + div {
+    &> div >  div + div {
       margin-left: 2rem;
     }
   }
@@ -152,9 +148,7 @@ form {
 
 @media screen and (min-width: 84em) {
   .top-fields {
-    flex-direction: row !important;
-
-    &> div + div {
+    &> div >  div + div {
       margin-left: 2rem;
     }
   }

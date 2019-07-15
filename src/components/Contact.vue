@@ -19,8 +19,8 @@
 			</div>
 
 			<div class="md-lg-flex flex-justify-center space-top">
-				<div class="top-fields sm-flex flex-column flex-basis-third flex-start">
-					<div>
+				<div class="top-fields sm-flex flex-column flex-start">
+					<div class="sm-flex">
 						<!-- Start Input -->
 						<div class="ampstart-input relative m0 p0 mb3 ">
 							<input
@@ -85,7 +85,7 @@
 						<!-- End Input-->
 					</div>
 
-					<div>
+					<div class="sm-flex">
 						<!-- Start Input -->
 						<div class="ampstart-input relative m0 p0 mb3 ">
 							<input
