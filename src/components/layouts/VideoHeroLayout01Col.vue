@@ -4,10 +4,10 @@
     :class="`homepage-hero hero-section text-shadow hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
   >
     <div class="video-banner text-banner sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-full xl-flex-basis-two-thirds">
-      <video class="is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop="" poster="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.jpg?noresize">
-        <source src="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.mp4" type="video/mp4">
-        <source src="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.webm" type="video/webm">
-        <source src="https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/videos/intro/intechnic.ogv" type="video/ogg">
+      <video class="is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop="" poster="">
+        <source src="/video/bluecollar-main.mp4" type="video/mp4">
+        <!--<source src="/video/bluecollar-main.webm" type="video/webm">
+        <source src="/video/bluecollar-main.ogv" type="video/ogg">-->
       </video>
 
       <slot name="video" v-if="this.$slots.video"></slot>

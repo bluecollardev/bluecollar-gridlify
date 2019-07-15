@@ -463,7 +463,7 @@
         return HeroData;
       },
       servicesContent() {
-        return HeroData
+        return HeroData;
       },
       generalContent() {
         return GeneralData;

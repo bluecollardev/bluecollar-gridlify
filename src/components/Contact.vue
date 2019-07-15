@@ -216,21 +216,25 @@
 		methods: {
 			encode(data) {
         return Object.keys(data)
-          .map(
-            key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-          )
+          .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
           .join('&');
       },
-      handleSubmit(e) {
-        fetch('https://bluecollardev.netlify.com/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: this.encode({
-            'form-name': e.target.getAttribute('name'),
-            ...this.formData
-          })
-        })
-          .then(() => this.$router.push('/'));
+      async handleSubmit(e) {
+				try {
+					await fetch('https://bluecollardev.netlify.com/', {
+						method: 'POST',
+						headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+						body: this.encode({
+							'form-name': e.target.getAttribute('name'),
+							...this.formData
+						})
+					})
+				} catch (err) {
+					console.error;
+				} finally {
+					this.$router.push('/');
+				}
+          // .then(() =>then this.$router.push('/'));
           //.catch(error => alert(error));
       }
 		}

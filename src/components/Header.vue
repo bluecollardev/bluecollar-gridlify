@@ -97,11 +97,9 @@
       displayDropMenu() {
         let dropMenu = event.target.parentElement.getElementsByClassName('drop-menu')[0];
         let dropMenus = document.getElementsByClassName('drop-menu');
-
+        // Lucas is correct to use forEach here. He has shown Sean a good reason to use it, even if it's a stupid reason because fuck the DOM
         Array.from(dropMenus).forEach((e) => {
-          if (e != dropMenu) {
-            e.classList.remove('display');
-          }
+          if (e != dropMenu) e.classList.remove('display');
         });
 
         let lis = document.getElementById('menu').getElementsByTagName('li');
