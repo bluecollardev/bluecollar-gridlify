@@ -18,10 +18,10 @@ items:
       design and combining it with great listening, we work closely with your
       team to define a solution for the business challenge at hand.
     id: services-hero
-    image: /images/heroes/blue-collar-home-hero-cool.jpg
+    image: /images/banners/responsive-banner-jimmy-poblanos.png
     # image: /images/portfolio/bc-showcase-app-quickcommerce.png
-    link: /services
-    linkText: Learn More
+    link: /projects
+    linkText: View Case Studies
     title: Make your wildest dreams come true!
   - description: >-
       At Blue Collar, you're not our customers - **you're our partners.**
