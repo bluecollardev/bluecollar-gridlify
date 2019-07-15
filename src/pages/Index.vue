@@ -376,7 +376,7 @@
 
       <template v-slot:left>
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
-          <div class="hero-block space-bottom text-center">
+          <div class="guitar-block space-bottom text-center">
             <interactive-guitar :key="Math.random()"></interactive-guitar>
             <br/>
             <small><b>Click the strings to ROCK OUT</b></small>
@@ -911,5 +911,9 @@
   .shift-section-up + .shift-section-up {
     margin-bottom: -100px;
     border-bottom: 1px solid white;
+  }
+
+  .guitar-block {
+    width: 60%;
   }
 </style>
