@@ -919,6 +919,12 @@
   }
 
   @media screen and (min-width: 40em) {
+    .service-detail-card-top {
+      &.fixed-height-mobile {
+        min-height: 50vh;
+      }
+    }
+
     /* This block is partially covered by the angle from the previous section */
     .center-testimonial {
       top: 30px !important;
