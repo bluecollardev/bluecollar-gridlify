@@ -61,7 +61,7 @@
     <section id="services" class="hero-section shift-section-up bg-bc-blue no-pad-bottom lg-flex">
       <div class="col-3-squares no-pad-bottom lg-flex">
         <div class="service-detail-card-top fixed-height-mobile sm-flex flex-center flex-justify-center flex-basis-third relative">
-          <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
+          <video class="video-block-bg drop-shadow is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
                  poster="">
             <source src="/video/bluecollar-apps.mp4" type="video/mp4">
             <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
@@ -70,7 +70,7 @@
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <content-block-layout
-                className="md-pad-top"
+                className="content-block ml-auto mr-auto md-pad-top"
                 v-if="getService(0).linkText"
                 :title="getService(0).title"
                 :description="getService(0).description"
@@ -80,7 +80,7 @@
             </div>
             <div class="service-detail-card-back">
               <content-block-layout
-                className="md-pad-top md-pad-bottom"
+                className="content-block ml-auto mr-auto md-pad-top md-pad-bottom"
                 v-if="getServiceHeroById('apps')"
                 :title="getServiceHeroById('apps').title"
                 subtitle=""
@@ -113,7 +113,7 @@
             </div>
             <div class="service-detail-card-back">
               <content-block-layout
-                className="pad-bottom"
+                className="content-block ml-auto mr-auto pad-bottom"
                 v-if="getServiceHeroById('software')"
                 :title="getServiceHeroById('software').title"
                 subtitle=""
@@ -129,7 +129,7 @@
         </div>
 
         <div class="service-detail-card-top fixed-height-mobile sm-flex flex-center flex-justify-center flex-basis-third relative">
-          <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
+          <video class="video-block-bg drop-shadow is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
                  poster="">
             <source src="/video/bluecollar-sites.mp4" type="video/mp4">
             <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
@@ -138,7 +138,7 @@
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <content-block-layout
-                className="pad-top pad-bottom"
+                className="content-block ml-auto mr-auto pad-top pad-bottom"
                 v-if="getService(2).linkText"
                 :title="getService(2).title"
                 :description="getService(2).description"
@@ -149,7 +149,7 @@
 
             <div class="service-detail-card-back">
               <content-block-layout
-                className="pad-bottom"
+                className="content-block ml-auto mr-auto pad-bottom"
                 v-if="getServiceHeroById('websites')"
                 :title="getServiceHeroById('websites').title"
                 subtitle=""
@@ -199,7 +199,7 @@
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <content-block-layout
-                className="md-pad-top"
+                className="content-block ml-auto mr-auto md-pad-top"
                 v-if="getService(1).linkText"
                 :title="getService(1).title"
                 :description="getService(1).description"
@@ -209,7 +209,7 @@
             </div>
             <div class="service-detail-card-back">
               <content-block-layout
-                className="pad-bottom"
+                className="content-block ml-auto mr-auto pad-bottom"
                 v-if="getServiceHeroById('software')"
                 :title="getServiceHeroById('software').title"
                 subtitle=""
@@ -844,17 +844,11 @@
     backface-visibility: hidden;
   }
 
-  .service-detail-card-front {
-  }
-
   .service-detail-card-back {
     display: none;
     transform: rotateY(180deg);
   }
-</style>
 
-
-<style lang="scss">
   .background-map {
     position: absolute;
     width: 100%;
@@ -908,6 +902,12 @@
     color: white !important;
   }
 
+  .service-detail-card-top .video-block-bg {
+    &.drop-shadow {
+      filter: drop-shadow(2px 4px 6px rgba(16,16,16,0.666666));
+    }
+  }
+
   @media screen and (max-width: 40em) {
     .service-detail-card-top {
       &.fixed-height-mobile {
@@ -928,10 +928,6 @@
     /* This block is partially covered by the angle from the previous section */
     .center-testimonial {
       top: 30px !important;
-    }
-
-    .video-block-bg {
-      border: 1px solid white;
     }
 
     .service-detail-card-inner {
@@ -958,5 +954,9 @@
 
   .guitar-block {
     width: 60%;
+  }
+
+  .service-detail-card-top {
+    text-shadow: 1px 0 5px rgba(0,0,0,.666)
   }
 </style>
