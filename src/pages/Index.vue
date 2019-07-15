@@ -871,7 +871,7 @@
     z-index: 0;
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
   }
 
   /*.service-detail-card-top::before {
@@ -887,7 +887,7 @@
 
   .service-detail-card-top {
     &.fixed-height-mobile {
-      min-height: 50vh;
+      min-height: 100vh;
     }
   }
 
@@ -941,6 +941,12 @@
     .shift-section-up + .shift-section-up {
       margin-bottom: -100px;
       border-bottom: 1px solid white;
+    }
+
+    /* Adjust testimonial profile badges */
+    .circle-composite.small {
+      position: relative;
+      left: -20px;
     }
   }
 
