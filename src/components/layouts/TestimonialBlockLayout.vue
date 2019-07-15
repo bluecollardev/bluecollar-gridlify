@@ -21,7 +21,7 @@
         <div class="g-services">
           <p class="g-pstyle10 text-center">
             <strong>{{ this.reviewedBy }}</strong><br />
-            <strong>{{ this.position }}</strong>
+            <strong><small>{{ this.position }}</small></strong>
           </p>
           <p class="g-pstyle10 text-center"><small><em>{{ this.organization }}</em></small></p>
         </div>

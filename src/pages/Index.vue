@@ -60,17 +60,17 @@
 
     <section id="services" class="hero-section shift-section-up bg-bc-blue no-pad-bottom lg-flex">
       <div class="col-3-squares no-pad-bottom lg-flex">
-        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
+        <div class="service-detail-card-top fixed-height-mobile sm-flex flex-center flex-justify-center flex-basis-third relative">
           <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
                  poster="">
             <source src="/video/bluecollar-apps.mp4" type="video/mp4">
             <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
             <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
           </video>
-          <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
+          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <content-block-layout
-                className="pad-top"
+                className="md-pad-top"
                 v-if="getService(0).linkText"
                 :title="getService(0).title"
                 :description="getService(0).description"
@@ -80,7 +80,7 @@
             </div>
             <div class="service-detail-card-back">
               <content-block-layout
-                className="pad-top pad-bottom"
+                className="md-pad-top md-pad-bottom"
                 v-if="getServiceHeroById('apps')"
                 :title="getServiceHeroById('apps').title"
                 subtitle=""
@@ -96,7 +96,7 @@
         </div>
 
         <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
-          <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
+          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <div
                 v-if="getTestimonial(1)"
@@ -128,14 +128,14 @@
           </div>
         </div>
 
-        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
+        <div class="service-detail-card-top fixed-height-mobile sm-flex flex-center flex-justify-center flex-basis-third relative">
           <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
                  poster="">
             <source src="/video/bluecollar-sites.mp4" type="video/mp4">
             <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
             <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
           </video>
-          <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
+          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <content-block-layout
                 className="pad-top pad-bottom"
@@ -169,7 +169,7 @@
     <section class="hero-section angle shift-section-up no-pad-bottom lg-flex">
       <div class="col-3-squares bg-bc-blue no-pad-bottom lg-flex">
         <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
-          <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
+          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <div
                 v-if="getTestimonial(0)"
@@ -189,17 +189,17 @@
           </div>
         </div>
 
-        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
+        <div class="service-detail-card-top fixed-height-mobile sm-flex flex-center flex-justify-center flex-basis-third relative">
           <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
                  poster="">
             <source src="/video/bluecollar-software.mp4" type="video/mp4">
             <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
             <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
           </video>
-          <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
+          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <content-block-layout
-                className="pad-top"
+                className="md-pad-top"
                 v-if="getService(1).linkText"
                 :title="getService(1).title"
                 :description="getService(1).description"
@@ -225,11 +225,11 @@
         </div>
 
         <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
-          <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
+          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <div
                 v-if="getTestimonial(2)"
-                class="sm-flex flex-column flex-center flex-basis-third sm-pad-top">
+                class="sm-flex flex-column flex-center flex-basis-third md-pad-top">
                 <testimonial-block-layout
                   className="sm-space-top-half sm-space-bottom-half"
                   :testimonial="getTestimonial(2).testimonial"
@@ -872,7 +872,6 @@
     width: 100%;
     height: 100%;
     object-fit: fill;
-    border: 1px solid white;
   }
 
   /*.service-detail-card-top::before {
@@ -886,6 +885,12 @@
 	  background-size: 2px 2px;
   }*/
 
+  .service-detail-card-top {
+    &.fixed-height-mobile {
+      min-height: 50vh;
+    }
+  }
+
   .service-detail-card-top:hover::before {
     background-image: radial-gradient(black 35%, transparent 25%);
     background-size: 2px 2px;
@@ -894,6 +899,7 @@
   .service-detail-card-inner {
     z-index: 2;
     position: relative;
+
   }
 
   .service-detail-card-top p,
@@ -902,15 +908,35 @@
     color: white !important;
   }
 
-  .shift-section-up > div {
-    position: relative;
-    top: -100px;
-    z-index: 2;
+  @media screen and (max-width: 40em) {
+    .service-detail-card-top {
+      &.fixed-height-mobile {
+        .service-detail-card-front {
+          top: 100px !important; /* Override inline JS style, flip is done via component */
+        }
+      }
+    }
   }
 
-  .shift-section-up + .shift-section-up {
-    margin-bottom: -100px;
-    border-bottom: 1px solid white;
+  @media screen and (min-width: 40em) {
+    .video-block-bg {
+      border: 1px solid white;
+    }
+
+    .service-detail-card-inner {
+      min-height: auto;
+    }
+
+    .shift-section-up > div {
+      position: relative;
+      top: -100px;
+      z-index: 2;
+    }
+
+    .shift-section-up + .shift-section-up {
+      margin-bottom: -100px;
+      border-bottom: 1px solid white;
+    }
   }
 
   .guitar-block {
