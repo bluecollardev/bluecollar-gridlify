@@ -97,7 +97,7 @@
 
         <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
-            <div class="service-detail-card-front">
+            <div class="service-detail-card-front center-testimonial">
               <div
                 v-if="getTestimonial(1)"
                 class="flex flex-column flex-center flex-basis-third sm-pad-top">
@@ -173,7 +173,7 @@
             <div class="service-detail-card-front">
               <div
                 v-if="getTestimonial(0)"
-                class="flex flex-column flex-center flex-basis-third sm-pad-top">
+                class="sm-flex flex-column flex-center flex-basis-third md-pad-top">
                 <testimonial-block-layout
                   className="sm-space-top-half sm-space-bottom-half"
                   :testimonial="getTestimonial(0).testimonial"
@@ -919,6 +919,11 @@
   }
 
   @media screen and (min-width: 40em) {
+    /* This block is partially covered by the angle from the previous section */
+    .center-testimonial {
+      top: 30px !important;
+    }
+
     .video-block-bg {
       border: 1px solid white;
     }
