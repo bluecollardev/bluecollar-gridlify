@@ -34,19 +34,10 @@
           .add({
             targets: intro,
             duration: 333,
-            opacity: [0, 0.6],
-            scale: [1, 6],
+            opacity: [1, 0],
             easing: 'easeOutQuad',
             complete: () => {
               sessionStorage.setItem('isLoaded', '1')
-            }
-          })
-          .add({
-            targets: intro,
-            duration: 333,
-            opacity: [0.6, 0],
-            easing: 'easeOutQuad',
-            complete: () => {
               intro.classList.add('display-none');
               if (document.body.classList.contains('loading')) {
                 document.body.classList.remove('loading');
