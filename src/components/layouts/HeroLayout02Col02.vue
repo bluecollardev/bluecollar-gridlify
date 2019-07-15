@@ -1,5 +1,5 @@
 <template>
-  <section :class="`homepage-hero hero-section hero-section-2col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`">
+  <section :class="`hero-section hero-section-2col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`">
     <!-- Position relatively, or absolute positioning of the caption will fail -->
     <slot name="left" v-if="this.$slots.left"></slot>
 
