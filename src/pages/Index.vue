@@ -61,7 +61,7 @@
     <section id="services" class="hero-section shift-section-up bg-bc-blue no-pad-bottom lg-flex">
       <div class="col-3-squares no-pad-bottom lg-flex">
         <div class="service-detail-card-top fixed-height-mobile sm-flex flex-center flex-justify-center flex-basis-third relative">
-          <video class="video-block-bg drop-shadow is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
+          <video class="video-block-bg drop-shadow rotate-right is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
                  poster="">
             <source src="/video/bluecollar-apps.mp4" type="video/mp4">
             <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
@@ -129,7 +129,7 @@
         </div>
 
         <div class="service-detail-card-top fixed-height-mobile sm-flex flex-center flex-justify-center flex-basis-third relative">
-          <video class="video-block-bg drop-shadow is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
+          <video class="video-block-bg drop-shadow rotate-left is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
                  poster="">
             <source src="/video/bluecollar-sites.mp4" type="video/mp4">
             <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
@@ -190,7 +190,7 @@
         </div>
 
         <div class="service-detail-card-top fixed-height-mobile sm-flex flex-center flex-justify-center flex-basis-third relative">
-          <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
+          <video class="video-block-bg scale-center drop-shadow-up is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
                  poster="">
             <source src="/video/bluecollar-software.mp4" type="video/mp4">
             <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
@@ -902,9 +902,15 @@
     color: white !important;
   }
 
-  .service-detail-card-top .video-block-bg {
-    &.drop-shadow {
-      filter: drop-shadow(2px 4px 6px rgba(16,16,16,0.666666));
+  @media screen and (min-width: 40em) {
+    .service-detail-card-top .video-block-bg {
+      &.drop-shadow {
+        filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.666667));
+      }
+
+      &.drop-shadow-up {
+        filter: drop-shadow(0px -9px 6px rgba(16, 16, 16, 0.333333));
+      }
     }
   }
 
@@ -927,7 +933,7 @@
 
     /* This block is partially covered by the angle from the previous section */
     .center-testimonial {
-      top: 30px !important;
+      top: 15px !important;
     }
 
     .service-detail-card-inner {
@@ -963,5 +969,22 @@
   .g-services,
   .g-services p {
     text-align: center;
+  }
+
+  /* TODO: Animate rotation */
+  @media screen and (min-width: 84em) {
+    .video-block-bg {
+      &.rotate-left {
+        transform: rotate(-5deg) translate(10px, -40px);
+      }
+
+      &.rotate-right {
+        transform: rotate(5deg) translate(-10px, -40px);
+      }
+
+      &.scale-center {
+        transform: scaleY(1.1) scaleX(1.2) translateY(-22px);
+      }
+    }
   }
 </style>
