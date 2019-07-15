@@ -35,116 +35,11 @@
       </template>
     </video-hero-layout01-col>
 
-    <section class="hero-section col-3-squares no-pad-bottom lg-flex">
-      <div class="service-detail-card-top bg-white sm-flex flex-center flex-justify-center flex-basis-third relative">
-        <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop="" poster="">
-          <source src="/video/bluecollar-apps.mp4" type="video/mp4">
-          <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
-          <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
-        </video>
-        <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
-          <div class="service-detail-card-front">
-            <content-block-layout
-              className="pad-top"
-              v-if="getService(0).linkText"
-              :title="getService(0).title"
-              :description="getService(0).description"
-              :link="getService(0).link"
-              :linkText="getService(0).linkText"
-            />
-          </div>
-          <div class="service-detail-card-back bg-white">
-            <content-block-layout
-              className="pad-top pad-bottom"
-              v-if="getServiceHeroById('apps')"
-              :title="getServiceHeroById('apps').title"
-              subtitle=""
-              :description="getServiceHeroById('apps').description"
-              :link="getServiceHeroById('apps').link"
-              :linkText="getServiceHeroById('apps').linkText"
-              :image="getServiceHeroById('apps').image"
-              :caption="getServiceHeroById('apps').caption"
-              :subCaption="getServiceHeroById('apps').subCaption"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="service-detail-card-top bg-white sm-flex flex-center flex-justify-center flex-basis-third relative">
-        <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop="" poster="">
-          <source src="/video/bluecollar-software.mp4" type="video/mp4">
-          <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
-          <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
-        </video>
-        <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
-          <div class="service-detail-card-front">
-            <content-block-layout
-              className="pad-top"
-              v-if="getService(1).linkText"
-              :title="getService(1).title"
-              :description="getService(1).description"
-              :link="getService(1).link"
-              :linkText="getService(1).linkText"
-            />
-          </div>
-          <div class="service-detail-card-back bg-white">
-            <content-block-layout
-              className="pad-bottom"
-              v-if="getServiceHeroById('software')"
-              :title="getServiceHeroById('software').title"
-              subtitle=""
-              :description="getServiceHeroById('software').description"
-              :link="getServiceHeroById('software').link"
-              :linkText="getServiceHeroById('software').linkText"
-              :image="getServiceHeroById('software').image"
-              :caption="getServiceHeroById('software').caption"
-              :subCaption="getServiceHeroById('software').subCaption"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="service-detail-card-top bg-white sm-flex flex-center flex-justify-center flex-basis-third relative">
-        <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop="" poster="">
-          <source src="/video/bluecollar-sites.mp4" type="video/mp4">
-          <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
-          <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
-        </video>
-        <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
-          <div class="service-detail-card-front">
-            <content-block-layout
-              className="pad-top pad-bottom"
-              v-if="getService(2).linkText"
-              :title="getService(2).title"
-              :description="getService(2).description"
-              :link="getService(2).link"
-              :linkText="getService(2).linkText"
-            />
-          </div>
-
-          <div class="service-detail-card-back bg-white">
-            <content-block-layout
-              className="pad-bottom"
-              v-if="getServiceHeroById('websites')"
-              :title="getServiceHeroById('websites').title"
-              subtitle=""
-              :description="getServiceHeroById('websites').description"
-              :link="getServiceHeroById('websites').link"
-              :linkText="getServiceHeroById('websites').linkText"
-              :image="getServiceHeroById('websites').image"
-              :caption="getServiceHeroById('websites').caption"
-              :subCaption="getServiceHeroById('websites').subCaption"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Apps and Services Section -->
     <hero-layout01-col
       id="services"
       v-if="servicesHero"
-      bgColor="bg-bc-blue"
+      bgColor="bg-bc-blue bg-denim"
       :title="servicesHero.title"
       subtitle=""
       :description="servicesHero.description"
@@ -175,102 +70,6 @@
       </div>
     </hero-layout01-col>
 
-    <!-- TODO: Important! Make this pattern a layout before deleting! -->
-    <!--<section class="hero-section col-2-squares n1-white n2-light-grey no-pad-bottom lg-flex">
-      <div class="service-detail-card-top bg-white sm-flex flex-center flex-justify-center flex-basis-half">
-        <div class="service-detail-card-inner content-block">
-          <div class="service-detail-card-front">
-            <content-block-layout
-              className="pad-top"
-              v-if="getService(0).linkText"
-              :title="getService(0).title"
-              :description="getService(0).description"
-              :link="getService(0).link"
-              :linkText="getService(0).linkText"
-            />
-          </div>
-          <div class="service-detail-card-back bg-white">
-            <content-block-layout
-              className="pad-top pad-bottom"
-              v-if="getServiceHeroById('apps')"
-              :title="getServiceHeroById('apps').title"
-              subtitle=""
-              :description="getServiceHeroById('apps').description"
-              :link="getServiceHeroById('apps').link"
-              :linkText="getServiceHeroById('apps').linkText"
-              :image="getServiceHeroById('apps').image"
-              :caption="getServiceHeroById('apps').caption"
-              :subCaption="getServiceHeroById('apps').subCaption"
-            />
-          </div>
-        </div>
-      </div>
-    </section>-->
-
-    <!--<section class="lg-flex">
-      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-half">
-        <div class="service-detail-card-inner content-block">
-          <div class="service-detail-card-front">
-            <content-block-layout
-              className="pad-top"
-              v-if="getService(1).linkText"
-              :title="getService(1).title"
-              :description="getService(1).description"
-              :link="getService(1).link"
-              :linkText="getService(1).linkText"
-            />
-          </div>
-          <div class="service-detail-card-back bg-white">
-            <content-block-layout
-              className="pad-bottom"
-              v-if="getServiceHeroById('software')"
-              :title="getServiceHeroById('software').title"
-              subtitle=""
-              :description="getServiceHeroById('software').description"
-              :link="getServiceHeroById('software').link"
-              :linkText="getServiceHeroById('software').linkText"
-              :image="getServiceHeroById('software').image"
-              :caption="getServiceHeroById('software').caption"
-              :subCaption="getServiceHeroById('software').subCaption"
-            />
-          </div>
-        </div>
-      </div>
-    </section>-->
-
-
-    <!--<section class="hero-section col-2-squares n1-white n2-light-grey no-pad-bottom lg-flex">
-      <div class="service-detail-card-top bg-white sm-flex flex-center flex-justify-center flex-basis-half">
-        <div class="service-detail-card-inner content-block">
-          <div class="service-detail-card-front">
-            <content-block-layout
-              className="pad-top pad-bottom"
-              v-if="getService(2).linkText"
-              :title="getService(2).title"
-              :description="getService(2).description"
-              :link="getService(2).link"
-              :linkText="getService(2).linkText"
-            />
-          </div>
-
-          <div class="service-detail-card-back bg-white">
-            <content-block-layout
-              className="pad-bottom"
-              v-if="getServiceHeroById('websites')"
-              :title="getServiceHeroById('websites').title"
-              subtitle=""
-              :description="getServiceHeroById('websites').description"
-              :link="getServiceHeroById('websites').link"
-              :linkText="getServiceHeroById('websites').linkText"
-              :image="getServiceHeroById('websites').image"
-              :caption="getServiceHeroById('websites').caption"
-              :subCaption="getServiceHeroById('websites').subCaption"
-            />
-          </div>
-        </div>
-      </div>
-    </section>-->
-
     <!-- Testimonials Section -->
     <testimonial-hero-layout
       v-if="projectsSection"
@@ -290,6 +89,106 @@
       rightPaneClassSuffix="xs-order-1 sm-order-2"
       bgColor="bg-light-grey"
     />
+
+    <section class="hero-section col-3-squares bg-bc-blue no-pad-bottom lg-flex">
+      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
+        <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop="" poster="">
+          <source src="/video/bluecollar-apps.mp4" type="video/mp4">
+          <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
+          <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
+        </video>
+        <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
+          <div class="service-detail-card-front">
+            <content-block-layout
+              className="pad-top"
+              v-if="getService(0).linkText"
+              :title="getService(0).title"
+              :description="getService(0).description"
+              :link="getService(0).link"
+              :linkText="getService(0).linkText"
+            />
+          </div>
+          <div class="service-detail-card-back">
+            <content-block-layout
+              className="pad-top pad-bottom"
+              v-if="getServiceHeroById('apps')"
+              :title="getServiceHeroById('apps').title"
+              subtitle=""
+              :description="getServiceHeroById('apps').description"
+              :link="getServiceHeroById('apps').link"
+              :linkText="getServiceHeroById('apps').linkText"
+              :image="getServiceHeroById('apps').image"
+              :caption="getServiceHeroById('apps').caption"
+              :subCaption="getServiceHeroById('apps').subCaption"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
+        <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
+          <div class="service-detail-card-front">
+            <content-block-layout
+              className="pad-top"
+              v-if="getService(1).linkText"
+              :title="getService(1).title"
+              :description="getService(1).description"
+              :link="getService(1).link"
+              :linkText="getService(1).linkText"
+            />
+          </div>
+          <div class="service-detail-card-back">
+            <content-block-layout
+              className="pad-bottom"
+              v-if="getServiceHeroById('software')"
+              :title="getServiceHeroById('software').title"
+              subtitle=""
+              :description="getServiceHeroById('software').description"
+              :link="getServiceHeroById('software').link"
+              :linkText="getServiceHeroById('software').linkText"
+              :image="getServiceHeroById('software').image"
+              :caption="getServiceHeroById('software').caption"
+              :subCaption="getServiceHeroById('software').subCaption"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
+        <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop="" poster="">
+          <source src="/video/bluecollar-sites.mp4" type="video/mp4">
+          <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
+          <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
+        </video>
+        <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
+          <div class="service-detail-card-front">
+            <content-block-layout
+              className="pad-top pad-bottom"
+              v-if="getService(2).linkText"
+              :title="getService(2).title"
+              :description="getService(2).description"
+              :link="getService(2).link"
+              :linkText="getService(2).linkText"
+            />
+          </div>
+
+          <div class="service-detail-card-back">
+            <content-block-layout
+              className="pad-bottom"
+              v-if="getServiceHeroById('websites')"
+              :title="getServiceHeroById('websites').title"
+              subtitle=""
+              :description="getServiceHeroById('websites').description"
+              :link="getServiceHeroById('websites').link"
+              :linkText="getServiceHeroById('websites').linkText"
+              :image="getServiceHeroById('websites').image"
+              :caption="getServiceHeroById('websites').caption"
+              :subCaption="getServiceHeroById('websites').subCaption"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
     <aside class="sm-flex flex-wrap bg-light-grey pad-bottom-2x">
       <div
@@ -330,10 +229,201 @@
       </div>
     </aside>
 
+    <section class="hero-section col-3-squares bg-bc-blue no-pad-bottom lg-flex">
+      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
+        <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
+          <div class="service-detail-card-front">
+            <content-block-layout
+              className="pad-top"
+              v-if="getService(0).linkText"
+              :title="getService(0).title"
+              :description="getService(0).description"
+              :link="getService(0).link"
+              :linkText="getService(0).linkText"
+            />
+          </div>
+          <div class="service-detail-card-back">
+            <content-block-layout
+              className="pad-top pad-bottom"
+              v-if="getServiceHeroById('apps')"
+              :title="getServiceHeroById('apps').title"
+              subtitle=""
+              :description="getServiceHeroById('apps').description"
+              :link="getServiceHeroById('apps').link"
+              :linkText="getServiceHeroById('apps').linkText"
+              :image="getServiceHeroById('apps').image"
+              :caption="getServiceHeroById('apps').caption"
+              :subCaption="getServiceHeroById('apps').subCaption"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
+        <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop="" poster="">
+          <source src="/video/bluecollar-software.mp4" type="video/mp4">
+          <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
+          <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
+        </video>
+        <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
+          <div class="service-detail-card-front">
+            <content-block-layout
+              className="pad-top"
+              v-if="getService(1).linkText"
+              :title="getService(1).title"
+              :description="getService(1).description"
+              :link="getService(1).link"
+              :linkText="getService(1).linkText"
+            />
+          </div>
+          <div class="service-detail-card-back">
+            <content-block-layout
+              className="pad-bottom"
+              v-if="getServiceHeroById('software')"
+              :title="getServiceHeroById('software').title"
+              subtitle=""
+              :description="getServiceHeroById('software').description"
+              :link="getServiceHeroById('software').link"
+              :linkText="getServiceHeroById('software').linkText"
+              :image="getServiceHeroById('software').image"
+              :caption="getServiceHeroById('software').caption"
+              :subCaption="getServiceHeroById('software').subCaption"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
+        <div class="service-detail-card-inner space-left space-right space-top-2x space-bottom-2x">
+          <div class="service-detail-card-front">
+            <content-block-layout
+              className="pad-top pad-bottom"
+              v-if="getService(2).linkText"
+              :title="getService(2).title"
+              :description="getService(2).description"
+              :link="getService(2).link"
+              :linkText="getService(2).linkText"
+            />
+          </div>
+
+          <div class="service-detail-card-back">
+            <content-block-layout
+              className="pad-bottom"
+              v-if="getServiceHeroById('websites')"
+              :title="getServiceHeroById('websites').title"
+              subtitle=""
+              :description="getServiceHeroById('websites').description"
+              :link="getServiceHeroById('websites').link"
+              :linkText="getServiceHeroById('websites').linkText"
+              :image="getServiceHeroById('websites').image"
+              :caption="getServiceHeroById('websites').caption"
+              :subCaption="getServiceHeroById('websites').subCaption"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TODO: Important! Make this pattern a layout before deleting! -->
+    <!--<section class="hero-section col-2-squares n1-white n2-light-grey no-pad-bottom lg-flex">
+      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-half">
+        <div class="service-detail-card-inner content-block">
+          <div class="service-detail-card-front">
+            <content-block-layout
+              className="pad-top"
+              v-if="getService(0).linkText"
+              :title="getService(0).title"
+              :description="getService(0).description"
+              :link="getService(0).link"
+              :linkText="getService(0).linkText"
+            />
+          </div>
+          <div class="service-detail-card-back">
+            <content-block-layout
+              className="pad-top pad-bottom"
+              v-if="getServiceHeroById('apps')"
+              :title="getServiceHeroById('apps').title"
+              subtitle=""
+              :description="getServiceHeroById('apps').description"
+              :link="getServiceHeroById('apps').link"
+              :linkText="getServiceHeroById('apps').linkText"
+              :image="getServiceHeroById('apps').image"
+              :caption="getServiceHeroById('apps').caption"
+              :subCaption="getServiceHeroById('apps').subCaption"
+            />
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+    <!--<section class="lg-flex">
+      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-half">
+        <div class="service-detail-card-inner content-block">
+          <div class="service-detail-card-front">
+            <content-block-layout
+              className="pad-top"
+              v-if="getService(1).linkText"
+              :title="getService(1).title"
+              :description="getService(1).description"
+              :link="getService(1).link"
+              :linkText="getService(1).linkText"
+            />
+          </div>
+          <div class="service-detail-card-back">
+            <content-block-layout
+              className="pad-bottom"
+              v-if="getServiceHeroById('software')"
+              :title="getServiceHeroById('software').title"
+              subtitle=""
+              :description="getServiceHeroById('software').description"
+              :link="getServiceHeroById('software').link"
+              :linkText="getServiceHeroById('software').linkText"
+              :image="getServiceHeroById('software').image"
+              :caption="getServiceHeroById('software').caption"
+              :subCaption="getServiceHeroById('software').subCaption"
+            />
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+
+    <!--<section class="hero-section col-2-squares n1-white n2-light-grey no-pad-bottom lg-flex">
+      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-half">
+        <div class="service-detail-card-inner content-block">
+          <div class="service-detail-card-front">
+            <content-block-layout
+              className="pad-top pad-bottom"
+              v-if="getService(2).linkText"
+              :title="getService(2).title"
+              :description="getService(2).description"
+              :link="getService(2).link"
+              :linkText="getService(2).linkText"
+            />
+          </div>
+
+          <div class="service-detail-card-back">
+            <content-block-layout
+              className="pad-bottom"
+              v-if="getServiceHeroById('websites')"
+              :title="getServiceHeroById('websites').title"
+              subtitle=""
+              :description="getServiceHeroById('websites').description"
+              :link="getServiceHeroById('websites').link"
+              :linkText="getServiceHeroById('websites').linkText"
+              :image="getServiceHeroById('websites').image"
+              :caption="getServiceHeroById('websites').caption"
+              :subCaption="getServiceHeroById('websites').subCaption"
+            />
+          </div>
+        </div>
+      </div>
+    </section>-->
+
     <hero-layout01-col
       id="contact"
       v-if="servicesHero"
-      bgColor="bg-bc-blue"
+      bgColor="bg-bc-blue bg-denim"
       title="Ready to Rock?"
       subtitle=""
       description="At Blue Collar, every challenge is just a puzzle waiting to be solved! We strive to create innovative solutions for our clients using the latest advances
@@ -844,7 +934,7 @@
     border: 1px solid white;
   }
 
-  .service-detail-card-top::before {
+  /*.service-detail-card-top::before {
     content: '.';
     color: black;
     position: absolute;
@@ -853,7 +943,7 @@
     z-index: 1;
     background-image: radial-gradient(black 65%, transparent 25%);
 	  background-size: 2px 2px;
-  }
+  }*/
 
   .service-detail-card-top:hover::before {
     background-image: radial-gradient(black 35%, transparent 25%);
