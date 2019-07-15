@@ -39,6 +39,7 @@
 
     <!-- Apps and Services Section -->
     <testimonial-hero-layout
+      id="about"
       v-if="servicesHero"
       :title="servicesHero.title"
       subtitle=""
@@ -343,7 +344,7 @@
       </div>
     </section>-->
 
-    <hero-layout01-col
+    <hero-layout02-col02
       id="contact"
       v-if="servicesHero"
       bgColor="bg-white"
@@ -373,13 +374,16 @@
         </h2>
       </template>
 
-      <div class="space-bottom text-center">
-        <interactive-guitar></interactive-guitar>
-        <br/>
-        <small><b>Click the strings to ROCK OUT</b></small>
-      </div>
-
-    </hero-layout01-col>
+      <template v-slot:left>
+        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+          <div class="hero-block space-bottom text-center">
+            <interactive-guitar :key="Math.random()"></interactive-guitar>
+            <br/>
+            <small><b>Click the strings to ROCK OUT</b></small>
+          </div>
+        </div>
+      </template>
+    </hero-layout02-col02>
 
     <section class="hero-section bg-light-grey">
       <google-map-background></google-map-background>

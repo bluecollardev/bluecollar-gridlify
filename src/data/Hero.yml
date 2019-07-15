@@ -7,7 +7,7 @@ items:
       to life.
     id: homepage-hero
     image: /images/heroes/blue-collar-home-hero-cool.jpg
-    link: /company
+    link: '/#about'
     linkText: Continue
     subtitle: 'Can''t be too greedy, gotta love what you do.'
     title: We're About Software
