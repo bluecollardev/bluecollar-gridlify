@@ -959,4 +959,9 @@
   .service-detail-card-top {
     text-shadow: 1px 0 5px rgba(0,0,0,.666)
   }
+
+  .g-services,
+  .g-services p {
+    text-align: center;
+  }
 </style>

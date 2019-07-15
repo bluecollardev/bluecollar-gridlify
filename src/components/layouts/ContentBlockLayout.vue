@@ -7,7 +7,7 @@
       <div v-html="compiledDescription"></div>
     </div>
     <div v-if="typeof this.linkText === 'string' && this.linkText.length > 0" class="g-services">
-      <a class="space-top-half more-info-link g-pstyle11" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
+      <a class="space-top-half action-link transparent g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
     </div>
   </div>
 </template>
