@@ -57,7 +57,7 @@
       bgColor="bg-light-grey"
     />
 
-    <section class="hero-section shift-section-up bg-bc-blue no-pad-bottom lg-flex">
+    <section id="services" class="hero-section shift-section-up bg-bc-blue no-pad-bottom lg-flex">
       <div class="col-3-squares no-pad-bottom lg-flex">
         <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
           <video class="video-block-bg is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
