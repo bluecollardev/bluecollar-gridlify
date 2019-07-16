@@ -60,6 +60,7 @@
     height: 110%;
     z-index: 5000;
     top: 0;
+    overflow: hidden;
 
     .intro-logo {
       margin-top: 5rem;
