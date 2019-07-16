@@ -5,7 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue';
 import '~/assets/css/main.scss';
 import '~/assets/fonts/icomoon/style.css';
 
-import VueWaypoint from 'vue-waypoint'
+//import VueWaypoint from 'vue-waypoint'
 import * as VueGoogleMaps from 'vue2-google-maps';
 
 export default function (Vue, { head }) {
