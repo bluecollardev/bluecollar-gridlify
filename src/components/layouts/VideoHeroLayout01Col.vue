@@ -187,5 +187,13 @@ export default {
     position: relative;
     z-index: 1;
   }
+
+  @media screen and (min-width: 84em) {
+    .video-banner {
+      .hero-block {
+        max-width: 60%;
+      }
+    }
+  }
 </style>
 

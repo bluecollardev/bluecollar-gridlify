@@ -15,9 +15,11 @@
         <div class="flex flex-column">
           <slot name="title" v-if="this.$slots.title" class="sm-space-bottom-half"></slot>
 
+          <slot v-if="this.slotPos !== 'top'"></slot>
+
           <div
             v-if="typeof this.title === 'string' && !this.$slots.title"
-            class="homepage-hero-title sm-space-bottom-half">
+            class="homepage-hero-title">
             <h2 class="title text-center mr-3 ml-3">
               {{ this.title }}
             </h2>
@@ -25,7 +27,7 @@
           <div class="homepage-hero-text g-hero">
             <div class="text-center" v-html="compiledDescription"></div>
           </div>
-          <slot></slot>
+          <slot v-if="this.slotPos === 'top'"></slot>
           <div
             v-if="typeof this.link === 'string' && this.link.length >0"
             class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"

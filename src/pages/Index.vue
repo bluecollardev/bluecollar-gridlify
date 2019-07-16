@@ -37,27 +37,6 @@
       </template>
     </video-hero-layout01-col>
 
-    <!-- Apps and Services Section -->
-    <testimonial-hero-layout
-      id="about"
-      v-if="servicesHero"
-      :title="servicesHero.title"
-      subtitle=""
-      :description="servicesHero.description"
-      :link="servicesHero.link"
-      :linkText="servicesHero.linkText"
-      :image="servicesHero.image"
-      imageClass="home-page-banner-image"
-      :caption="servicesHero.caption"
-      :subCaption="servicesHero.subCaption"
-      :flipX="false"
-      :angle="true"
-      className="xs-pad-top"
-      leftPaneClassSuffix="xs-order-2 sm-order-1"
-      rightPaneClassSuffix="xs-order-1 sm-order-2"
-      bgColor="bg-light-grey"
-    />
-
     <section id="services" class="hero-section shift-section-up bg-bc-blue no-pad-bottom lg-flex">
       <div class="col-3-squares no-pad-bottom lg-flex">
         <div class="service-detail-card-top fixed-height-mobile sm-flex flex-center flex-justify-center flex-basis-third relative">
@@ -344,17 +323,17 @@
       </div>
     </section>-->
 
-    <hero-layout02-col02
+    <hero-layout01-col
       id="contact"
       v-if="servicesHero"
       bgColor="bg-white"
       title="Ready to Rock?"
       subtitle=""
-      description="At Blue Collar, every challenge is just a puzzle waiting to be solved! We strive to create innovative solutions for our clients using the latest advances
-        in technology and development. Let us help take your business idea to the next level."
+      description="Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit. We'll take the midnight train to your dream."
       imageClass="home-page-banner-image"
       :flipX="true"
       :angle="true"
+      slotPos="top"
       className="xs-pad-top sm-pad-top pad-bottom-2x"
     >
       <template v-slot:title>
@@ -374,16 +353,16 @@
         </h2>
       </template>
 
-      <template v-slot:left>
+      <template>
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
-          <div class="guitar-block space-bottom text-center">
+          <div class="guitar-block text-center">
             <interactive-guitar :key="Math.random()"></interactive-guitar>
             <br/>
             <small><b>Click the strings to ROCK OUT</b></small>
           </div>
         </div>
       </template>
-    </hero-layout02-col02>
+    </hero-layout01-col>
 
     <section class="hero-section bg-light-grey">
       <google-map-background></google-map-background>
@@ -868,7 +847,7 @@
     object-fit: cover;
   }
 
-  /*.service-detail-card-top::before {
+  .video-block-bg::before {
     content: '.';
     color: black;
     position: absolute;
@@ -877,7 +856,7 @@
     z-index: 1;
     background-image: radial-gradient(black 65%, transparent 25%);
 	  background-size: 2px 2px;
-  }*/
+  }
 
   .service-detail-card-top {
     &.fixed-height-mobile {
@@ -903,13 +882,23 @@
   }
 
   @media screen and (min-width: 40em) {
-    .service-detail-card-top .video-block-bg {
-      &.drop-shadow {
-        filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.666667));
+    .service-detail-card-top {
+      &.drop-shadow:before {
+        filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.666667)) brightness(0.5);
       }
 
-      &.drop-shadow-up {
-        filter: drop-shadow(0px -9px 6px rgba(16, 16, 16, 0.333333));
+      &.drop-shadow-up:before {
+        filter: drop-shadow(0px -9px 6px rgba(16, 16, 16, 0.333333)) brightness(0.5);
+      }
+    }
+
+    .service-detail-card-top:hover {
+      &.drop-shadow:before {
+        filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.30)) brightness(0.5);
+      }
+
+      &.drop-shadow-up:before {
+        filter: drop-shadow(0px -9px 6px rgba(16, 16, 16, 0.15)) brightness(0.5);
       }
     }
   }
@@ -986,5 +975,9 @@
         transform: scaleY(1.1) scaleX(1.2) translateY(-22px);
       }
     }
+  }
+
+  a.action-link {
+    border-radius: 5px;
   }
 </style>

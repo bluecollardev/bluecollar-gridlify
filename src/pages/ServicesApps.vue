@@ -13,16 +13,25 @@
       caption="Sean Huntington"
       subCaption="Principal Architect, Blue Collar"
     />-->
-    <section-block-layout02-col01
-      v-if="getServiceHeroById('apps')"
-      :title="getServiceHeroById('apps').title"
+    <!-- Apps and Services Section -->
+    <testimonial-hero-layout
+      id="about"
+      v-if="servicesHero"
+      :title="servicesHero.title"
       subtitle=""
-      :description="getServiceHeroById('apps').description"
-      :link="getServiceHeroById('apps').link"
-      :linkText="getServiceHeroById('apps').linkText"
-      :image="getServiceHeroById('apps').image"
-      :caption="getServiceHeroById('apps').caption"
-      :subCaption="getServiceHeroById('apps').subCaption"
+      :description="servicesHero.description"
+      :link="servicesHero.link"
+      :linkText="servicesHero.linkText"
+      :image="servicesHero.image"
+      imageClass="home-page-banner-image"
+      :caption="servicesHero.caption"
+      :subCaption="servicesHero.subCaption"
+      :flipX="false"
+      :angle="true"
+      className="xs-pad-top"
+      leftPaneClassSuffix="xs-order-2 sm-order-1"
+      rightPaneClassSuffix="xs-order-1 sm-order-2"
+      bgColor="bg-light-grey"
     />
 
     <section id="advertising" class="lg-flex space-top">
