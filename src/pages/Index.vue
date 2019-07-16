@@ -323,7 +323,8 @@
       </div>
     </section>-->
 
-    <hero-layout01-col
+    <!-- DO NOT DELETE THIS IS THE GUITAR!!! -->
+    <!--<hero-layout01-col
       id="contact"
       v-if="servicesHero"
       bgColor="bg-white"
@@ -362,13 +363,14 @@
           </div>
         </div>
       </template>
-    </hero-layout01-col>
+    </hero-layout01-col>-->
+    <!-- END NOT DELETE THIS IS THE GUITAR!!! -->
 
     <section class="hero-section bg-light-grey">
       <google-map-background></google-map-background>
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div class="sm-flex flex-basis-full">
-          <div class="sm-flex flex-basis-third">
+          <div class="sm-flex flex-basis-half">
             <div class="border-none p0 m0 pad-all">
 
               <h2 class="block text-center mb-4 space-top">Saddle up, partner!</h2>
@@ -389,10 +391,9 @@
               <div>
                 <!--<google-map-cutout></google-map-cutout>-->
               </div>
-              <p>Call Us! <strong>+1 250 532-0083</strong></p>
             </div>
           </div>
-          <div class="sm-flex flex-basis-two-thirds">
+          <div class="sm-flex flex-basis-half">
             <contact :formData="formData"></contact>
           </div>
         </div>
@@ -931,7 +932,7 @@
 
     .shift-section-up > div {
       position: relative;
-      top: -100px;
+      top: -102px;
       z-index: 2;
     }
 
