@@ -432,7 +432,8 @@ hr {
   display: none !important
 }
 
-@media (min-width: 40em) {
+/* TODO: Fix basscss these responsive utils suck */
+/*@media (min-width: 40em) {
   .sm-show { display: block !important }
 }
 
@@ -455,7 +456,7 @@ hr {
 
 @media (min-width: 64em) {
   .lg-hide { display: none !important }
-}
+}*/
 
 .display-none { display: none !important }
 

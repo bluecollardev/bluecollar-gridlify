@@ -24,7 +24,8 @@
       PhoneApp
     },
     mounted() {
-      if (!document.body.classList.contains('loading')) {
+      if (parseInt(sessionStorage.getItem('isLoaded')) === 1) {
+        if (!document.body.classList.contains('loading')) {
         document.body.classList.add('loading');
       }
 
@@ -37,14 +38,16 @@
             opacity: [1, 0],
             easing: 'easeOutQuad',
             complete: () => {
-              sessionStorage.setItem('isLoaded', '1')
+              sessionStorage.setItem('isLoaded', '1');
               intro.classList.add('display-none');
               if (document.body.classList.contains('loading')) {
                 document.body.classList.remove('loading');
               }
             }
           });
-      }, 3000);
+        }, 3000);
+      }
+
     }
   }
 </script>

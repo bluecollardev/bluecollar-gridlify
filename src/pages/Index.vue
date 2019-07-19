@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :key="repaint">
     <Header/>
 
     <!-- Video Hero -->
@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative xs-hide">
+        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative xs-hide sm-hide md-hide">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front center-testimonial">
               <div
@@ -111,7 +111,7 @@
 
     <section class="hero-section shift-section-up no-pad-bottom lg-flex">
       <div class="col-3-squares bg-bc-blue no-pad-bottom lg-flex">
-        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative xs-hide">
+        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative xs-hide sm-hide md-hide">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <div
@@ -155,7 +155,7 @@
           </div>
         </div>
 
-        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative xs-hide">
+        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative xs-hide sm-hide md-hide">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <div
@@ -434,7 +434,8 @@
     ],
     data() {
       return {
-        formData: {}
+        formData: {},
+        repaint: Math.random()
       };
     },
     computed: {
@@ -652,6 +653,12 @@
         '.service-detail-card-front',
         '.service-detail-card-back'
       );
+
+      if (window) {
+        window.addEventListener('resize', () => {
+          this.$set(this, 'repaint', Math.random());
+        });
+      }
     },
     beforeDestroy() {
       console.log('remove wrapTitleText resize listener');
