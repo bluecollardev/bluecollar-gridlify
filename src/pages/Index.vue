@@ -323,11 +323,13 @@
       </div>
     </section>-->
 
+
+    <party-lights></party-lights>
     <!-- DO NOT DELETE THIS IS THE GUITAR!!! -->
-    <!--<hero-layout01-col
+    <hero-layout01-col
       id="contact"
       v-if="servicesHero"
-      bgColor="bg-white"
+      bgColor="bg-bc-blue"
       title="Ready to Rock?"
       subtitle=""
       description="Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit. We'll take the midnight train to your dream."
@@ -363,7 +365,7 @@
           </div>
         </div>
       </template>
-    </hero-layout01-col>-->
+    </hero-layout01-col>
     <!-- END NOT DELETE THIS IS THE GUITAR!!! -->
 
     <section class="hero-section bg-light-grey">
@@ -435,6 +437,7 @@
   import InteractiveGuitar from '~/components/svg/InteractiveGuitar.vue';
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
   import GoogleMapCutout from '~/components/svg/GoogleMapCutout.vue';
+  import PartyLights from '~/components/svg/PartyLights.vue';
 
   // Import static data
   import HomeData from '~/data/Home.yml';
@@ -468,6 +471,7 @@
       InteractiveGuitar,
       GoogleMapBackground,
       GoogleMapCutout,
+      PartyLights,
       // Import static HTML blocks
       ProcessBlock
     },

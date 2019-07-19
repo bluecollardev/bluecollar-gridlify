@@ -31,7 +31,7 @@
               </h1>
             </div>
 
-            <div class="homepage-hero-text g-hero">
+            <div class="content-block homepage-hero-text g-hero ml-auto mr-auto text-center">
               <div class="text-center" v-html="compiledDescription"></div>
             </div>
             <slot></slot>

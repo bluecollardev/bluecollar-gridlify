@@ -18,7 +18,7 @@
               {{ this.title }}
             </p>
           </div>
-          <div class="homepage-hero-text g-hero xs-hide">
+          <div class="content-block homepage-hero-text g-hero ml-auto mr-auto text-center xs-hide">
             <p v-html="this.description"></p>
           </div>
           <div
@@ -43,7 +43,7 @@
     >
       <div class="hero-block">
         <div class="flex flex-column">
-          <div class="homepage-hero-text g-hero xs-hide">
+          <div class="content-block homepage-hero-text g-hero ml-auto mr-auto text-center xs-hide">
             <p v-html="this.description"></p>
           </div>
         </div>

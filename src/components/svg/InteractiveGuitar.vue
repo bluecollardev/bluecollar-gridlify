@@ -838,6 +838,8 @@
 <style lang="scss" scoped>
   .interactive-guitar {
     margin: 0 auto;
+    /*position: relative;
+    z-index: 1;*/
 
     i {
       color: white;

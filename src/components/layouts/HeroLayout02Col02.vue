@@ -24,7 +24,7 @@
               {{ this.title }}
             </h2>
           </div>
-          <div class="homepage-hero-text g-hero">
+          <div class="content-block homepage-hero-text g-hero ml-auto mr-auto text-center">
             <div v-html="compiledDescription"></div>
           </div>
           <slot></slot>
