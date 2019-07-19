@@ -162,6 +162,13 @@ export default {
     object-fit: cover !important;
   }
 
+  @media screen and (max-width: 40em) {
+    /*.video-banner video {
+      display: none;
+      visibility: hidden;
+    }*/
+  }
+
   .video-banner.overlay:after {
     content: '';
     position: absolute;

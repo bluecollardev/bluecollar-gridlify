@@ -813,6 +813,12 @@
     object-fit: cover;
   }
 
+  @media screen and (max-width: 40em){
+    .video-block-bg {
+      display: none;
+    }
+  }
+
   .video-block-bg::before {
     content: '.';
     color: black;
