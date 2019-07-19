@@ -160,7 +160,7 @@
 <style lang="scss">
   .party-lights {
     width: 100%;
-    height: 101vh;
+    height: 103vh;
     position: absolute;
     z-index: 1;
     overflow: hidden;

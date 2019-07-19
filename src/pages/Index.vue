@@ -145,7 +145,7 @@
       </div>
     </section>
 
-    <section class="hero-section angle shift-section-up no-pad-bottom lg-flex">
+    <section class="hero-section shift-section-up no-pad-bottom lg-flex">
       <div class="col-3-squares bg-bc-blue no-pad-bottom lg-flex">
         <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
@@ -323,8 +323,6 @@
       </div>
     </section>-->
 
-
-    <party-lights></party-lights>
     <!-- DO NOT DELETE THIS IS THE GUITAR!!! -->
     <hero-layout01-col
       id="contact"
@@ -339,6 +337,10 @@
       slotPos="top"
       className="xs-pad-top sm-pad-top pad-bottom-2x"
     >
+      <template v-slot:bg>
+        <party-lights></party-lights>
+      </template>
+
       <template v-slot:title>
         <h2 class="title text-center pad-bottom">
           <span class="text-wrapper">
