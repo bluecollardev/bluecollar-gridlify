@@ -6,7 +6,7 @@
   >
     <slot name="bg" v-if="this.$slots.bg"></slot>
     <!-- TODO: Allow changing of bg colors -->
-    <div class="sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-full xl-flex-basis-two-thirds relative">
+    <div class="hero-section-content sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-full xl-flex-basis-two-thirds">
       <!--<div class="hero-image-wrapper"><img :class="`banner-image ${this.imageClass}`" v-bind:src="this.image" alt="" /></div>
       <div v-if="typeof this.caption === 'string' && this.caption.length >0" class="figure-caption bg-bc-blue g-hero">
         <p class="g-pstyle4" style="text-align: right;">{{ this.caption }}</p>
@@ -152,6 +152,12 @@ export default {
     background-repeat: no-repeat;
     transition: 0s linear;
     transition-property: background-position;
+  }
+
+  @media screen and (min-width: 64em) {
+    .hero-section-content {
+      position: relative;
+    }
   }
 </style>
 
