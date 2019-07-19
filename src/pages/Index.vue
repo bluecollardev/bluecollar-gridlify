@@ -918,6 +918,8 @@
 
   .guitar-block {
     width: 100%;
+    position: relative;
+    z-index: 5;
   }
 
   @media screen and (min-width: 40em) {
