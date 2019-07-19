@@ -461,8 +461,10 @@ section.hero-section {
 }
 
 @media screen and (min-width: 64em) {
-  position: relative;
-  border-bottom: none;
+  section.hero-section {
+    position: relative;
+    border-bottom: none;
+  }
 }
 
 section.hero-section.text-shadow * {

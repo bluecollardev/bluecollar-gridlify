@@ -39,7 +39,7 @@
 
     <section id="services" class="hero-section shift-section-up bg-bc-blue no-pad-bottom lg-flex">
       <div class="col-3-squares no-pad-bottom lg-flex">
-        <div class="service-detail-card-top fixed-height-mobile sm-flex flex-center flex-justify-center flex-basis-third">
+        <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third">
           <video class="video-block-bg drop-shadow rotate-right is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
                  poster="">
             <source src="/video/bluecollar-apps.mp4" type="video/mp4">
@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
+        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front center-testimonial">
               <div
@@ -83,7 +83,7 @@
           </div>
         </div>
 
-        <div class="service-detail-card-top fixed-height-mobile sm-flex flex-center flex-justify-center flex-basis-third">
+        <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third">
           <video class="video-block-bg drop-shadow rotate-left is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
                  poster="">
             <source src="/video/bluecollar-sites.mp4" type="video/mp4">
@@ -111,7 +111,7 @@
 
     <section class="hero-section shift-section-up no-pad-bottom lg-flex">
       <div class="col-3-squares bg-bc-blue no-pad-bottom lg-flex">
-        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
+        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <div
@@ -132,7 +132,7 @@
           </div>
         </div>
 
-        <div class="service-detail-card-top fixed-height-mobile sm-flex flex-center flex-justify-center flex-basis-third">
+        <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third">
           <video class="video-block-bg scale-center drop-shadow-up is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
                  poster="">
             <source src="/video/bluecollar-software.mp4" type="video/mp4">
@@ -155,7 +155,7 @@
           </div>
         </div>
 
-        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
+        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <div
@@ -851,6 +851,7 @@
   @media screen and (min-width: 40em) {
     .service-detail-card-top {
       border-bottom: none;
+      position: relative;
       &.drop-shadow:before {
         filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.666667)) brightness(0.5);
       }
