@@ -66,6 +66,10 @@
   @return ($target/$vw-context) * 1vw;
 }
 
+html, body, main {
+  max-width: 100%;
+}
+
 body {
   font-family: sans-serif;
   font-family: 'Lato', sans-serif;
@@ -575,3 +579,5 @@ section.hero-section.text-shadow a.action-button {
     object-fit: contain;
   }
 }
+
+

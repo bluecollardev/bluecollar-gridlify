@@ -58,23 +58,11 @@
               />
             </div>
             <div class="service-detail-card-back">
-              <content-block-layout
-                className="content-block ml-auto mr-auto md-pad-top md-pad-bottom"
-                v-if="getServiceHeroById('apps')"
-                :title="getServiceHeroById('apps').title"
-                subtitle=""
-                :description="getServiceHeroById('apps').description"
-                :link="getServiceHeroById('apps').link"
-                :linkText="getServiceHeroById('apps').linkText"
-                :image="getServiceHeroById('apps').image"
-                :caption="getServiceHeroById('apps').caption"
-                :subCaption="getServiceHeroById('apps').subCaption"
-              />
             </div>
           </div>
         </div>
 
-        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
+        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative xs-hide">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front center-testimonial">
               <div
@@ -91,18 +79,6 @@
               </div>
             </div>
             <div class="service-detail-card-back">
-              <content-block-layout
-                className="content-block ml-auto mr-auto pad-bottom"
-                v-if="getServiceHeroById('software')"
-                :title="getServiceHeroById('software').title"
-                subtitle=""
-                :description="getServiceHeroById('software').description"
-                :link="getServiceHeroById('software').link"
-                :linkText="getServiceHeroById('software').linkText"
-                :image="getServiceHeroById('software').image"
-                :caption="getServiceHeroById('software').caption"
-                :subCaption="getServiceHeroById('software').subCaption"
-              />
             </div>
           </div>
         </div>
@@ -127,18 +103,6 @@
             </div>
 
             <div class="service-detail-card-back">
-              <content-block-layout
-                className="content-block ml-auto mr-auto pad-bottom"
-                v-if="getServiceHeroById('websites')"
-                :title="getServiceHeroById('websites').title"
-                subtitle=""
-                :description="getServiceHeroById('websites').description"
-                :link="getServiceHeroById('websites').link"
-                :linkText="getServiceHeroById('websites').linkText"
-                :image="getServiceHeroById('websites').image"
-                :caption="getServiceHeroById('websites').caption"
-                :subCaption="getServiceHeroById('websites').subCaption"
-              />
             </div>
           </div>
         </div>
@@ -147,7 +111,7 @@
 
     <section class="hero-section shift-section-up no-pad-bottom lg-flex">
       <div class="col-3-squares bg-bc-blue no-pad-bottom lg-flex">
-        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
+        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative xs-hide">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <div
@@ -187,23 +151,11 @@
               />
             </div>
             <div class="service-detail-card-back">
-              <content-block-layout
-                className="content-block ml-auto mr-auto pad-bottom"
-                v-if="getServiceHeroById('software')"
-                :title="getServiceHeroById('software').title"
-                subtitle=""
-                :description="getServiceHeroById('software').description"
-                :link="getServiceHeroById('software').link"
-                :linkText="getServiceHeroById('software').linkText"
-                :image="getServiceHeroById('software').image"
-                :caption="getServiceHeroById('software').caption"
-                :subCaption="getServiceHeroById('software').subCaption"
-              />
             </div>
           </div>
         </div>
 
-        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative">
+        <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-third relative xs-hide">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <div
