@@ -23,27 +23,12 @@
     },
     data() {
       return {
-        displayNotifications: false,
-        loaded: false
+        displayNotifications: false
       }
     },
     methods: {
       hideNotifications() {
         this.displayNotifications = false
-      },
-      isLoaded() {
-        let loaded = false;
-
-        if (sessionStorage.getItem('isLoaded')) {
-          loaded = parseInt(sessionStorage.getItem('isLoaded')) === 1;
-        }
-
-        return loaded;
-      }
-    },
-    mounted() {
-      if (this.isLoaded()) {
-        this.loaded = true;
       }
     }
   }

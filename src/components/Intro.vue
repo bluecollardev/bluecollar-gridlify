@@ -24,30 +24,35 @@
       PhoneApp
     },
     mounted() {
-      if (parseInt(sessionStorage.getItem('isLoaded')) === 1) {
-        if (!document.body.classList.contains('loading')) {
-        document.body.classList.add('loading');
-      }
-
       const intro = this.$refs.intro;
-      setTimeout(() => {
-        anime.timeline()
-          .add({
-            targets: intro,
-            duration: 333,
-            opacity: [1, 0],
-            easing: 'easeOutQuad',
-            complete: () => {
-              sessionStorage.setItem('isLoaded', '1');
-              intro.classList.add('display-none');
-              if (document.body.classList.contains('loading')) {
-                document.body.classList.remove('loading');
-              }
-            }
-          });
-        }, 3000);
-      }
 
+      if (parseInt(sessionStorage.getItem('isLoaded')) !== 1) {
+        if (!document.body.classList.contains('loading')) {
+          document.body.classList.add('loading');
+        }
+
+        setTimeout(() => {
+          anime.timeline()
+            .add({
+              targets: intro,
+              duration: 333,
+              opacity: [1, 0],
+              easing: 'easeOutQuad',
+              complete: () => {
+                sessionStorage.setItem('isLoaded', '1');
+                intro.classList.add('display-none');
+                if (document.body.classList.contains('loading')) {
+                  document.body.classList.remove('loading');
+                }
+              }
+            });
+        }, 3000);
+      } else {
+        intro.classList.add('display-none');
+        if (document.body.classList.contains('loading')) {
+          document.body.classList.remove('loading');
+        }
+      }
     }
   }
 </script>
