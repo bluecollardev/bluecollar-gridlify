@@ -456,8 +456,13 @@ section.hero-section-01-col .hero-block {
 }
 
 section.hero-section {
-  position: relative;
   flex-wrap: wrap;
+  border-bottom: 1px solid white;
+}
+
+@media screen and (min-width: 64em) {
+  position: relative;
+  border-bottom: none;
 }
 
 section.hero-section.text-shadow * {

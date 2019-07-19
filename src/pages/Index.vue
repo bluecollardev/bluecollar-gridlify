@@ -825,6 +825,7 @@
   }
 
   .service-detail-card-top {
+    border-bottom: 1px solid white;
     &.fixed-height-mobile {
       min-height: 100vh;
     }
@@ -849,6 +850,7 @@
 
   @media screen and (min-width: 40em) {
     .service-detail-card-top {
+      border-bottom: none;
       &.drop-shadow:before {
         filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.666667)) brightness(0.5);
       }
