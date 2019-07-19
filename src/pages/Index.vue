@@ -914,7 +914,13 @@
   }
 
   .guitar-block {
-    width: 60%;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 40em) {
+    .guitar-block {
+      width: 60%;
+    }
   }
 
   .service-detail-card-top {
