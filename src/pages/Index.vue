@@ -813,6 +813,12 @@
     object-fit: cover;
   }
 
+  @media screen and (max-width: 40em) {
+    .video-block-bg {
+      min-height: 100vh;
+    }
+  }
+
   /*@media screen and (max-width: 40em){
     .video-block-bg {
       display: none;
