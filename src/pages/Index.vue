@@ -813,11 +813,11 @@
     object-fit: cover;
   }
 
-  @media screen and (max-width: 40em){
+  /*@media screen and (max-width: 40em){
     .video-block-bg {
       display: none;
     }
-  }
+  }*/
 
   .video-block-bg::before {
     content: '.';
@@ -883,6 +883,16 @@
       &.fixed-height-mobile {
         .service-detail-card-front {
           top: 100px !important; /* Override inline JS style, flip is done via component */
+        }
+
+        .service-detail-card-inner {
+          height: auto! important; /* Kill inline JS height when using fixed height mobile */
+        }
+
+        .service-detail-card-front,
+        .service-detail-card-back {
+          position: static !important;
+          height: auto !important;
         }
       }
     }
