@@ -1038,7 +1038,8 @@ $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
   --color-input-primary: var(--color-font-accent);
   --color-input-font-secondary: var(--color-font-accent);
 
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  //--font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-family: "Lato";
 
   --zindex-max: 999;
 
