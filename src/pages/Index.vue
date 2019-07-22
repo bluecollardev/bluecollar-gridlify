@@ -927,7 +927,7 @@
     }
 
     .shift-section-up + .shift-section-up {
-      margin-bottom: -100px;
+      margin-bottom: -103px;
       border-bottom: 1px solid white;
     }
 
