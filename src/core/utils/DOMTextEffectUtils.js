@@ -12,12 +12,14 @@
  */
 function wrapTitleText(text, lettersTarget, letterTargets) {
   let letters = [...letterTargets]; // Map NodeList to array
+
   let lastLetter = null;
-  let currentLetter = null;
   let words = text.innerText.split(/\s/); // Explode text on whitespace
 
   let letterPos = 1;
   let wordStartPos = null;
+
+  let currentLetter = null;
   while ((currentLetter = letters.shift()) && letters.length > -1) {
     if (lastLetter !== null) {
       // Is the currentLetter's y position different than lastLetter's?

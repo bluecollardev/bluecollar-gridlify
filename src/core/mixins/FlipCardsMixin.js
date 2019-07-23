@@ -33,7 +33,7 @@ export default {
           rotateY: [{ value: '180deg', duration: 100 }]
         });
 
-        const qsa = (el, str) =>  el.querySelectorAll(str);
+        const qsa = (el, str) => (el) ? el.querySelectorAll(str) : [];
 
         qsa('.more-info-link').forEach(((link) => {
           link.addEventListener('click', ((e) => {

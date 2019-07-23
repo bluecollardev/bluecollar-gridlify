@@ -284,23 +284,10 @@
       </template>
 
       <template v-slot:title>
-        <!--<h2 class="title text-center pad-bottom">
-          <span class="text-wrapper">
-            <span class="line blink">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
-                   y="0px" viewBox="0 0 100 125" xml:space="preserve">
-                <g>
-                  <path fill="white"
-                        d="M71.129,91.224c0,2.086-1.699,3.776-3.776,3.776h-8.128c-3.606,0-6.864-1.473-9.224-3.852   C47.64,93.527,44.383,95,40.776,95h-8.128c-2.077,0-3.776-1.69-3.776-3.776c0-2.086,1.699-3.776,3.776-3.776h8.128   c3.002,0,5.447-2.445,5.447-5.447V18c0-3.002-2.445-5.447-5.447-5.447h-8.128c-2.077,0-3.776-1.69-3.776-3.776   C28.871,6.69,30.571,5,32.648,5h8.128C44.383,5,47.64,6.473,50,8.852C52.36,6.473,55.617,5,59.224,5h8.128   c2.077,0,3.776,1.69,3.776,3.776c0,2.086-1.699,3.776-3.776,3.776h-8.128c-3.002,0-5.447,2.445-5.447,5.447v64   c0,3.002,2.445,5.447,5.447,5.447h8.128C69.429,87.447,71.129,89.137,71.129,91.224z"/>
-                </g>
-              </svg>
-            </span>
-            <span class="letters">Ready to Rock?</span>
-          </span>
-        </h2>-->
         <typewriter-text
           tag="h2"
-          text="Ready to Rock?">
+          text="Ready to Rock?"
+          class="title text-center pad-bottom">
         </typewriter-text>
       </template>
 
