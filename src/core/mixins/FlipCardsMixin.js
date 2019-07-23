@@ -7,12 +7,12 @@ export default {
       detailBackSelector = detailBackSelector || '.service-detail-card-back';
 
 
-      flipCardsContent.forEach(((element, index) => {
+      flipCardsContent.forEach(((el, index) => {
         // Set the height of the wrapper, we need to absolute position the content
-        element.style.height = `${element.getBoundingClientRect().height}px`;
-        element.style.width = `${element.getBoundingClientRect().width}px`;
+        el.style.height = `${el.getBoundingClientRect().height}px`;
+        el.style.width = `${el.getBoundingClientRect().width}px`;
 
-        const cardFaces = element.querySelectorAll('.service-detail-card-front, .service-detail-card-back');
+        const cardFaces = el.querySelectorAll('.service-detail-card-front, .service-detail-card-back');
         for (let cardFace of cardFaces) {
           cardFace.style.position = 'absolute';
           cardFace.style.top = '0';
@@ -22,40 +22,40 @@ export default {
           }
 
           // Freeze the heights of the faces
-          cardFace.style.height = `${element.getBoundingClientRect().height}px`;
-          cardFace.style.width = `${element.getBoundingClientRect().width}px`;
+          cardFace.style.height = `${el.getBoundingClientRect().height}px`;
+          cardFace.style.width = `${el.getBoundingClientRect().width}px`;
           // });
         }
-        element.animeJS = anime.timeline({ autoplay: false });
+        el.animeJS = anime.timeline({ autoplay: false });
 
-        element.animeJS.add({
-          targets: element,
+        el.animeJS.add({
+          targets: el,
           rotateY: [{ value: '180deg', duration: 100 }]
         });
 
-        const qsa = (el, str) =>  element.querySelectorAll(str);
+        const qsa = (el, str) =>  el.querySelectorAll(str);
 
         qsa('.more-info-link').forEach(((link) => {
           link.addEventListener('click', ((e) => {
             e.preventDefault();
             e.stopPropagation();
-            this.onCardEnter(element);
+            this.onCardEnter(el);
           }).bind(this));
         }).bind(this));
 
-        element.addEventListener('mouseleave', (() => {
-          this.onCardLeave(element);
+        el.addEventListener('mouseleave', (() => {
+          this.onCardLeave(el);
         }).bind(this));
       }).bind(this));
     },
     // Anime.js card flip helpers
     onCardEnter(el) {
       if (el.animeJS.reversed) el.animeJS.reverse();
-      element.animeJS.play();
+      el.animeJS.play();
     },
     onCardLeave(el) {
       if (!el.animeJS.reversed) el.animeJS.reverse();
-      element.animeJS.play();
+      el.animeJS.play();
     }
   }
 }
