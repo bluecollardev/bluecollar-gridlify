@@ -73,7 +73,7 @@
           });
 
         if (this.loop) {
-          timeline
+          this.timeline
             .add({
               targets: wordsTarget,
               opacity: settings.opacityOut,

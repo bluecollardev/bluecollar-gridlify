@@ -5,9 +5,6 @@ import DefaultLayout from '~/layouts/Default.vue';
 import '~/assets/css/main.scss';
 import '~/assets/fonts/icomoon/style.css';
 
-import VueWaypoint from 'vue-waypoint';
-import * as VueGoogleMaps from 'vue2-google-maps';
-
 export default function (Vue, { head }) {
   //head.link.push({ rel: 'stylesheet', href: 'https://unpkg.com/ace-css/css/ace.min.css' });
   head.link.push({ rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' });
@@ -16,8 +13,11 @@ export default function (Vue, { head }) {
   //head.script.push({ type: 'application/javascript', src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js' });
   //head.script.push({ type: 'application/javascript', src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js' });
   // Set default layout as a global component
-  if (process && process.isClient) {
-    Vue.use(VueWaypoint);
+  if (typeof window !== 'undefined') {
+    const VueWaypoint = require('vue-waypoint');
+    const VueGoogleMaps = require('vue2-google-maps');
+
+    Vue.use(VueWaypoint.default);
     Vue.use(VueGoogleMaps, {
       load: {
         key: 'AIzaSyBSDlMWErr_gwT5d5wze8oK9muKPuHLtKQ',
