@@ -1,7 +1,7 @@
 <template>
   <main>
-    <intro></intro>
-    <div class="container relative">
+    <!--<intro></intro>-->
+    <div class="container">
       <div class="notifications" v-if="displayNotifications">
         <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
         <span class="notification">
