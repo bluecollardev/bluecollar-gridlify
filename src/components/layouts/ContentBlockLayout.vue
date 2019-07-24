@@ -1,9 +1,10 @@
 <template>
-  <!--<div v-bind:class="classNameString" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+  <div v-bind:class="classNameString" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
     <div class="space-bottom-half g-services">
-      <p v-if="!this.titleAnimation" class="g-pstyle9">{{ this.title }}</p>
+      <!--<p v-if="!this.titleAnimation" class="g-pstyle9">{{ this.title }}</p>-->
+      <p class="g-pstyle9">{{ this.title }}</p>
 
-      <component
+      <!--<component
         ref="titleAnimationContainer"
         v-if="this.titleAnimation"
         :is="this.titleAnimation"
@@ -11,27 +12,28 @@
         class="content-block-title g-pstyle9"
         :text="this.title"
         :loop="false"
-        :animate="false"
-      />
+      />-->
     </div>
     <div class="g-services">
-      <div v-if="!this.descriptionAnimation" v-html="compiledDescription"></div>
+      <!--<div v-if="!this.descriptionAnimation" v-html="compiledDescription"></div>-->
+      <div v-html="compiledDescription"></div>
 
-      <component
+      <!--<component
         ref="descriptionAnimationContainer"
         v-if="this.descriptionAnimation"
         :is="this.descriptionAnimation.effect"
         :settings="this.descriptionAnimation.settings"
         :loop="false"
-        :animate="false">
-        <div class="content-block-description" v-html="compiledDescription"></div>
-      </component>
+        :animate="false"
+      >
+        <div v-html="compiledDescription"></div>
+      </component>-->
 
     </div>
     <div v-if="typeof this.linkText === 'string' && this.linkText.length > 0" class="g-services">
       <a class="space-top-half action-link transparent g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
     </div>
-  </div>-->
+  </div>
 </template>
 
 <script>
