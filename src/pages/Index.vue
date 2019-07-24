@@ -20,10 +20,10 @@
       bgColor="bg-bc-blue"
     >
       <template v-slot:title>
-        <typewriter-text
+        <typewriter-text-effect
           tag="h1"
           text="Experience the Blue Collar Difference">
-        </typewriter-text>
+        </typewriter-text-effect>
       </template>
     </video-hero-layout01-col>
 
@@ -45,6 +45,14 @@
                 :description="getService(0).description"
                 :link="getService(0).link"
                 :linkText="getService(0).linkText"
+                :titleAnimation="textEffects.slideUp"
+                :descriptionAnimation="{
+                  effect: contentEffects.fadeIn,
+                  settings: {
+                    opacity: [0, 1],
+                    duration: 5000
+                  }
+                }"
               />
             </div>
             <div class="service-detail-card-back">
@@ -89,6 +97,14 @@
                 :description="getService(2).description"
                 :link="getService(2).link"
                 :linkText="getService(2).linkText"
+                :titleAnimation="textEffects.slideUp"
+                :descriptionAnimation="{
+                  effect: contentEffects.fadeIn,
+                  settings: {
+                    opacity: [0, 1],
+                    duration: 5000
+                  }
+                }"
               />
             </div>
 
@@ -138,6 +154,14 @@
                 :description="getService(1).description"
                 :link="getService(1).link"
                 :linkText="getService(1).linkText"
+                :titleAnimation="textEffects.slideUp"
+                :descriptionAnimation="{
+                  effect: contentEffects.fadeIn,
+                  settings: {
+                    opacity: [0, 1],
+                    duration: 5000
+                  }
+                }"
               />
             </div>
             <div class="service-detail-card-back">
@@ -284,11 +308,11 @@
       </template>
 
       <template v-slot:title>
-        <typewriter-text
+        <typewriter-text-effect
           tag="h2"
           text="Ready to Rock?"
           class="title text-center pad-bottom">
-        </typewriter-text>
+        </typewriter-text-effect>
       </template>
 
       <template>
@@ -374,8 +398,15 @@
   import GoogleMapCutout from '~/components/svg/GoogleMapCutout.vue';
   import PartyLights from '~/components/svg/PartyLights.vue';
 
-  // Import animated text components
-  import TypewriterText from '~/core/components/text/TypewriterText.vue';
+  // Import animated text effects
+  import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
+  import ShrinkWordsOneByOneTextEffect from '~/core/components/text/ShrinkWordsOneByOne.vue';
+  import RotateWordsTextEffect from '~/core/components/text/RotateWords.vue';
+  import SlideUpTextEffect from '~/core/components/text/SlideUp.vue';
+  import FadeInTextEffect from '~/core/components/text/FadeIn.vue';
+
+  // Import animated content effects
+  import FadeInEffect from '~/core/components/animate/FadeIn.vue'
 
   // Import static data
   import HomeData from '~/data/Home.yml';
@@ -412,8 +443,14 @@
       PartyLights,
       // Import static HTML blocks
       ProcessBlock,
-      // Inject animated text components
-      TypewriterText
+      // Inject animated text effects
+      TypewriterTextEffect,
+      ShrinkWordsOneByOneTextEffect,
+      RotateWordsTextEffect,
+      SlideUpTextEffect,
+      FadeInTextEffect,
+      // Inject animated content effects
+      FadeInEffect
     },
     mixins: [
       FlipCardsMixin
@@ -421,7 +458,17 @@
     data() {
       return {
         formData: {},
-        repaint: Math.random()
+        repaint: Math.random(),
+        textEffects: {
+          typewriter: TypewriterTextEffect,
+          shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
+          rotateWords: RotateWordsTextEffect,
+          slideUp: SlideUpTextEffect,
+          fadeIn: FadeInTextEffect
+        },
+        contentEffects: {
+          fadeIn: FadeInEffect
+        }
       };
     },
     computed: {

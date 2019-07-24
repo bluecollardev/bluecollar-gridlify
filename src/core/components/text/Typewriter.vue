@@ -66,21 +66,22 @@
 
       const letterTargets = this.$el.querySelectorAll(this.letterSelector);
 
-      DOMTextEffectUtils.wrapTitleText(lettersTarget, lettersTarget, letterTargets);
+      DOMTextEffectUtils.wrapLettersOnWordBoundary(lettersTarget, lettersTarget, letterTargets);
 
       this.$nextTick(() => {
-        window.addEventListener('resize', DOMTextEffectUtils.rewrapTitleText.bind(this, lettersTarget, lettersTarget, letterTargets));
+        window.addEventListener('resize', DOMTextEffectUtils.rewrapLettersOnWordBoundary.bind(this, lettersTarget, lettersTarget, letterTargets));
       });
 
       let timeline = anime.timeline({ loop: true });
 
-      timeline.add({
-        targets: lineTarget,
-        scaleY: [1, 1],
-        opacity: [0.5, 1],
-        easing: 'easeOutExpo',
-        duration: 700
-      })
+      timeline
+        .add({
+          targets: lineTarget,
+          scaleY: [1, 1],
+          opacity: [0.5, 1],
+          easing: 'easeOutExpo',
+          duration: 700
+        })
         .add({
           targets: lineTarget,
           scaleY: [1, 1],
@@ -95,9 +96,7 @@
           easing: 'easeOutExpo',
           duration: 150,
           //offset: '-=775',
-          delay: (el, i) => {
-            return letterTargets.length * (i + 1)
-          }
+          delay: (el, i) => letterTargets.length * (i + 1)
         })
         .add({
           targets: lettersTarget,
