@@ -15,22 +15,32 @@
         default: false
       }
     },
-    mounted() {
-      let timeline = anime.timeline({ loop: this.loop });
+    data() {
+      return {
+        timeline: null
+      }
+    },
+    methods: {
+      setupAnimation() {
+        this.$set(this, 'timeline', anime.timeline({ loop: this.loop, autoplay: false }));
 
-      timeline
-        .add({
-          targets: this.$el,
-          duration: 2000
-        })
-        .add({
-          targets: this.$el,
-          ...this.settings
-        })
-        .add({
-          targets: this.$el,
-          duration: 5000
-        })
+        this.timeline
+          .add({
+            targets: this.$el,
+            duration: 2000
+          })
+          .add({
+            targets: this.$el,
+            ...this.settings
+          })
+          .add({
+            targets: this.$el,
+            duration: 5000
+          })
+      }
+    },
+    mounted() {
+      this.setupAnimation();
     }
   }
 </script>

@@ -38,46 +38,55 @@
         default: false
       }
     },
-    mounted() {
-      const wordsTarget = this.$el.querySelector(this.wordsSelector);
+    data() {
+      return {
+        timeline: null
+      }
+    },
+    methods: {
+      setupAnimation() {
+        this.$set(this, 'timeline', anime.timeline({ loop: this.loop, autoplay: false }));
 
-      let timeline = anime.timeline({ loop: this.loop });
+        const wordsTarget = this.$el.querySelector(this.wordsSelector);
 
-      let settings = {
-        opacityIn: [0, 1],
-        opacityOut: [1, 0],
-        // TODO: Calculate initial y pos based on font size
-        translateY: [60, 0],
-        durationIn: 1000,
-        durationOut: 1000,
-        delay: 0
-      };
+        let settings = {
+          opacityIn: [0, 1],
+          opacityOut: [1, 0],
+          // TODO: Calculate initial y pos based on font size
+          translateY: [60, 0],
+          durationIn: 1000,
+          durationOut: 1000,
+          delay: 0
+        };
 
-      timeline
-        .add({
-          targets: wordsTarget,
-          duration: 1500
-        })
-        .add({
-          targets: wordsTarget,
-          opacity: settings.opacityIn,
-          translateY: settings.translateY,
-          duration: settings.durationIn
-        })
-        .add({
-          targets: wordsTarget,
-          duration: 5000
-        });
-
-       if (this.loop) {
-         timeline
+        this.timeline
           .add({
             targets: wordsTarget,
-            opacity: settings.opacityOut,
-            duration: settings.durationOut
+            duration: 1500
           })
-       }
+          .add({
+            targets: wordsTarget,
+            opacity: settings.opacityIn,
+            translateY: settings.translateY,
+            duration: settings.durationIn
+          })
+          .add({
+            targets: wordsTarget,
+            duration: 5000
+          });
 
+         if (this.loop) {
+           timeline
+            .add({
+              targets: wordsTarget,
+              opacity: settings.opacityOut,
+              duration: settings.durationOut
+            })
+         }
+      }
+    },
+    mounted() {
+      this.setupAnimation();
     }
   }
 </script>
