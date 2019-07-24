@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:class="classNameString" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+  <!--<div v-bind:class="classNameString" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
     <div class="space-bottom-half g-services">
       <p v-if="!this.titleAnimation" class="g-pstyle9">{{ this.title }}</p>
 
@@ -31,7 +31,7 @@
     <div v-if="typeof this.linkText === 'string' && this.linkText.length > 0" class="g-services">
       <a class="space-top-half action-link transparent g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
     </div>
-  </div>
+  </div>-->
 </template>
 
 <script>
