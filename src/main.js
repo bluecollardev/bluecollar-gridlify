@@ -5,7 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue';
 import '~/assets/css/main.scss';
 import '~/assets/fonts/icomoon/style.css';
 
-//import VueWaypoint from 'vue-waypoint';
+//import VueWaypoint from 'vue-waypoint'
 import * as VueGoogleMaps from 'vue2-google-maps';
 
 export default function (Vue, { head }) {
@@ -58,7 +58,7 @@ export default function (Vue, { head }) {
 
   head.link.push({ rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' });
   head.link.push({ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato&display=swap' });
-  //head.script.push({ type: 'application/javascript', src: 'https://maps.googleapis.com/maps/api/gjs?key=AIzaSyBSDlMWErr_gwT5d5wze8oK9muKPuHLtKQ' });
+  //head.script.push({ type: 'application/javascript', src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBSDlMWErr_gwT5d5wze8oK9muKPuHLtKQ' });
   //head.script.push({ type: 'application/javascript', src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js' });
   //head.script.push({ type: 'application/javascript', src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js' });
   // Set default layout as a global component
