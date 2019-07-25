@@ -988,24 +988,6 @@
       }
     },
     methods: {
-      getTestimonial(idx) {
-        let items = this.testimonialContent.items;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
-      },
-      getService(idx) {
-        let items = this.pricingContent.services;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
-      },
       setPricing(pricing) {
         this.pricingFor = pricing;
       },

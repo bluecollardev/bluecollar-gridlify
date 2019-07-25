@@ -138,37 +138,6 @@
         // TODO: Display a range for long term projects?
         return `${months[endDate.getMonth()]} ${endDate.getFullYear()}`;
       },
-      getTestimonial(idx) {
-        let items = this.testimonialContent.items;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
-      },
-      getTestimonialById(id) {
-        if (!id) return null;
-
-        let items = this.testimonialContent.items.filter(item => {
-          return item.id === id;
-        });
-
-        if (items instanceof Array && items.length > 0) {
-          return items[0];
-        }
-
-        return null
-      },
-      getService(idx) {
-        let items = this.homeContent.services;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
-      },
       getProcessStep(idx) {
         let items = this.homeContent.processSteps;
 

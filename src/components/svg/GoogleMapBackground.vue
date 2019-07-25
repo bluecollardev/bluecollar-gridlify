@@ -90,10 +90,11 @@
         // Throttle the scrolling or we will overload the API and DOM
         if (Math.abs(this.lastWindowScroll.y - windowScroll.y) <= this.scrollThreshold) return;
 
-        console.log('map scroll');
-        console.log(JSON.stringify(this.gmapScroll));
-        console.log('new scroll');
-        console.log(JSON.stringify({ x: -(this.gmapScroll.x - windowScroll.x), y: -((this.gmapScroll.y - windowScroll.y) / this.parallaxMultiplier) }));
+        // TODO: If debug mode...
+        //console.log('map scroll');
+        //console.log(JSON.stringify(this.gmapScroll));
+        //console.log('new scroll');
+        //console.log(JSON.stringify({ x: -(this.gmapScroll.x - windowScroll.x), y: -((this.gmapScroll.y - windowScroll.y) / this.parallaxMultiplier) }));
 
         if (this.gmapScroll) {
           gmap.panBy(-(this.gmapScroll.x - windowScroll.x), -((this.gmapScroll.y - windowScroll.y) / this.parallaxMultiplier));

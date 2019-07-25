@@ -114,24 +114,6 @@
       },
     },
     methods: {
-      getTestimonial(idx) {
-        let items = this.testimonialContent.items;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
-      },
-      getService(idx) {
-        let items = this.homeContent.services;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
-      },
       getProcessStep(idx) {
         let items = this.homeContent.processSteps;
 

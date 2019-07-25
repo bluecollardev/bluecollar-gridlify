@@ -2,7 +2,7 @@
   <!-- REPEAT and alternate -->
   <section class="services lg-flex">
     <div
-      v-if="getTestimonial(0)"
+      v-if="getTestimonialByIndex(0)"
       class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top bg-white">
       <testimonial-block-layout
         className="space-top"

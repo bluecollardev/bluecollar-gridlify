@@ -41,11 +41,11 @@
           <div class="service-detail-card-front">
             <content-block-layout
               className="content-block ml-auto mr-auto md-pad-top"
-              v-if="getService(0).linkText"
-              :title="getService(0).title"
-              :description="getService(0).description"
-              :link="getService(0).link"
-              :linkText="getService(0).linkText"
+              v-if="getHomePageServiceByIndex(0).linkText"
+              :title="getHomePageServiceByIndex(0).title"
+              :description="getHomePageServiceByIndex(0).description"
+              :link="getHomePageServiceByIndex(0).link"
+              :linkText="getHomePageServiceByIndex(0).linkText"
               :titleAnimation="textEffects.slideUp"
               :descriptionAnimation="{
                 effect: contentEffects.simple,
@@ -81,11 +81,11 @@
           <div class="service-detail-card-front">
             <content-block-layout
               className="content-block ml-auto mr-auto pad-top pad-bottom"
-              v-if="getService(2).linkText"
-              :title="getService(2).title"
-              :description="getService(2).description"
-              :link="getService(2).link"
-              :linkText="getService(2).linkText"
+              v-if="getHomePageServiceByIndex(2).linkText"
+              :title="getHomePageServiceByIndex(2).title"
+              :description="getHomePageServiceByIndex(2).description"
+              :link="getHomePageServiceByIndex(2).link"
+              :linkText="getHomePageServiceByIndex(2).linkText"
               :titleAnimation="textEffects.slideUp"
               :descriptionAnimation="{
                 effect: contentEffects.simple,
@@ -109,15 +109,15 @@
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front center-testimonial">
               <div
-                v-if="getTestimonial(1)"
+                v-if="getTestimonialByIndex(1)"
                 class="flex flex-column flex-center flex-basis-third sm-pad-top">
                 <testimonial-block-layout
                   className="sm-space-top-half sm-space-bottom-half"
-                  :testimonial="getTestimonial(1).testimonial"
-                  :reviewedBy="getTestimonial(1).reviewedBy"
-                  :position="getTestimonial(1).position"
-                  :organization="getTestimonial(1).organization"
-                  :image="getTestimonial(1).image"
+                  :testimonial="getTestimonialByIndex(1).testimonial"
+                  :reviewedBy="getTestimonialByIndex(1).reviewedBy"
+                  :position="getTestimonialByIndex(1).position"
+                  :organization="getTestimonialByIndex(1).organization"
+                  :image="getTestimonialByIndex(1).image"
                   :testimonialAnimation="{
                     effect: contentEffects.simple,
                     settings: {
@@ -150,15 +150,15 @@
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <div
-                v-if="getTestimonial(0)"
+                v-if="getTestimonialByIndex(0)"
                 class="sm-flex flex-column flex-center flex-basis-third md-pad-top">
                 <testimonial-block-layout
                   className="sm-space-top-half sm-space-bottom-half"
-                  :testimonial="getTestimonial(0).testimonial"
-                  :reviewedBy="getTestimonial(0).reviewedBy"
-                  :position="getTestimonial(0).position"
-                  :organization="getTestimonial(0).organization"
-                  :image="getTestimonial(0).image"
+                  :testimonial="getTestimonialByIndex(0).testimonial"
+                  :reviewedBy="getTestimonialByIndex(0).reviewedBy"
+                  :position="getTestimonialByIndex(0).position"
+                  :organization="getTestimonialByIndex(0).organization"
+                  :image="getTestimonialByIndex(0).image"
                   :testimonialAnimation="{
                     effect: contentEffects.simple,
                     settings: {
@@ -194,11 +194,11 @@
             <div class="service-detail-card-front">
               <content-block-layout
                 className="content-block ml-auto mr-auto md-pad-top"
-                v-if="getService(1).linkText"
-                :title="getService(1).title"
-                :description="getService(1).description"
-                :link="getService(1).link"
-                :linkText="getService(1).linkText"
+                v-if="getHomePageServiceByIndex(1).linkText"
+                :title="getHomePageServiceByIndex(1).title"
+                :description="getHomePageServiceByIndex(1).description"
+                :link="getHomePageServiceByIndex(1).link"
+                :linkText="getHomePageServiceByIndex(1).linkText"
                 :titleAnimation="textEffects.slideUp"
                 :descriptionAnimation="{
                   effect: contentEffects.simple,
@@ -218,15 +218,15 @@
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
               <div
-                v-if="getTestimonial(2)"
+                v-if="getTestimonialByIndex(2)"
                 class="sm-flex flex-column flex-center flex-basis-third md-pad-top">
                 <testimonial-block-layout
                   className="sm-space-top-half sm-space-bottom-half"
-                  :testimonial="getTestimonial(2).testimonial"
-                  :reviewedBy="getTestimonial(2).reviewedBy"
-                  :position="getTestimonial(2).position"
-                  :organization="getTestimonial(2).organization"
-                  :image="getTestimonial(2).image"
+                  :testimonial="getTestimonialByIndex(2).testimonial"
+                  :reviewedBy="getTestimonialByIndex(2).reviewedBy"
+                  :position="getTestimonialByIndex(2).position"
+                  :organization="getTestimonialByIndex(2).organization"
+                  :image="getTestimonialByIndex(2).image"
                   :testimonialAnimation="{
                     effect: contentEffects.simple,
                     settings: {
@@ -360,6 +360,8 @@
 
   // Import mixins
   import FlipCardsMixin from '~/core/mixins/FlipCardsMixin';
+  import TestimonialMixin from '~/core/mixins/TestimonialMixin';
+  import HomeMixin from '~/core/mixins/HomeMixin';
 
   export default {
     components: {
@@ -397,6 +399,8 @@
       SimpleEffect
     },
     mixins: [
+      HomeMixin,
+      TestimonialMixin,
       FlipCardsMixin
     ],
     data() {
@@ -423,14 +427,8 @@
       heroContent() {
         return HeroData;
       },
-      servicesContent() {
-        return HeroData;
-      },
       generalContent() {
         return GeneralData;
-      },
-      testimonialContent() {
-        return TestimonialData;
       },
       homepageHero() {
         let items = this.heroContent.items.filter(item => {
@@ -443,17 +441,6 @@
 
         return null
       },
-      /*servicesSection() {
-        let items = this.heroContent.items.filter(item => {
-          return item.id === 'services-hero';
-        });
-
-        if (items instanceof Array && items.length > 0) {
-          return items[0];
-        }
-
-        return null
-      },*/
       servicesHero() {
         let items = this.heroContent.items.filter(item => {
           return item.id === 'services-hero';
@@ -484,75 +471,6 @@
         // let isLoaded = false;
 
         return sessionStorage.getItem('isLoaded') ? parseInt(sessionStorage.getItem('isLoaded')) === 1 : false;
-      },
-
-      getTestimonial(idx) {
-        let items = this.testimonialContent.items;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
-      },
-      getService(idx) {
-        let items = this.homeContent.services;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
-      },
-      getServiceById(id) {
-        let content = this.servicesContent;
-
-        if (content && content.services instanceof Array && content.services.length > 0) {
-          let items = content.services.filter(item => {
-            return item.id === id;
-          });
-
-          if (items instanceof Array && items.length > 0) {
-            return items[0];
-          }
-        }
-
-        return null
-      },
-      getServiceHeroById(id) {
-        let content = this.servicesContent;
-
-        if (content && content.services instanceof Array && content.services.length > 0) {
-          let items = content.services.filter(item => {
-            return item.id === id;
-          });
-
-          if (items instanceof Array && items.length > 0) {
-            if (items[0].hero instanceof Array && items[0].hero.length > 0) {
-              return items[0].hero[0] // TODO: Support for multiple heroes!
-            }
-          }
-        }
-
-        return null
-      },
-      getServiceBackupsByIdx(id, idx) {
-        let content = this.servicesContent;
-        idx = idx || 0;
-
-        if (content && content.services instanceof Array && content.services.length > 0) {
-          let items = content.services.filter(item => {
-            return item.id === id;
-          });
-
-          if (items instanceof Array && items.length > 0) {
-            if (items[0].backup instanceof Array && items[0].backup.length > 0) {
-              return items[0].backup[idx] // TODO: Support for multiple heroes!
-            }
-          }
-        }
-
-        return null
       },
       getProcessStep(idx) {
         let items = this.homeContent.processSteps;
