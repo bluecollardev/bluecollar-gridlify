@@ -56,7 +56,6 @@
     methods: {
       initializeMap() {
         this.$refs.mapRef.$mapPromise.then((gmap) => {
-          //map.panTo({lat: 1.38, lng: 103.80})
           //new this.google.maps.Marker({
           //  map: map,
           //  position: map.getCenter()
