@@ -6,7 +6,51 @@ import '~/assets/css/main.scss';
 import '~/assets/fonts/icomoon/style.css';
 
 export default function (Vue, { head }) {
-  //head.link.push({ rel: 'stylesheet', href: 'https://unpkg.com/ace-css/css/ace.min.css' });
+  head.meta.push({
+    property: 'og:locale',
+    content: 'en_US'
+  });
+
+  head.meta.push({
+    property: 'og:type',
+    content: 'website'
+  });
+
+  head.meta.push({
+    property: 'og:site_name',
+    content: 'Blue Collar Development'
+  });
+
+  head.meta.push({
+    property: 'og:url',
+    content: 'https://www.bluecollardev.com'
+  });
+
+  head.meta.push({
+    property: 'og:title',
+    content: 'Blue Collar Dev - Local Software and App Development in Victoria and Vancouver, BC'
+  });
+
+  head.meta.push({
+    property: 'og:description',
+    content: 'Blue Collar Development is a boutique software development house located in Victoria, BC. Specializing in mobile (iOS/Android), hybrid and web app development, Blue Collar creates amazing applications using cutting edge technology to help you bring your concept to life.'
+  });
+
+  head.meta.push({
+    name: 'keywords',
+    content: 'blue collar, boutique software, software development, hybrid app development, mobile app development, website development, local developers, IT consulting, vancouver, victoria, vancouver island, british columbia'
+  });
+
+  head.meta.push({
+    name: 'description',
+    content: 'Blue Collar Development is a boutique software development house located in Victoria, BC. Specializing in mobile (iOS/Android), hybrid and web app development, Blue Collar creates amazing applications using cutting edge technology to help you bring your concept to life.'
+  });
+
+  head.meta.push({
+    name: 'viewport',
+    content: 'width=device-width, initial-scale=1.0'
+  });
+
   head.link.push({ rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' });
   head.link.push({ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato&display=swap' });
   //head.script.push({ type: 'application/javascript', src: 'https://maps.googleapis.com/maps/api/gjs?key=AIzaSyBSDlMWErr_gwT5d5wze8oK9muKPuHLtKQ' });
