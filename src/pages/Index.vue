@@ -28,7 +28,7 @@
     </video-hero-layout01-col>
 
     <!-- Pull this out of the section, we need it to sit on top of the top video banner -->
-    <div class="col-3-squares no-pad-bottom lg-flex" style="position: absolute; width: 100%; z-index: 10; transform: translateY(-7vh)">
+    <section id="services" class="col-3-squares no-pad-bottom lg-flex" style="position: absolute; width: 100%; z-index: 10; transform: translateY(-3vh)">
       <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third">
         <video class="video-block-bg drop-shadow rotate-right is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
                poster="">
@@ -47,10 +47,10 @@
               :linkText="getService(0).linkText"
               :titleAnimation="textEffects.slideUp"
               :descriptionAnimation="{
-                effect: contentEffects.fadeIn,
+                effect: contentEffects.simple,
                 settings: {
                   opacity: [0, 1],
-                  duration: 5000
+                  duration: 2000
                 }
               }"
             />
@@ -87,10 +87,10 @@
               :linkText="getService(2).linkText"
               :titleAnimation="textEffects.slideUp"
               :descriptionAnimation="{
-                effect: contentEffects.fadeIn,
+                effect: contentEffects.simple,
                 settings: {
                   opacity: [0, 1],
-                  duration: 5000
+                  duration: 2000
                 }
               }"
             />
@@ -100,9 +100,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <section id="services" class="hero-section shift-section-up angle bg-bc-blue pad-top no-pad-bottom lg-flex flex-justify-center">
+    <section class="hero-section shift-section-up angle bg-bc-blue pad-top no-pad-bottom lg-flex flex-justify-center">
       <div class="col-3-squares no-pad-bottom lg-flex">
         <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
@@ -117,6 +117,22 @@
                   :position="getTestimonial(1).position"
                   :organization="getTestimonial(1).organization"
                   :image="getTestimonial(1).image"
+                  :testimonialAnimation="{
+                    effect: contentEffects.simple,
+                    settings: {
+                      opacity: [0, 1],
+                      translateY: [-60, 0],
+                      duration: 3000
+                    }
+                  }"
+                  :reviewedByAnimation="{
+                    effect: contentEffects.simple,
+                    settings: {
+                      opacity: [0, 1],
+                      translateY: [60, 0],
+                      duration: 3000
+                    }
+                  }"
                 />
               </div>
             </div>
@@ -142,6 +158,22 @@
                   :position="getTestimonial(0).position"
                   :organization="getTestimonial(0).organization"
                   :image="getTestimonial(0).image"
+                  :testimonialAnimation="{
+                    effect: contentEffects.simple,
+                    settings: {
+                      opacity: [0, 1],
+                      translateX: [-60, 0],
+                      duration: 3000
+                    }
+                  }"
+                  :reviewedByAnimation="{
+                    effect: contentEffects.simple,
+                    settings: {
+                      opacity: [0, 1],
+                      translateX: [60, 0],
+                      duration: 3000
+                    }
+                  }"
                 />
               </div>
             </div>
@@ -168,10 +200,10 @@
                 :linkText="getService(1).linkText"
                 :titleAnimation="textEffects.slideUp"
                 :descriptionAnimation="{
-                  effect: contentEffects.fadeIn,
+                  effect: contentEffects.simple,
                   settings: {
                     opacity: [0, 1],
-                    duration: 5000
+                    duration: 2000
                   }
                 }"
               />
@@ -194,6 +226,22 @@
                   :position="getTestimonial(2).position"
                   :organization="getTestimonial(2).organization"
                   :image="getTestimonial(2).image"
+                  :testimonialAnimation="{
+                    effect: contentEffects.simple,
+                    settings: {
+                      opacity: [0, 1],
+                      translateX: [60, 0],
+                      duration: 3000
+                    }
+                  }"
+                  :reviewedByAnimation="{
+                    effect: contentEffects.simple,
+                    settings: {
+                      opacity: [0, 1],
+                      translateX: [-60, 0],
+                      duration: 3000
+                    }
+                  }"
                 />
               </div>
             </div>
@@ -300,7 +348,7 @@
   import FadeInTextEffect from '~/core/components/text/FadeIn.vue';
 
   // Import animated content effects
-  import FadeInEffect from '~/core/components/animate/FadeIn.vue'
+  import SimpleEffect from '~/core/components/animate/Simple.vue'
 
   // Import static data
   import HomeData from '~/data/Home.yml';
@@ -344,7 +392,7 @@
       SlideUpTextEffect,
       FadeInTextEffect,
       // Inject animated content effects
-      FadeInEffect
+      SimpleEffect
     },
     mixins: [
       FlipCardsMixin
@@ -362,7 +410,7 @@
           fadeIn: FadeInTextEffect
         },
         contentEffects: {
-          fadeIn: FadeInEffect
+          simple: SimpleEffect
         }
       };
     },
@@ -563,7 +611,7 @@
 
   .video-banner video {
     width: 100%;
-    height: 100vh;
+    height: 115vh;
     position: absolute;
     z-index: 0;
     object-fit: cover !important;
@@ -571,7 +619,7 @@
 
   .text-banner {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -144,7 +144,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
   .hero-section-01-col {
     background-size: cover;
     /* Smooth parallax scrolling */
@@ -156,7 +156,7 @@ export default {
 
   .video-banner video {
     width: 100%;
-    height: 105%; /* A little overflow to ensure coverage with angles in place */
+    height: 110%; /* A little overflow to ensure coverage with angles in place */
     position: absolute;
     z-index: 0;
     object-fit: cover !important;
@@ -182,7 +182,7 @@ export default {
   /* TODO: Adjust for mobile and portrait */
   .text-banner {
     width: 100%;
-    min-height: 90vh;
+    min-height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -12,7 +12,6 @@
         :text="this.title"
         :loop="false"
         :animate="false"
-
       />
     </div>
     <div class="g-services">
@@ -24,8 +23,7 @@
         :is="this.descriptionAnimation.effect"
         :settings="this.descriptionAnimation.settings"
         :loop="false"
-        :animate="false"
-      >
+        :animate="false">
         <div v-html="compiledDescription"></div>
       </component>
 
@@ -109,7 +107,7 @@ export default {
       intersectionOptions: {
         root: null,
         rootMargin: '0px 0px 0px 0px',
-        threshold: [0, 1] // [0.25, 0.75] if you want a 25% offset!
+        threshold: [0.80]
       }
     }
   },

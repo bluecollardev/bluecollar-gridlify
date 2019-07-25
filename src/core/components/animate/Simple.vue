@@ -22,21 +22,25 @@
     },
     methods: {
       setupAnimation() {
-        this.$set(this, 'timeline', anime.timeline({ loop: this.loop, autoplay: false }));
+        try {
+          this.$set(this, 'timeline', anime.timeline({ loop: this.loop, autoplay: false }));
 
-        this.timeline
-          .add({
-            targets: this.$el,
-            duration: 2000
-          })
-          .add({
-            targets: this.$el,
-            ...this.settings
-          })
-          .add({
-            targets: this.$el,
-            duration: 5000
-          })
+          this.timeline
+            .add({
+              targets: this.$el,
+              duration: 333
+            })
+            .add({
+              targets: this.$el,
+              ...this.settings
+            })
+            .add({
+              targets: this.$el,
+              duration: 5000
+            })
+        } catch (err) {
+          console.log(err);
+        }
       }
     },
     mounted() {

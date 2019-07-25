@@ -62,7 +62,7 @@
         this.timeline
           .add({
             targets: wordsTarget,
-            duration: 1500
+            duration: 333
           })
           .add({
             targets: wordsTarget,

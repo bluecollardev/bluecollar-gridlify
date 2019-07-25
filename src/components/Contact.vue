@@ -204,7 +204,7 @@
 							name="submit"
 							value="Submit Form"
 							id="submit"
-							class="action-link space-top g-pstyle3"
+							class="action-link transparent space-top g-pstyle3"
 							style=""
 						/>
 					</div>
