@@ -60,6 +60,7 @@
         this.timeline
           .add({
             targets: wordsTarget,
+            opacity: 0,
             duration: 1500
           })
           .add({

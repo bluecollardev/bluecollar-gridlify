@@ -119,7 +119,7 @@ export default {
       intersectionOptions: {
         root: null,
         rootMargin: '0px 0px 0px 0px',
-        threshold: [0.80]
+        threshold: [0.33333]
       }
     }
   },
@@ -144,12 +144,28 @@ export default {
      * }
      */
     onWaypoint({going, direction}) {
-      if (typeof this.$refs.testimonialAnimationContainer !== 'undefined') {
-        this.$refs.testimonialAnimationContainer.timeline.play();
+      if (going === this.$waypointMap.GOING_IN) {
+        console.log('testimonial waypoint going in!');
+        if (typeof this.$refs.testimonialAnimationContainer !== 'undefined') {
+          this.$refs.testimonialAnimationContainer.timeline.play();
+        }
+
+        if (typeof this.$refs.reviewedByAnimationContainer !== 'undefined') {
+          this.$refs.reviewedByAnimationContainer.timeline.play();
+        }
       }
 
-      if (typeof this.$refs.reviewedByAnimationContainer !== 'undefined') {
-        this.$refs.reviewedByAnimationContainer.timeline.play();
+      if (going === this.$waypointMap.GOING_OUT) {
+        console.log('testimonial waypoint going out!');
+        if (typeof this.$refs.testimonialAnimationContainer !== 'undefined') {
+          this.$refs.testimonialAnimationContainer.timeline.seek(0);
+          this.$refs.reviewedByAnimationContainer.timeline.pause();
+        }
+
+        if (typeof this.$refs.reviewedByAnimationContainer !== 'undefined') {
+          this.$refs.reviewedByAnimationContainer.timeline.seek(0);
+          this.$refs.reviewedByAnimationContainer.timeline.pause();
+        }
       }
     }
   }

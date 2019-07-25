@@ -8,7 +8,7 @@
         v-if="this.titleAnimation"
         :is="this.titleAnimation"
         tag="h3"
-        class="g-pstyle9"
+        class="content-block-title g-pstyle9"
         :text="this.title"
         :loop="false"
         :animate="false"
@@ -24,7 +24,7 @@
         :settings="this.descriptionAnimation.settings"
         :loop="false"
         :animate="false">
-        <div v-html="compiledDescription"></div>
+        <div class="content-block-description" v-html="compiledDescription"></div>
       </component>
 
     </div>
@@ -107,7 +107,7 @@ export default {
       intersectionOptions: {
         root: null,
         rootMargin: '0px 0px 0px 0px',
-        threshold: [0.80]
+        threshold: [0.33333]
       }
     }
   },
@@ -127,12 +127,28 @@ export default {
      * }
      */
     onWaypoint({ going, direction }) {
-      if (typeof this.$refs.titleAnimationContainer !== 'undefined') {
-        this.$refs.titleAnimationContainer.timeline.play();
+      if (going === this.$waypointMap.GOING_IN) {
+        console.log('contentblock waypoint going in!');
+        if (typeof this.$refs.titleAnimationContainer !== 'undefined') {
+          this.$refs.titleAnimationContainer.timeline.play();
+        }
+
+        if (typeof this.$refs.descriptionAnimationContainer !== 'undefined') {
+          this.$refs.descriptionAnimationContainer.timeline.play();
+        }
       }
 
-      if (typeof this.$refs.descriptionAnimationContainer !== 'undefined') {
-        this.$refs.descriptionAnimationContainer.timeline.play();
+      if (going === this.$waypointMap.GOING_OUT) {
+        console.log('contentblock waypoint going out!');
+        if (typeof this.$refs.titleAnimationContainer !== 'undefined') {
+          this.$refs.titleAnimationContainer.timeline.seek(0);
+          this.$refs.titleAnimationContainer.timeline.pause();
+        }
+
+        if (typeof this.$refs.descriptionAnimationContainer !== 'undefined') {
+          this.$refs.descriptionAnimationContainer.timeline.seek(0);
+          this.$refs.descriptionAnimationContainer.timeline.pause();
+        }
       }
     }
   }

@@ -28,6 +28,7 @@
           this.timeline
             .add({
               targets: this.$el,
+              opacity: 0,
               duration: 333
             })
             .add({

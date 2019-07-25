@@ -88,7 +88,7 @@ function wrapLetters(text) {
  * @returns {string}
  */
 function wrapWords(text) {
-  return `<span class="words">${text.textContent.replace(/(\w+)/g, '<span class="word">$&</span>')}</span>`;
+  return `<span class="words">${text.textContent.replace(/([\S]+)/g, '<span class="word">$&</span>')}</span>`;
 }
 
 export { wrapLettersOnWordBoundary, rewrapLettersOnWordBoundary, wrapLetters, wrapWords };

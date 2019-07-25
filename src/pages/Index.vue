@@ -272,11 +272,12 @@
       </template>
 
       <template v-slot:title>
-        <typewriter-text-effect
+        <shrink-words-one-by-one-text-effect
           tag="h2"
-          text="Ready to Rock?"
-          class="title text-center pad-bottom">
-        </typewriter-text-effect>
+          text="Are You Ready to Rock?"
+          class="title text-center pad-bottom"
+          :loop="true">
+        </shrink-words-one-by-one-text-effect>
       </template>
 
       <template>
