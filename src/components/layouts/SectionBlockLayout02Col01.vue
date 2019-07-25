@@ -93,9 +93,3 @@ export default {
   }
 };
 </script>
-
-<style>
-  .flip-x {
-    flex-direction: row-reverse;
-  }
-</style>

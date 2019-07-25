@@ -103,26 +103,3 @@
     </div>
   </footer>
 </template>
-
-<style lang="scss">
-  footer {
-    position: relative;
-    z-index: 10;
-  }
-
-  @media screen and (max-width: 40em) {
-    footer {
-      padding: 1px;
-
-      h1, h2, h3, h4, h5, h6, p {
-        text-align: center;
-      }
-    }
-  }
-
-  @media screen and (min-width: 102em) {
-    footer {
-      padding: 1rem 12rem;
-    }
-  }
-</style>

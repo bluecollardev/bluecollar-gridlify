@@ -220,17 +220,6 @@
   $timeline-content-title-color: #464545;
   $timeline-content-description-color: #333;
 
-  .clearfix {
-    clear: both;
-    overflow: visible;
-  }
-
-  .clearfix::after {
-    content: '';
-    clear: both;
-    display: table;
-  }
-
   .vertical-line {
     width: 4px;
     background-color: #DFDFDF;
@@ -499,41 +488,7 @@
   }
 </style>
 
-
 <style>
-  ul.bullets {
-    list-style: square inside;
-  }
-
-  ul.bullets li {
-    list-style: square inside;
-  }
-
-  .video-banner video {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: 0;
-    object-fit: cover !important;
-  }
-
-  .text-banner {
-    width: 100%;
-    height: 110vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  .text-banner .text {
-    margin-left: auto;
-    margin-right: auto;
-    width: 33vw;
-    z-index: 1;
-  }
-
   /* TODO: This is ripped clean it up */
   .title {
     font-weight: 900;

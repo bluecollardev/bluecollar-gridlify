@@ -1,0 +1,28 @@
+/* Make sure the container is relatively positioned */
+.figure-caption {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 3rem;
+  width: 30rem;
+}
+
+.figure-caption-full {
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* TODO: Responsive plz! */
+  padding: 1rem 2rem;
+}
+
+.figure-caption-left {
+  left: 0;
+}
+
+.figure-caption.bg-cherry,
+.figure-caption-full.bg-cherry {
+  background-color: rgba(114, 5, 0, 0.777);
+}
+
+
+.figure-caption-right {
+  right: 0;
+}

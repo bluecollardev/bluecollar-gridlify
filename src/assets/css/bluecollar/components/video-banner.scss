@@ -1,0 +1,32 @@
+.video-banner video {
+  width: 100%;
+  height: 110%; /* A little overflow to ensure coverage with angles in place */
+  position: absolute;
+  z-index: 0;
+  object-fit: cover !important;
+}
+
+@media screen and (max-width: 40em) {
+  /*.video-banner video {
+    display: none;
+    visibility: hidden;
+  }*/
+}
+
+.video-banner.overlay:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.25);
+}
+
+@media screen and (min-width: 84em) {
+  .video-banner {
+    .hero-block {
+      max-width: 60%;
+    }
+  }
+}

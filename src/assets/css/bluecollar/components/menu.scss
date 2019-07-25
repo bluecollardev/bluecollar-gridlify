@@ -1,0 +1,16 @@
+#menu {
+  flex: 1 1 100%;
+  justify-content: space-around;
+  max-width: 75%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 84em) {
+  #menu {
+    flex: 1 1 100%;
+    justify-content: space-around;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}

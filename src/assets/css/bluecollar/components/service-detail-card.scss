@@ -1,0 +1,93 @@
+.service-detail-card {
+  perspective: 1000px
+}
+
+.service-detail-card-inner {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.service-detail-card-front,
+.service-detail-card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.service-detail-card-back {
+  display: none;
+  transform: rotateY(180deg);
+}
+
+.service-detail-card-top {
+  border-bottom: 1px solid white;
+  &.fixed-height-mobile {
+    min-height: 100vh;
+  }
+}
+
+.service-detail-card-top:hover::before {
+  background-image: radial-gradient(black 35%, transparent 25%);
+  background-size: 2px 2px;
+}
+
+.service-detail-card-inner {
+  z-index: 2;
+  position: relative;
+
+}
+
+.service-detail-card-top p,
+.service-detail-card-top a,
+.service-detail-card-top * {
+  color: white !important;
+}
+
+.service-detail-card-top {
+  text-shadow: 1px 0 5px rgba(0,0,0,.666)
+}
+
+@media screen and (min-width: 40em) {
+  .service-detail-card-top {
+    border-bottom: none;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .service-detail-card-top {
+    &.fixed-height-mobile {
+      .service-detail-card-front {
+        top: 100px !important; /* Override inline JS style, flip is done via component */
+      }
+
+      .service-detail-card-inner {
+        height: auto! important; /* Kill inline JS height when using fixed height mobile */
+      }
+
+      .service-detail-card-front,
+      .service-detail-card-back {
+        position: static !important;
+        height: auto !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .service-detail-card-top {
+    &.fixed-height-mobile {
+      min-height: 50vh;
+    }
+  }
+
+  .service-detail-card-inner {
+    min-height: auto;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .service-detail-card-top {
+    position: relative;
+  }
+}

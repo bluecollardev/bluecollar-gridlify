@@ -1,0 +1,31 @@
+.text-banner {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-banner .text {
+  margin-left: auto;
+  margin-right: auto;
+  width: 33vw;
+  z-index: 1;
+}
+
+/* TODO: Adjust for mobile and portrait */
+.text-banner {
+  width: 100%;
+  min-height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.text-banner .text-content {
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}

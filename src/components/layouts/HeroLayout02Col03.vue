@@ -106,9 +106,3 @@ export default {
   }
 };
 </script>
-
-<style>
-  .text-justify {
-    text-align: justify;
-  }
-</style>

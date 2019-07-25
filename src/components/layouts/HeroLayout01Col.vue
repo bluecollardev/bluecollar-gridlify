@@ -144,21 +144,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-  .hero-section-01-col {
-    background-size: cover;
-    /* Smooth parallax scrolling */
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    transition: 0s linear;
-    transition-property: background-position;
-  }
-
-  @media screen and (min-width: 64em) {
-    .hero-section-content {
-      position: relative;
-    }
-  }
-</style>
-

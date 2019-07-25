@@ -255,16 +255,3 @@
 		}
 	}
 </script>
-
-<style lang="scss">
-	.ampstart-input > label {
-		color: white !important;
-	}
-
-	/* TODO: Fix the default spacing! */
-	textarea {
-		padding-top: 1rem;
-		padding-bottom: 1rem;
-	}
-</style>
-

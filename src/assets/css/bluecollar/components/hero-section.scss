@@ -1,0 +1,249 @@
+section.hero-section-01-col {
+  position: relative;
+}
+
+section.hero-section-01-col .hero-block {
+  position: relative;
+  top: 2rem;
+  /*top: 6rem;*/
+}
+
+section.hero-section {
+  flex-wrap: wrap;
+  border-bottom: 1px solid white;
+}
+
+@media screen and (min-width: 64em) {
+  section.hero-section {
+    position: relative;
+    border-bottom: none;
+  }
+
+  .hero-section-content {
+    position: relative;
+  }
+}
+
+section.hero-section.text-shadow * {
+  &:not(input):not(select):not(checkbox):not(label):not(textarea) {
+    text-shadow: 1px 0 5px rgba(0,0,0,.666);
+  }
+}
+
+section.hero-section.text-shadow a.action-link,
+section.hero-section.text-shadow a.action-button {
+  text-shadow: none;
+}
+
+@media screen and (min-width: 1400px) {
+  /* TODO: Use these as a fallback for old browsers, using clip-path is waaaay easier in new browsers */
+  /*section.hero-section.angle + section.hero-section:before,
+  section.hero-section-01-col.angle + section.hero-section:before,
+  section.hero-section-01-col.angle + section.hero-section-01-col:before {
+    background: transparent;
+    height: 100px;
+    top: -99px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    content: '';
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(242, 241, 237)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(242, 241, 237)'></polygon></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+
+  section.hero-section.angle + section.hero-section.bg-bc-blue:before,
+  section.hero-section-01-col.angle + section.hero-section.bg-bc-blue:before,
+  section.hero-section-01-col.angle + section.hero-section-01-col.bg-bc-blue:before {
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(51, 88, 122)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(51, 88, 122)'></polygon></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  section.hero-section.angle + section.hero-section.bg-white:before,
+  section.hero-section-01-col.angle + section.hero-section.bg-white:before,
+  section.hero-section-01-col.angle + section.hero-section-01-col.bg-white:before {
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(255, 255, 255)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(255, 255, 255)'></polygon></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  section.hero-section.angle + section.hero-section.bg-black:before,
+  section.hero-section-01-col.angle + section.hero-section.bg-black:before,
+  section.hero-section-01-col.angle + section.hero-section-01-col.bg-black:before {
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(48, 48, 48)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(48, 48, 48)'></polygon></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  section.hero-section.angle + section.hero-section.n1-white.n2-light-grey:before,
+  section.hero-section-01-col.angle + section.hero-section.n1-white.n2-light-grey:before,
+  section.hero-section-01-col.angle + section.hero-section-01-col.n1-white.n2-light-grey:before {
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(255, 255, 255)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(242, 241, 237)'></polygon></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  section.hero-section.angle + section.hero-section.n1-light-grey.n2-white:before,
+  section.hero-section-01-col.angle + section.hero-section.n1-light-grey.n2-white:before,
+  section.hero-section-01-col.angle + section.hero-section-01-col.n1-light-grey.n2-white:before {
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(242, 241, 237)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(255, 255, 255)'></polygon></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  section.hero-section-01-col.angle + section.hero-section,
+  section.hero-section-01-col.angle + section.hero-section-01-col {
+    padding-bottom: 120px;
+  }
+
+  .hero-section-01-col:nth-child(even) .hero-image-wrapper img {
+    position: relative;
+    right: auto;
+    top: 20vh;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  .hero-section-01-col:nth-child(odd) .hero-image-wrapper img {
+    position: relative;
+    left: auto;
+    top: 20vh;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  section.hero-section.angle + section.hero-section {
+    padding-bottom: 120px;
+  }*/
+
+  /* New angle method using css clip-path - it makes it possible for us to use video or
+  image backgrounds on sections following an .angle section as the angled part isn't part
+  of the next section. */
+  section.hero-section.angle {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9vh), 50% 100%, 0 calc(100% - 9vh));
+  }
+
+  section.hero-section.angle + section.hero-section {
+    padding-top: 9vh; /* Offset */
+  }
+
+  /* TODO: Write a sass mixin or plugin */
+  /* Header, ignore... */
+  section.hero-section:nth-child(1) {
+    z-index: 10;
+  }
+
+  section.hero-section:nth-child(2) {
+    z-index: 9;
+  }
+
+  section.hero-section:nth-child(3) {
+    z-index: 8;
+    transform: translateY(-9vh);
+  }
+
+  section.hero-section:nth-child(4) {
+    z-index: 7;
+    transform: translateY(-9vh);
+  }
+
+  section.hero-section:nth-child(5) {
+    z-index: 6;
+    transform: translateY(-13vh);
+  }
+
+  section.hero-section:nth-child(6) {
+    z-index: 5;
+    transform: translateY(-26vh);
+  }
+
+  section.hero-section:nth-child(7) {
+    z-index: 4;
+    transform: translateY(-35vh);
+  }
+
+  section.hero-section.angle + footer {
+    padding-top: 26vh; /* Offset */
+  }
+
+  /*section.hero-section:nth-child(8) {
+    z-index: 3;
+  }
+
+  section.hero-section:nth-child(9) {
+    z-index: 2;
+  }
+
+  section.hero-section:nth-child(10) {
+    z-index: 1;
+  }*/
+
+  .hero-section:nth-child(even) .hero-image-wrapper img {
+    position: relative;
+    /* left: -15vw; */
+    right: auto;
+    top: 20vh;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  .hero-section:nth-child(odd) .hero-image-wrapper img {
+    position: relative;
+    /* right: 8vw; */
+    left: auto;
+    top: 20vh;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+}
+
+/* Hero images */
+.hero-image-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 40em) {
+  .hero-image-wrapper {
+    max-width: 100vw;
+  }
+}
+
+@media screen and (max-width: 52em) {
+  .hero-image-wrapper {
+    max-width: 100vw;
+  }
+}
+
+@media screen and (min-width: 102em) {
+  .hero-image-wrapper {
+    display: block;
+    max-width: 50vw;
+  }
+}
+
+/* Layout specific */
+.hero-section-01-col {
+  background-size: cover;
+  /* Smooth parallax scrolling */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: 0s linear;
+  transition-property: background-position;
+}
+
+@media screen and (min-width: 64em) {
+  .hero-section-content {
+    position: relative;
+  }
+}
+
+
+

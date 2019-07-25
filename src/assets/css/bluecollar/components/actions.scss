@@ -1,0 +1,45 @@
+a.action-link,
+a.action-link:active,
+a.action-link:visited,
+a.action-link:hover,
+a.action-button:active,
+a.action-button:visited,
+a.action-button:hover {
+  color: #33587a;
+}
+
+a.action-link.transparent,
+a.action-link.transparent:active,
+a.action-link.transparent:visited,
+a.action-link.transparent:hover,
+a.action-button.transparent:active,
+a.action-button.transparent:visited,
+a.action-button.transparent:hover {
+  color: white;
+  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.666) !important;
+}
+
+.more-info-link {
+  display: inline-block;
+}
+
+.action-link,
+.action-button {
+  display: inline-block;
+  background: white;
+  padding: 1rem 2rem;
+  border: 1px solid #33587a; /* Blue Collar Blue */
+  text-decoration: none;
+}
+
+.action-link.transparent,
+.action-button.transparent {
+  display: inline-block;
+  background: rgba(0,0,0,0.125);
+  padding: 1rem 2rem;
+  border: 1px solid white; /* Blue Collar Blue */
+  text-decoration: none;
+  color: white;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.333) !important;
+}
+

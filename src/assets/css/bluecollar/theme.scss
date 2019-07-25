@@ -66,110 +66,66 @@
   @return ($target/$vw-context) * 1vw;
 }
 
-html, body, main {
-  max-width: 100%;
+@import './components/hero-section';
+@import './components/menu';
+@import './components/actions';
+@import './components/figure-caption';
+@import './components/service-detail-card';
+@import './components/video-block-bg';
+@import './components/video-banner';
+@import './components/text-banner';
+@import './parts/header';
+@import './parts/footer';
+@import './parts/logo';
+
+/* Temporary place for random utils */
+.overflow-scroll {
+  overflow: hidden;
 }
 
-body {
-  font-family: sans-serif;
-  font-family: 'Lato', sans-serif;
-  overflow-x: hidden;
+.text-justify {
+  text-align: justify;
 }
 
-#menu {
-  flex: 1 1 100%;
-  justify-content: space-around;
-  max-width: 75%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.flip-x {
+  flex-direction: row-reverse;
 }
 
-@media screen and (min-width: 84em) {
-  #menu {
-    flex: 1 1 100%;
-    justify-content: space-around;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.clearfix {
+  clear: both;
+  overflow: visible;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+@media (max-width: 40em) {
+  .xs-order-1 {
+    order: 1;
+  }
+
+  .xs-order-2 {
+    order: 2;
   }
 }
 
-.logo {
-  margin-left: 1rem;
-  height: 40px;
-}
-
-footer .logo {
-    margin-left: 0;
+@media (min-width: 40em) {
+  .sm-order-1 {
+    order: 1;
   }
 
-@media screen and (max-width: 40em) {
-  .logo {
-    left: 0;
-    height: 30px;
+  .sm-order-2 {
+    order: 2;
   }
-
-  footer .logo {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 40em) {
-  .logo {
-    height: 30px;
-  }
-
-  footer .logo {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* Override ampstart defaults */
-.ampstart-headerbar .ampstart-navbar-trigger {
-  color: #33587a;
-}
-
-#main .g-artboard {
-  margin:0 auto;
-}
-#main .g-artboard p {
-  margin:0;
-}
-
-.g-aiPointText p { white-space: nowrap; }
-
-#fb {
-  position:relative;
-  overflow:hidden;
 }
 
 /* Borders */
 .border-black-1px {
   border: 1px solid #000000;
 }
-
-/* General Site Styles */
-header {
-  /*padding: 1rem 2rem;*/ /* Use amp-start spacing */
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-footer {
-  padding: 1rem 2rem;
-  background: black;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Mobile first plz */
 
 /* From bass-override-vars... */
 
@@ -182,12 +138,57 @@ footer a:hover {
 @custom-media --breakpoint-md-lg (min-width: 52.06em) and (max-width: 64em);
 */
 
-.homepage-hero {
-  min-height: 90vh;
-  /*overflow-x: hidden;*/
+/* Theme */
+html, body, main {
+  max-width: 100%;
 }
 
+body {
+  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
 
+:root {
+  --cblue: #33587a;
+  --ccherry: #720500;
+  --cgrey : #3E3A37;
+  --cwhite : #ffffff;
+  --ccream : #FAFBFC;
+  --cgrey_green: #435466;
+  --clightgrey : #DAD9D7;
+
+  --body_height_8: calc((100vh - 113px)/8);
+  --body_height_4: calc((100vh - 113px)/4);
+}
+
+.icon-arrow {
+  mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 284.929 284.929'><path d='M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441		L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z'/></svg>");
+}
+i {
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+ul {padding: 0; margin: 0;}
+li {list-style: none;}
+
+//.wrap {max-width: 1024px; min-width: 320px;}
+.wrap {min-width: 320px; height: 100%;}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.5rem;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 /* TODO: Don't apply these set widths everywhere... target testimonials only? */
 img.circle {
@@ -197,31 +198,6 @@ img.circle {
   max-width: none;
   object-fit: cover;
 }
-
-.hero-image-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-@media screen and (min-width: 40em) {
-  .hero-image-wrapper {
-    max-width: 100vw;
-  }
-}
-
-@media screen and (max-width: 52em) {
-  .hero-image-wrapper {
-    max-width: 100vw;
-  }
-}
-
-@media screen and (min-width: 102em) {
-  .hero-image-wrapper {
-    display: block;
-    max-width: 50vw;
-  }
-}
-
 
 @media screen and (min-width: 1400px) {
   .testimonial-block-wrapper img {
@@ -233,80 +209,6 @@ img.circle {
 .contact-cta {
   padding-top: 6rem;
   padding-bottom: 6rem;
-}
-
-/* Make sure the container is relatively positioned */
-.figure-caption {
-  position: absolute;
-  bottom: 0;
-  padding: 1rem 3rem;
-  width: 30rem;
-}
-
-.figure-caption-full {
-  position: absolute;
-  bottom: 0;
-  width: 100%; /* TODO: Responsive plz! */
-  padding: 1rem 2rem;
-}
-
-.figure-caption-left {
-  left: 0;
-}
-
-.figure-caption.bg-cherry,
-.figure-caption-full.bg-cherry {
-  background-color: rgba(114, 5, 0, 0.777);
-}
-
-
-.figure-caption-right {
-  right: 0;
-}
-
-.action-link,
-.action-button {
-  display: inline-block;
-  background: white;
-  padding: 1rem 2rem;
-  border: 1px solid #33587a; /* Blue Collar Blue */
-  text-decoration: none;
-}
-
-.action-link.transparent,
-.action-button.transparent {
-  display: inline-block;
-  background: rgba(0,0,0,0.125);
-  padding: 1rem 2rem;
-  border: 1px solid white; /* Blue Collar Blue */
-  text-decoration: none;
-  color: white;
-  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.333) !important;
-}
-
-a.action-link,
-a.action-link:active,
-a.action-link:visited,
-a.action-link:hover,
-a.action-button:active,
-a.action-button:visited,
-a.action-button:hover {
-  color: #33587a;
-}
-
-a.action-link.transparent,
-a.action-link.transparent:active,
-a.action-link.transparent:visited,
-a.action-link.transparent:hover,
-a.action-button.transparent:active,
-a.action-button.transparent:visited,
-a.action-button.transparent:hover {
-  color: white;
-  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.666) !important;
-}
-
-.more-info-link {
-  display: inline-block;
 }
 
 /* Menu Customization */
@@ -365,70 +267,7 @@ a.action-button.transparent:hover {
   padding-bottom: 120px;
   border: 1px solid #ccc;
 }
-
-/* Kill travel styles for our display */
-/* TODO: We shouldn't be killing styles like this */
-.travel-overflow-container {
-  display: inline-block;
-  min-width: auto;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  /* min-width: 100vw; */
-  /* padding-left: calc((100vw - var(--width-3)) / 2); */
-  /* padding-right: calc((100vw - var(--width-3)) / 2); */
-}
-
-.travel-overflow-container .flex {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-}
-
-
-/* Quick disable overflow scrolling on containers */
-.travel-overflow-container {
-  /* TODO: Cross browser fix accounting for vertical scrollbar width */
-  min-width: auto;
-  overflow: hidden;
-}
-
-.overflow-scroll {
-  overflow: hidden;
-}
 /* Done */
-
-/* Fix background color, uses var */
-.travel-search {
-  /* TODO: Override color vars */
-  /*background-color: var(--color-purple);*/
-  background-color: transparent;
-}
-
-.travel-results-result-link {
-  display: none;
-}
-
-.travel-results-result-like {
-  display: none;
-}
-
-.travel-results-result-flags {
-  display: none;
-}
-
-.travel-results-result-subtext {
-  margin-left: 1rem;
-}
-
-[class*=travel-popular-tilt-] {
-  display: none;
-}
-
-.alp-form-container.ampstart-card {
-  background: transparent;
-  box-shadow: none;
-}
 
 @media screen and (max-width: 660px) {
   .banner-image {
@@ -437,47 +276,11 @@ a.action-button.transparent:hover {
   }
 }
 
-.text-justify {
-  text-align: justify;
+/* Homepage hero */
+.homepage-hero {
+  min-height: 90vh;
+  /*overflow-x: hidden;*/
 }
-
-.flip-x {
-  flex-direction: row-reverse;
-}
-
-section.hero-section-01-col {
-  position: relative;
-}
-
-section.hero-section-01-col .hero-block {
-  position: relative;
-  top: 2rem;
-  /*top: 6rem;*/
-}
-
-section.hero-section {
-  flex-wrap: wrap;
-  border-bottom: 1px solid white;
-}
-
-@media screen and (min-width: 64em) {
-  section.hero-section {
-    position: relative;
-    border-bottom: none;
-  }
-}
-
-section.hero-section.text-shadow * {
-  &:not(input):not(select):not(checkbox):not(label):not(textarea) {
-    text-shadow: 1px 0 5px rgba(0,0,0,.666);
-  }
-}
-
-section.hero-section.text-shadow a.action-link,
-section.hero-section.text-shadow a.action-button {
-  text-shadow: none;
-}
-
 
 @media screen and (min-width: 40em) {
   .homepage-hero p,
@@ -488,185 +291,97 @@ section.hero-section.text-shadow a.action-button {
   }
 }
 
+ul.bullets {
+  list-style: square inside;
+}
 
-@media screen and (min-width: 1400px) {
-  /* TODO: Use these as a fallback for old browsers, using clip-path is waaaay easier in new browsers */
-  /*section.hero-section.angle + section.hero-section:before,
-  section.hero-section-01-col.angle + section.hero-section:before,
-  section.hero-section-01-col.angle + section.hero-section-01-col:before {
-    background: transparent;
-    height: 100px;
-    top: -99px;
-    left: 0;
-    right: 0;
-    position: absolute;
-    display: block;
-    content: '';
-    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(242, 241, 237)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(242, 241, 237)'></polygon></svg>");
-    background-repeat: no-repeat;
-    background-size: cover;
+ul.bullets li {
+  list-style: square inside;
+}
+
+.test svg {
+  z-index: 10;
+  fill: white;
+}
+
+.background-map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#contact-form {
+  position: relative;
+  z-index: 5;
+}
+
+@media screen and (min-width: 40em) {
+  /* This block is partially covered by the angle from the previous section */
+  .center-testimonial {
+    top: 15px !important;
+  }
+
+  /* TODO: Make these conditional based on browser, moving to css clip-path */
+  /*.shift-section-up > div {
+    position: relative;
+    top: -102px;
     z-index: 2;
   }
 
-  section.hero-section.angle + section.hero-section.bg-bc-blue:before,
-  section.hero-section-01-col.angle + section.hero-section.bg-bc-blue:before,
-  section.hero-section-01-col.angle + section.hero-section-01-col.bg-bc-blue:before {
-    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(51, 88, 122)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(51, 88, 122)'></polygon></svg>");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  section.hero-section.angle + section.hero-section.bg-white:before,
-  section.hero-section-01-col.angle + section.hero-section.bg-white:before,
-  section.hero-section-01-col.angle + section.hero-section-01-col.bg-white:before {
-    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(255, 255, 255)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(255, 255, 255)'></polygon></svg>");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  section.hero-section.angle + section.hero-section.bg-black:before,
-  section.hero-section-01-col.angle + section.hero-section.bg-black:before,
-  section.hero-section-01-col.angle + section.hero-section-01-col.bg-black:before {
-    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(48, 48, 48)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(48, 48, 48)'></polygon></svg>");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  section.hero-section.angle + section.hero-section.n1-white.n2-light-grey:before,
-  section.hero-section-01-col.angle + section.hero-section.n1-white.n2-light-grey:before,
-  section.hero-section-01-col.angle + section.hero-section-01-col.n1-white.n2-light-grey:before {
-    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(255, 255, 255)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(242, 241, 237)'></polygon></svg>");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  section.hero-section.angle + section.hero-section.n1-light-grey.n2-white:before,
-  section.hero-section-01-col.angle + section.hero-section.n1-light-grey.n2-white:before,
-  section.hero-section-01-col.angle + section.hero-section-01-col.n1-light-grey.n2-white:before {
-    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(242, 241, 237)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(255, 255, 255)'></polygon></svg>");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  section.hero-section-01-col.angle + section.hero-section,
-  section.hero-section-01-col.angle + section.hero-section-01-col {
-    padding-bottom: 120px;
-  }
-
-  .hero-section-01-col:nth-child(even) .hero-image-wrapper img {
-    position: relative;
-    right: auto;
-    top: 20vh;
-    max-width: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
-  }
-
-  .hero-section-01-col:nth-child(odd) .hero-image-wrapper img {
-    position: relative;
-    left: auto;
-    top: 20vh;
-    max-width: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
-  }
-
-  section.hero-section.angle + section.hero-section {
-    padding-bottom: 120px;
+  .shift-section-up + .shift-section-up {
+    margin-bottom: -103px;
+    border-bottom: 1px solid white;
   }*/
 
-  /* New angle method using css clip-path - it makes it possible for us to use video or
-  image backgrounds on sections following an .angle section as the angled part isn't part
-  of the next section. */
-  section.hero-section.angle {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9vh), 50% 100%, 0 calc(100% - 9vh));
-  }
-
-  section.hero-section.angle + section.hero-section {
-    padding-top: 9vh; /* Offset */
-  }
-
-  /* TODO: Write a sass mixin or plugin */
-  /* Header, ignore... */
-  section.hero-section:nth-child(1) {
-    z-index: 10;
-  }
-
-  section.hero-section:nth-child(2) {
-    z-index: 9;
-  }
-
-  section.hero-section:nth-child(3) {
-    z-index: 8;
-    transform: translateY(-9vh);
-  }
-
-  section.hero-section:nth-child(4) {
-    z-index: 7;
-    transform: translateY(-9vh);
-  }
-
-  section.hero-section:nth-child(5) {
-    z-index: 6;
-    transform: translateY(-13vh);
-  }
-
-  section.hero-section:nth-child(6) {
-    z-index: 5;
-    transform: translateY(-26vh);
-  }
-
-  section.hero-section:nth-child(7) {
-    z-index: 4;
-    transform: translateY(-35vh);
-  }
-
-  /* Override styles in Footer.vue */
-  footer {
-    position: fixed !important;
-    width: 100%;
-    height: 60vh;
-    bottom: 0;
-    left: 0;
-    z-index: 1 !important;
-    box-sizing: border-box;
-  }
-
-  section.hero-section.angle + footer {
-    padding-top: 26vh; /* Offset */
-  }
-
-  /*section.hero-section:nth-child(8) {
-    z-index: 3;
-  }
-
-  section.hero-section:nth-child(9) {
-    z-index: 2;
-  }
-
-  section.hero-section:nth-child(10) {
-    z-index: 1;
-  }*/
-
-  .hero-section:nth-child(even) .hero-image-wrapper img {
+  /* Adjust testimonial profile badges */
+  .circle-composite.small {
     position: relative;
-    /* left: -15vw; */
-    right: auto;
-    top: 20vh;
-    max-width: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
-  }
-
-  .hero-section:nth-child(odd) .hero-image-wrapper img {
-    position: relative;
-    /* right: 8vw; */
-    left: auto;
-    top: 20vh;
-    max-width: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
+    left: -20px;
   }
 }
 
+.guitar-block {
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+@media screen and (min-width: 40em) {
+  .guitar-block {
+    width: 60%;
+  }
+}
+
+.g-services,
+.g-services p {
+  text-align: center;
+}
+
+a.action-link {
+  border-radius: 5px;
+}
+
+.drop-shadow {
+  filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.33333)) brightness(0.777);
+  &:hover {
+    filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.33333)) brightness(0.777);
+  }
+}
+
+.drop-shadow-up {
+  filter: drop-shadow(0px -9px 6px rgba(16, 16, 16, 0.15)) brightness(0.777);
+  &:hover {
+    filter: drop-shadow(0px -9px 6px rgba(16, 16, 16, 0.15)) brightness(0.777);
+  }
+}
+
+.ampstart-input > label {
+  color: white !important;
+}
+
+/* TODO: Fix the default spacing! */
+textarea {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
