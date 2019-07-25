@@ -52,12 +52,6 @@
     methods: {
       handleMenuDisplay() {
         this.displayMenu();
-      },
-      goToHome(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        window.location.href = window.location.origin;
-        window.location.reload();
       }
     }
   }

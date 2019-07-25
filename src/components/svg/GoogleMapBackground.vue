@@ -1,14 +1,16 @@
 <template>
   <div class="google-map flex">
     <GmapMap
+      ref="mapRef"
       class="map-01"
-      :center="{lat:48.44, lng:-123.35}"
+      :center="this.gmapCenter"
       :zoom="14"
       style="width: 100%; height: 100%"
+      :options="this.gmapOptions"
     >
     </GmapMap>
     <!--<GmapMarker
-      :key="index"
+      :key="index"s
       v-for="(m, index) in markers"
       :position="m.position"
       :clickable="true"
@@ -19,24 +21,96 @@
 </template>
 
 <script>
-  import anime from 'animejs';
+  import { gmapApi } from 'vue2-google-maps';
 
   export default {
-    computed: {},
-    methods: {},
-    mounted() {
-      /*function initialize() {
-        var mapOptions = {
-          center: { lat: 52.517010, lng: 13.378540},
-          zoom: 14,
-          styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#193341"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#29768a"},{"lightness":-37}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#3e606f"},{"weight":2},{"gamma":0.84}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#1a3541"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#2c5a71"}]}],
-          disableDefaultUI: true
+    data: () => ({
+      lastWindowScroll: {
+        x: 0,
+        y: 0,
+      },
+      scrollThreshold: 5,
+      parallaxMultiplier: 5,
+      gmapCenter: {
+        lat: 48.455,
+        lng: -123.35
+      },
+      gmapOptions: {
+        zoomControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        streetViewControl: false,
+        rotateControl: false,
+        fullscreenControl: false,
+        gestureHandling: 'none'
+      },
+      gmapScroll: {
+        x: null,
+        y: null
+      },
+      gmapEl: null
+    }),
+    computed: {
+      google: gmapApi
+    },
+    methods: {
+      initializeMap() {
+        this.$refs.mapRef.$mapPromise.then((gmap) => {
+          //map.panTo({lat: 1.38, lng: 103.80})
+          //new this.google.maps.Marker({
+          //  map: map,
+          //  position: map.getCenter()
+          //});
+
+          this.gmapEl = gmap.getDiv();
+
+          const initialScroll = {
+            x: window.scrollX,
+            y: window.scrollY
+          };
+
+          this.gmapScroll = Object.assign({}, initialScroll);
+
+          // TODO: Maybe an offset?
+          /*const offset = {
+            top: window.innerHeight - this.gmapEl.getBoundingClientRect().top,
+            left: window.innerWidth - this.gmapEl.getBoundingClientRect().left
+          };*/
+
+          gmap.panBy(initialScroll.x, initialScroll.y / this.parallaxMultiplier);
+
+          this.google.maps.event.addDomListener(window, 'scroll', this.scrollGoogleMap.bind(this, gmap));
+        });
+      },
+      scrollGoogleMap(gmap) {
+        const windowScroll = {
+          x: window.scrollX,
+          y: window.scrollY
         };
 
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
+        // Throttle the scrolling or we will overload the API and DOM
+        if (Math.abs(this.lastWindowScroll.y - windowScroll.y) <= this.scrollThreshold) return;
+
+        console.log('map scroll');
+        console.log(JSON.stringify(this.gmapScroll));
+        console.log('new scroll');
+        console.log(JSON.stringify({ x: -(this.gmapScroll.x - windowScroll.x), y: -((this.gmapScroll.y - windowScroll.y) / this.parallaxMultiplier) }));
+
+        if (this.gmapScroll) {
+          gmap.panBy(-(this.gmapScroll.x - windowScroll.x), -((this.gmapScroll.y - windowScroll.y) / this.parallaxMultiplier));
+        }
+
+        this.gmapScroll = Object.assign({}, windowScroll);
+
+        this.lastWindowScroll.y = windowScroll.y;
       }
-      google.maps.event.addDomListener(window, 'load', initialize);*/
+    },
+    mounted() {
+      // At this point, the child GmapMap has been mounted, but the map has not been initialized...
+      // Therefore we need to write mapRef.$mapPromise.then(() => ...)
+      if (typeof window !== 'undefined') {
+        this.initializeMap();
+      }
     }
   }
 </script>

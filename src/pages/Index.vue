@@ -296,7 +296,7 @@
     </hero-layout01-col>
     <!-- END NOT DELETE THIS IS THE GUITAR!!! -->
 
-    <section class="hero-section bg-black angle no-pad-top">
+    <section class="hero-section text-shadow bg-black angle no-pad-top">
       <google-map-background></google-map-background>
       <div class="flex flex-center flex-justify-center">
         <div class="flex flex-basis-half">
