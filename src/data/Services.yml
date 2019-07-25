@@ -21,8 +21,8 @@ services:
         image: /images/hero-michael.png
         link: "/services"
         linkText: Learn More
-        caption: Sean Huntington
-        subCaption: Principal Architect, Blue Collar
+        caption: Lucas Lopatka
+        subCaption: Software Surgeon, Blue Collar
     backup:
       - id: branding
         title: >-
@@ -75,7 +75,7 @@ services:
         image: /images/hero-michael.png
         link: "/services"
         linkText: Learn More
-        caption: Sean Huntington
+        caption: Lucas Lopatka
         subCaption: Architect, Blue Collar
     backup:
       - id: services-hero
@@ -129,7 +129,7 @@ services:
         image: /images/hero-michael.png
         link: "/services"
         linkText: Learn More
-        caption: Sean Huntington
+        caption: Lucas Lopatka
         subCaption: Architect, Blue Collar
     backup:
 

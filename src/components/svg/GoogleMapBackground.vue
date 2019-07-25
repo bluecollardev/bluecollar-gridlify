@@ -137,7 +137,7 @@
 
   .map-01 {
     position: absolute;
-    filter: grayscale(0.45) opacity(0.30);
+    filter: grayscale(0.333) opacity(0.666);
     z-index: 0;
 
 

@@ -3,17 +3,17 @@ services:
   - title: Apps + PWAs
     description: >-
       We create amazing experiences for iOS, Android and Responsive Web. Front-end to back-end development, we do it all. With our user-first approach and API-driven architecture, we create apps that can evolve to take advantage of new capabilities.
-    link: /services-apps
+    link: /apps
     linkText: Learn More
   - title: Custom Software
     description: >-
       Custom software serves the unique processes of your business, solves your specific problems, satisfies your exclusive needs and makes your workflows easier, faster, and more efficient. Our team of versatile custom software developers can architect & develop software for even the most complex business logic & workflow.
-    link: /services-custom-software
+    link: /software
     linkText: Learn More
   - title: Web Design
     description: >-
       We collaborate with our clients to deliver a professionally designed accelerated mobile website, integrated with high conversion landing pages and the client company’s branding. Our talent comes the Victoria community, all of whom are passionate about building products optimized for both desktop and mobile.
-    link: /services-web
+    link: /websites
     linkText: Learn More
   - title: Advertising
     description: >-

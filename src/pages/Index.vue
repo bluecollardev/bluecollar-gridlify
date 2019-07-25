@@ -256,7 +256,7 @@
 
     <!-- DO NOT DELETE THIS IS THE GUITAR!!! -->
     <hero-layout01-col
-      id="contact"
+      id="rock"
       v-if="servicesHero"
       bgColor="bg-black"
       title="Ready to Rock?"
@@ -296,7 +296,7 @@
     </hero-layout01-col>
     <!-- END NOT DELETE THIS IS THE GUITAR!!! -->
 
-    <section class="hero-section text-shadow bg-black angle no-pad-top">
+    <section id="contact" class="hero-section text-shadow bg-black angle no-pad-top">
       <google-map-background></google-map-background>
       <div class="flex flex-center flex-justify-center">
         <div class="flex flex-basis-half">
@@ -602,7 +602,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   ul.bullets {
     list-style: square inside;
   }
@@ -754,23 +754,6 @@
     .service-detail-card-top {
       border-bottom: none;
       position: relative;
-      &.drop-shadow:before {
-        filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.666667)) brightness(0.5);
-      }
-
-      &.drop-shadow-up:before {
-        filter: drop-shadow(0px -9px 6px rgba(16, 16, 16, 0.333333)) brightness(0.5);
-      }
-    }
-
-    .service-detail-card-top:hover {
-      &.drop-shadow:before {
-        filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.30)) brightness(0.5);
-      }
-
-      &.drop-shadow-up:before {
-        filter: drop-shadow(0px -9px 6px rgba(16, 16, 16, 0.15)) brightness(0.5);
-      }
     }
   }
 
@@ -875,5 +858,19 @@
 
   a.action-link {
     border-radius: 5px;
+  }
+
+  .drop-shadow {
+    filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.33333)) brightness(0.777);
+    &:hover {
+      filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.33333)) brightness(0.777);
+    }
+  }
+
+  .drop-shadow-up {
+    filter: drop-shadow(0px -9px 6px rgba(16, 16, 16, 0.15)) brightness(0.777);
+    &:hover {
+      filter: drop-shadow(0px -9px 6px rgba(16, 16, 16, 0.15)) brightness(0.777);
+    }
   }
 </style>

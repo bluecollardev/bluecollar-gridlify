@@ -7,33 +7,18 @@ services:
   - title: Sexy Mobile Apps
     description: >-
       Our timeless look and feel will drive your customers wild with desire.
-    link: /services-apps
-    linkText: Learn More
+    link: '/#contact'
+    linkText: Get Started
   - title: Bulletproof Software
     description: >-
       We're Kevlar Vests for ideas. Feature creep, maintenance costs and bad actors will try to shoot you down. We'll stop those bullets so you don't have to.
-    link: /services-custom-software
-    linkText: Learn More
+    link: '/#contact'
+    linkText: Get Started
   - title: Websites You Could Eat
     description: >-
       Our Red Seal software chefs will blow your mind with great plates and great tastes.
-    link: /services-web
-    linkText: Learn More
-  - title: Advertising
-    description: >-
-      Paid social content is fast becoming the most effective channel for connecting with qualified leads. Blue Collar&rsquo;s team are experts at creating social ad campaigns, with professionally designed, chat-enabled landing pages.
-    link: /services-digital-marketing#advertising
-    linkText: Learn More
-  - title: Landing Pages
-    description: >-
-      We work with you to deliver a professionally designed accelerated landing pages complete with lead-gen fields, and your company&rsquo;s branding built in. Your landing pages are optimized for mobile usage, but work on desktop as well.
-    link: /services-landing-pages
-    linkText: Learn More
-  - title: Social Media
-    description: >-
-      New to social media marketing?  We can get you set up on the major platforms with professional business pages continually updated with quality posts, promotions, and sales announcements to drive engagement with your brand and generate qualified leads.
-    link: /services-digital-marketing#social-media
-    linkText: Learn More
+    link: '/#contact'
+    linkText: Get Started
   #- title: SEO / SEM
   #  description: >-
   #    Accelerated mobile sites aren&rsquo;t just great for social media platforms &ndash; according to Google, nearly 50% of online searches are done on mobile devices. Our pages are favored by Google&rsquo;s algorithms, improving your site&rsquo;s search rankings.

@@ -8,11 +8,11 @@
               <p class="g-pstyle13"><a href="/#services">Development</a></p>
             </div>
             <div class="g-footer">
-              <p class="g-pstyle7"><a href="/services-web">Websites</a></p>
+              <p class="g-pstyle7"><a href="/#services">Hybrid Apps + PWAs</a></p>
 
-              <p class="g-pstyle7"><a href="/services-apps">Hybrid Apps + PWAs</a></p>
+              <p class="g-pstyle7"><a href="/#services">Custom Software</a></p>
 
-              <p class="g-pstyle7"><a href="/services-software">Custom Software</a></p>
+              <p class="g-pstyle7"><a href="/#services">S.P.A. Websites</a></p>
             </div>
           </div>
         </div>
@@ -36,10 +36,10 @@
         <div class="flex-basis-third sm-flex sm-flex-justify-center">
           <div>
             <div class="g-footer space-bottom">
-              <p class="g-pstyle13"><a href="/company">Team</a></p>
+              <p class="g-pstyle13"><a href="/company">Company</a></p>
             </div>
             <div class="g-footer">
-              <p class="g-pstyle7"><a href="/company#story">Our Story</a></p>
+              <p class="g-pstyle7"><a href="/company#story">21st Century Artisans</a></p>
 
               <p class="g-pstyle7"><a href="/consulting">Consulting Services</a></p>
 
@@ -54,10 +54,10 @@
               <p class="g-pstyle13">Resources</p>
             </div>
             <div class="g-footer">
-              <p class="g-pstyle7"><a href="/blog">Blog</a></p>
+              <p class="g-pstyle7"><a href="/#">Blog (Coming Soon)</a></p>
             </div>
             <div class="g-footer">
-              <p class="g-pstyle7"><a href="https://github.com/bluecollardev">GitHub</a></p>
+              <p class="g-pstyle7"><a href="https://github.com/bluecollardev">Open Source Projects</a></p>
             </div>
             <div class="g-footer">
               <p class="g-pstyle7"><a href="https://github.com/bluecollardev/bluecollar-gridlify">Source Code</a></p>
