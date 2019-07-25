@@ -51,6 +51,8 @@ export default function (Vue, { head }) {
     content: 'width=device-width, initial-scale=1.0'
   });
 
+  head.link.push({ rel: 'canonical', href: 'https://www.bluecollardev.com' });
+
   head.link.push({ rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' });
   head.link.push({ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato&display=swap' });
   //head.script.push({ type: 'application/javascript', src: 'https://maps.googleapis.com/maps/api/gjs?key=AIzaSyBSDlMWErr_gwT5d5wze8oK9muKPuHLtKQ' });
