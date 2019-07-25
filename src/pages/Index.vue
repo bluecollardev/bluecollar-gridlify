@@ -27,39 +27,83 @@
       </template>
     </video-hero-layout01-col>
 
-    <section id="services" class="hero-section shift-section-up bg-bc-blue no-pad-bottom lg-flex">
-      <div class="col-3-squares no-pad-bottom lg-flex">
-        <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third">
-          <video class="video-block-bg drop-shadow rotate-right is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
-                 poster="">
-            <source src="/video/bluecollar-apps.mp4" type="video/mp4">
-            <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
-            <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
-          </video>
-          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
-            <div class="service-detail-card-front">
-              <content-block-layout
-                className="content-block ml-auto mr-auto md-pad-top"
-                v-if="getService(0).linkText"
-                :title="getService(0).title"
-                :description="getService(0).description"
-                :link="getService(0).link"
-                :linkText="getService(0).linkText"
-                :titleAnimation="textEffects.slideUp"
-                :descriptionAnimation="{
-                  effect: contentEffects.fadeIn,
-                  settings: {
-                    opacity: [0, 1],
-                    duration: 5000
-                  }
-                }"
-              />
-            </div>
-            <div class="service-detail-card-back">
-            </div>
+    <!-- Pull this out of the section, we need it to sit on top of the top video banner -->
+    <div class="col-3-squares no-pad-bottom lg-flex" style="position: absolute; width: 100%; z-index: 10; transform: translateY(-7vh)">
+      <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third">
+        <video class="video-block-bg drop-shadow rotate-right is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
+               poster="">
+          <source src="/video/bluecollar-apps.mp4" type="video/mp4">
+          <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
+          <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
+        </video>
+        <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
+          <div class="service-detail-card-front">
+            <content-block-layout
+              className="content-block ml-auto mr-auto md-pad-top"
+              v-if="getService(0).linkText"
+              :title="getService(0).title"
+              :description="getService(0).description"
+              :link="getService(0).link"
+              :linkText="getService(0).linkText"
+              :titleAnimation="textEffects.slideUp"
+              :descriptionAnimation="{
+                effect: contentEffects.fadeIn,
+                settings: {
+                  opacity: [0, 1],
+                  duration: 5000
+                }
+              }"
+            />
+          </div>
+          <div class="service-detail-card-back">
           </div>
         </div>
+      </div>
 
+      <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
+        <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
+          <div class="service-detail-card-front center-testimonial">
+          </div>
+          <div class="service-detail-card-back">
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third">
+        <video class="video-block-bg drop-shadow rotate-left is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
+               poster="">
+          <source src="/video/bluecollar-sites.mp4" type="video/mp4">
+          <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
+          <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
+        </video>
+        <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
+          <div class="service-detail-card-front">
+            <content-block-layout
+              className="content-block ml-auto mr-auto pad-top pad-bottom"
+              v-if="getService(2).linkText"
+              :title="getService(2).title"
+              :description="getService(2).description"
+              :link="getService(2).link"
+              :linkText="getService(2).linkText"
+              :titleAnimation="textEffects.slideUp"
+              :descriptionAnimation="{
+                effect: contentEffects.fadeIn,
+                settings: {
+                  opacity: [0, 1],
+                  duration: 5000
+                }
+              }"
+            />
+          </div>
+
+          <div class="service-detail-card-back">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="services" class="hero-section shift-section-up angle bg-bc-blue pad-top no-pad-bottom lg-flex flex-justify-center">
+      <div class="col-3-squares no-pad-bottom lg-flex">
         <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front center-testimonial">
@@ -80,42 +124,10 @@
             </div>
           </div>
         </div>
-
-        <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third">
-          <video class="video-block-bg drop-shadow rotate-left is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop=""
-                 poster="">
-            <source src="/video/bluecollar-sites.mp4" type="video/mp4">
-            <!--<source src="/video/bluecollar-sites.webm" type="video/webm">
-            <source src="/video/bluecollar-sites.ogv" type="video/ogg">-->
-          </video>
-          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
-            <div class="service-detail-card-front">
-              <content-block-layout
-                className="content-block ml-auto mr-auto pad-top pad-bottom"
-                v-if="getService(2).linkText"
-                :title="getService(2).title"
-                :description="getService(2).description"
-                :link="getService(2).link"
-                :linkText="getService(2).linkText"
-                :titleAnimation="textEffects.slideUp"
-                :descriptionAnimation="{
-                  effect: contentEffects.fadeIn,
-                  settings: {
-                    opacity: [0, 1],
-                    duration: 5000
-                  }
-                }"
-              />
-            </div>
-
-            <div class="service-detail-card-back">
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <section class="hero-section shift-section-up no-pad-bottom lg-flex">
+    <section class="hero-section shift-section-up angle bg-bc-blue no-pad-bottom lg-flex">
       <div class="col-3-squares bg-bc-blue no-pad-bottom lg-flex">
         <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
@@ -193,107 +205,11 @@
       </div>
     </section>
 
-    <!-- TODO: Important! Make this pattern a layout before deleting! -->
-    <!--<section class="hero-section col-2-squares n1-white n2-light-grey no-pad-bottom lg-flex">
-      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-half">
-        <div class="service-detail-card-inner content-block">
-          <div class="service-detail-card-front">
-            <content-block-layout
-              className="pad-top"
-              v-if="getService(0).linkText"
-              :title="getService(0).title"
-              :description="getService(0).description"
-              :link="getService(0).link"
-              :linkText="getService(0).linkText"
-            />
-          </div>
-          <div class="service-detail-card-back">
-            <content-block-layout
-              className="pad-top pad-bottom"
-              v-if="getServiceHeroById('apps')"
-              :title="getServiceHeroById('apps').title"
-              subtitle=""
-              :description="getServiceHeroById('apps').description"
-              :link="getServiceHeroById('apps').link"
-              :linkText="getServiceHeroById('apps').linkText"
-              :image="getServiceHeroById('apps').image"
-              :caption="getServiceHeroById('apps').caption"
-              :subCaption="getServiceHeroById('apps').subCaption"
-            />
-          </div>
-        </div>
-      </div>
-    </section>-->
-
-    <!--<section class="lg-flex">
-      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-half">
-        <div class="service-detail-card-inner content-block">
-          <div class="service-detail-card-front">
-            <content-block-layout
-              className="pad-top"
-              v-if="getService(1).linkText"
-              :title="getService(1).title"
-              :description="getService(1).description"
-              :link="getService(1).link"
-              :linkText="getService(1).linkText"
-            />
-          </div>
-          <div class="service-detail-card-back">
-            <content-block-layout
-              className="pad-bottom"
-              v-if="getServiceHeroById('software')"
-              :title="getServiceHeroById('software').title"
-              subtitle=""
-              :description="getServiceHeroById('software').description"
-              :link="getServiceHeroById('software').link"
-              :linkText="getServiceHeroById('software').linkText"
-              :image="getServiceHeroById('software').image"
-              :caption="getServiceHeroById('software').caption"
-              :subCaption="getServiceHeroById('software').subCaption"
-            />
-          </div>
-        </div>
-      </div>
-    </section>-->
-
-
-    <!--<section class="hero-section col-2-squares n1-white n2-light-grey no-pad-bottom lg-flex">
-      <div class="service-detail-card-top sm-flex flex-center flex-justify-center flex-basis-half">
-        <div class="service-detail-card-inner content-block">
-          <div class="service-detail-card-front">
-            <content-block-layout
-              className="pad-top pad-bottom"
-              v-if="getService(2).linkText"
-              :title="getService(2).title"
-              :description="getService(2).description"
-              :link="getService(2).link"
-              :linkText="getService(2).linkText"
-            />
-          </div>
-
-          <div class="service-detail-card-back">
-            <content-block-layout
-              className="pad-bottom"
-              v-if="getServiceHeroById('websites')"
-              :title="getServiceHeroById('websites').title"
-              subtitle=""
-              :description="getServiceHeroById('websites').description"
-              :link="getServiceHeroById('websites').link"
-              :linkText="getServiceHeroById('websites').linkText"
-              :image="getServiceHeroById('websites').image"
-              :caption="getServiceHeroById('websites').caption"
-              :subCaption="getServiceHeroById('websites').subCaption"
-            />
-          </div>
-        </div>
-      </div>
-    </section>-->
-
     <!-- DO NOT DELETE THIS IS THE GUITAR!!! -->
     <hero-layout01-col
       id="contact"
       v-if="servicesHero"
-      bgColor="bg-bc-blue"
+      bgColor="bg-black"
       title="Ready to Rock?"
       subtitle=""
       description="Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit. We'll take the midnight train to your dream."
@@ -303,7 +219,7 @@
       slotPos="top"
       className="sm-pad-top pad-bottom-2x"
     >
-      <template v-slot:bg>
+      <template v-slot:bg v-if="this.rockAndRoll">
         <party-lights></party-lights>
       </template>
 
@@ -317,7 +233,10 @@
 
       <template>
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
-          <div class="guitar-block text-center">
+          <div
+            class="guitar-block text-center"
+            @mouseover="startRockin.bind(this)()"
+            @mouseleave="stopRockin.bind(this)()">
             <interactive-guitar :key="Math.random()"></interactive-guitar>
             <br/>
             <small><b>Click the strings to ROCK OUT</b></small>
@@ -327,36 +246,11 @@
     </hero-layout01-col>
     <!-- END NOT DELETE THIS IS THE GUITAR!!! -->
 
-    <section class="hero-section bg-light-grey">
+    <section class="hero-section bg-black angle no-pad-top">
       <google-map-background></google-map-background>
-      <div class="sm-flex flex-auto flex-center flex-justify-center">
-        <div class="sm-flex flex-basis-full">
-          <div class="sm-flex flex-basis-half">
-            <div class="border-none p0 m0 pad-all">
-
-              <h2 class="block text-center mb-4 space-top">Saddle up, partner!</h2>
-              <br/>
-              <p>At Blue Collar, you're not our customers - <strong>you're our partners</strong>.
-                We know that the dynamics of the rapidly changing Information Age can be
-                tough at times, but nothing great was ever solved without a challenge.
-                We're here to help you level up. It's our thing.</p>
-              <br/>
-              <hr/>
-              <br/>
-              <p>For information on job opportunities or informational interviews please email: <b>careers@bluecollardev.com</b>
-              </p>
-              <p>For sponsorship, media, events, and opportunities to help us grow please email: <b>marketing@bluecollardev.com</b>
-              </p>
-              <p>For other inquiries that don’t fit the descriptions above, ask us who you’d like to connect with by
-                sending an email to: <b>info@bluecollardev.com</b></p>
-              <div>
-                <!--<google-map-cutout></google-map-cutout>-->
-              </div>
-            </div>
-          </div>
-          <div class="sm-flex flex-basis-half">
-            <contact :formData="formData"></contact>
-          </div>
+      <div class="flex flex-center flex-justify-center">
+        <div class="flex flex-basis-half">
+          <contact :formData="formData"></contact>
         </div>
       </div>
     </section>
@@ -459,6 +353,7 @@
       return {
         formData: {},
         repaint: Math.random(),
+        rockAndRoll: false,
         textEffects: {
           typewriter: TypewriterTextEffect,
           shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
@@ -529,6 +424,12 @@
       },
     },
     methods: {
+      startRockin() {
+        this.$set(this, 'rockAndRoll', true);
+      },
+      stopRockin() {
+        this.$set(this, 'rockAndRoll', false);
+      },
       isLoaded() {
         // let isLoaded = false;
 
@@ -859,7 +760,8 @@
       min-height: auto;
     }
 
-    .shift-section-up > div {
+    /* TODO: Make these conditional based on browser, moving to css clip-path */
+    /*.shift-section-up > div {
       position: relative;
       top: -102px;
       z-index: 2;
@@ -868,7 +770,7 @@
     .shift-section-up + .shift-section-up {
       margin-bottom: -103px;
       border-bottom: 1px solid white;
-    }
+    }*/
 
     /* Adjust testimonial profile badges */
     .circle-composite.small {

@@ -25,9 +25,13 @@ module.exports = {
 				.end();
 
 		// TODO: Document this - https://github.com/gridsome/gridsome/issues/384
-		// It prevents use of vue-google-maps
 		if (isServer) {
-      config.externals([/^(vue|vue-router|vue-meta)$/])
+      config.externals([/^(vue|vue-router|vue-meta)$/]);
     }
+
+		/*config
+			.when(process.env.NODE_ENV === 'production',
+				config => config.devtool('nosources-source-map')
+			);*/
 	}
-}
+};

@@ -91,11 +91,11 @@ img.circle {
   filter: grayscale(1) brightness(0) invert(1);
 }
 
-.intro.bg-denim,
-.hero-section.bg-denim {
-  background-image: url(/images/denim-texture.jpg) !important;
+.bg-denim {
+  background-image: url(/images/denim-texture-orig.jpg) !important;
   background-repeat: repeat !important;
   background-size: 300px 300px !important;
+  background-attachment: fixed;
 }
 
 .homepage-hero.hero-section {

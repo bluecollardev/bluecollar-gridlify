@@ -160,10 +160,11 @@
 <style lang="scss">
   .party-lights {
     width: 100%;
-    height: 103vh;
+    height: 120vh;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     overflow: hidden;
+    top: -10vh;
 
     svg {
       visibility: hidden;

@@ -1,5 +1,6 @@
 <template>
 	<form
+		class="space-top-2x space-bottom-2x"
 		id="contact-form"
 		target="_top"
 		name="contact"
@@ -10,8 +11,13 @@
 		data-netlify-honeypot="bot-field"
 	>
 		<fieldset class="border-none p0 m0 pad-all">
+			<typewriter-text-effect
+				tag="h2"
+				text="Contact Us For a Free Consultation"
+				class="title text-center pad-bottom">
+			</typewriter-text-effect>
 			<h2 class="block text-center mb-4 space-top">
-				Contact us for a free consultation
+
 			</h2>
 			<div class="hide">
 				<label>Hello bee:</label>
@@ -189,6 +195,8 @@
 					</div>
 					<!-- End Input-->
 
+				</div>
+				<div class="sm-flex flex-column flex-basis-third flex-center flex-justify-center">
 					<!-- Start Submit -->
 					<div class="text-center">
 						<input
@@ -208,7 +216,14 @@
 </template>
 
 <script>
+	// Import animated text effects
+  import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
+
 	export default {
+		components: {
+			// Inject animated text effects
+			TypewriterTextEffect
+		},
 		props: {
 			formData: Object
 		},

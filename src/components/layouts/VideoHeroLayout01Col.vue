@@ -156,7 +156,7 @@ export default {
 
   .video-banner video {
     width: 100%;
-    height: 100%;
+    height: 105%; /* A little overflow to ensure coverage with angles in place */
     position: absolute;
     z-index: 0;
     object-fit: cover !important;

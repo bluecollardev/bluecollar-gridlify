@@ -1,7 +1,7 @@
 <template>
-  <main>
+  <main class="bg-bc-blue bg-denim">
     <intro></intro>
-    <div class="container">
+    <div class="container relative">
       <div class="notifications" v-if="displayNotifications">
         <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
         <span class="notification">

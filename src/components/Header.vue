@@ -1,7 +1,7 @@
 <template>
   <header class="fixed">
     <div class="wrap">
-      <div id="hamburger" v-on:click="displayMenu()">
+      <div id="hamburger" @click="handleMenuDisplay()">
         <span></span>
         <span></span>
         <span></span>
@@ -11,47 +11,29 @@
       </a>
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0">
-          <li><a href="/#services" aria-label="Websites" v-on:mouseover="displayDropMenu()">Services<!--  <i class="icon-arrow"></i>--></a>
-            <!--<ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
-              <li><a href="/services-apps" aria-label="Hybrid Apps and PWAs" v-on:click="hideDropMenu()">Hybrid Apps + PWAs</a></li>
-              <li><a href="/services-software" aria-label="Custom Software" v-on:click="hideDropMenu()">Custom Software</a></li>
-              <li><a href="/services-web" aria-label="Websites" v-on:click="hideDropMenu()">Websites</a></li>
-              <li><a href="/pricing" aria-label="Pricing" v-on:click="hideDropMenu()">Pricing</a></li>
-            </ul>-->
-          </li>
-          <!--<li class="drop"><a v-on:mouseover="displayDropMenu()">Marketing  <i class="icon-arrow"></i></a>
-            <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
-              <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Targeted Ads</a></li>
-              <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Social Media Ads</a></li>
-              <li><a href="/services-digital-marketing" v-on:click="hideDropMenu()">Social Media Concierge</a></li>
-              <li><a href="/pricing" v-on:click="hideDropMenu()">Pricing</a></li>
-            </ul>
-          </li>-->
-          <!--<li><a href="/company" aria-label="Team">Team</a></li>-->
-          <!--<li class="drop"><a href="/company" aria-label="Team" v-on:mouseover="displayDropMenu()">Team  <i class="icon-arrow"></i></a>
-            <ul class="drop-menu" v-on:mouseleave="hideDropMenu()">
-              <li><a href="/consulting" aria-label="Consulting" v-on:click="hideDropMenu()">Consulting Services</a></li>
-              <li><a href="/junior-dev-program" aria-label="Junior Dev Program" v-on:click="hideDropMenu()">Junior Dev Program</a></li>
-            </ul>
-          </li>-->
-          <li><a href="/#contact" aria-label="Enquire" v-on:click="hideDropMenu()">Contact</a></li>
-          <li><a href="/projects" aria-label="Portfolio" v-on:click="hideDropMenu()">Portfolio</a></li>
+          <li><a href="/#services" aria-label="Websites" @click="hideMenu()">Services</a></li>
+          <li><a href="/#contact" aria-label="Enquire" @click="hideMenu()">Contact</a></li>
+          <li><a href="/projects" aria-label="Portfolio" @click="hideMenu()">Portfolio</a></li>
         </ul>
         <div class="site-navbar-top d-flex">
-          <a href="https://www.instagram.com/creativeescapesyeg" class="d-flex align-items-center mr-4">
+          <a href="https://www.instagram.com/bluecollardev" class="d-flex align-items-center mr-4">
             <span class="icon-instagram mr-2"></span>
-            <!--<span class="d-none d-md-inline-block">@creativeescapesyeg</span>-->
+            <!-- TODO: Implement tooltip -->
+            <!--<span class="d-none d-md-inline-block">@bluecollardev</span>-->
           </a>
-          <a href="https://www.facebook.com/BaanSaowanee" class="d-flex align-items-center mr-4">
+          <a href="https://www.facebook.com/bluecollardev" class="d-flex align-items-center mr-4">
             <span class="icon-facebook mr-2"></span>
-            <!--<span class="d-none d-md-inline-block">wilderthanthewindcreations</span>-->
+            <!-- TODO: Implement tooltip -->
+            <!--<span class="d-none d-md-inline-block">bluecollardev</span>-->
           </a>
           <a href="#" class="d-flex align-items-center mr-4">
             <span class="icon-phone mr-2"></span>
+            <!-- TODO: Implement tooltip -->
             <!--<span class="d-none d-lg-inline-block">(250) 532-0083</span>-->
           </a>
           <a href="#" class="d-flex align-items-center">
             <span class="icon-envelope mr-2"></span>
+            <!-- TODO: Implement tooltip -->
             <!--<span class="d-none d-lg-inline-block">info@bluecollardev.com</span>-->
           </a>
         </div>
@@ -61,77 +43,15 @@
 </template>
 
 <script>
+  import MenuMixin from '~/core/mixins/MenuMixin';
+
   export default {
-    mounted() {
-      window.addEventListener('resize', ((event) => {
-        this.hideMenu();
-        document.getElementsByTagName('body')[0].classList.remove('display-menu');
-      }).bind(this));
-
-      /*let lastScroll = 0;
-      window.addEventListener('scroll', (() => {
-        if (!document.getElementById('loader')) {
-          this.hideMenu();
-
-          let header = document.getElementsByTagName('header')[0];
-
-          if (Math.abs(lastScroll - window.scrollY) <= 5) return;
-
-          (window.scrollY < lastScroll) ? header.style.top = '0': header.style.top = '-' + header.clientHeight + 'px';
-
-          lastScroll = window.scrollY;
-        }
-      }).bind(this));*/
-    },
+    mixins: [
+      MenuMixin
+    ],
     methods: {
-      displayMenu() {
-        let body = document.getElementsByTagName('body')[0];
-
-        (!body.classList.contains('display-menu')) ? body.classList.add('display-menu') : body.classList.remove('display-menu');
-      },
-      hideMenu() {
-        let body = document.getElementsByTagName('body')[0];
-
-        (body.classList.contains('display-menu')) ? body.classList.remove('display-menu') : body.classList.add('display-menu');
-      },
-      displayDropMenu() {
-        let dropMenu = event.target.parentElement.getElementsByClassName('drop-menu')[0];
-        let dropMenus = document.getElementsByClassName('drop-menu');
-        // Lucas is correct to use forEach here. He has shown Sean a good reason to use it, even if it's a stupid reason because fuck the DOM
-        Array.from(dropMenus).forEach((e) => {
-          if (e != dropMenu) e.classList.remove('display');
-        });
-
-        let lis = document.getElementById('menu').getElementsByTagName('li');
-        Array.from(lis).forEach((e) => {
-          e.style.marginTop = 0;
-        });
-
-        (dropMenu && !dropMenu.classList.contains('display')) ? dropMenu.classList.add('display'): dropMenu.classList.remove('display');
-
-        if (window.innerWidth < 660 && dropMenu.classList.contains('display')) {
-          //event.target.parentElement.nextSibling.nextSibling.style.marginTop = dropMenu.clientHeight + 'px';
-          event.target.parentElement.nextSibling.style.marginTop = dropMenu.clientHeight + 'px';
-        }
-      },
-      hideDropMenu() {
-        let lis = document.getElementById('menu').getElementsByTagName('li');
-        Array.from(lis).forEach((e) => {
-          e.style.marginTop = 0;
-        });
-
-        let dropMenus = document.getElementsByClassName('drop-menu');
-
-        Array.from(dropMenus).forEach((e) => {
-          e.classList.remove('display');
-        });
-
-        this.hideMenu();
-      },
-      loaded: function() {
-        document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
-
-        (this.load) ? this.load = false: this.load = true;
+      handleMenuDisplay() {
+        this.displayMenu();
       }
     }
   }
@@ -305,6 +225,7 @@
       display: none;
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
+      z-index: 9999;
     }
 
     header .logo-wrapper {

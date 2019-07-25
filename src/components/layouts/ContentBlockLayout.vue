@@ -1,8 +1,6 @@
 <template>
-  <div v-bind:class="classNameString">
+  <div v-bind:class="classNameString" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
     <div class="space-bottom-half g-services">
-      <div v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"></div>
-
       <p v-if="!this.titleAnimation" class="g-pstyle9">{{ this.title }}</p>
 
       <component
@@ -13,6 +11,7 @@
         class="g-pstyle9"
         :text="this.title"
         :loop="false"
+        :animate="false"
 
       />
     </div>

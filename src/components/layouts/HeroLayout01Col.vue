@@ -126,12 +126,13 @@ export default {
     /*window.addEventListener('resize', function(event) {
     });*/
 
+    // TODO: Extract parallax
     //let lastScroll = 0;
-    window.addEventListener('scroll', (() => {
+    /*window.addEventListener('scroll', (() => {
       //if (Math.abs(lastScroll - window.scrollY) <= 5) return;
       const propValue = `50% -${(window.scrollY * speedMultiplier)}px`;
       hero.style.backgroundPosition = propValue;
-    }).bind(this));
+    }).bind(this));*/
   },
   computed: {
     Home() {

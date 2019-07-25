@@ -488,7 +488,8 @@ section.hero-section.text-shadow a.action-button {
 
 
 @media screen and (min-width: 1400px) {
-  section.hero-section.angle + section.hero-section:before,
+  /* TODO: Use these as a fallback for old browsers, using clip-path is waaaay easier in new browsers */
+  /*section.hero-section.angle + section.hero-section:before,
   section.hero-section-01-col.angle + section.hero-section:before,
   section.hero-section-01-col.angle + section.hero-section-01-col:before {
     background: transparent;
@@ -521,6 +522,14 @@ section.hero-section.text-shadow a.action-button {
     background-size: cover;
   }
 
+  section.hero-section.angle + section.hero-section.bg-black:before,
+  section.hero-section-01-col.angle + section.hero-section.bg-black:before,
+  section.hero-section-01-col.angle + section.hero-section-01-col.bg-black:before {
+    background: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='1000'><polygon points='0 0, 500 50, 500 100, 0 100' fill='rgb(48, 48, 48)'></polygon><polygon points='500 50, 1000 0, 1000 100, 500 100' fill='rgb(48, 48, 48)'></polygon></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   section.hero-section.angle + section.hero-section.n1-white.n2-light-grey:before,
   section.hero-section-01-col.angle + section.hero-section.n1-white.n2-light-grey:before,
   section.hero-section-01-col.angle + section.hero-section-01-col.n1-white.n2-light-grey:before {
@@ -544,7 +553,6 @@ section.hero-section.text-shadow a.action-button {
 
   .hero-section-01-col:nth-child(even) .hero-image-wrapper img {
     position: relative;
-    /* left: -15vw; */
     right: auto;
     top: 20vh;
     max-width: 100%;
@@ -554,7 +562,6 @@ section.hero-section.text-shadow a.action-button {
 
   .hero-section-01-col:nth-child(odd) .hero-image-wrapper img {
     position: relative;
-    /* right: 8vw; */
     left: auto;
     top: 20vh;
     max-width: 100%;
@@ -564,7 +571,80 @@ section.hero-section.text-shadow a.action-button {
 
   section.hero-section.angle + section.hero-section {
     padding-bottom: 120px;
+  }*/
+
+  /* New angle method using css clip-path - it makes it possible for us to use video or
+  image backgrounds on sections following an .angle section as the angled part isn't part
+  of the next section. */
+  section.hero-section.angle {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9vh), 50% 100%, 0 calc(100% - 9vh));
   }
+
+  section.hero-section.angle + section.hero-section {
+    padding-top: 9vh; /* Offset */
+  }
+
+  /* TODO: Write a sass mixin or plugin */
+  /* Header, ignore... */
+  section.hero-section:nth-child(1) {
+    z-index: 10;
+  }
+
+  section.hero-section:nth-child(2) {
+    z-index: 9;
+  }
+
+  section.hero-section:nth-child(3) {
+    z-index: 8;
+    transform: translateY(-9vh);
+  }
+
+  section.hero-section:nth-child(4) {
+    z-index: 7;
+    transform: translateY(-9vh);
+  }
+
+  section.hero-section:nth-child(5) {
+    z-index: 6;
+    transform: translateY(-13vh);
+  }
+
+  section.hero-section:nth-child(6) {
+    z-index: 5;
+    transform: translateY(-26vh);
+  }
+
+  section.hero-section:nth-child(7) {
+    z-index: 4;
+    transform: translateY(-35vh);
+  }
+
+  /* Override styles in Footer.vue */
+  footer {
+    position: fixed !important;
+    width: 100%;
+    height: 60vh;
+    bottom: 0;
+    left: 0;
+    z-index: 1 !important;
+    box-sizing: border-box;
+  }
+
+  section.hero-section.angle + footer {
+    padding-top: 26vh; /* Offset */
+  }
+
+  /*section.hero-section:nth-child(8) {
+    z-index: 3;
+  }
+
+  section.hero-section:nth-child(9) {
+    z-index: 2;
+  }
+
+  section.hero-section:nth-child(10) {
+    z-index: 1;
+  }*/
 
   .hero-section:nth-child(even) .hero-image-wrapper img {
     position: relative;
