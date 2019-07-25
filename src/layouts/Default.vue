@@ -23,13 +23,33 @@
     },
     data() {
       return {
-        displayNotifications: false
+        displayNotifications: false,
+        lastScroll: 0
       }
     },
     methods: {
       hideNotifications() {
         this.displayNotifications = false
+      },
+      attachScrollListener() {
+        window.addEventListener('scroll', this.handleScroll.bind(this));
+      },
+      handleScroll() {
+        if (!document.getElementById('loader')) {
+          if (Math.abs(this.lastScroll - window.scrollY) <= 5) return;
+
+          // Strip the hash
+          this.removeHash();
+
+          this.lastScroll = window.scrollY;
+        }
+      },
+      removeHash () {
+        if (typeof window !== 'undefined') window.location.hash = '';
       }
+    },
+    mounted() {
+      this.attachScrollListener();
     }
   }
 </script>

@@ -6,7 +6,7 @@
         <span></span>
         <span></span>
       </div>
-      <a href="/" aria-label="Home Page" class="logo-wrapper flex flex-center xs-flex-justify-center">
+      <a href="/#top" aria-label="Home Page" class="logo-wrapper flex flex-center xs-flex-justify-center">
         <img class="logo" src="/images/blue-collar-dev.png" alt="" />
       </a>
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
@@ -52,6 +52,12 @@
     methods: {
       handleMenuDisplay() {
         this.displayMenu();
+      },
+      goToHome(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = window.location.origin;
+        window.location.reload();
       }
     }
   }

@@ -128,7 +128,7 @@ export default {
      */
     onWaypoint({ going, direction }) {
       if (going === this.$waypointMap.GOING_IN) {
-        console.log('contentblock waypoint going in!');
+        //console.log('contentblock waypoint going in!');
         if (typeof this.$refs.titleAnimationContainer !== 'undefined') {
           this.$refs.titleAnimationContainer.timeline.play();
         }
@@ -139,7 +139,7 @@ export default {
       }
 
       if (going === this.$waypointMap.GOING_OUT) {
-        console.log('contentblock waypoint going out!');
+        //console.log('contentblock waypoint going out!');
         if (typeof this.$refs.titleAnimationContainer !== 'undefined') {
           this.$refs.titleAnimationContainer.timeline.seek(0);
           this.$refs.titleAnimationContainer.timeline.pause();

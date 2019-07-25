@@ -1,9 +1,10 @@
 <template>
   <Layout :key="repaint">
-    <Header/>
+    <Header />
 
     <!-- Video Hero -->
     <video-hero-layout01-col
+      id="top"
       className="homepage-hero-main"
       v-if="homepageHero"
       :title="homepageHero.title"
