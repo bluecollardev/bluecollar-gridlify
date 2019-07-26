@@ -22,7 +22,7 @@
     methods: {
       initAudioClips() {
         this.arnoldAudio = new Audio();
-        this.arnoldAudio.volume = 0.25;
+        this.arnoldAudio.volume = 0.35;
         this.arnoldAudio.src = '/audio/get_to_the_choppa.mp3';
         this.arnoldAudio.loop = false;
       },

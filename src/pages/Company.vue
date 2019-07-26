@@ -255,8 +255,9 @@
       initSoundtrack() {
         this.soundtrack = new Audio();
         this.soundtrack.volume = 0.25;
-        this.soundtrack.src = '/audio/soundtrack_to_war.mp3;stream';
+        this.soundtrack.src = '/audio/soundtrack_to_war.mp3';
         this.soundtrack.loop = true;
+        this.soundtrack.play();
       },
       getProcessStep(idx) {
         let items = this.homeContent.processSteps;
