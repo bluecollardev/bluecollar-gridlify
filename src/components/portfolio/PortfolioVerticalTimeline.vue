@@ -7,7 +7,7 @@
         v-if="project.isPublic"
         :key="project.projectName"
         :project="project"
-        :testimonial="getTestimonialById(project.testimonialId)"
+        :testimonial="getTestimonial(project.testimonialId)"
       />
     </div>
   </section>
@@ -39,6 +39,8 @@
   import TestimonialData from '~/data/Testimonial.yml';
   import PortfolioData from '~/data/Portfolio.yml';
 
+  import TestimonialMixin from "../../core/mixins/TestimonialMixin";
+
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   export default {
@@ -54,6 +56,9 @@
       TestimonialBlockLayout,
       PortfolioItem
     },
+    mixins: [
+      TestimonialMixin
+    ],
     data() {
       return {
         pricingFor: 'WEB_SOFTWARE',

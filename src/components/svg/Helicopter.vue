@@ -1,42 +1,96 @@
 <template>
-  <div class="helicopter-wrapper" @mouseenter="getToTheChoppa()">
-    <div class="helicopter">
+  <div class="helicopter" @mouseenter="getToTheChoppa()">
+    <p class="speech-bubble">Get to the choppa!!!</p>
+    <div class="helicopter-inner">
       <img
         class="helicopter-body"
         src="/images/bladeless-helicopter.png"
-        alt="Helicopter with no blades">
+        alt="Helicopter with No Blades" />
       <img
         class="blade"
         src="/images/rotary-blade.png"
-        alt="Helicopter Blades">
+        alt="Helicopter Blades" />
       <span class="tailblade"></span>
     </div>
   </div>
 </template>
 
 <script>
+  import anime from 'animejs';
+
   export default {
     methods: {
       initAudioClips() {
         this.arnoldAudio = new Audio();
+        this.arnoldAudio.volume = 0.25;
         this.arnoldAudio.src = '/audio/get_to_the_choppa.mp3';
         this.arnoldAudio.loop = false;
       },
       getToTheChoppa() {
-        this.arnoldAudio.pause();
-        this.arnoldAudio.volume = 0.50;
-        this.arnoldAudio.currentTime = 0;
         this.arnoldAudio.onended = () => {
-          //this.$el.querySelector('.speech-bubble').style.opacity = 0;
+          this.$el.querySelector('.speech-bubble').style.opacity = 0;
+          this.arnoldAudio.pause();
+          this.arnoldAudio.currentTime = 0;
         };
 
-        //this.$el.querySelector('.speech-bubble').style.opacity = 1;
+        this.$el.querySelector('.speech-bubble').style.opacity = 1;
 
-        this.arnoldAudio.play();
+        if (!this.arnoldAudio.currentTime > 0) {
+          this.arnoldAudio.play();
+        }
+      },
+      trackMouse(e) {
+        //console.log(e);
+        const coords = {
+          x: e.clientX,
+          y: e.clientY
+        };
+
+        const offset = {
+          x: window.scrollX,
+          y: window.scrollY
+        };
+
+        const helicopter = document.querySelector('.helicopter');
+        const helicopterInner = document.querySelector('.helicopter-inner');
+        const helicopterCoords = helicopter.getBoundingClientRect();
+
+        const moveTo = {
+          x: coords.x - 100,
+          y: coords.y - 100
+        };
+
+        let helicopterTimeline = anime.timeline({ loop: false });
+        if (moveTo.x < helicopterCoords.x) {
+          helicopterInner.querySelector('.helicopter-body').style.transform = 'scaleX(-1)';
+          helicopterInner.querySelector('.blade').style.left = '0px';
+        } else {
+          helicopterInner.querySelector('.helicopter-body').style.transform = 'scaleX(1)';
+          helicopterInner.querySelector('.blade').style.left = '31px';
+        }
+
+        helicopter.style.top = helicopterCoords.y;
+        helicopter.style.left = helicopterCoords.x;
+
+        helicopterTimeline.add({
+          targets: helicopter,
+          translateX: [helicopterCoords.x, moveTo.x],
+          translateY: [helicopterCoords.y, moveTo.y],
+          easing: 'easeInOutQuad',
+          duration: 3500
+        });
       }
     },
     mounted() {
       this.initAudioClips();
+
+      // Make helicopter follow mouse
+      if (typeof window !== 'undefined') {
+        window.addEventListener('mousemove', this.trackMouse);
+      }
+    },
+    beforeDestroy() {
+      window.removeEventListener('mousemove', this.trackMouse);
     }
   }
 </script>
@@ -72,13 +126,14 @@
     }
   }
 
-  .helicopter-wrapper {
+  .helicopter {
     position: absolute;
-    cursor: pointer;
+    width: 120px;
+    height: 120px;
     z-index: 1000;
   }
 
-  .helicopter {
+  .helicopter-inner {
     position: relative;
     animation-duration: 1s;
     animation-name: float;
@@ -86,11 +141,12 @@
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
     animation-play-state: running;
+    z-index: 1001;
   }
 
   .blade {
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 31px;
     animation-duration: 0.2s;
     animation-name: spin;
@@ -122,10 +178,13 @@
     position: absolute;
     cursor: pointer;
     max-width: 30em;
+    top: -75px;
     // looks
     background-color: #fff;
     padding: 1.125em 1.5em;
-    font-size: 0.85em;
+    font-size: 0.75em;
+    font-weight: 900 !important;
+    white-space: nowrap;
     border-radius: 1rem;
     box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
   }

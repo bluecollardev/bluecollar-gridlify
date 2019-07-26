@@ -2,10 +2,9 @@
   <Layout>
     <Header/>
 
-    <helicopter id="helicopter" ref="helicopter" style="z-index: 1000"></helicopter>
+    <helicopter></helicopter>
 
     <hero-layout01-col
-      id="portfolio"
       bgColor="bg-midnight-blue"
       title="Elite Software Commandos"
       subtitle=""
@@ -36,13 +35,15 @@
           <div>
             <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills.</p>
             <p class="text-center">At Blue Collar, our elite software commandos build software that's ready for tomorrow's challenges. By using cutting-edge technologies and employing the latest software design methodologies, we can guarantee that you'll be well prepared and equipped for years to come.</p>
+            <br />
+            <p class="text-center"><small><small>Click the slide to cock, and the trigger to shoot!</small></small></p>
             <div class="guns-comp">
               <hand-gun class="left-gun" :introDelay="0.3"></hand-gun>
               <hand-gun class="right-gun" :introDelay="0.7"></hand-gun>
             </div>
             <!-- Start Submit -->
             <div class="text-center" style="position: relative; top: -140px">
-              <a class="action-link transparent space-top g-pstyle3">Learn More</a>
+              <a @click="viewDetail()" class="action-link transparent space-top g-pstyle3">Learn More</a>
             </div>
             <!-- End Submit -->
           </div>
@@ -91,7 +92,6 @@
     </video-hero-layout01-col>-->
 
     <hero-layout01-col
-      id="portfolio"
       bgColor="bg-evening-blue"
       title="Lost in the Software Jungle?"
       subtitle=""
@@ -125,7 +125,7 @@
             <p class="text-center">Let our seasoned vets show you the way to El Dorado.</p>
             <!-- Start Submit -->
             <div class="text-center" style="">
-              <a class="action-link transparent space-top g-pstyle3">Learn More</a>
+              <a @click="viewDetail()" class="action-link transparent space-top g-pstyle3">Learn More</a>
             </div>
             <!-- End Submit -->
           </div>
@@ -136,7 +136,6 @@
     <!--<portfolio style="transform: translateY(-10vh); z-index: 7; position: relative;"></portfolio>-->
 
     <hero-layout01-col
-      id="portfolio"
       bgColor="bg-bc-blue"
       title="We Deliver Results"
       subtitle=""
@@ -163,7 +162,7 @@
             <p class="text-center">At Blue Collar, we <strong style="text-decoration: underline; font-weight: 900">never</strong> leave our customers behind.</p>
             <!-- Start Submit -->
             <div class="text-center" style="">
-              <a class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
+              <a @click="viewDetail()" class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
             </div>
             <!-- End Submit -->
           </div>
@@ -172,6 +171,10 @@
     </hero-layout01-col>
 
     <Footer/>
+
+    <div ref="contentDetail" class="detailed-content-panel bg-evening-blue">
+      <portfolio-vertical-timeline></portfolio-vertical-timeline>
+    </div>
   </Layout>
 </template>
 
@@ -215,9 +218,11 @@
   import HeroData from '~/data/Hero.yml';
   import GeneralData from '~/data/General.yml';
   import TestimonialData from '~/data/Testimonial.yml';
+  import PortfolioVerticalTimeline from "../components/portfolio/PortfolioVerticalTimeline";
 
   export default {
     components: {
+      PortfolioVerticalTimeline,
       // Inject components
       Header,
       Hero,
@@ -246,32 +251,13 @@
       // Inject animated content effects
       SimpleEffect
     },
-    computed: {
-      homeContent() {
-        return HomeData;
-      },
-      heroContent() {
-        return HeroData;
-      },
-      generalContent() {
-        return GeneralData;
-      },
-      testimonialContent() {
-        return TestimonialData;
-      },
-      homepageHero() {
-        let items = this.heroContent.items.filter(item => {
-          return item.id === 'homepage-hero';
-        });
-
-        if (items instanceof Array && items.length > 0) {
-          return items[0];
-        }
-
-        return null
-      },
-    },
     methods: {
+      initSoundtrack() {
+        this.soundtrack = new Audio();
+        this.soundtrack.volume = 0.25;
+        this.soundtrack.src = '/audio/soundtrack_to_war.mp3;stream';
+        this.soundtrack.loop = true;
+      },
       getProcessStep(idx) {
         let items = this.homeContent.processSteps;
 
@@ -281,55 +267,57 @@
 
         return null
       },
-      trackMouse(e) {
-        //console.log(e);
-        const coords = {
-          x: e.clientX,
-          y: e.clientY
-        };
+      viewDetail() {
+        const detail = this.$refs.contentDetail;
+        const detailEl = detail;
 
-        const offset = {
-          x: window.scrollX,
-          y: window.scrollY
-        };
+        detailEl.style.zIndex = 5000;
+        detailEl.style.opacity = 1;
 
-        const helicopter = document.querySelector('#helicopter');
-        const helicopterSpeech = helicopter.querySelector('.speech-bubble');
-        const helicopterCoords = helicopter.getBoundingClientRect();
+        anime({
+          targets: detailEl,
+          top: [document.documentElement.clientHeight + 'px', '54px'], // Match header height
+          easing: 'easeOutExpo',
+          duration: 1000
+        });
 
-        const moveTo = {
-          x: coords.x - 100,
-          y: coords.y - 100
-        };
+      },
+      hideDetail() {
+        const detail = this.$refs.contentDetail;
+        const detailEl = detail;
 
-        let helicopterTimeline = anime.timeline({ loop: false });
+        if (detailEl) {
+          anime({
+            targets: detailEl,
+            top: ['54px', '100%'],
+            duration: 1000,
+            complete: () => {
+              detailEl.style.opacity = 0;
+              detailEl.style.zIndex = 0;
+            }
+          });
+        }
+      },
+      bindDetailCloseToEsc(e) {
+        e = e || window.event;
 
-        if (moveTo.x < helicopterCoords.x) {
-          helicopterTimeline
-            .add({
-              targets: helicopter,
-              scaleX: -1,
-              duration: 0
-            });
+        let isEscape = false;
+        if ('key' in e) {
+          isEscape = (e.key === 'Escape' || e.key === 'Esc');
         } else {
-          helicopterTimeline
-            .add({
-              targets: helicopter,
-              scaleX: 1,
-              duration: 0
-            });
+          isEscape = (e.keyCode === 27);
         }
 
-        helicopterTimeline.add({
-          targets: helicopter,
-          translateX: [helicopterCoords.x, moveTo.x],
-          translateY: [helicopterCoords.y, moveTo.y],
-          easing: 'easeInOutQuad',
-          duration: 3500
-        });
+        if (isEscape) this.hideDetail();
       }
     },
     mounted() {
+      if (typeof window !== 'undefined') {
+        window.addEventListener('keydown', this.bindDetailCloseToEsc);
+      }
+
+      this.initSoundtrack();
+
       const stripes = document.querySelector('.sergeant-stripes');
       const skull = document.querySelector('.special-forces-skull');
 
@@ -362,16 +350,11 @@
             });
         }
       });
-
-
-
-      // Make helicopter follow mouse
-      if (typeof window !== 'undefined') {
-        window.addEventListener('mousemove', this.trackMouse);
-      }
     },
     beforeDestroy() {
-      window.removeEventListener('mousemove', this.trackMouse);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('keydown', this.bindDetailCloseToEsc);
+      }
     }
   }
 </script>
@@ -393,5 +376,16 @@
   .right-gun {
     transform: scaleX(-1);
     right: -40%;
+  }
+
+  .detailed-content-panel {
+    opacity: 1;
+    width: 100vw;
+    height: calc(100vh - 54px);
+    position: fixed;
+    /*top: 54px;*/ /* Match header */
+    top: 100%;
+    left: 0;
+    z-index: 5000;
   }
 </style>

@@ -73,12 +73,12 @@ function rewrapLettersOnWordBoundary(text, lettersTarget, letterTargets) {
 
 /**
  * Wraps each character of a text string in span tags so we can animate the individual letters.
- *
+ * TODO: Need to fix regex so it picks up on all special chars
  * @param text
  * @returns {string}
  */
 function wrapLetters(text) {
-  return `<span class="letters">${text.textContent.replace(/([\S]|\w)/g, '<span class="letter">$&</span>')}</span>`;
+  return `<span class="letters">${text.textContent.replace(/([\S\?\']|\w)/g, '<span class="letter">$&</span>')}</span>`;
 }
 
 /**

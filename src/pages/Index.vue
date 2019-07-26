@@ -261,7 +261,7 @@
       bgColor="bg-midnight-blue"
       title="Ready to Rock?"
       subtitle=""
-      description="Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit. We'll take the midnight train to your dream."
+      description=""
       imageClass="home-page-banner-image"
       :flipX="true"
       :angle="true"
@@ -284,14 +284,19 @@
 
       <template>
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
-          <div
-            class="guitar-block text-center"
-            @mouseover="startRockin.bind(this)()"
-            @mouseleave="stopRockin.bind(this)()">
-            <interactive-guitar :key="Math.random()"></interactive-guitar>
-            <br/>
-            <small><b>Click the strings to ROCK OUT</b></small>
+          <div style="width: 100%;" class="flex flex-column flex-center flex-justify-center">
+            <p class="text-center">Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit.</p>
+            <p class="text-center">We'll take the midnight train to your dream.</p>
+            <br />
+            <p class="text-center"><small><small><b>Click the strings to ROCK OUT</b></small></small></p>
+            <div
+              class="guitar-block text-center"
+              @mouseover="startRockin.bind(this)()"
+              @mouseleave="stopRockin.bind(this)()">
+              <interactive-guitar :key="Math.random()"></interactive-guitar>
+            </div>
           </div>
+
         </div>
       </template>
     </hero-layout01-col>

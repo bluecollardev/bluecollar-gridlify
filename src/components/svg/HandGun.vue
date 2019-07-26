@@ -219,4 +219,8 @@
     -webkit-justify-content: center;
     justify-content: center;
   }
+
+  .gun svg {
+    overflow: visible;
+  }
 </style>
