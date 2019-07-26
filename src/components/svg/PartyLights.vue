@@ -1,5 +1,5 @@
 <template>
-  <div class="party-lights flex flex-basis-full">
+  <div class="party-lights flex flex-column flex-basis-full">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
          preserveAspectRatio="xMidYMin slice" viewBox="0 0 640 360" ref="svg" class="button">
       <circle ref="circ1" cx="80" cy="120" r="20" class="color-4 opacity"/>
@@ -160,16 +160,16 @@
 <style lang="scss">
   .party-lights {
     width: 100%;
-    height: 120vh;
+    height: 130vh;
     position: absolute;
     z-index: 10;
     overflow: hidden;
-    top: -10vh;
+    top: 0;
 
     svg {
       visibility: hidden;
       width: 100%;
-      padding-bottom: 55.8%;
+      padding-bottom: 0;
       height: 1px;
       overflow: visible
     }

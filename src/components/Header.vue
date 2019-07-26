@@ -12,7 +12,7 @@
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0">
           <li><a href="/#services" aria-label="Websites" @click="hideMenu()">Apps / Software / Web</a></li>
-          <li><a href="/company" aria-label="Our Team" @click="hideMenu()">21st Century Artisans</a></li>
+          <li><a href="/company" aria-label="Our Team" @click="hideMenu()">The Blue Collar Way</a></li>
           <li><a href="/#contact" aria-label="Enquire" @click="hideMenu()">Get In Touch</a></li>
         </ul>
         <div class="site-navbar-top d-flex">

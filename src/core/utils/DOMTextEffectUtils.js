@@ -78,7 +78,7 @@ function rewrapLettersOnWordBoundary(text, lettersTarget, letterTargets) {
  * @returns {string}
  */
 function wrapLetters(text) {
-  return `<span class="letters">${text.textContent.replace(/([^\x00-\x80]|\w)/g, '<span class="letter">$&</span>')}</span>`;
+  return `<span class="letters">${text.textContent.replace(/([\S]|\w)/g, '<span class="letter">$&</span>')}</span>`;
 }
 
 /**

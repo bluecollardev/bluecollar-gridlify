@@ -1,5 +1,84 @@
 <template>
-  <portfolio-temp></portfolio-temp>
+  <div>
+    <div style="position: relative; top: -15vh">
+      <!-- Pull this out of the section, we need it to sit on top of the top video banner -->
+      <section id="services" class="col-3-squares no-pad-bottom lg-flex" style="position: absolute; width: 100%; z-index: 10; transform: translateY(-3vh)">
+        <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third bg-light-grey">
+          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
+            <div class="service-detail-card-front">
+            </div>
+            <div class="service-detail-card-back">
+            </div>
+          </div>
+        </div>
+
+        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
+          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
+            <div class="service-detail-card-front center-testimonial">
+            </div>
+            <div class="service-detail-card-back">
+            </div>
+          </div>
+        </div>
+
+        <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third bg-light-grey">
+          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
+            <div class="service-detail-card-front">
+            </div>
+
+            <div class="service-detail-card-back">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-section shift-section-up angle bg-bc-blue pad-top no-pad-bottom lg-flex flex-justify-center">
+        <div class="col-3-squares no-pad-bottom lg-flex">
+          <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
+            <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
+              <div class="service-detail-card-front center-testimonial">
+
+              </div>
+              <div class="service-detail-card-back">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-section shift-section-up angle bg-bc-blue no-pad-bottom lg-flex">
+        <div class="col-3-squares bg-bc-blue no-pad-bottom lg-flex flex-basis-full">
+          <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
+            <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
+              <div class="service-detail-card-front">
+              </div>
+              <div class="service-detail-card-back">
+              </div>
+            </div>
+          </div>
+
+          <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third flex-grow bg-light-grey">
+            <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
+              <div class="service-detail-card-front">
+              </div>
+              <div class="service-detail-card-back">
+              </div>
+            </div>
+          </div>
+
+          <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
+            <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
+              <div class="service-detail-card-front">
+              </div>
+
+              <div class="service-detail-card-back">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -20,8 +99,6 @@
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
   import TestimonialHeroLayout from '~/components/layouts/TestimonialHeroLayout.vue';
-  import AngleMosaic from '~/components/layouts/AngleMosaic.vue';
-  import PortfolioTemp from '~/components/PortfolioTemp.vue';
 
   // Import static blocks
   import ProcessBlock from '~/blocks/ProcessBlock.vue';
@@ -56,8 +133,6 @@
 
   export default {
     components: {
-      AngleMosaic,
-      PortfolioTemp,
       // Inject components
       Header,
       Hero,

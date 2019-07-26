@@ -39,7 +39,7 @@
               <p class="g-pstyle13"><a href="/company">Company</a></p>
             </div>
             <div class="g-footer">
-              <p class="g-pstyle7"><a href="/company#story">21st Century Artisans</a></p>
+              <p class="g-pstyle7"><a href="/company#story">The Blue Collar Way</a></p>
 
               <p class="g-pstyle7"><a href="/consulting">Consulting Services</a></p>
 

@@ -2,7 +2,55 @@
   <Layout>
     <Header/>
 
-    <video-hero-layout01-col
+    <helicopter id="helicopter" ref="helicopter" style="z-index: 1000"></helicopter>
+
+    <hero-layout01-col
+      id="portfolio"
+      bgColor="bg-midnight-blue"
+      title="Elite Software Commandos"
+      subtitle=""
+      description=""
+      imageClass="home-page-banner-image"
+      :flipX="true"
+      :angle="true"
+      slotPos="top"
+      className="pad-top-2x pad-bottom-2x"
+      style="height: 130vh"
+    >
+      <template v-slot:bg>
+        <div class="special-forces-skull" style="z-index: 2; position: absolute; width: 367px; height: 404px; background-image: url(/images/special-forces-skull.png); background-size: contain; background-repeat: no-repeat; background-position: center center"></div>
+        <div class="sergeant-stripes" style="z-index: 1; position: absolute; width: 100%; height: 100%; filter: invert(100); opacity: 0.1; background-image: url(/images/sergeant-major-of-the-army.png); background-size: contain; background-repeat: no-repeat; background-position: center 210px"></div>
+      </template>
+
+      <template v-slot:title>
+        <typewriter-text-effect
+          tag="h2"
+          text="Elite Software Commandos"
+          class="title text-center pad-bottom"
+          :loop="true">
+        </typewriter-text-effect>
+      </template>
+
+      <template>
+        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+          <div>
+            <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills.</p>
+            <p class="text-center">At Blue Collar, our elite software commandos build software that's ready for tomorrow's challenges. By using cutting-edge technologies and employing the latest software design methodologies, we can guarantee that you'll be well prepared and equipped for years to come.</p>
+            <div class="guns-comp">
+              <hand-gun class="left-gun" :introDelay="0.3"></hand-gun>
+              <hand-gun class="right-gun" :introDelay="0.7"></hand-gun>
+            </div>
+            <!-- Start Submit -->
+            <div class="text-center" style="position: relative; top: -140px">
+              <a class="action-link transparent space-top g-pstyle3">Learn More</a>
+            </div>
+            <!-- End Submit -->
+          </div>
+        </div>
+      </template>
+    </hero-layout01-col>
+
+    <!--<video-hero-layout01-col
       className="homepage-hero-main"
       title="Clients and Case Studies"
       subtitle=""
@@ -28,27 +76,108 @@
 
       <div class="sm-flex flex-auto flex-center flex-justify-center">
         <div>
-          <!--<div class="space-bottom">
+          <div class="space-bottom">
             <p class="g-pstyle1 text-center-force">Note: Only Blue Collar contract roles are listed here. To view my personal work history <a style="text-decoration: underline; color: white;" href="/lucas-profile" alt="View Lucas' profile">click here</a>.</p>
-          </div>-->
+          </div>
           <img class="lozad" src="/images/portfolio/bc-showcase-responsive.png" alt="" />
-          <!--<div class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center">
+          <div class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center">
             <a class="action-link space-bottom g-pstyle3" href="/projects#portfolio">Scroll Down</a>
           </div>
           <div class="homepage-hero-action action-link-block xs-hide text-center">
             <a class="action-link space-top g-pstyle3" href="/projects#portfolio">Scroll Down</a>
-          </div>-->
+          </div>
         </div>
       </div>
-    </video-hero-layout01-col>
+    </video-hero-layout01-col>-->
 
-    <portfolio></portfolio>
+    <hero-layout01-col
+      id="portfolio"
+      bgColor="bg-evening-blue"
+      title="Lost in the Software Jungle?"
+      subtitle=""
+      description=""
+      imageClass="home-page-banner-image"
+      image=""
+      :flipX="true"
+      :angle="true"
+      slotPos="top"
+      className="sm-pad-top pad-bottom-2x"
+      style="transform: translateY(-19vh)"
+    >
+      <template v-slot:bg>
+        <div style="position: absolute; width: 100%; height: 100%;">
+          <jungle style="position: relative; bottom: -20vh"></jungle>
+        </div>
+      </template>
+
+      <template v-slot:title>
+        <typewriter-text-effect
+          tag="h2"
+          text="Lost in the Software Jungle?"
+          class="title text-center pad-bottom"
+          :loop="true">
+        </typewriter-text-effect>
+      </template>
+
+      <template>
+        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+          <div>
+            <p class="text-center">Let our seasoned vets show you the way to El Dorado.</p>
+            <!-- Start Submit -->
+            <div class="text-center" style="">
+              <a class="action-link transparent space-top g-pstyle3">Learn More</a>
+            </div>
+            <!-- End Submit -->
+          </div>
+        </div>
+      </template>
+    </hero-layout01-col>
+
+    <!--<portfolio style="transform: translateY(-10vh); z-index: 7; position: relative;"></portfolio>-->
+
+    <hero-layout01-col
+      id="portfolio"
+      bgColor="bg-bc-blue"
+      title="We Deliver Results"
+      subtitle=""
+      description=""
+      imageClass="home-page-banner-image"
+      :flipX="true"
+      :angle="true"
+      slotPos="top"
+      className="sm-pad-top pad-bottom-2x"
+      style="transform: translateY(-43vh); z-index: 5;"
+    >
+      <template v-slot:title>
+        <shrink-words-one-by-one-text-effect
+          tag="h2"
+          text="We Deliver Results"
+          class="title text-center pad-bottom"
+          :loop="true">
+        </shrink-words-one-by-one-text-effect>
+      </template>
+
+      <template>
+        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+          <div>
+            <p class="text-center">At Blue Collar, we <strong style="text-decoration: underline; font-weight: 900">never</strong> leave our customers behind.</p>
+            <!-- Start Submit -->
+            <div class="text-center" style="">
+              <a class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
+            </div>
+            <!-- End Submit -->
+          </div>
+        </div>
+      </template>
+    </hero-layout01-col>
 
     <Footer/>
   </Layout>
 </template>
 
 <script>
+  import anime from 'animejs';
+
   // Import components
   import Header from '~/components/Header.vue';
   import Hero from '~/components/Hero.vue';
@@ -60,10 +189,26 @@
 
   // Import generic component layouts
   import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
+  import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue';
   import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
   import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
+
+  // Import SVG animations
+  import HandGun from '~/components/svg/HandGun.vue';
+  import Helicopter from '~/components/svg/Helicopter.vue';
+  import Jungle from '~/components/svg/Jungle.vue';
+
+  // Import animated text effects
+  import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
+  import ShrinkWordsOneByOneTextEffect from '~/core/components/text/ShrinkWordsOneByOne.vue';
+  import RotateWordsTextEffect from '~/core/components/text/RotateWords.vue';
+  import SlideUpTextEffect from '~/core/components/text/SlideUp.vue';
+  import FadeInTextEffect from '~/core/components/text/FadeIn.vue';
+
+  // Import animated content effects
+  import SimpleEffect from '~/core/components/animate/Simple.vue'
 
   // Import static data
   import HomeData from '~/data/Home.yml';
@@ -83,10 +228,23 @@
       Portfolio,
       // Inject generic component layouts
       VideoHeroLayout01Col,
+      HeroLayout01Col,
       SectionBlockLayout02Col01,
       SectionBlockLayout02Col02,
       ContentBlockLayout,
       TestimonialBlockLayout,
+      // Inject SVG animations
+      HandGun,
+      Helicopter,
+      Jungle,
+      // Inject animated text effects
+      TypewriterTextEffect,
+      ShrinkWordsOneByOneTextEffect,
+      RotateWordsTextEffect,
+      SlideUpTextEffect,
+      FadeInTextEffect,
+      // Inject animated content effects
+      SimpleEffect
     },
     computed: {
       homeContent() {
@@ -122,7 +280,118 @@
         }
 
         return null
+      },
+      trackMouse(e) {
+        //console.log(e);
+        const coords = {
+          x: e.clientX,
+          y: e.clientY
+        };
+
+        const offset = {
+          x: window.scrollX,
+          y: window.scrollY
+        };
+
+        const helicopter = document.querySelector('#helicopter');
+        const helicopterSpeech = helicopter.querySelector('.speech-bubble');
+        const helicopterCoords = helicopter.getBoundingClientRect();
+
+        const moveTo = {
+          x: coords.x - 100,
+          y: coords.y - 100
+        };
+
+        let helicopterTimeline = anime.timeline({ loop: false });
+
+        if (moveTo.x < helicopterCoords.x) {
+          helicopterTimeline
+            .add({
+              targets: helicopter,
+              scaleX: -1,
+              duration: 0
+            });
+        } else {
+          helicopterTimeline
+            .add({
+              targets: helicopter,
+              scaleX: 1,
+              duration: 0
+            });
+        }
+
+        helicopterTimeline.add({
+          targets: helicopter,
+          translateX: [helicopterCoords.x, moveTo.x],
+          translateY: [helicopterCoords.y, moveTo.y],
+          easing: 'easeInOutQuad',
+          duration: 3500
+        });
       }
+    },
+    mounted() {
+      const stripes = document.querySelector('.sergeant-stripes');
+      const skull = document.querySelector('.special-forces-skull');
+
+      anime({
+        targets: stripes,
+        translateY: [150, 0],
+        easing: 'easeOutExpo',
+        duration: 1500
+      });
+
+      anime({
+        targets: skull,
+        translateY: [300, 50],
+        easing: 'easeInOutQuad',
+        duration: 1500,
+        complete: () => {
+          let skullTimeline = anime.timeline({ loop: true });
+          skullTimeline
+            .add({
+              targets: skull,
+              translateY: [50, 40],
+              easing: 'easeInOutQuad',
+              duration: 2500
+            })
+            .add({
+              targets: skull,
+              translateY: [40, 50],
+              easing: 'easeInOutQuad',
+              duration: 2500
+            });
+        }
+      });
+
+
+
+      // Make helicopter follow mouse
+      if (typeof window !== 'undefined') {
+        window.addEventListener('mousemove', this.trackMouse);
+      }
+    },
+    beforeDestroy() {
+      window.removeEventListener('mousemove', this.trackMouse);
     }
   }
 </script>
+
+<style>
+  .guns-comp {
+    height: 70vh;
+    transform: translateY(100px);
+  }
+
+  .left-gun, .right-gun {
+    position: absolute;
+  }
+
+  .left-gun {
+    left: -40%;
+  }
+
+  .right-gun {
+    transform: scaleX(-1);
+    right: -40%;
+  }
+</style>

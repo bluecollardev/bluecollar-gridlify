@@ -258,7 +258,7 @@
     <hero-layout01-col
       id="rock"
       v-if="servicesHero"
-      bgColor="bg-black"
+      bgColor="bg-midnight-blue"
       title="Ready to Rock?"
       subtitle=""
       description="Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit. We'll take the midnight train to your dream."
@@ -267,6 +267,7 @@
       :angle="true"
       slotPos="top"
       className="sm-pad-top pad-bottom-2x"
+      style="height: 115vh"
     >
       <template v-slot:bg v-if="this.rockAndRoll">
         <party-lights></party-lights>
@@ -296,7 +297,7 @@
     </hero-layout01-col>
     <!-- END NOT DELETE THIS IS THE GUITAR!!! -->
 
-    <section id="contact" class="hero-section text-shadow bg-black angle no-pad-top">
+    <section id="contact" class="hero-section text-shadow bg-black angle no-pad-top" style="height: 130vh">
       <google-map-background></google-map-background>
       <div class="flex flex-center flex-justify-center">
         <div class="flex flex-basis-half">
@@ -310,10 +311,6 @@
 </template>
 
 <script>
-  import anime from 'animejs';
-
-  import * as DOMTextEffectUtils from '~/core/utils/DOMTextEffectUtils';
-
   // Import components
   import Header from '~/components/Header.vue';
   import Hero from '~/components/Hero.vue';
