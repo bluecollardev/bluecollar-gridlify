@@ -96,7 +96,7 @@
 </script>
 
 <style lang="scss">
-  @keyframes spin {
+  @keyframes primaryblade {
     from {
       transform: rotateY(0deg);
     }
@@ -129,8 +129,9 @@
   .helicopter {
     position: absolute;
     width: 120px;
-    height: 120px;
+    height: 80px;
     z-index: 1000;
+    cursor: pointer !important;
   }
 
   .helicopter-inner {
@@ -149,7 +150,7 @@
     top: 0;
     left: 31px;
     animation-duration: 0.2s;
-    animation-name: spin;
+    animation-name: primaryblade;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-play-state: running;

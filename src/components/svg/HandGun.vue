@@ -126,7 +126,6 @@
         this.cockGunAudio = new Audio();
         this.cockGunAudio.src = '/audio/gun_cocking_fast-mike_koenig.mp3';
         this.cockGunAudio.loop = false;
-
       },
       fireWeapon() {
         TweenLite.to(this.p('.trigger'), 0.1, {rotation:-15, transformOrigin:'top right', delay: 0});
@@ -142,7 +141,7 @@
         this.fireGunAudio.play();
       },
       cock() {
-        TweenLite.to(this.p('.hammer'), 0, {rotation:64, transformOrigin:'bottom left', ease: Circ.easeOut}, 'start')
+        TweenLite.to(this.p('.hammer'), 0, {rotation:64, transformOrigin:'bottom left', ease: Circ.easeOut}, 'start');
       },
       pullSlider() {
         this.tlPullSlider = new TimelineLite();
@@ -218,9 +217,13 @@
     -webkit-box-pack: end;
     -webkit-justify-content: center;
     justify-content: center;
-  }
 
-  .gun svg {
-    overflow: visible;
+    .svg {
+      overflow: visible;
+    }
+
+    .trigger, .hammer, .slider-group {
+      cursor: pointer !important;
+    }
   }
 </style>

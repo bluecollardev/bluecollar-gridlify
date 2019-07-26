@@ -4,6 +4,16 @@
 
     <helicopter></helicopter>
 
+    <!--<audio-controls
+      style="position: fixed; top: 140px; right: 130px; z-index: 8888"
+      :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
+      :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
+      :onPlayPauseClicked="this.onPlayPauseClicked.bind(this, this.soundtrack)"
+      :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
+      :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
+      :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
+    />-->
+
     <hero-layout01-col
       bgColor="bg-midnight-blue"
       title="Elite Software Commandos"
@@ -213,6 +223,10 @@
   // Import animated content effects
   import SimpleEffect from '~/core/components/animate/Simple.vue'
 
+  // Import audio controls
+  import AudioControls from '~/core/components/audio/AudioControls.vue';
+  import AudioControlsMixin from '~/core/components/audio/AudioControlsMixin';
+
   // Import static data
   import HomeData from '~/data/Home.yml';
   import HeroData from '~/data/Hero.yml';
@@ -231,6 +245,8 @@
       Contact,
       Footer,
       Portfolio,
+      // Inject mixins
+      AudioControls,
       // Inject generic component layouts
       VideoHeroLayout01Col,
       HeroLayout01Col,
@@ -251,13 +267,23 @@
       // Inject animated content effects
       SimpleEffect
     },
+    mixins: [
+      AudioControlsMixin
+    ],
+    data() {
+      return {
+        soundtrack: null
+      }
+    },
     methods: {
       initSoundtrack() {
-        this.soundtrack = new Audio();
-        this.soundtrack.volume = 0.25;
-        this.soundtrack.src = '/audio/soundtrack_to_war.mp3';
-        this.soundtrack.loop = true;
-        this.soundtrack.play();
+        if (!(this.soundtrack instanceof Audio)) {
+          this.soundtrack = new Audio();
+          this.soundtrack.volume = 0.5;
+          this.soundtrack.src = '/audio/soundtrack_to_war.mp3';
+          this.soundtrack.loop = true;
+          this.soundtrack.play();
+        }
       },
       getProcessStep(idx) {
         let items = this.homeContent.processSteps;
@@ -272,22 +298,27 @@
         const detail = this.$refs.contentDetail;
         const detailEl = detail;
 
-        detailEl.style.zIndex = 5000;
-        detailEl.style.opacity = 1;
+        if (detailEl) {
+          detailEl.style.zIndex = 5000;
+          detailEl.style.opacity = 1;
 
-        anime({
-          targets: detailEl,
-          top: [document.documentElement.clientHeight + 'px', '54px'], // Match header height
-          easing: 'easeOutExpo',
-          duration: 1000
-        });
+          document.body.style.overflowY = 'hidden';
 
+          anime({
+            targets: detailEl,
+            top: [document.documentElement.clientHeight + 'px', '54px'], // Match header height
+            easing: 'easeOutExpo',
+            duration: 1000
+          });
+        }
       },
       hideDetail() {
         const detail = this.$refs.contentDetail;
         const detailEl = detail;
 
         if (detailEl) {
+          document.body.style.overflowY = 'scroll';
+
           anime({
             targets: detailEl,
             top: ['54px', '100%'],
@@ -355,6 +386,8 @@
     beforeDestroy() {
       if (typeof window !== 'undefined') {
         window.removeEventListener('keydown', this.bindDetailCloseToEsc);
+        this.soundtrack.pause();
+        this.soundtrack = null;
       }
     }
   }
