@@ -4,15 +4,15 @@
 
     <helicopter></helicopter>
 
-    <!--<audio-controls
-      style="position: fixed; top: 140px; right: 130px; z-index: 8888"
+    <audio-controls
+      style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.5"
       :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
       :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
       :onPlayPauseClicked="this.onPlayPauseClicked.bind(this, this.soundtrack)"
       :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
       :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
       :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
-    />-->
+    />
 
     <hero-layout01-col
       bgColor="bg-midnight-blue"
@@ -182,7 +182,13 @@
 
     <Footer/>
 
-    <div ref="contentDetail" class="detailed-content-panel bg-evening-blue">
+    <div ref="contentDetail" class="detailed-content-panel bg-bc-blue">
+      <div class="panel-header flex flex-center pad-left-half pad-right-half" style="height: 5rem;">
+        <div class="flex-grow">
+          <h2 class="text-center no-space-top no-space-bottom">Case Studies</h2>
+        </div>
+        <b @click="hideDetail()" style="font-size: 1.5rem; cursor: pointer">X</b>
+      </div>
       <portfolio-vertical-timeline></portfolio-vertical-timeline>
     </div>
   </Layout>
@@ -228,10 +234,6 @@
   import AudioControlsMixin from '~/core/components/audio/AudioControlsMixin';
 
   // Import static data
-  import HomeData from '~/data/Home.yml';
-  import HeroData from '~/data/Hero.yml';
-  import GeneralData from '~/data/General.yml';
-  import TestimonialData from '~/data/Testimonial.yml';
   import PortfolioVerticalTimeline from "../components/portfolio/PortfolioVerticalTimeline";
 
   export default {
@@ -282,7 +284,7 @@
           this.soundtrack.volume = 0.5;
           this.soundtrack.src = '/audio/soundtrack_to_war.mp3';
           this.soundtrack.loop = true;
-          this.soundtrack.play();
+          //this.soundtrack.play();
         }
       },
       getProcessStep(idx) {
@@ -421,5 +423,6 @@
     top: 100%;
     left: 0;
     z-index: 5000;
+    overflow-y: scroll;
   }
 </style>
