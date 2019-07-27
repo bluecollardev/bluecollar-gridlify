@@ -33,12 +33,12 @@
       </template>
 
       <template v-slot:title>
-        <typewriter-text-effect
+        <!--<typewriter-text-effect
           tag="h2"
           text="Elite Software Commandos"
           class="title text-center pad-bottom"
           :loop="true">
-        </typewriter-text-effect>
+        </typewriter-text-effect>-->
       </template>
 
       <template>
