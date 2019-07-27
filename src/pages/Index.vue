@@ -2,9 +2,10 @@
   <Layout>
     <Header/>
 
-    <!--<helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>
+    <!--<helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>-->
+    <helicopter></helicopter>
 
-    <audio-controls
+    <!--<audio-controls
       style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
       :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
       :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
@@ -242,7 +243,7 @@
       Blog,
       Contact,
       Footer,
-      Portfolio,
+      //Portfolio,
       /*
       // Inject mixins
       AudioControls,
