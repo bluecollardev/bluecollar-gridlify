@@ -2,10 +2,9 @@
   <Layout>
     <Header/>
 
-    <!--<helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>-->
-    <helicopter></helicopter>
+    <helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>
 
-    <!--<audio-controls
+    <audio-controls
       style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
       :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
       :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
@@ -13,7 +12,7 @@
       :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
       :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
       :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
-    />-->
+    />
 
     <hero-layout01-col
       bgColor="bg-midnight-blue"
@@ -228,11 +227,11 @@
   //import SimpleEffect from '~/core/components/animate/Simple.vue'
 
   // Import audio controls
-  /*import AudioControls from '~/core/components/audio/AudioControls.vue';
+  import AudioControls from '~/core/components/audio/AudioControls.vue';
   import AudioControlsMixin from '~/core/components/audio/AudioControlsMixin';
 
   // Import static data
-  //import PortfolioVerticalTimeline from "../components/portfolio/PortfolioVerticalTimeline";*/
+  //import PortfolioVerticalTimeline from "../components/portfolio/PortfolioVerticalTimeline";
 
   export default {
     components: {
@@ -245,7 +244,7 @@
       Footer,
       //Portfolio,
       // Inject mixins
-      //AudioControls,
+      AudioControls,
       // Inject generic component layouts
       VideoHeroLayout01Col,
       HeroLayout01Col,
@@ -268,7 +267,7 @@
       SimpleEffect*/
     },
     mixins: [
-      //AudioControlsMixin
+      AudioControlsMixin
     ],
     data() {
       return {
@@ -287,7 +286,20 @@
       }
     },
     methods: {
-      /*initSoundtrack() {
+      /**
+       * @deprecated
+       * Deprecated as far as this site is concerned right now... this could also be moved to a mixin
+       */
+      getProcessStep(idx) {
+        let items = this.homeContent.processSteps;
+
+        if (items instanceof Array && items.length > idx) {
+          return items[idx];
+        }
+
+        return null
+      },
+      initSoundtrack() {
         if (!(this.soundtrack instanceof Audio)) {
           this.soundtrack = new Audio();
           this.soundtrack.volume = 0.5;
@@ -307,15 +319,6 @@
           }, 900);
         }
       },
-      getProcessStep(idx) {
-        let items = this.homeContent.processSteps;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
-      },*/
       viewDetail() {
         const detail = this.$refs.contentDetail;
         const detailEl = detail;
@@ -367,9 +370,9 @@
     },
     mounted() {
       if (typeof window !== 'undefined') {
-        //window.addEventListener('keydown', this.bindDetailCloseToEsc);
+        window.addEventListener('keydown', this.bindDetailCloseToEsc);
 
-        //this.initSoundtrack();
+        this.initSoundtrack();
 
         const stripes = document.querySelector('.sergeant-stripes');
         const skull = document.querySelector('.special-forces-skull');
