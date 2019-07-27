@@ -15,7 +15,7 @@
     />
 
     <hero-layout01-col
-      bgColor="bg-midnight-blue"
+      bgColor="bg-evening-blue"
       title="Elite Software Commandos"
       subtitle=""
       description=""
@@ -23,7 +23,7 @@
       :flipX="true"
       :angle="true"
       slotPos="top"
-      className="pad-top-2x pad-bottom-2x"
+      className="pad-top-2x pad-bottom-2x text-shadow"
       style="height: 130vh"
     >
       <template v-slot:bg>
@@ -102,6 +102,46 @@
     </video-hero-layout01-col>-->
 
     <hero-layout01-col
+      bgColor="bg-forest-green"
+      title="We Deliver Results"
+      subtitle=""
+      description=""
+      imageClass="home-page-banner-image"
+      image="/images/forest.png"
+      :flipX="true"
+      :angle="true"
+      slotPos="top"
+      className="sm-pad-top pad-bottom-2x text-shadow relative"
+      style="height: 110vh; transform: translateY(-19vh); background-position: center 0"
+    >
+      <template v-slot:bg>
+        <span class="army-tank" />
+      </template>
+
+      <template v-slot:title>
+        <shrink-words-one-by-one-text-effect
+          tag="h2"
+          text="We Deliver Results"
+          class="title text-center pad-bottom"
+          :loop="true">
+        </shrink-words-one-by-one-text-effect>
+      </template>
+
+      <template>
+        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+          <div>
+            <p class="text-center">At Blue Collar, we <strong style="text-decoration: underline; font-weight: 900">never</strong> leave our customers behind.</p>
+            <!-- Start Submit -->
+            <div class="text-center" style="">
+              <a @click="viewDetail()" class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
+            </div>
+            <!-- End Submit -->
+          </div>
+        </div>
+      </template>
+    </hero-layout01-col>
+
+    <hero-layout01-col
       bgColor="bg-evening-blue"
       title="Lost in the Software Jungle?"
       subtitle=""
@@ -111,12 +151,12 @@
       :flipX="true"
       :angle="true"
       slotPos="top"
-      className="sm-pad-top pad-bottom-2x"
-      style="transform: translateY(-19vh)"
+      className="sm-pad-top pad-bottom-2x text-shadow"
+      style="z-index: 5; transform: translateY(-43vh); height: 120vh"
     >
       <template v-slot:bg>
         <div style="position: absolute; width: 100%; height: 100%;">
-          <jungle style="position: relative; bottom: -20vh"></jungle>
+          <jungle style="position: relative; bottom: -50vh"></jungle>
         </div>
       </template>
 
@@ -136,43 +176,6 @@
             <!-- Start Submit -->
             <div class="text-center" style="">
               <a @click="viewDetail()" class="action-link transparent space-top g-pstyle3">Learn More</a>
-            </div>
-            <!-- End Submit -->
-          </div>
-        </div>
-      </template>
-    </hero-layout01-col>
-
-    <!--<portfolio style="transform: translateY(-10vh); z-index: 7; position: relative;"></portfolio>-->
-
-    <hero-layout01-col
-      bgColor="bg-bc-blue"
-      title="We Deliver Results"
-      subtitle=""
-      description=""
-      imageClass="home-page-banner-image"
-      :flipX="true"
-      :angle="true"
-      slotPos="top"
-      className="sm-pad-top pad-bottom-2x"
-      style="transform: translateY(-43vh); z-index: 5;"
-    >
-      <template v-slot:title>
-        <shrink-words-one-by-one-text-effect
-          tag="h2"
-          text="We Deliver Results"
-          class="title text-center pad-bottom"
-          :loop="true">
-        </shrink-words-one-by-one-text-effect>
-      </template>
-
-      <template>
-        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
-          <div>
-            <p class="text-center">At Blue Collar, we <strong style="text-decoration: underline; font-weight: 900">never</strong> leave our customers behind.</p>
-            <!-- Start Submit -->
-            <div class="text-center" style="">
-              <a @click="viewDetail()" class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
             </div>
             <!-- End Submit -->
           </div>
@@ -384,6 +387,17 @@
             });
         }
       });
+
+      const tank = document.querySelector('.army-tank');
+
+      anime({
+        targets: tank,
+        translateX: ['150%', '-150%'],
+        easing: 'linear',
+        duration: 5000,
+        loop: true,
+        delay: 3000
+      })
     },
     beforeDestroy() {
       if (typeof window !== 'undefined') {
@@ -424,5 +438,14 @@
     left: 0;
     z-index: 5000;
     overflow-y: scroll;
+  }
+
+  .army-tank {
+    position: fixed;
+    background: url(/images/t84-tank.svg) no-repeat;
+    width: 900px;
+    height: 300px;
+    bottom: 100px;
+    background-size: contain;
   }
 </style>
