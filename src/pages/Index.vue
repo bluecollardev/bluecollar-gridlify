@@ -15,7 +15,7 @@
       :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
     />-->
 
-    <!--<hero-layout01-col
+    <hero-layout01-col
       bgColor="bg-midnight-blue"
       title="Elite Software Commandos"
       subtitle=""
@@ -58,7 +58,7 @@
           </div>
         </div>
       </template>
-    </hero-layout01-col>-->
+    </hero-layout01-col>
 
     <!--<video-hero-layout01-col
       className="homepage-hero-main"
@@ -204,12 +204,12 @@
   //import Portfolio from '~/components/portfolio/Portfolio.vue';
 
   // Import generic component layouts
-  /*import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
+  import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
   import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue';
-  import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
+  /*import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
   import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
-  import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
+  import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';*/
 
   // Import SVG animations
   import HandGun from '~/components/svg/HandGun.vue';
@@ -228,7 +228,7 @@
   import SimpleEffect from '~/core/components/animate/Simple.vue'
 
   // Import audio controls
-  import AudioControls from '~/core/components/audio/AudioControls.vue';
+  /*import AudioControls from '~/core/components/audio/AudioControls.vue';
   import AudioControlsMixin from '~/core/components/audio/AudioControlsMixin';
 
   // Import static data
@@ -244,16 +244,15 @@
       Contact,
       Footer,
       //Portfolio,
-      /*
       // Inject mixins
-      AudioControls,
+      //AudioControls,
       // Inject generic component layouts
       VideoHeroLayout01Col,
       HeroLayout01Col,
-      SectionBlockLayout02Col01,
+      /*SectionBlockLayout02Col01,
       SectionBlockLayout02Col02,
       ContentBlockLayout,
-      TestimonialBlockLayout,
+      TestimonialBlockLayout,*/
       // Inject SVG animations
       HandGun,
       Helicopter,
@@ -266,7 +265,7 @@
       SlideUpTextEffect,
       FadeInTextEffect,
       // Inject animated content effects
-      SimpleEffect*/
+      SimpleEffect
     },
     mixins: [
       //AudioControlsMixin
@@ -275,7 +274,7 @@
       return {
         soundtrack: null,
         formData: {},
-        /*textEffects: {
+        textEffects: {
           typewriter: TypewriterTextEffect,
           shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
           rotateWords: RotateWordsTextEffect,
@@ -284,7 +283,7 @@
         },
         contentEffects: {
           simple: SimpleEffect
-        }*/
+        }
       }
     },
     methods: {
@@ -367,10 +366,10 @@
       }*/
     },
     mounted() {
-      /*if (typeof window !== 'undefined') {
-        window.addEventListener('keydown', this.bindDetailCloseToEsc);
+      if (typeof window !== 'undefined') {
+        //window.addEventListener('keydown', this.bindDetailCloseToEsc);
 
-        this.initSoundtrack();
+        //this.initSoundtrack();
 
         const stripes = document.querySelector('.sergeant-stripes');
         const skull = document.querySelector('.special-forces-skull');
@@ -415,7 +414,7 @@
           loop: true,
           delay: 3000
         })
-      }*/
+      }
     },
     beforeDestroy() {
       /*if (typeof window !== 'undefined') {
