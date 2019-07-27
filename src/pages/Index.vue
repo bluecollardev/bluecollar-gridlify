@@ -100,7 +100,7 @@
       </div>
     </video-hero-layout01-col>-->
 
-    <!--<hero-layout01-col
+    <hero-layout01-col
       bgColor="bg-forest-green"
       title="We Deliver Results"
       subtitle=""
@@ -118,12 +118,12 @@
       </template>
 
       <template v-slot:title>
-        <shrink-words-one-by-one-text-effect
+        <!--<shrink-words-one-by-one-text-effect
           tag="h2"
           text="We Deliver Results"
           class="title text-center pad-bottom"
           :loop="true">
-        </shrink-words-one-by-one-text-effect>
+        </shrink-words-one-by-one-text-effect>-->
       </template>
 
       <template>
@@ -136,9 +136,9 @@
           </div>
         </div>
       </template>
-    </hero-layout01-col>-->
+    </hero-layout01-col>
 
-    <!--<hero-layout01-col
+    <hero-layout01-col
       bgColor="bg-black"
       title="Lost in the Software Jungle?"
       subtitle=""
@@ -158,12 +158,12 @@
       </template>
 
       <template v-slot:title>
-        <typewriter-text-effect
+        <!--<typewriter-text-effect
           tag="h2"
           text="Lost in the Software Jungle?"
           class="title text-center pad-bottom"
           :loop="true">
-        </typewriter-text-effect>
+        </typewriter-text-effect>-->
       </template>
 
       <template>
@@ -176,7 +176,7 @@
           </div>
         </div>
       </template>
-    </hero-layout01-col>-->
+    </hero-layout01-col>
 
     <Footer/>
 
@@ -218,14 +218,14 @@
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
 
   // Import animated text effects
-  import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
+  /*import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
   import ShrinkWordsOneByOneTextEffect from '~/core/components/text/ShrinkWordsOneByOne.vue';
   import RotateWordsTextEffect from '~/core/components/text/RotateWords.vue';
   import SlideUpTextEffect from '~/core/components/text/SlideUp.vue';
-  import FadeInTextEffect from '~/core/components/text/FadeIn.vue';
+  import FadeInTextEffect from '~/core/components/text/FadeIn.vue';*/
 
   // Import animated content effects
-  import SimpleEffect from '~/core/components/animate/Simple.vue'
+  //import SimpleEffect from '~/core/components/animate/Simple.vue'
 
   // Import audio controls
   /*import AudioControls from '~/core/components/audio/AudioControls.vue';
@@ -259,13 +259,13 @@
       Jungle,
       GoogleMapBackground,
       // Inject animated text effects
-      TypewriterTextEffect,
+      /*TypewriterTextEffect,
       ShrinkWordsOneByOneTextEffect,
       RotateWordsTextEffect,
       SlideUpTextEffect,
       FadeInTextEffect,
       // Inject animated content effects
-      SimpleEffect
+      SimpleEffect*/
     },
     mixins: [
       //AudioControlsMixin
@@ -275,14 +275,14 @@
         soundtrack: null,
         formData: {},
         textEffects: {
-          typewriter: TypewriterTextEffect,
-          shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
-          rotateWords: RotateWordsTextEffect,
-          slideUp: SlideUpTextEffect,
-          fadeIn: FadeInTextEffect
+          //typewriter: TypewriterTextEffect,
+          //shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
+          //rotateWords: RotateWordsTextEffect,
+          //slideUp: SlideUpTextEffect,
+          //fadeIn: FadeInTextEffect
         },
         contentEffects: {
-          simple: SimpleEffect
+          //simple: SimpleEffect
         }
       }
     },
@@ -315,7 +315,7 @@
         }
 
         return null
-      },
+      },*/
       viewDetail() {
         const detail = this.$refs.contentDetail;
         const detailEl = detail;
@@ -363,7 +363,7 @@
         }
 
         if (isEscape) this.hideDetail();
-      }*/
+      }
     },
     mounted() {
       if (typeof window !== 'undefined') {
