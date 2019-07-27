@@ -100,7 +100,9 @@
       }
     },
     beforeDestroy() {
-      window.removeEventListener('mousemove', this.trackMouse);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('mousemove', this.trackMouse);
+      }
     }
   }
 </script>

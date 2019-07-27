@@ -10,7 +10,7 @@
  * @param lettersTarget Node The wrapper element
  * @param letterTargets NodeList The individual letters
  */
-function wrapTitleText(text, lettersTarget, letterTargets) {
+function wrapLettersOnWordBoundary(text, lettersTarget, letterTargets) {
   let letters = [...letterTargets]; // Map NodeList to array
   let lastLetter = null;
   let currentLetter = null;
@@ -61,6 +61,17 @@ function wrapTitleText(text, lettersTarget, letterTargets) {
 }
 
 /**
+ * @param text
+ * @param lettersTarget
+ * @param letterTargets
+ */
+function rewrapLettersOnWordBoundary(text, lettersTarget, letterTargets) {
+  // Sanitize the text first, clear any <br> elements that we previously inserted
+  lettersTarget.querySelectorAll('br').forEach(el => el.remove());
+  wrapTitleText(text, lettersTarget, letterTargets);
+}
+
+/**
  * Wraps each character of a text string in span tags so we can animate the individual letters.
  * TODO: Need to fix regex so it picks up on all special chars
  * @param text
@@ -71,14 +82,13 @@ function wrapLetters(text) {
 }
 
 /**
+ * Wraps each word of a text string in span tags so we can animate the individual words.
+ *
  * @param text
- * @param lettersTarget
- * @param letterTargets
+ * @returns {string}
  */
-function rewrapTitleText(text, lettersTarget, letterTargets) {
-  // Sanitize the text first, clear any <br> elements that we previously inserted
-  lettersTarget.querySelectorAll('br').forEach(el => el.remove());
-  wrapTitleText(text, lettersTarget, letterTargets);
+function wrapWords(text) {
+  return `<span class="words">${text.textContent.replace(/([\S]+)/g, '<span class="word">$&</span>')}</span>`;
 }
 
-export { wrapTitleText, wrapLetters, rewrapTitleText };
+export { wrapLettersOnWordBoundary, rewrapLettersOnWordBoundary, wrapLetters, wrapWords };
