@@ -218,7 +218,7 @@
     -webkit-justify-content: center;
     justify-content: center;
 
-    .svg {
+    svg {
       overflow: visible;
     }
 

@@ -394,7 +394,7 @@
         targets: tank,
         translateX: ['150%', '-150%'],
         easing: 'linear',
-        duration: 5000,
+        duration: 8000,
         loop: true,
         delay: 3000
       })
