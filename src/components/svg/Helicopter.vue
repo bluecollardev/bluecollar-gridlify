@@ -1,5 +1,5 @@
 <template>
-  <div class="helicopter" @mouseenter="getToTheChoppa()">
+  <div class="helicopter" @mouseenter="getToTheChopper()">
     <p class="speech-bubble">Get to the chopper!!!</p>
     <div class="helicopter-inner">
       <img
@@ -19,18 +19,28 @@
   import anime from 'animejs';
 
   export default {
+    props: {
+      onGetToTheChopper: {
+        type: Function,
+        default: () => {}
+      }
+    },
     methods: {
       initAudioClips() {
         this.arnoldAudio = new Audio();
-        this.arnoldAudio.volume = 0.35;
+        this.arnoldAudio.volume = 0.60;
         this.arnoldAudio.src = '/audio/get_to_the_choppa.mp3';
         this.arnoldAudio.loop = false;
       },
-      getToTheChoppa() {
+      getToTheChopper() {
         this.arnoldAudio.onended = () => {
           this.$el.querySelector('.speech-bubble').style.opacity = 0;
           this.arnoldAudio.pause();
           this.arnoldAudio.currentTime = 0;
+
+          if (typeof this.onGetToTheChopper === 'function') {
+            this.onGetToTheChopper();
+          }
         };
 
         this.$el.querySelector('.speech-bubble').style.opacity = 1;

@@ -11,9 +11,9 @@
       </a>
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0">
-          <li><a href="/#services" aria-label="Websites" @click="hideMenu()">Apps / Software / Web</a></li>
-          <li><a href="/company" aria-label="Our Team" @click="hideMenu()">The Blue Collar Way</a></li>
-          <li><a href="/#contact" aria-label="Enquire" @click="hideMenu()">Get In Touch</a></li>
+          <li><a href="/" aria-label="Our Team" @click="hideMenu()">Software Commandos</a></li>
+          <li><a href="/company#services" aria-label="Websites" @click="hideMenu()">Apps / Software / Web</a></li>
+          <li><a href="/contact" aria-label="Enquire" @click="hideMenu()">Get In Touch</a></li>
         </ul>
         <div class="site-navbar-top d-flex">
           <a href="https://www.instagram.com/bluecollardev" class="d-flex align-items-center mr-4">

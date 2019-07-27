@@ -1,84 +1,66 @@
 <template>
-  <div>
-    <div style="position: relative; top: -15vh">
-      <!-- Pull this out of the section, we need it to sit on top of the top video banner -->
-      <section id="services" class="col-3-squares no-pad-bottom lg-flex" style="position: absolute; width: 100%; z-index: 10; transform: translateY(-3vh)">
-        <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third bg-light-grey">
-          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
-            <div class="service-detail-card-front">
-            </div>
-            <div class="service-detail-card-back">
+  <Layout :key="repaint">
+    <Header />
+
+    <!-- DO NOT DELETE THIS IS THE GUITAR!!! -->
+    <hero-layout01-col
+      id="rock"
+      v-if="servicesHero"
+      bgColor="bg-evening-blue"
+      title="Ready to Rock?"
+      subtitle=""
+      description=""
+      imageClass="home-page-banner-image"
+      :flipX="true"
+      :angle="true"
+      slotPos="top"
+      className="sm-pad-top pad-bottom-2x"
+      style="height: 115vh"
+    >
+      <template v-slot:bg v-if="this.rockAndRoll">
+        <party-lights></party-lights>
+      </template>
+
+      <template v-slot:title>
+        <shrink-words-one-by-one-text-effect
+          tag="h2"
+          text="Are You Ready to Rock?"
+          class="title text-center pad-bottom"
+          :loop="true">
+        </shrink-words-one-by-one-text-effect>
+      </template>
+
+      <template>
+        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+          <div style="width: 100%;" class="flex flex-column flex-center flex-justify-center">
+            <p class="text-center">Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit.</p>
+            <p class="text-center">We'll take the midnight train to your dream.</p>
+            <br />
+            <p class="text-center"><small><small><b>Click the strings to ROCK OUT</b></small></small></p>
+            <div
+              class="guitar-block text-center"
+              @mouseover="startRockin.bind(this)()"
+              @mouseleave="stopRockin.bind(this)()">
+              <interactive-guitar :key="Math.random()"></interactive-guitar>
             </div>
           </div>
+
         </div>
+      </template>
+    </hero-layout01-col>
+    <!-- END NOT DELETE THIS IS THE GUITAR!!! -->
 
-        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
-          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
-            <div class="service-detail-card-front center-testimonial">
-            </div>
-            <div class="service-detail-card-back">
-            </div>
-          </div>
+    <section id="contact" class="hero-section text-shadow bg-black angle no-pad-top" style="height: 130vh; margin-bottom: 58vh">
+      <google-map-background></google-map-background>
+      <div class="flex flex-center flex-justify-center">
+        <div class="flex flex-basis-half">
+          <contact :formData="formData"></contact>
         </div>
+      </div>
+    </section>
 
-        <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third bg-light-grey">
-          <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
-            <div class="service-detail-card-front">
-            </div>
-
-            <div class="service-detail-card-back">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="hero-section shift-section-up angle bg-bc-blue pad-top no-pad-bottom lg-flex flex-justify-center">
-        <div class="col-3-squares no-pad-bottom lg-flex">
-          <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
-            <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
-              <div class="service-detail-card-front center-testimonial">
-
-              </div>
-              <div class="service-detail-card-back">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="hero-section shift-section-up angle bg-bc-blue no-pad-bottom lg-flex">
-        <div class="col-3-squares bg-bc-blue no-pad-bottom lg-flex flex-basis-full">
-          <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
-            <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
-              <div class="service-detail-card-front">
-              </div>
-              <div class="service-detail-card-back">
-              </div>
-            </div>
-          </div>
-
-          <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third flex-grow bg-light-grey">
-            <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
-              <div class="service-detail-card-front">
-              </div>
-              <div class="service-detail-card-back">
-              </div>
-            </div>
-          </div>
-
-          <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
-            <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
-              <div class="service-detail-card-front">
-              </div>
-
-              <div class="service-detail-card-back">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
+    <Footer />
+  </Layout>
 </template>
 
 <script>
@@ -227,6 +209,12 @@
       },
     },
     methods: {
+      startRockin() {
+        this.$set(this, 'rockAndRoll', true);
+      },
+      stopRockin() {
+        this.$set(this, 'rockAndRoll', false);
+      },
       isLoaded() {
         // let isLoaded = false;
 

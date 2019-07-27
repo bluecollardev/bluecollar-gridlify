@@ -136,7 +136,7 @@
         TweenLite.to(this.p('.bullet'), 0.3, { x: -100 });
 
         this.fireGunAudio.pause();
-        this.fireGunAudio.volume = 0.25;
+        this.fireGunAudio.volume = 0.50;
         this.fireGunAudio.currentTime = 0;
         this.fireGunAudio.play();
       },
@@ -147,7 +147,7 @@
         this.tlPullSlider = new TimelineLite();
 
         this.cockGunAudio.pause();
-        this.cockGunAudio.volume = 0.5;
+        this.cockGunAudio.volume = 0.8;
         this.cockGunAudio.currentTime = 0;
         this.cockGunAudio.play();
 
@@ -156,15 +156,13 @@
           .to(this.p('.hammer'), 0.1, {rotation:63.5, transformOrigin:'bottom left', ease: Circ.easeOut}, 'start-=0.1')
           .to(this.p('.slider-group'), 0, {x:'-=10px'});
       },
-      shootToThrill() {
-        setTimeout(() => {
-          setTimeout(() => {
-            setTimeout(() => this.pullSlider(), 1000);
-            //setTimeout(() => this.cock(), 800);
-          });
+      shootToThrill(delay) {
+        delay = delay || 100;
 
+        setTimeout(() => {
+          setTimeout(() => this.pullSlider(), 1000);
           setTimeout(() => this.fireWeapon(), 2500);
-        }, 100);
+        }, delay);
       }
     },
     mounted() {
