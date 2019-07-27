@@ -2,7 +2,7 @@
   <Layout>
     <Header/>
 
-    <helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>
+    <!--<helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>
 
     <audio-controls
       style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
@@ -12,9 +12,9 @@
       :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
       :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
       :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
-    />
+    />-->
 
-    <hero-layout01-col
+    <!--<hero-layout01-col
       bgColor="bg-midnight-blue"
       title="Elite Software Commandos"
       subtitle=""
@@ -51,15 +51,13 @@
               <hand-gun ref="thunder" class="left-gun" :introDelay="0.3"></hand-gun>
               <hand-gun ref="lightning" class="right-gun" :introDelay="0.7"></hand-gun>
             </div>
-            <!-- Start Submit -->
             <div class="text-center" style="position: relative; top: -140px">
               <a href="/company" class="action-link transparent space-top g-pstyle3">What We Do</a>
             </div>
-            <!-- End Submit -->
           </div>
         </div>
       </template>
-    </hero-layout01-col>
+    </hero-layout01-col>-->
 
     <!--<video-hero-layout01-col
       className="homepage-hero-main"
@@ -101,7 +99,7 @@
       </div>
     </video-hero-layout01-col>-->
 
-    <hero-layout01-col
+    <!--<hero-layout01-col
       bgColor="bg-forest-green"
       title="We Deliver Results"
       subtitle=""
@@ -131,17 +129,15 @@
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
           <div>
             <p class="text-center">At Blue Collar, we <strong style="text-decoration: underline; font-weight: 900">never</strong> leave our customers behind.</p>
-            <!-- Start Submit -->
             <div class="text-center" style="">
               <a @click="viewDetail()" class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
             </div>
-            <!-- End Submit -->
           </div>
         </div>
       </template>
-    </hero-layout01-col>
+    </hero-layout01-col>-->
 
-    <hero-layout01-col
+    <!--<hero-layout01-col
       bgColor="bg-black"
       title="Lost in the Software Jungle?"
       subtitle=""
@@ -173,27 +169,25 @@
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
           <div>
             <p class="text-center">Let our seasoned vets show you the way to El Dorado.</p>
-            <!-- Start Submit -->
             <div class="text-center" style="">
               <a @click="viewDetail()" class="action-link transparent space-top g-pstyle3">Meet Our Consultants</a>
             </div>
-            <!-- End Submit -->
           </div>
         </div>
       </template>
-    </hero-layout01-col>
+    </hero-layout01-col>-->
 
     <Footer/>
 
-    <div ref="contentDetail" class="detailed-content-panel bg-bc-blue">
+    <!--<div ref="contentDetail" class="detailed-content-panel bg-bc-blue">
       <div class="panel-header flex flex-center pad-left-half pad-right-half" style="height: 5rem;">
         <div class="flex-grow">
           <h2 class="text-center no-space-top no-space-bottom">Case Studies</h2>
         </div>
         <b @click="hideDetail()" style="font-size: 1.5rem; cursor: pointer">X</b>
       </div>
-      <!--<portfolio-vertical-timeline></portfolio-vertical-timeline>-->
-    </div>
+      <portfolio-vertical-timeline></portfolio-vertical-timeline>
+    </div>-->
   </Layout>
 </template>
 
@@ -206,10 +200,10 @@
   import Blog from '~/components/Blog.vue';
   import Contact from '~/components/Contact.vue';
   import Footer from '~/components/Footer.vue';
-  import Portfolio from '~/components/portfolio/Portfolio.vue';
+  //import Portfolio from '~/components/portfolio/Portfolio.vue';
 
   // Import generic component layouts
-  import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
+  /*import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
   import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue';
   import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
   import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
@@ -237,11 +231,11 @@
   import AudioControlsMixin from '~/core/components/audio/AudioControlsMixin';
 
   // Import static data
-  //import PortfolioVerticalTimeline from "../components/portfolio/PortfolioVerticalTimeline";
+  //import PortfolioVerticalTimeline from "../components/portfolio/PortfolioVerticalTimeline";*/
 
   export default {
     components: {
-      PortfolioVerticalTimeline,
+      //PortfolioVerticalTimeline,
       // Inject components
       Header,
       Hero,
@@ -249,6 +243,7 @@
       Contact,
       Footer,
       Portfolio,
+      /*
       // Inject mixins
       AudioControls,
       // Inject generic component layouts
@@ -270,16 +265,16 @@
       SlideUpTextEffect,
       FadeInTextEffect,
       // Inject animated content effects
-      SimpleEffect
+      SimpleEffect*/
     },
     mixins: [
-      AudioControlsMixin
+      //AudioControlsMixin
     ],
     data() {
       return {
         soundtrack: null,
         formData: {},
-        textEffects: {
+        /*textEffects: {
           typewriter: TypewriterTextEffect,
           shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
           rotateWords: RotateWordsTextEffect,
@@ -288,11 +283,11 @@
         },
         contentEffects: {
           simple: SimpleEffect
-        }
+        }*/
       }
     },
     methods: {
-      initSoundtrack() {
+      /*initSoundtrack() {
         if (!(this.soundtrack instanceof Audio)) {
           this.soundtrack = new Audio();
           this.soundtrack.volume = 0.5;
@@ -368,65 +363,65 @@
         }
 
         if (isEscape) this.hideDetail();
-      }
+      }*/
     },
     mounted() {
-      if (typeof window !== 'undefined') {
+      /*if (typeof window !== 'undefined') {
         window.addEventListener('keydown', this.bindDetailCloseToEsc);
-      }
 
-      this.initSoundtrack();
+        this.initSoundtrack();
 
-      const stripes = document.querySelector('.sergeant-stripes');
-      const skull = document.querySelector('.special-forces-skull');
+        const stripes = document.querySelector('.sergeant-stripes');
+        const skull = document.querySelector('.special-forces-skull');
 
-      anime({
-        targets: stripes,
-        translateY: [450, 0],
-        easing: 'easeOutExpo',
-        duration: 3000
-      });
+        anime({
+          targets: stripes,
+          translateY: [450, 0],
+          easing: 'easeOutExpo',
+          duration: 3000
+        });
 
-      anime({
-        targets: skull,
-        translateY: [300, 50],
-        easing: 'easeInOutQuad',
-        duration: 1500,
-        complete: () => {
-          let skullTimeline = anime.timeline({ loop: true });
-          skullTimeline
-            .add({
-              targets: skull,
-              translateY: [50, 35],
-              easing: 'easeInOutQuad',
-              duration: 2500
-            })
-            .add({
-              targets: skull,
-              translateY: [35, 50],
-              easing: 'easeInOutQuad',
-              duration: 2500
-            });
-        }
-      });
+        anime({
+          targets: skull,
+          translateY: [300, 50],
+          easing: 'easeInOutQuad',
+          duration: 1500,
+          complete: () => {
+            let skullTimeline = anime.timeline({ loop: true });
+            skullTimeline
+              .add({
+                targets: skull,
+                translateY: [50, 35],
+                easing: 'easeInOutQuad',
+                duration: 2500
+              })
+              .add({
+                targets: skull,
+                translateY: [35, 50],
+                easing: 'easeInOutQuad',
+                duration: 2500
+              });
+          }
+        });
 
-      const tank = document.querySelector('.army-tank');
+        const tank = document.querySelector('.army-tank');
 
-      anime({
-        targets: tank,
-        translateX: ['150%', '-150%'],
-        easing: 'linear',
-        duration: 8000,
-        loop: true,
-        delay: 3000
-      })
+        anime({
+          targets: tank,
+          translateX: ['150%', '-150%'],
+          easing: 'linear',
+          duration: 8000,
+          loop: true,
+          delay: 3000
+        })
+      }*/
     },
     beforeDestroy() {
-      if (typeof window !== 'undefined') {
+      /*if (typeof window !== 'undefined') {
         window.removeEventListener('keydown', this.bindDetailCloseToEsc);
         this.soundtrack.pause();
         this.soundtrack = null;
-      }
+      }*/
     }
   }
 </script>

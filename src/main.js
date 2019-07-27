@@ -72,7 +72,7 @@ export default function (Vue, { head }) {
         // OR: libraries: 'places,drawing,visualization'
         // (as you require)
 
-        //// If you want to set the version, you can do so:
+        //// If you want to set the version, you can do sTo:
         // v: '3.26',
       },
 
