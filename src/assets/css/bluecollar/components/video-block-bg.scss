@@ -2,7 +2,7 @@
   position: absolute;
   z-index: 0;
   width: 100%;
-  height: 100%;
+  height: 102%;
   object-fit: cover;
 }
 
@@ -18,7 +18,7 @@
   }
 }*/
 
-.video-block-bg::before {
+.video-block-bg.overlay::before {
   content: '.';
   color: black;
   position: absolute;
@@ -33,11 +33,11 @@
 @media screen and (min-width: 84em) {
   .video-block-bg {
     &.rotate-left {
-      transform: rotate(-5deg) translate(10px, -40px);
+      transform: rotate(-5deg) translate(10px, 10px);
     }
 
     &.rotate-right {
-      transform: rotate(5deg) translate(-10px, -40px);
+      transform: rotate(5deg) translate(-10px, 10px);
     }
 
     &.scale-center {

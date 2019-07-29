@@ -19,7 +19,6 @@
     >
       <template v-slot:bg>
         <party-lights></party-lights>
-
       </template>
 
       <template v-slot:bg2>

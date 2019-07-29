@@ -184,7 +184,6 @@
   }
 
   p.speech-bubble {
-    text-transform: uppercase;
     // layout
     display: inline-block;
     opacity: 0;
@@ -193,6 +192,8 @@
     max-width: 30em;
     top: -75px;
     // looks
+    color: black;
+    text-transform: uppercase;
     background-color: #fff;
     padding: 1.125em 1.5em;
     font-size: 0.75em;

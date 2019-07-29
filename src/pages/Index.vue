@@ -24,7 +24,7 @@
       :angle="true"
       slotPos="top"
       className="pad-top-2x pad-bottom-2x text-shadow"
-      style="height: 130vh"
+      style="height: 130vh; padding-bottom: 10vh;"
     >
       <template v-slot:bg>
         <matrix-bg></matrix-bg>
@@ -53,7 +53,7 @@
               <hand-gun ref="lightning" class="right-gun" :introDelay="0.7"></hand-gun>
             </div>
             <div class="text-center" style="position: relative; top: -140px">
-              <a href="/company" class="action-link transparent space-top g-pstyle3">What We Do</a>
+              <a href="/#services" class="action-link transparent space-top g-pstyle3">What We Do</a>
             </div>
           </div>
         </div>
@@ -62,14 +62,14 @@
 
     <angle-mosaic>
       <template v-slot:slot1Bg>
-        <div class="bg-bc-blue video-block-bg drop-shadow rotate-right is-hidden--sm-down">
-          <matrix-bg style="z-index: 1; opacity: 1" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>
+        <div class="bg-evening-blue video-block-bg drop-shadow rotate-right is-hidden--sm-down">
+          <!--<matrix-bg style="z-index: 1; opacity: 0.25" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>-->
         </div>
 
       </template>
       <template v-slot:slot1Front>
         <content-block-layout
-          className="ml-auto mr-auto"
+          className="pad-top ml-auto mr-auto"
           v-if="getHomePageServiceByIndex(0).linkText"
           image="/images/icons/apps-02.svg"
           :title="getHomePageServiceByIndex(0).title"
@@ -119,13 +119,13 @@
       </template>
 
       <template v-slot:slot3Bg>
-        <div class="bc-bc-blue video-block-bg drop-shadow rotate-left is-hidden--sm-down">
-          <matrix-bg style="z-index: 1; opacity: 1" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>
+        <div class="bg-evening-blue video-block-bg drop-shadow rotate-left is-hidden--sm-down">
+          <!--<matrix-bg style="z-index: 1; opacity: 0.25" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>-->
         </div>
       </template>
       <template v-slot:slot3Front>
         <content-block-layout
-          className="ml-auto mr-auto pad-bottom"
+          className="pad-top ml-auto mr-auto pad-bottom"
           v-if="getHomePageServiceByIndex(2).linkText"
           image="/images/icons/websites.svg"
           :title="getHomePageServiceByIndex(2).title"
@@ -176,12 +176,12 @@
 
       <template v-slot:slot5Bg>
         <div class="bg-evening-blue video-block-bg scale-center drop-shadow-up is-hidden--sm-down">
-          <matrix-bg style="z-index: 1; opacity: 1" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>
+          <!--<matrix-bg style="z-index: 1; opacity: 0.25" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>-->
         </div>
       </template>
       <template v-slot:slot5Front>
         <content-block-layout
-          className=" ml-auto mr-auto"
+          className="pad-top ml-auto mr-auto"
           v-if="getHomePageServiceByIndex(1).linkText"
           image="/images/icons/server.svg"
           :title="getHomePageServiceByIndex(1).title"
@@ -450,7 +450,14 @@
           this.soundtrack.volume = 0.5;
           this.soundtrack.src = '/audio/soundtrack_to_war.mp3';
           this.soundtrack.loop = true;
-          //this.soundtrack.play();
+
+          if (this.isAutoplayActive()) this.soundtrack.play();
+        }
+      },
+      killSoundtrack() {
+        if (this.soundtrack instanceof Audio) {
+          this.soundtrack.pause();
+          this.soundtrack = null;
         }
       },
       fireGuns() {
@@ -579,11 +586,10 @@
       }
     },
     beforeDestroy() {
-      /*if (typeof window !== 'undefined') {
+      if (typeof window !== 'undefined') {
         window.removeEventListener('keydown', this.bindDetailCloseToEsc);
-        this.soundtrack.pause();
-        this.soundtrack = null;
-      }*/
+        this.killSoundtrack();
+      }
     }
   }
 </script>

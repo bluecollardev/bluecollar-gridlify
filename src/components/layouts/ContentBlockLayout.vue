@@ -176,6 +176,6 @@ export default {
     width: 200px;
     height: 150px;
     left: 0;
-    top: -85px;
+    top: -35px;
   }
 </style>
