@@ -148,8 +148,7 @@
       :flipX="true"
       :angle="true"
       slotPos="top"
-      className="sm-pad-top pad-bottom-2x text-shadow"
-      style="z-index: 5; transform: translateY(-43vh); height: 120vh; margin-bottom: 20vh;"
+      className="deliver-results-section sm-pad-top pad-bottom-2x text-shadow"
     >
       <template v-slot:bg>
         <div style="position: absolute; width: 100%; height: 100%;">
@@ -470,5 +469,9 @@
     height: 300px;
     bottom: 100px;
     background-size: contain;
+  }
+
+  .deliver-results-section {
+    margin-bottom: 48vh;
   }
 </style>

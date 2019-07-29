@@ -136,7 +136,7 @@
         TweenLite.to(this.p('.bullet'), 0.3, { x: -100 });
 
         this.fireGunAudio.pause();
-        this.fireGunAudio.volume = 0.25;
+        this.fireGunAudio.volume = 0.20;
         this.fireGunAudio.currentTime = 0;
         this.fireGunAudio.play();
       },
