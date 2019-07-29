@@ -180,7 +180,7 @@
 
     <Footer/>
 
-    <!--<div ref="contentDetail" class="detailed-content-panel bg-bc-blue">
+    <div ref="contentDetail" class="detailed-content-panel bg-bc-blue">
       <div class="panel-header flex flex-center pad-left-half pad-right-half" style="height: 5rem;">
         <div class="flex-grow">
           <h2 class="text-center no-space-top no-space-bottom">Case Studies</h2>
@@ -188,7 +188,7 @@
         <b @click="hideDetail()" style="font-size: 1.5rem; cursor: pointer">X</b>
       </div>
       <portfolio-vertical-timeline></portfolio-vertical-timeline>
-    </div>-->
+    </div>
   </Layout>
 </template>
 
@@ -234,11 +234,10 @@
   import AudioControlsMixin from '~/core/components/audio/AudioControlsMixin';
 
   // Import static data
-  //import PortfolioVerticalTimeline from "../components/portfolio/PortfolioVerticalTimeline";
+  import PortfolioVerticalTimeline from "../components/portfolio/PortfolioVerticalTimeline";
 
   export default {
     components: {
-      //PortfolioVerticalTimeline,
       // Inject components
       Header,
       Hero,
@@ -246,6 +245,7 @@
       Contact,
       Footer,
       //Portfolio,
+      PortfolioVerticalTimeline,
       // Inject mixins
       AudioControls,
       // Inject generic component layouts
