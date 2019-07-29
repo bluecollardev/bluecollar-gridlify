@@ -306,6 +306,9 @@
 
     <div class="forest-background">
       <span class="army-tank" />
+      <span class="grass">
+        <img src="/images/grass.svg" />
+      </span>
       <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
       <svg version="1.1" class="ground-path" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="2820px"
          viewBox="0 0 2820 15.2" xml:space="preserve">
@@ -650,10 +653,11 @@
 
   .army-tank {
     position: fixed;
+    z-index: 2000;
     background: url(/images/t84-tank.svg) no-repeat;
     width: 900px;
     height: 300px;
-    bottom: 120px;
+    bottom: 80px;
     background-size: contain;
     margin-right: -900px;
   }
@@ -670,5 +674,15 @@
     height: 100%;
     background: url(/images/forest.svg) no-repeat bottom center;
     background-attachment: fixed;
+  }
+
+  .grass {
+    z-index: 2500;
+    position: fixed;
+    width: 110%;
+    left: -5%;
+    height: 200px;
+    bottom: 0;
+    filter: brightness(0.345) saturate(0.5);
   }
 </style>
