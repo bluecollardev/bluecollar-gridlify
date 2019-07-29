@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-black">
+  <main class="bg-midnight-blue">
     <intro></intro>
     <div class="container relative">
       <div class="notifications" v-if="displayNotifications">

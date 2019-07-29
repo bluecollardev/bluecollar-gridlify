@@ -24,7 +24,7 @@
       :angle="true"
       slotPos="top"
       className="pad-top-2x pad-bottom-2x text-shadow"
-      style="height: 130vh; padding-bottom: 10vh;"
+      style="height: 130vh; padding-bottom: 11vh;"
     >
       <template v-slot:bg>
         <matrix-bg></matrix-bg>
@@ -232,22 +232,17 @@
     </angle-mosaic>
 
     <hero-layout01-col
-      bgColor="bg-forest-green"
+      bgColor="transparent"
       title="We Deliver Results"
       subtitle=""
       description=""
       imageClass="home-page-banner-image"
-      image="/images/forest.png"
       :flipX="true"
       :angle="true"
       slotPos="top"
       className="sm-pad-top pad-bottom-2x text-shadow relative"
       style="height: 110vh; transform: translateY(-34vh); background-position: center 0"
     >
-      <template v-slot:bg>
-        <span class="army-tank" />
-      </template>
-
       <template v-slot:title>
         <!--<shrink-words-one-by-one-text-effect
           tag="h2"
@@ -270,7 +265,7 @@
     </hero-layout01-col>
 
     <hero-layout01-col
-      bgColor="bg-evening-blue"
+      bgColor="transparent"
       title="Lost in the Software Jungle?"
       subtitle=""
       description=""
@@ -283,7 +278,8 @@
     >
       <template v-slot:bg>
         <div style="position: absolute; width: 100%; height: 100%;">
-          <jungle style="position: relative; bottom: -50vh"></jungle>
+          <jungle style="position: relative; bottom: -20vh"></jungle>
+          <binoculars></binoculars>
         </div>
       </template>
 
@@ -307,6 +303,10 @@
         </div>
       </template>
     </hero-layout01-col>
+
+    <div class="forest-background">
+      <span class="army-tank" />
+    </div>
 
     <Footer/>
 
@@ -346,6 +346,7 @@
   import HandGun from '~/components/svg/HandGun.vue';
   import Helicopter from '~/components/svg/Helicopter.vue';
   import Jungle from '~/components/svg/Jungle.vue';
+  import Binoculars from '~/components/svg/Binoculars.vue';
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
   import MatrixBg from '~/components/svg/MatrixBg';
 
@@ -397,6 +398,7 @@
       HandGun,
       Helicopter,
       Jungle,
+      Binoculars,
       GoogleMapBackground,
       MatrixBg,
       // Inject animated text effects
@@ -634,7 +636,12 @@
     background-size: contain;
   }
 
-  .deliver-results-section {
-    margin-bottom: 20vh;
+  .forest-background {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url(/images/forest.svg) no-repeat bottom center;
+    background-attachment: fixed;
   }
 </style>

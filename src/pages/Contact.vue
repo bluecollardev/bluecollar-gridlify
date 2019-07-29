@@ -21,9 +21,9 @@
         <party-lights></party-lights>
       </template>
 
-      <template v-slot:bg2>
+      <!--<template v-slot:bg2>
         <matrix-bg></matrix-bg>
-      </template>
+      </template>-->
 
       <template v-slot:title>
         <shrink-words-one-by-one-text-effect
