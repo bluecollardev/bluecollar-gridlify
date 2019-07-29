@@ -306,6 +306,14 @@
 
     <div class="forest-background">
       <span class="army-tank" />
+      <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <svg version="1.1" class="ground-path" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 841.9 15.2" xml:space="preserve">
+      <path class="ground" fill="transparent" d="M841.9,9.5c-15.4-0.3-31.3-2.2-46.4-3.4c-16.8,0-39.7-4.5-56.5-4.5c-16.8-1.5-33.6,6-51.9,6
+	c-30.5,1.5-64.1,6-96.1,4.5c-67.2-6-137.4-7.5-204.5-7.5c-15.3,0-27.5-3-44.3-4.5c-18.3-1.5-32,7.5-48.8,9
+	c-39.7,4.5-76.3-1.5-112.9,0c-19.8,0-42.7,6-61,6c-7.6-1.5-13.7-9-22.9-9c-10.7,0-18.3,7.5-27.5,7.5c-9.2-1.5-16.8-9-25.9-9
+	c-10.7,0-18.3,7.5-29,9C9.5,14.4,4.8,13.3,0,12.3" />
+      </svg>
     </div>
 
     <Footer/>
@@ -560,16 +568,20 @@
           }
         });
 
+        const groundPath = anime.path('.ground-path .ground');
         const tank = document.querySelector('.army-tank');
 
         anime({
           targets: tank,
-          translateX: ['150%', '-150%'],
+          translateX: groundPath('x'),
+          translateY: groundPath('y'),
+          rotate: groundPath('angle'),
           easing: 'linear',
+          direction: 'reverse',
           duration: 8000,
           loop: true,
           delay: 3000
-        })
+        });
 
         const flipCardSelector = '.service-detail-card-inner';
         const flipCardsContent = document.querySelectorAll(flipCardSelector);
@@ -580,11 +592,9 @@
           '.service-detail-card-back'
         );
 
-        if (window) {
-          window.addEventListener('resize', () => {
-            this.$set(this, 'repaint', Math.random());
-          });
-        }
+        window.addEventListener('resize', () => {
+          this.$set(this, 'repaint', Math.random());
+        });
       }
     },
     beforeDestroy() {
@@ -629,11 +639,18 @@
 
   .army-tank {
     position: fixed;
-    background: url(/images/t84-tank.svg) no-repeat;
+    background: url(/images/t84-tank-left.svg) no-repeat;
     width: 900px;
     height: 300px;
-    bottom: 100px;
+    bottom: 120px;
     background-size: contain;
+  }
+
+  .ground-path {
+    position: fixed;
+    width: 130%;
+    left: -30%;
+    bottom: 0;
   }
 
   .forest-background {
