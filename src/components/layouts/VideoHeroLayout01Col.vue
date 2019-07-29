@@ -9,6 +9,7 @@
         <!--<source src="/video/bluecollar-main.webm" type="video/webm">
         <source src="/video/bluecollar-main.ogv" type="video/ogg">-->
       </video>
+      <slot name="bg" v-if="this.$slots.bg"></slot>
 
       <slot name="video" v-if="this.$slots.video"></slot>
 

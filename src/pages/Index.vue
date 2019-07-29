@@ -27,6 +27,7 @@
       style="height: 130vh"
     >
       <template v-slot:bg>
+        <matrix-bg></matrix-bg>
         <div class="special-forces-skull" style="z-index: 2; position: absolute; width: 367px; height: 404px; background-image: url(/images/special-forces-skull.png); background-size: contain; background-repeat: no-repeat; background-position: center center"></div>
         <div class="sergeant-stripes" style="z-index: 1; position: absolute; width: 100%; height: 100%; filter: invert(100); opacity: 0.1; background-image: url(/images/sergeant-major-of-the-army.png); background-size: contain; background-repeat: no-repeat; background-position: center 210px"></div>
       </template>
@@ -215,6 +216,8 @@
   import Helicopter from '~/components/svg/Helicopter.vue';
   import Jungle from '~/components/svg/Jungle.vue';
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
+  import MatrixBg from '~/components/svg/MatrixBg';
+
 
   // Import animated text effects
   /*import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
@@ -257,6 +260,7 @@
       Helicopter,
       Jungle,
       GoogleMapBackground,
+      MatrixBg,
       // Inject animated text effects
       /*TypewriterTextEffect,
       ShrinkWordsOneByOneTextEffect,
@@ -305,7 +309,7 @@
           this.soundtrack.volume = 0.5;
           this.soundtrack.src = '/audio/soundtrack_to_war.mp3';
           this.soundtrack.loop = true;
-          this.soundtrack.play();
+          //this.soundtrack.play();
         }
       },
       fireGuns() {
@@ -366,12 +370,11 @@
         }
 
         if (isEscape) this.hideDetail();
-      }
+      },
     },
     mounted() {
       if (typeof window !== 'undefined') {
         window.addEventListener('keydown', this.bindDetailCloseToEsc);
-
         this.initSoundtrack();
 
         const stripes = document.querySelector('.sergeant-stripes');

@@ -4,8 +4,10 @@
     :class="`homepage-hero hero-section hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
     :style="`background-image: url(${this.image});`"
   >
-    <slot name="bg" v-if="this.$slots.bg"></slot>
     <!-- TODO: Allow changing of bg colors -->
+    <slot name="bg2" v-if="this.$slots.bg2"></slot>
+    <slot name="bg" v-if="this.$slots.bg"></slot>
+
     <div class="hero-section-content sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-full xl-flex-basis-two-thirds">
       <!--<div class="hero-image-wrapper"><img :class="`banner-image ${this.imageClass}`" v-bind:src="this.image" alt="" /></div>
       <div v-if="typeof this.caption === 'string' && this.caption.length >0" class="figure-caption bg-bc-blue g-hero">

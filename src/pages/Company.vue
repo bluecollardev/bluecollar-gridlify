@@ -20,6 +20,10 @@
       :angle="true"
       bgColor="bg-bc-blue"
     >
+      <template v-slot:bg>
+        <matrix-bg></matrix-bg>
+      </template>
+
       <template v-slot:title>
         <typewriter-text-effect
           tag="h1"
@@ -285,6 +289,7 @@
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
   import GoogleMapCutout from '~/components/svg/GoogleMapCutout.vue';
   import PartyLights from '~/components/svg/PartyLights.vue';
+  import MatrixBg from '~/components/svg/MatrixBg';
 
   // Import animated text effects
   import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
@@ -330,6 +335,7 @@
       GoogleMapBackground,
       GoogleMapCutout,
       PartyLights,
+      MatrixBg,
       // Import static HTML blocks
       ProcessBlock,
       // Inject animated text effects

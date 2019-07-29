@@ -17,8 +17,13 @@
       className="sm-pad-top pad-bottom-2x"
       style="height: 115vh"
     >
-      <template v-slot:bg v-if="this.rockAndRoll">
+      <template v-slot:bg>
         <party-lights></party-lights>
+
+      </template>
+
+      <template v-slot:bg2>
+        <matrix-bg></matrix-bg>
       </template>
 
       <template v-slot:title>
@@ -90,6 +95,7 @@
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
   import GoogleMapCutout from '~/components/svg/GoogleMapCutout.vue';
   import PartyLights from '~/components/svg/PartyLights.vue';
+  import MatrixBg from '~/components/svg/MatrixBg';
 
   // Import animated text effects
   import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
@@ -135,6 +141,7 @@
       GoogleMapBackground,
       GoogleMapCutout,
       PartyLights,
+      MatrixBg,
       // Import static HTML blocks
       ProcessBlock,
       // Inject animated text effects
