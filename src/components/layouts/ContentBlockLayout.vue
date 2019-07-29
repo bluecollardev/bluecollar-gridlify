@@ -1,7 +1,12 @@
 <template>
-  <!--<div v-bind:class="classNameString" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">-->
-  <div v-bind:class="classNameString">
-    <div class="space-bottom-half g-services">
+  <div v-bind:class="classNameString" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+  <!--<div v-bind:class="classNameString">-->
+
+    <div class="space-bottom-half g-services flex ">
+      <div v-if="this.image" class="content-image">
+        <img :src="this.image" />
+      </div>
+
       <p v-if="!this.titleAnimation" class="g-pstyle9">{{ this.title }}</p>
 
       <component
@@ -155,3 +160,22 @@ export default {
   }
 };
 </script>
+
+<style>
+  /* TODO: Apply selectively! This is theme specific... */
+  .content-image {
+    max-width: 33.33333%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 0;
+  }
+
+  .content-image img {
+    position: absolute;
+    object-fit: contain;
+    width: 200px;
+    height: 150px;
+    left: 0;
+    top: -85px;
+  }
+</style>

@@ -4,6 +4,16 @@
 
 <script>
   export default {
+    props: {
+      fillStyle: {
+        type: String,
+        default: 'rgba(0, 0, 0, 0.06)'
+      },
+      fontSize: {
+        type: Number,
+        default: 11
+      }
+    },
     methods: {
       doMatrix() {
         const matrix1 = this.$refs.matrix1;
@@ -17,7 +27,7 @@
 
         chinese = chinese.split('');
 
-        let fontSize = 11;
+        let fontSize = this.fontSize;
         let columns = matrix1.width / fontSize;
 
         let drops = [];
@@ -29,7 +39,7 @@
         // Drawing characters
         const draw = () => {
           // Black background for the canvas, low opacity for the trail
-          ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
+          ctx.fillStyle = this.fillStyle;
           ctx.fillRect(0, 0, matrix1.width, matrix1.height);
           ctx.fillStyle = '#33587a'; //blue text
           ctx.font = fontSize + 'px Helvetica';
@@ -46,7 +56,7 @@
           }
         };
 
-        setInterval(draw,30);
+        setInterval(draw, 30);
       }
     },
     mounted() {

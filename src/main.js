@@ -60,10 +60,10 @@ export default function (Vue, { head }) {
   //head.script.push({ type: 'application/javascript', src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js' });
   // Set default layout as a global component
   if (typeof window !== 'undefined') {
-    //const VueWaypoint = require('vue-waypoint');
+    const VueWaypoint = require('vue-waypoint');
     const VueGoogleMaps = require('vue2-google-maps');
 
-    //Vue.use(VueWaypoint.default);
+    Vue.use(VueWaypoint.default);
     Vue.use(VueGoogleMaps, {
       load: {
         key: 'AIzaSyBSDlMWErr_gwT5d5wze8oK9muKPuHLtKQ',
