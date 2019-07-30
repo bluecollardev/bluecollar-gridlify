@@ -38,12 +38,12 @@
       </template>
 
       <template v-slot:title>
-        <!--<typewriter-text-effect
+        <typewriter-text-effect
           tag="h2"
           text="Lost in the Software Jungle?"
           class="title text-center pad-bottom"
           :loop="true">
-        </typewriter-text-effect>-->
+        </typewriter-text-effect>
       </template>
 
       <template>
@@ -251,12 +251,12 @@
       </template>
 
       <template v-slot:title>
-        <!--<shrink-words-one-by-one-text-effect
+        <shrink-words-one-by-one-text-effect
           tag="h2"
           text="We Deliver Results"
           class="title text-center pad-bottom"
           :loop="true">
-        </shrink-words-one-by-one-text-effect>-->
+        </shrink-words-one-by-one-text-effect>
       </template>
 
       <template>
@@ -313,7 +313,7 @@
         style="padding-bottom: 20vh;"
       >
         <template v-slot:bg>
-          <matrix-bg style="margin-top: 54px;"></matrix-bg>
+          <!--<matrix-bg style="margin-top: 54px;"></matrix-bg>-->
           <div class="special-forces-skull" style="z-index: 2; position: absolute; width: 367px; height: 404px; background-image: url(/images/special-forces-skull.png); background-size: contain; background-repeat: no-repeat; background-position: center center"></div>
           <div class="sergeant-stripes" style="z-index: 1; position: absolute; width: 100%; height: 100%; filter: invert(100); opacity: 0.1; background-image: url(/images/sergeant-major-of-the-army.png); background-size: contain; background-repeat: no-repeat; background-position: center 210px"></div>
         </template>
@@ -330,8 +330,7 @@
         <template>
           <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
             <div>
-              <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills.</p>
-              <p class="text-center">At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges. By using cutting-edge technologies and employing the latest software design methodologies, we can guarantee that you'll be well prepared and equipped for years to come.</p>
+              <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges.</p>
               <br />
               <p class="text-center"><small><small>Click the slide to cock, and the trigger to shoot!</small></small></p>
               <div class="guns-comp">
@@ -343,9 +342,9 @@
               </div>
             </div>
           </div>
-          <team-block></team-block>
         </template>
       </hero-layout01-col>
+      <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
       <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
     </div>
   </Layout>
@@ -697,7 +696,8 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: url(/images/forest.svg) no-repeat bottom center;
+    background: url(/images/forest.svg) no-repeat center center;
+    background-size: cover;
     background-attachment: fixed;
   }
 
