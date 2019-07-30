@@ -59,7 +59,7 @@
       </template>
     </hero-layout01-col>
 
-    <angle-mosaic>
+    <angle-mosaic bgColor="bg-bc-blue">
       <template v-slot:slot1Bg>
         <div class="bg-evening-blue video-block-bg drop-shadow rotate-right is-hidden--sm-down">
           <!--<matrix-bg style="z-index: 1; opacity: 0.25" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>-->
