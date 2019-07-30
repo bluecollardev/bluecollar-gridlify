@@ -17,7 +17,7 @@
       className="sm-pad-top pad-bottom-2x"
       style="height: 115vh"
     >
-      <template v-slot:bg>
+      <template v-slot:bg v-if="rockAndRoll">
         <party-lights></party-lights>
       </template>
 
