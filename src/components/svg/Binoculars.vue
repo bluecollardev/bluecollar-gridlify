@@ -148,7 +148,7 @@
     text-align: center;
     width: 100%;
     position: relative;
-    top: -80vh;
+    top: -65vh;
 
 		svg {
 			margin: 0 auto;

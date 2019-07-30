@@ -261,7 +261,7 @@
     </hero-layout01-col>
 
     <div class="forest-background">
-      <matrix-bg></matrix-bg>
+      <!--<matrix-bg></matrix-bg>-->
       <span class="army-tank" />
       <span class="grass">
         <img src="/images/grass.svg" />
