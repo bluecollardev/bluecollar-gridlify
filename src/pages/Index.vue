@@ -2,7 +2,7 @@
   <Layout>
     <Header/>
 
-    <helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>
+    <!--<helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>-->
 
     <audio-controls
       style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
