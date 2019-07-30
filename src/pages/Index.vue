@@ -29,7 +29,8 @@
       <template v-slot:bg>
         <div style="position: absolute; width: 100%; height: 100%;">
           <jungle style="position: relative; bottom: -67vh;"></jungle>
-          <binoculars></binoculars>
+          <binoculars style="transform: rotate(-7deg) translateX(100px);"></binoculars>
+          <img style="max-width: 150px; position: absolute; top: 25vh; left: 40vh; transform: rotate(-15deg)" src="/images/walkie-talkie.svg" />
         </div>
       </template>
 
@@ -241,8 +242,8 @@
     >
       <template v-slot:bg>
         <div class="flex-basis-half flex flex-column">
-          <img src="/images/fishing-rod.svg" />
-          <img style="max-width: 400px" src="/images/red-snapper.svg" />
+          <img src="/images/fishing-rod.svg" style="transform: rotate(35deg) translate(200px, 120px)" />
+          <img src="/images/red-snapper.svg" style="max-width: 400px; transform: scaleX(-1) rotate(75deg) translateX(200px)" />
         </div>
       </template>
 
