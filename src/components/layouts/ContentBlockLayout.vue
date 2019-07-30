@@ -7,11 +7,11 @@
         <img :src="this.image" />
       </div>
 
-      <p v-if="!this.titleAnimation" class="g-pstyle9">{{ this.title }}</p>
+      <p v-if="!this.titleAnimation && this.title" class="g-pstyle9">{{ this.title }}</p>
 
       <component
         ref="titleAnimationContainer"
-        v-if="this.titleAnimation"
+        v-if="this.titleAnimation && this.title"
         :is="this.titleAnimation"
         tag="h3"
         class="content-block-title g-pstyle9"

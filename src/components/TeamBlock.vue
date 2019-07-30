@@ -2,7 +2,7 @@
   <!-- REPEAT and alternate -->
   <div class="flex flex-column">
     <div class="sm-flex flex-center flex-justify-center flex-basis-half bg-bc-blue">
-      <div class="content-block">
+      <div class="content-block space-top-2x space-bottom-2x">
         <content-block-layout
           className="pad-top pad-bottom"
           title="Connect With Local IT Pros"
@@ -40,7 +40,6 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
             reviewedBy="Lucas Lopatka"
             position="Solutions Architect"
             organization="Welcome to Blue Collar! I'm Lucas, and I am a Full-Stack Solutions Architect with 15 years of experience designing and building custom software applications. I design, wireframe, prototype, and develop mobile, hybrid and progressive apps. I also architect, implement and deploy scalable, cloud-based RESTful services and multi-tier micro-services for clients of all sizes located in Canada and abroad."
-            image="/images/company/me-ski.jpg"
           />
           <div
             class="homepage-hero-action action-link-block text-center space-bottom">
@@ -49,7 +48,7 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
         </div>
       </template>
       <template v-slot:slot2Bg>
-        <div class="bg-bc-blue drop-shadow is-hidden--sm-down">
+        <div class="bg-midnight-blue drop-shadow is-hidden--sm-down">
           <!--<matrix-bg style="z-index: 1; opacity: 0.25" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>-->
         </div>
       </template>
@@ -58,11 +57,10 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
           v-if="getTestimonialByIndex(0)"
           class="sm-flex flex-column flex-center flex-basis-half">
           <testimonial-block-layout
-            className="space-top"
+            className=""
             reviewedBy="Lucas Lopatka"
             position="Solutions Architect"
             organization="Welcome to Blue Collar! I'm Lucas, and I am a Full-Stack Solutions Architect with 15 years of experience designing and building custom software applications. I design, wireframe, prototype, and develop mobile, hybrid and progressive apps. I also architect, implement and deploy scalable, cloud-based RESTful services and multi-tier micro-services for clients of all sizes located in Canada and abroad."
-            image="/images/company/me-ski.jpg"
           />
           <div
             class="homepage-hero-action action-link-block text-center space-bottom">
@@ -84,7 +82,6 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
             reviewedBy="Lucas Lopatka"
             position="Solutions Architect"
             organization="Welcome to Blue Collar! I'm Lucas, and I am a Full-Stack Solutions Architect with 15 years of experience designing and building custom software applications. I design, wireframe, prototype, and develop mobile, hybrid and progressive apps. I also architect, implement and deploy scalable, cloud-based RESTful services and multi-tier micro-services for clients of all sizes located in Canada and abroad."
-            image="/images/company/me-ski.jpg"
           />
           <div
             class="homepage-hero-action action-link-block text-center space-bottom">
@@ -93,7 +90,7 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
         </div>
       </template>
       <template v-slot:slot4Bg>
-        <div class="bg-bc-blue video-block-bg drop-shadow rotate-right is-hidden--sm-down">
+        <div class="bg-bc-blue video-block-bg drop-shadow is-hidden--sm-down">
           <!--<matrix-bg style="z-index: 1; opacity: 0.25" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>-->
         </div>
       </template>
@@ -127,7 +124,7 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
         </div>
       </template>
       <template v-slot:slot6Bg>
-        <div class="bg-bc-blue video-block-bg drop-shadow rotate-left is-hidden--sm-down">
+        <div class="bg-bc-blue video-block-bg drop-shadow is-hidden--sm-down">
           <!--<matrix-bg style="z-index: 1; opacity: 0.25" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>-->
         </div>
       </template>

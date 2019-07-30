@@ -20,7 +20,7 @@
     <div
       v-if="!this.reviewedByAnimation"
       class="g-services flex flex-center">
-      <div class="circle-composite small space-bottom-half ml-auto mr-auto testimonial-profile-circle">
+      <div v-if="typeof this.image === 'string' && this.image.length > 3"  class="circle-composite small space-bottom-half ml-auto mr-auto testimonial-profile-circle">
         <div class="dark-blue-circle-mask">
           <div class="dark-blue-circle"></div>
         </div>
@@ -49,7 +49,7 @@
       :settings="this.reviewedByAnimation.settings"
       :loop="false"
       :animate="false">
-      <div class="circle-composite small space-bottom-half ml-auto mr-auto testimonial-profile-circle">
+      <div v-if="typeof this.image === 'string' && this.image.length > 3" class="circle-composite small space-bottom-half ml-auto mr-auto testimonial-profile-circle">
         <div class="dark-blue-circle-mask">
           <div class="dark-blue-circle"></div>
         </div>
