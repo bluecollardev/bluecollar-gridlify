@@ -29,7 +29,7 @@
       <template v-slot:bg>
         <div style="position: absolute; width: 100%; height: 100%;">
           <jungle style="position: relative; bottom: -67vh;"></jungle>
-          <binoculars style="transform: rotate(-7deg) translateX(100px);"></binoculars>
+          <binoculars style="transform: rotate(7deg) translateX(100px);"></binoculars>
           <img style="max-width: 150px; position: absolute; top: 25vh; left: 40vh; transform: rotate(-15deg)" src="/images/walkie-talkie.svg" />
         </div>
       </template>
