@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="position: relative; top: -15vh">
+    <div style="position: relative; top: -35vh">
       <section id="services" class="col-3-squares no-pad-bottom lg-flex" style="position: absolute; width: 100%; z-index: 11; transform: translateY(-3vh)">
         <!-- Slot 1 -->
         <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third">

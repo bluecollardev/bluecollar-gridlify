@@ -241,7 +241,7 @@
       :angle="true"
       slotPos="top"
       className="sm-pad-top pad-bottom-2x text-shadow relative"
-      style="height: 110vh; transform: translateY(-34vh); background-position: center 40vh;"
+      style="height: 110vh; transform: translateY(-50vh); background-position: center 52vh;"
     >
       <template v-slot:bg>
         <div class="flex-basis-half flex flex-column">
