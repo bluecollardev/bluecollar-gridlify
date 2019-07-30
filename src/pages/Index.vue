@@ -15,27 +15,28 @@
     />
 
     <hero-layout01-col
-      bgColor="bg-midnight-blue"
-      title="Elite Software Commandos"
+      bgColor="transparent"
+      title="Lost in the Software Jungle?"
       subtitle=""
       description=""
       imageClass="home-page-banner-image"
+      image=""
       :flipX="true"
       :angle="true"
       slotPos="top"
-      className="pad-top-2x pad-bottom-2x text-shadow"
-      style="height: 130vh; padding-bottom: 11vh;"
+      className="hero-first sm-pad-top pad-bottom-2x text-shadow"
     >
       <template v-slot:bg>
-        <!--<matrix-bg></matrix-bg>-->
-        <div class="special-forces-skull" style="z-index: 2; position: absolute; width: 367px; height: 404px; background-image: url(/images/special-forces-skull.png); background-size: contain; background-repeat: no-repeat; background-position: center center"></div>
-        <div class="sergeant-stripes" style="z-index: 1; position: absolute; width: 100%; height: 100%; filter: invert(100); opacity: 0.1; background-image: url(/images/sergeant-major-of-the-army.png); background-size: contain; background-repeat: no-repeat; background-position: center 210px"></div>
+        <div style="position: absolute; width: 100%; height: 100%;">
+          <jungle style="position: relative; bottom: -60vh;"></jungle>
+          <binoculars></binoculars>
+        </div>
       </template>
 
       <template v-slot:title>
         <!--<typewriter-text-effect
           tag="h2"
-          text="Elite Software Commandos"
+          text="Lost in the Software Jungle?"
           class="title text-center pad-bottom"
           :loop="true">
         </typewriter-text-effect>-->
@@ -44,16 +45,10 @@
       <template>
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
           <div>
-            <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills.</p>
-            <p class="text-center">At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges. By using cutting-edge technologies and employing the latest software design methodologies, we can guarantee that you'll be well prepared and equipped for years to come.</p>
-            <br />
-            <p class="text-center"><small><small>Click the slide to cock, and the trigger to shoot!</small></small></p>
-            <div class="guns-comp">
-              <hand-gun ref="thunder" class="left-gun" :introDelay="0.3"></hand-gun>
-              <hand-gun ref="lightning" class="right-gun" :introDelay="0.7"></hand-gun>
-            </div>
-            <div class="text-center" style="position: relative; top: -140px">
-              <a href="/#services" class="action-link transparent space-top g-pstyle3">What We Do</a>
+            <p class="text-center">At Blue Collar, we build software that's ready for tomorrow's challenges. By using cutting-edge technologies and employing the latest software design methodologies, we can guarantee that you'll be well equipped.</p>
+            <p class="text-center">Let our seasoned vets guide you on the path to your dreams.</p>
+            <div class="text-center" style="">
+              <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3">Meet Our Consultants</a>
             </div>
           </div>
         </div>
@@ -237,11 +232,12 @@
       subtitle=""
       description=""
       imageClass="home-page-banner-image"
+      image="/images/jungle-stream.svg"
       :flipX="true"
       :angle="true"
       slotPos="top"
       className="sm-pad-top pad-bottom-2x text-shadow relative"
-      style="height: 110vh; transform: translateY(-34vh); background-position: center 0"
+      style="height: 110vh; transform: translateY(-34vh); background-position: center 40vh;"
     >
       <template v-slot:title>
         <!--<shrink-words-one-by-one-text-effect
@@ -257,47 +253,7 @@
           <div>
             <p class="text-center">At Blue Collar, we <strong style="text-decoration: underline; font-weight: 900">never</strong> leave our customers behind.</p>
             <div class="text-center" style="">
-              <a @click="viewDetail()" class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
-            </div>
-          </div>
-        </div>
-      </template>
-    </hero-layout01-col>
-
-    <hero-layout01-col
-      bgColor="transparent"
-      title="Lost in the Software Jungle?"
-      subtitle=""
-      description=""
-      imageClass="home-page-banner-image"
-      image=""
-      :flipX="true"
-      :angle="true"
-      slotPos="top"
-      className="deliver-results-section sm-pad-top pad-bottom-2x text-shadow"
-    >
-      <template v-slot:bg>
-        <div style="position: absolute; width: 100%; height: 100%;">
-          <jungle style="position: relative; bottom: -20vh"></jungle>
-          <binoculars></binoculars>
-        </div>
-      </template>
-
-      <template v-slot:title>
-        <!--<typewriter-text-effect
-          tag="h2"
-          text="Lost in the Software Jungle?"
-          class="title text-center pad-bottom"
-          :loop="true">
-        </typewriter-text-effect>-->
-      </template>
-
-      <template>
-        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
-          <div>
-            <p class="text-center">Let our seasoned vets show you the way to El Dorado.</p>
-            <div class="text-center" style="">
-              <a @click="viewDetail()" class="action-link transparent space-top g-pstyle3">Meet Our Consultants</a>
+              <a @click="viewDetail('PORTFOLIO')" class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
             </div>
           </div>
         </div>
@@ -305,10 +261,14 @@
     </hero-layout01-col>
 
     <div class="forest-background">
+      <matrix-bg></matrix-bg>
       <span class="army-tank" />
       <span class="grass">
         <img src="/images/grass.svg" />
       </span>
+      <!--<span class="jungle-stream">
+        <img src="/images/jungle-stream.svg" />
+      </span>-->
       <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
       <svg version="1.1" class="ground-path" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="2820px"
          viewBox="0 0 2820 15.2" xml:space="preserve">
@@ -321,14 +281,60 @@
 
     <Footer/>
 
-    <div ref="contentDetail" class="detailed-content-panel bg-bc-blue">
-      <div class="panel-header flex flex-center pad-left-half pad-right-half" style="height: 5rem;">
+    <div ref="contentDetail" class="detailed-content-panel bg-evening-blue">
+      <div class="panel-header flex flex-center pad-left-half pad-right-half" style="height: 5rem; position: absolute; right: 0; z-index: 9999">
         <div class="flex-grow">
-          <h2 class="text-center no-space-top no-space-bottom">Case Studies</h2>
+          <!--<h2 class="text-center no-space-top no-space-bottom">Case Studies</h2>-->
         </div>
         <b @click="hideDetail()" style="font-size: 1.5rem; cursor: pointer">X</b>
       </div>
-      <portfolio-vertical-timeline></portfolio-vertical-timeline>
+      <hero-layout01-col
+        v-if="this.activeDetail === 'CONSULTANTS'"
+        bgColor="transparent"
+        title="Elite Software Commandos"
+        subtitle=""
+        description=""
+        imageClass="home-page-banner-image"
+        :flipX="true"
+        :angle="true"
+        slotPos="top"
+        className="elite-software pad-top-2x pad-bottom-2x text-shadow"
+        style="padding-bottom: 20vh;"
+      >
+        <template v-slot:bg>
+          <!--<matrix-bg></matrix-bg>-->
+          <div class="special-forces-skull" style="z-index: 2; position: absolute; width: 367px; height: 404px; background-image: url(/images/special-forces-skull.png); background-size: contain; background-repeat: no-repeat; background-position: center center"></div>
+          <div class="sergeant-stripes" style="z-index: 1; position: absolute; width: 100%; height: 100%; filter: invert(100); opacity: 0.1; background-image: url(/images/sergeant-major-of-the-army.png); background-size: contain; background-repeat: no-repeat; background-position: center 210px"></div>
+        </template>
+
+        <template v-slot:title>
+          <!--<typewriter-text-effect
+            tag="h2"
+            text="Elite Software Commandos"
+            class="title text-center pad-bottom"
+            :loop="true">
+          </typewriter-text-effect>-->
+        </template>
+
+        <template>
+          <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+            <div>
+              <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills.</p>
+              <p class="text-center">At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges. By using cutting-edge technologies and employing the latest software design methodologies, we can guarantee that you'll be well prepared and equipped for years to come.</p>
+              <br />
+              <p class="text-center"><small><small>Click the slide to cock, and the trigger to shoot!</small></small></p>
+              <div class="guns-comp">
+                <hand-gun ref="thunder" class="left-gun" :introDelay="0.3"></hand-gun>
+                <hand-gun ref="lightning" class="right-gun" :introDelay="0.7"></hand-gun>
+              </div>
+              <div class="text-center" style="position: relative; top: -140px">
+                <a href="/#services" class="action-link transparent space-top g-pstyle3">What We Do</a>
+              </div>
+            </div>
+          </div>
+        </template>
+      </hero-layout01-col>
+      <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
     </div>
   </Layout>
 </template>
@@ -429,6 +435,7 @@
     ],
     data() {
       return {
+        activeDetail: null,
         soundtrack: null,
         formData: {},
         textEffects: {
@@ -484,11 +491,13 @@
           }, 900);
         }
       },
-      viewDetail() {
+      viewDetail(activeDetail) {
+        this.activeDetail = activeDetail;
+
         const detail = this.$refs.contentDetail;
         const detailEl = detail;
 
-        if (detailEl) {
+        if (typeof window !== 'undefined' && detailEl) {
           detailEl.style.zIndex = 5000;
           detailEl.style.opacity = 1;
 
@@ -500,6 +509,42 @@
             easing: 'easeOutExpo',
             duration: 1000
           });
+
+
+          this.initSoundtrack();
+
+          const stripes = document.querySelector('.sergeant-stripes');
+          const skull = document.querySelector('.special-forces-skull');
+
+          anime({
+            targets: stripes,
+            translateY: [450, 0],
+            easing: 'easeOutExpo',
+            duration: 3000
+          });
+
+          anime({
+            targets: skull,
+            translateY: [300, 50],
+            easing: 'easeInOutQuad',
+            duration: 1500,
+            complete: () => {
+              let skullTimeline = anime.timeline({ loop: true });
+              skullTimeline
+                .add({
+                  targets: skull,
+                  translateY: [50, 35],
+                  easing: 'easeInOutQuad',
+                  duration: 2500
+                })
+                .add({
+                  targets: skull,
+                  translateY: [35, 50],
+                  easing: 'easeInOutQuad',
+                  duration: 2500
+                });
+              }
+            });
         }
       },
       hideDetail() {
@@ -536,40 +581,6 @@
     mounted() {
       if (typeof window !== 'undefined') {
         window.addEventListener('keydown', this.bindDetailCloseToEsc);
-        this.initSoundtrack();
-
-        const stripes = document.querySelector('.sergeant-stripes');
-        const skull = document.querySelector('.special-forces-skull');
-
-        anime({
-          targets: stripes,
-          translateY: [450, 0],
-          easing: 'easeOutExpo',
-          duration: 3000
-        });
-
-        anime({
-          targets: skull,
-          translateY: [300, 50],
-          easing: 'easeInOutQuad',
-          duration: 1500,
-          complete: () => {
-            let skullTimeline = anime.timeline({ loop: true });
-            skullTimeline
-              .add({
-                targets: skull,
-                translateY: [50, 35],
-                easing: 'easeInOutQuad',
-                duration: 2500
-              })
-              .add({
-                targets: skull,
-                translateY: [35, 50],
-                easing: 'easeInOutQuad',
-                duration: 2500
-              });
-          }
-        });
 
         const groundPath = anime.path('.ground-path .ground');
         const tank = document.querySelector('.army-tank');
@@ -684,5 +695,28 @@
     height: 200px;
     bottom: 0;
     filter: brightness(0.345) saturate(0.5);
+  }
+
+  .jungle-stream {
+    z-index: 2500;
+    position: fixed;
+    width: 100%;
+    height: 730px;
+    bottom: 0;
+  }
+
+  .hero-first {
+    min-height: 140vh;
+  }
+
+  .elite-software:after {
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 </style>
