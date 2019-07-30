@@ -298,6 +298,211 @@
       </div>
     </section>
 
+    <section class="hero-section bg-hero-grey sm-flex flex-column">
+      <!--<div class="sm-flex flex-column flex-center flex-justify-stretch flex-basis-two-thirds">
+        <div class="sm-flex space-all">
+          <div class="sm-flex flex-center">
+            <div class="space-bottom">
+              <p class="text-center g-pstyle2">
+            <span class="md-hide lg-hide">
+              <span class="no-wrap">Blue Collar builds next-gen</span>
+              <br />
+              <span class="no-wrap">solutions for the mobile</span>
+              <br />
+              <span class="no-wrap">web and social media</span>
+            </span>
+                <span class="xs-hide sm-hide">
+              <span class="no-wrap">Blue Collar builds next-generation solutions </span>
+              <br />
+              <span class="no-wrap">for the mobile web and social media</span>
+            </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>-->
+    </section>
+
+    <!--<section class="lg-flex bg-hero-grey pad-top">
+      <div class="sm-flex flex-center flex-basis-half">
+        <div>
+          <div class="sm-flex flex-wrap">
+            <div class="space-all no-space-bottom g-get-started">
+              <p class="g-pstyle12">How to get started?</p>
+            </div>
+          </div>
+
+          <div class="md-flex flex-wrap">
+            <div class="flex-basis-half">
+              <div class="space-all">
+                <div class="space-bottom-half g-get-started">
+                  <p class="g-pstyle9" v-html="getProcessStep(0).title"></p>
+                </div>
+                <div class="g-get-started">
+                  <p v-html="getProcessStep(0).description"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-basis-half">
+              <div class="space-all">
+                <div class="space-bottom-half g-get-started">
+                  <p class="g-pstyle9" v-html="getProcessStep(1).title"></p>
+                </div>
+                <div class="g-get-started">
+                  <p v-html="getProcessStep(1).description"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-basis-half">
+              <div class="space-all">
+                <div class="space-bottom-half g-get-started">
+                  <p class="g-pstyle9" v-html="getProcessStep(2).title"></p>
+                </div>
+                <div class="g-get-started">
+                  <p v-html="getProcessStep(2).description"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-basis-half">
+              <div class="space-all">
+                <div class="space-bottom-half g-get-started">
+                  <p class="g-pstyle9" v-html="getProcessStep(3).title"></p>
+                </div>
+                <div class="g-get-started">
+                  <p v-html="getProcessStep(3).description"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-basis-half">
+       <img class="image-fill banner-image" src="/images/get-started-feature-image.png" alt="" />
+      </div>
+    </section>-->
+
+    <!--<section class="hero-section bg-hero-grey sm-flex flex-column pad-top">
+      <div class="sm-flex flex-column flex-center flex-justify-stretch flex-basis-two-thirds">
+        <div class="sm-flex space-all">
+          <div class="sm-flex flex-center">
+            <div class="space-bottom">
+              <p class="text-center g-pstyle2">
+                <span class="no-wrap">The Founders</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-section bg-light-grey sm-flex flex-justify-center pad-bottom">
+        <div class="sm-flex flex-center flex-justify-start flex-basis-half">
+          <div class="space-all">
+            <div class="sm-flex flex-column flex-end">
+              <div class="content-block">
+                <img class="bg-white image-fill" src="/images/lucas-lopatka-profile.png" alt="" />
+                <div class="pad-all">
+                  <div class="space-bottom-half g-help-with-digital-marketing">
+                    <p class="g-pstyle9 text-center">Lucas Lopatka, B. Sc.</p>
+                    <p class="text-center">Technical Director</p>
+                  </div>
+                  <div class="g-help-with-digital-marketing">
+                    <p>Michael has made a career of creating innovative and impactful solutions for clients, specializing in e-commerce, data and API integrations, and mobile technology. As the founder of Blue Collar, he leads the team’s development and creative efforts.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sm-flex flex-center flex-justify-start flex-basis-half">
+          <div class="space-all">
+            <div class="sm-flex flex-column flex-start">
+              <div class="content-block">
+                <img class="bg-white image-fill" src="/images/businessman-580b585b2edbce24c47b29f8.png" alt="" />
+                <div class="pad-all">
+                  <div class="space-bottom-half g-help-with-digital-marketing">
+                    <p class="g-pstyle9 text-center">Chris Shannon, MBA</p>
+                    <p class="text-center">Marketing Director</p>
+                  </div>
+                  <div class="g-help-with-digital-marketing">
+                    <p>Chris co-founded Blue Collar after a successful career in product managment for real estate software and digital marketing strategy. Chris brings over 10 years of marketing experience to his clients, combined with deep knowledge of the latest social media technology and trends.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+    <section class="services lg-flex">
+      <div class="sm-flex flex-center flex-justify-center flex-basis-half">
+        <div class="content-block">
+          <content-block-layout
+            className="pad-top"
+            title="Your Partner for the Future"
+            description="Blue Collar partners with businesses to modernize their digital tool kit for the paradigm shift currently underway.
+
+As of 2018, it was found 58% of site visitors were accessing content through mobile devices. The world is digitizing at an accelerated rate, moving away from traditional HTML websites to a system of content pages shared across social media platforms and mobile devices.
+
+For those businesses that adapt to this shift and adopt a modernized tool kit, there is a larger percentage of success. But the road to efficient digitizing can be arduous and is likely to create business gaps for our clients. Blue Collar strives to create solutions for these gaps by being at the forefront of these new technologies and ensures that our client receives the utmost value from our services."
+            link="/"
+            linkText="Back to Home"
+          />
+        </div>
+      </div>
+
+      <div
+        v-if="getTestimonial(0)"
+        class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
+        <testimonial-block-layout
+          className="space-top"
+          reviewedBy="Lucas Lopatka"
+          position="Solutions Architect"
+          organization="Welcome to Blue Collar! I'm Lucas, and I am a Full-Stack Solutions Architect with 15 years of experience designing and building custom software applications. I design, wireframe, prototype, and develop mobile, hybrid and progressive apps. I also architect, implement and deploy scalable, cloud-based RESTful services and multi-tier micro-services for clients of all sizes located in Canada and abroad."
+          image="/images/company/me-ski.jpg"
+        />
+        <div
+          class="homepage-hero-action action-link-block text-center space-bottom">
+          <a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REPEAT and alternate -->
+    <section class="services lg-flex">
+
+      <div
+        v-if="getTestimonial(0)"
+        class="bg-light-grey sm-flex flex-column flex-center flex-basis-half pad-top">
+        <testimonial-block-layout
+          className="space-top"
+          reviewedBy="Shivagani Murti"
+          position="Business Development"
+          organization="I coach with those who desire to thrive in a diverse and inclusive workplace, those ready to explore their unconscious bias, and those who want to create a positive impact worldwide. Should you choose Blue Collar as your navigator, be assured your potential will become your reality, as will your impact on the world."
+          image="/images/company/zoya.jpg"
+        />
+        <div
+          class="homepage-hero-action action-link-block text-center space-bottom">
+          <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
+        </div>
+      </div>
+
+      <div class="sm-flex flex-center flex-justify-center flex-basis-half">
+        <div class="content-block">
+          <content-block-layout
+            className="pad-top pad-bottom"
+            title="Connect and Develop with IT Pros"
+            description="In conjunction with partnering with the business landscape globally, Blue Collar provides <strong>training for underprivileged youth</strong> – we believe <strong>coding is the future</strong> and we want to empower youth to make their footprint in this vast world."
+            link="/"
+            linkText="Back to Home"
+          />
+        </div>
+      </div>
+    </section>
+
     <Footer/>
   </Layout>
 </template>

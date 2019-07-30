@@ -28,3 +28,12 @@
     </div>
   </section>
 </template>
+
+<script>
+  import TestimonialMixin from '~/core/mixins/TestimonialMixin';
+  export default {
+    mixins: [
+      TestimonialMixin
+    ]
+  }
+</script>

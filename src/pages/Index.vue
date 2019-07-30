@@ -29,7 +29,7 @@
     >
       <template v-slot:bg>
         <div style="position: absolute; width: 100%; height: 100%;">
-          <jungle style="position: relative; bottom: -67vh;"></jungle>
+          <jungle style="position: relative; bottom: -67vh; filter: brightness(0.45) saturate(0.888);"></jungle>
           <div style="position: fixed; bottom: 15vh; width: 100%;">
             <!--<binoculars style="transform: rotate(7deg);"></binoculars>-->
             <img @click="viewDetail('CONSULTANTS')" style="max-width: 150px; left: 40vh; transform: rotate(-15deg) translateX(30px); pointer: cursor" src="/images/walkie-talkie.svg" />
@@ -343,6 +343,7 @@
               </div>
             </div>
           </div>
+          <team-block></team-block>
         </template>
       </hero-layout01-col>
       <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
@@ -360,6 +361,7 @@
   import Contact from '~/components/Contact.vue';
   import Footer from '~/components/Footer.vue';
   //import Portfolio from '~/components/portfolio/Portfolio.vue';
+  import TeamBlock from '~/components/TeamBlock.vue';
 
   // Import generic component layouts
   import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
@@ -412,6 +414,7 @@
       Footer,
       //Portfolio,
       PortfolioVerticalTimeline,
+      TeamBlock,
       // Inject mixins
       AudioControls,
       // Inject generic component layouts
