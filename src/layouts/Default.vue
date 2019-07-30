@@ -1,6 +1,6 @@
 <template>
   <main class="bg-evening-blue">
-    <intro></intro>
+    <!--<intro></intro>-->
     <div class="container relative">
       <div class="notifications" v-if="displayNotifications">
         <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
