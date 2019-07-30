@@ -28,7 +28,7 @@
     >
       <template v-slot:bg>
         <div style="position: absolute; width: 100%; height: 100%;">
-          <jungle style="position: relative; bottom: -60vh;"></jungle>
+          <jungle style="position: relative; bottom: -67vh;"></jungle>
           <binoculars></binoculars>
         </div>
       </template>
@@ -239,6 +239,13 @@
       className="sm-pad-top pad-bottom-2x text-shadow relative"
       style="height: 110vh; transform: translateY(-34vh); background-position: center 40vh;"
     >
+      <template v-slot:bg>
+        <div class="flex-basis-half flex flex-column">
+          <img src="/images/fishing-rod.svg" />
+          <img style="max-width: 400px" src="/images/red-snapper.svg" />
+        </div>
+      </template>
+
       <template v-slot:title>
         <!--<shrink-words-one-by-one-text-effect
           tag="h2"
