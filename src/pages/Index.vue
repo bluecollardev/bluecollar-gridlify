@@ -25,12 +25,15 @@
       :angle="true"
       slotPos="top"
       className="hero-first sm-pad-top pad-bottom-2x text-shadow"
+      style="top: -20vh"
     >
       <template v-slot:bg>
         <div style="position: absolute; width: 100%; height: 100%;">
           <jungle style="position: relative; bottom: -67vh;"></jungle>
-          <binoculars style="transform: rotate(7deg) translateX(100px);"></binoculars>
-          <img style="max-width: 150px; position: absolute; top: 25vh; left: 40vh; transform: rotate(-15deg)" src="/images/walkie-talkie.svg" />
+          <div style="position: fixed; bottom: 15vh; width: 100%;">
+            <!--<binoculars style="transform: rotate(7deg);"></binoculars>-->
+            <img @click="viewDetail('CONSULTANTS')" style="max-width: 150px; left: 40vh; transform: rotate(-15deg) translateX(30px); pointer: cursor" src="/images/walkie-talkie.svg" />
+          </div>
         </div>
       </template>
 
@@ -289,7 +292,7 @@
 
     <Footer/>
 
-    <div ref="contentDetail" class="detailed-content-panel bg-evening-blue">
+    <div ref="contentDetail" class="detailed-content-panel bg-bc-blue">
       <div class="panel-header flex flex-center pad-left-half pad-right-half" style="height: 5rem; position: absolute; right: 0; z-index: 9999">
         <div class="flex-grow">
           <!--<h2 class="text-center no-space-top no-space-bottom">Case Studies</h2>-->
@@ -310,7 +313,7 @@
         style="padding-bottom: 20vh;"
       >
         <template v-slot:bg>
-          <!--<matrix-bg></matrix-bg>-->
+          <matrix-bg style="margin-top: 54px;"></matrix-bg>
           <div class="special-forces-skull" style="z-index: 2; position: absolute; width: 367px; height: 404px; background-image: url(/images/special-forces-skull.png); background-size: contain; background-repeat: no-repeat; background-position: center center"></div>
           <div class="sergeant-stripes" style="z-index: 1; position: absolute; width: 100%; height: 100%; filter: invert(100); opacity: 0.1; background-image: url(/images/sergeant-major-of-the-army.png); background-size: contain; background-repeat: no-repeat; background-position: center 210px"></div>
         </template>
@@ -605,14 +608,14 @@
             rotate: groundPath('angle'),
             easing: 'linear',
             direction: 'reverse',
-            duration: 8000,
+            duration: 12000,
             delay: 3000
             // Move off screen
           }).add({
             targets: tank,
             translateX: [0, -900],
             easing: 'linear',
-            duration: 3000,
+            duration: 5000,
             delay: 0
           });
 

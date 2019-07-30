@@ -79,9 +79,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
-    position: relative;
-    top: -57vh;
 
 		svg {
 			margin: 0 auto;
