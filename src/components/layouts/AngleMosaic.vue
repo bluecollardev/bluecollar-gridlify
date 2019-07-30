@@ -42,7 +42,7 @@
         <!-- END Slot 3 -->
       </section>
 
-      <section class="slot2-container hero-section shift-section-up angle bg-bc-blue pad-top no-pad-bottom lg-flex flex-justify-center">
+      <section :class="`slot2-container hero-section shift-section-up angle ${this.bgColor ? this.bgColor : 'bg-light-grey' } pad-top no-pad-bottom lg-flex flex-justify-center`">
         <div class="col-3-squares pad-top pad-bottom lg-flex">
           <!-- Slot 2 -->
           <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
@@ -60,8 +60,8 @@
         </div>
       </section>
 
-      <section class="hero-section shift-section-up angle bg-bc-blue no-pad-bottom lg-flex">
-        <div class="col-3-squares bg-bc-blue no-pad-bottom lg-flex flex-basis-full">
+      <section :class="`hero-section shift-section-up angle no-pad-bottom lg-flex`">
+        <div :class="`col-3-squares ${this.bgColor ? this.bgColor : 'bg-light-grey' } no-pad-bottom lg-flex flex-basis-full`">
           <!-- Slot 4 -->
           <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
             <slot name="slot4Bg"></slot>
@@ -113,6 +113,10 @@
   import FlipCardsMixin from '~/core/mixins/FlipCardsMixin';
 
   export default {
+    props: {
+      bgColor: String,
+      default: 'bg-bc-blue'
+    },
     mixins: [
       FlipCardsMixin
     ],
