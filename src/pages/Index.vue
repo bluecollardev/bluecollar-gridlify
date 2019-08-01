@@ -38,12 +38,13 @@
       </template>
 
       <template v-slot:title>
-        <typewriter-text-effect
+        <!--<typewriter-text-effect
+          v-if="isServer"
           tag="h2"
           text="Lost in the Software Jungle?"
           class="title text-center pad-bottom"
           :loop="true">
-        </typewriter-text-effect>
+        </typewriter-text-effect>-->
       </template>
 
       <template>
@@ -59,10 +60,9 @@
       </template>
     </hero-layout01-col>
 
-    <angle-mosaic bgColor="bg-bc-blue">
+    <!--<angle-mosaic bgColor="bg-bc-blue">
       <template v-slot:slot1Bg>
         <div class="bg-evening-blue video-block-bg drop-shadow rotate-right is-hidden--sm-down">
-          <!--<matrix-bg style="z-index: 1; opacity: 0.25" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>-->
         </div>
 
       </template>
@@ -119,7 +119,6 @@
 
       <template v-slot:slot3Bg>
         <div class="bg-evening-blue video-block-bg drop-shadow rotate-left is-hidden--sm-down">
-          <!--<matrix-bg style="z-index: 1; opacity: 0.25" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>-->
         </div>
       </template>
       <template v-slot:slot3Front>
@@ -175,7 +174,6 @@
 
       <template v-slot:slot5Bg>
         <div class="bg-evening-blue video-block-bg scale-center drop-shadow-up is-hidden--sm-down">
-          <!--<matrix-bg style="z-index: 1; opacity: 0.25" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>-->
         </div>
       </template>
       <template v-slot:slot5Front>
@@ -228,7 +226,7 @@
           />
         </div>
       </template>
-    </angle-mosaic>
+    </angle-mosaic>-->
 
     <hero-layout01-col
       bgColor="transparent"
@@ -245,13 +243,14 @@
     >
       <template v-slot:bg>
         <div class="flex-basis-half flex flex-column">
-          <img src="/images/fishing-rod.svg" style="transform: rotate(35deg) translate(200px, 120px)" />
-          <img src="/images/red-snapper.svg" style="max-width: 400px; transform: scaleX(-1) rotate(75deg) translateX(200px)" />
+          <img ref="fishingRod" src="/images/fishing-rod.svg" style="transform: rotate(35deg) translate(200px, 120px)" />
+          <img ref="redSnapper" src="/images/red-snapper.svg" style="max-width: 400px; transform: scaleX(-1) rotate(75deg) translateX(200px)" />
         </div>
       </template>
 
       <template v-slot:title>
         <shrink-words-one-by-one-text-effect
+          v-if="isServer"
           tag="h2"
           text="We Deliver Results"
           class="title text-center pad-bottom"
@@ -320,6 +319,7 @@
 
         <template v-slot:title>
           <!--<typewriter-text-effect
+            v-if="isServer"
             tag="h2"
             text="Elite Software Commandos"
             class="title text-center pad-bottom"
@@ -352,6 +352,8 @@
 
 <script>
   import anime from 'animejs';
+
+  import Vue from 'vue';
 
   // Import components
   import Header from '~/components/Header.vue';
@@ -446,6 +448,15 @@
       TestimonialMixin,
       FlipCardsMixin
     ],
+    computed: {
+      isServer: () => {
+        console.log('vue');
+        console.log(Vue);
+        console.log('is server?');
+        console.log(Vue.$isServer);
+        return Vue.$isServer
+      }
+    },
     data() {
       return {
         activeDetail: null,
@@ -590,6 +601,53 @@
 
         if (isEscape) this.hideDetail();
       },
+      animateParabolic(el) {
+        let btn1 = document.getElementById('btn1');
+        let bar = document.getElementById('bar');
+        let barChild = bar.getElementsByTagName('span')[0];
+
+        btn1.onclick = () => {
+          parabola(this, barChild);
+        };
+
+        const parabola = (() => {
+          let carNum = 0;
+          return (self, target) => {
+            let circle = document.createElement('div');
+            circle.id = 'circle';
+            circle.style.display = 'none';
+            document.body.appendChild(circle);
+
+            let a, b, c, x1, y1, x2, y2, y, sum, t;
+            x1 = self.offsetLeft + self.clientWidth / 2;
+            y1 = self.offsetTop;
+            x2 = bar.offsetLeft + self.clientWidth / 2;
+            y2 = bar.offsetTop;
+
+            a = 0.001;
+            b = (y1 - y2 - a * (x1 * x1 - x2 * x2)) / (x1 - x2);
+            c = y1 - a * x1 * x1 - b * x1;
+
+            sum = x1;
+
+            t = setInterval(() => {
+              circle.style.display = 'block';
+              y = a * sum * sum + b * sum + c;
+              circle.style.top = y + 'px';
+              circle.style.left = sum + 'px';
+
+              sum++;
+
+              if (sum > x2) {
+                clearInterval(t);
+                document.body.removeChild(circle);
+                carNum++;
+                target.innerHTML = carNum;
+              }
+            }, 1);
+          }
+        })();
+      }
     },
     mounted() {
       if (typeof window !== 'undefined') {
@@ -620,6 +678,8 @@
             duration: 5000,
             delay: 0
           });
+
+        //this.animateParabolic(this.$refs.redSnapper);
 
         const flipCardSelector = '.service-detail-card-inner';
         const flipCardsContent = document.querySelectorAll(flipCardSelector);
