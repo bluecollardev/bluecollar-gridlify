@@ -38,22 +38,12 @@
       </template>
 
       <template v-slot:title>
-        <!--<audio-controls
-          style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
-          :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
-          :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
-          :onPlayPauseClicked="this.onPlayPauseClicked.bind(this, this.soundtrack)"
-          :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
-          :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
-          :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
-        />-->
-        <!--<typewriter-text-effect
-          v-if="!isServer"
+        <typewriter-text-effect
           tag="h2"
           text="Lost in the Software Jungle?"
           class="title text-center pad-bottom"
           :loop="true">
-        </typewriter-text-effect>-->
+        </typewriter-text-effect>
       </template>
 
       <template>
