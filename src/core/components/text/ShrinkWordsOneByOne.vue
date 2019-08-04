@@ -1,20 +1,20 @@
 <template>
-  <text-wrapper :tag="this.tag" :text="this.text">
+  <!--<text-wrapper :tag="this.tag" :text="this.text">-->
     <span class="text-wrapper">
       <span class="words">{{ this.text }}</span>
     </span>
-  </text-wrapper>
+  <!--</text-wrapper>-->
 </template>
 
 <script>
   import anime from 'animejs';
 
   import * as DOMTextEffectUtils from '~/core/utils/DOMTextEffectUtils';
-  import TextWrapper from './TextWrapper.vue'
+  //import TextWrapper from './TextWrapper.vue'
 
   export default {
     components: {
-      TextWrapper,
+      //TextWrapper,
     },
     props: {
       tag: String,
@@ -46,36 +46,38 @@
       }
     },
     mounted() {
-      const wordsTarget = this.$el.querySelector(this.wordsSelector);
+      if (typeof window !== 'undefined') {
+        const wordsTarget = this.$el.querySelector(this.wordsSelector);
 
-      // Wrap every letter in a span
-      wordsTarget.outerHTML = DOMTextEffectUtils.wrapWords(wordsTarget);
+        // Wrap every letter in a span
+        wordsTarget.outerHTML = DOMTextEffectUtils.wrapWords(wordsTarget);
 
-      const wordTargets = this.$el.querySelectorAll(this.wordSelector);
+        const wordTargets = this.$el.querySelectorAll(this.wordSelector);
 
-      let timeline = anime.timeline({ loop: this.loop });
+        let timeline = anime.timeline({loop: this.loop});
 
-      timeline
-        .add({
-          targets: wordsTarget,
-          opacity: 0,
-          duration: 1000
-        })
-        .add({
-          targets: wordTargets,
-          scale: [14,1],
-          opacity: [0,1],
-          easing: 'easeOutCirc',
-          duration: 500,
-          delay: (el, i) => 500 * i
-        })
-        .add({
-          targets: wordsTarget,
-          opacity: 0,
-          duration: 1000,
-          easing: 'easeOutExpo',
-          delay: 5000
-        });
+        timeline
+          .add({
+            targets: wordsTarget,
+            opacity: 0,
+            duration: 1000
+          })
+          .add({
+            targets: wordTargets,
+            scale: [14, 1],
+            opacity: [0, 1],
+            easing: 'easeOutCirc',
+            duration: 500,
+            delay: (el, i) => 500 * i
+          })
+          .add({
+            targets: wordsTarget,
+            opacity: 0,
+            duration: 1000,
+            easing: 'easeOutExpo',
+            delay: 5000
+          });
+      }
     }
   }
 </script>

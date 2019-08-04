@@ -45,7 +45,9 @@
       }
     },
     mounted() {
-      this.setupAnimation();
+      if (typeof window !== 'undefined') {
+        this.setupAnimation();
+      }
     }
   }
 </script>

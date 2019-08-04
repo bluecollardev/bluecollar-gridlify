@@ -1,20 +1,20 @@
 <template>
-  <text-wrapper :tag="this.tag" :text="this.text">
+  <!--<text-wrapper :tag="this.tag" :text="this.text">-->
     <span class="text-wrapper rotate-words">
       <span class="words">{{ this.text }}</span>
     </span>
-  </text-wrapper>
+  <!--</text-wrapper>-->
 </template>
 
 <script>
   import anime from 'animejs';
 
   import * as DOMTextEffectUtils from '~/core/utils/DOMTextEffectUtils';
-  import TextWrapper from './TextWrapper.vue'
+  //import TextWrapper from './TextWrapper.vue'
 
   export default {
     components: {
-      TextWrapper,
+      //TextWrapper,
     },
     props: {
       tag: String,
@@ -46,42 +46,43 @@
       }
     },
     mounted() {
-      const wordsTarget = this.$el.querySelector(this.wordsSelector);
+      if (typeof window !== 'undefined') {
+        const wordsTarget = this.$el.querySelector(this.wordsSelector);
 
-      // Wrap every letter in a span
-      wordsTarget.outerHTML = DOMTextEffectUtils.wrapWords(wordsTarget);
+        // Wrap every letter in a span
+        wordsTarget.outerHTML = DOMTextEffectUtils.wrapWords(wordsTarget);
 
-      const wordTargets = this.$el.querySelectorAll(this.wordSelector);
+        const wordTargets = this.$el.querySelectorAll(this.wordSelector);
 
-      let timeline = anime.timeline({ loop: this.loop });
+        let timeline = anime.timeline({loop: this.loop});
 
-      let settings = {
-        opacityIn: [0, 1],
-        scaleIn: [0.2, 1],
-        scaleOut: 3,
-        durationIn: 800,
-        durationOut: 600,
-        delay: 500
-      };
+        let settings = {
+          opacityIn: [0, 1],
+          scaleIn: [0.2, 1],
+          scaleOut: 3,
+          durationIn: 800,
+          durationOut: 600,
+          delay: 500
+        };
 
-      wordTargets.forEach((wordTarget) => {
-        timeline
-          .add({
-            targets: wordTarget,
-            opacity: settings.opacityIn,
-            scale: settings.scaleIn,
-            duration: settings.durationIn
-          })
-          .add({
-            targets: wordTarget,
-            opacity: 0,
-            scale: settings.scaleOut,
-            duration: settings.durationOut,
-            easing: 'easeInExpo',
-            delay: settings.delay
-          })
-      });
-
+        wordTargets.forEach((wordTarget) => {
+          timeline
+            .add({
+              targets: wordTarget,
+              opacity: settings.opacityIn,
+              scale: settings.scaleIn,
+              duration: settings.durationIn
+            })
+            .add({
+              targets: wordTarget,
+              opacity: 0,
+              scale: settings.scaleOut,
+              duration: settings.durationOut,
+              easing: 'easeInExpo',
+              delay: settings.delay
+            })
+        });
+      }
     }
   }
 </script>

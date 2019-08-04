@@ -38,13 +38,12 @@
       </template>
 
       <template v-slot:title>
-        <!--<typewriter-text-effect
-          v-if="isServer"
+        <typewriter-text-effect
           tag="h2"
           text="Lost in the Software Jungle?"
           class="title text-center pad-bottom"
           :loop="true">
-        </typewriter-text-effect>-->
+        </typewriter-text-effect>
       </template>
 
       <template>
@@ -249,13 +248,13 @@
       </template>
 
       <template v-slot:title>
-        <shrink-words-one-by-one-text-effect
-          v-if="isServer"
+        <!--<shrink-words-one-by-one-text-effect
+          v-if="!isServer"
           tag="h2"
           text="We Deliver Results"
           class="title text-center pad-bottom"
           :loop="true">
-        </shrink-words-one-by-one-text-effect>
+        </shrink-words-one-by-one-text-effect>-->
       </template>
 
       <template>
@@ -319,7 +318,7 @@
 
         <template v-slot:title>
           <!--<typewriter-text-effect
-            v-if="isServer"
+            v-if="!isServer"
             tag="h2"
             text="Elite Software Commandos"
             class="title text-center pad-bottom"
@@ -450,11 +449,11 @@
     ],
     computed: {
       isServer: () => {
-        console.log('vue');
-        console.log(Vue);
+        //console.log('vue');
+        //console.log(Vue);
         console.log('is server?');
-        console.log(Vue.$isServer);
-        return Vue.$isServer
+        console.log(Vue.prototype.$isServer);
+        return (typeof Vue.prototype.$isServer === 'boolean') ? Vue.prototype.$isServer : false
       }
     },
     data() {

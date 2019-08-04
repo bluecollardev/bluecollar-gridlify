@@ -1,20 +1,20 @@
 <template>
-  <text-wrapper :tag="this.tag" :text="this.text">
+  <!--<text-wrapper :tag="this.tag" :text="this.text">-->
     <span class="text-wrapper slide-up">
       <span class="words">{{ this.text }}</span>
     </span>
-  </text-wrapper>
+  <!--</text-wrapper>-->
 </template>
 
 <script>
   import anime from 'animejs';
 
   import * as DOMTextEffectUtils from '~/core/utils/DOMTextEffectUtils';
-  import TextWrapper from './TextWrapper.vue'
+  //import TextWrapper from './TextWrapper.vue'
 
   export default {
     components: {
-      TextWrapper,
+      //TextWrapper,
     },
     props: {
       tag: String,
@@ -87,7 +87,9 @@
       }
     },
     mounted() {
-      this.setupAnimation();
+      if (typeof window !== 'undefined') {
+        this.setupAnimation();
+      }
     }
   }
 </script>

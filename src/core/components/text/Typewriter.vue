@@ -1,5 +1,5 @@
 <template>
-  <text-wrapper :tag="this.tag" :text="this.text">
+  <!--<text-wrapper :tag="this.tag" :text="this.text">-->
     <span class="text-wrapper">
       <span class="line blink">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
@@ -12,18 +12,18 @@
       </span>
       <span class="letters">{{ this.text }}</span>
     </span>
-  </text-wrapper>
+  <!--</text-wrapper>-->
 </template>
 
 <script>
   import anime from 'animejs';
 
   import * as DOMTextEffectUtils from '~/core/utils/DOMTextEffectUtils';
-  import TextWrapper from './TextWrapper.vue'
+  //import TextWrapper from './TextWrapper.vue'
 
   export default {
     components: {
-      TextWrapper,
+      //TextWrapper,
     },
     props: {
       tag: String,
@@ -56,56 +56,58 @@
       default: '.title .line'
     },
     mounted() {
-      //const textTarget = document.querySelector(this.textSelector);
+      if (typeof window !== 'undefined' && this.$el) {
+        const textTarget = this.$el.querySelector(this.textSelector);
 
-      const lineTarget = this.$el.querySelector(this.lineSelector);
-      const lettersTarget = this.$el.querySelector(this.lettersSelector);
+        const lineTarget = this.$el.querySelector(this.lineSelector);
+        const lettersTarget = this.$el.querySelector(this.lettersSelector);
 
-      // Wrap every letter in a span
-      lettersTarget.outerHTML = DOMTextEffectUtils.wrapLetters(lettersTarget);
+        // Wrap every letter in a span
+        lettersTarget.outerHTML = DOMTextEffectUtils.wrapLetters(lettersTarget);
 
-      const letterTargets = this.$el.querySelectorAll(this.letterSelector);
+        const letterTargets = this.$el.querySelectorAll(this.letterSelector);
 
-      DOMTextEffectUtils.wrapLettersOnWordBoundary(lettersTarget, lettersTarget, letterTargets);
+        DOMTextEffectUtils.wrapLettersOnWordBoundary(lettersTarget, lettersTarget, letterTargets);
 
-      this.$nextTick(() => {
-        window.addEventListener('resize', DOMTextEffectUtils.rewrapLettersOnWordBoundary.bind(this, lettersTarget, lettersTarget, letterTargets));
-      });
-
-      let timeline = anime.timeline({ loop: true });
-
-      timeline
-        .add({
-          targets: lineTarget,
-          scaleY: [1, 1],
-          opacity: [0.5, 1],
-          easing: 'easeOutExpo',
-          duration: 700
-        })
-        .add({
-          targets: lineTarget,
-          scaleY: [1, 1],
-          opacity: [1, 0],
-          easing: 'easeOutExpo',
-          duration: 300
-        })
-        .add({
-          targets: letterTargets,
-          scale: [1.5, 1],
-          opacity: [0, 1],
-          easing: 'easeOutExpo',
-          duration: 150,
-          //offset: '-=775',
-          delay: (el, i) => letterTargets.length * (i + 1)
-        })
-        .add({
-          targets: lettersTarget,
-          scaleY: [1, 1],
-          opacity: [1, 0],
-          easing: 'easeOutExpo',
-          duration: 700,
-          delay: 10000
+        this.$nextTick(() => {
+          window.addEventListener('resize', DOMTextEffectUtils.rewrapLettersOnWordBoundary.bind(this, lettersTarget, lettersTarget, letterTargets));
         });
+
+        let timeline = anime.timeline({ loop: true });
+
+        timeline
+          .add({
+            targets: lineTarget,
+            scaleY: [1, 1],
+            opacity: [0.5, 1],
+            easing: 'easeOutExpo',
+            duration: 700
+          })
+          .add({
+            targets: lineTarget,
+            scaleY: [1, 1],
+            opacity: [1, 0],
+            easing: 'easeOutExpo',
+            duration: 300
+          })
+          .add({
+            targets: letterTargets,
+            scale: [1.5, 1],
+            opacity: [0, 1],
+            easing: 'easeOutExpo',
+            duration: 150,
+            //offset: '-=775',
+            delay: (el, i) => letterTargets.length * (i + 1)
+          })
+          .add({
+            targets: lettersTarget,
+            scaleY: [1, 1],
+            opacity: [1, 0],
+            easing: 'easeOutExpo',
+            duration: 700,
+            delay: 10000
+          });
+      }
     }
   }
 </script>
