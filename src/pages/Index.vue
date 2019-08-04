@@ -39,6 +39,7 @@
 
       <template v-slot:title>
         <typewriter-text-effect
+          v-if="!isServer"
           tag="h2"
           text="Lost in the Software Jungle?"
           class="title text-center pad-bottom"
