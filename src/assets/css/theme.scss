@@ -364,4 +364,96 @@ section.hero-section.angle + footer {
   }
 }
 
+/* Scenes and elements */
+@media screen and (min-width: 64em) {
+  .guns-comp {
+    height: 70vh;
+    transform: translateY(100px);
+  }
+
+  .left-gun, .right-gun {
+    position: absolute;
+  }
+
+  .left-gun {
+    left: -40%;
+  }
+
+  .right-gun {
+    transform: scaleX(-1);
+    right: -40%;
+  }
+
+  .detailed-content-panel {
+    opacity: 1;
+    width: 100vw;
+    height: calc(100vh - 54px);
+    position: fixed;
+    /*top: 54px;*/ /* Match header */
+    top: 100%;
+    left: 0;
+    z-index: 5000;
+    overflow-y: scroll;
+  }
+
+  .army-tank {
+    position: fixed;
+    z-index: 2000;
+    background: url(/images/t84-tank.svg) no-repeat;
+    width: 900px;
+    height: 300px;
+    bottom: 80px;
+    background-size: contain;
+    margin-right: -900px;
+  }
+
+  .ground-path {
+    display: none;
+    bottom: 0;
+  }
+
+  .forest-background {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url(/images/forest.svg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .grass {
+    z-index: 2500;
+    position: fixed;
+    width: 110%;
+    left: -5%;
+    height: 200px;
+    bottom: 0;
+    filter: brightness(0.345) saturate(0.5);
+  }
+
+  .jungle-stream {
+    z-index: 2500;
+    position: fixed;
+    width: 100%;
+    height: 730px;
+    bottom: 0;
+  }
+
+  .hero-first {
+    min-height: 140vh;
+  }
+
+  .elite-software:after {
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 
