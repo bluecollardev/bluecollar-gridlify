@@ -1,7 +1,7 @@
 <template>
   <div ref="intro" class="intro bg-bc-blue">
     <div class="wrapper">
-      <img src="/images/blue-collar-dev.png" alt="" class="intro-logo img-whiteify">
+      <img src="/images/blue-collar-dev.png" alt="" class="intro-logo image-whiteify">
       <!--<skull />-->
       <div class="animation-wrapper">
         <phone-app />

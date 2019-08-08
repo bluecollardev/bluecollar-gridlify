@@ -1,64 +1,29 @@
 /* Load vars first! */
 @import './vars';
-@import './bluecollar/style';
 
-@import './temp';
+/* Base packages */
+@import './bluecollar/basscss';
+@import './bluecollar/utils';
+@import './bluecollar/flex-utils';
+@import './bluecollar/responsive-utils';
+@import './bluecollar/spacing-utils';
+@import './bluecollar/image-utils';
+@import './bluecollar/text-utils';
+@import './bluecollar/style-colors';
+@import './bluecollar/blocks';
 
-/* Load ampstart components after vars */
-@import './ampstart/inputs/inputs';
-@import './ampstart/navbar/navbar';
-@import './ampstart/footer/footer';
-@import './ampstart/dropdown/dropdown';
+@import './bluecollar/components/menu';
+@import './bluecollar/components/actions';
+@import './bluecollar/components/hero-section';
+@import './bluecollar/components/video-block-bg';
+@import './bluecollar/components/video-banner';
+@import './bluecollar/components/text-banner';
+@import './bluecollar/components/figure-caption';
+@import './bluecollar/components/service-detail-card';
+@import './parts/header';
+@import './parts/footer';
+@import './parts/logo';
 
-
-/* Form hacks to get ampstart to play with basscss */
-input[type=text],
-input[type=date],
-input[type=datetime],
-input[type=datetime-local],
-input[type=email],
-input[type=month],
-input[type=number],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=time],
-input[type=url],
-input[type=week] {
-  height: 2.5rem;
-  vertical-align: middle;
-  -webkit-appearance: none;
-}
-
-select {
-  height: 2.5rem;
-}
-
-select:not([multiple]) {
-  height: 2.5rem;
-  vertical-align: middle;
-}
-
-textarea {
-  line-height: 1.75;
-}
-
-/* Hack */
-.ampstart-input > label {
-  line-height: 0;
-}
-
-/* z-index content fix */
-section > * {
-    z-index: 10;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-.hero-decor-group {
-  position: relative;
-  bottom: -80vh;
-  right: 0;
-}
+@import './theme-typography';
+@import './theme';
+@import './responsive';

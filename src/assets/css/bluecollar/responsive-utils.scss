@@ -6,33 +6,39 @@
   --breakpoint-lg: '(min-width: 64em)';
 }*/
 
+.display-none {
+  display: none !important;
+}
+
 // There is an issue with basscss... these are supposed to be in the framework
-.hide{
-  position:absolute !important;
-  height:1px!important;
-  width:1px!important;
-  overflow:hidden!important;
-  clip:rect(1px, 1px, 1px, 1px)!important;
+.hide {
+  position: absolute !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
 }
 
-@media (max-width: 40em){
-  .xs-hide{ display:none !important }
+@media (max-width: 40em) {
+  .xs-hide {
+    display: none !important;
+  }
 }
 
-@media (min-width: 40em) and (max-width: 52em){
-  .sm-hide{ display:none !important }
+@media (min-width: 40em) and (max-width: 52em) {
+  .sm-hide {
+    display: none !important;
+  }
 }
 
-@media (min-width: 52em) and (max-width: 64em){
-  .md-hide{ display:none !important }
+@media (min-width: 52em) and (max-width: 64em) {
+  .md-hide {
+    display: none !important;
+  }
 }
 
 @media (min-width: 64em){
-  .lg-hide{ display:none !important }
-}
-
-.display-none{ display:none !important }
-
-.flex {
-
+  .lg-hide {
+    display: none !important;
+  }
 }

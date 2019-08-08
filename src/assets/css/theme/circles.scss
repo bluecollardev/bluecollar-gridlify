@@ -1,0 +1,104 @@
+/* TODO: Don't apply these set widths everywhere... target testimonials only? */
+img.circle {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+  max-width: none;
+  object-fit: cover;
+}
+
+img.circle {
+  width: 125px;
+  height: 125px;
+  -o-object-fit: cover;
+  max-width: none;
+  object-fit: cover;
+}
+
+.circle-composite {
+  width: 137.5px;
+  height: 137.5px;
+
+  .inner-circle {
+    position: relative;
+    top: 12.5px;
+  }
+
+  .dark-blue-circle-mask {
+    width: 112.5px;
+    height: 137.5px;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  .dark-blue-circle {
+    width: 137.5px;
+    height: 130px;
+    border-radius: 58% 50% 55% 50%;
+    background-color: #005593;
+    background-image: linear-gradient(to top right, #003e7c, #33587a);
+    z-index: 2;
+    position: relative;
+    left: 1.5px;
+    top: 0;
+  }
+
+  .white-hoop {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px dashed #fff;
+    position: absolute;
+    z-index: 3;
+    filter: alpha(opacity=60);
+    opacity: .6;
+  }
+
+  .blue-circle {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: #00a1df;
+    position: absolute;
+    z-index: 4;
+  }
+
+  .white-circle {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    z-index: 4;
+  }
+
+  .limegreen-circle {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: #5ed65c;
+    position: absolute;
+    z-index: 4;
+  }
+
+  img.circle {
+    z-index: 5;
+    left: 5px;
+    bottom: 0;
+    float: left;
+    position: relative;
+  }
+
+  &.small {
+    width: 137.5px;
+    height: 137.5px;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  /* Adjust testimonial profile badges */
+  .circle-composite.small {
+    position: relative;
+    left: -20px;
+  }
+}

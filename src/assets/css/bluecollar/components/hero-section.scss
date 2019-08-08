@@ -132,45 +132,6 @@ section.hero-section {
     padding-top: 9vh; /* Offset */
   }
 
-  /* TODO: Write a sass mixin or plugin */
-  /* Header, ignore... */
-  section.hero-section:nth-child(1) {
-    z-index: 10;
-  }
-
-  section.hero-section:nth-child(2) {
-    z-index: 9;
-  }
-
-  section.hero-section:nth-child(3) {
-    z-index: 10;
-    transform: translateY(-6vh);
-  }
-
-  section.hero-section:nth-child(4) {
-    z-index: 10;
-    transform: translateY(-6vh);
-  }
-
-  section.hero-section:nth-child(5) {
-    z-index: 6;
-    transform: translateY(-13vh);
-  }
-
-  section.hero-section:nth-child(6) {
-    z-index: 5;
-    transform: translateY(-26vh);
-  }
-
-  section.hero-section:nth-child(7) {
-    z-index: 4;
-    transform: translateY(-42vh);
-  }
-
-  section.hero-section.angle + footer {
-    padding-top: 26vh; /* Offset */
-  }
-
   /*section.hero-section:nth-child(8) {
     z-index: 3;
   }

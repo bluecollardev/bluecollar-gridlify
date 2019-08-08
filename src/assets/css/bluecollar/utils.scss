@@ -1,0 +1,14 @@
+.overflow-scroll {
+  overflow: hidden;
+}
+
+.clearfix {
+  clear: both;
+  overflow: visible;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}

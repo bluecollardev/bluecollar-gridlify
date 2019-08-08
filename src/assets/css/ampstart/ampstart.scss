@@ -1,0 +1,39 @@
+/* Custom stuff */
+/* Menu Customization */
+.ampstart-nav-item.highlighted {
+  background-color: #33587a;
+  color: white;
+}
+
+/* TODO: Figure out how to toggle these menu dropdowns (hint check out amp-start ampstart) */
+.ampstart-dropdown-items {
+  display: none;
+}
+
+/* Social */
+.ampstart-icon {
+  /*fill: #33587a;*/
+  fill: white;
+}
+
+.ampstart-input > label {
+  color: white !important;
+  line-height: 0; /* Hack */
+}
+
+/*.ampstart-input {
+  width: 100% !important;
+}*/
+
+.ampstart-input > textarea, .ampstart-input > select, .ampstart-input > input {
+  border: 1px solid grey !important;
+  background: white !important;
+  padding: 0 1rem !important;
+  border-radius: 3px !important;
+}
+
+.ampstart-checkbox {
+  label {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,367 @@
+@import './theme/circles';
+@import './theme/guitar';
+
+:root {
+  --cblue: #33587a;
+  --ccherry: #720500;
+  --cgrey : #3E3A37;
+  --cwhite : #ffffff;
+  --ccream : #FAFBFC;
+  --cgrey_green: #435466;
+  --clightgrey : #DAD9D7;
+
+  --body_height_8: calc((100vh - 113px)/8);
+  --body_height_4: calc((100vh - 113px)/4);
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.5rem;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+@custom-media --breakpoint-xs (max-width: 40em);
+@custom-media --breakpoint-sm (min-width: 40.06em);
+@custom-media --breakpoint-md (min-width: 52.06em);
+@custom-media --breakpoint-lg (min-width: 64.06em);
+@custom-media --breakpoint-sm-md (min-width: 40.06em) and (max-width: 52em);
+@custom-media --breakpoint-md-lg (min-width: 52.06em) and (max-width: 64em);
+*/
+
+/* Theme */
+html, body, main {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+i {
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+form {
+  width: 100%;
+}
+
+input[type=text],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week] {
+  height: 2.5rem;
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+input[type=text], input[type=date], input[type=datetime], input[type=datetime-local],
+input[type=email], input[type=month], input[type=number], input[type=password],
+input[type=search], input[type=tel], input[type=time], input[type=url], input[type=week] {
+  border: 1px solid grey !important;
+  background: white !important;
+  padding: 0 1rem !important;
+  border-radius: 3px !important;
+}
+
+select {
+  height: 2.5rem;
+}
+
+select:not([multiple]) {
+  height: 2.5rem;
+  vertical-align: middle;
+}
+
+textarea {
+  /* TODO: Fix the default spacing! */
+  line-height: 1.75;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.icon-arrow {
+  mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 284.929 284.929'><path d='M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441		L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z'/></svg>");
+}
+
+.border-black-1px {
+  border: 1px solid #000000;
+}
+
+.wrap {
+  min-width: 320px;
+  height: 100%;
+}
+
+ul.bullets {
+  list-style: square inside;
+}
+
+ul.bullets li {
+  list-style: square inside;
+}
+
+.g-services,
+.g-services p {
+  text-align: center;
+}
+
+a.action-link {
+  border-radius: 5px;
+}
+
+.drop-shadow {
+  filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.33333)) brightness(0.777);
+  &:hover {
+    filter: drop-shadow(2px 4px 6px rgba(16, 16, 16, 0.33333)) brightness(0.777);
+  }
+}
+
+.drop-shadow-up {
+  filter: drop-shadow(0px -9px 6px rgba(16, 16, 16, 0.15)) brightness(0.777);
+  &:hover {
+    filter: drop-shadow(0px -9px 6px rgba(16, 16, 16, 0.15)) brightness(0.777);
+  }
+}
+
+.bg-denim {
+  background-image: url(/images/denim-texture-orig.jpg) !important;
+  background-repeat: repeat !important;
+  background-size: 300px 300px !important;
+  background-attachment: fixed;
+}
+
+.bg-inset:before {
+  box-shadow: 0 0 30px inset rgba(16,16,16,0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+}
+
+.top-fields {
+  &> div >  div + div {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .top-fields {
+    &> div >  div + div {
+      margin-left: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 84em) {
+  .top-fields {
+    &> div >  div + div {
+      margin-left: 2rem;
+    }
+  }
+}
+
+/* z-index content fix */
+section > * {
+    z-index: 10;
+}
+
+/* TODO: Write a sass mixin or plugin */
+/* Header, ignore... */
+section.hero-section:nth-child(1) {
+  z-index: 10;
+}
+
+section.hero-section:nth-child(2) {
+  z-index: 9;
+}
+
+section.hero-section:nth-child(3) {
+  z-index: 10;
+  transform: translateY(-6vh);
+}
+
+section.hero-section:nth-child(4) {
+  z-index: 10;
+  transform: translateY(-6vh);
+}
+
+section.hero-section:nth-child(5) {
+  z-index: 6;
+  transform: translateY(-13vh);
+}
+
+section.hero-section:nth-child(6) {
+  z-index: 5;
+  transform: translateY(-26vh);
+}
+
+section.hero-section:nth-child(7) {
+  z-index: 4;
+  transform: translateY(-42vh);
+}
+
+section.hero-section.angle + footer {
+  padding-top: 26vh; /* Offset */
+}
+
+/* Homepage and hero stuff */
+.homepage-hero {
+  min-height: 90vh;
+}
+
+@media screen and (min-width: 40em) {
+  .homepage-hero p,
+  .homepage-hero li,
+  .homepage-hero a:not(.action-link),
+  .homepage-hero a:not(.action-button) {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .banner-image {
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
+.hero-decor-group {
+  position: relative;
+  bottom: -80vh;
+  right: 0;
+}
+
+@media screen and (max-width: 40em) {
+  .homepage-hero-main .video-banner {
+    justify-content: flex-start !important;
+
+    h1 {
+      margin-top: 70px;
+    }
+  }
+}
+
+/* Cards */
+.card-list {
+  /* Override base ul styles for card lists */
+  list-style-type: disc;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  /* TODO: This needs to scale with font! */
+  padding-inline-start: 20px;
+}
+
+.card-content-body {
+  /* TODO: Something is screwed up, this is a hack to normalize block sizing */
+  max-width: 22rem;
+}
+
+/* Quick fix to get action to drop to bottom of cards without JavaScript or complex layout changes */
+.card-content-action > div {
+  position: absolute;
+  bottom: 30px;
+}
+
+/* Blue Collar card styling todo - is this used anywhere? */
+.fb-card {
+  padding: 1rem 1rem 120px;
+  border: 1px solid #ccc;
+}
+
+/* Contact form stuff */
+#message,
+.message-wrapper {
+  width: 100%;
+}
+
+#message {
+  height: 20rem;
+}
+
+.message-wrapper {
+  width: 100% !important;
+}
+
+.contact-cta {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.contact-us-nav-item {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+#contact-form {
+  position: relative;
+  z-index: 5;
+}
+
+.background-map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  /* This block is partially covered by the angle from the previous section */
+  .center-testimonial {
+    top: 15px !important;
+  }
+
+  /* TODO: Make these conditional based on browser, moving to css clip-path */
+  /*.shift-section-up > div {
+    position: relative;
+    top: -102px;
+    z-index: 2;
+  }
+
+  .shift-section-up + .shift-section-up {
+    margin-bottom: -103px;
+    border-bottom: 1px solid white;
+  }*/
+}
+
+@media screen and (min-width: 1400px) {
+  .testimonial-block-wrapper img {
+    position: relative;
+    bottom: -7px;
+  }
+}
+
+
