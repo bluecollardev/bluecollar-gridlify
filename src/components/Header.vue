@@ -11,7 +11,7 @@
       </a>
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0">
-          <li><a href="/" aria-label="Our Team" @click="hideMenu()">Software Commandos</a></li>
+          <li><a href="/" aria-label="Our Team" @click="hideMenu()">Home</a></li>
           <li><a href="/#services" aria-label="Websites" @click="hideMenu()">Apps / Software / Web</a></li>
           <li><a href="/contact" aria-label="Enquire" @click="hideMenu()">Get In Touch</a></li>
         </ul>

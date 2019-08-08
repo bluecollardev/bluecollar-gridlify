@@ -75,20 +75,20 @@
       width: 300px;
       margin-bottom: 3rem;
     }
-  }
 
-  .wrapper {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 5001;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+     .wrapper {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 5001;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 
-  .wrapper .animation-wrapper {
-    margin: 0 2rem 3rem;
+    .wrapper .animation-wrapper {
+      margin: 0 2rem 3rem;
+    }
   }
 </style>

@@ -28,8 +28,8 @@
       style="top: -20vh"
     >
       <template v-slot:bg>
-        <div style="position: absolute; width: 100%; height: 100%;">
-          <jungle style="position: relative; bottom: -67vh; filter: brightness(0.45) saturate(0.888);"></jungle>
+        <div class="hero-bg-slot">
+          <jungle></jungle>
           <div style="position: fixed; bottom: 15vh; width: 100%;">
             <!--<binoculars style="transform: rotate(7deg);"></binoculars>-->
             <img @click="viewDetail('CONSULTANTS')" style="max-width: 150px; left: 40vh; transform: rotate(-15deg) translateX(30px); pointer: cursor" src="/images/walkie-talkie.svg" />
@@ -288,13 +288,12 @@
       :flipX="true"
       :angle="true"
       slotPos="top"
-      className="sm-pad-top pad-bottom-2x text-shadow relative"
-      style="height: 110vh; transform: translateY(-50vh); background-position: center 52vh;"
+      className="we-deliver-results sm-pad-top pad-bottom-2x text-shadow relative"
     >
       <template v-slot:bg>
         <div class="flex-basis-half flex flex-column">
-          <img ref="fishingRod" src="/images/fishing-rod.svg" style="transform: rotate(35deg) translate(200px, 120px)" />
-          <img ref="redSnapper" src="/images/red-snapper.svg" style="max-width: 400px; transform: scaleX(-1) rotate(75deg) translateX(200px)" />
+          <img ref="fishingRod" class="fishing-rod" src="/images/fishing-rod.svg" />
+          <img ref="redSnapper" class="red-snapper" src="/images/red-snapper.svg" />
         </div>
       </template>
 
@@ -342,7 +341,7 @@
     <Footer/>
 
     <div ref="contentDetail" class="detailed-content-panel bg-bc-blue">
-      <div class="panel-header flex flex-center pad-left-half pad-right-half" style="height: 5rem; position: absolute; right: 0; z-index: 9999">
+      <div class="panel-header flex flex-center pad-left-half pad-right-half">
         <div class="flex-grow">
           <!--<h2 class="text-center no-space-top no-space-bottom">Case Studies</h2>-->
         </div>
@@ -363,8 +362,8 @@
       >
         <template v-slot:bg>
           <!--<matrix-bg style="margin-top: 54px;"></matrix-bg>-->
-          <div class="special-forces-skull" style="z-index: 2; position: absolute; width: 367px; height: 404px; background-image: url(/images/special-forces-skull.png); background-size: contain; background-repeat: no-repeat; background-position: center center"></div>
-          <div class="sergeant-stripes" style="z-index: 1; position: absolute; width: 100%; height: 100%; filter: invert(100); opacity: 0.1; background-image: url(/images/sergeant-major-of-the-army.png); background-size: contain; background-repeat: no-repeat; background-position: center 210px"></div>
+          <div class="special-forces-skull"></div>
+          <div class="sergeant-stripes"></div>
         </template>
 
         <template v-slot:title>
@@ -751,94 +750,3 @@
     }
   }
 </script>
-
-<style>
-  .guns-comp {
-    height: 70vh;
-    transform: translateY(100px);
-  }
-
-  .left-gun, .right-gun {
-    position: absolute;
-  }
-
-  .left-gun {
-    left: -40%;
-  }
-
-  .right-gun {
-    transform: scaleX(-1);
-    right: -40%;
-  }
-
-  .detailed-content-panel {
-    opacity: 1;
-    width: 100vw;
-    height: calc(100vh - 54px);
-    position: fixed;
-    /*top: 54px;*/ /* Match header */
-    top: 100%;
-    left: 0;
-    z-index: 5000;
-    overflow-y: scroll;
-  }
-
-  .army-tank {
-    position: fixed;
-    z-index: 2000;
-    background: url(/images/t84-tank.svg) no-repeat;
-    width: 900px;
-    height: 300px;
-    bottom: 80px;
-    background-size: contain;
-    margin-right: -900px;
-  }
-
-  .ground-path {
-    display: none;
-    bottom: 0;
-  }
-
-  .forest-background {
-    top: 0;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: url(/images/forest.svg) no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-
-  .grass {
-    z-index: 2500;
-    position: fixed;
-    width: 110%;
-    left: -5%;
-    height: 200px;
-    bottom: 0;
-    filter: brightness(0.345) saturate(0.5);
-  }
-
-  .jungle-stream {
-    z-index: 2500;
-    position: fixed;
-    width: 100%;
-    height: 730px;
-    bottom: 0;
-  }
-
-  .hero-first {
-    min-height: 140vh;
-  }
-
-  .elite-software:after {
-    position: absolute;
-    background: rgba(0,0,0,0.6);
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>

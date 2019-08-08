@@ -133,28 +133,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  img.badge {
-    width: 100px;
-    height: 100px;
-    -o-object-fit: cover;
-    max-width: none;
-    object-fit: cover;
-  }
-
-  .badge {
-      border-radius: 50%;
-  }
-
-  @media screen and (min-width: 1400px) {
-    .hero-testimonial .hero-image-wrapper img {
-      top: 10vh !important;
-    }
-
-    .hero-testimonial .testimonial {
-      position: relative;
-      top: -7vh;
-    }
-  }
-</style>
