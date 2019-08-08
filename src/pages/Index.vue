@@ -2,9 +2,7 @@
   <Layout>
     <Header/>
 
-    <!--<helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>-->
-
-    <!--<audio-controls
+    <audio-controls
       style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
       :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
       :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
@@ -12,7 +10,7 @@
       :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
       :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
       :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
-    />-->
+    />
 
     <hero-layout01-col
       bgColor="transparent"
@@ -99,27 +97,18 @@
 
     <Footer/>
 
-    <div ref="contentDetail" class="detailed-content-panel bg-bc-blue">
-      <div class="panel-header flex flex-center pad-left-half pad-right-half" style="height: 5rem; position: absolute; right: 0; z-index: 9999">
-        <div class="flex-grow">
-          <!--<h2 class="text-center no-space-top no-space-bottom">Case Studies</h2>-->
-        </div>
-        <b @click="hideDetail()" style="font-size: 1.5rem; cursor: pointer">X</b>
-      </div>
+    <content-detail-modal ref="contentDetail">
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
       <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
-    </div>
+    </content-detail-modal>
   </Layout>
 </template>
 
 <script>
-  import anime from 'animejs';
-
   import Vue from 'vue';
 
   // Import components
   import Header from '~/components/Header.vue';
-  import Hero from '~/components/Hero.vue';
   import Blog from '~/components/Blog.vue';
   import Contact from '~/components/Contact.vue';
   import Footer from '~/components/Footer.vue';
@@ -130,20 +119,16 @@
   // Import generic component layouts
   import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
   import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue';
-  /*import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
-  import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';*/
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
   import AngleMosaic from '~/components/layouts/AngleMosaic.vue';
+  import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue';
 
   // Import SVG animations
-  import HandGun from '~/components/svg/HandGun.vue';
-  import Helicopter from '~/components/svg/Helicopter.vue';
   import Jungle from '~/components/svg/Jungle.vue';
   import Binoculars from '~/components/svg/Binoculars.vue';
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
   import MatrixBg from '~/components/svg/MatrixBg';
-
 
   // Import animated text effects
   import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
@@ -167,9 +152,9 @@
 
   export default {
     components: {
+      ContentDetailModal,
       // Inject components
       Header,
-      Hero,
       Blog,
       Contact,
       Footer,
@@ -182,13 +167,9 @@
       AngleMosaic,
       VideoHeroLayout01Col,
       HeroLayout01Col,
-      /*SectionBlockLayout02Col01,
-      SectionBlockLayout02Col02,*/
       ContentBlockLayout,
       TestimonialBlockLayout,
       // Inject SVG animations
-      HandGun,
-      Helicopter,
       Jungle,
       Binoculars,
       GoogleMapBackground,
@@ -239,7 +220,7 @@
        * @deprecated
        * Deprecated as far as this site is concerned right now... this could also be moved to a mixin
        */
-      getProcessStep(idx) {
+      /*getProcessStep(idx) {
         let items = this.homeContent.processSteps;
 
         if (items instanceof Array && items.length > idx) {
@@ -247,7 +228,7 @@
         }
 
         return null
-      },
+      },*/
       initSoundtrack() {
         if (!(this.soundtrack instanceof Audio)) {
           this.soundtrack = new Audio();
@@ -264,83 +245,18 @@
           this.soundtrack = null;
         }
       },
-
       viewDetail(activeDetail) {
-        this.activeDetail = activeDetail;
+        if (typeof window !== 'undefined') {
 
-        const detail = this.$refs.contentDetail;
-        const detailEl = detail;
-
-        if (typeof window !== 'undefined' && detailEl) {
-          detailEl.style.zIndex = 5000;
-          detailEl.style.opacity = 1;
-
-          document.body.style.overflowY = 'hidden';
-
-          anime({
-            targets: detailEl,
-            top: [document.documentElement.clientHeight + 'px', '54px'], // Match header height
-            easing: 'easeOutExpo',
-            duration: 1000
-          });
-
-          this.initSoundtrack();
-        }
-      },
-      hideDetail() {
-        const detail = this.$refs.contentDetail;
-        const detailEl = detail;
-
-        if (detailEl) {
-          document.body.style.overflowY = 'scroll';
-
-          anime({
-            targets: detailEl,
-            top: ['54px', '100%'],
-            duration: 1000,
-            complete: () => {
-              detailEl.style.opacity = 0;
-              detailEl.style.zIndex = 0;
-            }
+          this.activeDetail = activeDetail;
+          this.$refs.contentDetail.viewDetail(activeDetail, () => {
+            this.initSoundtrack();
           });
         }
-      },
-      bindDetailCloseToEsc(e) {
-        e = e || window.event;
-
-        let isEscape = false;
-        if ('key' in e) {
-          isEscape = (e.key === 'Escape' || e.key === 'Esc');
-        } else {
-          isEscape = (e.keyCode === 27);
-        }
-
-        if (isEscape) this.hideDetail();
-      }
-    },
-    mounted() {
-      if (typeof window !== 'undefined') {
-        window.addEventListener('keydown', this.bindDetailCloseToEsc);
-
-        //this.animateParabolic(this.$refs.redSnapper);
-
-        const flipCardSelector = '.service-detail-card-inner';
-        const flipCardsContent = document.querySelectorAll(flipCardSelector);
-
-        this.initFlipCards(
-          flipCardsContent,
-          '.service-detail-card-front',
-          '.service-detail-card-back'
-        );
-
-        window.addEventListener('resize', () => {
-          this.$set(this, 'repaint', Math.random());
-        });
       }
     },
     beforeDestroy() {
       if (typeof window !== 'undefined') {
-        window.removeEventListener('keydown', this.bindDetailCloseToEsc);
         this.killSoundtrack();
       }
     }

@@ -6,7 +6,14 @@
 </template>
 
 <script>
+  // Import SVG animations
+  import HandGun from '~/components/svg/HandGun.vue';
+
   export default {
+    components: {
+      // Inject SVG animations
+      HandGun,
+    },
     methods: {
       fireGuns() {
         if (typeof window !== 'undefined') {
