@@ -68,7 +68,7 @@ function wrapLettersOnWordBoundary(text, lettersTarget, letterTargets) {
 function rewrapLettersOnWordBoundary(text, lettersTarget, letterTargets) {
   // Sanitize the text first, clear any <br> elements that we previously inserted
   lettersTarget.querySelectorAll('br').forEach(el => el.remove());
-  wrapTitleText(text, lettersTarget, letterTargets);
+  wrapLettersOnWordBoundary(text, lettersTarget, letterTargets);
 }
 
 /**
