@@ -4,7 +4,7 @@
 
     <!--<helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>-->
 
-    <audio-controls
+    <!--<audio-controls
       style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
       :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
       :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
@@ -12,7 +12,7 @@
       :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
       :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
       :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
-    />
+    />-->
 
     <hero-layout01-col
       bgColor="transparent"
@@ -38,13 +38,22 @@
       </template>
 
       <template v-slot:title>
-        <typewriter-text-effect
+        <!--<audio-controls
+          style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
+          :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
+          :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
+          :onPlayPauseClicked="this.onPlayPauseClicked.bind(this, this.soundtrack)"
+          :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
+          :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
+          :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
+        />-->
+        <!--<typewriter-text-effect
           v-if="!isServer"
           tag="h2"
           text="Lost in the Software Jungle?"
           class="title text-center pad-bottom"
           :loop="true">
-        </typewriter-text-effect>
+        </typewriter-text-effect>-->
       </template>
 
       <template>
@@ -60,14 +69,14 @@
       </template>
     </hero-layout01-col>
 
-    <!--<angle-mosaic bgColor="bg-bc-blue">
+    <angle-mosaic bgColor="bg-bc-blue">
       <template v-slot:slot1Bg>
         <div class="bg-evening-blue video-block-bg drop-shadow rotate-right is-hidden--sm-down">
         </div>
 
       </template>
       <template v-slot:slot1Front>
-        <content-block-layout
+        <!--<content-block-layout
           className="pad-top ml-auto mr-auto"
           v-if="getHomePageServiceByIndex(0).linkText"
           image="/images/icons/apps-02.svg"
@@ -83,6 +92,15 @@
               duration: 2000
             }
           }"
+        />-->
+        <content-block-layout
+          className="pad-top ml-auto mr-auto"
+          v-if="getHomePageServiceByIndex(0).linkText"
+          image="/images/icons/apps-02.svg"
+          :title="getHomePageServiceByIndex(0).title"
+          :description="getHomePageServiceByIndex(0).description"
+          :link="getHomePageServiceByIndex(0).link"
+          :linkText="getHomePageServiceByIndex(0).linkText"
         />
       </template>
 
@@ -90,7 +108,7 @@
         <div
           v-if="getTestimonialByIndex(1)"
           class="flex flex-column flex-center flex-basis-third">
-          <testimonial-block-layout
+          <!--<testimonial-block-layout
             className="sm-space-top-half sm-space-bottom-half"
             :testimonial="getTestimonialByIndex(1).testimonial"
             :reviewedBy="getTestimonialByIndex(1).reviewedBy"
@@ -113,6 +131,14 @@
                 duration: 3000
               }
             }"
+          />-->
+          <testimonial-block-layout
+            className="sm-space-top-half sm-space-bottom-half"
+            :testimonial="getTestimonialByIndex(1).testimonial"
+            :reviewedBy="getTestimonialByIndex(1).reviewedBy"
+            :position="getTestimonialByIndex(1).position"
+            :organization="getTestimonialByIndex(1).organization"
+            :image="getTestimonialByIndex(1).image"
           />
         </div>
       </template>
@@ -122,7 +148,7 @@
         </div>
       </template>
       <template v-slot:slot3Front>
-        <content-block-layout
+        <!--<content-block-layout
           className="pad-top ml-auto mr-auto pad-bottom"
           v-if="getHomePageServiceByIndex(2).linkText"
           image="/images/icons/websites.svg"
@@ -138,6 +164,15 @@
               duration: 2000
             }
           }"
+        />-->
+        <content-block-layout
+          className="pad-top ml-auto mr-auto pad-bottom"
+          v-if="getHomePageServiceByIndex(2).linkText"
+          image="/images/icons/websites.svg"
+          :title="getHomePageServiceByIndex(2).title"
+          :description="getHomePageServiceByIndex(2).description"
+          :link="getHomePageServiceByIndex(2).link"
+          :linkText="getHomePageServiceByIndex(2).linkText"
         />
       </template>
 
@@ -145,7 +180,7 @@
         <div
           v-if="getTestimonialByIndex(0)"
           class="sm-flex flex-column flex-center flex-basis-third md-pad-top">
-          <testimonial-block-layout
+          <!--<testimonial-block-layout
             className="sm-space-top-half sm-space-bottom-half"
             :testimonial="getTestimonialByIndex(0).testimonial"
             :reviewedBy="getTestimonialByIndex(0).reviewedBy"
@@ -168,6 +203,14 @@
                 duration: 3000
               }
             }"
+          />-->
+          <testimonial-block-layout
+            className="sm-space-top-half sm-space-bottom-half"
+            :testimonial="getTestimonialByIndex(0).testimonial"
+            :reviewedBy="getTestimonialByIndex(0).reviewedBy"
+            :position="getTestimonialByIndex(0).position"
+            :organization="getTestimonialByIndex(0).organization"
+            :image="getTestimonialByIndex(0).image"
           />
         </div>
       </template>
@@ -177,7 +220,7 @@
         </div>
       </template>
       <template v-slot:slot5Front>
-        <content-block-layout
+        <!--<content-block-layout
           className="pad-top ml-auto mr-auto"
           v-if="getHomePageServiceByIndex(1).linkText"
           image="/images/icons/server.svg"
@@ -193,6 +236,15 @@
               duration: 2000
             }
           }"
+        />-->
+        <content-block-layout
+          className="pad-top ml-auto mr-auto"
+          v-if="getHomePageServiceByIndex(1).linkText"
+          image="/images/icons/server.svg"
+          :title="getHomePageServiceByIndex(1).title"
+          :description="getHomePageServiceByIndex(1).description"
+          :link="getHomePageServiceByIndex(1).link"
+          :linkText="getHomePageServiceByIndex(1).linkText"
         />
       </template>
 
@@ -200,7 +252,7 @@
         <div
           v-if="getTestimonialByIndex(2)"
           class="sm-flex flex-column flex-center flex-basis-third md-pad-top">
-          <testimonial-block-layout
+          <!--<testimonial-block-layout
             className="sm-space-top-half sm-space-bottom-half"
             :testimonial="getTestimonialByIndex(2).testimonial"
             :reviewedBy="getTestimonialByIndex(2).reviewedBy"
@@ -223,10 +275,18 @@
                 duration: 3000
               }
             }"
+          />-->
+          <testimonial-block-layout
+            className="sm-space-top-half sm-space-bottom-half"
+            :testimonial="getTestimonialByIndex(2).testimonial"
+            :reviewedBy="getTestimonialByIndex(2).reviewedBy"
+            :position="getTestimonialByIndex(2).position"
+            :organization="getTestimonialByIndex(2).organization"
+            :image="getTestimonialByIndex(2).image"
           />
         </div>
       </template>
-    </angle-mosaic>-->
+    </angle-mosaic>
 
     <hero-layout01-col
       bgColor="transparent"
@@ -362,6 +422,7 @@
   import Contact from '~/components/Contact.vue';
   import Footer from '~/components/Footer.vue';
   //import Portfolio from '~/components/portfolio/Portfolio.vue';
+  import PortfolioVerticalTimeline from '~/components/portfolio/PortfolioVerticalTimeline.vue';
   import TeamBlock from '~/components/TeamBlock.vue';
 
   // Import generic component layouts
@@ -401,9 +462,6 @@
   import FlipCardsMixin from '~/core/mixins/FlipCardsMixin';
   import TestimonialMixin from '~/core/mixins/TestimonialMixin';
   import HomeMixin from '~/core/mixins/HomeMixin';
-
-  // Import static data
-  import PortfolioVerticalTimeline from "../components/portfolio/PortfolioVerticalTimeline";
 
   export default {
     components: {

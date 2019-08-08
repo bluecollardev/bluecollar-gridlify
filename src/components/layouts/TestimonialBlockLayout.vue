@@ -1,10 +1,9 @@
 <template>
-  <div class="content-block testimonial-block-wrapper text-center sm-space-bottom-half" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
-  <!--<div class="content-block testimonial-block-wrapper text-center sm-space-bottom-half">-->
+  <!--<div class="content-block testimonial-block-wrapper text-center sm-space-bottom-half" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">-->
+  <div class="content-block testimonial-block-wrapper text-center sm-space-bottom-half">
     <div v-bind:class="classNameString">
       <div class="sm-space-bottom-half g-services">
         <p v-if="!this.testimonialAnimation" class="g-pstyle10 text-center" v-html="this.testimonial"></p>
-
         <component
           ref="testimonialAnimationContainer"
           v-if="this.testimonialAnimation"
