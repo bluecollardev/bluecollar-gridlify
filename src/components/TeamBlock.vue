@@ -5,7 +5,7 @@
       <div class="content-block">
         <content-block-layout
           className="pad-top"
-          title="Your Partner for the Future"
+          title="Elite Software Commandos"
           description="Blue Collar partners with businesses to modernize their digital tool kit for the paradigm shift currently underway.
 
 As of 2018, it was found 58% of site visitors were accessing content through mobile devices. The world is digitizing at an accelerated rate, moving away from traditional HTML websites to a system of content pages shared across social media platforms and mobile devices.
