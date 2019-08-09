@@ -1,7 +1,7 @@
 <template>
   <div class="flex-basis-half flex flex-column">
-    <img ref="fishingRod" src="/images/fishing-rod.svg" style="transform: rotate(35deg) translate(200px, 120px)" />
-    <img ref="redSnapper" src="/images/red-snapper.svg" style="max-width: 400px; transform: scaleX(-1) rotate(75deg) translateX(200px)" />
+    <img ref="fishingRod" class="fishing-rod" src="/images/fishing-rod.svg" />
+    <img ref="redSnapper" class="red-snapper" src="/images/red-snapper.svg" />
   </div>
 </template>
 
@@ -56,3 +56,43 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .fishing-rod {
+    position: relative;
+    left: 200px;
+    top: 500px;
+    transform: rotate(35deg);
+    transform-origin: bottom right;
+    cursor: pointer;
+    animation-name: fishing_rod_hover;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+
+    &:hover {
+      animation: none;
+    }
+
+    @keyframes fishing_rod_hover {
+      0% {
+        transform: rotate(35deg);
+      }
+
+      49% {
+        transform: rotate(38deg);
+      }
+
+      99% {
+        transform: rotate(35deg);
+      }
+    }
+  }
+
+  .red-snapper {
+    position: relative;
+    max-width: 400px;
+    left: -200px;
+    top: 200px;
+    transform: scaleX(-1) rotate(75deg);
+  }
+</style>
