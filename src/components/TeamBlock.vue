@@ -9,6 +9,7 @@
           description="To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges."
           link="/"
           linkText="Back to Home"
+          :onLinkClicked="this.onHomeLinkClicked"
         />
       </div>
     </div>
@@ -22,6 +23,12 @@
   import TestimonialMixin from '~/core/mixins/TestimonialMixin';
 
   export default {
+    props: {
+      onHomeLinkClicked: {
+        type: Function,
+        default: (e) => {}
+      }
+    },
     mixins: [
       TestimonialMixin
     ],

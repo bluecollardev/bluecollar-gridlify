@@ -16,7 +16,7 @@
         <div class="jungle-bg-container xs-hide" style="align-self: flex-start">
           <jungle class="jungle-bg"></jungle>
           <div style="position: fixed; bottom: 15vh; width: 100%;">
-            <img @click="viewDetail('CONSULTANTS')" class="xs-hide sm-hide" style="max-width: 150px; left: 40vh; transform: rotate(-15deg) translateX(30px); pointer: cursor" src="/images/walkie-talkie.svg" />
+            <img ref="combatRadio" @click="viewDetail('CONSULTANTS')" class="combat-radio xs-hide sm-hide" src="/images/walkie-talkie.svg" />
           </div>
         </div>
       </template>
@@ -82,7 +82,7 @@
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
           <div>
             <p class="text-center">At Blue Collar, we <strong style="text-decoration: underline; font-weight: 900">never</strong> leave our customers behind.</p>
-            <div class="text-center" style="">
+            <div class="text-center">
               <a @click="viewDetail('PORTFOLIO')" class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
             </div>
           </div>
@@ -334,6 +334,35 @@
     .jungle-bg-container {
       .jungle-bg {
         bottom: -27vh;
+      }
+    }
+  }
+
+  .combat-radio {
+    position: relative;
+    max-width: 150px;
+    left: 10vh;
+    cursor: pointer;
+    transform: rotate(-15deg);
+    transform-origin: bottom center;
+
+    &:hover {
+      animation-name: radio_hover;
+      animation-duration: 4.5s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes radio_hover {
+      0% {
+        transform: rotate(-15deg);
+      }
+
+      49% {
+        transform: rotate(-12deg);
+      }
+
+      99% {
+        transform: rotate(-15deg);
       }
     }
   }
