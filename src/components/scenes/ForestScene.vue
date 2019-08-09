@@ -57,7 +57,7 @@ c-24.4,0-41.8,3.5-66.1,5c-10.6,0.8-21.1-0.4-32.2-1.3" />
 
 <style lang="scss">
   .army-tank {
-    position: fixed;
+    position: absolute;
     z-index: 2000;
     background: url(/images/t84-tank.svg) no-repeat;
     width: 360px;
