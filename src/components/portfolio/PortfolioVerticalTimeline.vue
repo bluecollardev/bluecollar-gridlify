@@ -1,7 +1,7 @@
 <template>
-  <section id="portfolio" class="hero-section portfolio-items clearfix">
+  <section id="portfolio" class="hero-section portfolio-items clearfix space-top-2x">
     <!--<div class="vertical-line"></div>-->
-    <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix pad-top-2x">
+    <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix sm-pad-top-2x">
       <portfolio-item
         v-for="project in portfolioItems.slice(0,10)"
         v-if="project.isPublic"
@@ -331,10 +331,7 @@
     }
 
     &__item {
-      /*margin-bottom: 100px;*/
-      margin-bottom: 30px;
       position: relative;
-
     }
   }
 
@@ -411,7 +408,6 @@
 
       &__item {
         /*margin-bottom: 100px;*/
-        margin-bottom: 30px;
         position: relative;
 
         &:nth-child(2n) {

@@ -1,8 +1,8 @@
 <template>
   <div ref="contentDetail" class="detailed-content-panel bg-bc-blue">
-    <div class="panel-header flex flex-center pad-left-half pad-right-half" style="height: 5rem; position: absolute; right: 0; z-index: 9999">
+    <div class="panel-header flex flex-center pad-left-half pad-right-half" style="height: 5rem; position: absolute; right: 0; z-index: 9999; width: 100%">
       <div class="flex-grow">
-        <!--<h2 class="text-center no-space-top no-space-bottom">Case Studies</h2>-->
+        <h2 v-if="this.title" class="text-center no-space-top no-space-bottom">{{ this.title }}</h2>
       </div>
       <b @click="hideDetail()" style="font-size: 1.5rem; cursor: pointer">X</b>
     </div>
@@ -16,6 +16,12 @@
   import anime from 'animejs';
 
   export default {
+    props: {
+      title: {
+        type: String,
+      default: null
+      }
+    },
     methods: {
       viewDetail(activeDetail, callback) {
         const detail = this.$refs.contentDetail;
