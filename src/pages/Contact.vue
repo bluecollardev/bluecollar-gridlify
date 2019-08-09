@@ -35,7 +35,7 @@
       </template>
 
       <template>
-        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+        <div class="guitar-content relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
           <div style="width: 100%;" class="flex flex-column flex-center flex-justify-center">
             <p class="text-center">Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit.</p>
             <p class="text-center">We'll take the midnight train to your dream.</p>
@@ -271,3 +271,9 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .guitar-content {
+    z-index: 11;
+  }
+</style>

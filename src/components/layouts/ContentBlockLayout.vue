@@ -193,11 +193,12 @@ export default {
 
       img {
         position: absolute;
+        -o-object-fit: contain;
         object-fit: contain;
-        width: 200px;
+        width: 150px;
         height: 150px;
         left: 0;
-        top: -55px;
+        top: -49px;
       }
     }
   }
