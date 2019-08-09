@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout id="home-page">
     <hero-layout01-col
       bgColor="bg-evening-blue"
       title="Lost in the Software Jungle?"
@@ -13,7 +13,7 @@
       className="hero-first sm-pad-top pad-bottom-2x text-shadow"
     >
       <template v-slot:bg>
-        <div class="jungle-bg-container xs-hide">
+        <div class="jungle-bg-container xs-hide" style="align-self: flex-start">
           <jungle class="jungle-bg"></jungle>
           <div style="position: fixed; bottom: 15vh; width: 100%;">
             <img @click="viewDetail('CONSULTANTS')" class="xs-hide sm-hide" style="max-width: 150px; left: 40vh; transform: rotate(-15deg) translateX(30px); pointer: cursor" src="/images/walkie-talkie.svg" />
@@ -62,8 +62,8 @@
       :flipX="true"
       :angle="true"
       slotPos="top"
-      className="sm-pad-top pad-bottom-2x text-shadow relative"
-      style="background-position: center center;"
+      className="hero-second sm-pad-top pad-bottom-2x text-shadow relative"
+      style="background-position: center 25vh;"
     >
       <template v-slot:title>
         <!--<shrink-words-one-by-one-text-effect
@@ -275,6 +275,28 @@
     .jungle-bg-container {
       .jungle-bg {
         bottom: -55vh;
+      }
+    }
+
+    #home-page {
+      .hero-first {
+        z-index: 3;
+        min-height: 100vh;
+      }
+
+      #services {
+        transform: translateY(-10vh);
+        z-index: 2;
+        padding: 0 3rem;
+        .angle-mosaic-layout {
+          padding: 10rem 0;
+          box-sizing: border-box;
+        }
+      }
+
+      .hero-second {
+        z-index: 1;
+        transform: translateY(-20vh);
       }
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <div :key="this.repaint" class="angle-mosaic-layout">
+  <div :key="this.repaint" :class="`angle-mosaic-layout ${bgColor}`">
     <section class="top-row col-3-squares no-pad-bottom lg-flex">
       <!-- Slot 1 -->
       <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third">
@@ -112,6 +112,10 @@
 
   export default {
     props: {
+      bgColor: {
+        type: String,
+        default: ''
+      },
       primaryColor: {
         type: String,
         default: 'bg-evening-blue'
@@ -174,17 +178,29 @@
 
   .slot2-container {
     width: 100%;
-    border-top: 1px solid rgba(255,255,255,0.5);
+    /*border-top: 1px solid rgba(255,255,255,0.5);*/
     /* Override .hero-section */
     position: absolute !important;
     top: 0;
   }
 
   @media screen and (min-width: 64em) {
+    .angle-mosaic-layout * {
+      box-sizing: border-box; /* TODO: Implement universally? */
+    }
+
     .angle-mosaic-layout {
       position: relative;
       width: 100%;
       z-index: 11;
+
+      .slot2-container {
+        width: 100%;
+        /*border-top: 1px solid rgba(255,255,255,0.5);*/
+        /* Override .hero-section */
+        position: absolute !important;
+        top: 10rem; /* Need to adjust for padding in Index move this to theme... */
+      }
     }
   }
 </style>

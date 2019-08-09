@@ -1,8 +1,8 @@
 <template>
-  <div id="services">
-    <angle-mosaic-layout primaryColor="bg-bc-blue" secondaryColor="bg-evening-blue">
+  <section id="services" class="hero-section angle bg-midnight-blue">
+    <angle-mosaic-layout primaryColor="bg-midnight-blue" secondaryColor="bg-bc-blue">
       <template v-slot:slot1Bg>
-        <div class="bg-evening-blue video-block-bg drop-shadow rotate-right is-hidden--sm-down">
+        <div class="bg-bc-blue video-block-bg drop-shadow rotate-right is-hidden--sm-down">
         </div>
 
       </template>
@@ -75,7 +75,7 @@
       </template>
 
       <template v-slot:slot3Bg>
-        <div class="bg-evening-blue video-block-bg drop-shadow rotate-left is-hidden--sm-down">
+        <div class="bg-bc-blue video-block-bg drop-shadow rotate-left is-hidden--sm-down">
         </div>
       </template>
       <template v-slot:slot3Front>
@@ -147,7 +147,7 @@
       </template>
 
       <template v-slot:slot5Bg>
-        <div class="bg-evening-blue video-block-bg scale-center drop-shadow-up is-hidden--sm-down">
+        <div class="bg-bc-blue video-block-bg scale-center drop-shadow-up is-hidden--sm-down">
         </div>
       </template>
       <template v-slot:slot5Front>
@@ -218,7 +218,7 @@
         </div>
       </template>
     </angle-mosaic-layout>
-  </div>
+  </section>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
   <main class="bg-black">
     <!--<intro></intro>-->
-    <div class="container relative">
+    <div :id="this.id" class="container relative">
       <div class="notifications" v-if="displayNotifications">
         <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
         <span class="notification">
@@ -39,6 +39,12 @@
   import AudioControlsMixin from '~/core/components/audio/AudioControlsMixin';
 
   export default {
+    props: {
+      id: {
+        type: String,
+        default: 'page-content'
+      }
+    },
     components: {
       // Inject components
       Header,
