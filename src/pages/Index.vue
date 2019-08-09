@@ -1,19 +1,7 @@
 <template>
   <Layout>
-    <Header/>
-
-    <audio-controls
-      style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
-      :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
-      :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
-      :onPlayPauseClicked="this.onPlayPauseClicked.bind(this, this.soundtrack)"
-      :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
-      :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
-      :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
-    />
-
     <hero-layout01-col
-      bgColor="transparent"
+      bgColor="bg-evening-blue"
       title="Lost in the Software Jungle?"
       subtitle=""
       description=""
@@ -23,17 +11,15 @@
       :angle="true"
       slotPos="top"
       className="hero-first sm-pad-top pad-bottom-2x text-shadow"
-      style="top: -20vh"
     >
-      <template v-slot:bg>
+      <!--<template v-slot:bg>
         <div style="position: absolute; width: 100%; height: 100%;">
           <jungle style="position: relative; bottom: -67vh; filter: brightness(0.45) saturate(0.888);"></jungle>
           <div style="position: fixed; bottom: 15vh; width: 100%;">
-            <!--<binoculars style="transform: rotate(7deg);"></binoculars>-->
             <img @click="viewDetail('CONSULTANTS')" style="max-width: 150px; left: 40vh; transform: rotate(-15deg) translateX(30px); pointer: cursor" src="/images/walkie-talkie.svg" />
           </div>
         </div>
-      </template>
+      </template>-->
 
       <template v-slot:title>
         <typewriter-text-effect
@@ -57,6 +43,11 @@
       </template>
     </hero-layout01-col>
 
+    <services
+      :content="servicesContent"
+      :testimonials="serviceTestimonials"
+    />
+
     <hero-layout01-col
       bgColor="transparent"
       title="We Deliver Results"
@@ -68,11 +59,8 @@
       :angle="true"
       slotPos="top"
       className="sm-pad-top pad-bottom-2x text-shadow relative"
-      style="height: 110vh; transform: translateY(-50vh); background-position: center 52vh;"
+      style="background-position: center center;"
     >
-      <template v-slot:bg>
-      </template>
-
       <template v-slot:title>
         <!--<shrink-words-one-by-one-text-effect
           v-if="!isServer"
@@ -95,8 +83,6 @@
       </template>
     </hero-layout01-col>
 
-    <Footer/>
-
     <content-detail-modal ref="contentDetail">
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
       <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
@@ -107,22 +93,15 @@
 <script>
   import Vue from 'vue';
 
-  // Import components
-  import Header from '~/components/Header.vue';
-  import Blog from '~/components/Blog.vue';
-  import Contact from '~/components/Contact.vue';
-  import Footer from '~/components/Footer.vue';
-  //import Portfolio from '~/components/portfolio/Portfolio.vue';
-  import PortfolioVerticalTimeline from '~/components/portfolio/PortfolioVerticalTimeline.vue';
-  import TeamBlock from '~/components/TeamBlock.vue';
-
   // Import generic component layouts
   import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
   import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue';
-  import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
-  import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
-  import AngleMosaic from '~/components/layouts/AngleMosaic.vue';
   import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue';
+
+  // Import page components
+  import Services from '~/components/home/Services.vue';
+  import PortfolioVerticalTimeline from '~/components/portfolio/PortfolioVerticalTimeline.vue';
+  import TeamBlock from '~/components/TeamBlock.vue';
 
   // Import SVG animations
   import Jungle from '~/components/svg/Jungle.vue';
@@ -140,35 +119,20 @@
   // Import animated content effects
   import SimpleEffect from '~/core/components/animate/Simple.vue'
 
-  // Import audio controls
-  // Import audio controls
-  import AudioControls from '~/core/components/audio/AudioControls.vue';
-  import AudioControlsMixin from '~/core/components/audio/AudioControlsMixin';
-
   // Import mixins
-  import FlipCardsMixin from '~/core/mixins/FlipCardsMixin';
   import TestimonialMixin from '~/core/mixins/TestimonialMixin';
   import HomeMixin from '~/core/mixins/HomeMixin';
 
   export default {
     components: {
-      ContentDetailModal,
       // Inject components
-      Header,
-      Blog,
-      Contact,
-      Footer,
-      //Portfolio,
+      Services,
       PortfolioVerticalTimeline,
       TeamBlock,
-      // Inject mixins
-      AudioControls,
       // Inject generic component layouts
-      AngleMosaic,
       VideoHeroLayout01Col,
       HeroLayout01Col,
-      ContentBlockLayout,
-      TestimonialBlockLayout,
+      ContentDetailModal,
       // Inject SVG animations
       Jungle,
       Binoculars,
@@ -184,24 +148,39 @@
       SimpleEffect
     },
     mixins: [
-      AudioControlsMixin,
       HomeMixin,
       TestimonialMixin,
-      FlipCardsMixin
     ],
     computed: {
-      isServer: () => {
+      isServer() {
         //console.log('vue');
         //console.log(Vue);
         console.log('is server?');
         console.log(Vue.prototype.$isServer);
         return (typeof Vue.prototype.$isServer === 'boolean') ? Vue.prototype.$isServer : false
+      },
+      servicesContent() {
+        const content = [
+          this.getHomePageServiceByIndex(0),
+          this.getHomePageServiceByIndex(1),
+          this.getHomePageServiceByIndex(2),
+        ].filter(n => n !== null);
+
+        return content;
+      },
+      serviceTestimonials() {
+        const testimonials = [
+          this.getTestimonialByIndex(0),
+          this.getTestimonialByIndex(1),
+          this.getTestimonialByIndex(2)
+        ].filter(n => n !== null);
+
+        return testimonials;
       }
     },
     data() {
-      return {
+      let state = {
         activeDetail: null,
-        soundtrack: null,
         formData: {},
         textEffects: {
           typewriter: TypewriterTextEffect,
@@ -213,7 +192,9 @@
         contentEffects: {
           simple: SimpleEffect
         }
-      }
+      };
+
+      return state;
     },
     methods: {
       /**
@@ -229,35 +210,16 @@
 
         return null
       },*/
-      initSoundtrack() {
-        if (!(this.soundtrack instanceof Audio)) {
-          this.soundtrack = new Audio();
-          this.soundtrack.volume = 0.5;
-          this.soundtrack.src = '/audio/soundtrack_to_war.mp3';
-          this.soundtrack.loop = true;
 
-          if (this.isAutoplayActive()) this.soundtrack.play();
-        }
-      },
-      killSoundtrack() {
-        if (this.soundtrack instanceof Audio) {
-          this.soundtrack.pause();
-          this.soundtrack = null;
-        }
-      },
       viewDetail(activeDetail) {
         if (typeof window !== 'undefined') {
 
           this.activeDetail = activeDetail;
           this.$refs.contentDetail.viewDetail(activeDetail, () => {
-            this.initSoundtrack();
+            // TODO: Call parent!
+            //this.initSoundtrack();
           });
         }
-      }
-    },
-    beforeDestroy() {
-      if (typeof window !== 'undefined') {
-        this.killSoundtrack();
       }
     }
   }

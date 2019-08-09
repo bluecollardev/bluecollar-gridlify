@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-evening-blue">
+  <main class="bg-bc-blue">
     <!--<intro></intro>-->
     <div class="container relative">
       <div class="notifications" v-if="displayNotifications">
@@ -9,22 +9,55 @@
           <button class="hide-notification" aria-label="Hide notification" v-on:click="hideNotifications()">&times;</button>
         </span>
       </div>
+      <Header/>
+      <audio-controls
+        style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
+        :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
+        :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
+        :onPlayPauseClicked="this.onPlayPauseClicked.bind(this, this.soundtrack)"
+        :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
+        :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
+        :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
+      />
       <slot />
+      <Footer/>
     </div>
   </main>
 </template>
 
 <script>
+  // Import intro
   import Intro from '~/components/Intro.vue';
+  // Import core components
+  import Header from '~/components/Header.vue';
+  import Footer from '~/components/Footer.vue';
+  import Contact from '~/components/Contact.vue';
+  import Blog from '~/components/Blog.vue';
+
+  // Import audio controls and mixin
+  import AudioControls from '~/core/components/audio/AudioControls.vue';
+  import AudioControlsMixin from '~/core/components/audio/AudioControlsMixin';
 
   export default {
     components: {
-      Intro
+      // Inject components
+      Header,
+      Blog,
+      Contact,
+      Footer,
+      Intro,
+      // Import audio controls
+      AudioControls,
     },
+    mixins: [
+      // Import audio controls mixin
+      AudioControlsMixin,
+    ],
     data() {
       return {
         displayNotifications: false,
-        lastScroll: 0
+        lastScroll: 0,
+        soundtrack: null
       }
     },
     methods: {
@@ -46,10 +79,31 @@
       },
       removeHash () {
         if (typeof window !== 'undefined') window.location.hash = '';
+      },
+      initSoundtrack() {
+        if (!(this.soundtrack instanceof Audio)) {
+          this.soundtrack = new Audio();
+          this.soundtrack.volume = 0.5;
+          this.soundtrack.src = '/audio/soundtrack_to_war.mp3';
+          this.soundtrack.loop = true;
+
+          if (this.isAutoplayActive()) this.soundtrack.play();
+        }
+      },
+      killSoundtrack() {
+        if (this.soundtrack instanceof Audio) {
+          this.soundtrack.pause();
+          this.soundtrack = null;
+        }
       }
     },
     mounted() {
       this.attachScrollListener();
+    },
+    beforeDestroy() {
+      if (typeof window !== 'undefined') {
+        this.killSoundtrack();
+      }
     }
   }
 </script>

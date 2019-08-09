@@ -33,12 +33,14 @@ export default {
       return services;
     },
     getService(id) {
-      let items = this.serviceContent.services;
+      if (!id || !this.serviceContent) return null;
+
+      let items = this.serviceContent.services || [];
 
       if (items instanceof Array && items.length > 0) {
         items = items.filter(item => item.id === id);
 
-        if (!items.length > 0) return undefined;
+        if (!items.length > 0) return null;
 
         let item = items.pop();
 
@@ -53,7 +55,9 @@ export default {
       return null
     },
     getServiceByIndex(idx) {
-      let items = this.serviceContent.services;
+      if (isNaN(idx) || !this.serviceContent) return null;
+
+      let items = this.serviceContent.services || [];
 
       if (items instanceof Array && items.length > idx) {
         return items[idx];

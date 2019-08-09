@@ -126,10 +126,17 @@ section.hero-section {
   of the next section. */
   section.hero-section.angle {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9vh), 50% 100%, 0 calc(100% - 9vh));
-  }
 
-  section.hero-section.angle + section.hero-section {
-    padding-top: 9vh; /* Offset */
+    &:first-child {
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9vh), 50% 100%, 0 calc(100% - 9vh));
+    }
+
+    &:last-child {
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9vh), 50% 100%, 0 calc(100% - 9vh));
+    }
+
+    &.angle + section.hero-section {
+    }
   }
 
   /*section.hero-section:nth-child(8) {

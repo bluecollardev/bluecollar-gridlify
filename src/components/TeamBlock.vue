@@ -25,7 +25,7 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
         />
       </div>
     </div>
-    <angle-mosaic bgColor="bg-midnight-blue">
+    <angle-mosaic-layout bgColor="bg-midnight-blue">
       <template v-slot:slot1Bg>
         <div class="bg-evening-blue video-block-bg drop-shadow rotate-right is-hidden--sm-down">
           <!--<matrix-bg style="z-index: 1; opacity: 0.25" fillStyle="rgba(0, 0, 0, 0.01)" :fontSize="27"></matrix-bg>-->
@@ -140,15 +140,15 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
           </div>
         </div>
       </template>
-    </angle-mosaic>
+    </angle-mosaic-layout>
   </div>
 </template>
 
 <script>
+  import AngleMosaicLayout from '~/components/layouts/AngleMosaicLayout.vue';
+  import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
+  import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
   import TestimonialMixin from '~/core/mixins/TestimonialMixin';
-  import TestimonialBlockLayout from "~/components/layouts/TestimonialBlockLayout";
-  import AngleMosaic from "~/components/layouts/AngleMosaic";
-  import ContentBlockLayout from "~/components/layouts/ContentBlockLayout";
 
   export default {
     mixins: [
@@ -157,7 +157,7 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
     components: {
       ContentBlockLayout,
       TestimonialBlockLayout,
-      AngleMosaic
+      AngleMosaicLayout
     }
   }
 </script>

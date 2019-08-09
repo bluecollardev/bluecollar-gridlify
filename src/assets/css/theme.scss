@@ -210,31 +210,31 @@ section.hero-section:nth-child(2) {
 
 section.hero-section:nth-child(3) {
   z-index: 10;
-  transform: translateY(-6vh);
+  //transform: translateY(-6vh);
 }
 
 section.hero-section:nth-child(4) {
   z-index: 10;
-  transform: translateY(-6vh);
+  //transform: translateY(-6vh);
 }
 
 section.hero-section:nth-child(5) {
   z-index: 6;
-  transform: translateY(-13vh);
+  //transform: translateY(-13vh);
 }
 
 section.hero-section:nth-child(6) {
   z-index: 5;
-  transform: translateY(-26vh);
+  //transform: translateY(-26vh);
 }
 
 section.hero-section:nth-child(7) {
   z-index: 4;
-  transform: translateY(-42vh);
+  //transform: translateY(-42vh);
 }
 
 section.hero-section.angle + footer {
-  padding-top: 26vh; /* Offset */
+  //padding-top: 26vh; /* Offset */
 }
 
 /* Homepage and hero stuff */
