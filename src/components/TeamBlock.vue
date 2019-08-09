@@ -65,22 +65,27 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
   }
 
   @media screen and (min-width: 40em) {
-    .content-block {
-      max-width: 60%;
-    }
+    .team-block {
+      .content-block {
+        max-width: 60%;
+      }
 
-    .content-block-heading {
-      margin-top: 5rem;
-    }
+      .content-block-heading {
+        margin-top: 5rem;
+        margin-right: 3rem;
+      }
 
-    .content-block-body {
-      margin: 5rem 0;
+      .content-block-body {
+        margin: 5rem 0;
+      }
     }
   }
 
   @media screen and (min-width: 84em) {
-    .content-block {
-      max-width: 50%;
+    .team-block {
+      .content-block {
+        max-width: 50%;
+      }
     }
   }
 </style>

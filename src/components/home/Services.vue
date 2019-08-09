@@ -25,7 +25,7 @@
           }"
         />-->
         <content-block-layout
-          className="pad-top ml-auto mr-auto"
+          className="content-block pad-top ml-auto mr-auto"
           v-if="content[0]"
           image="/images/icons/apps-02.svg"
           :title="content[0].title"
@@ -97,7 +97,7 @@
           }"
         />-->
         <content-block-layout
-          className="pad-top ml-auto mr-auto pad-bottom"
+          className="content-block pad-top ml-auto mr-auto pad-bottom"
           v-if="content[2]"
           image="/images/icons/websites.svg"
           :title="content[2].title"
@@ -169,7 +169,7 @@
           }"
         />-->
         <content-block-layout
-          className="pad-top ml-auto mr-auto"
+          className="content-block pad-top ml-auto mr-auto"
           v-if="content[1]"
           image="/images/icons/server.svg"
           :title="content[1].title"

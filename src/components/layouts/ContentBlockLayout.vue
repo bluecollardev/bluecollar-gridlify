@@ -197,7 +197,7 @@ export default {
         width: 200px;
         height: 150px;
         left: 0;
-        top: -35px;
+        top: -55px;
       }
     }
   }
