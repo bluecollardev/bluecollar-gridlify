@@ -55,7 +55,7 @@ function wrapLettersOnWordBoundary(text, lettersTarget, letterTargets) {
   console.log('word start char pos ' + wordStartPos);
   // Insert line break on word boundary
   // Subtract, NodeList is zero-indexed
-  if (wordStartPos !== null) {
+  if (wordStartPos !== null && lettersTarget.contains(letterTargets.item(wordStartPos))) {
     lettersTarget.insertBefore(document.createElement('br'), letterTargets.item(wordStartPos));
   }
 }
