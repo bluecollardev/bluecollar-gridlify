@@ -2,7 +2,7 @@
   <hero-layout01-col
     v-if="this.activeDetail === 'CONSULTANTS'"
     bgColor="transparent"
-    title="Call Us for Backup"
+    title="Elite Software Commandos"
     subtitle=""
     description=""
     imageClass="home-page-banner-image"

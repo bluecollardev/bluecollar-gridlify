@@ -5,12 +5,8 @@
       <div class="content-block">
         <content-block-layout
           className="pad-top"
-          title="Elite Software Commandos"
-          description="Blue Collar partners with businesses to modernize their digital tool kit for the paradigm shift currently underway.
-
-As of 2018, it was found 58% of site visitors were accessing content through mobile devices. The world is digitizing at an accelerated rate, moving away from traditional HTML websites to a system of content pages shared across social media platforms and mobile devices.
-
-For those businesses that adapt to this shift and adopt a modernized tool kit, there is a larger percentage of success. But the road to efficient digitizing can be arduous and is likely to create business gaps for our clients. Blue Collar strives to create solutions for these gaps by being at the forefront of these new technologies and ensures that our client receives the utmost value from our services."
+          title="Need Backup? We Got You."
+          description="To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges."
           link="/"
           linkText="Back to Home"
         />
