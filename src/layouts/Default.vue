@@ -10,7 +10,7 @@
         </span>
       </div>
       <Header/>
-      <audio-controls
+      <!--<audio-controls
         style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
         :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
         :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
@@ -18,7 +18,7 @@
         :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
         :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
         :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
-      />
+      />-->
       <slot />
       <Footer/>
     </div>
@@ -98,7 +98,9 @@
       }
     },
     mounted() {
-      this.attachScrollListener();
+      if (typeof window !== 'undefined') {
+        this.attachScrollListener();
+      }
     },
     beforeDestroy() {
       if (typeof window !== 'undefined') {
