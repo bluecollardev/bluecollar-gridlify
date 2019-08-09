@@ -1,6 +1,7 @@
 <template>
   <section id="services" class="hero-section angle bg-midnight-blue">
-    <angle-mosaic-layout primaryColor="bg-midnight-blue" secondaryColor="bg-bc-blue">
+    <!--<matrix-bg></matrix-bg>-->
+    <angle-mosaic-layout primaryColor="transparent" secondaryColor="bg-bc-blue">
       <template v-slot:slot1Bg>
         <div class="bg-bc-blue video-block-bg drop-shadow rotate-right is-hidden--sm-down">
         </div>
@@ -227,6 +228,8 @@
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
   import TestimonialMixin from '~/core/mixins/TestimonialMixin';
 
+  import MatrixBg from '~/components/svg/MatrixBg';
+
   export default {
     props: {
       content: {
@@ -245,7 +248,8 @@
       // Inject generic component layouts
       AngleMosaicLayout,
       ContentBlockLayout,
-      TestimonialBlockLayout
+      TestimonialBlockLayout,
+      MatrixBg
     }
   }
 </script>

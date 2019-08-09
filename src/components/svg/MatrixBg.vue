@@ -68,10 +68,16 @@
 
 <style>
   .canvas-matrix {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     z-index: 0;
-    opacity: 0.5;
+    opacity: 0.3;
+  }
+
+  /* Mod for home page */
+  .canvas-matrix {
+    left: -10vw;
+    width: calc(100% + 10vw);
   }
 </style>

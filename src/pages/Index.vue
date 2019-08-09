@@ -91,8 +91,10 @@
     </hero-layout01-col>
 
     <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'PORTFOLIO' ? 'Case Studies' : ''">
+      <shoot-to-thrill-scene v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
+      <commando-skull-scene v-if="this.activeDetail === 'CONSULTANTS'"></commando-skull-scene>
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
-      <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
+      <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline><portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
     </content-detail-modal>
   </Layout>
 </template>
@@ -119,6 +121,8 @@
   // Import scenes
   import ForestScene from '~/components/scenes/ForestScene.vue';
   import FishingScene from '~/components/scenes/FishingScene.vue';
+  import ShootToThrillScene from '~/components/scenes/ShootToThrillScene.vue';
+  import CommandoSkullScene from '~/components/scenes/CommandoSkullScene.vue';
 
   // Import animated text effects
   import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
@@ -152,6 +156,8 @@
       // Inject scenes
       ForestScene,
       FishingScene,
+      ShootToThrillScene,
+      CommandoSkullScene,
       // Inject animated text effects
       TypewriterTextEffect,
       ShrinkWordsOneByOneTextEffect,

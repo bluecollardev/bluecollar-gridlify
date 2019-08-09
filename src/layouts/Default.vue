@@ -10,15 +10,15 @@
         </span>
       </div>
       <Header/>
-      <!--<audio-controls
+      <audio-controls
         style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
         :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
         :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
-        :onPlayPauseClicked="this.onPlayPauseClicked.bind(this, this.soundtrack)"
+        :onPlayPauseClicked="this.onSoundtrackPlay.bind(this)"
         :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
         :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
         :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
-      />-->
+      />
       <slot />
       <Footer/>
     </div>
@@ -85,6 +85,10 @@
       },
       removeHash () {
         if (typeof window !== 'undefined') window.location.hash = '';
+      },
+      onSoundtrackPlay() {
+        this.initSoundtrack();
+        this.onPlayPauseClicked(this.soundtrack);
       },
       initSoundtrack() {
         if (!(this.soundtrack instanceof Audio)) {

@@ -326,24 +326,6 @@ a.action-link {
 
 /* Scenes and elements */
 @media screen and (min-width: 64em) {
-  .guns-comp {
-    height: 70vh;
-    transform: translateY(100px);
-  }
-
-  .left-gun, .right-gun {
-    position: absolute;
-  }
-
-  .left-gun {
-    left: -40%;
-  }
-
-  .right-gun {
-    transform: scaleX(-1);
-    right: -40%;
-  }
-
   .jungle-stream {
     z-index: 2500;
     position: fixed;

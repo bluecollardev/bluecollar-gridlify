@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="commando-skull-scene flex flex-center flex-justify-center">
     <!--<helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>-->
     <div class="special-forces-skull" style="z-index: 2; position: absolute; width: 367px; height: 404px; background-image: url(/images/special-forces-skull.png); background-size: contain; background-repeat: no-repeat; background-position: center center"></div>
     <div class="sergeant-stripes" style="z-index: 1; position: absolute; width: 100%; height: 100%; filter: invert(100); opacity: 0.1; background-image: url(/images/sergeant-major-of-the-army.png); background-size: contain; background-repeat: no-repeat; background-position: center 210px"></div>
@@ -59,5 +59,19 @@
 </script>
 
 <style lang="scss">
+  .commando-skull-scene {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 54px;
+    left: 0
+  }
 
+  @media screen and (max-width: 40em) {
+    .special-forces-skull {
+      top: 0;
+      width: 157px !important;
+      height: 175px !important;
+    }
+  }
 </style>

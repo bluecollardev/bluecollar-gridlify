@@ -1,6 +1,6 @@
 <template>
   <!-- REPEAT and alternate -->
-  <div class="team-block flex flex-column">
+  <div class="team-block flex flex-column space-bottom-2x">
     <div class="sm-flex flex-center flex-justify-center flex-basis-half">
       <div class="content-block">
         <content-block-layout
