@@ -1,7 +1,7 @@
 <template>
   <!--<div v-bind:class="classNameString" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">-->
   <div v-bind:class="classNameString">
-    <div class="space-bottom-half g-services flex ">
+    <div class="content-block-heading g-services space-bottom-half">
       <div v-if="this.image" class="content-image">
         <img :src="this.image" />
       </div>
@@ -17,7 +17,7 @@
         :animate="false"
       />
     </div>
-    <div class="g-services">
+    <div class="content-block-body g-services">
       <div v-if="!this.descriptionAnimation" v-html="compiledDescription"></div>
       <component
         ref="descriptionAnimationContainer"
@@ -157,21 +157,49 @@ export default {
 };
 </script>
 
-<style>
-  /* TODO: Apply selectively! This is theme specific... */
-  .content-image {
-    max-width: 33.33333%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 0;
+<style lang="scss">
+  .content-block-heading {
+    display: flex;
+    flex-flow: column;
   }
 
-  .content-image img {
-    position: absolute;
-    object-fit: contain;
-    width: 200px;
-    height: 150px;
-    left: 0;
-    top: -35px;
+  /* TODO: Apply selectively! This is theme specific... */
+  .content-image {
+    display: block;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+
+    img {
+      position: relative;
+      object-fit: contain;
+      width: 200px;
+      height: 150px;
+      top: -35px;
+    }
+  }
+
+  @media screen and (min-width: 64em) {
+    .content-block-heading {
+      display: flex;
+      flex-flow: row;
+    }
+
+    .content-image {
+      max-width: 33.33333%;
+      margin-left: auto;
+      margin-right: auto;
+      height: 0;
+
+      img {
+        position: absolute;
+        object-fit: contain;
+        width: 200px;
+        height: 150px;
+        left: 0;
+        top: -35px;
+      }
+    }
   }
 </style>
