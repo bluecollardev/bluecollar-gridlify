@@ -25,17 +25,17 @@
         <forest-scene ref="forestScene"></forest-scene>
       </template>
 
-      <template v-slot:title>
-        <!--<typewriter-text-effect
+      <!--<template v-slot:title>
+        <typewriter-text-effect
           tag="h2"
           text="Lost in the Software Jungle?"
           class="title text-center pad-bottom"
           :loop="true">
-        </typewriter-text-effect>-->
-      </template>
+        </typewriter-text-effect>
+      </template>-->
 
       <template>
-        <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+        <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
           <div>
             <p class="text-center">At Blue Collar, we build software that's ready for tomorrow's challenges. <span class="xs-hide">By using cutting-edge technologies and employing the latest software design methodologies, we can guarantee that you'll be well prepared and equipped for tomorrow's challenges.</span></p>
             <p class="text-center">Let our seasoned vets guide you on the path to your dreams.</p>
@@ -79,7 +79,7 @@
       </template>
 
       <template>
-        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
           <div>
             <p class="text-center">At Blue Collar, we <strong style="text-decoration: underline; font-weight: 900">never</strong> leave our customers behind.</p>
             <div class="text-center" style="">

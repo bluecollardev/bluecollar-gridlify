@@ -28,20 +28,22 @@
             </h2>
           </div>
 
-          <div class="content-block homepage-hero-text g-hero ml-auto mr-auto text-center">
+          <div
+            v-if="typeof compiledDescription === 'string' && compiledDescription.length > 0"
+            class="content-block homepage-hero-text g-hero ml-auto mr-auto text-center">
             <div class="text-center" v-html="compiledDescription"></div>
           </div>
 
           <slot v-if="this.slotPos === 'top'"></slot>
 
           <div
-            v-if="typeof this.link === 'string' && this.link.length >0"
+            v-if="typeof this.link === 'string' && this.link.length > 0"
             class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
           >
             <a class="action-link xs-space-top space-bottom g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
           </div>
           <div
-            v-if="typeof this.link === 'string' && this.link.length >0"
+            v-if="typeof this.link === 'string' && this.link.length > 0"
             class="homepage-hero-action action-link-block xs-hide text-center">
             <a class="action-link space-top g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
           </div>
