@@ -1,6 +1,6 @@
 <template>
   <div :key="this.repaint" class="angle-mosaic-layout">
-    <section class="col-3-squares no-pad-bottom lg-flex">
+    <section class="top-row col-3-squares no-pad-bottom lg-flex">
       <!-- Slot 1 -->
       <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third">
         <slot name="slot1Bg"></slot>
@@ -41,7 +41,7 @@
       <!-- END Slot 3 -->
     </section>
 
-    <section :class="`slot2-container hero-section shift-section-up angle ${this.bgColor ? this.bgColor : 'bg-light-grey' } xs-hide pad-top no-pad-bottom lg-flex flex-justify-center`">
+    <section :class="`top-row-under slot2-container hero-section shift-section-up angle ${this.bgColor ? this.bgColor : 'bg-light-grey' } xs-hide pad-top no-pad-bottom lg-flex flex-justify-center`">
       <div class="col-3-squares pad-top pad-bottom lg-flex">
         <!-- Slot 2 -->
         <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
@@ -59,7 +59,7 @@
       </div>
     </section>
 
-    <section :class="`hero-section shift-section-up angle no-pad-bottom lg-flex`">
+    <section :class="`bottom-row hero-section shift-section-up angle no-pad-bottom lg-flex`">
       <div :class="`col-3-squares ${this.bgColor ? this.bgColor : 'bg-light-grey' } no-pad-bottom lg-flex flex-basis-full`">
         <!-- Slot 4 -->
         <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
@@ -146,7 +146,22 @@
   }
 </script>
 
-<style>
+<style lang="scss">
+  .top-row {
+    z-index: 3;
+    .service-detail-card-top {
+      z-index: 4;
+    }
+  }
+
+  .top-row-under {
+    z-index: 2;
+  }
+
+  .bottom-row {
+    z-index: 1;
+  }
+
   .video-block-bg {
     border: 1px solid rgba(255,255,255,0.5);
   }
@@ -161,9 +176,9 @@
 
   @media screen and (min-width: 64em) {
     .angle-mosaic-layout {
+      position: relative;
       width: 100%;
       z-index: 11;
-      transform: translateY(-3vh);
     }
   }
 </style>
