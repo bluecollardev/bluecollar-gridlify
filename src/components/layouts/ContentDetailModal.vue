@@ -82,3 +82,25 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .detailed-content-panel {
+    opacity: 1;
+    width: 100vw;
+    height: calc(100vh - 54px);
+    position: fixed;
+    /*top: 54px;*/ /* Match header */
+    top: 100%;
+    left: 0;
+    z-index: 5000;
+    overflow-y: auto;
+  }
+
+  @media screen and (min-width: 40em) {
+    .detailed-content-panel {
+      opacity: 1;
+      top: 100%;
+      left: 0;
+    }
+  }
+</style>

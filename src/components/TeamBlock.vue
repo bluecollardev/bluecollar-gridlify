@@ -40,11 +40,13 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
 <style lang="scss">
   .team-block {
     .content-block {
-      max-width: 50%;
+      max-width: 75%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .content-block-heading {
-      margin-top: 5rem;
+      margin-top: 0;
     }
 
     .content-block-heading p {
@@ -54,11 +56,31 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
     }
 
     .content-block-body {
-      margin: 5rem 0;
+      margin: 2.5rem 0;
     }
 
     .content-block-body p {
       text-align: left;
+    }
+  }
+
+  @media screen and (min-width: 40em) {
+    .content-block {
+      max-width: 60%;
+    }
+
+    .content-block-heading {
+      margin-top: 5rem;
+    }
+
+    .content-block-body {
+      margin: 5rem 0;
+    }
+  }
+
+  @media screen and (min-width: 84em) {
+    .content-block {
+      max-width: 50%;
     }
   }
 </style>
