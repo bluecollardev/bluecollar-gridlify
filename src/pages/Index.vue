@@ -259,14 +259,11 @@
     }
   }
 
-  #home-page {
-    .hero-second {
-      background-image: url(/images/jungle-stream.svg);
-      background-size: cover;
-      background-position: 60% center;
-    }
+  #home-page .hero-second {
+    background-image: url(/images/jungle-stream.svg);
+    background-size: 480%;
+    background-position: 60% bottom;
   }
-
 
   @media screen and (min-width: 40em) {
     .jungle-bg-container {
