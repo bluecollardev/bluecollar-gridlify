@@ -63,7 +63,6 @@
       :angle="true"
       slotPos="top"
       className="hero-second sm-pad-top pad-bottom-2x text-shadow relative"
-      style="background-position: center 25vh;"
     >
       <template v-slot:bg>
         <fishing-scene></fishing-scene>
@@ -303,6 +302,7 @@
       .hero-second {
         z-index: 1;
         transform: translateY(-20vh);
+        background-position: center 25vh;
       }
     }
   }
