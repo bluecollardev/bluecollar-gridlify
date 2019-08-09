@@ -17,6 +17,8 @@ c-24.4,0-41.8,3.5-66.1,5c-10.6,0.8-21.1-0.4-32.2-1.3" />
 </template>
 
 <script>
+  import anime from 'animejs';
+
   export default {
     methods: {
       play() {
@@ -48,6 +50,9 @@ c-24.4,0-41.8,3.5-66.1,5c-10.6,0.8-21.1-0.4-32.2-1.3" />
             });
         }
       }
+    },
+    mounted() {
+      this.play();
     }
   }
 </script>

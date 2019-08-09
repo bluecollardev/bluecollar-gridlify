@@ -21,6 +21,10 @@
         </div>
       </template>
 
+      <template v-slot:bg2>
+        <forest-scene ref="forestScene"></forest-scene>
+      </template>
+
       <template v-slot:title>
         <typewriter-text-effect
           tag="h2"
@@ -109,6 +113,9 @@
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
   import MatrixBg from '~/components/svg/MatrixBg';
 
+  // Import scenes
+  import ForestScene from '~/components/scenes/ForestScene.vue';
+
   // Import animated text effects
   import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
   import ShrinkWordsOneByOneTextEffect from '~/core/components/text/ShrinkWordsOneByOne.vue';
@@ -138,6 +145,8 @@
       Binoculars,
       GoogleMapBackground,
       MatrixBg,
+      // Inject scenes
+      ForestScene,
       // Inject animated text effects
       TypewriterTextEffect,
       ShrinkWordsOneByOneTextEffect,
@@ -220,6 +229,11 @@
             //this.initSoundtrack();
           });
         }
+      }
+    },
+    mounted() {
+      if (typeof window !== 'undefined') {
+        this.$refs.forestScene.play();
       }
     }
   }
