@@ -1,6 +1,6 @@
 <template>
   <div id="services">
-    <angle-mosaic-layout bgColor="bg-bc-blue">
+    <angle-mosaic-layout primaryColor="bg-bc-blue" secondaryColor="bg-evening-blue">
       <template v-slot:slot1Bg>
         <div class="bg-evening-blue video-block-bg drop-shadow rotate-right is-hidden--sm-down">
         </div>
