@@ -13,7 +13,7 @@
       className="hero-first sm-pad-top pad-bottom-2x text-shadow"
     >
       <template v-slot:bg>
-        <div class="jungle-bg-container">
+        <div class="jungle-bg-container xs-hide">
           <jungle class="jungle-bg"></jungle>
           <div style="position: fixed; bottom: 15vh; width: 100%;">
             <img @click="viewDetail('CONSULTANTS')" class="xs-hide sm-hide" style="max-width: 150px; left: 40vh; transform: rotate(-15deg) translateX(30px); pointer: cursor" src="/images/walkie-talkie.svg" />

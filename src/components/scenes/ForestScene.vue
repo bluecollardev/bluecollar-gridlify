@@ -2,9 +2,7 @@
   <div class="forest-background">
     <!--<matrix-bg></matrix-bg>-->
     <span class="army-tank" />
-    <span class="grass">
-      <img src="/images/grass.svg" />
-    </span>
+    <span class="grass" />
     <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
     <svg version="1.1" class="ground-path" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="2820px"
        viewBox="0 0 2820 15.2" xml:space="preserve">
@@ -56,3 +54,67 @@ c-24.4,0-41.8,3.5-66.1,5c-10.6,0.8-21.1-0.4-32.2-1.3" />
     }
   }
 </script>
+
+<style lang="scss">
+  .army-tank {
+    position: fixed;
+    z-index: 2000;
+    background: url(/images/t84-tank.svg) no-repeat;
+    width: 360px;
+    height: 120px;
+    bottom: 40px;
+    background-size: contain;
+    margin-right: -400px;
+  }
+
+  .ground-path {
+    display: none;
+    bottom: 0;
+  }
+
+  .forest-background {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(/images/forest.svg) no-repeat center center;
+    background-size: cover;
+  }
+
+  .grass {
+    z-index: 2500;
+    position: absolute;
+    width: 110%;
+    left: -5%;
+    height: 120px;
+    bottom: 0;
+    filter: brightness(0.345) saturate(0.5);
+    display: flex;
+    align-items: flex-end;
+    background: url(/images/grass.svg) no-repeat bottom center;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 84em) {
+    .forest-background {
+      top: 0;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url(/images/forest.svg) no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .army-tank {
+      position: fixed;
+      z-index: 2000;
+      background: url(/images/t84-tank.svg) no-repeat;
+      width: 900px;
+      height: 300px;
+      bottom: 80px;
+      background-size: contain;
+      margin-right: -900px;
+    }
+  }
+</style>
