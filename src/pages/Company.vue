@@ -1,7 +1,5 @@
 <template>
   <Layout :key="repaint">
-    <Header />
-
     <!-- Video Hero -->
     <video-hero-layout01-col
       id="top"
@@ -502,8 +500,6 @@ For those businesses that adapt to this shift and adopt a modernized tool kit, t
         </div>
       </div>
     </section>
-
-    <Footer/>
   </Layout>
 </template>
 
