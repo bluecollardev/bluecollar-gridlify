@@ -41,7 +41,7 @@
       <!-- END Slot 3 -->
     </section>
 
-    <section :class="`top-row-under slot2-container hero-section shift-section-up angle ${this.bgColor ? this.bgColor : 'bg-light-grey' } xs-hide pad-top no-pad-bottom lg-flex flex-justify-center`">
+    <section :class="`top-row-under slot2-container hero-section shift-section-up angle ${this.bgColor ? this.bgColor : 'bg-light-grey' } xs-hide sm-hide pad-top no-pad-bottom lg-flex flex-justify-center`">
       <div class="col-3-squares pad-top pad-bottom lg-flex">
         <!-- Slot 2 -->
         <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide">

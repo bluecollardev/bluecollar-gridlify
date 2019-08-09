@@ -16,7 +16,7 @@
         <div class="jungle-bg-container">
           <jungle class="jungle-bg"></jungle>
           <div style="position: fixed; bottom: 15vh; width: 100%;">
-            <img @click="viewDetail('CONSULTANTS')" style="max-width: 150px; left: 40vh; transform: rotate(-15deg) translateX(30px); pointer: cursor" src="/images/walkie-talkie.svg" />
+            <img @click="viewDetail('CONSULTANTS')" class="xs-hide sm-hide" style="max-width: 150px; left: 40vh; transform: rotate(-15deg) translateX(30px); pointer: cursor" src="/images/walkie-talkie.svg" />
           </div>
         </div>
       </template>
@@ -244,7 +244,7 @@
   @media screen and (min-width: 40em) {
     .jungle-bg-container {
       .jungle-bg {
-        bottom: -65vh;
+        bottom: -68vh;
       }
     }
   }
