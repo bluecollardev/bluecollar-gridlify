@@ -20,7 +20,7 @@
 }
 
 .service-detail-card-top {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
   &.fixed-height-mobile {
     min-height: 100vh;
   }
