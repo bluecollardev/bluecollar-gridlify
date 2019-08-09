@@ -179,7 +179,7 @@ export default {
     }
   }
 
-  @media screen and (min-width: 64em) {
+  @media screen and (min-width: 84em) {
     .content-block-heading {
       display: flex;
       flex-flow: row;

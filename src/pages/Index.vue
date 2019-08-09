@@ -12,14 +12,14 @@
       slotPos="top"
       className="hero-first sm-pad-top pad-bottom-2x text-shadow"
     >
-      <!--<template v-slot:bg>
-        <div style="position: absolute; width: 100%; height: 100%;">
-          <jungle style="position: relative; bottom: -67vh; filter: brightness(0.45) saturate(0.888);"></jungle>
+      <template v-slot:bg>
+        <div class="jungle-bg-container">
+          <jungle class="jungle-bg"></jungle>
           <div style="position: fixed; bottom: 15vh; width: 100%;">
             <img @click="viewDetail('CONSULTANTS')" style="max-width: 150px; left: 40vh; transform: rotate(-15deg) translateX(30px); pointer: cursor" src="/images/walkie-talkie.svg" />
           </div>
         </div>
-      </template>-->
+      </template>
 
       <template v-slot:title>
         <typewriter-text-effect
@@ -224,3 +224,60 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .jungle-bg-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+
+    .jungle-bg {
+      position: relative;
+      filter: brightness(0.45) saturate(0.888);
+      bottom: -70vh;
+    }
+  }
+
+
+  @media screen and (min-width: 40em) {
+    .jungle-bg-container {
+      .jungle-bg {
+        bottom: -65vh;
+      }
+    }
+  }
+
+  @media screen and (min-width: 52em) {
+    .jungle-bg-container {
+      .jungle-bg {
+        bottom: -60vh;
+      }
+    }
+  }
+
+  @media screen and (min-width: 64em) {
+    .jungle-bg-container {
+      .jungle-bg {
+        bottom: -55vh;
+      }
+    }
+  }
+
+  @media screen and (min-width: 84em) {
+    .jungle-bg-container {
+      .jungle-bg {
+        bottom: -40vh;
+      }
+    }
+  }
+
+  @media screen and (min-width: 102em) {
+    .jungle-bg-container {
+      .jungle-bg {
+        bottom: -27vh;
+      }
+    }
+  }
+</style>

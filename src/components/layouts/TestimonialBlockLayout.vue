@@ -19,7 +19,7 @@
     <div
       v-if="!this.reviewedByAnimation"
       class="g-services flex flex-center">
-      <div v-if="typeof this.image === 'string' && this.image.length > 3"  class="circle-composite small space-bottom-half ml-auto mr-auto testimonial-profile-circle">
+      <div v-if="typeof this.image === 'string' && this.image.length > 3"  class="circle-composite small space-bottom-half ml-auto mr-auto testimonial-profile-circle xs-hide sm-hide md-hide">
         <div class="dark-blue-circle-mask">
           <div class="dark-blue-circle"></div>
         </div>

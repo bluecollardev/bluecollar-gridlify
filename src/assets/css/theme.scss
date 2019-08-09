@@ -198,6 +198,10 @@ a.action-link {
   min-height: 90vh;
 }
 
+.hero-section {
+  overflow: hidden;
+}
+
 @media screen and (min-width: 40em) {
   .homepage-hero p,
   .homepage-hero li,

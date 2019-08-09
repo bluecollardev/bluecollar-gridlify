@@ -16,7 +16,7 @@
       <!-- END Slot 1 -->
 
       <!-- DUMMY placeholder -->
-      <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
+      <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide">
         <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
           <div class="service-detail-card-front center-testimonial">
           </div>
@@ -44,7 +44,7 @@
     <section :class="`top-row-under slot2-container hero-section shift-section-up angle ${this.bgColor ? this.bgColor : 'bg-light-grey' } xs-hide pad-top no-pad-bottom lg-flex flex-justify-center`">
       <div class="col-3-squares pad-top pad-bottom lg-flex">
         <!-- Slot 2 -->
-        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
+        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide">
           <slot name="slot2Bg"></slot>
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front center-testimonial">
@@ -62,7 +62,7 @@
     <section :class="`bottom-row hero-section shift-section-up angle no-pad-bottom lg-flex`">
       <div :class="`col-3-squares ${this.bgColor ? this.bgColor : 'bg-light-grey' } no-pad-bottom lg-flex flex-basis-full`">
         <!-- Slot 4 -->
-        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
+        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide">
           <slot name="slot4Bg"></slot>
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
@@ -89,7 +89,7 @@
         <!-- END Slot 5 -->
 
         <!-- Slot 6 -->
-        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
+        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide">
           <slot name="slot6Bg"></slot>
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
