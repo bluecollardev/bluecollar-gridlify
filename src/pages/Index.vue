@@ -43,10 +43,10 @@
       </template>
     </hero-layout01-col>
 
-    <!--<services
+    <services
       :content="servicesContent"
       :testimonials="serviceTestimonials"
-    />-->
+    />
 
     <hero-layout01-col
       bgColor="transparent"
