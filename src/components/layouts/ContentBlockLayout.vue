@@ -163,7 +163,6 @@ export default {
     flex-flow: column;
   }
 
-  /* TODO: Apply selectively! This is theme specific... */
   .content-image {
     display: block;
     max-width: 60%;

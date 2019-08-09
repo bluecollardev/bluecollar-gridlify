@@ -41,7 +41,7 @@
       <!-- END Slot 3 -->
     </section>
 
-    <section :class="`slot2-container hero-section shift-section-up angle ${this.bgColor ? this.bgColor : 'bg-light-grey' } md-show pad-top no-pad-bottom lg-flex flex-justify-center`">
+    <section :class="`slot2-container hero-section shift-section-up angle ${this.bgColor ? this.bgColor : 'bg-light-grey' } xs-hide pad-top no-pad-bottom lg-flex flex-justify-center`">
       <div class="col-3-squares pad-top pad-bottom lg-flex">
         <!-- Slot 2 -->
         <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide md-hide">
@@ -152,12 +152,15 @@
   }
 
   .slot2-container {
+    width: 100%;
     border-top: 1px solid rgba(255,255,255,0.5);
+    /* Override .hero-section */
+    position: absolute !important;
+    top: 0;
   }
 
   @media screen and (min-width: 64em) {
     .angle-mosaic-layout {
-      position: absolute;
       width: 100%;
       z-index: 11;
       transform: translateY(-3vh);
