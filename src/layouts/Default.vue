@@ -11,7 +11,7 @@
       </div>
       <Header/>
       <audio-controls
-        style="position: fixed; bottom: 60px; right: 140px; z-index: 4000; opacity: 0.15"
+        style="position: fixed; bottom: 80px; right: 140px; z-index: 4000; opacity: 0.15"
         :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
         :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
         :onPlayPauseClicked="this.onSoundtrackPlay.bind(this)"
@@ -94,7 +94,13 @@
         if (!(this.soundtrack instanceof Audio)) {
           this.soundtrack = new Audio();
           this.soundtrack.volume = 0.5;
-          this.soundtrack.src = '/audio/soundtrack_to_war.mp3';
+
+          if (Math.random() > 0.5) {
+            this.soundtrack.src = '/audio/soundtrack_to_war.mp3';
+          } else {
+            this.soundtrack.src = '/audio/bro_hymn.mp3';
+          }
+
           this.soundtrack.loop = true;
 
           if (this.isAutoplayActive()) this.soundtrack.play();

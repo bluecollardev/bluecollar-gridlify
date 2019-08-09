@@ -14,7 +14,7 @@
       :flipX="true"
       :angle="true"
       slotPos="top"
-      className="sm-pad-top pad-bottom-2x"
+      className="text-shadow sm-pad-top pad-bottom-2x"
       style="height: 115vh"
     >
       <template v-slot:bg v-if="rockAndRoll">
