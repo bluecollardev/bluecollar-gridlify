@@ -118,11 +118,11 @@
       },
       primaryColor: {
         type: String,
-        default: 'bg-evening-blue'
+        default: ''
       },
       secondaryColor: {
         type: String,
-        default: 'bg-bc-blue'
+        default: ''
       }
     },
     mixins: [

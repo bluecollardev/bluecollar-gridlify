@@ -65,6 +65,10 @@
       className="hero-second sm-pad-top pad-bottom-2x text-shadow relative"
       style="background-position: center 25vh;"
     >
+      <template v-slot:bg>
+        <fishing-scene></fishing-scene>
+      </template>
+
       <template v-slot:title>
         <!--<shrink-words-one-by-one-text-effect
           v-if="!isServer"
@@ -115,6 +119,7 @@
 
   // Import scenes
   import ForestScene from '~/components/scenes/ForestScene.vue';
+  import FishingScene from '~/components/scenes/FishingScene.vue';
 
   // Import animated text effects
   import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
@@ -147,6 +152,7 @@
       MatrixBg,
       // Inject scenes
       ForestScene,
+      FishingScene,
       // Inject animated text effects
       TypewriterTextEffect,
       ShrinkWordsOneByOneTextEffect,
