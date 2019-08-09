@@ -26,16 +26,16 @@
       </template>
 
       <template v-slot:title>
-        <typewriter-text-effect
+        <!--<typewriter-text-effect
           tag="h2"
           text="Lost in the Software Jungle?"
           class="title text-center pad-bottom"
           :loop="true">
-        </typewriter-text-effect>
+        </typewriter-text-effect>-->
       </template>
 
       <template>
-        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+        <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
           <div>
             <p class="text-center">At Blue Collar, we build software that's ready for tomorrow's challenges. <span class="xs-hide">By using cutting-edge technologies and employing the latest software design methodologies, we can guarantee that you'll be well prepared and equipped for tomorrow's challenges.</span></p>
             <p class="text-center">Let our seasoned vets guide you on the path to your dreams.</p>
@@ -287,6 +287,10 @@
       .hero-first {
         z-index: 3;
         min-height: 100vh;
+
+        .hero-first-content {
+          z-index: 4;
+        }
       }
 
       #services {

@@ -115,3 +115,9 @@
     }
   }
 </script>
+
+<style lang="scss">
+  footer path.ampstart-icon {
+    fill: white;
+  }
+</style>
