@@ -348,7 +348,7 @@
       }
 
       &__content__subtitle {
-        font-size: 14px;
+        font-size: 17px;
       }
 
       .timeline__item__content {
