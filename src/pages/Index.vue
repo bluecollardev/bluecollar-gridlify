@@ -93,7 +93,6 @@
     <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'PORTFOLIO' ? 'Case Studies' : ''">
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
       <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
-      <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
     </content-detail-modal>
   </Layout>
 </template>
