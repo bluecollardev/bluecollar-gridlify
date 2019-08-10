@@ -238,7 +238,9 @@
           this.$refs.contentDetail.viewDetail(activeDetail, () => {
             // TODO: Call parent!
             //this.initSoundtrack();
-            this.$refs.shootToThrill.fireGuns();
+            if (this.$refs.shootToThrill) {
+              this.$refs.shootToThrill.fireGuns();
+            }
           });
         }
       }
