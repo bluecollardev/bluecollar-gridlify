@@ -17,7 +17,8 @@
     },
     data() {
       return {
-        isCasting: false
+        isCasting: false,
+        interval: null
       }
     },
     methods: {
@@ -101,7 +102,11 @@
       }
     },
     mounted() {
+      this.interval = setInterval(this.doFishJump, 17000);
       setTimeout(this.doFishJump, 3000);
+    },
+    beforeDestroy() {
+      clearInterval(this.interval);
     }
   }
 </script>
