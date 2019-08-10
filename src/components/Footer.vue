@@ -36,14 +36,14 @@
         <div class="flex-basis-third sm-flex sm-flex-justify-center">
           <div>
             <div class="g-footer space-bottom">
-              <p class="g-pstyle13"><a href="/company">Company</a></p>
+              <p class="g-pstyle13"><a href="/#top">Company</a></p>
             </div>
             <div class="g-footer">
-              <p class="g-pstyle7"><a href="/company#story">The Blue Collar Way</a></p>
+              <p class="g-pstyle7"><a href="/#top">The Blue Collar Way</a></p>
 
-              <p class="g-pstyle7"><a href="/consulting">Consulting Services</a></p>
+              <p class="g-pstyle7"><a href="/">Consulting Services</a></p>
 
-              <p class="g-pstyle7"><a href="/junior-dev-program">Junior Dev Program</a></p>
+              <p class="g-pstyle7"><a href="/">Junior Dev Program</a></p>
             </div>
           </div>
         </div>

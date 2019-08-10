@@ -2,6 +2,7 @@
   <div class="flex-basis-half flex flex-column">
     <img ref="fishingRod" @click="doCast()" :class="`fishing-rod ${isCasting ? 'is-casting' : 'idle'}`" src="/images/fishing-rod.svg" />
     <img ref="redSnapper" class="red-snapper fish" src="/images/red-snapper.svg" />
+    <img ref="fishCaught" class="fish-caught fish" src="/images/red-snapper.svg" />
   </div>
 </template>
 
@@ -22,7 +23,7 @@
       }
     },
     methods: {
-      setFishRotation(el, { x, y}) {
+      setFishJumpRotation(el, { x, y}) {
         const xMax = 1400;
         const startRotation = -65;
         const completeRotation = 55;
@@ -47,13 +48,39 @@
             el.style.bottom =  `${y}px`;
             el.style.left = `${x}px`;
 
-            cb(el, { x, y });
+            if (typeof cb === 'function') cb(el, { x, y });
 
             // Second 800 is a fudge factor to allow element to clear off screen
-            if (x > 800 + 800) (cancelAnimationFrame(requestId));
-            x += 20;
+            if (x > 800 + 800) {
+              cancelAnimationFrame(requestId);
+            } else {
+              x += 20;
+              requestId = requestAnimationFrame(updatePosition);
+            }
+          };
 
-            requestId = requestAnimationFrame(updatePosition)
+          requestId = requestAnimationFrame(updatePosition);
+        }
+      },
+      animateOnLine(el, fx, coords, cb) {
+        if (typeof window !== 'undefined') {
+          let requestId = null;
+          let y = coords[0];
+
+          const updatePosition = () => {
+            console.log(`test | y: ${fx(y)}`);
+            y = fx(y);
+
+            el.style.bottom =  `${y}px`;
+
+            if (typeof cb === 'function') cb(el, { y });
+
+            // Second 800 is a fudge factor to allow element to clear off screen
+            if (y > coords[1]) {
+              cancelAnimationFrame(requestId);
+            } else {
+              requestId = requestAnimationFrame(updatePosition)
+            }
           };
 
           requestId = requestAnimationFrame(updatePosition);
@@ -73,11 +100,26 @@
           this.animateOnParabolicPath(el,
             this.parabolicFx,
             { x: xVertex, y: yVertex },
-            this.setFishRotation
+            this.setFishJumpRotation
           );
         }
       },
+      doFishCaught() {
+        if (typeof window !== 'undefined') {
+          const el = document.querySelector('.fish-caught');
+
+          const fromY = -500;
+          const toY = 450;
+
+          // requestAnimationFrame
+          this.animateOnLine(el, (y) => y + 10, [fromY, toY]);
+        }
+      },
       doCast() {
+        const fishCaught = document.querySelector('.fish-caught');
+        fishCaught.style.left = '45%';
+        fishCaught.style.bottom = '-350px';
+
         this.$set(this, 'isCasting', true);
 
         const fishingRod = document.querySelector('.fishing-rod'); //this.$refs.fishingRod;
@@ -97,12 +139,13 @@
           fishingRod.removeEventListener('msAnimationEnd', this.resetCast);
           fishingRod.removeEventListener('animationend', this.resetCast);
 
-          this.doFishJump();
+          this.doFishCaught();
+          //this.doFishJump();
         }, 3000);
       }
     },
     mounted() {
-      this.interval = setInterval(this.doFishJump, 17000);
+      this.interval = setInterval(this.doFishJump, 30000);
       setTimeout(this.doFishJump, 3000);
     },
     beforeDestroy() {
@@ -110,6 +153,9 @@
     }
   }
 </script>
+
+
+
 
 <style lang="scss">
   .fishing-rod {
@@ -169,5 +215,24 @@
     left: -200px;
     bottom: -200px;
     transform: rotate(-45deg) scaleX(-1);
+  }
+
+  .fish-caught {
+    position: absolute;
+    max-width: 400px;
+    bottom: -350px;
+    transform: rotate(-90deg) scaleX(-1);
+    transform-origin: top left;
+    animation: fish_caught 1.75s ease-in-out alternate infinite;
+
+    @keyframes fish_caught {
+      0%, 100% {
+        transform: rotate(-93deg) scaleX(-1);
+      }
+
+      50% {
+        transform: rotate(-87deg) scaleX(-1);
+      }
+    }
   }
 </style>
