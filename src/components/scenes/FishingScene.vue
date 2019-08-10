@@ -163,7 +163,7 @@
   .fishing-rod {
     position: relative;
     left: 200px;
-    top: 500px;
+    top: 550px;
     transform: rotate(35deg);
     transform-origin: bottom right;
     cursor: pointer;
