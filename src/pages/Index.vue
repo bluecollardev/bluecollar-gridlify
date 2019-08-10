@@ -91,7 +91,7 @@
     </hero-layout01-col>
 
     <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'PORTFOLIO' ? 'Case Studies' : ''">
-      <shoot-to-thrill-scene v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
+      <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
       <commando-skull-scene v-if="this.activeDetail === 'CONSULTANTS'"></commando-skull-scene>
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
       <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline><portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
@@ -238,6 +238,7 @@
           this.$refs.contentDetail.viewDetail(activeDetail, () => {
             // TODO: Call parent!
             //this.initSoundtrack();
+            this.$refs.shootToThrill.fireGuns();
           });
         }
       }

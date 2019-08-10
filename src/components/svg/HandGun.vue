@@ -176,7 +176,7 @@
       const intro = new TimelineLite();
 
       intro.to(this.p('.firearm'), 0.5, { rotation: 20, x: '50px', delay: this.introDelay });
-      intro.add(() => this.shootToThrill());
+      //intro.add(() => this.shootToThrill());
 
       //TweenLite.to(this.p('.hammer'), 0, {rotation:0, transformOrigin:'bottom left', delay: 2});
       //TweenLite.from(this.p('.svg3722'), 0, {rotation:45, transformOrigin:'bottom left', delay: 1})
