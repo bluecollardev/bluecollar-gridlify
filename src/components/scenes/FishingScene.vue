@@ -113,7 +113,7 @@
           const el = document.querySelector('.fish-caught');
 
           const fromY = -500;
-          const toY = 450;
+          const toY = 550;
 
           // requestAnimationFrame
           this.animateOnLine(el, (y) => y + 5, [fromY, toY]);
@@ -179,7 +179,7 @@
     &.is-casting {
       animation-name: fishing_rod_cast;
       animation-iteration-count: 1;
-      animation-duration: 3s;
+      animation-duration: 2.5s;
     }
 
     /* TODO: Eventually use a GSAP tween instead...? Then we can flex the rod... */
