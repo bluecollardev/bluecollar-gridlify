@@ -1,7 +1,7 @@
 <template>
   <main class="bg-black">
     <!--<intro></intro>-->
-    <div :id="this.id" class="page-container container relative">
+    <div :id="this.id" :class="`page-container container relative ${isSafari ? 'is-safari' : isChrome ? 'is-chrome' : ''}`">
       <div class="notifications" v-if="displayNotifications">
         <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
         <span class="notification">
@@ -66,6 +66,8 @@
     ],
     data() {
       return {
+        isSafari: null,
+        isChrome: null,
         displayNotifications: false,
         lastScroll: 0,
         soundtrack: null
@@ -120,6 +122,8 @@
     },
     mounted() {
       if (typeof window !== 'undefined') {
+        this.isChrome = this.$browserDetect.isChrome;
+        this.isSafari = this.$browserDetect.isSafari;
         this.attachScrollListener();
       }
     },

@@ -69,7 +69,7 @@
           let y = coords[0];
 
           const updatePosition = () => {
-            console.log(`test | y: ${fx(y)}`);
+            //console.log(`test | y: ${fx(y)}`);
             y = fx(y);
 
             el.style.bottom =  `${y}px`;
