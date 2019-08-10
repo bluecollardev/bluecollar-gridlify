@@ -266,10 +266,10 @@
       filter: brightness(0.45) saturate(0.888);
       bottom: -70vh;
     }
+  }
 
-    .is-safari .jungle-bg {
-      display: none;
-    }
+  .is-safari .jungle-bg-container {
+    display: none;
   }
 
   /*#home-page .hero-second {
@@ -346,7 +346,7 @@
   @media screen and (min-width: 102em) {
     .jungle-bg-container {
       .jungle-bg {
-        bottom: -27vh;
+        bottom: -43vh;
       }
     }
   }
