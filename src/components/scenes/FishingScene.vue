@@ -112,7 +112,7 @@
           const toY = 450;
 
           // requestAnimationFrame
-          this.animateOnLine(el, (y) => y + 10, [fromY, toY]);
+          this.animateOnLine(el, (y) => y + 5, [fromY, toY]);
         }
       },
       doCast() {
@@ -146,7 +146,7 @@
     },
     mounted() {
       this.interval = setInterval(this.doFishJump, 30000);
-      setTimeout(this.doFishJump, 3000);
+      setTimeout(this.doCast, 1500);
     },
     beforeDestroy() {
       clearInterval(this.interval);
