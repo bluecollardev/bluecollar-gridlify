@@ -19,13 +19,11 @@
     methods: {
       fireGuns() {
         if (typeof window !== 'undefined') {
-          setTimeout(() => {
-            this.$refs.thunder.shootToThrill(0);
-          }, 500);
+          this.$refs.thunder.shootToThrill(0);
 
           setTimeout(() => {
             this.$refs.lightning.shootToThrill(0);
-          }, 900);
+          }, 400);
         }
       }
     }
