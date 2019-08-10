@@ -374,4 +374,10 @@
       }
     }
   }
+
+  .hero-section-content {
+    background: radial-gradient(ellipse at center,rgba(40, 68, 94,.33333) 0,transparent 65%,transparent 100%);
+    background-size: contain;
+    min-height: 60vh;
+  }
 </style>
