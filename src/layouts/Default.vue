@@ -1,7 +1,7 @@
 <template>
   <main class="bg-black">
     <!--<intro></intro>-->
-    <div :id="this.id" class="container relative">
+    <div :id="this.id" class="page-container container relative">
       <div class="notifications" v-if="displayNotifications">
         <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
         <span class="notification">

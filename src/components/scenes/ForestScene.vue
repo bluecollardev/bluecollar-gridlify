@@ -101,12 +101,14 @@ c-24.4,0-41.8,3.5-66.1,5c-10.6,0.8-21.1-0.4-32.2-1.3" />
   @media screen and (min-width: 84em) {
     .forest-background {
       top: 0;
+      /* TODO: I can't use fixed here, it blocks the page in Safari... Why? */
       position: fixed;
+      z-index: 0;
       width: 100%;
       height: 100%;
       background: url(/images/forest.svg) no-repeat center center;
       background-size: cover;
-      background-attachment: fixed;
+      //background-attachment: fixed;
     }
 
     .army-tank {

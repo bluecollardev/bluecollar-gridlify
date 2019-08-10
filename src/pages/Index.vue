@@ -11,6 +11,7 @@
       :angle="true"
       slotPos="top"
       className="hero-first sm-pad-top pad-bottom-2x text-shadow"
+      :style="isSafari ? 'transform: translate3d(0,0,0)' : ''"
     >
       <template v-slot:bg>
         <div class="jungle-bg-container xs-hide" style="align-self: flex-start">
@@ -200,6 +201,8 @@
     },
     data() {
       let state = {
+        isSafari: null,
+        isChrome: null,
         activeDetail: null,
         formData: {},
         textEffects: {
@@ -247,6 +250,9 @@
     },
     mounted() {
       if (typeof window !== 'undefined') {
+        this.isChrome = this.$browserDetect.isChrome;
+        this.isSafari = this.$browserDetect.isSafari;
+
         this.$refs.forestScene.play();
       }
     }
@@ -301,6 +307,7 @@
       .hero-first {
         z-index: 3;
         min-height: 100vh;
+        overflow: hidden;
 
         .hero-first-content {
           z-index: 4;

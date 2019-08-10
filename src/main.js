@@ -5,6 +5,8 @@ import DefaultLayout from '~/layouts/Default.vue';
 import '~/assets/css/main.scss';
 import '~/assets/fonts/icomoon/style.css';
 
+import BrowserDetect from 'vue-browser-detect-plugin';
+
 export default function (Vue, { head }) {
   head.meta.push({
     property: 'og:locale',
@@ -64,6 +66,7 @@ export default function (Vue, { head }) {
     const VueGoogleMaps = require('vue2-google-maps');
 
     //Vue.use(VueWaypoint.default);
+    Vue.use(BrowserDetect);
     Vue.use(VueGoogleMaps, {
       load: {
         key: 'AIzaSyBSDlMWErr_gwT5d5wze8oK9muKPuHLtKQ',
