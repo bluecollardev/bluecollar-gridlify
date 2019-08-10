@@ -1,6 +1,6 @@
 <template>
   <div class="flex-basis-half flex flex-column">
-    <img ref="fishingRod" @click="doCast()" :class="`fishing-rod ${isCasting ? 'is-casting' : 'idle'}`" src="/images/fishing-rod.svg" />
+    <img ref="fishingRod" @click="doCast()" :class="`fishing-rod ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`" src="/images/fishing-rod.svg" />
     <img ref="redSnapper" class="red-snapper fish" src="/images/red-snapper.svg" />
     <img ref="fishCaught" class="fish-caught fish" src="/images/red-snapper.svg" />
   </div>
@@ -19,6 +19,7 @@
     data() {
       return {
         isCasting: false,
+        isOnHook: false,
         interval: null
       }
     },
@@ -106,6 +107,9 @@
       },
       doFishCaught() {
         if (typeof window !== 'undefined') {
+          this.$set(this, 'isCasting', false);
+          this.$set(this, 'isOnHook', true);
+
           const el = document.querySelector('.fish-caught');
 
           const fromY = -500;
@@ -117,10 +121,11 @@
       },
       doCast() {
         const fishCaught = document.querySelector('.fish-caught');
-        fishCaught.style.left = '45%';
+        fishCaught.style.right = '19%';
         fishCaught.style.bottom = '-350px';
 
         this.$set(this, 'isCasting', true);
+        this.$set(this, 'isOnHook', false);
 
         const fishingRod = document.querySelector('.fishing-rod'); //this.$refs.fishingRod;
         fishingRod.addEventListener('webkitAnimationEnd', this.resetCast);
@@ -131,7 +136,7 @@
       resetCast() {
         // Something is making this animationend trigger fire waaaay too fast...
         setTimeout(() => {
-          this.$set(this, 'isCasting', false);
+          //this.$set(this, 'isCasting', false);
 
           const fishingRod = document.querySelector('.fishing-rod'); //this.$refs.fishingRod;
           fishingRod.removeEventListener('webkitAnimationEnd', this.resetCast);
@@ -153,9 +158,6 @@
     }
   }
 </script>
-
-
-
 
 <style lang="scss">
   .fishing-rod {
@@ -180,13 +182,21 @@
       animation-duration: 3s;
     }
 
+    /* TODO: Eventually use a GSAP tween instead...? Then we can flex the rod... */
+    &.fish-is-attached {
+      animation-name: fishing_rod_catch;
+      animation-iteration-count: 1;
+      animation-duration: 4s;
+      transform: rotate(55deg);
+    }
+
     @keyframes fishing_rod_hover {
       0% {
         transform: rotate(35deg);
       }
 
       49% {
-        transform: rotate(38deg);
+        transform: rotate(45deg);
       }
 
       99% {
@@ -205,6 +215,16 @@
 
       99% {
         transform: rotate(35deg);
+      }
+    }
+
+    @keyframes fishing_rod_catch {
+      0% {
+        transform: rotate(35deg);
+      }
+
+      100% {
+        transform: rotate(55deg);
       }
     }
   }
