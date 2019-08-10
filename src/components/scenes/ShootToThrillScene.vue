@@ -62,7 +62,7 @@
       position: relative;
       width: 100%;
       height: 50%;
-      top: calc(20vh + 54px);
+      top: calc(10vh + 54px);
       left: 0;
       z-index: 1000;
     }

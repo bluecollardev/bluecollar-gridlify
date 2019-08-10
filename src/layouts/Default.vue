@@ -9,8 +9,13 @@
           <button class="hide-notification" aria-label="Hide notification" v-on:click="hideNotifications()">&times;</button>
         </span>
       </div>
-      <Header/>
+      <Header>
+        <template v-slot:audioControls>
+          <audio-controls class="nav-audio-controls ml-2" style="height: 50px; width: 100%"></audio-controls>
+        </template>
+      </Header>
       <audio-controls
+        class="main-audio-controls"
         style="position: fixed; bottom: 80px; right: 140px; z-index: 4000; opacity: 0.15"
         :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
         :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
@@ -129,5 +134,17 @@
 <style lang="scss">
   footer path.ampstart-icon {
     fill: white;
+  }
+
+  @media screen and (max-width: 40em) {
+    .main-audio-controls {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 40em) {
+    .nav-audio-controls {
+      display: none;
+    }
   }
 </style>

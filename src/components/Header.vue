@@ -14,9 +14,20 @@
           <li><a href="/" aria-label="Our Team" @click="hideMenu()">Home</a></li>
           <li><a href="/#services" aria-label="Websites" @click="hideMenu()">Apps / Software / Web</a></li>
           <li><a href="/contact" aria-label="Enquire" @click="hideMenu()">Get In Touch</a></li>
+          <li style="height: auto" class="soundtrack-controls-menu-item pad-bottom">
+            <a style="flex-direction: column; align-items: flex-start">
+              <span style="display: block">Soundtrack Controls</span>
+            </a>
+            <slot name="audioControls"></slot>
+          </li>
+          <li style="height: auto" class="social-links-menu-item">
+            <a style="flex-direction: column; align-items: flex-start">
+              <span style="display: block">Social Media</span>
+            </a>
+          </li>
         </ul>
         <div class="site-navbar-top d-flex">
-          <a href="https://www.instagram.com/bluecollardev" class="d-flex align-items-center mr-4">
+          <a href="https://www.instagram.com/bluecollardev" class="d-flex align-items-center mr-4 ml-4">
             <span class="icon-instagram mr-2"></span>
             <!-- TODO: Implement tooltip -->
             <!--<span class="d-none d-md-inline-block">@bluecollardev</span>-->
@@ -56,3 +67,30 @@
     }
   }
 </script>
+
+<style lang="scss">
+  @media screen and (max-width: 40em) {
+    .site-menu {
+      .controls {
+        button {
+          text-shadow: none;
+        }
+      }
+    }
+
+    .social-links-menu-item {
+      border-bottom: none !important;
+    }
+
+    .site-navbar-top {
+      justify-content: flex-start !important;
+    }
+  }
+
+  @media screen and (min-width: 40em) {
+    .social-links-menu-item,
+    .soundtrack-controls-menu-item {
+      display: none !important;
+    }
+  }
+</style>

@@ -1,11 +1,11 @@
 <template>
   <div class="controls">
-    <button @click="(audio) => onShuffleClicked()" style="visibility: hidden" class="backward" title="Backward"><i class="fa fa-retweet fa-lg"></i></button>
+    <button @click="(audio) => onShuffleClicked()" class="backward" title="Backward"><i class="fa fa-retweet fa-lg"></i></button>
     <button @click="(audio) => onPreviousClicked()" class="backward" title="Backward"><i class="fa fa-backward fa-2x"></i></button>
     <button @click="(audio) => onPlayPauseClicked()" class="play-pause" title="Play" onclick=""><i class="fa fa-play fa-3x"></i></button>
     <button @click="(audio) => onNextClicked()" class="forward" title="Forward"><i class="fa fa-forward fa-2x"></i></button>
-    <button @click="(audio) => onRandomClicked()" style="visibility: hidden" class="backward" title="Backward"><i class="fa fa-random fa-lg"></i></button>
-    <input @change="(audio) => onVolumeChanged()" class="volume" name="volume" min="0" max="1" step="0.1" type="range" />
+    <button @click="(audio) => onRandomClicked()" class="backward" title="Backward"><i class="fa fa-random fa-lg"></i></button>
+    <!--<input @change="(audio) => onVolumeChanged()" class="volume" name="volume" min="0" max="1" step="0.1" type="range" />-->
   </div><!-- #controls -->
 </template>
 
@@ -411,9 +411,9 @@
       button {
         margin: 4px;
       }
-      button:first-of-type, button:last-of-type {
+      /*button:first-of-type, button:last-of-type {
         display: none;
-      }
+      }*/
       input[type='range'] {
         display: block;
         margin-top: -76px;
