@@ -1,58 +1,60 @@
 <template>
   <div class="flex-basis-half flex flex-column">
-    <img ref="fishingRod" class="fishing-rod" src="/images/fishing-rod.svg" />
-    <img ref="redSnapper" class="red-snapper" src="/images/red-snapper.svg" />
+    <img ref="fishingRod" @click="reelInFish()" class="fishing-rod" src="/images/fishing-rod.svg" />
+    <img ref="redSnapper" class="red-snapper fish" src="/images/red-snapper.svg" />
   </div>
 </template>
 
 <script>
+  import anime from 'animejs';
+
   export default {
     methods: {
-      animateOnParabolicPathTest() {
-        let carNum = 0;
-        return (self, target) => {
-          let circle = document.createElement('div');
-          circle.id = 'circle';
-          circle.style.display = 'none';
-          document.body.appendChild(circle);
+      animateOnParabolicPath(el, fx, cb) {
+        if (typeof window !== 'undefined') {
+          let x = 20;
+          const timer = setInterval(() => {
+            //console.log(`test | y: ${fx(x)}, x: ${x}`);
 
-          let a, b, c, x1, y1, x2, y2, y, sum, t;
-          x1 = self.offsetLeft + self.clientWidth / 2;
-          y1 = self.offsetTop;
-          x2 = bar.offsetLeft + self.clientWidth / 2;
-          y2 = bar.offsetTop;
+            el.style.bottom = fx(x) + 'px';
+            el.style.left = x + 'px';
 
-          a = 0.001;
-          b = (y1 - y2 - a * (x1 * x1 - x2 * x2)) / (x1 - x2);
-          c = y1 - a * x1 * x1 - b * x1;
+            cb({ x, y: fx(x) });
 
-          sum = x1;
-
-          t = setInterval(() => {
-            circle.style.display = 'block';
-            y = a * sum * sum + b * sum + c;
-            circle.style.top = y + 'px';
-            circle.style.left = sum + 'px';
-
-            sum++;
-
-            if (sum > x2) {
-              clearInterval(t);
-              document.body.removeChild(circle);
-              carNum++;
-              target.innerHTML = carNum;
-            }
-          }, 1);
+            // 100 is a fudge factor to allow element to clear off screen
+            if (x > 800 + 800) clearInterval(timer);
+            x += 20;
+          }, 33);
         }
       },
-      animateOnParabolicPath(el, fx) {
-
-      },
       play() {
-        let bar = document.getElementById('bar');
-        let barChild = bar.getElementsByTagName('span')[0];
-        this.animateOnParabolicPath(el, (x) => (-x * x));
+        if (typeof window !== 'undefined') {
+          const el = document.querySelector('.fish');
+          const xMax = 1400;
+          const xVertex = 700;
+          const yVertex = 500;
+          const startRotation = -65;
+          const completeRotation = 55;
+          const rotationDelta = completeRotation - startRotation;
+
+          let elRotation = startRotation;
+
+          this.animateOnParabolicPath(el, (x) => -0.001 * Math.pow(x - xVertex, 2) + yVertex, ({ x, y }) => {
+            console.log(`current coords: ${x}, ${y}`);
+            // Get x coord % of max
+            let xPct = x / xMax;
+            console.log(`x pct: ${xPct * 100}`);
+
+            el.style.transform = `rotate(${ startRotation + (rotationDelta * xPct) }deg) scaleX(-1)`;
+          });
+        }
+      },
+      reelInFish() {
+        this.play();
       }
+    },
+    mounted() {
+      const timer = setInterval(this.play, 8000);
     }
   }
 </script>
@@ -89,10 +91,10 @@
   }
 
   .red-snapper {
-    position: relative;
+    position: absolute;
     max-width: 400px;
     left: -200px;
-    top: 200px;
-    transform: scaleX(-1) rotate(75deg);
+    bottom: -200px;
+    transform: rotate(-45deg) scaleX(-1);
   }
 </style>
