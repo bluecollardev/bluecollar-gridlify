@@ -1,7 +1,7 @@
 <template>
   <div class="forest-background">
     <!--<matrix-bg></matrix-bg>-->
-    <span class="army-tank" />
+    <span class="army-tank" style="display: none" />
     <span class="grass" />
     <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
     <svg version="1.1" class="ground-path" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="2820px"
@@ -23,6 +23,8 @@ c-24.4,0-41.8,3.5-66.1,5c-10.6,0.8-21.1-0.4-32.2-1.3" />
         if (typeof window !== 'undefined') {
           const groundPath = anime.path('.ground-path .ground');
           const tank = document.querySelector('.army-tank');
+          tank.style.display = 'block';
+          tank.style.opacity = 1;
 
           console.log(groundPath('x'));
 
@@ -65,6 +67,7 @@ c-24.4,0-41.8,3.5-66.1,5c-10.6,0.8-21.1-0.4-32.2-1.3" />
     bottom: 40px;
     background-size: contain;
     margin-right: -400px;
+    opacity: 0;
   }
 
   .ground-path {
