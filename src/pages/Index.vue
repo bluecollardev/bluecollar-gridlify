@@ -278,6 +278,16 @@
     background-position: 60% bottom;
   }*/
 
+  @media screen and (max-width: 40em) {
+    #home-page {
+      .hero-second {
+        background-attachment: initial;
+        background-size: cover;
+        background-position: 66% 50% !important;
+      }
+    }
+  }
+
   @media screen and (min-width: 40em) {
     .jungle-bg-container {
       .jungle-bg {
