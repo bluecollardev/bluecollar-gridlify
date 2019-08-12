@@ -1,5 +1,5 @@
 <template>
-  <div class="fishing-scene">
+  <div class="fishing-scene" @click="doFishJump()">
     <span ref="fishingRod" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
       <span class="line-anchor"></span><img @click="doCast()" :class="`fishing-rod`" src="/images/fishing-rod.svg" />
     </span>
@@ -30,7 +30,7 @@
     },
     methods: {
       setFishJumpRotation(el, { x, y}) {
-        const xMax = 1400;
+        const xMax = 1200;
         const startRotation = -65;
         const completeRotation = 55;
         const rotationDelta = completeRotation - startRotation;
@@ -44,7 +44,7 @@
       },
       animateOnParabolicPath(el, fx, vtx, cb) {
         if (typeof window !== 'undefined') {
-          let x = 20;
+          let x = 25;
           let requestId = null;
 
           const updatePosition = () => {
@@ -60,7 +60,7 @@
             if (x > 800 + 800) {
               cancelAnimationFrame(requestId);
             } else {
-              x += 20;
+              x += 25;
               requestId = requestAnimationFrame(updatePosition);
             }
           };
