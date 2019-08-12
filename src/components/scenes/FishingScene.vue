@@ -7,7 +7,6 @@
     <img ref="fishCaught" class="fish-caught fish" src="/images/red-snapper.svg" />
     <div id="casting-line"></div>
     <div id="reeling-line"></div>
-
   </div>
 </template>
 
@@ -167,7 +166,7 @@
         //const startY = anchorCoords.y * Math.cos(a) - anchorCoords.x * Math.sin(a);
         //const startX = anchorCoords.y * Math.sin(a) + anchorCoords.x * Math.cos(a);
 
-        const startY = anchorCoords.y - 16;
+        const startY = anchorCoords.y - 36;
         const startX = anchorCoords.x;
 
         //console.log(`orig x: ${anchorCoords.x}, y: ${anchorCoords.y}`);
@@ -183,7 +182,7 @@
         const anchorCoords = document.querySelector('.line-anchor').getBoundingClientRect();
         const fishCaughtCoords = document.querySelector('.fish-caught').getBoundingClientRect();
 
-        const endY = fishCaughtCoords.y + 1000;
+        const endY = fishCaughtCoords.y + 500;
         const endX = fishCaughtCoords.x + 40;
 
         const startY = anchorCoords.y - 150;
@@ -193,10 +192,21 @@
         console.log(`end x: ${endX}, y: ${endY}`);
 
         const reelingLine = SVG('reeling-line');
-        reelingLine.size(document.body.clientWidth, 800);
+        reelingLine.size(2, 800);
 
-        reelingLine.path(`M ${startX} ${startY} L ${endX} ${endY}`)
-          .fill('none').stroke({ color: '#000', width: 1 });
+        reelingLine.path(`M 1 ${startY} L 1 ${endY}`)
+          .fill('none').stroke({color: '#000', width: 1});
+
+        let requestId = null;
+        const updatePosition = () => {
+          const coords = document.querySelector('.line-anchor').getBoundingClientRect();
+          document.querySelector('#reeling-line').style.top = `${coords.y}px`;
+          document.querySelector('#reeling-line').style.left = `${coords.x}px`;
+          document.querySelector('.fish-caught').style.left = `${coords.x - 86}px`;
+          requestId = requestAnimationFrame(updatePosition);
+        };
+
+        requestId = requestAnimationFrame(updatePosition);
       },
       clearCastingLine() {
         if (document.querySelectorAll('#casting-line svg').length > 0) {
@@ -220,16 +230,14 @@
 </script>
 
 <style lang="scss">
-  #casting-line, #reeling-line {
+  #casting-line {
     position: absolute;
     width: 100%;
     height: 800px;
     left: 0;
     top: 0;
     z-index: -1;
-  }
 
-  #casting-line {
     path {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
@@ -240,6 +248,13 @@
   }
 
   #reeling-line {
+    position: absolute;
+    width: 1px;
+    height: 100vh;
+    left: 64.5%;
+    top: 0;
+    z-index: -1;
+
     path {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
@@ -272,7 +287,7 @@
       stroke-dashoffset: 0;
     }
     to {
-      stroke-dashoffset: 300;
+      stroke-dashoffset: 400;
     }
   }
 
