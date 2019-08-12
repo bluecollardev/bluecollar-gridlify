@@ -119,7 +119,7 @@
 
           const el = document.querySelector('.fish-caught');
 
-          const fromY = -500;
+          const fromY = -100;
           const toY = 550;
 
           // requestAnimationFrame
@@ -182,7 +182,7 @@
         const anchorCoords = document.querySelector('.line-anchor').getBoundingClientRect();
         const fishCaughtCoords = document.querySelector('.fish-caught').getBoundingClientRect();
 
-        const endY = fishCaughtCoords.y + 500;
+        const endY = fishCaughtCoords.y + 1000;
         const endX = fishCaughtCoords.x + 40;
 
         const startY = anchorCoords.y - 150;
@@ -192,7 +192,7 @@
         console.log(`end x: ${endX}, y: ${endY}`);
 
         const reelingLine = SVG('reeling-line');
-        reelingLine.size(2, 800);
+        reelingLine.size(2, 2000);
 
         reelingLine.path(`M 1 ${startY} L 1 ${endY}`)
           .fill('none').stroke({color: '#000', width: 1});
@@ -250,7 +250,7 @@
   #reeling-line {
     position: absolute;
     width: 1px;
-    height: 100vh;
+    height: 150vh;
     left: 64.5%;
     top: 0;
     z-index: -1;
