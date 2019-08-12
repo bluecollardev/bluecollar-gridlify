@@ -119,7 +119,7 @@
 
           const el = document.querySelector('.fish-caught');
 
-          const fromY = -0;
+          const fromY = 0;
           const toY = 550;
 
           // requestAnimationFrame
@@ -166,7 +166,7 @@
         //const startY = anchorCoords.y * Math.cos(a) - anchorCoords.x * Math.sin(a);
         //const startX = anchorCoords.y * Math.sin(a) + anchorCoords.x * Math.cos(a);
 
-        const startY = anchorCoords.y - 6;
+        const startY = anchorCoords.y + 10;
         const startX = anchorCoords.x;
 
         //console.log(`orig x: ${anchorCoords.x}, y: ${anchorCoords.y}`);
@@ -221,7 +221,7 @@
     },
     mounted() {
       this.interval = setInterval(this.doFishJump, 30000);
-      setTimeout(this.doCast, 1500);
+      //setTimeout(this.doCast, 1500);
     },
     beforeDestroy() {
       clearInterval(this.interval);
@@ -298,7 +298,7 @@
     transform: rotate(35deg);
     transform-origin: bottom right;
     cursor: pointer;
-    //animation-name: fishing_rod_hover;
+    animation-name: fishing_rod_hover;
     animation-duration: 3.5s;
     animation-iteration-count: infinite;
 
@@ -327,7 +327,7 @@
       }
 
       49% {
-        transform: rotate(45deg);
+        transform: rotate(38deg);
       }
 
       99% {
