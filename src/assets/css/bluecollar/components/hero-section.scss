@@ -35,7 +35,7 @@ section.hero-section {
   text-shadow: none;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 40em) {
   /* TODO: Use these as a fallback for old browsers, using clip-path is waaaay easier in new browsers */
   /*section.hero-section.angle + section.hero-section:before,
   section.hero-section-01-col.angle + section.hero-section:before,
