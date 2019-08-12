@@ -94,7 +94,7 @@
 
       <div class="sm-flex flex-justify-between">
         <div class="copyright g-footer">
-          <p class="g-pstyle15">&copy; Blue Collar Development Ltd. 2019<br /><small><small>Site design and development by Lucas Lopatka + Sean Hamilton</small></small></p>
+          <p class="g-pstyle15">&copy; Blue Collar Development Ltd. 2019<br /><small><small>Site design and development by Lucas Lopatka</small></small></p>
         </div>
         <div class="site-info g-footer">
           <p class="g-pstyle14"><small>Terms & Conditions  |  Privacy Policy</small></p>
