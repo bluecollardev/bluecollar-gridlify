@@ -221,7 +221,7 @@
   $main-white: #fff;
   $main-gray: #f0f0f0;
   $timeline-line-color: #DFDFDF;
-  $timeline-date-color: #adadad;
+  $timeline-date-color: #161616;
   $timeline-content-title-color: #464545;
   $timeline-content-description-color: #333;
 

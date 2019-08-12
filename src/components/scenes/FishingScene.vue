@@ -13,6 +13,7 @@
 <script>
   import anime from 'animejs';
   import SVG from 'svg.js';
+  import 'svg.pathmorphing.js';
 
   export default {
     props: {
@@ -172,11 +173,20 @@
         //console.log(`orig x: ${anchorCoords.x}, y: ${anchorCoords.y}`);
         console.log(`start x: ${startX}, y: ${startY}`);
 
-        const castingLine = SVG('casting-line');
-        castingLine.size(document.body.clientWidth, 800);
+        const canvas = SVG('casting-line');
+        canvas.size(document.body.clientWidth, 1200);
 
-        castingLine.path(`M ${startX} ${startY} S ${startX - 400},${startY} ${startX - 500}, 600`)
+        const curveDef = `M ${startX} ${startY} C ${startX - 400},${startY} ${startX - 500},${startY + 400} ${startX - 500}, 600`;
+        console.log('curve def ' + curveDef);
+        const castingLine = canvas.path(curveDef)
           .fill('none').stroke({ color: '#000', width: 1 });
+
+        setTimeout(() => {
+          castingLine.animate().plot(`M ${startX} ${startY} L ${startX - 500} 600`);
+          setTimeout(() => {
+            castingLine.animate().plot(`M ${startX} ${startY} L ${startX} 1000`);
+          },500);
+        }, 333);
       },
       drawReelingLine() {
         const anchorCoords = document.querySelector('.line-anchor').getBoundingClientRect();
@@ -233,7 +243,7 @@
   #casting-line {
     position: absolute;
     width: 100%;
-    height: 800px;
+    height: 1200px;
     left: 0;
     top: 0;
     z-index: -1;

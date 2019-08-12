@@ -45,7 +45,10 @@
 
 .bg-midnight-blue {
   background-color: #111822;
-  color: #fff
+  color: #fff;
+  &.semi-clear {
+    background-color: rgba(17, 24, 34, 0.90);
+  }
 }
 
 .bg-evening-blue {
