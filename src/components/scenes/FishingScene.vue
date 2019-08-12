@@ -231,7 +231,7 @@
     },
     mounted() {
       this.interval = setInterval(this.doFishJump, 30000);
-      //setTimeout(this.doCast, 1500);
+      setTimeout(this.doCast, 1500);
     },
     beforeDestroy() {
       clearInterval(this.interval);
