@@ -166,7 +166,7 @@
         //const startY = anchorCoords.y * Math.cos(a) - anchorCoords.x * Math.sin(a);
         //const startX = anchorCoords.y * Math.sin(a) + anchorCoords.x * Math.cos(a);
 
-        const startY = anchorCoords.y + 10;
+        const startY = anchorCoords.y; // + 10;
         const startX = anchorCoords.x;
 
         //console.log(`orig x: ${anchorCoords.x}, y: ${anchorCoords.y}`);
@@ -200,8 +200,8 @@
         let requestId = null;
         const updatePosition = () => {
           const coords = document.querySelector('.line-anchor').getBoundingClientRect();
-          document.querySelector('#reeling-line').style.top = `${coords.y}px`;
-          document.querySelector('#reeling-line').style.left = `${coords.x}px`;
+          document.querySelector('#reeling-line').style.top = `${coords.y - 5}px`;
+          document.querySelector('#reeling-line').style.left = `${coords.x + 3}px`;
           document.querySelector('.fish-caught').style.left = `${coords.x - 86}px`;
           requestId = requestAnimationFrame(updatePosition);
         };
