@@ -65,7 +65,7 @@
       className="hero-second sm-pad-top pad-bottom-2x text-shadow relative"
     >
       <template v-slot:bg>
-        <!--<fishing-scene></fishing-scene>-->
+        <fishing-scene></fishing-scene>
       </template>
 
       <template v-slot:title>
