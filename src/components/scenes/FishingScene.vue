@@ -230,11 +230,15 @@
       }
     },
     mounted() {
-      this.interval = setInterval(this.doFishJump, 30000);
-      setTimeout(this.doCast, 1500);
+      if (typeof window !== 'undefined') {
+        this.interval = setInterval(this.doFishJump, 30000);
+        setTimeout(this.doCast, 1500);
+      }
     },
     beforeDestroy() {
-      clearInterval(this.interval);
+      if (typeof window !== 'undefined') {
+        clearInterval(this.interval);
+      }
     }
   }
 </script>
