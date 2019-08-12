@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-basis-half flex flex-column">
+  <div class="fishing-scene">
     <span ref="fishingRod" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
       <span class="line-anchor"></span><img @click="doCast()" :class="`fishing-rod`" src="/images/fishing-rod.svg" />
     </span>
@@ -9,7 +9,6 @@
     <div id="reeling-line"></div>
   </div>
 </template>
-
 <script>
   import anime from 'animejs';
   //import SVG from 'svg.js';
@@ -119,20 +118,17 @@
           this.$set(this, 'isOnHook', true);
 
           const el = document.querySelector('.fish-caught');
+          el.style.display = 'block';
 
           const fromY = 0;
           const toY = 550;
 
           // requestAnimationFrame
-          this.animateOnLine(el, (y) => y + 5, [fromY, toY]);
+          this.animateOnLine(el, (y) => y + 4.9, [fromY, toY]);
         }
       },
       doCast() {
         this.clearReelingLine();
-
-        const fishCaught = document.querySelector('.fish-caught');
-        fishCaught.style.right = '19%';
-        fishCaught.style.bottom = '-350px';
 
         this.$set(this, 'isCasting', true);
         this.$set(this, 'isOnHook', false);
@@ -142,6 +138,8 @@
         fishingRod.addEventListener('oAnimationEnd', this.resetCast);
         fishingRod.addEventListener('msAnimationEnd', this.resetCast);
         fishingRod.addEventListener('animationend', this.resetCast);
+
+        document.querySelector('.fish-caught').style.display = 'none';
 
         setTimeout(this.drawCastingLine, 2500); // Same time as css animation
       },
@@ -192,17 +190,17 @@
         const anchorCoords = document.querySelector('.line-anchor').getBoundingClientRect();
         const fishCaughtCoords = document.querySelector('.fish-caught').getBoundingClientRect();
 
-        const endY = fishCaughtCoords.y + 1000;
-        const endX = fishCaughtCoords.x + 40;
+        const endY = fishCaughtCoords.y + 500;
+        const endX = fishCaughtCoords.x;
 
-        const startY = anchorCoords.y - 200;
+        const startY = anchorCoords.y;
         const startX = endX;
 
         console.log(`start x: ${startX}, y: ${startY}`);
         console.log(`end x: ${endX}, y: ${endY}`);
 
         const reelingLine = SVG('reeling-line');
-        reelingLine.size(2, 2000);
+        reelingLine.size(2, 1000);
 
         reelingLine.path(`M 1 ${startY} L 1 ${endY}`)
           .fill('none').stroke({color: '#000', width: 1});
@@ -210,9 +208,9 @@
         let requestId = null;
         const updatePosition = () => {
           const coords = document.querySelector('.line-anchor').getBoundingClientRect();
-          document.querySelector('#reeling-line').style.top = `${coords.y - 5}px`;
-          document.querySelector('#reeling-line').style.left = `${coords.x + 3}px`;
-          document.querySelector('.fish-caught').style.left = `${coords.x - 86}px`;
+          document.querySelector('#reeling-line').style.top = `${coords.y - 286}px`;
+          document.querySelector('#reeling-line').style.left = `${coords.x}px`;
+          document.querySelector('.fish-caught').style.left = `${coords.x - 65}px`;
           requestId = requestAnimationFrame(updatePosition);
         };
 
@@ -247,6 +245,12 @@
 </script>
 
 <style lang="scss">
+  .fishing-scene {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
   #casting-line {
     position: absolute;
     width: 100%;
@@ -275,7 +279,7 @@
     path {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
-      animation: reeling_line 5s linear alternate;
+      animation: reeling_line 4s linear alternate;
       animation-fill-mode: forwards;
     }
   }
@@ -285,9 +289,9 @@
     height: 2px;
     background: black;
     display: inline-block;
-    top: 35px;
+    top: -77px;
     position: relative;
-    left: 29px;
+    left: 36px;
   }
 
   @keyframes casting_line {
@@ -304,20 +308,25 @@
       stroke-dashoffset: 0;
     }
     to {
-      stroke-dashoffset: 400;
+      stroke-dashoffset: 700;
     }
   }
 
   .fishing-rod-object {
-    position: relative;
-    left: 200px;
-    top: 550px;
+    position: absolute;
+    left: 45%;
+    top: 75%;
     transform: rotate(35deg);
     transform-origin: bottom right;
     cursor: pointer;
     animation-name: fishing_rod_hover;
     animation-duration: 3.5s;
     animation-iteration-count: infinite;
+
+    .fishing-rod {
+      width: 780px;
+      height: 100px;
+    }
 
     &:hover {
       animation: none;
@@ -375,6 +384,11 @@
         transform: rotate(55deg);
       }
     }
+  }
+
+  .red-snapper, .fish-caught {
+    width: 301px;
+    height: 120px;
   }
 
   .red-snapper {
