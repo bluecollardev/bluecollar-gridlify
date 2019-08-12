@@ -1,7 +1,7 @@
 <template>
   <div class="flex-basis-half flex flex-column">
     <span ref="fishingRod" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
-      <span class="line-anchor" style="width: 6px; height: 6px; background: black; display: block;"></span><img @click="doCast()" :class="`fishing-rod`" src="/images/fishing-rod.svg" />
+      <span class="line-anchor"></span><img @click="doCast()" :class="`fishing-rod`" src="/images/fishing-rod.svg" />
     </span>
     <img ref="redSnapper" class="red-snapper fish" src="/images/red-snapper.svg" />
     <img ref="fishCaught" class="fish-caught fish" src="/images/red-snapper.svg" />
@@ -143,7 +143,7 @@
         fishingRod.addEventListener('msAnimationEnd', this.resetCast);
         fishingRod.addEventListener('animationend', this.resetCast);
 
-        setTimeout(this.drawCastingLine, 2300); // Same time as css animation
+        setTimeout(this.drawCastingLine, 2500); // Same time as css animation
       },
       resetCast() {
         // Something is making this animationend trigger fire waaaay too fast...
@@ -162,31 +162,31 @@
         }, 3000);
       },
       drawCastingLine() {
-        const fishingRodCoords = document.querySelector('.line-anchor').getBoundingClientRect();
+        const anchorCoords = document.querySelector('.line-anchor').getBoundingClientRect();
         const a = 55 * Math.PI / 180;
-        //const startY = fishingRodCoords.y * Math.cos(a) - fishingRodCoords.x * Math.sin(a);
-        //const startX = fishingRodCoords.y * Math.sin(a) + fishingRodCoords.x * Math.cos(a);
+        //const startY = anchorCoords.y * Math.cos(a) - anchorCoords.x * Math.sin(a);
+        //const startX = anchorCoords.y * Math.sin(a) + anchorCoords.x * Math.cos(a);
 
-        const startY = fishingRodCoords.y;
-        const startX = fishingRodCoords.x;
+        const startY = anchorCoords.y - 16;
+        const startX = anchorCoords.x;
 
-        //console.log(`orig x: ${fishingRodCoords.x}, y: ${fishingRodCoords.y}`);
+        //console.log(`orig x: ${anchorCoords.x}, y: ${anchorCoords.y}`);
         console.log(`start x: ${startX}, y: ${startY}`);
 
         const castingLine = SVG('casting-line');
         castingLine.size(document.body.clientWidth, 800);
 
-        castingLine.path(`M ${startX} ${startY} S ${startX - 300},${startY} ${startX - 500}, 600`)
+        castingLine.path(`M ${startX} ${startY} S ${startX - 400},${startY} ${startX - 500}, 600`)
           .fill('none').stroke({ color: '#000', width: 1 });
       },
       drawReelingLine() {
-        const fishingRodCoords = document.querySelector('.line-anchor').getBoundingClientRect();
+        const anchorCoords = document.querySelector('.line-anchor').getBoundingClientRect();
         const fishCaughtCoords = document.querySelector('.fish-caught').getBoundingClientRect();
 
         const endY = fishCaughtCoords.y + 1000;
-        const endX = fishCaughtCoords.x + 105;
+        const endX = fishCaughtCoords.x + 40;
 
-        const startY = fishingRodCoords.y - 300;
+        const startY = anchorCoords.y - 150;
         const startX = endX;
 
         console.log(`start x: ${startX}, y: ${startY}`);
@@ -233,8 +233,9 @@
     path {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
-      animation: casting_line 1s linear alternate;
+      animation: casting_line 0.666s linear alternate;
       animation-fill-mode: forwards;
+      transition-timing-function: ease-out;
     }
   }
 
@@ -245,6 +246,16 @@
       animation: reeling_line 5s linear alternate;
       animation-fill-mode: forwards;
     }
+  }
+
+  .line-anchor {
+    width: 1px;
+    height: 1px;
+    background: black;
+    display: inline-block;
+    top: 35px;
+    position: relative;
+    left: 29px;
   }
 
   @keyframes casting_line {
