@@ -119,7 +119,7 @@
 
           const el = document.querySelector('.fish-caught');
 
-          const fromY = -100;
+          const fromY = -0;
           const toY = 550;
 
           // requestAnimationFrame
@@ -166,7 +166,7 @@
         //const startY = anchorCoords.y * Math.cos(a) - anchorCoords.x * Math.sin(a);
         //const startX = anchorCoords.y * Math.sin(a) + anchorCoords.x * Math.cos(a);
 
-        const startY = anchorCoords.y - 36;
+        const startY = anchorCoords.y - 6;
         const startX = anchorCoords.x;
 
         //console.log(`orig x: ${anchorCoords.x}, y: ${anchorCoords.y}`);
@@ -185,7 +185,7 @@
         const endY = fishCaughtCoords.y + 1000;
         const endX = fishCaughtCoords.x + 40;
 
-        const startY = anchorCoords.y - 150;
+        const startY = anchorCoords.y - 200;
         const startX = endX;
 
         console.log(`start x: ${startX}, y: ${startY}`);
