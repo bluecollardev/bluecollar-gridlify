@@ -57,7 +57,7 @@
     <section id="contact" class="hero-section text-shadow bg-black angle no-pad-top" style="height: 130vh; margin-bottom: 58vh">
       <google-map-background></google-map-background>
       <div class="flex flex-center flex-justify-center">
-        <div class="flex flex-basis-half">
+        <div class="flex flex-basis-half space-top text-center">
           <contact :formData="formData"></contact>
         </div>
       </div>
@@ -275,5 +275,19 @@
 <style lang="scss">
   .guitar-content {
     z-index: 11;
+  }
+
+  /* Temporarily disable labels */
+  .ampstart-input label {
+    display: none;
+  }
+
+  #rock {
+    z-index: 2;
+  }
+
+  #contact {
+    z-index: 1;
+    top: -9vh;
   }
 </style>
