@@ -79,7 +79,7 @@
             //console.log(`test | y: ${fx(y)}`);
             y = fx(y);
 
-            el.style.bottom =  `${y}px`;
+            el.style.bottom =  `${y - 100}px`;
 
             if (typeof cb === 'function') cb(el, { y });
 
@@ -124,7 +124,7 @@
           const toY = 550;
 
           // requestAnimationFrame
-          this.animateOnLine(el, (y) => y + 4.9, [fromY, toY]);
+          this.animateOnLine(el, (y) => y + 5, [fromY, toY]);
         }
       },
       getFishingRodAnchorCoords() {
@@ -199,7 +199,7 @@
         const anchorCoords = this.getFishingRodAnchorCoords();
         const fishCaughtCoords = document.querySelector('.fish-caught').getBoundingClientRect();
 
-        const endY = fishCaughtCoords.y + 500;
+        const endY = fishCaughtCoords.y + 296;
         const endX = fishCaughtCoords.x;
 
         const startY = anchorCoords.top;
@@ -274,7 +274,6 @@
       stroke-dashoffset: 1000;
       animation: casting_line 0.666s linear alternate;
       animation-fill-mode: forwards;
-      transition-timing-function: ease-out;
     }
   }
 
