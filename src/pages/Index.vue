@@ -336,11 +336,6 @@
         z-index: 1;
         transform: translateY(-20vh);
         background-position: center 25vh;
-
-        .hero-section-content {
-          position: relative;
-          top: -20vh;
-        }
       }
     }
   }
