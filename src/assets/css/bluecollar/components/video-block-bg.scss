@@ -29,10 +29,7 @@
     background-image: radial-gradient(black 65%, transparent 25%);
     background-size: 2px 2px;
   }
-}
 
-/* TODO: Animate rotation */
-@media screen and (min-width: 84em) {
   .video-block-bg {
     &.rotate-left {
       transform: rotate(-5deg) translate(10px, 10px);

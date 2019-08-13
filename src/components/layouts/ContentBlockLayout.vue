@@ -179,7 +179,20 @@ export default {
     }
   }
 
-  @media screen and (min-width: 84em) {
+  @media screen and (min-width: 64em) and (max-width: 102em) {
+    .content-image {
+      display: block;
+      max-width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      height: auto;
+      position: absolute;
+      top: -20%;
+      left: 20%;
+    }
+  }
+
+  @media screen and (min-width: 102em) {
     .content-block-heading {
       display: flex;
       flex-flow: row;

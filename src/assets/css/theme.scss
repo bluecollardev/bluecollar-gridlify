@@ -301,7 +301,7 @@ a.action-link {
 @media screen and (min-width: 40em) {
   /* This block is partially covered by the angle from the previous section */
   .center-testimonial {
-    top: 15px !important;
+    top: -95px !important;
   }
 
   /* TODO: Make these conditional based on browser, moving to css clip-path */
@@ -315,6 +315,24 @@ a.action-link {
     margin-bottom: -103px;
     border-bottom: 1px solid white;
   }*/
+}
+
+@media screen and (min-width: 64em) {
+  .center-testimonial {
+    top: -85px !important;
+  }
+}
+
+@media screen and (min-width: 84em) {
+  .center-testimonial {
+    top: -45px !important;
+  }
+}
+
+@media screen and (min-width: 102em) {
+  .center-testimonial {
+    top: 15px !important;
+  }
 }
 
 @media screen and (min-width: 1400px) {
