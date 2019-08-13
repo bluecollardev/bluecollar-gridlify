@@ -1,5 +1,5 @@
 <template>
-  <div class="fishing-scene" @click="doFishJump()">
+  <div class="fishing-scene">
     <span ref="fishingRod" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
       <span class="line-anchor"></span><img @click="doCast()" :class="`fishing-rod`" src="/images/fishing-rod.svg" />
     </span>
@@ -208,7 +208,7 @@
         let requestId = null;
         const updatePosition = () => {
           const coords = document.querySelector('.line-anchor').getBoundingClientRect();
-          document.querySelector('#reeling-line').style.top = `${coords.y - 286}px`;
+          document.querySelector('#reeling-line').style.top = `${coords.y - 296}px`;
           document.querySelector('#reeling-line').style.left = `${coords.x}px`;
           document.querySelector('.fish-caught').style.left = `${coords.x - 65}px`;
           requestId = requestAnimationFrame(updatePosition);

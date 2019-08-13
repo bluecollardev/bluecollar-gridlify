@@ -37,7 +37,7 @@
       <template>
         <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
           <div>
-            <p class="text-center">At Blue Collar, we build software that's ready for tomorrow's challenges. <span class="xs-hide">By using cutting-edge technologies and employing the latest software design methodologies, we can guarantee that you'll be well prepared and equipped for tomorrow's challenges.</span></p>
+            <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges.</span></p>
             <p class="text-center">Let our seasoned vets guide you on the path to your dreams.</p>
             <div class="text-center" style="">
               <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3">Meet Our Consultants</a>
@@ -81,7 +81,8 @@
       <template>
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
           <div>
-            <p class="text-center">At Blue Collar, we <strong style="text-decoration: underline; font-weight: 900">never</strong> leave our customers behind.</p>
+            <p class="text-center">At Blue Collar, we build software that's ready for tomorrow's challenges. <span class="xs-hide">By using cutting-edge technologies and employing the latest software design methodologies, we can guarantee that you'll be well prepared and equipped for tomorrow's challenges.</span></p>
+            <p class="text-center">Let our seasoned vets guide you on the path to your dreams.</p>
             <div class="text-center">
               <a @click="viewDetail('PORTFOLIO')" class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
             </div>
