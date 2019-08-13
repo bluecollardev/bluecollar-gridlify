@@ -1,7 +1,5 @@
 <template>
   <Layout :key="repaint">
-    <Header />
-
     <!-- DO NOT DELETE THIS IS THE GUITAR!!! -->
     <hero-layout01-col
       id="rock"
@@ -62,8 +60,6 @@
         </div>
       </div>
     </section>
-
-    <Footer />
   </Layout>
 </template>
 
