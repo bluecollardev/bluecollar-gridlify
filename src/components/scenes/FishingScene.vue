@@ -127,6 +127,18 @@
           this.animateOnLine(el, (y) => y + 4.9, [fromY, toY]);
         }
       },
+      getFishingRodAnchorCoords() {
+        let parentPos = document.querySelector('.fishing-scene').getBoundingClientRect();
+        let childPos = document.querySelector('.fishing-rod-object').getBoundingClientRect();
+        let coords = {};
+
+        coords.top = childPos.top - parentPos.top;
+        coords.right = childPos.right - parentPos.right;
+        coords.bottom = childPos.bottom - parentPos.bottom;
+        coords.left = childPos.left - parentPos.left;
+
+        return coords;
+      },
       doCast() {
         this.clearReelingLine();
 
@@ -160,13 +172,10 @@
         }, 3000);
       },
       drawCastingLine() {
-        const anchorCoords = document.querySelector('.line-anchor').getBoundingClientRect();
-        const a = 55 * Math.PI / 180;
-        //const startY = anchorCoords.y * Math.cos(a) - anchorCoords.x * Math.sin(a);
-        //const startX = anchorCoords.y * Math.sin(a) + anchorCoords.x * Math.cos(a);
+        const anchorCoords = this.getFishingRodAnchorCoords();
 
-        const startY = anchorCoords.y; // + 10;
-        const startX = anchorCoords.x;
+        const startY = anchorCoords.top + 43; // + 10;
+        const startX = anchorCoords.left + 89;
 
         //console.log(`orig x: ${anchorCoords.x}, y: ${anchorCoords.y}`);
         console.log(`start x: ${startX}, y: ${startY}`);
@@ -187,13 +196,13 @@
         }, 333);
       },
       drawReelingLine() {
-        const anchorCoords = document.querySelector('.line-anchor').getBoundingClientRect();
+        const anchorCoords = this.getFishingRodAnchorCoords();
         const fishCaughtCoords = document.querySelector('.fish-caught').getBoundingClientRect();
 
         const endY = fishCaughtCoords.y + 500;
         const endX = fishCaughtCoords.x;
 
-        const startY = anchorCoords.y;
+        const startY = anchorCoords.top;
         const startX = endX;
 
         console.log(`start x: ${startX}, y: ${startY}`);
@@ -207,10 +216,11 @@
 
         let requestId = null;
         const updatePosition = () => {
-          const coords = document.querySelector('.line-anchor').getBoundingClientRect();
-          document.querySelector('#reeling-line').style.top = `${coords.y - 296}px`;
-          document.querySelector('#reeling-line').style.left = `${coords.x}px`;
-          document.querySelector('.fish-caught').style.left = `${coords.x - 65}px`;
+          const coords = this.getFishingRodAnchorCoords();
+          document.querySelector('#reeling-line').style.top = `${coords.top + 43 - 296}px`;
+          document.querySelector('#reeling-line').style.left = `${coords.left + 89}px`;
+          // Subtract half the width of the fish so it's centered
+          document.querySelector('.fish-caught').style.left = `${coords.left + 89 - 65}px`;
           requestId = requestAnimationFrame(updatePosition);
         };
 
