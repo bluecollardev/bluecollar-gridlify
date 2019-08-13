@@ -186,9 +186,16 @@ export default {
       margin-left: auto;
       margin-right: auto;
       height: auto;
-      position: absolute;
-      top: -20%;
-      left: 20%;
+    }
+
+    .content-block {
+      min-height: 60vh;
+    }
+  }
+
+  @media screen and (min-width: 64em) and (max-width: 84em) {
+    .content-image {
+      display: none;
     }
   }
 
