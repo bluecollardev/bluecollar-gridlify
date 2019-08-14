@@ -165,7 +165,7 @@
           .fill('none').stroke({ color: '#000', width: 1 });
 
         setTimeout(() => {
-          castingLine.animate().plot(`M ${startX} ${startY} L ${startX - 500} 700`);
+          castingLine.animate().plot(`M ${startX} ${startY} L ${startX - 500} 1000`);
           setTimeout(() => {
             castingLine.animate().plot(`M ${startX} ${startY} L ${startX} 1000`);
           },500);
@@ -197,10 +197,7 @@
             if (endY > coords.top + 100) {
               reelingLine.plot(`M 0 0 L 1 ${endY}`);
               console.log(`line length: ${endY - coords.top}`);
-            }
-
-            if (endY > coords.top +  350) {
-              document.querySelector('.fish-caught').style.top = `${endY}px`;
+              document.querySelector('.fish-caught').style.top = `${endY + 225}px`;
             }
 
             const fishX = coords.left;
