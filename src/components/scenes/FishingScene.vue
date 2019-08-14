@@ -197,7 +197,7 @@
             if (endY > coords.top + 100) {
               reelingLine.plot(`M 0 0 L 1 ${endY}`);
               console.log(`line length: ${endY - coords.top}`);
-              document.querySelector('.fish-caught').style.top = `${endY + 225}px`;
+              document.querySelector('.fish-caught').style.top = `${endY + 170}px`;
             }
 
             const fishX = coords.left;
