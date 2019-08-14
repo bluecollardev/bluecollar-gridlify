@@ -199,7 +199,7 @@
               console.log(`line length: ${endY - coords.top}`);
             }
 
-            if (endY > coords.top + 300) {
+            if (endY > coords.top +  350) {
               document.querySelector('.fish-caught').style.top = `${endY}px`;
             }
 
