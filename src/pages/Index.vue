@@ -279,6 +279,14 @@
     background-position: 60% bottom;
   }*/
 
+  #home-page {
+    .hero-second {
+      .hero-section-content {
+        z-index: 2;
+      }
+    }
+  }
+
   @media screen and (max-width: 40em) {
     #home-page {
       .hero-second {
