@@ -54,97 +54,25 @@
 </template>
 
 <script>
-// vue-markdown is broken, babel deps issues...
-// import VueMarkdown from 'vue-markdown'
-// Use marked instead
-import marked from 'marked';
-import Home from '~/data/Home.yml';
+  import HeroMixin from '~/core/mixins/layouts/Hero';
 
-export default {
-  //components: {
-  //  VueMarkdown
-  //},
-  // TODO: Supply models via props??
-  props: {
-    className: {
-      type: String,
-      default: '',
-    },
-    angle: {
-      type: Boolean,
-      default: false,
-    },
-    flipX: {
-      type: Boolean,
-      default: false,
-    },
-    bgColor: {
-      type: String,
-      default: 'bg-light-grey',
-    },
-    title: {
-      type: String,
-      default: '',
-    },
-    subtitle: {
-      type: String,
-      default: '',
-    },
-    description: {
-      type: String,
-      default: '',
-    },
-    image: {
-      type: String,
-      default: '',
-    },
-    imageClass: {
-      type: String,
-      default: '',
-    },
-    link: {
-      type: String,
-      default: '',
-    },
-    linkText: {
-      type: String,
-      default: '',
-    },
-    caption: {
-      type: String,
-      default: '',
-    },
-    subCaption: {
-      type: String,
-      default: '',
-    },
-    slotPos: {
-      type: String,
-      default: 'bottom',
-    },
-  },
-  mounted() {
-    let hero = this.$refs.heroLayout;
-    const speedMultiplier = 0.5;
+  export default {
+    mixins: [
+      HeroMixin
+    ],
+    mounted() {
+      /*let hero = this.$refs.heroLayout;
+      const speedMultiplier = 0.5;
 
-    /*window.addEventListener('resize', function(event) {
-    });*/
+      window.addEventListener('resize', function(event) {
+      });
 
-    // TODO: Extract parallax
-    //let lastScroll = 0;
-    /*window.addEventListener('scroll', (() => {
-      //if (Math.abs(lastScroll - window.scrollY) <= 5) return;
-      const propValue = `50% -${(window.scrollY * speedMultiplier)}px`;
-      hero.style.backgroundPosition = propValue;
-    }).bind(this));*/
-  },
-  computed: {
-    Home() {
-      return Home;
-    },
-    compiledDescription() {
-      return marked(this.description);
+      let lastScroll = 0;
+      window.addEventListener('scroll', (() => {
+        //if (Math.abs(lastScroll - window.scrollY) <= 5) return;
+        const propValue = `50% -${(window.scrollY * speedMultiplier)}px`;
+        hero.style.backgroundPosition = propValue;
+      }).bind(this));*/
     }
-  }
-};
+  };
 </script>
