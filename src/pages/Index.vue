@@ -95,14 +95,14 @@
     </hero-layout01-col>
     <!-- END NOT DELETE THIS IS THE GUITAR!!! -->
 
-    <section id="contact" class="hero-section text-shadow bg-black angle no-pad-top">
+    <!--<section id="contact" class="hero-section text-shadow bg-black angle no-pad-top">
       <google-map-background></google-map-background>
       <div class="flex flex-center flex-justify-center">
         <div class="flex md-flex-basis-half space-top text-center">
           <contact :formData="formData"></contact>
         </div>
       </div>
-    </section>
+    </section>-->
 
     <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'PORTFOLIO' ? 'Case Studies' : ''">
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
