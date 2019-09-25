@@ -24,7 +24,7 @@
 			<div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
 				<div>
 					<p class="text-center">We're located in Victoria, BC, Canada, providing IT consulting services for customers in Victoria and the BC Lower Mainland. We're open to remote work.</p>
-					<p class="text-center">If you'd like to get in touch with one of our people, please call +1 (250) 532-0083.</p>
+					<p class="text-center">If you'd like to get in touch with one of our people, please call +1 (250) 532-0083, send us an <a style="color: white; text-decoration: underline" href="mailto:lucas@bluecollardev.com">e-mail</a>, or use the handy form below and let one of our experts help you today.</p>
 				</div>
 			</div>
 
