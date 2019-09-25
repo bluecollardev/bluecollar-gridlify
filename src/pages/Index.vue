@@ -2,7 +2,7 @@
   <Layout id="home-page">
     <hero-layout01-col
       bgColor="transparent"
-      title="We Build User Experiences That Reel in Results"
+      title="We Build User Experiences That Reel in the Results"
       subtitle=""
       description=""
       imageClass="home-page-banner-image"
