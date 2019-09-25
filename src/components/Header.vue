@@ -6,7 +6,7 @@
         <span></span>
         <span></span>
       </div>
-      <a href="/#top" aria-label="Home Page" class="logo-wrapper flex flex-center xs-flex-justify-center">
+      <a href="/" aria-label="Home Page" class="logo-wrapper flex flex-center xs-flex-justify-center">
         <img class="logo" src="/images/blue-collar-dev.png" alt="" />
       </a>
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
