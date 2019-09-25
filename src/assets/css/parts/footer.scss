@@ -28,6 +28,13 @@ footer {
   }
 }
 
+@media screen and (min-width: 40em) {
+  footer {
+    padding: 10rem 10rem 0;
+  }
+}
+
+
 @media screen and (min-width: 102em) {
   footer {
     padding: 20vh 10rem 0;

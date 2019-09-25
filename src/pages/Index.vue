@@ -96,10 +96,10 @@
     </hero-layout01-col>
     <!-- END NOT DELETE THIS IS THE GUITAR!!! -->
 
-    <section id="contact" class="hero-section text-shadow bg-black angle no-pad-top" style="height: 130vh; margin-bottom: -30vh">
+    <section id="contact" class="hero-section text-shadow bg-black angle no-pad-top">
       <google-map-background></google-map-background>
       <div class="flex flex-center flex-justify-center">
-        <div class="flex flex-basis-half space-top text-center">
+        <div class="flex md-flex-basis-half space-top text-center">
           <contact :formData="formData"></contact>
         </div>
       </div>
@@ -313,7 +313,18 @@
 
   #contact {
     z-index: 0;
+    height: auto;
     top: -30vh;
+    position: relative;
+  }
+
+  @media screen and (min-width: 84em) {
+    #contact {
+      z-index: 0;
+      top: -30vh;
+      height: 130vh;
+      margin-bottom: -30vh
+    }
   }
 
   /* Override colors */
