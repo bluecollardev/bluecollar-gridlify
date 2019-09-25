@@ -82,7 +82,7 @@
             <p class="text-center">Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit.</p>
             <p class="text-center">We'll take the midnight train to your dream.</p>
             <br />
-            <p class="text-center"><small><small><b>Hint: Click the strings to the beat of Smoke on the Water.</b></small></small></p>
+            <p class="text-center"><small><small><b>Hint: Click the strings to the beat of "Smoke on the Water".</b></small></small></p>
             <div
               class="guitar-block text-center"
               @mouseover="startRockin.bind(this)()"
