@@ -31,7 +31,7 @@
           <div>
             <p class="text-center">At Blue Collar, we use cutting-edge technologies and employ the latest software design methodologies to drive the creation of amazing user experiences.</span></p>
             <p class="text-center">Our seasoned team of experience experts and software vetrans at Blue Collar Development specialize in helping you reel in the prize catch of your dreams.</p>
-            <p class="text-center"><small><small><b>Click the fishing rod's handle to catch a Red Snapper! Very tasty!</b></small></small></p>
+            <p class="text-center"><small><small><b>Hint: Click the fishing rod's handle to catch a Red Snapper! Very tasty!</b></small></small></p>
             <div class="text-center">
               <a @click="viewDetail('PORTFOLIO')" class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
             </div>
@@ -82,7 +82,7 @@
             <p class="text-center">Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit.</p>
             <p class="text-center">We'll take the midnight train to your dream.</p>
             <br />
-            <p class="text-center"><small><small><b>Click the strings to the beat of Smoke on the Water.</b></small></small></p>
+            <p class="text-center"><small><small><b>Hint: Click the strings to the beat of Smoke on the Water.</b></small></small></p>
             <div
               class="guitar-block text-center"
               @mouseover="startRockin.bind(this)()"
