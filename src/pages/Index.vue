@@ -310,6 +310,20 @@
     z-index: 1;
   }
 
+  @media screen and (min-width: 52em) {
+    #rock {
+      height: 115vh;
+      position: relative;
+      top: -5vh;
+    }
+  }
+
+  @media screen and (min-width: 64em) {
+    #rock {
+      top: -20vh;
+    }
+  }
+
   #contact {
     z-index: 0;
     height: auto;
@@ -317,10 +331,10 @@
     position: relative;
   }
 
-  @media screen and (min-width: 84em) {
+  @media screen and (min-width: 40em) {
     #contact {
       z-index: 0;
-      top: -10vh;
+      top: -30vh;
       height: 130vh;
       margin-bottom: -30vh
     }
@@ -335,6 +349,15 @@
     background-color: #d2e6d6;
     background-image: linear-gradient(175deg, #cce3ea 0%, #d2e6d6 74%);
   }
+
+  /* Override colors */
+  @media screen and (max-width: 40em) {
+    #services {
+      background-color: #111822;
+      background-image: linear-gradient(15deg, #111822 0%, #33587a 90%);
+    }
+  }
+
 
   .video-block-bg {
     //background-color: #33587a;
@@ -365,14 +388,5 @@
         }
       }
     }
-  }
-
-  #rock {
-    height: 115vh;
-    position: relative;
-  }
-
-  @media screen and (min-width: 40em) {
-    top: -20vh;
   }
 </style>
