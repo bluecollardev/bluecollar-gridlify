@@ -162,17 +162,11 @@
 						<textarea
 							name="message"
 							id="message"
-							class="block border-none p0 m0"
+							class="block border-none m0 p2"
 							placeholder="Message"
 							v-model="formData.message"
 							required
 						/>
-						<label
-							for="message"
-							class="absolute top-0 right-0 bottom-0 left-0"
-							aria-hidden="true"
-							>Message</label
-						>
 					</div>
 					<!-- End Input-->
 					<!-- Start Input -->
