@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-black">
+  <main class="bg-evening-blue">
     <!--<intro></intro>-->
     <div :id="this.id" :class="`page-container container relative ${isSafari ? 'is-safari' : isChrome ? 'is-chrome' : ''}`">
       <div class="notifications" v-if="displayNotifications">
