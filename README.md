@@ -1,1 +1,1 @@
-This is the source code for the Blue Collar Development SPA located at https://www.bluecollardev.com. Made using Vue.js, Gridsome Static Site Generator, and Netlify CMS. Animations use CSS/JavaScript/anime.js/GSAP. Deployed using Netlify.
+This is the source code for the Blue Collar Development website. Hand-crafted using Vue.js, Gridsome Static Site Generator, and Netlify CMS. Animations use CSS/JavaScript/anime.js/GSAP. Deployed using Netlify.
