@@ -10,7 +10,7 @@
       :flipX="true"
       :angle="true"
       slotPos="top"
-      className="xs-hide hero-first sm-pad-top pad-bottom-2x text-shadow relative"
+      className="jungle-stream xs-hide hero-first sm-pad-top pad-bottom-2x text-shadow relative"
     >
       <template v-slot:bg>
         <fishing-scene></fishing-scene>
@@ -387,6 +387,12 @@
           text-shadow: 1px 0 3px rgba(0, 0, 0, 0.975) !important;
         }
       }
+    }
+  }
+
+  @media screen and (min-width: 84em) {
+    .jungle-stream {
+      background-position: -420px 0;
     }
   }
 </style>
