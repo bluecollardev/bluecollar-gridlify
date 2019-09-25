@@ -1,58 +1,6 @@
 <template>
   <Layout id="home-page">
     <hero-layout01-col
-      bgColor="bg-evening-blue"
-      title="Lost in the Software Jungle?"
-      subtitle=""
-      description=""
-      imageClass="home-page-banner-image"
-      image=""
-      :flipX="true"
-      :angle="true"
-      slotPos="top"
-      className="hero-first sm-pad-top pad-bottom-2x text-shadow"
-    >
-      <template v-slot:bg>
-        <div class="jungle-bg-container xs-hide" style="align-self: flex-start">
-          <jungle class="jungle-bg"></jungle>
-          <div style="position: fixed; bottom: 15vh; width: 100%;">
-            <img ref="combatRadio" @click="viewDetail('CONSULTANTS')" class="combat-radio xs-hide sm-hide" src="/images/walkie-talkie.svg" />
-          </div>
-        </div>
-      </template>
-
-      <template v-slot:bg2>
-        <forest-scene ref="forestScene"></forest-scene>
-      </template>
-
-      <!--<template v-slot:title>
-        <typewriter-text-effect
-          tag="h2"
-          text="Lost in the Software Jungle?"
-          class="title text-center pad-bottom"
-          :loop="true">
-        </typewriter-text-effect>
-      </template>-->
-
-      <template>
-        <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
-          <div>
-            <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges.</span></p>
-            <p class="text-center">Let our seasoned vets guide you on the path to your dreams.</p>
-            <div class="text-center" style="">
-              <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3">Meet Our Consultants</a>
-            </div>
-          </div>
-        </div>
-      </template>
-    </hero-layout01-col>
-
-    <services
-      :content="servicesContent"
-      :testimonials="serviceTestimonials"
-    />
-
-    <hero-layout01-col
       bgColor="transparent"
       title="We Deliver Results"
       subtitle=""
@@ -62,7 +10,7 @@
       :flipX="true"
       :angle="true"
       slotPos="top"
-      className="hero-second sm-pad-top pad-bottom-2x text-shadow relative"
+      className="hero-first sm-pad-top pad-bottom-2x text-shadow relative"
     >
       <template v-slot:bg>
         <fishing-scene></fishing-scene>
@@ -81,8 +29,8 @@
       <template>
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
           <div>
-            <p class="text-center">At Blue Collar, we build software that's ready for tomorrow's challenges. <span class="xs-hide">By using cutting-edge technologies and employing the latest software design methodologies, we can guarantee that you'll be well prepared and equipped for tomorrow's challenges.</span></p>
-            <p class="text-center">Let our seasoned vets guide you on the path to your dreams.</p>
+            <p class="text-center">At Blue Collar, we use cutting-edge technologies and employ the latest software design methodologies, meaning you'll be well prepared and equipped for tomorrow's challenges.</span></p>
+            <p class="text-center">Looking to reel in your dreams? Look no further.</p>
             <div class="text-center">
               <a @click="viewDetail('PORTFOLIO')" class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
             </div>
@@ -90,6 +38,72 @@
         </div>
       </template>
     </hero-layout01-col>
+
+    <services
+      :content="servicesContent"
+      :testimonials="serviceTestimonials"
+    />
+
+    <!-- DO NOT DELETE THIS IS THE GUITAR!!! -->
+    <hero-layout01-col
+      id="rock"
+      v-if="servicesHero"
+      bgColor="bg-bc-blue"
+      title="Ready to Rock?"
+      subtitle=""
+      description=""
+      imageClass="home-page-banner-image"
+      :flipX="true"
+      :angle="true"
+      slotPos="top"
+      className="text-shadow sm-pad-top pad-bottom-2x"
+      style="height: 115vh; position: relative; top: -20vh;"
+    >
+      <template v-slot:bg v-if="rockAndRoll">
+        <party-lights></party-lights>
+      </template>
+
+      <!--<template v-slot:bg2>
+        <matrix-bg></matrix-bg>
+      </template>-->
+
+      <template v-slot:title>
+        <shrink-words-one-by-one-text-effect
+          tag="h2"
+          text="Are You Ready to Rock?"
+          class="title text-center pad-bottom"
+          :loop="true">
+        </shrink-words-one-by-one-text-effect>
+      </template>
+
+      <template>
+        <div class="guitar-content relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+          <div style="width: 100%;" class="flex flex-column flex-center flex-justify-center">
+            <p class="text-center">Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit.</p>
+            <p class="text-center">We'll take the midnight train to your dream.</p>
+            <br />
+            <p class="text-center"><small><small><b>Tap the strings to jam out to Smoke on the Water.</b></small></small></p>
+            <div
+              class="guitar-block text-center"
+              @mouseover="startRockin.bind(this)()"
+              @mouseleave="stopRockin.bind(this)()">
+              <interactive-guitar :key="Math.random()"></interactive-guitar>
+            </div>
+          </div>
+
+        </div>
+      </template>
+    </hero-layout01-col>
+    <!-- END NOT DELETE THIS IS THE GUITAR!!! -->
+
+    <section id="contact" class="hero-section text-shadow bg-black angle no-pad-top" style="height: 130vh; margin-bottom: -30vh">
+      <google-map-background></google-map-background>
+      <div class="flex flex-center flex-justify-center">
+        <div class="flex flex-basis-half space-top text-center">
+          <contact :formData="formData"></contact>
+        </div>
+      </div>
+    </section>
 
     <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'PORTFOLIO' ? 'Case Studies' : ''">
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
@@ -112,12 +126,15 @@
   import Services from '~/components/home/Services.vue';
   import PortfolioVerticalTimeline from '~/components/portfolio/PortfolioVerticalTimeline.vue';
   import TeamBlock from '~/components/TeamBlock.vue';
+  import Contact from '~/components/Contact.vue';
 
   // Import SVG animations
   import Jungle from '~/components/svg/Jungle.vue';
   import Binoculars from '~/components/svg/Binoculars.vue';
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
   import MatrixBg from '~/components/svg/MatrixBg';
+  import InteractiveGuitar from '~/components/svg/InteractiveGuitar.vue';
+  import PartyLights from '~/components/svg/PartyLights.vue';
 
   // Import scenes
   import ForestScene from '~/components/scenes/ForestScene.vue';
@@ -139,12 +156,17 @@
   import TestimonialMixin from '~/core/mixins/TestimonialMixin';
   import HomeMixin from '~/core/mixins/HomeMixin';
 
+  // Import static data
+  import HomeData from '~/data/Home.yml';
+  import HeroData from '~/data/Hero.yml';
+
   export default {
     components: {
       // Inject components
       Services,
       PortfolioVerticalTimeline,
       TeamBlock,
+      Contact,
       // Inject generic component layouts
       VideoHeroLayout01Col,
       HeroLayout01Col,
@@ -154,6 +176,8 @@
       Binoculars,
       GoogleMapBackground,
       MatrixBg,
+      PartyLights,
+      InteractiveGuitar,
       // Inject scenes
       ForestScene,
       FishingScene,
@@ -180,6 +204,20 @@
         console.log(Vue.prototype.$isServer);
         return (typeof Vue.prototype.$isServer === 'boolean') ? Vue.prototype.$isServer : false
       },
+      heroContent() {
+        return HeroData;
+      },
+      servicesHero() {
+        let items = this.heroContent.items.filter(item => {
+          return item.id === 'services-hero';
+        });
+
+        if (items instanceof Array && items.length > 0) {
+          return items[0];
+        }
+
+        return null
+      },
       servicesContent() {
         const content = [
           this.getHomePageServiceByIndex(0),
@@ -203,6 +241,7 @@
       let state = {
         activeDetail: null,
         formData: {},
+        repaint: Math.random(),
         textEffects: {
           typewriter: TypewriterTextEffect,
           shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
@@ -212,7 +251,8 @@
         },
         contentEffects: {
           simple: SimpleEffect
-        }
+        },
+        rockAndRoll: false,
       };
 
       return state;
@@ -231,7 +271,12 @@
 
         return null
       },*/
-
+      startRockin() {
+        this.$set(this, 'rockAndRoll', true);
+      },
+      stopRockin() {
+        this.$set(this, 'rockAndRoll', false);
+      },
       viewDetail(activeDetail) {
         if (typeof window !== 'undefined') {
 
@@ -247,156 +292,68 @@
       }
     },
     mounted() {
-      if (typeof window !== 'undefined') {
-        this.$refs.forestScene.play();
-      }
+
     }
   }
 </script>
 
 <style lang="scss">
-  .jungle-bg-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    overflow: hidden;
-
-    .jungle-bg {
-      position: relative;
-      filter: brightness(0.45) saturate(0.888);
-      bottom: -70vh;
-    }
+  .guitar-content {
+    z-index: 11;
   }
 
-  .is-safari .jungle-bg-container {
+  /* Temporarily disable labels */
+  .ampstart-input label {
     display: none;
   }
 
-  /*#home-page .hero-second {
-    background-image: url(/images/jungle-stream.svg);
-    background-size: 480%;
-    background-position: 60% bottom;
-  }*/
-
-  #home-page {
-    .hero-second {
-      .hero-section-content {
-        z-index: 2;
-      }
-    }
+  #rock {
+    z-index: 1;
   }
 
-  @media screen and (max-width: 40em) {
-    #home-page {
-      .hero-second {
-        background-attachment: initial;
-        background-size: cover;
-        background-position: 66% 50% !important;
-      }
-    }
+  #contact {
+    z-index: 0;
+    top: -30vh;
   }
 
-  @media screen and (min-width: 40em) {
-    .jungle-bg-container {
-      .jungle-bg {
-        bottom: -68vh;
-      }
-    }
+  /* Override colors */
+  #services {
+    //background-color: #bdcad9;
+    //background-image: linear-gradient(315deg, #bdcad9 0%, #e1dada 74%);
+    //background-color: #111822;
+    //background-image: linear-gradient(15deg, #111822 0%, #33587a 90%);
+    background-color: #d2e6d6;
+    background-image: linear-gradient(175deg, #cce3ea 0%, #d2e6d6 74%);
   }
 
-  @media screen and (min-width: 52em) {
-    .jungle-bg-container {
-      .jungle-bg {
-        bottom: -60vh;
-      }
+  .video-block-bg {
+    //background-color: #33587a;
+    //background-image: linear-gradient(135deg, #525E61 0%, #33587a 100%);
+    background-color: #7FB5D5;
+  }
+
+  .top-row-under,
+  .bottom-row .col-3-squares > .service-detail-card-top:nth-child(2n + 1) {
+    p,
+    a,
+    * {
+      color: #33587a !important; /* Midnight blue */
+      text-shadow: none;
     }
   }
 
   @media screen and (min-width: 64em) {
-    .jungle-bg-container {
-      .jungle-bg {
-        bottom: -55vh;
-      }
-    }
+    .hero-first {
+      &.hero-section-01-col .hero-block {
+        position: relative;
+        top: -3rem;
+        /* top: 6rem; */
+        max-width: 40%;
 
-    #home-page {
-      .hero-first {
-        z-index: 3;
-        min-height: 100vh;
-        overflow: hidden;
-
-        .hero-first-content {
-          z-index: 4;
+        .text-shadow * {
+          text-shadow: 1px 0 3px rgba(0, 0, 0, 0.975) !important;
         }
       }
-
-      #services {
-        transform: translateY(-10vh);
-        z-index: 2;
-        padding: 0 3rem;
-        .angle-mosaic-layout {
-          padding: 10rem 0;
-          box-sizing: border-box;
-        }
-      }
-
-      .hero-second {
-        z-index: 1;
-        transform: translateY(-20vh);
-        background-position: center 25vh;
-      }
     }
-  }
-
-  @media screen and (min-width: 84em) {
-    .jungle-bg-container {
-      .jungle-bg {
-        bottom: -40vh;
-      }
-    }
-  }
-
-  @media screen and (min-width: 102em) {
-    .jungle-bg-container {
-      .jungle-bg {
-        bottom: -43vh;
-      }
-    }
-  }
-
-  .combat-radio {
-    position: relative;
-    max-width: 150px;
-    left: 10vh;
-    cursor: pointer;
-    transform: rotate(-15deg);
-    transform-origin: bottom center;
-
-    &:hover {
-      animation-name: radio_hover;
-      animation-duration: 4.5s;
-      animation-iteration-count: infinite;
-    }
-
-    @keyframes radio_hover {
-      0% {
-        transform: rotate(-15deg);
-      }
-
-      49% {
-        transform: rotate(-12deg);
-      }
-
-      99% {
-        transform: rotate(-15deg);
-      }
-    }
-  }
-
-  .hero-section-content {
-    background: radial-gradient(ellipse at center,rgba(40, 68, 94,.33333) 0,transparent 65%,transparent 100%);
-    background-size: contain;
-    min-height: 60vh;
   }
 </style>

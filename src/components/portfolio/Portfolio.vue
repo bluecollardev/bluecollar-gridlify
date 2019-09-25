@@ -183,15 +183,6 @@
         }
       });*/
 
-      const flipCardSelector = '.service-detail-card-inner';
-      const flipCardsContent = document.querySelectorAll(flipCardSelector);
-
-      this.initFlipCards(
-        flipCardsContent,
-        '.service-detail-card-front',
-        '.service-detail-card-back'
-      );
-
       if (window) {
         window.addEventListener('resize', () => {
           this.$set(this, 'repaint', Math.random());

@@ -1,7 +1,7 @@
 <template>
-  <section id="services" class="hero-section angle bg-midnight-blue">
+  <section id="services" class="hero-section angle">
     <!--<matrix-bg></matrix-bg>-->
-    <angle-mosaic-layout primaryColor="transparent" secondaryColor="bg-bc-blue">
+    <angle-mosaic-layout primaryColor="transparent" secondaryColor="bg-light-grey">
       <template v-slot:slot1Bg>
         <div class="bg-bc-blue video-block-bg drop-shadow rotate-right is-hidden--sm-down">
         </div>

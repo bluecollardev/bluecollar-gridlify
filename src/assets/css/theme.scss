@@ -368,4 +368,149 @@ a.action-link {
   }
 }
 
+.jungle-bg-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+
+  .jungle-bg {
+    position: relative;
+    filter: brightness(0.45) saturate(0.888);
+    bottom: -70vh;
+  }
+}
+
+.is-safari .jungle-bg-container {
+  display: none;
+}
+
+/*#home-page .hero-second {
+  background-image: url(/images/jungle-stream.svg);
+  background-size: 480%;
+  background-position: 60% bottom;
+}*/
+
+#home-page {
+  .hero-second {
+    .hero-section-content {
+      z-index: 2;
+    }
+  }
+}
+
+@media screen and (max-width: 40em) {
+  #home-page {
+    .hero-second {
+      background-attachment: initial;
+      background-size: cover;
+      background-position: 66% 50% !important;
+    }
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .jungle-bg-container {
+    .jungle-bg {
+      bottom: -68vh;
+    }
+  }
+}
+
+@media screen and (min-width: 52em) {
+  .jungle-bg-container {
+    .jungle-bg {
+      bottom: -60vh;
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .jungle-bg-container {
+    .jungle-bg {
+      bottom: -55vh;
+    }
+  }
+
+  #home-page {
+    .hero-first {
+      z-index: 3;
+      min-height: 100vh;
+      overflow: hidden;
+
+      .hero-first-content {
+        z-index: 4;
+      }
+    }
+
+    #services {
+      transform: translateY(-10vh);
+      z-index: 2;
+      padding: 0 3rem;
+      .angle-mosaic-layout {
+        padding: 10rem 0;
+        box-sizing: border-box;
+      }
+    }
+
+    .hero-second {
+      z-index: 1;
+      transform: translateY(-20vh);
+      background-position: center 25vh;
+    }
+  }
+}
+
+@media screen and (min-width: 84em) {
+  .jungle-bg-container {
+    .jungle-bg {
+      bottom: -40vh;
+    }
+  }
+}
+
+@media screen and (min-width: 102em) {
+  .jungle-bg-container {
+    .jungle-bg {
+      bottom: -43vh;
+    }
+  }
+}
+
+.combat-radio {
+  position: relative;
+  max-width: 150px;
+  left: 10vh;
+  cursor: pointer;
+  transform: rotate(-15deg);
+  transform-origin: bottom center;
+
+  &:hover {
+    animation-name: radio_hover;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes radio_hover {
+    0% {
+      transform: rotate(-15deg);
+    }
+
+    49% {
+      transform: rotate(-12deg);
+    }
+
+    99% {
+      transform: rotate(-15deg);
+    }
+  }
+}
+
+.hero-section-content {
+  background: radial-gradient(ellipse at center,rgba(40, 68, 94,.33333) 0,transparent 65%,transparent 100%);
+  background-size: contain;
+  min-height: 60vh;
+}
+
 

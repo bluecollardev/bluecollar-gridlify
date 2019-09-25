@@ -1,56 +1,51 @@
 <template>
   <Layout :key="repaint">
-    <!-- DO NOT DELETE THIS IS THE GUITAR!!! -->
     <hero-layout01-col
-      id="rock"
-      v-if="servicesHero"
       bgColor="bg-evening-blue"
-      title="Ready to Rock?"
+      title="Lost in the Software Jungle?"
       subtitle=""
       description=""
       imageClass="home-page-banner-image"
+      image=""
       :flipX="true"
       :angle="true"
       slotPos="top"
-      className="text-shadow sm-pad-top pad-bottom-2x"
-      style="height: 115vh"
+      className="hero-first sm-pad-top pad-bottom-2x text-shadow"
     >
-      <template v-slot:bg v-if="rockAndRoll">
-        <party-lights></party-lights>
+      <template v-slot:bg>
+        <div class="jungle-bg-container xs-hide" style="align-self: flex-start">
+          <jungle class="jungle-bg"></jungle>
+          <div style="position: fixed; bottom: 15vh; width: 100%;">
+            <img ref="combatRadio" @click="viewDetail('CONSULTANTS')" class="combat-radio xs-hide sm-hide" src="/images/walkie-talkie.svg" />
+          </div>
+        </div>
       </template>
 
-      <!--<template v-slot:bg2>
-        <matrix-bg></matrix-bg>
-      </template>-->
+      <template v-slot:bg2>
+        <forest-scene ref="forestScene"></forest-scene>
+      </template>
 
-      <template v-slot:title>
-        <shrink-words-one-by-one-text-effect
+      <!--<template v-slot:title>
+        <typewriter-text-effect
           tag="h2"
-          text="Are You Ready to Rock?"
+          text="Lost in the Software Jungle?"
           class="title text-center pad-bottom"
           :loop="true">
-        </shrink-words-one-by-one-text-effect>
-      </template>
+        </typewriter-text-effect>
+      </template>-->
 
       <template>
-        <div class="guitar-content relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
-          <div style="width: 100%;" class="flex flex-column flex-center flex-justify-center">
-            <p class="text-center">Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit.</p>
-            <p class="text-center">We'll take the midnight train to your dream.</p>
-            <br />
-            <p class="text-center"><small><small><b>Click the strings to ROCK OUT</b></small></small></p>
-            <div
-              class="guitar-block text-center"
-              @mouseover="startRockin.bind(this)()"
-              @mouseleave="stopRockin.bind(this)()">
-              <interactive-guitar :key="Math.random()"></interactive-guitar>
+        <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
+          <div>
+            <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges.</span></p>
+            <p class="text-center">Let our seasoned vets guide you on the path to your dreams.</p>
+            <div class="text-center" style="">
+              <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3">Meet Our Consultants</a>
             </div>
           </div>
-
         </div>
       </template>
     </hero-layout01-col>
-    <!-- END NOT DELETE THIS IS THE GUITAR!!! -->
 
     <section id="contact" class="hero-section text-shadow bg-black angle no-pad-top" style="height: 130vh; margin-bottom: 58vh">
       <google-map-background></google-map-background>
@@ -189,17 +184,6 @@
 
         return null
       },
-      servicesHero() {
-        let items = this.heroContent.items.filter(item => {
-          return item.id === 'services-hero';
-        });
-
-        if (items instanceof Array && items.length > 0) {
-          return items[0];
-        }
-
-        return null
-      },
       projectsSection() {
         let items = this.heroContent.items.filter(item => {
           return item.id === 'projects-hero';
@@ -209,12 +193,6 @@
       },
     },
     methods: {
-      startRockin() {
-        this.$set(this, 'rockAndRoll', true);
-      },
-      stopRockin() {
-        this.$set(this, 'rockAndRoll', false);
-      },
       isLoaded() {
         // let isLoaded = false;
 
@@ -246,19 +224,14 @@
         }
       });*/
 
-      const flipCardSelector = '.service-detail-card-inner';
-      const flipCardsContent = document.querySelectorAll(flipCardSelector);
-
-      this.initFlipCards(
-        flipCardsContent,
-        '.service-detail-card-front',
-        '.service-detail-card-back'
-      );
-
       if (window) {
         window.addEventListener('resize', () => {
           this.$set(this, 'repaint', Math.random());
         });
+      }
+
+      if (typeof window !== 'undefined') {
+        this.$refs.forestScene.play();
       }
     },
     beforeDestroy() {
@@ -267,23 +240,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  .guitar-content {
-    z-index: 11;
-  }
-
-  /* Temporarily disable labels */
-  .ampstart-input label {
-    display: none;
-  }
-
-  #rock {
-    z-index: 2;
-  }
-
-  #contact {
-    z-index: 1;
-    top: -9vh;
-  }
-</style>
