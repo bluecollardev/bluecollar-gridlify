@@ -2,7 +2,7 @@
   <Layout id="home-page">
     <hero-layout01-col
       bgColor="transparent"
-      title="We Deliver Results"
+      title="Experiences that Reel in Results"
       subtitle=""
       description=""
       imageClass="home-page-banner-image"
