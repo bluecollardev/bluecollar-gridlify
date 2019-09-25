@@ -78,17 +78,20 @@
         this.displayNotifications = false
       },
       attachScrollListener() {
-        window.addEventListener('scroll', this.handleScroll.bind(this));
+        //window.addEventListener('scroll', this.handleScroll.bind(this));
       },
+      /**
+       * TODO: This is janky... and no longer necessary... besides, it screws up in IE and FF
+       */
       handleScroll() {
-        if (!document.getElementById('loader')) {
+        /*if (!document.getElementById('loader')) {
           if (Math.abs(this.lastScroll - window.scrollY) <= 5) return;
 
           // Strip the hash
           this.removeHash();
 
           this.lastScroll = window.scrollY;
-        }
+        }*/
       },
       removeHash () {
         if (typeof window !== 'undefined') window.location.hash = '';
