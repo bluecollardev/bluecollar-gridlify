@@ -117,7 +117,7 @@
 
                 <div class="card-content-action flex">
                   <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                    <a class="action-link g-pstyle3" href="/contact">Get Started</a>
+                    <a class="action-link g-pstyle3" href="/#contact">Get Started</a>
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@
 
                 <div class="card-content-action flex">
                   <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                    <a class="action-link g-pstyle3" href="/contact">Get Started</a>
+                    <a class="action-link g-pstyle3" href="/#contact">Get Started</a>
                   </div>
                 </div>
               </div>
@@ -247,7 +247,7 @@
 
                 <div class="card-content-action flex">
                   <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                    <a class="action-link g-pstyle3" href="/contact">Contact Us</a>
+                    <a class="action-link g-pstyle3" href="/#contact">Contact Us</a>
                   </div>
                 </div>
               </div>
@@ -357,7 +357,7 @@
 
                 <div class="card-content-action flex">
                   <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                    <a class="action-link g-pstyle3" href="/contact">Get Started</a>
+                    <a class="action-link g-pstyle3" href="/#contact">Get Started</a>
                   </div>
                 </div>
               </div>
@@ -421,7 +421,7 @@
 
                 <div class="card-content-action flex">
                   <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                    <a class="action-link g-pstyle3" href="/contact">Get Started</a>
+                    <a class="action-link g-pstyle3" href="/#contact">Get Started</a>
                   </div>
                 </div>
               </div>
@@ -482,7 +482,7 @@
 
                 <div class="card-content-action flex">
                   <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                    <a class="action-link g-pstyle3" href="/contact">Contact Us</a>
+                    <a class="action-link g-pstyle3" href="/#contact">Contact Us</a>
                   </div>
                 </div>
               </div>
@@ -611,7 +611,7 @@
 
                 <div class="card-content-action flex">
                   <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                    <a class="action-link g-pstyle3" href="/contact">Get Started</a>
+                    <a class="action-link g-pstyle3" href="/#contact">Get Started</a>
                   </div>
                 </div>
               </div>
@@ -680,7 +680,7 @@
 
                 <div class="card-content-action flex">
                   <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                    <a class="action-link g-pstyle3" href="/contact">Get Started</a>
+                    <a class="action-link g-pstyle3" href="/#contact">Get Started</a>
                   </div>
                 </div>
               </div>
@@ -736,7 +736,7 @@
 
                 <div class="card-content-action flex">
                   <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                    <a class="action-link g-pstyle3" href="/contact">Contact Us</a>
+                    <a class="action-link g-pstyle3" href="/#contact">Contact Us</a>
                   </div>
                 </div>
               </div>
@@ -829,7 +829,7 @@
 
                 <div class="card-content-action flex">
                   <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                    <a class="action-link g-pstyle3" href="/contact">Get Started</a>
+                    <a class="action-link g-pstyle3" href="/#contact">Get Started</a>
                   </div>
                 </div>
               </div>
@@ -896,7 +896,7 @@
 
                 <div class="card-content-action flex">
                   <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                    <a class="action-link g-pstyle3" href="/contact">Get Started</a>
+                    <a class="action-link g-pstyle3" href="/#contact">Get Started</a>
                   </div>
                 </div>
               </div>
@@ -952,7 +952,7 @@
 
                 <div class="card-content-action flex">
                   <div class="action-link-block g-cta-contact text-center space-top-half space-bottom-half">
-                    <a class="action-link g-pstyle3" href="/contact">Contact Us</a>
+                    <a class="action-link g-pstyle3" href="/#contact">Contact Us</a>
                   </div>
                 </div>
               </div>
