@@ -42,7 +42,7 @@
     </section>
 
     <section :class="`top-row-under slot2-container hero-section angle shift-section-up ${primaryColor} xs-hide sm-hide pad-top no-pad-bottom lg-flex flex-justify-center`">
-      <div class="col-3-squares pad-top pad-bottom lg-flex">
+      <div class="col-3-squares pad-top pad-bottom lg-flex flex-justify-center">
         <!-- Slot 2 -->
         <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide">
           <slot name="slot2Bg"></slot>
@@ -148,6 +148,8 @@
           this.$set(this, 'repaint', Math.random());
         });
       }
+
+      this.$set(this, 'repaint', Math.random());
     },
     beforeDestroy() {
       console.log('remove wrapTitleText resize listener');
