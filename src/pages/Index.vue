@@ -395,4 +395,10 @@
       background-position: -420px 0;
     }
   }
+
+  .panel-header {
+    h2 {
+      font-size: 27px;
+    }
+  }
 </style>
