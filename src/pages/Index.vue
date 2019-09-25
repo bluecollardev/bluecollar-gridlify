@@ -57,7 +57,6 @@
       :angle="true"
       slotPos="top"
       className="text-shadow sm-pad-top pad-bottom-2x"
-      style="height: 115vh; position: relative; top: -20vh;"
     >
       <template v-slot:bg v-if="rockAndRoll">
         <party-lights></party-lights>
@@ -71,7 +70,7 @@
         <shrink-words-one-by-one-text-effect
           tag="h2"
           text="Are You Ready to Rock?"
-          class="title text-center pad-bottom"
+          class="title text-center pad-bottom pad-top-2x"
           :loop="true">
         </shrink-words-one-by-one-text-effect>
       </template>
@@ -314,14 +313,14 @@
   #contact {
     z-index: 0;
     height: auto;
-    top: -30vh;
+    top: 0vh;
     position: relative;
   }
 
   @media screen and (min-width: 84em) {
     #contact {
       z-index: 0;
-      top: -30vh;
+      top: -10vh;
       height: 130vh;
       margin-bottom: -30vh
     }
@@ -366,5 +365,14 @@
         }
       }
     }
+  }
+
+  #rock {
+    height: 115vh;
+    position: relative;
+  }
+
+  @media screen and (min-width: 40em) {
+    top: -20vh;
   }
 </style>

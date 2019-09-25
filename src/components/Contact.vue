@@ -13,7 +13,7 @@
 		<fieldset class="border-none p0 m0 pad-all">
 			<typewriter-text-effect
 				tag="h2"
-				text="Contact Us For a Free Consultation"
+				text="Get in Touch"
 				class="title text-center pad-bottom">
 			</typewriter-text-effect>
 			<h2 class="block text-center mb-4 space-top">
