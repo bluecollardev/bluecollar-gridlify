@@ -154,13 +154,13 @@
         const startX = anchorCoords.left;
 
         //console.log(`orig x: ${anchorCoords.x}, y: ${anchorCoords.y}`);
-        console.log(`start x: ${startX}, y: ${startY}`);
+        //console.log(`start x: ${startX}, y: ${startY}`);
 
         const canvas = SVG('casting-line');
         canvas.size(document.body.clientWidth, 1200);
 
         const curveDef = `M ${startX} ${startY} C ${startX - 400},${startY} ${startX - 500},${startY + 200} ${startX - 500},700`;
-        console.log('curve def ' + curveDef);
+        //console.log('curve def ' + curveDef);
         const castingLine = canvas.path(curveDef)
           .fill('none').stroke({ color: '#000', width: 1 });
 
@@ -196,12 +196,12 @@
             // Update line length
             if (endY > coords.top + 100) {
               reelingLine.plot(`M 0 0 L 1 ${endY}`);
-              console.log(`line length: ${endY - coords.top}`);
+              //console.log(`line length: ${endY - coords.top}`);
               document.querySelector('.fish-caught').style.top = `${endY + 170}px`;
             }
 
             const fishX = coords.left;
-            console.log(`fish x: ${fishX}, y: ${endY}`);
+            //console.log(`fish x: ${fishX}, y: ${endY}`);
             // Subtract half the width of the fish so it's centered
             document.querySelector('.fish-caught').style.left = `${fishX - 69}px`;
 
