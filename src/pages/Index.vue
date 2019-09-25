@@ -335,7 +335,7 @@
     #contact {
       z-index: 0;
       top: -30vh;
-      height: 130vh;
+      height: 100vh;
       margin-bottom: -30vh
     }
   }

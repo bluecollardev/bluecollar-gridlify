@@ -1,5 +1,51 @@
 <template>
   <Layout :key="repaint">
+    <hero-layout01-col
+      bgColor="bg-evening-blue"
+      title="Lost in the Software Jungle?"
+      subtitle=""
+      description=""
+      imageClass="home-page-banner-image"
+      image=""
+      :flipX="true"
+      :angle="true"
+      slotPos="top"
+      className="hero-first sm-pad-top pad-bottom-2x text-shadow"
+    >
+      <template v-slot:bg>
+        <div class="jungle-bg-container xs-hide" style="align-self: flex-start">
+          <jungle class="jungle-bg"></jungle>
+          <div style="position: fixed; bottom: 15vh; width: 100%;">
+            <img ref="combatRadio" @click="viewDetail('CONSULTANTS')" class="combat-radio xs-hide sm-hide" src="/images/walkie-talkie.svg" />
+          </div>
+        </div>
+      </template>
+
+      <template v-slot:bg2>
+        <forest-scene ref="forestScene"></forest-scene>
+      </template>
+
+      <!--<template v-slot:title>
+        <typewriter-text-effect
+          tag="h2"
+          text="Lost in the Software Jungle?"
+          class="title text-center pad-bottom"
+          :loop="true">
+        </typewriter-text-effect>
+      </template>-->
+
+      <template>
+        <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
+          <div>
+            <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges.</span></p>
+            <p class="text-center">Let our seasoned vets guide you on the path to your dreams.</p>
+            <div class="text-center" style="">
+              <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3">Meet Our Consultants</a>
+            </div>
+          </div>
+        </div>
+      </template>
+    </hero-layout01-col>
   </Layout>
 </template>
 
