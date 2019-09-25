@@ -5,7 +5,7 @@
         <div class="flex-basis-two-thirds sm-flex sm-flex-justify-left">
           <div class="sm-flex flex-justify-between">
           <div class="copyright g-footer">
-            <p class="g-pstyle15">&copy; Blue Collar Development Ltd. 2019<br /><small><small>All rights reserved.</small></small></p>
+            <p class="g-pstyle15">&copy; 2019 Blue Collar Development<br /><small><small>Victoria, BC, Canada. All rights reserved.</small></small></p>
           </div>
         </div>
         </div>
