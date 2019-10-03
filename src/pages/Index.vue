@@ -420,10 +420,6 @@
   }
 
   @media screen and (max-width: 64em) and (orientation: portrait) {
-    section.hero-section {
-      border-bottom: none !important;
-    }
-
     #services {
       top: -10vh;
       padding-top: 10vh; /* Offset */

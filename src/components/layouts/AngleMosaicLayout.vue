@@ -175,12 +175,11 @@
   }
 
   .video-block-bg {
-    border: 1px solid rgba(255,255,255,0.5);
+    // border: 1px solid rgba(255,255,255,0.5);
   }
 
   .slot2-container {
     width: 100%;
-    /*border-top: 1px solid rgba(255,255,255,0.5);*/
     /* Override .hero-section */
     position: absolute !important;
     top: 0;
@@ -198,7 +197,6 @@
 
       .slot2-container {
         width: 100%;
-        /*border-top: 1px solid rgba(255,255,255,0.5);*/
         /* Override .hero-section */
         position: absolute !important;
         top: 10rem; /* Need to adjust for padding in Index move this to theme... */

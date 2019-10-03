@@ -19,13 +19,6 @@
   transform: rotateY(180deg);
 }
 
-.service-detail-card-top {
-  border-bottom: 1px solid rgba(255,255,255,0.5);
-  &.fixed-height-mobile {
-    // min-height: 100vh; // TODO: I think I fixed the underlying need for this...
-  }
-}
-
 .service-detail-card-top:hover::before {
   background-image: radial-gradient(black 35%, transparent 25%);
   background-size: 2px 2px;
