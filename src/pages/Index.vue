@@ -357,6 +357,11 @@
       background-color: #111822;
       background-image: linear-gradient(15deg, #111822 0%, #33587a 90%);
     }
+
+    /* iOS background-attachment doesn't play well */
+    .hero-section-01-col {
+      background-attachment: initial;
+    }
   }
 
 
