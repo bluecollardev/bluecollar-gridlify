@@ -494,6 +494,13 @@
     }
   }
 
+  @media screen and (min-width: 130em) {
+    .jungle-stream {
+      background-position: 50% 50%;
+      background-attachment: fixed;
+    }
+  }
+
   .panel-header {
     h2 {
       font-size: 27px;

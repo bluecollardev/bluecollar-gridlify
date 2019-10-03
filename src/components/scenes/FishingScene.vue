@@ -279,7 +279,8 @@
     left: 16px;
   }
 
-  @media screen and (min-width: 102em) {
+  /* Can't use standard breakpoint for this one */
+  @media screen and (min-width: 90em) {
     .line-anchor {
       width: 2px;
       height: 2px;
