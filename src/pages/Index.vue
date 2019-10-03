@@ -357,7 +357,7 @@
   }
 
   /* Override colors */
-  @media screen and (max-width: 40em) {
+  @media screen and (max-width: 64em) {
     #services {
       background-color: #111822;
       background-image: linear-gradient(15deg, #111822 0%, #33587a 90%);
@@ -368,6 +368,28 @@
       &.jungle-stream {
         background-position: 70% 0%; /* Shift background to the right */
       }
+    }
+  }
+
+  @media screen and (max-width: 64em) and (orientation: portrait) {
+    .jungle-stream {
+      z-index: 3;
+    }
+
+    #services {
+      top: -10vh;
+      padding-top: 10vh; /* Offset */
+      padding-bottom: 10vh;
+      position: relative;
+      z-index: 2;
+    }
+
+    #rock {
+      z-index: 1;
+    }
+
+    #contact {
+      top: 0vh;
     }
   }
 

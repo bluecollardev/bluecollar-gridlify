@@ -131,7 +131,7 @@ header #hamburger {
 }
 
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 52em) {
   /*header {
     position: absolute !important;
   }*/
@@ -236,7 +236,7 @@ header #hamburger span {
   background-color: var(--cgrey);
   opacity: 0.5;
 }
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 52em) {
   body {padding-top: 48px;}
   header .wrap {
     height: 48px;
