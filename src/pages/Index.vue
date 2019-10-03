@@ -30,8 +30,8 @@
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
           <div>
             <p class="text-center">At Blue Collar, we use cutting-edge technologies and employ the latest software design methodologies to drive the creation of amazing user experiences.</span></p>
-            <p class="text-center">Our seasoned team of experience experts and software vetrans at Blue Collar Development specialize in helping you reel in the prize catch of your dreams.</p>
-            <p class="text-center"><small><small><b>Hint: Click the fishing rod's handle to catch a Red Snapper! Very tasty!</b></small></small></p>
+            <p class="text-center xs-hide">Our seasoned team of experience experts and software vetrans at Blue Collar Development specialize in helping you reel in the prize catch of your dreams.</p>
+            <p class="text-center xs-hide"><small><small><b>Hint: Click the fishing rod's handle to catch a Red Snapper! Very tasty!</b></small></small></p>
             <div class="text-center">
               <a @click="viewDetail('PORTFOLIO')" class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
             </div>
