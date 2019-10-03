@@ -102,8 +102,19 @@
         object-fit: contain;
         width: 150px;
         height: 150px;
+        top: 0;
         left: 0;
-        top: -49px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 115em) {
+    .content-image {
+      img {
+        width: 200px;
+        height: 200px;
+        left: 25px;
+        top: -50px;
       }
     }
   }

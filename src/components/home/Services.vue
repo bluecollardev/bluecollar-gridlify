@@ -253,3 +253,13 @@
     }
   }
 </script>
+
+<style lang="scss">
+  @media screen and (max-width: 64em) {
+    #services {
+      .content-block {
+        margin-top: auto;
+      }
+    }
+  }
+</style>

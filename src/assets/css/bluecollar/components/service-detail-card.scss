@@ -22,7 +22,7 @@
 .service-detail-card-top {
   border-bottom: 1px solid rgba(255,255,255,0.5);
   &.fixed-height-mobile {
-    min-height: 100vh;
+    // min-height: 100vh; // TODO: I think I fixed the underlying need for this...
   }
 }
 
@@ -49,7 +49,6 @@
 
 @media screen and (min-width: 40em) {
   .service-detail-card-top {
-    border-bottom: none;
     position: relative;
   }
 }
@@ -78,6 +77,12 @@
   .service-detail-card-inner {
     min-height: auto;
     max-height: 100%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .service-detail-card-front {
+    border-bottom: none;
   }
 }
 

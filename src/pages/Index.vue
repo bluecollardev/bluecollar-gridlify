@@ -420,15 +420,7 @@
   }
 
   @media screen and (max-width: 64em) and (orientation: portrait) {
-    .jungle-stream {
-    }
-
     section.hero-section {
-      border-bottom: none !important;
-    }
-
-
-    .bottom-row .service-detail-card-top {
       border-bottom: none !important;
     }
 
@@ -446,6 +438,12 @@
 
     #contact {
       top: 0;
+    }
+  }
+
+  @media screen and (max-width: 84em) and (orientation: portrait) {
+    .bottom-row .service-detail-card-top {
+      border-bottom: none !important;
     }
   }
 
