@@ -371,9 +371,55 @@
     }
   }
 
+  @media screen and (max-width: 64em) {
+    .jungle-stream {
+      z-index: 4;
+    }
+
+    #services {
+      z-index: 3;
+    }
+
+    #rock {
+      z-index: 2;
+    }
+
+    #contact {
+      z-index: 1;
+    }
+  }
+
+  @media screen and (max-width: 64em) and (orientation: landscape) {
+    .jungle-stream {
+      padding-bottom: 50vh;
+    }
+
+    #services {
+      top: -10vh;
+      padding-top: 20vh; /* Offset */
+      padding-bottom: 20vh;
+      position: relative;
+    }
+
+    #rock {
+    }
+
+    #contact {
+      top: 0;
+    }
+  }
+
   @media screen and (max-width: 64em) and (orientation: portrait) {
     .jungle-stream {
-      z-index: 3;
+    }
+
+    section.hero-section {
+      border-bottom: none !important;
+    }
+
+
+    .bottom-row .service-detail-card-top {
+      border-bottom: none !important;
     }
 
     #services {
@@ -381,15 +427,15 @@
       padding-top: 10vh; /* Offset */
       padding-bottom: 10vh;
       position: relative;
-      z-index: 2;
+      border-bottom: none !important;
     }
 
     #rock {
-      z-index: 1;
+      padding-bottom: 30vh;
     }
 
     #contact {
-      top: 0vh;
+      top: 0;
     }
   }
 
