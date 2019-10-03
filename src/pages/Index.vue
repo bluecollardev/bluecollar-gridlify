@@ -410,4 +410,13 @@
       font-size: 27px;
     }
   }
+
+  @media screen and (max-width: 40em) {
+    #contact .ampstart-input {
+      > * {
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
 </style>
