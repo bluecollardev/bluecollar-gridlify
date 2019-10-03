@@ -13,7 +13,7 @@
       className="jungle-stream hero-first sm-pad-top pad-bottom-2x text-shadow relative"
     >
       <template v-slot:bg>
-        <fishing-scene></fishing-scene>
+        <fishing-scene class="xs-hide sm-hide"></fishing-scene>
       </template>
 
       <template v-slot:title>
@@ -332,6 +332,11 @@
     position: relative;
   }
 
+  /* iOS background-attachment doesn't play well */
+  .hero-section-01-col {
+    background-attachment: initial;
+  }
+
   @media screen and (min-width: 40em) {
     #contact {
       z-index: 0;
@@ -360,7 +365,6 @@
 
     /* iOS background-attachment doesn't play well */
     .hero-section-01-col {
-      background-attachment: initial;
       &.jungle-stream {
         background-position: 70% 0%; /* Shift background to the right */
       }
@@ -402,6 +406,7 @@
   @media screen and (min-width: 84em) {
     .jungle-stream {
       background-position: -420px 0;
+      background-attachment: fixed;
     }
   }
 
