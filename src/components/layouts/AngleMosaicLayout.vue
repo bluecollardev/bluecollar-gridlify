@@ -62,7 +62,7 @@
     <section :class="`bottom-row hero-section angle shift-section-up ${primaryColor} no-pad-bottom lg-flex`">
       <div :class="`col-3-squares no-pad-bottom lg-flex flex-basis-full`">
         <!-- Slot 4 -->
-        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide">
+        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
           <slot name="slot4Bg"></slot>
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
@@ -89,7 +89,7 @@
         <!-- END Slot 5 -->
 
         <!-- Slot 6 -->
-        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide">
+        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
           <slot name="slot6Bg"></slot>
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">

@@ -11,7 +11,7 @@ services:
     linkText: Get Started
   - title: Bulletproof Software
     description: >-
-      We're Kevlar Vests for ideas. Feature creep, maintenance, and bad actors will try to shoot you down. We stop those bullets so you don't have to.
+      Feature creep, maintenance, and bad actors will try to shoot you down. We stop those bullets so you don't have to.
     link: '/#contact'
     linkText: Get Started
   - title: Delicious Websites

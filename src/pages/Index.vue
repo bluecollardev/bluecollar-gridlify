@@ -341,7 +341,7 @@
     #contact {
       z-index: 0;
       top: -30vh;
-      height: 110vh;
+      height: 130vh;
       margin-bottom: -30vh
     }
   }
@@ -468,6 +468,12 @@
           text-shadow: 1px 0 3px rgba(0, 0, 0, 0.975) !important;
         }
       }
+    }
+  }
+
+  @media screen and (min-width: 64em) {
+    .jungle-stream {
+      background-position: 60% 0;
     }
   }
 

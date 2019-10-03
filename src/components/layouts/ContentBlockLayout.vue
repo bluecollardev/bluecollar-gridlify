@@ -76,10 +76,6 @@
       margin-right: auto;
       height: auto;
     }
-
-    .content-block {
-      min-height: 60vh;
-    }
   }
 
   @media screen and (min-width: 64em) and (max-width: 84em) {

@@ -274,9 +274,21 @@
     height: 2px;
     background: black;
     display: inline-block;
-    top: -77px;
+    top: 36px;
     position: relative;
-    left: 36px;
+    left: 16px;
+  }
+
+  @media screen and (min-width: 102em) {
+    .line-anchor {
+      width: 2px;
+      height: 2px;
+      background: #000;
+      display: inline-block;
+      top: -77px;
+      position: relative;
+      left: 36px;
+    }
   }
 
   @keyframes casting_line {

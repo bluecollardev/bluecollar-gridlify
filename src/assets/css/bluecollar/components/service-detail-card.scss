@@ -75,14 +75,26 @@
 }
 
 @media screen and (min-width: 40em) {
+  .service-detail-card-inner {
+    min-height: auto;
+    max-height: 100%;
+  }
+}
+
+@media screen and (min-width: 40em) and (orientation: landscape) {
   .service-detail-card-top {
     &.fixed-height-mobile {
       min-height: 50vh;
     }
   }
+}
 
-  .service-detail-card-inner {
-    min-height: auto;
+@media screen and (min-width: 40em) and (orientation: portrait) {
+  .service-detail-card-top {
+    &.fixed-height-mobile {
+      min-height: 33.33333vh;
+      max-height: 33.33333vh;
+    }
   }
 }
 
