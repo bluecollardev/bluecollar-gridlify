@@ -10,7 +10,7 @@
       :flipX="true"
       :angle="true"
       slotPos="top"
-      className="jungle-stream xs-hide hero-first sm-pad-top pad-bottom-2x text-shadow relative"
+      className="jungle-stream hero-first sm-pad-top pad-bottom-2x text-shadow relative"
     >
       <template v-slot:bg>
         <fishing-scene></fishing-scene>
