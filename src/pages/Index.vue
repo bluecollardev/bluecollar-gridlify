@@ -298,6 +298,10 @@
 </script>
 
 <style lang="scss">
+  * {
+    box-sizing: border-box;
+  }
+
   .guitar-content {
     z-index: 11;
   }
@@ -328,7 +332,7 @@
   #contact {
     z-index: 0;
     height: auto;
-    top: 0vh;
+    top: 0;
     position: relative;
   }
 
@@ -342,7 +346,13 @@
       z-index: 0;
       top: -30vh;
       height: 130vh;
-      margin-bottom: -30vh
+      margin-bottom: -5vh;
+    }
+  }
+
+  @media screen and (min-width: 64em) {
+    #contact {
+      margin-bottom: -30vh;
     }
   }
 

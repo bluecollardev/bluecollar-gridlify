@@ -81,7 +81,7 @@
   }
 }
 
-@media screen and (min-width: 40em) and (orientation: landscape) {
+@media screen and (min-width: 64em) and (orientation: landscape) {
   .service-detail-card-top {
     &.fixed-height-mobile {
       min-height: 50vh;
@@ -89,7 +89,7 @@
   }
 }
 
-@media screen and (min-width: 40em) and (orientation: portrait) {
+@media screen and (min-width: 64em) and (orientation: portrait) {
   .service-detail-card-top {
     &.fixed-height-mobile {
       min-height: 33.33333vh;
