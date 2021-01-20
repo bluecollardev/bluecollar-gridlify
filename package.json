@@ -17,7 +17,7 @@
 		"basscss-typography": "^3.0.4",
 		"fs": "^0.0.1-security",
 		"gridsome": "^0.6.5",
-		"gsap": "^2.1.3",
+		"gsap": "^3.6.0",
 		"lozad": "^1.9.0",
 		"marked": "^0.6.2",
 		"node-sass": "^4.11.0",
