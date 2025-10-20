@@ -15,7 +15,7 @@
         <p class="g-pstyle5" style="text-align: right;">{{ this.subCaption }}</p>
       </div>-->
       <div class="hero-block">
-        <div class="flex flex-column">
+        <div class="flex flex-column relative">
           <slot name="title" v-if="this.$slots.title" class="sm-space-bottom-half"></slot>
 
           <slot v-if="this.slotPos !== 'top'"></slot>

@@ -59,10 +59,6 @@
       slotPos="top"
       className="text-shadow sm-pad-top pad-bottom-2x"
     >
-      <template v-slot:bg>
-        <party-lights v-if="rockAndRoll"></party-lights>
-      </template>
-
       <!--<template v-slot:bg2>
         <matrix-bg></matrix-bg>
       </template>-->
@@ -76,6 +72,10 @@
         </shrink-words-one-by-one-text-effect>
       </template>
 
+      <template v-slot:bg>
+        <simple-party-lights v-if="rockAndRoll"></simple-party-lights>
+      </template>
+
       <template>
         <div class="guitar-content relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
           <div style="width: 100%;" class="flex flex-column flex-center flex-justify-center">
@@ -84,7 +84,9 @@
             <br />
             <p class="text-center"><small><small><b>Hint: Click the strings to the beat of "Smoke on the Water".</b></small></small></p>
             <div
-              class="guitar-block text-center">
+              class="guitar-block text-center"
+              @mouseenter="startRockin"
+              @mouseleave="stopRockin">
               <interactive-guitar :key="Math.random()"></interactive-guitar>
             </div>
           </div>
@@ -133,7 +135,7 @@
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
   import MatrixBg from '~/components/svg/MatrixBg.vue';
   import InteractiveGuitar from '~/components/svg/InteractiveGuitar.vue';
-  import PartyLights from '~/components/svg/PartyLights.vue';
+  import SimplePartyLights from '~/components/svg/SimplePartyLights.vue';
 
   // Import scenes
   import ForestScene from '~/components/scenes/ForestScene.vue';
@@ -176,7 +178,7 @@
       Binoculars,
       GoogleMapBackground,
       MatrixBg,
-      PartyLights,
+      SimplePartyLights,
       InteractiveGuitar,
       // Inject scenes
       ForestScene,
@@ -252,7 +254,7 @@
         contentEffects: {
           simple: SimpleEffect
         },
-        rockAndRoll: true,
+        rockAndRoll: false,
       };
 
       return state;
