@@ -141,7 +141,7 @@
         this.fireGunAudio.play();
       },
       cock() {
-        TweenLite.to(this.p('.hammer'), 0, {rotation:64, transformOrigin:'bottom left', ease: Circ.easeOut}, 'start');
+        TweenLite.to(this.p('.hammer'), 0, {rotation:64, transformOrigin:'bottom left', ease: "circ.out"}, 'start');
       },
       pullSlider() {
         this.tlPullSlider = new TimelineLite();
@@ -153,7 +153,7 @@
 
         this.tlPullSlider
           .to(this.p('.slider-group'), 0.1, {x:'+=10px'},'start')
-          .to(this.p('.hammer'), 0.1, {rotation:63.5, transformOrigin:'bottom left', ease: Circ.easeOut}, 'start-=0.1')
+          .to(this.p('.hammer'), 0.1, {rotation:63.5, transformOrigin:'bottom left', ease: "circ.out"}, 'start-=0.1')
           .to(this.p('.slider-group'), 0, {x:'-=10px'});
       },
       shootToThrill(delay) {

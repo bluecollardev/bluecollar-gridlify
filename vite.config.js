@@ -11,6 +11,10 @@ export default defineConfig({
         compilerOptions: {
           compatConfig: {
             MODE: 2 // Vue 2 compat mode
+          },
+          isCustomElement: (tag) => {
+            // Treat SVG namespace tags as custom elements to suppress warnings
+            return tag.startsWith('dc:') || tag.startsWith('cc:') || tag.startsWith('rdf:');
           }
         }
       }

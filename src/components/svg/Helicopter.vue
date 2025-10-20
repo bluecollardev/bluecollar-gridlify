@@ -50,28 +50,34 @@
         }
       },
       trackMouse(e) {
-        //console.log(e);
-        const coords = {
-          x: e.clientX,
-          y: e.clientY
-        };
+        const helicopter = this.$el;
+        if (!helicopter) return;
 
-        const offset = {
-          x: window.scrollX,
-          y: window.scrollY
-        };
+        const helicopterInner = helicopter.querySelector('.helicopter-inner');
+        if (!helicopterInner) return;
 
-        const helicopter = document.querySelector('.helicopter');
-        const helicopterInner = document.querySelector('.helicopter-inner');
-        const helicopterCoords = helicopter.getBoundingClientRect();
+        // Get modal/container bounds
+        const container = helicopter.closest('.commando-skull-scene') || helicopter.parentElement;
+        if (!container) return;
 
-        const moveTo = {
-          x: coords.x - 100,
-          y: coords.y - 100
-        };
+        const containerRect = container.getBoundingClientRect();
+        const helicopterRect = helicopter.getBoundingClientRect();
 
-        let helicopterTimeline = anime.timeline({ loop: false });
-        if (moveTo.x < helicopterCoords.x) {
+        // Calculate mouse position relative to container
+        const relativeX = e.clientX - containerRect.left;
+        const relativeY = e.clientY - containerRect.top;
+
+        // Constrain within container bounds (with margins)
+        const margin = 60; // Half helicopter width
+        const maxX = containerRect.width - margin;
+        const maxY = containerRect.height - margin;
+
+        const targetX = Math.max(margin, Math.min(maxX, relativeX - margin));
+        const targetY = Math.max(margin, Math.min(maxY, relativeY - margin));
+
+        // Flip helicopter based on direction
+        const currentX = helicopterRect.left - containerRect.left;
+        if (targetX < currentX) {
           helicopterInner.querySelector('.helicopter-body').style.transform = 'scaleX(-1)';
           helicopterInner.querySelector('.blade').style.left = '0px';
         } else {
@@ -79,15 +85,13 @@
           helicopterInner.querySelector('.blade').style.left = '31px';
         }
 
-        helicopter.style.top = helicopterCoords.y;
-        helicopter.style.left = helicopterCoords.x;
-
-        helicopterTimeline.add({
+        // Animate to target position
+        anime({
           targets: helicopter,
-          translateX: [helicopterCoords.x, moveTo.x],
-          translateY: [helicopterCoords.y, moveTo.y],
-          easing: 'easeInOutQuad',
-          duration: 3500
+          left: targetX + 'px',
+          top: targetY + 'px',
+          easing: 'easeOutQuad',
+          duration: 800
         });
       }
     },
@@ -142,6 +146,8 @@
     position: absolute;
     width: 120px;
     height: 80px;
+    top: 20%;
+    left: 10%;
     z-index: 1000;
     cursor: pointer !important;
   }

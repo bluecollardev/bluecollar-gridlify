@@ -18,6 +18,10 @@
       Helicopter
     },
     methods: {
+      fireGuns() {
+        // Stub method for helicopter callback
+        console.log('Fire guns!');
+      },
       play() {
         if (typeof window !== 'undefined') {
           const stripes = document.querySelector('.sergeant-stripes');
