@@ -62,11 +62,11 @@ c-24.4,0-41.8,3.5-66.1,5c-10.6,0.8-21.1-0.4-32.2-1.3" />
     position: absolute;
     z-index: 2000;
     background: url(/images/t84-tank.svg) no-repeat;
-    width: 360px;
-    height: 120px;
+    width: 432px;
+    height: 144px;
     bottom: 40px;
     background-size: contain;
-    margin-right: -400px;
+    margin-right: -480px;
     opacity: 0;
   }
 
@@ -115,11 +115,11 @@ c-24.4,0-41.8,3.5-66.1,5c-10.6,0.8-21.1-0.4-32.2-1.3" />
       position: fixed;
       z-index: 2000;
       background: url(/images/t84-tank.svg) no-repeat;
-      width: 900px;
-      height: 300px;
+      width: 1080px;
+      height: 360px;
       bottom: 80px;
       background-size: contain;
-      margin-right: -900px;
+      margin-right: -1080px;
     }
 
     .is-safari {

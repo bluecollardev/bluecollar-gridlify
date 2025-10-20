@@ -185,7 +185,7 @@
 
       if (window) {
         window.addEventListener('resize', () => {
-          this.$set(this, 'repaint', Math.random());
+          this.repaint = Math.random();
         });
       }
     },

@@ -45,7 +45,7 @@
     },
     methods: {
       setupAnimation() {
-        this.$set(this, 'timeline', anime.timeline({ loop: this.loop, autoplay: false }));
+        this.timeline = anime.timeline({ loop: this.loop, autoplay: false });
 
         const wordsTarget = this.$refs.textWrapper.querySelector(this.wordsSelector);
 

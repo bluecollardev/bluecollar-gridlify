@@ -23,7 +23,7 @@
     methods: {
       setupAnimation() {
         try {
-          this.$set(this, 'timeline', anime.timeline({ loop: this.loop, autoplay: false }));
+          this.timeline = anime.timeline({ loop: this.loop, autoplay: false });
 
           this.timeline
             .add({

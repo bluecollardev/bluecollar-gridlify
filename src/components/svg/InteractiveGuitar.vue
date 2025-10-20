@@ -723,7 +723,7 @@
       //Click/Touch the guitar, or any key to play!
 
       //Convert circle elements to paths
-      //MorphSVGPlugin.convertToPath("circle");
+      MorphSVGPlugin.convertToPath("circle");
 
       //Note to self: Name stuff better in illustrator!
       //Varibles for the animation

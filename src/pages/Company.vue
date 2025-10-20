@@ -227,10 +227,10 @@
     },
     methods: {
       startRockin() {
-        this.$set(this, 'rockAndRoll', true);
+        this.rockAndRoll = true;
       },
       stopRockin() {
-        this.$set(this, 'rockAndRoll', false);
+        this.rockAndRoll = false;
       },
       isLoaded() {
         // let isLoaded = false;
@@ -281,7 +281,7 @@
 
       if (window) {
         window.addEventListener('resize', () => {
-          this.$set(this, 'repaint', Math.random());
+          this.repaint = Math.random();
         });
       }
     },

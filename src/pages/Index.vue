@@ -59,8 +59,8 @@
       slotPos="top"
       className="text-shadow sm-pad-top pad-bottom-2x"
     >
-      <template v-slot:bg v-if="rockAndRoll">
-        <party-lights></party-lights>
+      <template v-slot:bg>
+        <party-lights v-if="rockAndRoll"></party-lights>
       </template>
 
       <!--<template v-slot:bg2>
@@ -85,8 +85,8 @@
             <p class="text-center"><small><small><b>Hint: Click the strings to the beat of "Smoke on the Water".</b></small></small></p>
             <div
               class="guitar-block text-center"
-              @mouseover="startRockin.bind(this)()"
-              @mouseleave="stopRockin.bind(this)()">
+              @mouseenter="startRockin"
+              @mouseleave="stopRockin">
               <interactive-guitar :key="Math.random()"></interactive-guitar>
             </div>
           </div>
@@ -274,10 +274,11 @@
         return null
       },*/
       startRockin() {
-        this.$set(this, 'rockAndRoll', true);
+        console.log('START ROCKIN - rockAndRoll set to true');
+        this.rockAndRoll = true;
       },
       stopRockin() {
-        this.$set(this, 'rockAndRoll', false);
+        this.rockAndRoll = false;
       },
       initSoundtrack() {
         // TODO: Implement soundtrack initialization if needed

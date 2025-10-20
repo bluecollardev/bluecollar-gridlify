@@ -145,11 +145,11 @@
 
       if (window) {
         window.addEventListener('resize', () => {
-          this.$set(this, 'repaint', Math.random());
+          this.repaint = Math.random();
         });
       }
 
-      this.$set(this, 'repaint', Math.random());
+      this.repaint = Math.random();
     },
     beforeUnmount() {
       console.log('remove wrapTitleText resize listener');

@@ -88,8 +88,8 @@
       },
       doFishCaught() {
         if (typeof window !== 'undefined') {
-          this.$set(this, 'isCasting', false);
-          this.$set(this, 'isOnHook', true);
+          this.isCasting = false;
+          this.isOnHook = true;
 
           const el = document.querySelector('.fish-caught');
           el.style.display = 'block';
@@ -117,8 +117,8 @@
       doCast() {
         this.clearReelingLine();
 
-        this.$set(this, 'isCasting', true);
-        this.$set(this, 'isOnHook', false);
+        this.isCasting = true;
+        this.isOnHook = false;
 
         const fishingRod = document.querySelector('.fishing-rod-object'); //this.$refs.fishingRod;
         fishingRod.addEventListener('webkitAnimationEnd', this.resetCast);
