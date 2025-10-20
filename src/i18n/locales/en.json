@@ -164,6 +164,13 @@
       "title": "Disclaimer!",
       "message": "My portfolio is under construction. Projects details may not be 100% accurate or complete. Please check again in a couple days."
     },
+    "sections": {
+      "theClient": "The Client",
+      "theStakeholder": "The Stakeholder",
+      "theProblem": "The Problem",
+      "ourSolution": "Our Solution",
+      "technologies": "Technologies"
+    },
     "months": {
       "jan": "Jan",
       "feb": "Feb",

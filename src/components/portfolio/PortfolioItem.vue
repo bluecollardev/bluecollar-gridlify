@@ -74,7 +74,16 @@
     computed: {
 	    compiledDescription() {
 	      if (this.project && this.project.description) {
-	        return marked(this.project.description);
+	        let description = this.project.description;
+
+	        // Replace English section headers with translated versions
+	        description = description.replace(/\*\*The Client\*\*/g, `**${this.$t('portfolio.sections.theClient')}**`);
+	        description = description.replace(/\*\*The Stakeholder\*\*/g, `**${this.$t('portfolio.sections.theStakeholder')}**`);
+	        description = description.replace(/\*\*The Problem\*\*/g, `**${this.$t('portfolio.sections.theProblem')}**`);
+	        description = description.replace(/\*\*Our Solution\*\*/g, `**${this.$t('portfolio.sections.ourSolution')}**`);
+	        description = description.replace(/\*\*Technologies\*\*/g, `**${this.$t('portfolio.sections.technologies')}**`);
+
+	        return marked(description);
         }
 
 	      return null;
