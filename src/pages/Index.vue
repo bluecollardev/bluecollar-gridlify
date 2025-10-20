@@ -373,6 +373,11 @@
     background-image: linear-gradient(175deg, #cce3ea 0%, #d2e6d6 74%);
   }
 
+  #services .top-row-under * {
+    color: #33587a !important;
+    text-shadow: none !important;
+  }
+
   /* Override colors */
   @media screen and (max-width: 64em) {
     #services {
@@ -457,14 +462,10 @@
     background-color: #7FB5D5;
   }
 
-  .top-row-under,
-  .bottom-row .col-3-squares > .service-detail-card-top:nth-child(2n + 1) {
-    p,
-    a,
-    * {
-      color: #33587a !important; /* Midnight blue */
-      text-shadow: none;
-    }
+  .top-row-under *,
+  .bottom-row .col-3-squares > .service-detail-card-top:nth-child(2n + 1) * {
+    color: #33587a !important; /* Midnight blue */
+    text-shadow: none !important;
   }
 
   @media screen and (min-width: 64em) {
