@@ -53,8 +53,14 @@ header .wrap {
   }
 
   header #menu > ul > li {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 64em) and (max-width: 102em) {
+  header #menu > ul > li:first-child {
+    display: none;
   }
 }
 
@@ -64,8 +70,8 @@ header .wrap {
   }
 
   header #menu > ul > li {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
@@ -124,7 +130,7 @@ header #hamburger {
   cursor: pointer;
   border-radius: 50%;
   position: absolute;
-  left: 3%;
+  right: 3%;
   top: 30px;
   display: none;
   transform: translateY(-50%);
@@ -140,7 +146,7 @@ header #hamburger {
     cursor: pointer;
     border-radius: 50%;
     position: absolute;
-    left: 3%;
+    right: 3%;
     top: 25px;
     display: none;
     -webkit-transform: translateY(-50%);

@@ -25,7 +25,8 @@
       return {
         isCasting: false,
         isOnHook: false,
-        interval: null
+        interval: null,
+        resizeHandler: null
       }
     },
     methods: {
@@ -220,17 +221,39 @@
         if (document.querySelectorAll('#reeling-line svg').length > 0) {
           document.querySelector('#reeling-line').removeChild(document.querySelector('#reeling-line svg'));
         }
+      },
+      handleResize() {
+        // Clear the fish and reeling line on resize
+        const fishCaught = document.querySelector('.fish-caught');
+        if (fishCaught) {
+          fishCaught.style.display = 'none';
+        }
+        this.clearReelingLine();
+        this.clearCastingLine();
+
+        // Reset casting state
+        this.isCasting = false;
+        this.isOnHook = false;
       }
     },
     mounted() {
       if (typeof window !== 'undefined') {
         this.interval = setInterval(this.doFishJump, 30000);
         setTimeout(this.doCast, 1500);
+
+        // Add resize listener to clear fish and reeling line
+        this.resizeHandler = this.handleResize.bind(this);
+        window.addEventListener('resize', this.resizeHandler);
       }
     },
     beforeUnmount() {
       if (typeof window !== 'undefined') {
         clearInterval(this.interval);
+
+        // Remove resize listener
+        if (this.resizeHandler) {
+          window.removeEventListener('resize', this.resizeHandler);
+        }
       }
     }
   }
