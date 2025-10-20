@@ -21,7 +21,8 @@
 </template>
 
 <script>
-  import { gmapApi } from 'vue2-google-maps';
+  // TODO: Update to use @fawmi/vue-google-maps or alternative
+  // import { gmapApi } from '@fawmi/vue-google-maps';
 
   export default {
     data: () => ({
@@ -51,10 +52,16 @@
       gmapEl: null
     }),
     computed: {
-      google: gmapApi
+      // google: gmapApi
     },
     methods: {
       initializeMap() {
+        // Check if map ref exists and has the promise
+        if (!this.$refs.mapRef || !this.$refs.mapRef.$mapPromise) {
+          console.warn('Google Maps not initialized - skipping map setup');
+          return;
+        }
+
         this.$refs.mapRef.$mapPromise.then((gmap) => {
           //new this.google.maps.Marker({
           //  map: map,

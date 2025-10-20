@@ -38,7 +38,7 @@
           }, 0);*/
 
           /*TweenMax.to(photo, 3, {
-            ease: Power4.easeOut,
+            ease: "power4.out",
             attr: {
               x: -posX,
               y: -posY

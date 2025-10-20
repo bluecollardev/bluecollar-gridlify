@@ -413,7 +413,7 @@
         });
       }
     },
-    beforeDestroy() {
+    beforeUnmount() {
       console.log('remove wrapTitleText resize listener');
       window.removeEventListener('resize', this.rewrapTitleText);
     }

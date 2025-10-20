@@ -1,6 +1,6 @@
 <template>
   <!--<text-wrapper :tag="this.tag" :text="this.text">-->
-    <span class="text-wrapper slide-up">
+    <span ref="textWrapper" class="text-wrapper slide-up">
       <span class="words">{{ this.text }}</span>
     </span>
   <!--</text-wrapper>-->
@@ -47,7 +47,7 @@
       setupAnimation() {
         this.$set(this, 'timeline', anime.timeline({ loop: this.loop, autoplay: false }));
 
-        const wordsTarget = this.$el.querySelector(this.wordsSelector);
+        const wordsTarget = this.$refs.textWrapper.querySelector(this.wordsSelector);
 
         let settings = {
           opacityIn: [0, 1],

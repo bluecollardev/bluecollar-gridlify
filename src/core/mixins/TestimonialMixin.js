@@ -1,6 +1,6 @@
 // Import static data
 import TestimonialData from '~/data/Testimonial.yml';
-import marked from "marked";
+import { marked } from "marked";
 
 export default {
   computed: {

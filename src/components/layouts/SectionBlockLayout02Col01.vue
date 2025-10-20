@@ -31,7 +31,7 @@
 // vue-markdown is broken, babel deps issues...
 // import VueMarkdown from 'vue-markdown'
 // Use marked instead
-import marked from 'marked';
+import { marked } from 'marked';
 /**
  * This variant of the SectionBlockLayout has two columns,
  * a right column with the heading and text content,

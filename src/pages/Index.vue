@@ -29,7 +29,7 @@
       <template>
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
           <div>
-            <p class="text-center">At Blue Collar, we use cutting-edge technologies and employ the latest software design methodologies to drive the creation of amazing user experiences.</span></p>
+            <p class="text-center">At Blue Collar, we use cutting-edge technologies and employ the latest software design methodologies to drive the creation of amazing user experiences.</p>
             <p class="text-center xs-hide">Our seasoned team of experience experts and software vetrans at Blue Collar Development specialize in helping you reel in the prize catch of your dreams.</p>
             <p class="text-center xs-hide"><small><small><b>Hint: Click the fishing rod's handle to catch a Red Snapper! Very tasty!</b></small></small></p>
             <div class="text-center">
@@ -116,6 +116,7 @@
 
 <script>
   import Vue from 'vue';
+  import Layout from '~/layouts/Default.vue';
 
   // Import generic component layouts
   import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
@@ -132,7 +133,7 @@
   import Jungle from '~/components/svg/Jungle.vue';
   import Binoculars from '~/components/svg/Binoculars.vue';
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
-  import MatrixBg from '~/components/svg/MatrixBg';
+  import MatrixBg from '~/components/svg/MatrixBg.vue';
   import InteractiveGuitar from '~/components/svg/InteractiveGuitar.vue';
   import PartyLights from '~/components/svg/PartyLights.vue';
 
@@ -162,6 +163,7 @@
 
   export default {
     components: {
+      Layout,
       // Inject components
       Services,
       PortfolioVerticalTimeline,

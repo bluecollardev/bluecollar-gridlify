@@ -21,6 +21,8 @@
 </template>
 
 <script>
+  import Layout from '~/layouts/Default.vue';
+
   // Import components
   import Header from '~/components/Header.vue';
   import Blog from '~/components/Blog.vue';
@@ -38,6 +40,7 @@
 
   export default {
     components: {
+      Layout,
       // Inject components
       Header,
       Blog,

@@ -99,7 +99,7 @@
         window.addEventListener('mousemove', this.trackMouse);
       }
     },
-    beforeDestroy() {
+    beforeUnmount() {
       if (typeof window !== 'undefined') {
         window.removeEventListener('mousemove', this.trackMouse);
       }

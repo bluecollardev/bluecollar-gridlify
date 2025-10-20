@@ -55,7 +55,7 @@
   // vue-markdown is broken, babel deps issues...
   // import VueMarkdown from 'vue-markdown'
   // Use marked instead
-  import marked from 'marked';
+  import { marked } from 'marked';
 
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 

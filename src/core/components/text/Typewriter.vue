@@ -1,6 +1,6 @@
 <template>
   <!--<text-wrapper :tag="this.tag" :text="this.text">-->
-    <span class="text-wrapper">
+    <span ref="textWrapper" class="text-wrapper">
       <span class="line blink">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
              y="0px" viewBox="0 0 100 125" xml:space="preserve">
@@ -56,16 +56,16 @@
       default: '.title .line'
     },
     mounted() {
-      if (typeof window !== 'undefined' && this.$el) {
-        const textTarget = this.$el.querySelector(this.textSelector);
+      if (typeof window !== 'undefined' && this.$refs.textWrapper) {
+        const textTarget = this.$refs.textWrapper.querySelector(this.textSelector);
 
-        const lineTarget = this.$el.querySelector(this.lineSelector);
-        const lettersTarget = this.$el.querySelector(this.lettersSelector);
+        const lineTarget = this.$refs.textWrapper.querySelector(this.lineSelector);
+        const lettersTarget = this.$refs.textWrapper.querySelector(this.lettersSelector);
 
         // Wrap every letter in a span
         lettersTarget.outerHTML = DOMTextEffectUtils.wrapLetters(lettersTarget);
 
-        const letterTargets = this.$el.querySelectorAll(this.letterSelector);
+        const letterTargets = this.$refs.textWrapper.querySelectorAll(this.letterSelector);
 
         DOMTextEffectUtils.wrapLettersOnWordBoundary(lettersTarget, lettersTarget, letterTargets);
 

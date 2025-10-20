@@ -130,7 +130,7 @@
         this.attachScrollListener();
       }
     },
-    beforeDestroy() {
+    beforeUnmount() {
       if (typeof window !== 'undefined') {
         this.killSoundtrack();
       }

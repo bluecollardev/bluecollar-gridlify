@@ -12,6 +12,8 @@
 </template>
 
 <script>
+  import Layout from '~/layouts/Default.vue';
+
   // Import components
   import Header from '~/components/Header.vue';
   import Blog from '~/components/Blog.vue';
@@ -37,7 +39,7 @@
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
   import GoogleMapCutout from '~/components/svg/GoogleMapCutout.vue';
   import PartyLights from '~/components/svg/PartyLights.vue';
-  import MatrixBg from '~/components/svg/MatrixBg';
+  import MatrixBg from '~/components/svg/MatrixBg.vue';
 
   // Import animated text effects
   import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
@@ -62,6 +64,7 @@
 
   export default {
     components: {
+      Layout,
       // Inject components
       Header,
       Blog,
@@ -187,7 +190,7 @@
         this.$refs.forestScene.play();
       }
     },
-    beforeDestroy() {
+    beforeUnmount() {
       console.log('remove wrapTitleText resize listener');
       window.removeEventListener('resize', this.rewrapTitleText);
     }

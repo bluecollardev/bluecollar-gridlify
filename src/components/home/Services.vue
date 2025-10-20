@@ -228,7 +228,7 @@
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
   import TestimonialMixin from '~/core/mixins/TestimonialMixin';
 
-  import MatrixBg from '~/components/svg/MatrixBg';
+  import MatrixBg from '~/components/svg/MatrixBg.vue';
 
   export default {
     props: {

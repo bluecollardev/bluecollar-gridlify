@@ -1,6 +1,6 @@
 <template>
   <!--<text-wrapper :tag="this.tag" :text="this.text">-->
-    <span class="text-wrapper">
+    <span ref="textWrapper" class="text-wrapper">
       <span class="words">{{ this.text }}</span>
     </span>
   <!--</text-wrapper>-->
@@ -46,13 +46,13 @@
       }
     },
     mounted() {
-      if (typeof window !== 'undefined') {
-        const wordsTarget = this.$el.querySelector(this.wordsSelector);
+      if (typeof window !== 'undefined' && this.$refs.textWrapper) {
+        const wordsTarget = this.$refs.textWrapper.querySelector(this.wordsSelector);
 
         // Wrap every letter in a span
         wordsTarget.outerHTML = DOMTextEffectUtils.wrapWords(wordsTarget);
 
-        const wordTargets = this.$el.querySelectorAll(this.wordSelector);
+        const wordTargets = this.$refs.textWrapper.querySelectorAll(this.wordSelector);
 
         let timeline = anime.timeline({loop: this.loop});
 

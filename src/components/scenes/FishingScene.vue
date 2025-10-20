@@ -11,8 +11,8 @@
 </template>
 <script>
   import anime from 'animejs';
-  //import SVG from 'svg.js';
-  //import 'svg.pathmorphing.js';
+  import SVG from 'svg.js';
+  import 'svg.pathmorphing.js';
 
   export default {
     props: {
@@ -223,15 +223,12 @@
       }
     },
     mounted() {
-      require('svg.js');
-      require('svg.pathmorphing.js');
-
       if (typeof window !== 'undefined') {
         this.interval = setInterval(this.doFishJump, 30000);
         setTimeout(this.doCast, 1500);
       }
     },
-    beforeDestroy() {
+    beforeUnmount() {
       if (typeof window !== 'undefined') {
         clearInterval(this.interval);
       }

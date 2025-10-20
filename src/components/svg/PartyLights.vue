@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import { TimelineMax } from 'gsap';
+  import { gsap, TimelineMax } from 'gsap';
 
   export default {
     data() {
@@ -55,28 +55,28 @@
       getTl1() {
         let tl1 = new TimelineMax({ repeat: -1 });
         tl1.set(this.$refs.poly1, { autoAlpha: 1 });
-        tl1.to(this.$refs.poly1, 4, { attr: { d: 'M-640,0 100,510 -400,0Z' }, ease: Power0.easeNone});
+        tl1.to(this.$refs.poly1, 4, { attr: { d: 'M-640,0 100,510 -400,0Z' }, ease: "none"});
         tl1.set(this.$refs.poly1, { autoAlpha: 0});
         return tl1;
       },
       getTl2() {
         let tl2 = new TimelineMax({ repeat: -1 });
         tl2.set(this.$refs.poly2, { autoAlpha: 1 });
-        tl2.to(this.$refs.poly2, 4, { attr: { d: 'M500,-150 1400,360 1200,360Z' }, ease: Power0.easeNone});
+        tl2.to(this.$refs.poly2, 4, { attr: { d: 'M500,-150 1400,360 1200,360Z' }, ease: "none"});
         tl2.set(this.$refs.poly2, { autoAlpha: 0 });
         return tl2;
       },
       getTl3() {
         let tl3 = new TimelineMax({ repeat: -1 });
         tl3.set(this.$refs.poly3, { autoAlpha: 1 });
-        tl3.to(this.$refs.poly3, 4, { attr: { d: 'M100,-150 -400,360 -640,360Z' }, ease: Power0.easeNone});
+        tl3.to(this.$refs.poly3, 4, { attr: { d: 'M100,-150 -400,360 -640,360Z' }, ease: "none"});
         tl3.set(this.$refs.poly3, { autoAlpha: 0 });
         return tl3;
       },
       getTl4() {
         let tl4 = new TimelineMax({ repeat: -1 });
         tl4.set(this.$refs.poly4, { autoAlpha: 1});
-        tl4.to(this.$refs.poly4, 4, { attr: { d: 'M1200,0 500,510 1400,0Z' }, ease: Power0.easeNone});
+        tl4.to(this.$refs.poly4, 4, { attr: { d: 'M1200,0 500,510 1400,0Z' }, ease: "none"});
         tl4.set(this.$refs.poly4, { autoAlpha: 0 });
         return tl4;
       },
@@ -95,28 +95,28 @@
       getTl6() {
         let tl6 = new TimelineMax({ repeat: -1 });
         tl6.set(this.$refs.laser1, { autoAlpha: 1 });
-        tl6.to(this.$refs.laser1, 4, { attr: { d: 'M-200,280 700,940 700,955z' } , ease: Power0.easeNone});
+        tl6.to(this.$refs.laser1, 4, { attr: { d: 'M-200,280 700,940 700,955z' } , ease: "none"});
         tl6.set(this.$refs.laser1, { autoAlpha: 0 });
         return tl6;
       },
       getTl7() {
         let tl7 = new TimelineMax({ repeat: -1 });
         tl7.set(this.$refs.laser2, { autoAlpha: 1 });
-        tl7.to(this.$refs.laser2, 4, { attr: { d: 'M-200,280 700,940 700,955z' }, ease: Power0.easeNone});
+        tl7.to(this.$refs.laser2, 4, { attr: { d: 'M-200,280 700,940 700,955z' }, ease: "none"});
         tl7.set(this.$refs.laser2, { autoAlpha: 0 });
         return tl7;
       },
       getTl8() {
         let tl8 = new TimelineMax({ repeat: -1 });
         tl8.set(this.$refs.laser3, { autoAlpha: 1 });
-        tl8.to(this.$refs.laser3, 4, { attr: { d: 'M-200,280 700,940 700,955z' }, ease: Power0.easeNone});
+        tl8.to(this.$refs.laser3, 4, { attr: { d: 'M-200,280 700,940 700,955z' }, ease: "none"});
         tl8.set(this.$refs.laser3, { autoAlpha: 0 });
         return tl8;
       },
       getTl9() {
         let tl9 = new TimelineMax({ repeat: -1 });
         tl9.set(this.$refs.laser4, { autoAlpha: 1 });
-        tl9.to(this.$refs.laser4, 4, { attr: { d: 'M-200,280 700,940 700,955z' }, ease: Power0.easeNone});
+        tl9.to(this.$refs.laser4, 4, { attr: { d: 'M-200,280 700,940 700,955z' }, ease: "none"});
         tl9.set(this.$refs.laser4, { autoAlpha: 0 });
         return tl9;
       },
@@ -137,9 +137,9 @@
       // TODO: Auto rock n' roll?
       //this.initAudioPlayer();
 
-      TweenMax.set(this.$refs.svg, { visibility: "visible" });
+      gsap.set(this.$refs.svg, { visibility: "visible" });
 
-      TweenMax.set([
+      gsap.set([
         this.$refs.poly1, this.$refs.poly2, this.$refs.poly3,
         this.$refs.poly4, this.$refs.circ1, this.$refs.circ2,
         this.$refs.circ3, this.$refs.circ4, this.$refs.laser1,

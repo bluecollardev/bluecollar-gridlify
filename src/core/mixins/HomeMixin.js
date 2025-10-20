@@ -1,4 +1,4 @@
-import marked from 'marked';
+import { marked } from 'marked';
 
 // Import static data
 import HomeData from '~/data/Home.yml';

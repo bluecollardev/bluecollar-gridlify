@@ -37,7 +37,7 @@
       <template>
         <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
           <div>
-            <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges.</span></p>
+            <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges.</p>
             <p class="text-center">Let our seasoned vets guide you on the path to your dreams.</p>
             <div class="text-center" style="">
               <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3">Meet Our Consultants</a>
@@ -50,6 +50,8 @@
 </template>
 
 <script>
+  import Layout from '~/layouts/Default.vue';
+
   // Import components
   import Header from '~/components/Header.vue';
   import Blog from '~/components/Blog.vue';
@@ -78,7 +80,7 @@
   import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
   import GoogleMapCutout from '~/components/svg/GoogleMapCutout.vue';
   import PartyLights from '~/components/svg/PartyLights.vue';
-  import MatrixBg from '~/components/svg/MatrixBg';
+  import MatrixBg from '~/components/svg/MatrixBg.vue';
 
   // Import animated text effects
   import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
@@ -103,6 +105,7 @@
 
   export default {
     components: {
+      Layout,
       // Inject components
       Header,
       Blog,
@@ -242,7 +245,7 @@
         });
       }
     },
-    beforeDestroy() {
+    beforeUnmount() {
       console.log('remove wrapTitleText resize listener');
       window.removeEventListener('resize', this.rewrapTitleText);
     }

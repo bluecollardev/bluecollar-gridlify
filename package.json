@@ -1,13 +1,13 @@
 {
 	"name": "gridsome-starter-netlifycms",
 	"scripts": {
-		"build": "gridsome build",
-		"develop": "gridsome develop",
-		"explore": "gridsome explore"
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@gridsome/source-filesystem": "^0.3.0",
-		"@gridsome/transformer-remark": "^0.2.0",
+		"@fawmi/vue-google-maps": "^0.9.79",
+		"@vue/compat": "^3.4.27",
 		"animejs": "^3.0.1",
 		"basscss": "^8.0.3",
 		"basscss-addons": "^1.0.0",
@@ -15,31 +15,23 @@
 		"basscss-sass": "^4.0.0",
 		"basscss-type-scale": "^1.0.6",
 		"basscss-typography": "^3.0.4",
-		"fs": "^0.0.1-security",
-		"gridsome": "^0.6.5",
-		"gsap": "^2.1.3",
-		"lozad": "^1.9.0",
-		"marked": "^0.6.2",
-		"node-sass": "^4.11.0",
-		"normalize.css": "^5.0.0",
-		"postcss": "5.2.14",
-		"postcss-custom-properties": "^5.0.1",
-		"postcss-loader": "^3.0.0",
-		"rework-loader": "^0.1.1",
-		"sass-loader": "^7.1.0",
-		"style-loader": "^0.23.1",
+		"gray-matter": "^4.0.3",
+		"gsap": "^3.12.5",
+		"lozad": "^1.16.0",
+		"marked": "^12.0.2",
+		"normalize.css": "^8.0.1",
 		"svg.js": "^2.7.1",
 		"svg.path.js": "^0.6.2",
 		"svg.pathmorphing.js": "^0.1.3",
-		"svgdom": "^0.0.20",
-		"vue-browser-detect-plugin": "^0.1.5",
-		"vue-markdown": "^2.2.4",
-		"vue-waypoint": "https://github.com/bluecollardev/vue-waypoint.git",
-		"vue2-google-maps": "^0.10.7"
+		"svgdom": "^0.1.19",
+		"vue": "^3.4.27",
+		"vue-router": "^4.3.2"
 	},
 	"devDependencies": {
-		"@babel/runtime": "^7.4.3",
-		"sockjs-client": "^1.3.0"
+		"@rollup/plugin-yaml": "^4.1.2",
+		"@vitejs/plugin-vue": "^5.0.5",
+		"sass": "^1.77.2",
+		"vite": "^5.2.12"
 	},
 	"license": "MIT"
 }

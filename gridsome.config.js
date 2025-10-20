@@ -24,6 +24,23 @@ module.exports = {
 					.end()
 				.end();
 
+		// Configure Vue 3 compat build
+		config.resolve.alias.set('vue', '@vue/compat');
+
+		config.module
+			.rule('vue')
+			.use('vue-loader')
+			.tap(options => {
+				return {
+					...options,
+					compilerOptions: {
+						compatConfig: {
+							MODE: 2 // Vue 2 compat mode
+						}
+					}
+				}
+			});
+
 		// TODO: Document this - https://github.com/gridsome/gridsome/issues/384
 		if (isServer) {
       config.externals([/^(vue|vue-router|vue-meta)$/]);
