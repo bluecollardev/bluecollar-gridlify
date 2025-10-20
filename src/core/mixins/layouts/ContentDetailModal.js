@@ -66,7 +66,7 @@ export default {
       window.addEventListener('keydown', this.bindDetailCloseToEsc);
     }
   },
-  beforeDestroy() {
+  beforeUnmount() {
     if (typeof window !== 'undefined') {
       window.removeEventListener('keydown', this.bindDetailCloseToEsc);
     }

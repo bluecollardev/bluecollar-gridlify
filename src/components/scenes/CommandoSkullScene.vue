@@ -1,6 +1,6 @@
 <template>
   <div class="commando-skull-scene flex flex-center flex-justify-center">
-    <!--<helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>-->
+    <helicopter :onGetToTheChopper="fireGuns.bind(this)"></helicopter>
     <div class="special-forces-skull" style="z-index: 2; position: absolute; width: 367px; height: 404px; background-image: url(/images/special-forces-skull.png); background-size: contain; background-repeat: no-repeat; background-position: center center"></div>
     <div class="sergeant-stripes" style="z-index: 1; position: absolute; width: 100%; height: 100%; filter: invert(100); opacity: 0.1; background-image: url(/images/sergeant-major-of-the-army.png); background-size: contain; background-repeat: no-repeat; background-position: center 210px"></div>
   </div>

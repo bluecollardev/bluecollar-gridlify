@@ -35,17 +35,23 @@
       </template>-->
 
       <template>
-        <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
+        <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top" style="position: relative; z-index: 3000;">
           <div>
             <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges.</p>
             <p class="text-center">Let our seasoned vets guide you on the path to your dreams.</p>
-            <div class="text-center" style="">
-              <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3">Meet Our Consultants</a>
+            <div class="text-center">
+              <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3" style="cursor: pointer;">Meet Our Consultants</a>
             </div>
           </div>
         </div>
       </template>
     </hero-layout01-col>
+
+    <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'CONSULTANTS' ? 'Our Team' : ''">
+      <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
+      <commando-skull-scene v-if="this.activeDetail === 'CONSULTANTS'"></commando-skull-scene>
+      <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
+    </content-detail-modal>
   </Layout>
 </template>
 
@@ -67,6 +73,7 @@
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
   import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
   import TestimonialHeroLayout from '~/components/layouts/TestimonialHeroLayout.vue';
+  import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue';
 
   // Import page components
   import Services from '~/components/home/Services.vue';
@@ -81,6 +88,15 @@
   import GoogleMapCutout from '~/components/svg/GoogleMapCutout.vue';
   import PartyLights from '~/components/svg/PartyLights.vue';
   import MatrixBg from '~/components/svg/MatrixBg.vue';
+  import Jungle from '~/components/svg/Jungle.vue';
+
+  // Import scenes
+  import ForestScene from '~/components/scenes/ForestScene.vue';
+  import ShootToThrillScene from '~/components/scenes/ShootToThrillScene.vue';
+  import CommandoSkullScene from '~/components/scenes/CommandoSkullScene.vue';
+
+  // Import team block
+  import TeamBlock from '~/components/TeamBlock.vue';
 
   // Import animated text effects
   import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
@@ -128,8 +144,15 @@
       GoogleMapCutout,
       PartyLights,
       MatrixBg,
+      Jungle,
+      // Inject scenes
+      ForestScene,
+      ShootToThrillScene,
+      CommandoSkullScene,
       // Import static HTML blocks
       ProcessBlock,
+      ContentDetailModal,
+      TeamBlock,
       // Inject animated text effects
       TypewriterTextEffect,
       ShrinkWordsOneByOneTextEffect,
@@ -149,6 +172,7 @@
         formData: {},
         repaint: Math.random(),
         rockAndRoll: false,
+        activeDetail: null,
         textEffects: {
           typewriter: TypewriterTextEffect,
           shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
@@ -221,6 +245,22 @@
         }
 
         return null
+      },
+      viewDetail(activeDetail) {
+        if (typeof window !== 'undefined') {
+          console.log('viewDetail called with:', activeDetail);
+          console.log('contentDetail ref:', this.$refs.contentDetail);
+          this.activeDetail = activeDetail;
+          if (this.$refs.contentDetail) {
+            this.$refs.contentDetail.viewDetail(activeDetail, () => {
+              if (this.$refs.shootToThrill) {
+                this.$refs.shootToThrill.fireGuns();
+              }
+            });
+          } else {
+            console.error('contentDetail ref not found!');
+          }
+        }
       }
     },
     mounted() {

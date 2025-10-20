@@ -17,13 +17,13 @@
       </template>
 
       <template v-slot:title>
-        <!--<shrink-words-one-by-one-text-effect
+        <shrink-words-one-by-one-text-effect
           v-if="!isServer"
           tag="h2"
           text="We Deliver Results"
           class="title text-center pad-bottom"
           :loop="true">
-        </shrink-words-one-by-one-text-effect>-->
+        </shrink-words-one-by-one-text-effect>
       </template>
 
       <template>
@@ -279,13 +279,17 @@
       stopRockin() {
         this.$set(this, 'rockAndRoll', false);
       },
+      initSoundtrack() {
+        // TODO: Implement soundtrack initialization if needed
+        // This method was called but never implemented
+      },
       viewDetail(activeDetail) {
         if (typeof window !== 'undefined') {
 
           this.activeDetail = activeDetail;
           this.$refs.contentDetail.viewDetail(activeDetail, () => {
             // TODO: Call parent!
-            //this.initSoundtrack();
+            this.initSoundtrack();
             if (this.$refs.shootToThrill) {
               this.$refs.shootToThrill.fireGuns();
             }

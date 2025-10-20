@@ -1,10 +1,9 @@
 <template>
   <section id="portfolio" class="hero-section portfolio-items clearfix space-top-2x">
     <!--<div class="vertical-line"></div>-->
-    <div v-if="portfolioItems instanceof Array && portfolioItems.length > 0" class="timeline clearfix sm-pad-top-2x">
+    <div v-if="publicPortfolioItems.length > 0" class="timeline clearfix sm-pad-top-2x">
       <portfolio-item
-        v-for="project in portfolioItems.slice(0,10)"
-        v-if="project.isPublic"
+        v-for="project in publicPortfolioItems"
         :key="project.projectName"
         :project="project"
         :testimonial="getTestimonial(project.testimonialId)"
@@ -80,6 +79,14 @@
       },
       portfolioItems() {
         return PortfolioData.items;
+      },
+      publicPortfolioItems() {
+        if (!this.portfolioItems || !(this.portfolioItems instanceof Array)) {
+          return [];
+        }
+        return this.portfolioItems
+          .filter(project => project.isPublic === true)
+          .slice(0, 10);
       },
       testimonialContent() {
         return TestimonialData;
