@@ -84,9 +84,7 @@
             <br />
             <p class="text-center"><small><small><b>Hint: Click the strings to the beat of "Smoke on the Water".</b></small></small></p>
             <div
-              class="guitar-block text-center"
-              @mouseenter="startRockin"
-              @mouseleave="stopRockin">
+              class="guitar-block text-center">
               <interactive-guitar :key="Math.random()"></interactive-guitar>
             </div>
           </div>
@@ -254,7 +252,7 @@
         contentEffects: {
           simple: SimpleEffect
         },
-        rockAndRoll: false,
+        rockAndRoll: true,
       };
 
       return state;
