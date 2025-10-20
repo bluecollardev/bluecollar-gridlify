@@ -326,10 +326,20 @@
     &__item__content__description {
       margin: 1rem 0 0;
       padding: 0;
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 1rem;
+      line-height: 1.5;
       font-weight: 300;
       color: $timeline-content-description-color;
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      strong {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
     }
 
     &__item__content__techs {

@@ -160,6 +160,10 @@
   "portfolio": {
     "client": "Client",
     "employedBy": "Employed By",
+    "disclaimer": {
+      "title": "Disclaimer!",
+      "message": "My portfolio is under construction. Projects details may not be 100% accurate or complete. Please check again in a couple days."
+    },
     "months": {
       "jan": "Jan",
       "feb": "Feb",
