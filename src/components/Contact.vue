@@ -13,18 +13,25 @@
 		<fieldset class="border-none p0 m0 pad-all">
 			<typewriter-text-effect
 				tag="h2"
-				text="Get in Touch"
+				:text="$t('contact.title')"
 				class="title text-center pad-bottom">
 			</typewriter-text-effect>
 			<div class="hide">
-				<label>Hello bee:</label>
+				<label>{{ $t('contact.form.botField') }}:</label>
 				<input name="bot-field" />
 			</div>
 
 			<div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
 				<div>
-					<p class="text-center">Blue Collar is located in Victoria, BC, Canada, and provides IT consulting services for customers in Victoria and the BC Lower Mainland. We're also open to remote work.</p>
-					<p class="text-center">If you'd like to get in touch with one of our people, please call +1 (250) 532-0083, send us an <a style="color: white; text-decoration: underline" href="mailto:lucas@bluecollardev.com">e-mail</a>, or use the handy form below and let one of our experts help you today.</p>
+					<p class="text-center">{{ $t('contact.location') }}</p>
+					<p class="text-center">
+						<i18n-t keypath="contact.contactInfo" tag="span">
+							<template #phone>{{ $t('contact.phone') }}</template>
+							<template #email>
+								<a style="color: white; text-decoration: underline" href="mailto:lucas@bluecollardev.com">{{ $t('contact.email') }}</a>
+							</template>
+						</i18n-t>
+					</p>
 				</div>
 			</div>
 
@@ -32,129 +39,135 @@
 				<div class="top-fields sm-flex flex-column flex-start">
 					<div class="sm-flex">
 						<!-- Start Input -->
-						<div class="ampstart-input relative m0 p0 mb3 ">
+						<div class="ampstart-input relative m0 p0 mb3">
+							<label
+								for="fullname"
+								class="form-label"
+								style="display: block; margin-bottom: 0.5rem; color: white; font-weight: 500;"
+								>{{ $t('contact.form.fullname') }} <span style="color: #ff6b6b;">*</span></label
+							>
 							<input
 								type="text"
 								value=""
 								name="fullname"
 								id="fullname"
 								class="block border-none p0 m0"
-								placeholder="Full name"
+								style="width: 100%; padding: 0.75rem; background: white; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; color: #333;"
+								:placeholder="$t('contact.form.fullname')"
 								v-model="formData.fullname"
 								required
 							/>
-							<label
-								for="fullname"
-								class="absolute top-0 right-0 bottom-0 left-0"
-								aria-hidden="true"
-								>Full name</label
-							>
 						</div>
 						<!-- End Input-->
 
 						<!-- Start Input -->
-						<div class="ampstart-input relative m0 p0 mb3 ">
+						<div class="ampstart-input relative m0 p0 mb3">
+							<label
+								for="phone"
+								class="form-label"
+								style="display: block; margin-bottom: 0.5rem; color: white; font-weight: 500;"
+								>{{ $t('contact.form.phone') }} <span style="color: #ff6b6b;">*</span></label
+							>
 							<input
 								type="tel"
 								value=""
 								name="phone"
 								id="phone"
 								class="block border-none p0 m0"
-								placeholder="Phone"
+								style="width: 100%; padding: 0.75rem; background: white; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; color: #333;"
+								:placeholder="$t('contact.form.phone')"
 								v-model="formData.phone"
 								required
 							/>
-							<label
-								for="phone"
-								class="absolute top-0 right-0 bottom-0 left-0"
-								aria-hidden="true"
-								>Phone</label
-							>
 						</div>
 						<!-- End Input-->
 
 						<!-- Start Input -->
-						<div class="ampstart-input relative m0 p0 mb3 ">
+						<div class="ampstart-input relative m0 p0 mb3">
+							<label
+								for="email"
+								class="form-label"
+								style="display: block; margin-bottom: 0.5rem; color: white; font-weight: 500;"
+								>{{ $t('contact.form.email') }} <span style="color: #ff6b6b;">*</span></label
+							>
 							<input
 								type="email"
 								value=""
 								name="email"
 								id="email"
 								class="block border-none p0 m0"
-								placeholder="Email"
+								style="width: 100%; padding: 0.75rem; background: white; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; color: #333;"
+								:placeholder="$t('contact.form.email')"
 								v-model="formData.email"
 								required
 							/>
-							<label
-								for="email"
-								class="absolute top-0 right-0 bottom-0 left-0"
-								aria-hidden="true"
-								>Email</label
-							>
 						</div>
 						<!-- End Input-->
 					</div>
 
 					<div class="sm-flex">
 						<!-- Start Input -->
-						<div class="ampstart-input relative m0 p0 mb3 ">
+						<div class="ampstart-input relative m0 p0 mb3">
+							<label
+								for="budget"
+								class="form-label"
+								style="display: block; margin-bottom: 0.5rem; color: white; font-weight: 500;"
+								>{{ $t('contact.form.budget') }} <span style="color: #ff6b6b;">*</span></label
+							>
 							<input
 								type="text"
 								value=""
 								name="budget"
 								id="budget"
 								class="block border-none p0 m0"
-								placeholder="Project Budget"
+								style="width: 100%; padding: 0.75rem; background: white; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; color: #333;"
+								:placeholder="$t('contact.form.budget')"
 								v-model="formData.budget"
 								required
 							/>
-							<label
-								for="budget"
-								class="absolute top-0 right-0 bottom-0 left-0"
-								aria-hidden="true"
-								>Project Budget</label
-							>
 						</div>
 						<!-- End Input-->
 
 						<!-- Start Input -->
-						<div class="ampstart-input relative m0 p0 mb3 ">
+						<div class="ampstart-input m0 p0 mb3" style="position: relative;">
+							<label
+								for="city"
+								class="form-label"
+								style="display: block; margin-bottom: 0.5rem; color: white; font-weight: 500; position: relative; z-index: 1;"
+								>{{ $t('contact.form.city') }} <span style="color: #ff6b6b;">*</span></label
+							>
 							<input
 								type="text"
 								value=""
 								name="city"
 								id="city"
-								class="block border-none p0 m0"
-								placeholder="City"
+								class="border-none"
+								style="position: relative; z-index: 10; display: block; width: 100%; padding: 0.75rem; background: white; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; color: #333;"
+								:placeholder="$t('contact.form.city')"
 								v-model="formData.city"
 								required
 							/>
-							<label
-								for="city"
-								class="absolute top-0 right-0 bottom-0 left-0"
-								aria-hidden="true"
-								>City</label
-							>
 						</div>
 						<!-- End Input-->
 
 						<!-- Start Input -->
-						<div class="ampstart-input relative m0 p0 mb3 ">
+						<div class="ampstart-input m0 p0 mb3" style="position: relative;">
+							<label
+								for="country"
+								class="form-label"
+								style="display: block; margin-bottom: 0.5rem; color: white; font-weight: 500; position: relative; z-index: 1;"
+								>{{ $t('contact.form.country') }}</label
+							>
 							<input
 								type="text"
 								value=""
 								name="country"
 								id="country"
-								class="block border-none p0 m0"
-								placeholder="Country"
+								class="border-none"
+								style="position: relative; z-index: 10; display: block; width: 100%; padding: 0.75rem; background: white; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; color: #333;"
+								:placeholder="$t('contact.form.country')"
 								v-model="formData.country"
 							/>
-							<label
-								for="country"
-								class="absolute top-0 right-0 bottom-0 left-0"
-								aria-hidden="true"
-								>Country</label
-							>
 						</div>
 						<!-- End Input-->
 					</div>
@@ -163,32 +176,40 @@
 				<div class="sm-flex flex-column flex-basis-third flex-start">
 					<!-- Start Input -->
 					<div class="message-wrapper ampstart-input relative m0 p0 mb3">
+						<label
+							for="message"
+							class="form-label"
+							style="display: block; margin-bottom: 0.5rem; color: white; font-weight: 500;"
+							>{{ $t('contact.form.message') }} <span style="color: #ff6b6b;">*</span></label
+						>
 						<textarea
 							name="message"
 							id="message"
-							class="block border-none m0 p2"
-							placeholder="Message"
+							class="block border-none m0"
+							style="width: 100%; padding: 0.75rem; background: white; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; color: #333; min-height: 150px; resize: vertical;"
+							:placeholder="$t('contact.form.message')"
 							v-model="formData.message"
 							required
 						/>
 					</div>
 					<!-- End Input-->
 					<!-- Start Input -->
-					<div class="ampstart-checkbox relative m0 p0 mb3 ">
+					<div class="ampstart-checkbox relative m0 p0 mb3" style="display: flex; align-items: center; height: auto;">
 						<input
 							type="checkbox"
 							value=""
 							name="nda"
 							id="nda"
-							class="block border-none p0 m0"
-							placeholder="NDA Required"
+							class="border-none p0 m0"
+							style="position: relative; width: auto; height: auto; margin-right: 0.5rem;"
+							:placeholder="$t('contact.form.nda')"
 							v-model="formData.nda"
 						/>
 						<label
 							for="nda"
-							class="absolute top-0 right-0 bottom-0 left-0 space-left"
-							aria-hidden="true"
-							>NDA Required</label
+							class="m0"
+							style="position: relative; white-space: nowrap; cursor: pointer;"
+							>{{ $t('contact.form.nda') }}</label
 						>
 					</div>
 					<!-- End Input-->
@@ -200,7 +221,7 @@
 						<input
 							type="submit"
 							name="submit"
-							value="Submit Form"
+							:value="$t('contact.form.submit')"
 							id="submit"
 							class="action-link transparent space-top g-pstyle3"
 							style=""

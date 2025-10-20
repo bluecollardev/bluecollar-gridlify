@@ -6,7 +6,7 @@
         <span class="icon icon--content-logo"></span>
       </div>
       <h4 class="timeline__item__content__subtitle">
-        {{ (typeof this.project.jobTypeText === 'string' && this.project.jobTypeText.length > 0) ? this.project.jobTypeText : 'Client' }}: {{ this.project.client }}
+        {{ (typeof this.project.jobTypeText === 'string' && this.project.jobTypeText.length > 0) ? (this.project.jobTypeText === 'Employed By' ? $t('portfolio.employedBy') : this.project.jobTypeText) : $t('portfolio.client') }}: {{ this.project.client }}
       </h4>
       <h3 class="timeline__item__content__title">
         {{ this.project.projectName }}
@@ -57,8 +57,6 @@
   // Use marked instead
   import { marked } from 'marked';
 
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
 	export default {
 	  props: {
 	    project: {
@@ -80,6 +78,22 @@
         }
 
 	      return null;
+      },
+      months() {
+        return [
+          this.$t('portfolio.months.jan'),
+          this.$t('portfolio.months.feb'),
+          this.$t('portfolio.months.mar'),
+          this.$t('portfolio.months.apr'),
+          this.$t('portfolio.months.may'),
+          this.$t('portfolio.months.jun'),
+          this.$t('portfolio.months.jul'),
+          this.$t('portfolio.months.aug'),
+          this.$t('portfolio.months.sep'),
+          this.$t('portfolio.months.oct'),
+          this.$t('portfolio.months.nov'),
+          this.$t('portfolio.months.dec')
+        ];
       }
     },
     methods: {
@@ -104,7 +118,7 @@
         endDate.setHours(0, 0, 0, 0);
 
         // TODO: Display a range for long term projects?
-        return `${months[startDate.getMonth()]} ${startDate.getFullYear()}`;
+        return `${this.months[startDate.getMonth()]} ${startDate.getFullYear()}`;
       },
       getFormattedStartDate(project) {
         const startDate = new Date(project.startDate);
@@ -114,7 +128,7 @@
         endDate.setHours(0, 0, 0, 0);
 
         // TODO: Display a range for long term projects?
-        return `${months[startDate.getMonth()]} ${startDate.getFullYear()}`;
+        return `${this.months[startDate.getMonth()]} ${startDate.getFullYear()}`;
       },
       getFormattedEndDate(project) {
         const startDate = new Date(project.startDate);
@@ -124,7 +138,7 @@
         endDate.setHours(0, 0, 0, 0);
 
         // TODO: Display a range for long term projects?
-        return `${months[endDate.getMonth()]} ${endDate.getFullYear()}`;
+        return `${this.months[endDate.getMonth()]} ${endDate.getFullYear()}`;
       }
     },
     mounted() {

@@ -1,7 +1,7 @@
 module.exports = {
 	siteName: 'Blue Collar Development',
 	siteUrl: 'https://www.bluecollardev.com',
-	siteDescription: 'Blue Collar Development, Victoria, BC',
+	siteDescription: 'Blue Collar Development, Bangkok, Thailand',
 	titleTemplate: `%s - Blue Collar`,
 
 	plugins: [

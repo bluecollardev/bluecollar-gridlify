@@ -11,11 +11,14 @@
       </a>
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0">
-          <li><a href="/" aria-label="Our Team" @click="hideMenu()">Home</a></li>
-          <li><a href="/#services" aria-label="Services" @click="hideMenu()">What We Build</a></li>
-          <li><a href="/company" aria-label="Websites" @click="hideMenu()">Our People</a></li>
-          <li><a href="/#contact" aria-label="Enquire" @click="hideMenu()">Get In Touch</a></li>
-          <li><a href="https://github.com/bluecollardev" target="_blank" aria-label="GitHub" @click="hideMenu()">GitHub</a></li>
+          <li><a href="/" aria-label="Our Team" @click="hideMenu()">{{ $t('nav.home') }}</a></li>
+          <li><a href="/#services" aria-label="Services" @click="hideMenu()">{{ $t('nav.whatWeBuild') }}</a></li>
+          <li><a href="/company" aria-label="Websites" @click="hideMenu()">{{ $t('nav.ourPeople') }}</a></li>
+          <li><a href="/#contact" aria-label="Enquire" @click="hideMenu()">{{ $t('nav.getInTouch') }}</a></li>
+          <li><a href="https://github.com/bluecollardev" target="_blank" aria-label="GitHub" @click="hideMenu()">{{ $t('nav.github') }}</a></li>
+          <li style="height: auto" class="language-switcher-menu-item">
+            <language-switcher />
+          </li>
           <li style="height: auto" class="soundtrack-controls-menu-item pad-bottom">
             <a style="flex-direction: column; align-items: flex-start">
               <span style="display: block">Soundtrack Controls</span>
@@ -57,8 +60,12 @@
 
 <script>
   import MenuMixin from '~/core/mixins/MenuMixin';
+  import LanguageSwitcher from '~/components/LanguageSwitcher.vue';
 
   export default {
+    components: {
+      LanguageSwitcher
+    },
     mixins: [
       MenuMixin
     ],

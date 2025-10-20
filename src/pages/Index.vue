@@ -20,7 +20,7 @@
         <shrink-words-one-by-one-text-effect
           v-if="!isServer"
           tag="h2"
-          text="We Deliver Results"
+          :text="$t('home.deliverResults')"
           class="title text-center pad-bottom"
           :loop="true">
         </shrink-words-one-by-one-text-effect>
@@ -29,11 +29,11 @@
       <template>
         <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
           <div>
-            <p class="text-center">At Blue Collar, we use cutting-edge technologies and employ the latest software design methodologies to drive the creation of amazing user experiences.</p>
-            <p class="text-center xs-hide">Our seasoned team of experience experts and software vetrans at Blue Collar Development specialize in helping you reel in the prize catch of your dreams.</p>
-            <p class="text-center xs-hide"><small><small><b>Hint: Click the fishing rod's handle to catch a Red Snapper! Very tasty!</b></small></small></p>
+            <p class="text-center">{{ $t('home.intro1') }}</p>
+            <p class="text-center xs-hide">{{ $t('home.intro2') }}</p>
+            <p class="text-center xs-hide"><small><small><b>{{ $t('home.fishingHint') }}</b></small></small></p>
             <div class="text-center">
-              <a @click="viewDetail('PORTFOLIO')" class="action-link transparent space-top g-pstyle3">Browse Case Studies</a>
+              <a @click="viewDetail('PORTFOLIO')" class="action-link transparent space-top g-pstyle3">{{ $t('home.browseCaseStudies') }}</a>
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@
       <template v-slot:title>
         <shrink-words-one-by-one-text-effect
           tag="h2"
-          text="Are You Ready to Rock?"
+          :text="$t('home.areYouReadyToRock')"
           class="title text-center pad-bottom pad-top-2x"
           :loop="true">
         </shrink-words-one-by-one-text-effect>
@@ -79,10 +79,10 @@
       <template>
         <div class="guitar-content relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
           <div style="width: 100%;" class="flex flex-column flex-center flex-justify-center">
-            <p class="text-center">Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit.</p>
-            <p class="text-center">We'll take the midnight train to your dream.</p>
+            <p class="text-center">{{ $t('home.rockIntro1') }}</p>
+            <p class="text-center">{{ $t('home.rockIntro2') }}</p>
             <br />
-            <p class="text-center"><small><small><b>Hint: Click the strings to the beat of "Smoke on the Water".</b></small></small></p>
+            <p class="text-center"><small><small><b>{{ $t('home.guitarHint') }}</b></small></small></p>
             <div
               class="guitar-block text-center"
               @mouseenter="startRockin"
@@ -105,7 +105,7 @@
       </div>
     </section>
 
-    <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'PORTFOLIO' ? 'Case Studies' : ''">
+    <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'PORTFOLIO' ? $t('home.caseStudies') : ''">
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
       <commando-skull-scene v-if="this.activeDetail === 'CONSULTANTS'"></commando-skull-scene>
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
@@ -221,22 +221,53 @@
         return null
       },
       servicesContent() {
-        const content = [
-          this.getHomePageServiceByIndex(0),
-          this.getHomePageServiceByIndex(1),
-          this.getHomePageServiceByIndex(2),
-        ].filter(n => n !== null);
-
-        return content;
+        // Use i18n translations instead of YAML data
+        return [
+          {
+            title: this.$t('services.sexyMobileApps.title'),
+            description: this.$t('services.sexyMobileApps.description'),
+            link: '/#contact',
+            linkText: this.$t('services.sexyMobileApps.linkText')
+          },
+          {
+            title: this.$t('services.bulletproofSoftware.title'),
+            description: this.$t('services.bulletproofSoftware.description'),
+            link: '/#contact',
+            linkText: this.$t('services.bulletproofSoftware.linkText')
+          },
+          {
+            title: this.$t('services.deliciousWebsites.title'),
+            description: this.$t('services.deliciousWebsites.description'),
+            link: '/#contact',
+            linkText: this.$t('services.deliciousWebsites.linkText')
+          }
+        ];
       },
       serviceTestimonials() {
-        const testimonials = [
-          this.getTestimonialByIndex(0),
-          this.getTestimonialByIndex(1),
-          this.getTestimonialByIndex(2)
-        ].filter(n => n !== null);
-
-        return testimonials;
+        // Use i18n translations instead of YAML data
+        return [
+          {
+            testimonial: this.$t('testimonials.phase3.quote'),
+            reviewedBy: this.$t('testimonials.phase3.reviewer'),
+            position: this.$t('testimonials.phase3.position'),
+            organization: this.$t('testimonials.phase3.organization'),
+            image: '/images/testimonials/phase3.leigh-w.jpg'
+          },
+          {
+            testimonial: this.$t('testimonials.active24.quote'),
+            reviewedBy: this.$t('testimonials.active24.reviewer'),
+            position: this.$t('testimonials.active24.position'),
+            organization: this.$t('testimonials.active24.organization'),
+            image: '/images/testimonials/active24.dirk-s.jpg'
+          },
+          {
+            testimonial: this.$t('testimonials.carsgone.quote'),
+            reviewedBy: this.$t('testimonials.carsgone.reviewer'),
+            position: this.$t('testimonials.carsgone.position'),
+            organization: this.$t('testimonials.carsgone.organization'),
+            image: '/images/testimonials/carsgone.ray-r.jpg'
+          }
+        ];
       }
     },
     data() {

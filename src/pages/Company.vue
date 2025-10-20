@@ -2,7 +2,7 @@
   <Layout :key="repaint">
     <hero-layout01-col
       bgColor="bg-evening-blue"
-      title="Lost in the Software Jungle?"
+      :title="$t('company.heroTitle')"
       subtitle=""
       description=""
       imageClass="home-page-banner-image"
@@ -37,17 +37,17 @@
       <template>
         <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top" style="position: relative; z-index: 3000;">
           <div>
-            <p class="text-center">To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges.</p>
-            <p class="text-center">Let our seasoned vets guide you on the path to your dreams.</p>
+            <p class="text-center">{{ $t('company.intro1') }}</p>
+            <p class="text-center">{{ $t('company.intro2') }}</p>
             <div class="text-center">
-              <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3" style="cursor: pointer;">Meet Our Consultants</a>
+              <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3" style="cursor: pointer;">{{ $t('company.meetConsultants') }}</a>
             </div>
           </div>
         </div>
       </template>
     </hero-layout01-col>
 
-    <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'CONSULTANTS' ? 'Our Team' : ''">
+    <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'CONSULTANTS' ? $t('company.ourTeam') : ''">
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
       <commando-skull-scene v-if="this.activeDetail === 'CONSULTANTS'"></commando-skull-scene>
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>

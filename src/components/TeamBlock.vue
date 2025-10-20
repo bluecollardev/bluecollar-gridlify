@@ -5,10 +5,10 @@
       <div class="content-block">
         <content-block-layout
           className="pad-top"
-          title="Need Backup? We Got You."
-          description="To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges."
+          :title="$t('company.needBackup')"
+          :description="$t('company.backupDescription')"
           link="/"
-          linkText="Back to Home"
+          :linkText="$t('company.backToHome')"
           :onLinkClicked="this.onHomeLinkClicked"
         />
       </div>
