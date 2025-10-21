@@ -1,5 +1,5 @@
 <template>
-  <img ref="redSnapper" class="red-snapper fish" src="/images/red-snapper.svg" />
+  <img ref="redSnapper" class="red-snapper fish" src="/images/red-snapper.svg" :style="fishStyle" />
 </template>
 
 <script>
@@ -55,6 +55,12 @@ export default {
     autoStart: {
       type: Boolean,
       default: true
+    },
+    // Size scale percentage (100 = normal size, 50 = half size, 200 = double size)
+    scale: {
+      type: Number,
+      default: 100,
+      validator: (value) => value > 0
     }
   },
   data() {
@@ -62,12 +68,21 @@ export default {
       interval: null
     }
   },
+  computed: {
+    fishStyle() {
+      const scalePercent = this.scale / 100;
+      return {
+        transform: `rotate(-45deg) scale(${scalePercent}, -${scalePercent})`
+      };
+    }
+  },
   methods: {
     setFishJumpRotation(el, { x }) {
       const rotationDelta = this.endRotation - this.startRotation;
       let xPct = x / this.rotationMaxX;
+      const scalePercent = this.scale / 100;
 
-      el.style.transform = `rotate(${ this.startRotation + (rotationDelta * xPct) }deg) scaleX(-1)`;
+      el.style.transform = `rotate(${ this.startRotation + (rotationDelta * xPct) }deg) scale(${scalePercent}, -${scalePercent})`;
     },
     animateOnParabolicPath(el, fx, vtx, cb) {
       if (typeof window !== 'undefined') {
@@ -142,6 +157,6 @@ export default {
   max-width: 400px;
   left: -200px;
   bottom: -200px;
-  transform: rotate(-45deg) scaleX(-1);
+  transform-origin: center;
 }
 </style>
