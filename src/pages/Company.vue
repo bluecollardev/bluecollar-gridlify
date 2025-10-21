@@ -16,7 +16,7 @@
         <div class="jungle-bg-container xs-hide" style="align-self: flex-start">
           <jungle class="jungle-bg"></jungle>
           <div style="position: fixed; bottom: 15vh; width: 100%;">
-            <img ref="combatRadio" @click="viewDetail('CONSULTANTS')" class="combat-radio xs-hide sm-hide"
+            <img ref="combatRadio" @click="scrollToTeam" class="combat-radio xs-hide sm-hide"
                  src="/images/walkie-talkie.svg"/>
           </div>
         </div>
@@ -34,7 +34,7 @@
             <p class="text-center">{{ $t('company.intro1') }}</p>
             <p class="text-center">{{ $t('company.intro2') }}</p>
             <div class="text-center">
-              <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3"
+              <a @click="scrollToTeam" class="action-link transparent space-top g-pstyle3"
                  style="cursor: pointer;">{{ $t('company.meetConsultants') }}</a>
             </div>
           </div>
@@ -224,6 +224,14 @@ export default {
     },
   },
   methods: {
+    scrollToTeam() {
+      if (typeof window !== 'undefined') {
+        const teamSection = document.getElementById('team')
+        if (teamSection) {
+          teamSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }
+    },
     startRockin() {
       this.rockAndRoll = true
     },
