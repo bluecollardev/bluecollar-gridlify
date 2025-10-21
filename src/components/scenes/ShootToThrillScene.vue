@@ -75,15 +75,14 @@ export default {
     position: relative;
     width: 100%;
     height: 50%;
-    top: calc(10vh + 54px);
+    top: calc(54px);
     left: 0;
     z-index: 1000;
   }
 
   .guns-comp {
-    height: 70vh;
+    height: 40vh;
     width: 80%;
-    transform: translateY(100px);
   }
 
   .left-gun, .right-gun {
@@ -91,12 +90,12 @@ export default {
   }
 
   .left-gun {
-    left: -30%;
+    left: -25%;
   }
 
   .right-gun {
     transform: scaleX(-1);
-    right: -30%;
+    right: -25%;
   }
 }
 </style>

@@ -42,7 +42,7 @@
       </template>
     </hero-layout01-col>
 
-    <team :activeDetail="'CONSULTANTS'" />
+    <team ref="team" :activeDetail="'CONSULTANTS'" />
 
     <!--<content-detail-modal ref="contentDetail" :title="this.activeDetail === 'CONSULTANTS' ? $t('company.ourTeam') : ''">
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
@@ -171,6 +171,7 @@ export default {
       repaint: Math.random(),
       rockAndRoll: false,
       activeDetail: null,
+      arnoldAudio: null,
       textEffects: {
         typewriter: TypewriterTextEffect,
         shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
@@ -226,9 +227,26 @@ export default {
   methods: {
     scrollToTeam() {
       if (typeof window !== 'undefined') {
+        // Play audio
+        if (this.arnoldAudio) {
+          this.arnoldAudio.currentTime = 0
+          this.arnoldAudio.play().catch(err => {
+            console.log('Arnold audio play failed:', err)
+          })
+        }
+
+        // Scroll to team section
         const teamSection = document.getElementById('team')
         if (teamSection) {
           teamSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+
+          // Prime audio and trigger guns after scroll completes
+          setTimeout(() => {
+            if (this.$refs.team) {
+              this.$refs.team.primeAudio()
+              this.$refs.team.fireGuns()
+            }
+          }, 1000)
         }
       }
     },
@@ -270,7 +288,12 @@ export default {
     }
   },
   mounted() {
-    if (window) {
+    if (typeof window !== 'undefined') {
+      this.arnoldAudio = new Audio()
+      this.arnoldAudio.volume = 0.60
+      this.arnoldAudio.src = '/audio/get_to_the_choppa.mp3'
+      this.arnoldAudio.loop = false
+
       window.addEventListener('resize', () => {
         this.repaint = Math.random()
       })

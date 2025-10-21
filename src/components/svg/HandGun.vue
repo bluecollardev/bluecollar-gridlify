@@ -8,9 +8,9 @@
         xmlns="http://www.w3.org/2000/svg"
         class="drawing"
         version="1.1"
-        viewBox="0 0 260 180"
-        height="180mm"
-        width="260mm"
+        viewBox="28 -2 50 40"
+        height="40mm"
+        width="50mm"
         shape-rendering="geometricPrecision"
         text-rendering="geometricPrecision"
         image-rendering="optimizeQuality">
@@ -227,7 +227,7 @@ export default {
 
 <style lang="scss" scoped>
 .gun {
-  width: 100%;
+  width: fit-content;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
