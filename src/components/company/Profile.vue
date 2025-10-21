@@ -95,8 +95,9 @@
             <div class="issue-date">ISSUED: {{ profileData.issueDate }}</div>
           </div>
           <div class="signature-section">
-            <div class="signature-line"></div>
-            <div class="signature-label">AUTHORIZED SIGNATURE</div>
+            <button class="view-resume-btn" @click="viewDetail">
+              VIEW RESUME
+            </button>
           </div>
         </div>
       </div>
@@ -117,7 +118,7 @@ export default {
     return {
       profileData: {
         name: resumeData.personalInfo.name.toUpperCase(),
-        photo: '/images/lucas-lopatka-profile.png',
+        photo: '/images/bc-001-lucas.jpg',
         idNumber: 'BC-' + new Date().getFullYear() + '-001',
         rank: 'SOFTWARE CAPTAIN',
         specialty: 'FULL-STACK MERCENARY',
@@ -528,18 +529,30 @@ export default {
 .signature-section {
   text-align: right;
 
-  .signature-line {
-    width: 150px;
-    height: 30px;
-    border-bottom: 2px solid #78b7d6;
-    margin-bottom: 0.25rem;
-  }
-
-  .signature-label {
-    font-size: 0.6rem;
-    color: #78b7d6;
-    letter-spacing: 1px;
+  .view-resume-btn {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #78b7d6 0%, #5a9db8 100%);
+    color: #1a1a1a;
+    font-size: 0.75rem;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #78b7d6;
+    border-radius: 3px;
     font-weight: bold;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: linear-gradient(135deg, #5a9db8 0%, #78b7d6 100%);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    }
   }
 }
 
