@@ -487,22 +487,21 @@ export default {
     z-index: 2;
   }
 
-  .phrase-container {
-    position: relative;
-    width: 100%;
-    min-height: 4em;
-
-    .shrink-words-one-by-one-text-effect {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
+  #contact {
+    z-index: 1;
   }
 }
 
-  #contact {
-    z-index: 1;
+.phrase-container {
+  position: relative;
+  width: 100%;
+  min-height: 4em;
+
+  .shrink-words-one-by-one-text-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
 
