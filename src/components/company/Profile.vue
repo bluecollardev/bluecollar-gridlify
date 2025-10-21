@@ -129,6 +129,14 @@ export default {
           {
             company: 'BC Developers Exchange',
             role: 'Application Delivery Lead'
+          },
+          {
+            company: 'Carbeeza Inc. (Canada)',
+            role: 'Frontend Applications Lead'
+          },
+          {
+            company: 'Alberta Motor Association',
+            role: 'Technical Lead'
           }
         ],
         primaryTech: [
