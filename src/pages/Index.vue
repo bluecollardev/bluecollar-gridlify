@@ -444,7 +444,7 @@
         align-items: center;
         justify-content: center;
         display: flex;
-        margin-top: -20rem;
+        margin-top: -15rem;
       }
     }
 
