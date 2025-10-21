@@ -27,13 +27,13 @@ export default {
 .detailed-content-panel {
   opacity: 1;
   width: 100vw;
-  height: calc(100vh - 54px);
+  height: 100vh;
   position: absolute;
   /*top: 54px;*/
   /* Match header */
   top: 100%;
   left: 0;
-  z-index: 10000;
+  z-index: 99999;
   overflow-y: auto;
 }
 
