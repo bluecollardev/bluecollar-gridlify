@@ -26,15 +26,6 @@
         <forest-scene ref="forestScene"></forest-scene>
       </template>
 
-      <!--<template v-slot:title>
-        <typewriter-text-effect
-          tag="h2"
-          text="Lost in the Software Jungle?"
-          class="title text-center pad-bottom"
-          :loop="true">
-        </typewriter-text-effect>
-      </template>-->
-
       <template>
         <div
             class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top"
@@ -267,21 +258,6 @@ export default {
     }
   },
   mounted() {
-    /* TODO: This belongs to one of the SVG components, move it out */
-    /*const svgPath = document.querySelectorAll('.path');
-
-    const svgText = anime({
-      targets: svgPath,
-      loop: true,
-      direction: 'alternate',
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: 'easeInOutSine',
-      duration: 700,
-      delay: (el, i) => {
-        return i * 500
-      }
-    });*/
-
     if (window) {
       window.addEventListener('resize', () => {
         this.repaint = Math.random()

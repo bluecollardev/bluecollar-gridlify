@@ -92,7 +92,7 @@ export default {
     },
     getFishingRodAnchorCoords() {
       let scene = document.querySelector('.fishing-scene').getBoundingClientRect()
-      //let comp = document.querySelector('.fishing-rod-object').getBoundingClientRect();
+      
       let anchor = document.querySelector('.line-anchor').getBoundingClientRect()
       let coords = {}
 

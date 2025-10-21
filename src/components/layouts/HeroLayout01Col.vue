@@ -10,11 +10,6 @@
 
     <div
         class="hero-section-content sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-full xl-flex-basis-two-thirds">
-      <!--<div class="hero-image-wrapper"><img :class="`banner-image ${this.imageClass}`" v-bind:src="this.image" alt="" /></div>
-      <div v-if="typeof this.caption === 'string' && this.caption.length >0" class="figure-caption bg-bc-blue g-hero">
-        <p class="g-pstyle4" style="text-align: right;">{{ this.caption }}</p>
-        <p class="g-pstyle5" style="text-align: right;">{{ this.subCaption }}</p>
-      </div>-->
       <div class="hero-block">
         <div class="flex flex-column relative">
           <slot name="title" v-if="this.$slots.title" class="sm-space-bottom-half"></slot>
@@ -84,19 +79,6 @@ export default {
         this.windowWidth = window.innerWidth
       })
     }
-
-    /*let hero = this.$refs.heroLayout;
-    const speedMultiplier = 0.5;
-
-    window.addEventListener('resize', function(event) {
-    });
-
-    let lastScroll = 0;
-    window.addEventListener('scroll', (() => {
-      //if (Math.abs(lastScroll - window.scrollY) <= 5) return;
-      const propValue = `50% -${(window.scrollY * speedMultiplier)}px`;
-      hero.style.backgroundPosition = propValue;
-    }).bind(this));*/
   }
 }
 </script>

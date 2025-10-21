@@ -9,14 +9,6 @@
         :options="this.gmapOptions"
     >
     </GmapMap>
-    <!--<GmapMarker
-      :key="index"s
-      v-for="(m, index) in markers"
-      :position="m.position"
-      :clickable="true"
-      :draggable="true"
-      @click="center=m.position"
-    />-->
   </div>
 </template>
 
@@ -78,10 +70,6 @@ export default {
         this.gmapScroll = Object.assign({}, initialScroll)
 
         // TODO: Maybe an offset?
-        /*const offset = {
-          top: window.innerHeight - this.gmapEl.getBoundingClientRect().top,
-          left: window.innerWidth - this.gmapEl.getBoundingClientRect().left
-        };*/
 
         gmap.panBy(initialScroll.x, initialScroll.y / this.parallaxMultiplier)
 
@@ -98,10 +86,6 @@ export default {
       if (Math.abs(this.lastWindowScroll.y - windowScroll.y) <= this.scrollThreshold) return
 
       // TODO: If debug mode...
-      //console.log('map scroll');
-      //console.log(JSON.stringify(this.gmapScroll));
-      //console.log('new scroll');
-      //console.log(JSON.stringify({ x: -(this.gmapScroll.x - windowScroll.x), y: -((this.gmapScroll.y - windowScroll.y) / this.parallaxMultiplier) }));
 
       if (this.gmapScroll) {
         gmap.panBy(-(this.gmapScroll.x - windowScroll.x), -((this.gmapScroll.y - windowScroll.y) / this.parallaxMultiplier))

@@ -9,14 +9,6 @@
           style="width: 100%; height: 100%"
       >
       </GmapMap>
-      <!--<GmapMarker
-        :key="index"
-        v-for="(m, index) in markers"
-        :position="m.position"
-        :clickable="true"
-        :draggable="true"
-        @click="center=m.position"
-      />-->
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="150px" height="150px" id="daSVG">
       <clipPath id="chopChop">
@@ -37,18 +29,6 @@ export default {
   computed: {},
   methods: {},
   mounted() {
-    /*function initialize() {
-      var mapOptions = {
-        center: { lat: 52.517010, lng: 13.378540},
-        zoom: 14,
-        styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#193341"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#29768a"},{"lightness":-37}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#3e606f"},{"weight":2},{"gamma":0.84}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#1a3541"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#2c5a71"}]}],
-        disableDefaultUI: true
-      };
-
-      var map = new google.maps.Map(document.getElementById('map-canvas'),
-          mapOptions);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);*/
   }
 }
 </script>

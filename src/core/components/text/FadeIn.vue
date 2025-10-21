@@ -1,18 +1,15 @@
 <template>
-  <!--<text-wrapper :tag="this.tag" :text="this.text">-->
   <span ref="textWrapper" class="text-wrapper slide-up">
       <span class="words">{{ this.text }}</span>
     </span>
-  <!--</text-wrapper>-->
 </template>
 
 <script>
 import anime from 'animejs'
-//import TextWrapper from './TextWrapper.vue'
 
 export default {
   components: {
-    //TextWrapper,
+    
   },
   props: {
     tag: String,

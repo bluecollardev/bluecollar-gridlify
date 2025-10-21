@@ -1,6 +1,5 @@
 <template>
   <main class="bg-bc-blue">
-    <!--<intro></intro>-->
     <div :id="this.id"
          :class="`page-container container relative ${isSafari ? 'is-safari' : isChrome ? 'is-chrome' : ''}`">
       <div class="notifications" v-if="displayNotifications">
@@ -16,16 +15,6 @@
           <audio-controls class="nav-audio-controls ml-2" style="height: 50px; width: 100%"></audio-controls>
         </template>
       </Header>
-      <!--<audio-controls
-        class="main-audio-controls"
-        style="position: fixed; bottom: 80px; right: 140px; z-index: 4000; opacity: 0.15"
-        :onPreviousClicked="this.onPreviousClicked.bind(this, this.soundtrack)"
-        :onNextClicked="this.onNextClicked.bind(this, this.soundtrack)"
-        :onPlayPauseClicked="this.onSoundtrackPlay.bind(this)"
-        :onShuffleClicked="this.onShuffleClicked.bind(this, this.soundtrack)"
-        :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
-        :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
-      />-->
       <slot/>
       <Footer/>
     </div>
@@ -80,20 +69,11 @@ export default {
       this.displayNotifications = false
     },
     attachScrollListener() {
-      //window.addEventListener('scroll', this.handleScroll.bind(this));
     },
     /**
      * TODO: This is janky... and no longer necessary... besides, it screws up in IE and FF
      */
     handleScroll() {
-      /*if (!document.getElementById('loader')) {
-        if (Math.abs(this.lastScroll - window.scrollY) <= 5) return;
-
-        // Strip the hash
-        this.removeHash();
-
-        this.lastScroll = window.scrollY;
-      }*/
     },
     removeHash() {
       if (typeof window !== 'undefined') window.location.hash = ''

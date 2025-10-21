@@ -36,7 +36,6 @@
           <a href="https://www.instagram.com/bluecollardev" class="d-flex align-items-center mr-4 ml-4">
             <span class="icon-instagram mr-2"></span>
             <!-- TODO: Implement tooltip -->
-            <!--<span class="d-none d-md-inline-block">@bluecollardev</span>-->
           </a>
           <a href="https://www.facebook.com/bluecollardev" class="d-flex align-items-center mr-4">
             <span class="icon-facebook mr-2"></span>
@@ -51,7 +50,6 @@
           <a href="#" class="d-flex align-items-center">
             <span class="icon-envelope mr-2"></span>
             <!-- TODO: Implement tooltip -->
-            <!--<span class="d-none d-lg-inline-block">info@bluecollardev.com</span>-->
           </a>
         </div>
       </nav>

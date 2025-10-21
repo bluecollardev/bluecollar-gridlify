@@ -9,9 +9,6 @@
 export default {
   mounted() {
     if (typeof window !== 'undefined') {
-      //const blurFilter = this.$el.querySelector('#blur-gausssian-filter');
-      //const photo = this.$el.querySelector('#photo-instance');
-
       let posX = 0
       let posY = 0
 
@@ -28,36 +25,6 @@ export default {
 
         posX = coords[counter][0]
         posY = coords[counter][1]
-
-        /*TweenMax.to(blurFilter, 3, {
-          attr: {
-            stdDeviation: 4
-          },
-          onComplete: () => {}
-        }, 0);*/
-
-        /*TweenMax.to(photo, 3, {
-          ease: "power4.out",
-          attr: {
-            x: -posX,
-            y: -posY
-          },
-          onComplete: () => {
-
-            const zoomInOut = 2;
-
-            TweenMax.to(blurFilter, 1.5, {
-              repeat: zoomInOut,
-              yoyo: true,
-              attr: {
-                stdDeviation: 0
-              },
-              onComplete: () => {
-                setTimeout(loop, 1000);
-              }
-            }, 0);
-          }
-        }, 0);*/
 
         counter++
         if (counter === coords.length) {

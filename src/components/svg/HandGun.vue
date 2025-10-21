@@ -176,23 +176,16 @@ export default {
     const intro = new TimelineLite()
 
     intro.to(this.p('.firearm'), 0.5, {rotation: 20, x: '50px', delay: this.introDelay})
-    //intro.add(() => this.shootToThrill());
-
-    //TweenLite.to(this.p('.hammer'), 0, {rotation:0, transformOrigin:'bottom left', delay: 2});
-    //TweenLite.from(this.p('.svg3722'), 0, {rotation:45, transformOrigin:'bottom left', delay: 1})
 
     this.$el.querySelector(this.p('.trigger')).addEventListener('click', () => {
-      //if (interval) clearInterval(interval);
       this.fireWeapon()
     })
 
     this.$el.querySelector(this.p('.slider')).addEventListener('click', () => {
-      //if (interval) clearInterval(interval);
       this.pullSlider()
     })
 
     this.$el.querySelector(this.p('.hammer')).addEventListener('click', () => {
-      //if (interval) clearInterval(interval);
       this.cock()
     })
   }
