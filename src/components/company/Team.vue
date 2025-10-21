@@ -92,7 +92,6 @@ export default {
 #team {
   min-height: 50vh;
   padding-bottom: 15vh;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   position: relative;
 }
 </style>
