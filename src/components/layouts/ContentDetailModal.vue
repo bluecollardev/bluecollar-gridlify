@@ -1,7 +1,7 @@
 <template>
   <div ref="contentDetail" class="detailed-content-panel bg-bc-blue" :class="{ 'scrollable': scrollable }">
     <div class="panel-header flex flex-center pad-left-half pad-right-half"
-         style="height: 5rem; position: absolute; right: 0; z-index: 10; width: 100%">
+         style="height: 5rem; position: absolute; right: 0; z-index: 100; width: 100%">
       <div class="flex-grow">
         <h2 v-if="this.title" class="text-center no-space-top no-space-bottom">{{ this.title }}</h2>
       </div>
