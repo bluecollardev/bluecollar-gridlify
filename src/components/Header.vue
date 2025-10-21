@@ -59,10 +59,10 @@
 </template>
 
 <script>
-  import MenuMixin from '~/core/mixins/MenuMixin';
-  import LanguageSwitcher from '~/components/LanguageSwitcher.vue';
+import MenuMixin from '~/core/mixins/MenuMixin'
+import LanguageSwitcher from '~/components/LanguageSwitcher.vue'
 
-  export default {
+export default {
     components: {
       LanguageSwitcher
     },

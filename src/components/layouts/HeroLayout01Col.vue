@@ -54,9 +54,9 @@
 </template>
 
 <script>
-  import HeroMixin from '~/core/mixins/layouts/Hero';
+import HeroMixin from '~/core/mixins/layouts/Hero'
 
-  export default {
+export default {
     mixins: [
       HeroMixin
     ],

@@ -14,13 +14,6 @@
     >
       <template v-slot:bg>
         <fishing-scene></fishing-scene>
-        <red-snapper
-          class="mobile-fish-index"
-          :scale="30"
-          :speed="3"
-          :jumpHeight="100"
-          :jumpDistance="250"
-        />
       </template>
 
       <template v-slot:title>
@@ -122,54 +115,53 @@
 </template>
 
 <script>
-  import Vue from 'vue';
-  import Layout from '~/layouts/Default.vue';
+import Vue from 'vue'
+import Layout from '~/layouts/Default.vue'
 
-  // Import generic component layouts
-  import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
-  import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue';
-  import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue';
+// Import generic component layouts
+import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue'
+import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue'
+import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue'
 
-  // Import page components
-  import Services from '~/components/home/Services.vue';
-  import PortfolioVerticalTimeline from '~/components/portfolio/PortfolioVerticalTimeline.vue';
-  import TeamBlock from '~/components/TeamBlock.vue';
-  import Contact from '~/components/Contact.vue';
+// Import page components
+import Services from '~/components/home/Services.vue'
+import PortfolioVerticalTimeline from '~/components/portfolio/PortfolioVerticalTimeline.vue'
+import TeamBlock from '~/components/TeamBlock.vue'
+import Contact from '~/components/Contact.vue'
 
-  // Import SVG animations
-  import Jungle from '~/components/svg/Jungle.vue';
-  import Binoculars from '~/components/svg/Binoculars.vue';
-  import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
-  import MatrixBg from '~/components/svg/MatrixBg.vue';
-  import InteractiveGuitar from '~/components/svg/InteractiveGuitar.vue';
-  import SimplePartyLights from '~/components/svg/SimplePartyLights.vue';
+// Import SVG animations
+import Jungle from '~/components/svg/Jungle.vue'
+import Binoculars from '~/components/svg/Binoculars.vue'
+import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue'
+import MatrixBg from '~/components/svg/MatrixBg.vue'
+import InteractiveGuitar from '~/components/svg/InteractiveGuitar.vue'
+import SimplePartyLights from '~/components/svg/SimplePartyLights.vue'
 
-  // Import scenes
-  import ForestScene from '~/components/scenes/ForestScene.vue';
-  import FishingScene from '~/components/scenes/FishingScene.vue';
-  import ShootToThrillScene from '~/components/scenes/ShootToThrillScene.vue';
-  import CommandoSkullScene from '~/components/scenes/CommandoSkullScene.vue';
-  import RedSnapper from '~/components/RedSnapper.vue';
+// Import scenes
+import ForestScene from '~/components/scenes/ForestScene.vue'
+import FishingScene from '~/components/scenes/FishingScene.vue'
+import ShootToThrillScene from '~/components/scenes/ShootToThrillScene.vue'
+import CommandoSkullScene from '~/components/scenes/CommandoSkullScene.vue'
+import RedSnapper from '~/components/RedSnapper.vue'
 
-  // Import animated text effects
-  import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
-  import ShrinkWordsOneByOneTextEffect from '~/core/components/text/ShrinkWordsOneByOne.vue';
-  import RotateWordsTextEffect from '~/core/components/text/RotateWords.vue';
-  import SlideUpTextEffect from '~/core/components/text/SlideUp.vue';
-  import FadeInTextEffect from '~/core/components/text/FadeIn.vue';
+// Import animated text effects
+import TypewriterTextEffect from '~/core/components/text/Typewriter.vue'
+import ShrinkWordsOneByOneTextEffect from '~/core/components/text/ShrinkWordsOneByOne.vue'
+import RotateWordsTextEffect from '~/core/components/text/RotateWords.vue'
+import SlideUpTextEffect from '~/core/components/text/SlideUp.vue'
+import FadeInTextEffect from '~/core/components/text/FadeIn.vue'
 
-  // Import animated content effects
-  import SimpleEffect from '~/core/components/animate/Simple.vue'
+// Import animated content effects
+import SimpleEffect from '~/core/components/animate/Simple.vue'
 
-  // Import mixins
-  import TestimonialMixin from '~/core/mixins/TestimonialMixin';
-  import HomeMixin from '~/core/mixins/HomeMixin';
+// Import mixins
+import TestimonialMixin from '~/core/mixins/TestimonialMixin'
+import HomeMixin from '~/core/mixins/HomeMixin'
 
-  // Import static data
-  import HomeData from '~/data/Home.yml';
-  import HeroData from '~/data/Hero.yml';
+// Import static data
+import HeroData from '~/data/Hero.yml'
 
-  export default {
+export default {
     components: {
       Layout,
       // Inject components
@@ -571,23 +563,6 @@
       > * {
         margin: 0 auto;
         width: 100%;
-      }
-    }
-  }
-
-  // Mobile fish on Index page - only show on phones
-  .mobile-fish-index {
-    display: none;
-
-    // Show on mobile phones only (max-width: 48em / 768px)
-    @media screen and (max-width: 48em) {
-      display: block !important;
-
-      // Override default positioning to start from 8% left of viewport
-      // Keep fish below viewport (negative bottom value)
-      :deep(.red-snapper) {
-        left: 8vw !important;
-        bottom: -100px !important;
       }
     }
   }

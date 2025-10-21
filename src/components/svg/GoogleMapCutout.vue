@@ -32,9 +32,8 @@
 </template>
 
 <script>
-  import anime from 'animejs';
 
-  export default {
+export default {
     computed: {},
     methods: {},
     mounted() {

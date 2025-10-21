@@ -56,70 +56,69 @@
 </template>
 
 <script>
-  import Layout from '~/layouts/Default.vue';
+import Layout from '~/layouts/Default.vue'
 
-  // Import components
-  import Header from '~/components/Header.vue';
-  import Blog from '~/components/Blog.vue';
-  import Contact from '~/components/Contact.vue';
-  import Footer from '~/components/Footer.vue';
+// Import components
+import Header from '~/components/Header.vue'
+import Blog from '~/components/Blog.vue'
+import Contact from '~/components/Contact.vue'
+import Footer from '~/components/Footer.vue'
 
-  // Import generic component layouts
-  import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue';
-  import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue';
-  import HeroLayout02Col02 from '~/components/layouts/HeroLayout02Col02.vue';
-  import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
-  import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
-  import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
-  import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
-  import TestimonialHeroLayout from '~/components/layouts/TestimonialHeroLayout.vue';
-  import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue';
+// Import generic component layouts
+import VideoHeroLayout01Col from '~/components/layouts/VideoHeroLayout01Col.vue'
+import HeroLayout01Col from '~/components/layouts/HeroLayout01Col.vue'
+import HeroLayout02Col02 from '~/components/layouts/HeroLayout02Col02.vue'
+import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue'
+import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue'
+import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue'
+import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue'
+import TestimonialHeroLayout from '~/components/layouts/TestimonialHeroLayout.vue'
+import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue'
 
-  // Import page components
-  import Services from '~/components/home/Services.vue';
+// Import page components
+import Services from '~/components/home/Services.vue'
 
-  // Import static blocks
-  import ProcessBlock from '~/blocks/ProcessBlock.vue';
+// Import static blocks
+import ProcessBlock from '~/blocks/ProcessBlock.vue'
 
-  // Import SVG animations
-  import AppFactory from '~/components/svg/AppFactory.vue';
-  import InteractiveGuitar from '~/components/svg/InteractiveGuitar.vue';
-  import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue';
-  import GoogleMapCutout from '~/components/svg/GoogleMapCutout.vue';
-  import PartyLights from '~/components/svg/PartyLights.vue';
-  import MatrixBg from '~/components/svg/MatrixBg.vue';
-  import Jungle from '~/components/svg/Jungle.vue';
+// Import SVG animations
+import AppFactory from '~/components/svg/AppFactory.vue'
+import InteractiveGuitar from '~/components/svg/InteractiveGuitar.vue'
+import GoogleMapBackground from '~/components/svg/GoogleMapBackground.vue'
+import GoogleMapCutout from '~/components/svg/GoogleMapCutout.vue'
+import PartyLights from '~/components/svg/PartyLights.vue'
+import MatrixBg from '~/components/svg/MatrixBg.vue'
+import Jungle from '~/components/svg/Jungle.vue'
 
-  // Import scenes
-  import ForestScene from '~/components/scenes/ForestScene.vue';
-  import ShootToThrillScene from '~/components/scenes/ShootToThrillScene.vue';
-  import CommandoSkullScene from '~/components/scenes/CommandoSkullScene.vue';
+// Import scenes
+import ForestScene from '~/components/scenes/ForestScene.vue'
+import ShootToThrillScene from '~/components/scenes/ShootToThrillScene.vue'
+import CommandoSkullScene from '~/components/scenes/CommandoSkullScene.vue'
 
-  // Import team block
-  import TeamBlock from '~/components/TeamBlock.vue';
+// Import team block
+import TeamBlock from '~/components/TeamBlock.vue'
 
-  // Import animated text effects
-  import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
-  import ShrinkWordsOneByOneTextEffect from '~/core/components/text/ShrinkWordsOneByOne.vue';
-  import RotateWordsTextEffect from '~/core/components/text/RotateWords.vue';
-  import SlideUpTextEffect from '~/core/components/text/SlideUp.vue';
-  import FadeInTextEffect from '~/core/components/text/FadeIn.vue';
+// Import animated text effects
+import TypewriterTextEffect from '~/core/components/text/Typewriter.vue'
+import ShrinkWordsOneByOneTextEffect from '~/core/components/text/ShrinkWordsOneByOne.vue'
+import RotateWordsTextEffect from '~/core/components/text/RotateWords.vue'
+import SlideUpTextEffect from '~/core/components/text/SlideUp.vue'
+import FadeInTextEffect from '~/core/components/text/FadeIn.vue'
 
-  // Import animated content effects
-  import SimpleEffect from '~/core/components/animate/Simple.vue'
+// Import animated content effects
+import SimpleEffect from '~/core/components/animate/Simple.vue'
 
-  // Import static data
-  import HomeData from '~/data/Home.yml';
-  import HeroData from '~/data/Hero.yml';
-  import GeneralData from '~/data/General.yml';
-  import TestimonialData from '~/data/Testimonial.yml';
+// Import static data
+import HomeData from '~/data/Home.yml'
+import HeroData from '~/data/Hero.yml'
+import GeneralData from '~/data/General.yml'
 
-  // Import mixins
-  import FlipCardsMixin from '~/core/mixins/FlipCardsMixin';
-  import TestimonialMixin from '~/core/mixins/TestimonialMixin';
-  import HomeMixin from '~/core/mixins/HomeMixin';
+// Import mixins
+import FlipCardsMixin from '~/core/mixins/FlipCardsMixin'
+import TestimonialMixin from '~/core/mixins/TestimonialMixin'
+import HomeMixin from '~/core/mixins/HomeMixin'
 
-  export default {
+export default {
     components: {
       Layout,
       // Inject components

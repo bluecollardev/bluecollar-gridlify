@@ -8,10 +8,10 @@
 </template>
 
 <script>
-  // Import SVG animations
-  import HandGun from '~/components/svg/HandGun.vue';
+// Import SVG animations
+import HandGun from '~/components/svg/HandGun.vue'
 
-  export default {
+export default {
     components: {
       // Inject SVG animations
       HandGun,

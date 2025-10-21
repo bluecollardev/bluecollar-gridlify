@@ -711,12 +711,11 @@
 </template>
 
 <script>
-  import { TimelineMax } from 'gsap';
-  import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
+// Register the plugin
+import { gsap, TimelineMax } from 'gsap'
+import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 
-  // Register the plugin
-  import { gsap } from 'gsap';
-  gsap.registerPlugin(MorphSVGPlugin);
+gsap.registerPlugin(MorphSVGPlugin);
 
   export default {
     mounted() {

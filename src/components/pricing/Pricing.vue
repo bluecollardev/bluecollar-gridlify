@@ -966,9 +966,9 @@
 </template>
 
 <script>
-  import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
+import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue'
 
-  export default {
+export default {
     components: {
       // Inject components
       // Inject generic component layouts

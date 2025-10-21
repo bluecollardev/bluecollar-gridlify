@@ -72,9 +72,9 @@
 </template>
 
 <script>
-  import TestimonialMixin from '~/core/mixins/layouts/Testimonial';
+import TestimonialMixin from '~/core/mixins/layouts/Testimonial'
 
-  export default {
+export default {
     mixins: [
       TestimonialMixin
     ]

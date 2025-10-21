@@ -97,9 +97,9 @@
 </template>
 
 <script>
-  import { TweenLite, TimelineLite, CSSPlugin } from 'gsap';
+import { CSSPlugin, TimelineLite, TweenLite } from 'gsap'
 
-  export default {
+export default {
     props: {
       introDelay: {
         type: Number,

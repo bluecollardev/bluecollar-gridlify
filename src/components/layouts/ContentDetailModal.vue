@@ -13,9 +13,9 @@
 </template>
 
 <script>
-  import ContentDetailModalMixin from '~/core/mixins/layouts/ContentDetailModal';
+import ContentDetailModalMixin from '~/core/mixins/layouts/ContentDetailModal'
 
-  export default {
+export default {
     mixins: [
       ContentDetailModalMixin
     ]

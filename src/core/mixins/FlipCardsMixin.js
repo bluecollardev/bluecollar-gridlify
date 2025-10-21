@@ -1,4 +1,4 @@
-import anime from 'animejs';
+import anime from 'animejs'
 
 export default {
   methods: {

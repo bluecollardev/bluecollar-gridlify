@@ -15,16 +15,16 @@
 </template>
 
 <script>
-  import { getAllBlogPosts } from '~/utils/blog.js'
+import { getAllBlogPosts } from '~/utils/blog.js'
 
-  // Import generic component layouts
-  import HeroLayout02Col02 from '~/components/layouts/HeroLayout02Col02.vue';
-  import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
-  import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
-  import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
-  import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
+// Import generic component layouts
+import HeroLayout02Col02 from '~/components/layouts/HeroLayout02Col02.vue'
+import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue'
+import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue'
+import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue'
+import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue'
 
-  export default {
+export default {
     components: {
       HeroLayout02Col02,
       SectionBlockLayout02Col01,

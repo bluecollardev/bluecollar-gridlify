@@ -23,12 +23,12 @@
 </template>
 
 <script>
-  import { getBlogPostBySlug } from '~/utils/blog.js'
-  import Layout from '~/layouts/Default.vue'
-  import Header from '~/components/Header.vue'
-  import Footer from '~/components/Footer.vue'
+import { getBlogPostBySlug } from '~/utils/blog.js'
+import Layout from '~/layouts/Default.vue'
+import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
 
-  export default {
+export default {
     components: {
       Layout,
       Header,

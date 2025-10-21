@@ -883,9 +883,9 @@
 </template>
 
 <script>
-  import { gsap } from 'gsap';
+import { gsap } from 'gsap'
 
-  export default {
+export default {
     mounted() {
       // TODO: Re-enable jungle animations when needed
       // Only animate elements that exist in the SVG

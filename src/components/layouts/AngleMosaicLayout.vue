@@ -108,9 +108,9 @@
 </template>
 
 <script>
-  import FlipCardsMixin from '~/core/mixins/FlipCardsMixin';
+import FlipCardsMixin from '~/core/mixins/FlipCardsMixin'
 
-  export default {
+export default {
     props: {
       bgColor: {
         type: String,

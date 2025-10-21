@@ -1,4 +1,4 @@
-import { marked } from 'marked';
+import { marked } from 'marked'
 
 export default {
   // TODO: Supply models via props??

@@ -7,10 +7,8 @@
 </template>
 
 <script>
-  import anime from 'animejs';
-
-  import * as DOMTextEffectUtils from '~/core/utils/DOMTextEffectUtils';
-  //import TextWrapper from './TextWrapper.vue'
+import anime from 'animejs'
+//import TextWrapper from './TextWrapper.vue'
 
   export default {
     components: {

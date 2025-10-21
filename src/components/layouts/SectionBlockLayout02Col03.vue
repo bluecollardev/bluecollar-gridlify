@@ -36,7 +36,7 @@
  * a left column with the heading and text content,
  * and a right column with a testimonial.
  */
-import Home from '~/data/Home.yml';
+import Home from '~/data/Home.yml'
 
 export default {
   // TODO: Supply models via props??

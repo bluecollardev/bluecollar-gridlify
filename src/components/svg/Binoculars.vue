@@ -5,9 +5,8 @@
 </template>
 
 <script>
-  import { TweenMax } from 'gsap';
 
-  export default {
+export default {
     mounted() {
       if (typeof window !== 'undefined') {
         //const blurFilter = this.$el.querySelector('#blur-gausssian-filter');

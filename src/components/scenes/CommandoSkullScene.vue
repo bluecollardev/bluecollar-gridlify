@@ -7,12 +7,12 @@
 </template>
 
 <script>
-  import anime from 'animejs';
+import anime from 'animejs'
 
-  // Import SVG animations
-  import Helicopter from '~/components/svg/Helicopter.vue';
+// Import SVG animations
+import Helicopter from '~/components/svg/Helicopter.vue'
 
-  export default {
+export default {
     components: {
       // Inject SVG animations
       Helicopter

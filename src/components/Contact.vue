@@ -235,10 +235,10 @@
 </template>
 
 <script>
-	// Import animated text effects
-  import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
+// Import animated text effects
+import TypewriterTextEffect from '~/core/components/text/Typewriter.vue'
 
-	export default {
+export default {
 		components: {
 			// Inject animated text effects
 			TypewriterTextEffect

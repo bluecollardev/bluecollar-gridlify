@@ -19,10 +19,10 @@
 </template>
 
 <script>
-  import { gsap } from 'gsap';
-  import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
+import { gsap } from 'gsap'
+import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 
-  gsap.registerPlugin(MorphSVGPlugin);
+gsap.registerPlugin(MorphSVGPlugin);
 
   export default {
     data() {

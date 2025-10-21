@@ -1,7 +1,7 @@
-import { marked } from 'marked';
+import { marked } from 'marked'
 
 // Import static data
-import ServiceData from '~/data/Services.yml';
+import ServiceData from '~/data/Services.yml'
 
 export default {
   computed: {

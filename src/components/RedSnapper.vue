@@ -91,9 +91,10 @@ export default {
     },
     animateOnParabolicPath(el, maxDistance, maxHeight, cb) {
       if (typeof window !== 'undefined') {
-        // Get the initial bottom position from CSS
+        // Get the initial bottom and left positions from CSS
         const computedStyle = window.getComputedStyle(el);
         const initialBottom = parseFloat(computedStyle.bottom) || -200;
+        const initialLeft = parseFloat(computedStyle.left) || -200;
 
         let x = this.speed;
         let requestId = null;
@@ -105,7 +106,8 @@ export default {
 
           // Add the parabolic offset to the initial bottom position
           el.style.bottom =  `${initialBottom + y}px`;
-          el.style.left = `${x}px`;
+          // Start from initial left position and move horizontally
+          el.style.left = `${initialLeft + x}px`;
 
           if (typeof cb === 'function') cb(el, { x, y, maxDistance, maxHeight });
 

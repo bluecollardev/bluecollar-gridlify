@@ -37,9 +37,9 @@
 </template>
 
 <script>
-  import ContentBlockMixin from '~/core/mixins/layouts/ContentBlock';
+import ContentBlockMixin from '~/core/mixins/layouts/ContentBlock'
 
-  export default {
+export default {
     mixins: [
       ContentBlockMixin
     ]

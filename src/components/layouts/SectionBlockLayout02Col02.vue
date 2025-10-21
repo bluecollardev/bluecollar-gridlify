@@ -32,7 +32,7 @@
 
 <script>
 
-import Home from '~/data/Home.yml';
+import Home from '~/data/Home.yml'
 
 export default {
   // TODO: Supply models via props??

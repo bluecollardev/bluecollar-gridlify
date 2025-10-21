@@ -11,13 +11,13 @@
 </template>
 
 <script>
-  import anime from 'animejs';
+import anime from 'animejs'
 
-  //import Maze from '~/components/svg/Maze.vue';
-  //import Skull from '~/components/svg/Skull.vue';
-  import PhoneApp from '~/components/svg/PhoneApp.vue';
+//import Maze from '~/components/svg/Maze.vue';
+//import Skull from '~/components/svg/Skull.vue';
+import PhoneApp from '~/components/svg/PhoneApp.vue'
 
-  export default {
+export default {
     components: {
       //Maze,
       //Skull,

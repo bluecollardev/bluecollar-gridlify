@@ -1,5 +1,23 @@
 <template>
   <div class="fishing-scene">
+    <red-snapper
+      class="mobile-fish"
+      :scale="40"
+      :speed="5"
+      :jumpHeight="250"
+      :jumpDistance="450"
+      :min-jump-interval="3000"
+      :max-jump-interval="8000"
+    />
+    <!--<red-snapper
+      class="mobile-fish"
+      :scale="30"
+      :speed="5"
+      :jumpHeight="230"
+      :jumpDistance="500"
+      :min-jump-interval="3000"
+      :max-jump-interval="8000"
+    />-->
     <RedSnapper ref="redSnapper" class="desktop-fish" :jumpDistance="jumpDistance" />
     <div class="fishing-interactive">
       <span ref="fishingRod" @click="doCast()" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
@@ -12,12 +30,11 @@
   </div>
 </template>
 <script>
-  import anime from 'animejs';
-  import SVG from 'svg.js';
-  import 'svg.pathmorphing.js';
-  import RedSnapper from '../RedSnapper.vue';
+import SVG from 'svg.js'
+import 'svg.pathmorphing.js'
+import RedSnapper from '../RedSnapper.vue'
 
-  // Animation & Timing Constants
+// Animation & Timing Constants
   const CAST_ANIMATION_DURATION = 2500;
   const RESET_CAST_DELAY = 3000;
   const INITIAL_CAST_DELAY = 1500;

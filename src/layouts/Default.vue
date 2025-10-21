@@ -31,19 +31,19 @@
 </template>
 
 <script>
-  // Import intro
-  import Intro from '~/components/Intro.vue';
-  // Import core components
-  import Header from '~/components/Header.vue';
-  import Footer from '~/components/Footer.vue';
-  import Contact from '~/components/Contact.vue';
-  import Blog from '~/components/Blog.vue';
+// Import intro
+import Intro from '~/components/Intro.vue'
+// Import core components
+import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
+import Contact from '~/components/Contact.vue'
+import Blog from '~/components/Blog.vue'
 
-  // Import audio controls and mixin
-  import AudioControls from '~/core/components/audio/AudioControls.vue';
-  import AudioControlsMixin from '~/core/components/audio/AudioControlsMixin';
+// Import audio controls and mixin
+import AudioControls from '~/core/components/audio/AudioControls.vue'
+import AudioControlsMixin from '~/core/components/audio/AudioControlsMixin'
 
-  export default {
+export default {
     props: {
       id: {
         type: String,

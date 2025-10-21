@@ -49,15 +49,15 @@
 </template>
 
 <script>
-  // Image lazy loader, just add class="lozad" to elements
-  import lozad from 'lozad';
+// Image lazy loader, just add class="lozad" to elements
+import lozad from 'lozad'
 
-  // vue-markdown is broken, babel deps issues...
-  // import VueMarkdown from 'vue-markdown'
-  // Use marked instead
-  import { marked } from 'marked';
+// vue-markdown is broken, babel deps issues...
+// import VueMarkdown from 'vue-markdown'
+// Use marked instead
+import { marked } from 'marked'
 
-	export default {
+export default {
 	  props: {
 	    project: {
 	      type: Object

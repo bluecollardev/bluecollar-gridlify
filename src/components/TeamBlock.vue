@@ -17,12 +17,12 @@
 </template>
 
 <script>
-  import AngleMosaicLayout from '~/components/layouts/AngleMosaicLayout.vue';
-  import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
-  import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
-  import TestimonialMixin from '~/core/mixins/TestimonialMixin';
+import AngleMosaicLayout from '~/components/layouts/AngleMosaicLayout.vue'
+import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue'
+import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue'
+import TestimonialMixin from '~/core/mixins/TestimonialMixin'
 
-  export default {
+export default {
     props: {
       onHomeLinkClicked: {
         type: Function,

@@ -16,9 +16,9 @@
 </template>
 
 <script>
-  import anime from 'animejs';
+import anime from 'animejs'
 
-  export default {
+export default {
     props: {
       onGetToTheChopper: {
         type: Function,
