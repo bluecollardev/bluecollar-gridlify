@@ -145,7 +145,10 @@ export default {
           'Node.js',
           'Vue.js',
           'Go',
+          'PHP',
+          'Python',
           'AWS',
+          'Azure',
           'Kubernetes'
         ],
         issueDate: new Date().getFullYear()
