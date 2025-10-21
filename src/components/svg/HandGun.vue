@@ -133,7 +133,13 @@ export default {
       TweenLite.to(this.p('.hammer'), 0, {rotation: 0, transformOrigin: 'bottom left', delay: 0.1})
 
       TweenLite.to(this.p('.bullet'), 0, {x: 0})
-      TweenLite.to(this.p('.bullet'), 0.3, {x: -100})
+      TweenLite.to(this.p('.bullet'), 0.3, {
+        x: -100,
+        onComplete: () => {
+          // Hide bullet after animation completes
+          TweenLite.set(this.p('.bullet'), {opacity: 0})
+        }
+      })
 
       this.fireGunAudio.pause()
       this.fireGunAudio.volume = 0.20
