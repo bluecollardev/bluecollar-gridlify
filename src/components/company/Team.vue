@@ -1,5 +1,5 @@
 <template>
-  <section id="team" class="hero-section angle">
+  <section id="team" class="hero-section angle" @click="primeAudio">
     <shoot-to-thrill-scene ref="shootToThrill" v-if="activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
     <commando-skull-scene v-if="activeDetail === 'CONSULTANTS'"></commando-skull-scene>
     <team-block v-if="activeDetail === 'CONSULTANTS'"></team-block>
@@ -25,10 +25,30 @@ export default {
   },
   data() {
     return {
-      hasTriggered: false
+      hasTriggered: false,
+      audioPrimed: false
     }
   },
   methods: {
+    primeAudio() {
+      if (this.audioPrimed) return
+      this.audioPrimed = true
+
+      // Prime audio by creating and playing silent audio on user click
+      const silentAudio = new Audio()
+      silentAudio.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA'
+      silentAudio.play().catch(() => {})
+
+      // If animation hasn't triggered yet but section is in view, trigger it now
+      if (!this.hasTriggered) {
+        const rect = this.$el.getBoundingClientRect()
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight
+        if (rect.top <= windowHeight * 0.5 && rect.bottom >= 0) {
+          this.hasTriggered = true
+          this.fireGuns()
+        }
+      }
+    },
     handleScroll() {
       if (this.hasTriggered) return
 
@@ -38,10 +58,12 @@ export default {
       const rect = teamSection.getBoundingClientRect()
       const windowHeight = window.innerHeight || document.documentElement.clientHeight
 
-      // Trigger when section is 50% visible
+      // Trigger when section is 50% visible, but only if audio is primed
       if (rect.top <= windowHeight * 0.5 && rect.bottom >= 0) {
-        this.hasTriggered = true
-        this.fireGuns()
+        if (this.audioPrimed) {
+          this.hasTriggered = true
+          this.fireGuns()
+        }
       }
     },
     fireGuns() {
