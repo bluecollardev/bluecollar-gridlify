@@ -583,9 +583,9 @@
     @media screen and (max-width: 48em) {
       display: block !important;
 
-      // Override default positioning to start from bottom left
+      // Override default positioning to start from 8% left of viewport
       :deep(.red-snapper) {
-        left: -120px !important;
+        left: 8vw !important;
         bottom: -80px !important;
       }
     }
