@@ -157,7 +157,8 @@ export default {
           'AWS',
           'Azure',
           'Kubernetes',
-          'UX/UI'
+          'UX/UI',
+          'e-Commerce'
         ],
         issueDate: new Date().getFullYear()
       }
