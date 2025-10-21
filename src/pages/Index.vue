@@ -449,7 +449,7 @@ export default {
       align-items: center;
       justify-content: center;
       display: flex;
-      margin-top: -15rem;
+      margin-top: -25rem;
     }
   }
 
