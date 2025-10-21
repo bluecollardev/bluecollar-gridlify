@@ -31,21 +31,6 @@ export default {
       type: Number,
       default: 13000
     },
-    // Starting rotation angle
-    startRotation: {
-      type: Number,
-      default: -65
-    },
-    // Ending rotation angle
-    endRotation: {
-      type: Number,
-      default: 55
-    },
-    // Maximum X distance for rotation calculation
-    rotationMaxX: {
-      type: Number,
-      default: 1200
-    },
     // Auto-start jumping on mount
     autoStart: {
       type: Boolean,
@@ -83,18 +68,25 @@ export default {
     }
   },
   methods: {
-    setFishJumpRotation(el, { x }) {
-      const rotationDelta = this.endRotation - this.startRotation;
-      let xPct = x / this.rotationMaxX;
+    setFishJumpRotation(el, { x, y, maxDistance, maxHeight }) {
       const scalePercent = this.scale / 100;
+
+      // Calculate tangent of the parabolic arc
+      // For y = maxHeight * sin(progress * π), derivative is:
+      // dy/dx = (maxHeight * π / maxDistance) * cos(progress * π)
+      const progress = x / maxDistance;
+      const slope = (maxHeight * Math.PI / maxDistance) * Math.cos(progress * Math.PI);
+
+      // Convert slope to angle in degrees
+      const tangentAngle = Math.atan(slope) * (180 / Math.PI);
 
       // Calculate wiggle offset using sine wave
       this.wiggleOffset += this.wiggleSpeed;
       const wiggle = Math.sin(this.wiggleOffset) * this.wiggleIntensity;
 
-      const baseRotation = this.startRotation + (rotationDelta * xPct);
+      const rotation = tangentAngle + wiggle;
 
-      el.style.transform = `rotate(${ baseRotation + wiggle }deg) scaleX(-${scalePercent}) scaleY(${scalePercent})`;
+      el.style.transform = `rotate(${ rotation }deg) scaleX(-${scalePercent}) scaleY(${scalePercent})`;
     },
     animateOnParabolicPath(el, maxDistance, maxHeight, cb) {
       if (typeof window !== 'undefined') {
@@ -109,7 +101,7 @@ export default {
           el.style.bottom =  `${y}px`;
           el.style.left = `${x}px`;
 
-          if (typeof cb === 'function') cb(el, { x, y });
+          if (typeof cb === 'function') cb(el, { x, y, maxDistance, maxHeight });
 
           // Stop when we reach the jump distance
           if (x >= maxDistance) {
