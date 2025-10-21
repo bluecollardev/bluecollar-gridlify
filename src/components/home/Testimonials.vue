@@ -152,6 +152,13 @@ export default {
 
       .flex.flex-center {
         margin-top: 1rem;
+
+        .testimonial-profile-circle.xs-hide,
+        .testimonial-profile-circle.sm-hide,
+        .testimonial-profile-circle.md-hide {
+          display: block !important;
+          visibility: visible !important;
+        }
       }
     }
 
@@ -176,6 +183,36 @@ export default {
     .testimonials-grid {
       grid-template-columns: 1fr;
       gap: 1.5rem;
+    }
+
+    .testimonial-item {
+      :deep(.circle-composite.testimonial-profile-circle) {
+        display: block !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 40em) {
+    .testimonial-item {
+      :deep(.circle-composite.testimonial-profile-circle.xs-hide) {
+        display: block !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: 40em) and (max-width: 52em) {
+    .testimonial-item {
+      :deep(.circle-composite.testimonial-profile-circle.sm-hide) {
+        display: block !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: 52em) and (max-width: 64em) {
+    .testimonial-item {
+      :deep(.circle-composite.testimonial-profile-circle.md-hide) {
+        display: block !important;
+      }
     }
   }
 }
