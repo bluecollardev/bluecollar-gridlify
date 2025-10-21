@@ -5,6 +5,10 @@ export default {
     title: {
       type: String,
       default: null
+    },
+    scrollable: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {

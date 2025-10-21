@@ -1,5 +1,5 @@
 <template>
-  <div ref="contentDetail" class="detailed-content-panel bg-bc-blue">
+  <div ref="contentDetail" class="detailed-content-panel bg-bc-blue" :class="{ 'scrollable': scrollable }">
     <div class="panel-header flex flex-center pad-left-half pad-right-half"
          style="height: 5rem; position: absolute; right: 0; z-index: 9999; width: 100%">
       <div class="flex-grow">
@@ -33,6 +33,11 @@ export default {
   left: 0;
   z-index: 99999;
   overflow: hidden;
+
+  &.scrollable {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 
   .panel-header {
     h2 {

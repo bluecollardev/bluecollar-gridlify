@@ -112,7 +112,7 @@
       </div>
     </section>
 
-    <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'PORTFOLIO' ? $t('home.caseStudies') : ''">
+    <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'PORTFOLIO' ? $t('home.caseStudies') : ''" :scrollable="true">
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
       <commando-skull-scene v-if="this.activeDetail === 'CONSULTANTS'"></commando-skull-scene>
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
