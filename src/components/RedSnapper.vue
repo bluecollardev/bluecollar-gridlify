@@ -14,7 +14,7 @@ export default {
     // Maximum height the fish jumps (pixels above starting point)
     jumpHeight: {
       type: Number,
-      default: 300
+      default: 150
     },
     // Total horizontal distance the fish travels (pixels)
     jumpDistance: {
