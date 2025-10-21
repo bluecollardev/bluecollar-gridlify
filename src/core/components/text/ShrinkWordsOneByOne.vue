@@ -54,7 +54,13 @@ export default {
 
       const wordTargets = this.$refs.textWrapper.querySelectorAll(this.wordSelector)
 
-      let timeline = anime.timeline({loop: this.loop})
+      let timeline = anime.timeline({
+        loop: this.loop,
+        complete: () => {
+          // Emit event when animation completes
+          this.$emit('animationComplete')
+        }
+      })
 
       timeline
           // Start with text fully visible - wait 2 seconds

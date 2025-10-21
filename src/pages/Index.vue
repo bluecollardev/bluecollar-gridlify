@@ -18,11 +18,28 @@
 
       <template v-slot:title>
         <shrink-words-one-by-one-text-effect
-            v-if="!isServer"
+            v-if="!isServer && currentPhraseIndex === 0"
             tag="h2"
-            :text="$t('home.deliverResults')"
+            :text="$t('home.deliverResults1')"
             class="title text-center pad-bottom"
-            :loop="true">
+            :loop="false"
+            @animationComplete="nextPhrase">
+        </shrink-words-one-by-one-text-effect>
+        <shrink-words-one-by-one-text-effect
+            v-if="!isServer && currentPhraseIndex === 1"
+            tag="h2"
+            :text="$t('home.deliverResults2')"
+            class="title text-center pad-bottom"
+            :loop="false"
+            @animationComplete="nextPhrase">
+        </shrink-words-one-by-one-text-effect>
+        <shrink-words-one-by-one-text-effect
+            v-if="!isServer && currentPhraseIndex === 2"
+            tag="h2"
+            :text="$t('home.deliverResults3')"
+            class="title text-center pad-bottom"
+            :loop="false"
+            @animationComplete="nextPhrase">
         </shrink-words-one-by-one-text-effect>
       </template>
 
@@ -291,6 +308,7 @@ export default {
         simple: SimpleEffect
       },
       rockAndRoll: false,
+      currentPhraseIndex: 0,
     }
 
     return state
@@ -309,6 +327,9 @@ export default {
 
       return null
     },*/
+    nextPhrase() {
+      this.currentPhraseIndex = (this.currentPhraseIndex + 1) % 3
+    },
     startRockin() {
       console.log('START ROCKIN - rockAndRoll set to true')
       this.rockAndRoll = true
