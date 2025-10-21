@@ -2,7 +2,7 @@
   <section
     ref="heroLayout"
     :class="`homepage-hero hero-section hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
-    :style="`background-image: url(${getBackgroundImage()});`"
+    :style="`background-image: url(${backgroundImage});`"
   >
     <!-- TODO: Allow changing of bg colors -->
     <slot name="bg2" v-if="this.$slots.bg2"></slot>
@@ -60,18 +60,28 @@
     mixins: [
       HeroMixin
     ],
-    methods: {
-      getBackgroundImage() {
+    data() {
+      return {
+        isMobile: false
+      };
+    },
+    computed: {
+      backgroundImage() {
         // Use WebP on mobile for jungle-stream
-        if (typeof window !== 'undefined' &&
-            this.image === '/images/jungle-stream.svg' &&
-            window.innerWidth <= 1024) {
+        if (this.image === '/images/jungle-stream.svg' && this.isMobile) {
           return '/images/jungle-stream.webp';
         }
         return this.image;
       }
     },
     mounted() {
+      if (typeof window !== 'undefined') {
+        this.isMobile = window.innerWidth <= 1024;
+        window.addEventListener('resize', () => {
+          this.isMobile = window.innerWidth <= 1024;
+        });
+      }
+
       /*let hero = this.$refs.heroLayout;
       const speedMultiplier = 0.5;
 
