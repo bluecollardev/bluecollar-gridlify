@@ -1,7 +1,14 @@
 <template>
   <div class="fishing-scene">
     <RedSnapper ref="redSnapper" class="desktop-fish" />
-    <RedSnapper ref="redSnapperMobile" class="mobile-fish" />
+    <RedSnapper
+      ref="redSnapperMobile"
+      class="mobile-fish"
+      :scale="40"
+      :speed="8"
+      :jumpHeight="150"
+      :jumpDistance="350"
+    />
     <div class="fishing-interactive">
       <span ref="fishingRod" @click="doCast()" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
         <span class="line-anchor"></span><img :class="`fishing-rod`" src="/images/fishing-rod.svg" />
