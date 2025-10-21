@@ -573,13 +573,13 @@ export default {
 
 // Hero Browse Case Studies button styling
 .hero-first .action-link.transparent {
-  background-color: rgba(120, 183, 214, 0.3);
+  background-color: rgba(120, 183, 214, 0.7);
   padding: 12px 24px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: rgba(120, 183, 214, 0.5);
+    background-color: rgba(120, 183, 214, 0.85);
   }
 }
 </style>
