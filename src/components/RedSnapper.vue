@@ -14,12 +14,12 @@ export default {
     // Maximum height the fish jumps (pixels above starting point)
     jumpHeight: {
       type: Number,
-      default: 200
+      default: 400
     },
     // Total horizontal distance the fish travels (pixels)
     jumpDistance: {
       type: Number,
-      default: 700
+      default: 900
     },
     // Minimum interval between jumps (milliseconds)
     minJumpInterval: {
