@@ -18,8 +18,8 @@
           class="mobile-fish-index"
           :scale="40"
           :speed="8"
-          :jumpHeight="150"
-          :jumpDistance="350"
+          :jumpHeight="100"
+          :jumpDistance="200"
         />
       </template>
 
@@ -584,9 +584,10 @@
       display: block !important;
 
       // Override default positioning to start from 8% left of viewport
+      // Keep fish below viewport (negative bottom value)
       :deep(.red-snapper) {
         left: 8vw !important;
-        bottom: -80px !important;
+        bottom: -100px !important;
       }
     }
   }
