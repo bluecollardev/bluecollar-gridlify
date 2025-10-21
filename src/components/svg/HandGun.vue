@@ -104,6 +104,10 @@ export default {
     introDelay: {
       type: Number,
       default: 1
+    },
+    playIntro: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -111,7 +115,15 @@ export default {
       tlPullSlider: null,
       gunId: 'gun-' + Math.floor(Math.random() * 10),
       fireGunAudio: null,
-      cockGunAudio: null
+      cockGunAudio: null,
+      introPlayed: false
+    }
+  },
+  watch: {
+    playIntro(newVal) {
+      if (newVal && !this.introPlayed) {
+        this.playIntroAnimation()
+      }
     }
   },
   methods: {
@@ -169,6 +181,13 @@ export default {
         setTimeout(() => this.pullSlider(), 1000)
         setTimeout(() => this.fireWeapon(), 2500)
       }, delay)
+    },
+    playIntroAnimation() {
+      if (this.introPlayed) return
+      this.introPlayed = true
+
+      const intro = new TimelineLite()
+      intro.to(this.p('.firearm'), 0.5, {rotation: 20, x: '50px', delay: this.introDelay})
     }
   },
   mounted() {
@@ -179,9 +198,10 @@ export default {
     TweenLite.to(this.p('.firearm'), 0.333, {scale: 2})
     //TweenLite.to(this.p('.bullet'), 0.7, { scale: 2.5 });
 
-    const intro = new TimelineLite()
-
-    intro.to(this.p('.firearm'), 0.5, {rotation: 20, x: '50px', delay: this.introDelay})
+    // Play intro animation immediately if playIntro is true
+    if (this.playIntro) {
+      this.playIntroAnimation()
+    }
 
     this.$el.querySelector(this.p('.trigger')).addEventListener('click', () => {
       this.fireWeapon()

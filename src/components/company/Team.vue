@@ -46,6 +46,7 @@ export default {
     },
     fireGuns() {
       if (this.$refs.shootToThrill) {
+        this.$refs.shootToThrill.playIntroAnimation()
         this.$refs.shootToThrill.fireGuns()
       }
     }

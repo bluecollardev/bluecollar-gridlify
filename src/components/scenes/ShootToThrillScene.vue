@@ -1,8 +1,8 @@
 <template>
   <div class="shoot-to-thrill-scene flex flex-center flex-justify-center">
     <div class="guns-comp">
-      <hand-gun ref="thunder" class="left-gun" :introDelay="0.3"></hand-gun>
-      <hand-gun ref="lightning" class="right-gun" :introDelay="0.7"></hand-gun>
+      <hand-gun ref="thunder" class="left-gun" :introDelay="0.3" :playIntro="playIntro"></hand-gun>
+      <hand-gun ref="lightning" class="right-gun" :introDelay="0.7" :playIntro="playIntro"></hand-gun>
     </div>
   </div>
 </template>
@@ -16,7 +16,15 @@ export default {
     // Inject SVG animations
     HandGun,
   },
+  data() {
+    return {
+      playIntro: false
+    }
+  },
   methods: {
+    playIntroAnimation() {
+      this.playIntro = true
+    },
     fireGuns() {
       if (typeof window !== 'undefined') {
         this.$refs.thunder.shootToThrill(0)
