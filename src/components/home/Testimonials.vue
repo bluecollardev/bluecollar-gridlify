@@ -101,6 +101,9 @@ export default {
       flex-direction: column;
       height: 100%;
       color: white !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      padding: 0 !important;
 
       * {
         color: white !important;
@@ -190,6 +193,11 @@ export default {
         display: block !important;
       }
 
+      :deep(.content-block.testimonial-block-wrapper) {
+        display: flex;
+        flex-direction: column-reverse !important;
+      }
+
       :deep(.flex.flex-center) {
         flex-direction: row !important;
         align-items: center;
@@ -205,6 +213,18 @@ export default {
         > div {
           flex: 1;
         }
+      }
+
+      :deep(.g-services:first-child) {
+        margin-top: 1rem;
+        order: 2;
+      }
+
+      :deep(.sm-space-bottom-half.g-services) {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
       }
     }
   }
