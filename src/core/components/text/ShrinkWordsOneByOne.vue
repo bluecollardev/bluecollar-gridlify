@@ -81,22 +81,16 @@ export default {
             delay: (el, i) => 500 * i
           })
           // Wait 5 seconds, then emit event to prepare next phrase
+          // Slowly fade out over 1.5 seconds
           .add({
             targets: wordsTarget,
-            opacity: 1,
-            duration: 1,
-            delay: 5000,
+            opacity: [1, 0],
+            duration: 2000,
+            delay: 3000,
             complete: () => {
               // Emit event before fade-out starts so next component can prepare
               this.$emit('animationComplete')
             }
-          })
-          // Slowly fade out over 1.5 seconds
-          .add({
-            targets: wordsTarget,
-            opacity: 0,
-            duration: 1500,
-            easing: 'easeOutExpo'
           })
     }
   }
