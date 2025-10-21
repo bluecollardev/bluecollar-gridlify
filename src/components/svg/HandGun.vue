@@ -156,7 +156,9 @@ export default {
       this.fireGunAudio.pause()
       this.fireGunAudio.volume = 0.20
       this.fireGunAudio.currentTime = 0
-      this.fireGunAudio.play()
+      this.fireGunAudio.play().catch(err => {
+        console.log('Fire gun audio play failed:', err)
+      })
     },
     cock() {
       TweenLite.to(this.p('.hammer'), 0, {rotation: 64, transformOrigin: 'bottom left', ease: "circ.out"}, 'start')
@@ -167,7 +169,9 @@ export default {
       this.cockGunAudio.pause()
       this.cockGunAudio.volume = 0.45
       this.cockGunAudio.currentTime = 0
-      this.cockGunAudio.play()
+      this.cockGunAudio.play().catch(err => {
+        console.log('Cock gun audio play failed:', err)
+      })
 
       this.tlPullSlider
           .to(this.p('.slider-group'), 0.1, {x: '+=10px'}, 'start')
