@@ -306,15 +306,18 @@ export default {
 .field {
   margin-bottom: 0.5rem;
   padding-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
 
   .label {
-    display: inline-block;
     font-size: 0.7rem;
     font-weight: bold;
     color: #000;
     letter-spacing: 1px;
-    margin-right: 0.5rem;
-    min-width: 120px;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .value {
@@ -322,6 +325,7 @@ export default {
     color: #2c3e50;
     font-weight: 600;
     letter-spacing: 0.5px;
+    text-align: right;
   }
 
   .security-clearance {
