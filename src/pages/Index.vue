@@ -16,10 +16,11 @@
         <fishing-scene></fishing-scene>
         <red-snapper
           class="mobile-fish-index"
-          :scale="40"
-          :speed="8"
-          :jumpHeight="100"
-          :jumpDistance="200"
+          :scale="30"
+          :speed="3"
+          :jumpHeight="200"
+          :jumpDistance="150"
+          :maxDistance="300"
         />
       </template>
 

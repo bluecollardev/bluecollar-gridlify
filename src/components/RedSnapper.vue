@@ -71,6 +71,11 @@ export default {
     wiggleSpeed: {
       type: Number,
       default: 0.3
+    },
+    // Maximum distance fish will travel before stopping animation (pixels)
+    maxDistance: {
+      type: Number,
+      default: 1600
     }
   },
   data() {
@@ -114,8 +119,8 @@ export default {
 
           if (typeof cb === 'function') cb(el, { x, y });
 
-          // Second 800 is a fudge factor to allow element to clear off screen
-          if (x > 800 + 800) {
+          // Stop animation when max distance is reached
+          if (x > this.maxDistance) {
             cancelAnimationFrame(requestId);
           } else {
             x += this.speed;
