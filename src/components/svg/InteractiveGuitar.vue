@@ -635,77 +635,9 @@
       </g>
     </svg>
 
-    <audio id="audio-1">
-      <source
-        src="/audio/guitar/smoke-on-the-water-1.mp3"
-        preload="auto" type="audio/mp3"
-      />
-    </audio>
-    <audio id="audio-2">
-      <source
-        src="/audio/guitar/smoke-on-the-water-2.mp3"
-        preload="auto" type="audio/mp3"
-      />
-    </audio>
-    <audio id="audio-3">
-      <source
-        src="/audio/guitar/smoke-on-the-water-3.mp3"
-        preload="auto" type="audio/mp3"
-      />
-    </audio>
-    <audio id="audio-4">
-      <source
-        src="/audio/guitar/smoke-on-the-water-4.mp3"
-        preload="auto" type="audio/mp3"
-      />
-    </audio>
-    <audio id="audio-5">
-      <source
-        src="/audio/guitar/smoke-on-the-water-5.mp3"
-        preload="auto" type="audio/mp3"
-      />
-    </audio>
-    <audio id="audio-6">
-      <source
-        src="/audio/guitar/smoke-on-the-water-6.mp3"
-        preload="auto" type="audio/mp3"
-      />
-    </audio>
-    <audio id="audio-7">
-      <source
-        src="/audio/guitar/smoke-on-the-water-7.mp3"
-        preload="auto" type="audio/mp3"
-      />
-    </audio>
-    <audio id="audio-8">
-      <source
-        src="/audio/guitar/smoke-on-the-water-8.mp3"
-        preload="auto" type="audio/mp3"
-      />
-    </audio>
-    <audio id="audio-9">
-      <source
-        src="/audio/guitar/smoke-on-the-water-9.mp3"
-        preload="auto" type="audio/mp3"
-      />
-    </audio>
-    <audio id="audio-10">
-      <source
-        src="/audio/guitar/smoke-on-the-water-10.mp3"
-        preload="auto" type="audio/mp3"
-      />
-    </audio>
-    <audio id="audio-11">
-      <source
-        src="/audio/guitar/smoke-on-the-water-11.mp3"
-        preload="auto" type="audio/mp3"
-      />
-    </audio>
-    <audio id="audio-12">
-      <source
-        src="/audio/guitar/smoke-on-the-water-12.mp3"
-        preload="auto" type="audio/mp3"
-      />
+    <!-- Single audio sprite containing all 12 guitar sounds -->
+    <audio id="guitar-sprite" preload="auto">
+      <source src="/audio/guitar/guitar-sprite.mp3" type="audio/mp3" />
     </audio>
   </div>
 </template>
@@ -721,13 +653,27 @@ gsap.registerPlugin(MorphSVGPlugin);
     mounted() {
       //Click/Touch the guitar, or any key to play!
 
-      // Preload all audio files to ensure they're cached
+      // Audio sprite timing map (start times in seconds for each sound)
+      const audioSpriteMap = [
+        { start: 0.0, duration: 0.401769 },      // sound 1
+        { start: 0.401769, duration: 0.401769 }, // sound 2
+        { start: 0.803538, duration: 0.647324 }, // sound 3
+        { start: 1.450862, duration: 0.401791 }, // sound 4
+        { start: 1.852653, duration: 0.401791 }, // sound 5
+        { start: 2.254444, duration: 0.267868 }, // sound 6
+        { start: 2.522312, duration: 0.669637 }, // sound 7
+        { start: 3.191949, duration: 0.401791 }, // sound 8
+        { start: 3.593740, duration: 0.401791 }, // sound 9
+        { start: 3.995531, duration: 0.669660 }, // sound 10
+        { start: 4.665191, duration: 0.401791 }, // sound 11
+        { start: 5.066982, duration: 1.406259 }  // sound 12
+      ];
+
+      // Preload the audio sprite
       if (typeof window !== 'undefined') {
-        for (let i = 1; i <= 12; i++) {
-          const audio = document.getElementById(`audio-${i}`);
-          if (audio) {
-            audio.load(); // Force load/cache the audio file
-          }
+        const sprite = document.getElementById('guitar-sprite');
+        if (sprite) {
+          sprite.load(); // Force load/cache the sprite
         }
       }
 
@@ -860,8 +806,30 @@ gsap.registerPlugin(MorphSVGPlugin);
         .to(speaker_2, 0.4, {morphSVG: speaker_2, ease: "elastic.out"}, "-=0.95");
 
 
-      //Trigger Audio
+      //Trigger Audio using sprite
       var i = 0;
+      var audioPrimed = false;
+      var currentTimeout = null;
+
+      function primeAudio() {
+        // On first interaction, play and immediately pause the sprite
+        // This unlocks audio playback on mobile browsers
+        if (!audioPrimed) {
+          const sprite = document.getElementById("guitar-sprite");
+          if (sprite) {
+            const playPromise = sprite.play();
+            if (playPromise !== undefined) {
+              playPromise.then(() => {
+                sprite.pause();
+                sprite.currentTime = 0;
+              }).catch(() => {
+                // Ignore errors during priming
+              });
+            }
+          }
+          audioPrimed = true;
+        }
+      }
 
       function playAudio() {
         if (i < 12) {
@@ -869,11 +837,36 @@ gsap.registerPlugin(MorphSVGPlugin);
         } else {
           i = 1;
         }
-        var myAudio = document.getElementById("audio-" + i);
-        myAudio.play();
+
+        const sprite = document.getElementById("guitar-sprite");
+        const sound = audioSpriteMap[i - 1]; // i is 1-indexed, array is 0-indexed
+
+        if (sprite && sound) {
+          // Clear any existing timeout
+          if (currentTimeout) {
+            clearTimeout(currentTimeout);
+          }
+
+          // Set the playback position to the start of this sound
+          sprite.currentTime = sound.start;
+
+          // Play the sprite
+          const playPromise = sprite.play();
+          if (playPromise !== undefined) {
+            playPromise.then(() => {
+              // Stop playback after the sound's duration
+              currentTimeout = setTimeout(() => {
+                sprite.pause();
+              }, sound.duration * 1000);
+            }).catch((error) => {
+              console.warn('Audio playback failed:', error);
+            });
+          }
+        }
       }
 
       function rockOut() {
+        primeAudio(); // Prime audio on first interaction
         pluck.restart();
         pluck.play();
         playAudio();
