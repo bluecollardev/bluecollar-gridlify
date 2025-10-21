@@ -421,9 +421,22 @@
     /* iOS background-attachment doesn't play well - Force WebP on mobile */
     .hero-section-01-col.jungle-stream {
       background-image: url(/images/jungle-stream.webp) !important;
-      background-position: center bottom !important; /* Center horizontally, align to bottom */
-      background-size: cover !important;
+      background-position: center bottom !important;
       background-repeat: no-repeat !important;
+    }
+
+    /* Portrait - contain to show full image */
+    @media screen and (max-width: 64em) and (orientation: portrait) {
+      .hero-section-01-col.jungle-stream {
+        background-size: auto 100% !important;
+      }
+    }
+
+    /* Landscape - cover to fill the space */
+    @media screen and (max-width: 64em) and (orientation: landscape) {
+      .hero-section-01-col.jungle-stream {
+        background-size: cover !important;
+      }
     }
   }
 
