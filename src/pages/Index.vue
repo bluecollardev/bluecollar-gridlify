@@ -376,7 +376,9 @@
 
   /* iOS background-attachment doesn't play well */
   .hero-section-01-col {
-    background-attachment: initial;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
 
   @media screen and (min-width: 40em) {
