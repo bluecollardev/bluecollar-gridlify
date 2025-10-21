@@ -43,7 +43,19 @@
     </hero-layout01-col>
 
     <team ref="team" :activeDetail="'CONSULTANTS'" />
-    <profile ref="profile" />
+    <profile ref="profile" @view-resume="viewResume" />
+
+    <!-- Resume Modal -->
+    <content-detail-modal ref="resumeModal" title="Resume - Lucas Michael Lopatka">
+      <div class="resume-viewer">
+        <iframe
+          src="/docs/resume.lucas_lopatka.2025.pdf"
+          width="100%"
+          height="100%"
+          style="border: none; min-height: calc(100vh - 200px);"
+        ></iframe>
+      </div>
+    </content-detail-modal>
 
     <!--<content-detail-modal ref="contentDetail" :title="this.activeDetail === 'CONSULTANTS' ? $t('company.ourTeam') : ''">
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
@@ -287,6 +299,11 @@ export default {
         } else {
           console.error('contentDetail ref not found!')
         }
+      }
+    },
+    viewResume() {
+      if (this.$refs.resumeModal) {
+        this.$refs.resumeModal.viewDetail()
       }
     }
   },

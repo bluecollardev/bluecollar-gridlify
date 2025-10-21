@@ -84,24 +84,10 @@
         </div>
       </div>
     </div>
-
-    <!-- PDF Modal -->
-    <content-detail-modal ref="resumeModal" title="Resume - Lucas Michael Lopatka">
-      <div class="resume-viewer">
-        <iframe
-          :src="resumePdfUrl"
-          width="100%"
-          height="100%"
-          style="border: none; min-height: calc(100vh - 200px);"
-        ></iframe>
-      </div>
-    </content-detail-modal>
   </section>
 </template>
 
 <script>
-import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue'
-
 // Import resume data from JSON
 const resumeData = {
   personalInfo: {
@@ -110,12 +96,8 @@ const resumeData = {
 }
 
 export default {
-  components: {
-    ContentDetailModal
-  },
   data() {
     return {
-      resumePdfUrl: '/docs/resume.lucas_lopatka.2025.pdf',
       profileData: {
         name: resumeData.personalInfo.name.toUpperCase(),
         photo: '/images/lucas-lopatka-profile.png',
@@ -145,9 +127,7 @@ export default {
       return currentYear - startYear
     },
     viewDetail() {
-      if (this.$refs.resumeModal) {
-        this.$refs.resumeModal.viewDetail()
-      }
+      this.$emit('view-resume')
     }
   }
 }
