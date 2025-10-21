@@ -52,7 +52,7 @@
             <p class="text-center xs-hide"><small><small><b>{{ $t('home.fishingHint') }}</b></small></small></p>
             <div class="text-center">
               <a @click="viewDetail('PORTFOLIO')"
-                 class="action-link transparent space-top g-pstyle3">{{ $t('home.browseCaseStudies') }}</a>
+                 class="action-link transparent space-top-half g-pstyle3">{{ $t('home.browseCaseStudies') }}</a>
             </div>
           </div>
         </div>
@@ -470,7 +470,7 @@ export default {
       align-items: center;
       justify-content: center;
       display: flex;
-      margin-top: -15rem;
+      margin-top: -20rem;
     }
   }
 
