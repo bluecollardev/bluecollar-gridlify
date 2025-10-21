@@ -43,6 +43,7 @@
     </hero-layout01-col>
 
     <team ref="team" :activeDetail="'CONSULTANTS'" />
+    <profile ref="profile" />
 
     <!--<content-detail-modal ref="contentDetail" :title="this.activeDetail === 'CONSULTANTS' ? $t('company.ourTeam') : ''">
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
