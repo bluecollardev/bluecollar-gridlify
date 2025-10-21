@@ -206,6 +206,10 @@ section.hero-section {
 }
 
 @media screen and (min-width: 64em) {
+  .hero-section-01-col {
+    /* Smooth parallax scrolling */
+    background-attachment: fixed;
+  }
   .hero-section-content {
     position: relative;
   }
