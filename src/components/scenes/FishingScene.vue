@@ -241,6 +241,12 @@
     // Show on mobile phones only (max-width: 48em / 768px)
     @media screen and (max-width: 48em) {
       display: block !important;
+
+      // Override default positioning to start from bottom left
+      :deep(.red-snapper) {
+        left: -120px !important;
+        bottom: -80px !important;
+      }
     }
   }
 
