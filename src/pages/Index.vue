@@ -17,30 +17,32 @@
       </template>
 
       <template v-slot:title>
-        <shrink-words-one-by-one-text-effect
-            v-if="!isServer && currentPhraseIndex === 0"
-            tag="h2"
-            :text="$t('home.deliverResults1')"
-            class="title text-center pad-bottom"
-            :loop="false"
-            @animationComplete="nextPhrase">
-        </shrink-words-one-by-one-text-effect>
-        <shrink-words-one-by-one-text-effect
-            v-if="!isServer && currentPhraseIndex === 1"
-            tag="h2"
-            :text="$t('home.deliverResults2')"
-            class="title text-center pad-bottom"
-            :loop="false"
-            @animationComplete="nextPhrase">
-        </shrink-words-one-by-one-text-effect>
-        <shrink-words-one-by-one-text-effect
-            v-if="!isServer && currentPhraseIndex === 2"
-            tag="h2"
-            :text="$t('home.deliverResults3')"
-            class="title text-center pad-bottom"
-            :loop="false"
-            @animationComplete="nextPhrase">
-        </shrink-words-one-by-one-text-effect>
+        <div v-if="!isServer" class="phrase-container">
+          <shrink-words-one-by-one-text-effect
+              v-show="currentPhraseIndex === 0"
+              tag="h2"
+              :text="$t('home.deliverResults1')"
+              class="title text-center pad-bottom"
+              :loop="false"
+              @animationComplete="nextPhrase">
+          </shrink-words-one-by-one-text-effect>
+          <shrink-words-one-by-one-text-effect
+              v-show="currentPhraseIndex === 1"
+              tag="h2"
+              :text="$t('home.deliverResults2')"
+              class="title text-center pad-bottom"
+              :loop="false"
+              @animationComplete="nextPhrase">
+          </shrink-words-one-by-one-text-effect>
+          <shrink-words-one-by-one-text-effect
+              v-show="currentPhraseIndex === 2"
+              tag="h2"
+              :text="$t('home.deliverResults3')"
+              class="title text-center pad-bottom"
+              :loop="false"
+              @animationComplete="nextPhrase">
+          </shrink-words-one-by-one-text-effect>
+        </div>
       </template>
 
       <template>
@@ -484,6 +486,20 @@ export default {
   #rock {
     z-index: 2;
   }
+
+  .phrase-container {
+    position: relative;
+    width: 100%;
+    min-height: 4em;
+
+    .shrink-words-one-by-one-text-effect {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
 
   #contact {
     z-index: 1;
