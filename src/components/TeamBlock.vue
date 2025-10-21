@@ -54,6 +54,9 @@ export default {
 
 <style lang="scss">
 .team-block {
+  position: relative;
+  z-index: 1001;
+
   .content-block {
     max-width: 75%;
     margin-left: auto;
