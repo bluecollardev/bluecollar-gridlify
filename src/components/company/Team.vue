@@ -22,6 +22,45 @@ export default {
     ShootToThrillScene,
     CommandoSkullScene,
     TeamBlock
+  },
+  data() {
+    return {
+      hasTriggered: false
+    }
+  },
+  methods: {
+    handleScroll() {
+      if (this.hasTriggered) return
+
+      const teamSection = this.$el
+      if (!teamSection) return
+
+      const rect = teamSection.getBoundingClientRect()
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight
+
+      // Trigger when section is 50% visible
+      if (rect.top <= windowHeight * 0.5 && rect.bottom >= 0) {
+        this.hasTriggered = true
+        this.fireGuns()
+      }
+    },
+    fireGuns() {
+      if (this.$refs.shootToThrill) {
+        this.$refs.shootToThrill.fireGuns()
+      }
+    }
+  },
+  mounted() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', this.handleScroll)
+      // Check on mount in case already in view
+      this.handleScroll()
+    }
+  },
+  beforeUnmount() {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('scroll', this.handleScroll)
+    }
   }
 }
 </script>
