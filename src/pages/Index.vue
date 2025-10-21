@@ -421,7 +421,7 @@
     /* iOS background-attachment doesn't play well */
     .hero-section-01-col {
       &.jungle-stream {
-        background-position: 70% 0%; /* Shift background to the right */
+        background-position: center bottom; /* Center horizontally, align to bottom */
       }
     }
   }
