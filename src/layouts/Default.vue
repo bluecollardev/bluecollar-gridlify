@@ -17,6 +17,12 @@
       </Header>
       <slot/>
       <Footer/>
+      <ChatBubble @open-chat="openChatModal"/>
+      <ChatModal ref="chatModal"
+                 :whatsappNumber="whatsappNumber"
+                 :lineId="lineId"
+                 :phoneNumber="phoneNumber"
+                 :intergramId="intergramId"/>
     </div>
   </main>
 </template>
@@ -29,6 +35,8 @@ import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
 import Contact from '~/components/Contact.vue'
 import Blog from '~/components/Blog.vue'
+import ChatBubble from '~/components/ChatBubble.vue'
+import ChatModal from '~/components/ChatModal.vue'
 
 // Import audio controls and mixin
 import AudioControls from '~/core/components/audio/AudioControls.vue'
@@ -48,6 +56,8 @@ export default {
     Contact,
     Footer,
     Intro,
+    ChatBubble,
+    ChatModal,
     // Import audio controls
     AudioControls,
   },
@@ -61,10 +71,17 @@ export default {
       isChrome: null,
       displayNotifications: false,
       lastScroll: 0,
-      soundtrack: null
+      soundtrack: null,
+      whatsappNumber: '66812345678',
+      lineId: 'lucas.lopatka',
+      phoneNumber: '+66 81 234 5678',
+      intergramId: ''
     }
   },
   methods: {
+    openChatModal() {
+      this.$refs.chatModal.viewDetail()
+    },
     hideNotifications() {
       this.displayNotifications = false
     },

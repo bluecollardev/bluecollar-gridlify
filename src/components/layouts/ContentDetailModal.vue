@@ -1,7 +1,7 @@
 <template>
   <div ref="contentDetail" class="detailed-content-panel bg-bc-blue" :class="{ 'scrollable': scrollable }">
     <div class="panel-header flex flex-center pad-left-half pad-right-half"
-         style="height: 5rem; position: absolute; right: 0; z-index: 9999; width: 100%">
+         style="height: 5rem; position: absolute; right: 0; z-index: 100; width: 100%">
       <div class="flex-grow">
         <h2 v-if="this.title" class="text-center no-space-top no-space-bottom">{{ this.title }}</h2>
       </div>
@@ -31,7 +31,7 @@ export default {
   position: fixed;
   top: 100%;
   left: 0;
-  z-index: 99999;
+  z-index: 9993;
   overflow: hidden;
 
   &.scrollable {
@@ -51,6 +51,8 @@ export default {
 
   .panel-content {
     font-size: 0.875rem;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -72,6 +74,8 @@ export default {
 
     .panel-content {
       font-size: 1rem;
+      position: relative;
+      z-index: 1;
     }
   }
 }
