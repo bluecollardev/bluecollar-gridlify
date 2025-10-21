@@ -25,7 +25,8 @@
       return {
         isCasting: false,
         isOnHook: false,
-        resizeHandler: null
+        resizeHandler: null,
+        fishCaughtOffset: 170 // Vertical offset for fish-caught position on line
       }
     },
     methods: {
@@ -143,7 +144,7 @@
             if (endY > coords.top + 100) {
               reelingLine.plot(`M 0 0 L 1 ${endY}`);
               //console.log(`line length: ${endY - coords.top}`);
-              document.querySelector('.fish-caught').style.top = `${endY + 170}px`;
+              document.querySelector('.fish-caught').style.top = `${endY + this.fishCaughtOffset}px`;
             }
 
             const fishX = coords.left;
@@ -377,7 +378,7 @@
     height: 120px;
     position: absolute;
     max-width: 400px;
-    bottom: -400px;
+    bottom: -350px;
     transform: rotate(270deg);
     transform-origin: top left;
     animation: fish_caught 1.75s ease-in-out alternate infinite;
