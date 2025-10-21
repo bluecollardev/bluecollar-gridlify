@@ -59,18 +59,6 @@ export default {
       })
 
       timeline
-          // Start with text fully visible - wait 2 seconds
-          .add({
-            targets: wordsTarget,
-            opacity: 1,
-            duration: 2000
-          })
-          // Fade out the complete text
-          .add({
-            targets: wordsTarget,
-            opacity: 0,
-            duration: 500
-          })
           // Animate each word in one by one
           .add({
             targets: wordTargets,
@@ -80,15 +68,21 @@ export default {
             duration: 500,
             delay: (el, i) => 500 * i
           })
-          // Wait 5 seconds, then emit event to prepare next phrase
-          // Slowly fade out over 1.5 seconds
+          // Wait 3 seconds with words visible
           .add({
             targets: wordsTarget,
-            opacity: [1, 0],
+            opacity: 1,
+            duration: 1,
+            delay: 5000
+          })
+          // Slowly fade out over 2 seconds
+          .add({
+            targets: wordTargets,
+            opacity: 0,
+            easing: 'easeOutCirc',
             duration: 2000,
-            delay: 3000,
             complete: () => {
-              // Emit event before fade-out starts so next component can prepare
+              // Emit event after fade completes
               this.$emit('animationComplete')
             }
           })

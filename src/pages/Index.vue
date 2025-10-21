@@ -321,10 +321,7 @@ export default {
       return null
     },*/
     nextPhrase() {
-      // Wait 1.5 seconds (fade-out duration) before changing to next phrase
-      setTimeout(() => {
-        this.currentPhraseIndex = (this.currentPhraseIndex + 1) % 3
-      }, 1500)
+      this.currentPhraseIndex = (this.currentPhraseIndex + 1) % 3
     },
     startRockin() {
       console.log('START ROCKIN - rockAndRoll set to true')
