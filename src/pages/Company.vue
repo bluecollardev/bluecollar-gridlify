@@ -76,6 +76,7 @@ import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue'
 // Import page components
 import Services from '~/components/home/Services.vue'
 import Team from '~/components/company/Team.vue'
+import Profile from '~/components/company/Profile.vue'
 
 // Import static blocks
 import ProcessBlock from '~/blocks/ProcessBlock.vue'
@@ -128,6 +129,7 @@ export default {
     // Inject generic component layouts
     Services,
     Team,
+    Profile,
     VideoHeroLayout01Col,
     HeroLayout01Col,
     HeroLayout02Col02,
