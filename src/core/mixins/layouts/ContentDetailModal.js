@@ -34,7 +34,7 @@ export default {
       const detailEl = detail
 
       if (detailEl) {
-        document.body.style.overflowY = 'scroll'
+        document.body.style.overflowY = 'auto'
 
         anime({
           targets: detailEl,
