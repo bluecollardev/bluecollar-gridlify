@@ -809,7 +809,7 @@ export default {
     //Trigger Audio using sprite
     var i = 0
     var audioPrimed = false
-    var currentTimeout = null
+    var currentSound = null
 
     function primeAudio() {
       // On first interaction, play and immediately pause the sprite
@@ -842,23 +842,32 @@ export default {
       const sound = audioSpriteMap[i - 1] // i is 1-indexed, array is 0-indexed
 
       if (sprite && sound) {
-        // Clear any existing timeout
-        if (currentTimeout) {
-          clearTimeout(currentTimeout)
+        // Remove previous timeupdate listener if exists
+        if (currentSound) {
+          sprite.removeEventListener('timeupdate', currentSound.listener)
         }
 
-        // Set the playback position to the start of this sound
+        // Pause and reset position
+        sprite.pause()
         sprite.currentTime = sound.start
+
+        // Create listener to stop at end of sound segment
+        const endTime = sound.start + sound.duration
+        const listener = function() {
+          if (sprite.currentTime >= endTime) {
+            sprite.pause()
+            sprite.removeEventListener('timeupdate', listener)
+          }
+        }
+
+        // Store current listener for cleanup
+        currentSound = { listener: listener }
+        sprite.addEventListener('timeupdate', listener)
 
         // Play the sprite
         const playPromise = sprite.play()
         if (playPromise !== undefined) {
-          playPromise.then(() => {
-            // Stop playback after the sound's duration
-            currentTimeout = setTimeout(() => {
-              sprite.pause()
-            }, sound.duration * 1000)
-          }).catch((error) => {
+          playPromise.catch((error) => {
             console.warn('Audio playback failed:', error)
           })
         }
