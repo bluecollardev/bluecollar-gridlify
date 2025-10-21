@@ -119,7 +119,7 @@ export default {
         name: resumeData.personalInfo.name.toUpperCase(),
         photo: '/images/lucas-lopatka-profile.png',
         idNumber: 'BC-' + new Date().getFullYear() + '-001',
-        rank: 'SENIOR SOFTWARE ENGINEER',
+        rank: 'SOFTWARE CAPTAIN',
         specialty: 'FULL-STACK DEVELOPMENT',
         yearsOfService: this.calculateYearsOfService(),
         clearance: 'CSIS-LVL-2',
