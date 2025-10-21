@@ -306,6 +306,7 @@ export default {
 .field {
   margin-bottom: 0.5rem;
   padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
