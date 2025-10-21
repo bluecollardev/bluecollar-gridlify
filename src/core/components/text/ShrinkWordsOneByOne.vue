@@ -57,11 +57,19 @@ export default {
       let timeline = anime.timeline({loop: this.loop})
 
       timeline
+          // Start with text fully visible - wait 2 seconds
+          .add({
+            targets: wordsTarget,
+            opacity: 1,
+            duration: 2000
+          })
+          // Fade out the complete text
           .add({
             targets: wordsTarget,
             opacity: 0,
             duration: 1000
           })
+          // Animate each word in one by one
           .add({
             targets: wordTargets,
             scale: [14, 1],
@@ -70,6 +78,7 @@ export default {
             duration: 500,
             delay: (el, i) => 500 * i
           })
+          // Wait 5 seconds then fade out (for loop)
           .add({
             targets: wordsTarget,
             opacity: 0,
