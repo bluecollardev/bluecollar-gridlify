@@ -127,7 +127,7 @@ export default {
         about: 'Providing discerning international clients with intuitive, engaging, reliable and secure software solutions, solving complex business problems for a wide range of industries.',
         recentMissions: [
           {
-            company: 'Opn Payments (Thailand)',
+            company: 'Omise + Opn Payments (Thailand)',
             role: 'Technical Lead'
           },
           {
