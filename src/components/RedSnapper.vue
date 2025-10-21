@@ -14,7 +14,7 @@ export default {
     // Maximum height the fish jumps (pixels above starting point)
     jumpHeight: {
       type: Number,
-      default: 150
+      default: 200
     },
     // Total horizontal distance the fish travels (pixels)
     jumpDistance: {
@@ -91,6 +91,10 @@ export default {
     },
     animateOnParabolicPath(el, maxDistance, maxHeight, cb) {
       if (typeof window !== 'undefined') {
+        // Get the initial bottom position from CSS
+        const computedStyle = window.getComputedStyle(el);
+        const initialBottom = parseFloat(computedStyle.bottom) || -200;
+
         let x = this.speed;
         let requestId = null;
 
@@ -99,7 +103,8 @@ export default {
           const progress = x / maxDistance;
           const y = maxHeight * Math.sin(progress * Math.PI);
 
-          el.style.bottom =  `${y}px`;
+          // Add the parabolic offset to the initial bottom position
+          el.style.bottom =  `${initialBottom + y}px`;
           el.style.left = `${x}px`;
 
           if (typeof cb === 'function') cb(el, { x, y, maxDistance, maxHeight });
