@@ -1,0 +1,398 @@
+{
+  "personalInfo": {
+    "name": "Lucas Michael Lopatka",
+    "about": "I provide discerning international clients with intuitive, engaging, reliable and secure software solutions, solving complex business problems for a wide range of industries. With over 15 years of professional software development experience, you can count on me to help you bring your concept to life - on time, on budget"
+  },
+  "workExperience": [
+    {
+      "company": "Opn Payments (Omise Thailand)",
+      "position": "Senior Software Engineer, Technical Lead",
+      "startDate": "2021-04",
+      "endDate": "2024-02",
+      "responsibilities": [
+        "Lead various development teams of 3-8 developers.",
+        "Lead Agile planning activities and backlog management.",
+        "Responsible for mentoring junior and associate engineers.",
+        "Technical lead for Opn / Omise's transition to Single Sign-On.",
+        "Architect and lead development of Single-Sign On libs and services.",
+        "Frontend lead for the development of Virtual Credit Card applications.",
+        "Contributor to the development of Omise's Merchant Dashboard v2.",
+        "Creation of various microservice applications in Node.js and Go.",
+        "Responsible for the design + maintenance of various CI/CD pipelines.",
+        "Maintain technical documentation for various applications."
+      ],
+      "tasks": ["System Architecture", "Development", "UI Design", "DevOps"],
+      "technologies": ["TypeScript", "React", "Node.js", "Ruby", "Go", "AWS", "Kubernetes"]
+    },
+    {
+      "company": "CGI Inc. (Government of British Columbia / Service BC)",
+      "location": "Victoria, BC, Canada",
+      "position": "Senior Software Engineer, Team Lead",
+      "startDate": "2019-11",
+      "endDate": "2021-03",
+      "responsibilities": [
+        "Developed open source applications for Service BC.",
+        "Lead various development teams of 3-5 developers.",
+        "Responsible for mentoring junior and associate engineers.",
+        "Responsible for Agile planning activities and backlog management.",
+        "Lead development of scheduling application for Sheriffs BC.",
+        "Lead development of Name Request engine for BC Registries.",
+        "Lead development of Electronic Forest Management system."
+      ],
+      "tasks": ["System Architecture", "Development", "UI Design", "DevOps"],
+      "technologies": ["TypeScript", "React", "Node.js", "Python", "OpenShift", "Kubernetes"]
+    },
+    {
+      "company": "BC Developers Exchange / A.O.T Technologies",
+      "location": "Victoria, BC, Canada",
+      "position": "Application Delivery Lead",
+      "startDate": "2019-02",
+      "endDate": "2019-04",
+      "responsibilities": [
+        "Collaborated with stake-holders / B.A's to design PWA.",
+        "Lead development of UI components and screens.",
+        "Structured development team to deliver using scrum agile.",
+        "Automated load, regression, smoke and integration tests."
+      ],
+      "tasks": ["System Architecture", "Development", "UI Design", "DevOps"],
+      "technologies": ["ES7", "Vue.js", "Node.js", "Postgres", "OpenShift"]
+    },
+    {
+      "company": "Alberta Motor Association Insurance Inc.",
+      "location": "Edmonton, AB, Canada",
+      "positions": [
+        {
+          "title": "Technical Lead",
+          "startDate": "2013-06",
+          "endDate": "2014-12",
+          "responsibilities": [
+            "Replaced legacy \"Front-Tier\" ERP for insurance claims.",
+            "Integrated CGI AutoPlus and Kanetix Rating Engines with AgentView.",
+            "Redesigned Web API and WCF domain services.",
+            "Prototyped application screens and workflows.",
+            "Lead design and development of UI components and screens.",
+            "Collaborated with PO / B.A's to design applications and services."
+          ],
+          "tasks": ["Front-end Architecture", "Development", "UI Design", "DevOps"],
+          "technologies": ["JS", "Kendo UI", "C#", "Web API", "Entity Framework", "SQL Server"]
+        },
+        {
+          "title": ".NET Developer",
+          "startDate": "2013-02",
+          "endDate": "2013-05",
+          "responsibilities": [
+            "Collaborated with product owner / B.A's to design new applications.",
+            "Designed responsive application screens and workflows.",
+            "Implemented UI components and application screens.",
+            "Designed Web API and WCF domain services."
+          ],
+          "tasks": ["Web Development", "UI Design"],
+          "technologies": ["Razor", "C#", "Web Forms", "Entity Framework", "SQL Server"]
+        }
+      ],
+      "startDate": "2013-02",
+      "endDate": "2014-12"
+    },
+    {
+      "company": "Blue Collar Software Development Ltd.",
+      "position": "Owner / e-Commerce + CMS Developer",
+      "startDate": "2006",
+      "endDate": "2011",
+      "responsibilities": [
+        "Designed responsive website and e-commerce templates.",
+        "Designed and developed custom extensions for various platforms.",
+        "Won Best Job Board at the Global Recruiter Asia Pacific Awards"
+      ],
+      "tasks": ["Website Design", "Website Development", "Extension Development"],
+      "technologies": ["PHP", "JavaScript", "Magento", "WordPress", "OpenCart", "MySQL"]
+    }
+  ],
+  "contractAndFreelance": [
+    {
+      "company": "Carbeeza Inc. / Interdynamix Ltd.",
+      "position": "Frontend Applications Lead",
+      "type": "Contract",
+      "startDate": "2017-07",
+      "endDate": "2019-02",
+      "responsibilities": [
+        "Collaborated with stake-holders to design automotive sales platform.",
+        "Prototyped application screens and workflows.",
+        "Lead planning activities for small team of frontend developers.",
+        "Responsible for delivery of consumer portal and dealer applications.",
+        "Responsible for creation and testing of various Node.js microservices."
+      ],
+      "tasks": ["System Architecture", "Development", "UI Design", "DevOps"],
+      "technologies": ["ES7", "React", "Java Spring Boot", "Postgres", "OpenShift"]
+    },
+    {
+      "company": "Caffe Tech Ltd.",
+      "location": "Edmonton, AB, Canada",
+      "position": "Solutions Developer",
+      "type": "Contract",
+      "startDate": "2015-07",
+      "endDate": "2017-07",
+      "responsibilities": [
+        "Designed hybrid point-of-sale app using React and Cordova.",
+        "Integrated Star Micronics hardware (Java/iOS) with iOS app.",
+        "Created custom integration linking Magento and QuickBooks.",
+        "Created custom inventory management and invoicing microapps.",
+        "Created payment and shipping/drop-shopping integrations."
+      ],
+      "tasks": ["System Architecture", "Development", "UI Design", "DevOps"],
+      "technologies": ["ES6", "React", "Redux", "PHP", "Slim", "Doctrine", "Magento", "MySQL"]
+    },
+    {
+      "company": "VEST Ltd. / Sportech PLC",
+      "location": "Edmonton, AB, Canada",
+      "position": "Primary UI Designer and Application Developer",
+      "type": "Contract",
+      "startDate": "2015-08",
+      "endDate": "2016-08",
+      "responsibilities": [
+        "Collaborated with stake-holders to design app.",
+        "Created hybrid app for Android using Angular.js and Cordova.",
+        "Created backend services using Slim, Doctrine and MySQL.",
+        "Created CI/CD pipelines using Docker, AWS, and Azure."
+      ],
+      "tasks": ["System Architecture", "Development", "UI Design", "DevOps"],
+      "technologies": ["ES5", "Angular", "Kendo UI", "PHP", "Slim", "Doctrine", "MySQL"]
+    },
+    {
+      "company": "Corrpro Canada Inc.",
+      "location": "Edmonton, AB, Canada",
+      "position": "Lead Full-Stack Developer",
+      "type": "Contract",
+      "startDate": "2015-02",
+      "endDate": "2015-07",
+      "responsibilities": [
+        "Collaborated with stake-holders to design custom tracking app.",
+        "Created desktop app using WinForms with SSRS reporting.",
+        "Structured development teams to deliver using scrum agile.",
+        "Automated load, regression, smoke and integration tests."
+      ],
+      "tasks": ["System Architecture", "Development", "UI Design", "DevOps"],
+      "technologies": ["C#", "WinForms", "Entity Framework", "SQL Server", "SSRS"]
+    },
+    {
+      "company": "Challenger Fleet Management Ltd.",
+      "location": "Edmonton, AB, Canada",
+      "position": "Lead Full-Stack Developer",
+      "type": "Contract",
+      "startDate": "2015-02",
+      "endDate": "2015-07",
+      "responsibilities": [
+        "Collaborated with stake-holders to design custom ERP system.",
+        "Implemented backend services using Web API and MS SQL.",
+        "Structured development teams to deliver using scrum agile.",
+        "Automated load, regression, smoke and integration tests."
+      ],
+      "tasks": ["System Architecture", "Development", "UI Design", "DevOps"],
+      "technologies": ["Angular.js", "C#", "Web API", "Entity Framework", "SQL Server"]
+    },
+    {
+      "company": "RMG Selection",
+      "location": "Beijing City, China",
+      "position": "Webmaster",
+      "type": "Freelance",
+      "startDate": "2010-04",
+      "endDate": "2014-06",
+      "responsibilities": [
+        "Designed and developed responsive website template for WordPress.",
+        "Designed and developed custom Job Board extension for WordPress.",
+        "Won Best Job Board at the Global Recruiter Asia Pacific Awards"
+      ],
+      "tasks": ["Website Design", "Website Development", "Extension Development"],
+      "technologies": ["jQuery", "HTML", "CSS", "PHP", "WordPress", "MySQL", "Apache"]
+    },
+    {
+      "company": "Carsgone.com",
+      "location": "Edmonton, AB, Canada",
+      "position": "Primary Application Developer",
+      "type": "Contract",
+      "startDate": "2011-05",
+      "endDate": "2012-10",
+      "responsibilities": [
+        "Collaborated with stake-holders to design web applications.",
+        "Architect, design and developed web application and API.",
+        "Implemented multi-threaded solution to parse massive data feeds.",
+        "Optimized search indexing and caching using Sphinx Search Server."
+      ],
+      "tasks": ["System Architecture", "Development", "UI Design", "Deployment"],
+      "technologies": ["PHP", "Kohana / CodeIgniter", "MySQL", "Sphinx OSS", "ImageMagick"]
+    },
+    {
+      "company": "SpaSation",
+      "location": "Edmonton, AB, Canada",
+      "position": "Webmaster",
+      "type": "Freelance",
+      "startDate": "2011-06",
+      "endDate": "2011-08",
+      "responsibilities": [
+        "Designed and developed responsive website template for OpenCart.",
+        "Designed and developed custom shipping extension for Canada Post."
+      ],
+      "tasks": ["Website Design", "Website Development", "Extension Development"],
+      "technologies": ["jQuery", "HTML", "CSS", "PHP", "OpenCart", "MySQL", "Apache"]
+    },
+    {
+      "company": "Visma",
+      "location": "Oslo, Norway",
+      "position": "WordPress Extension Developer",
+      "type": "Freelance",
+      "startDate": "2011-04",
+      "endDate": "2011-06",
+      "responsibilities": [
+        "Developed WordPress plugins to display and manage products."
+      ],
+      "tasks": ["Website Design", "Website Development", "Extension Development"],
+      "technologies": ["jQuery", "HTML", "CSS", "PHP", "WordPress", "MySQL", "Apache"]
+    },
+    {
+      "company": "Infinity IT Success Ltd.",
+      "location": "Bangkok, Thailand",
+      "position": "Magento Extension Developer",
+      "type": "Freelance",
+      "startDate": "2010-12",
+      "endDate": "2011-03",
+      "responsibilities": [
+        "Developed Magento plugins to display and manage products."
+      ],
+      "tasks": ["Website Design", "Website Development", "Extension Development"],
+      "technologies": ["Prototype.js", "HTML", "CSS", "PHP", "Magento", "MySQL", "Apache"]
+    },
+    {
+      "company": "Xtend-Life Natural Products (Intl) Ltd",
+      "location": "Bangkok, Thailand",
+      "position": "Web Application Developer",
+      "type": "Contract",
+      "startDate": "2010-08",
+      "endDate": "2010-10",
+      "tasks": ["Website Design", "Website Development", "Extension Development"],
+      "technologies": ["jQuery", "HTML", "CSS", "PHP", "OpenCart", "MySQL", "Apache", "ASP.NET MVC", "SQL Server"]
+    },
+    {
+      "company": "Smart Traffic Australia",
+      "location": "Bangkok, Thailand",
+      "position": "Web Application Developer",
+      "type": "Freelance",
+      "startDate": "2009-09",
+      "endDate": "2010-08",
+      "responsibilities": [
+        "Designed and developed e-commerce website templates.",
+        "Designed and developed custom e-commerce extensions."
+      ],
+      "tasks": ["Website Design", "Website Development", "Extension Development"],
+      "technologies": ["jQuery", "HTML", "CSS", "PHP", "OpenCart", "Magento", "MySQL", "Apache"]
+    },
+    {
+      "company": "Kantana Group Public Company Limited",
+      "location": "Bangkok, Thailand",
+      "position": "Web Application Developer",
+      "type": "Freelance",
+      "startDate": "2008-09",
+      "endDate": "2009-08",
+      "responsibilities": [
+        "Designed and developed website templates for Joomla."
+      ],
+      "tasks": ["Website Design", "Website Development", "Extension Development"],
+      "technologies": ["jQuery", "HTML", "CSS", "PHP", "Joomla", "MySQL", "Apache"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Chulalongkorn University",
+      "location": "Bangkok, Thailand",
+      "degree": "B.A. Degree in Economics",
+      "startDate": "2005",
+      "endDate": "2008"
+    },
+    {
+      "institution": "McGill University",
+      "location": "Montreal, Canada",
+      "degree": "B.Sc. Biochemistry",
+      "startDate": "2004",
+      "endDate": "2005"
+    }
+  ],
+  "skills": {
+    "preferredTechnologies": {
+      "frontend": [
+        "TypeScript / JavaScript / ECMA",
+        "React.js / Redux / Flux / Mobx",
+        "Vue.js / Vuex, etc.",
+        "Webpack / Gulp",
+        "Jest / Cypress",
+        "Cordova / PhoneGap / Ionic"
+      ],
+      "backend": [
+        "Node / Express / Nest / Koa",
+        "TypeORM / Loopback, etc.",
+        "GoLang / Protobuf",
+        ".NET Web API / WCF",
+        ".NET MVC / Web Forms",
+        "Entity Framework / NHibernate",
+        "NUnit / AutoFixture, etc.",
+        "Slim / FlightPHP / CodeIgniter",
+        "DoctrineORM / RedBean, etc.",
+        "PHPUnit, etc."
+      ]
+    },
+    "serverCloudDevOps": [
+      "Kubernetes / Flux / Helm",
+      "OpenShift Container Platform",
+      "AWS Lambda / S3 / EC2",
+      "Docker / Docker Compose",
+      "Azure Pipelines / DevOps",
+      "Buildkite / Jenkins / CircleCI",
+      "Apache / Nginx / IIS",
+      "VirtualBox / VMWare",
+      "Git / GitHub / GitLab"
+    ],
+    "componentUILibraries": [
+      "Material UI (React / Vue)",
+      "jQuery / jQuery UI, etc.",
+      "Telerik Kendo UI",
+      "Bootstrap 3 + 4",
+      "DevExpress"
+    ],
+    "databases": [
+      "DynamoDB",
+      "Postgres",
+      "Mongo",
+      "MS SQL",
+      "SQLite",
+      "MySQL"
+    ],
+    "uiGraphicDesign": [
+      "Adobe Creative Suite Photoshop / Illustrator, etc.",
+      "Axure / Sketch / InVision, etc."
+    ]
+  },
+  "expertise": {
+    "conceptsAndSkills": [
+      "User Interface Design",
+      "Mobile Applications",
+      "Hybrid Apps + PWA's",
+      "Server-Side Rendering",
+      "Static Site Generators",
+      "Micro + n-Tier services",
+      "RESTful Architecture",
+      "Database Development",
+      "Serverless / Edge",
+      "Containerization + Cloud"
+    ],
+    "industryExperience": [
+      "Inventory Management",
+      "Media and Asset Management",
+      "e-Commerce Applications",
+      "Point-of-Sale Integrations",
+      "Accounting Integrations",
+      "Automotive Classifieds",
+      "Automotive Integrations",
+      "FinTech Solutions",
+      "Fuji Electric Vending Machines",
+      "MEI Coin and Bill Acceptors",
+      "Star Micronics Hardware Integrations"
+    ]
+  }
+}
