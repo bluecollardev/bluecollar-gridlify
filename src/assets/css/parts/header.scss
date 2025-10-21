@@ -9,7 +9,7 @@ header {
 header {
   height: 54px;
   display: flex;
-  z-index: 3000;
+  z-index: 9990;
   padding: 0;
   /*background-color: var(--cwhite);*/
   position: fixed;
@@ -164,7 +164,7 @@ header #hamburger {
     display: none;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    z-index: 9999;
+    z-index: 9990;
   }
 
   header .logo-wrapper {
@@ -354,7 +354,7 @@ header #hamburger span {
     background: white;
     position: absolute;
     top: 48px; /* Position below the header */
-    z-index: 2999;
+    z-index: 9990;
 
     li {
       height: var(--body_height_8);

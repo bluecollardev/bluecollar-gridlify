@@ -370,7 +370,7 @@ export default {
     text-align: center;
     list-style: none;
     overflow-y: auto;
-    z-index: 9999;
+    z-index: 9970;
     transform: translateY(300px);
     -webkit-transform: translateY(300px);
     transition: transform .5s ease-in-out .3s;
