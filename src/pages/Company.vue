@@ -47,12 +47,12 @@
 
     <!-- Resume Modal -->
     <content-detail-modal ref="resumeModal" title="Resume - Lucas Michael Lopatka">
-      <div class="resume-viewer">
+      <div class="resume-viewer" style="padding-top: 5rem;">
         <iframe
           src="/docs/resume.lucas_lopatka.2025.pdf"
           width="100%"
           height="100%"
-          style="border: none; min-height: calc(100vh - 200px);"
+          style="border: none; min-height: calc(100vh - 250px);"
         ></iframe>
       </div>
     </content-detail-modal>
