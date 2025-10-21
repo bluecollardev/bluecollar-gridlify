@@ -1,7 +1,7 @@
 <template>
   <div class="fishing-scene">
-    <span ref="fishingRod" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
-      <span class="line-anchor"></span><img @click="doCast()" :class="`fishing-rod`" src="/images/fishing-rod.svg" />
+    <span ref="fishingRod" @click="doCast()" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
+      <span class="line-anchor"></span><img :class="`fishing-rod`" src="/images/fishing-rod.svg" />
     </span>
     <img ref="redSnapper" class="red-snapper fish" src="/images/red-snapper.svg" />
     <img ref="fishCaught" class="fish-caught fish" src="/images/red-snapper.svg" />
@@ -117,6 +117,7 @@
       },
       doCast() {
         this.clearReelingLine();
+        document.querySelector('#reeling-line').style.display = 'none';
 
         this.isCasting = true;
         this.isOnHook = false;
@@ -173,6 +174,8 @@
         }, 333);
       },
       drawReelingLine() {
+        document.querySelector('#reeling-line').style.display = 'block';
+
         const canvas = SVG('reeling-line');
         canvas.size(1, 1000);
 
@@ -213,13 +216,21 @@
         requestId = requestAnimationFrame(updatePosition);
       },
       clearCastingLine() {
-        if (document.querySelectorAll('#casting-line svg').length > 0) {
-          document.querySelector('#casting-line').removeChild(document.querySelector('#casting-line svg'));
+        const castingLineContainer = document.querySelector('#casting-line');
+        if (castingLineContainer) {
+          // Remove all SVG elements, not just the first one
+          while (castingLineContainer.firstChild) {
+            castingLineContainer.removeChild(castingLineContainer.firstChild);
+          }
         }
       },
       clearReelingLine() {
-        if (document.querySelectorAll('#reeling-line svg').length > 0) {
-          document.querySelector('#reeling-line').removeChild(document.querySelector('#reeling-line svg'));
+        const reelingLineContainer = document.querySelector('#reeling-line');
+        if (reelingLineContainer) {
+          // Remove all SVG elements, not just the first one
+          while (reelingLineContainer.firstChild) {
+            reelingLineContainer.removeChild(reelingLineContainer.firstChild);
+          }
         }
       },
       handleResize() {
@@ -335,6 +346,17 @@
     .fishing-rod {
       width: 780px;
       height: 100px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      bottom: 0;
+      right: 0;
+      cursor: pointer;
+      z-index: 10;
     }
 
     &:hover {
