@@ -152,8 +152,10 @@ export default {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  padding-top: 12vh;
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   position: relative;
+  margin-top: -9vh;
 
   &::before {
     content: '';
