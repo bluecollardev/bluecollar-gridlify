@@ -35,7 +35,7 @@
       </template>-->
 
       <template>
-        <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top" style="position: relative; z-index: 3000;">
+        <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top" style="position: relative; z-index: 10;">
           <div>
             <p class="text-center">{{ $t('company.intro1') }}</p>
             <p class="text-center">{{ $t('company.intro2') }}</p>

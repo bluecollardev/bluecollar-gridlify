@@ -272,8 +272,8 @@ header #hamburger span {
     /*height: calc(100vh - 48px);*/
     background: white;
     position: absolute;
-    top: 0; /* Required for Safari/iOS */
-    z-index: -1;
+    top: 48px; /* Position below the header */
+    z-index: 2999;
     li {
       height: var(--body_height_8);
       border-bottom: 1px solid var(--clightgrey);

@@ -196,6 +196,10 @@ a.action-link {
 /* Homepage and hero stuff */
 .homepage-hero {
   min-height: 90vh;
+
+  @media screen and (max-width: 52em) {
+    min-height: 100vh;
+  }
 }
 
 .hero-section {
