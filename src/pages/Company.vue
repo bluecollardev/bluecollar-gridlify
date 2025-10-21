@@ -42,11 +42,13 @@
       </template>
     </hero-layout01-col>
 
-    <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'CONSULTANTS' ? $t('company.ourTeam') : ''">
+    <team :activeDetail="'CONSULTANTS'" />
+
+    <!--<content-detail-modal ref="contentDetail" :title="this.activeDetail === 'CONSULTANTS' ? $t('company.ourTeam') : ''">
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
       <commando-skull-scene v-if="this.activeDetail === 'CONSULTANTS'"></commando-skull-scene>
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
-    </content-detail-modal>
+    </content-detail-modal>-->
   </Layout>
 </template>
 
@@ -72,6 +74,7 @@ import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue'
 
 // Import page components
 import Services from '~/components/home/Services.vue'
+import Team from '~/components/company/Team.vue'
 
 // Import static blocks
 import ProcessBlock from '~/blocks/ProcessBlock.vue'
@@ -123,6 +126,7 @@ export default {
     Footer,
     // Inject generic component layouts
     Services,
+    Team,
     VideoHeroLayout01Col,
     HeroLayout01Col,
     HeroLayout02Col02,
