@@ -69,6 +69,13 @@
               </div>
             </div>
 
+            <div class="scouting-report-section">
+              <div class="label">SCOUTING REPORT:</div>
+              <button class="view-report-btn" @click="viewScoutingReport">
+                CLICK TO VIEW
+              </button>
+            </div>
+
             <div class="missions-section">
               <div class="label">RECENT MISSIONS:</div>
               <div class="missions-list">
@@ -163,6 +170,9 @@ export default {
     },
     viewDetail() {
       this.$emit('view-resume')
+    },
+    viewScoutingReport() {
+      // TODO: Implement scouting report view
     }
   }
 }
@@ -435,6 +445,46 @@ export default {
     letter-spacing: 0.5px;
     border: 1px solid #78b7d6;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.scouting-report-section {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #ccc;
+
+  .label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+
+  .view-report-btn {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #78b7d6;
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #78b7d6;
+    border-radius: 3px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
   }
 }
 
