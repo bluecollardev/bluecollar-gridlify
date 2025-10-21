@@ -55,11 +55,7 @@ export default {
       const wordTargets = this.$refs.textWrapper.querySelectorAll(this.wordSelector)
 
       let timeline = anime.timeline({
-        loop: this.loop,
-        complete: () => {
-          // Emit event when animation completes
-          this.$emit('animationComplete')
-        }
+        loop: this.loop
       })
 
       timeline
@@ -84,13 +80,23 @@ export default {
             duration: 500,
             delay: (el, i) => 500 * i
           })
-          // Wait 5 seconds then slowly fade out over 1.5 seconds
+          // Wait 5 seconds, then emit event to prepare next phrase
+          .add({
+            targets: wordsTarget,
+            opacity: 1,
+            duration: 1,
+            delay: 5000,
+            complete: () => {
+              // Emit event before fade-out starts so next component can prepare
+              this.$emit('animationComplete')
+            }
+          })
+          // Slowly fade out over 1.5 seconds
           .add({
             targets: wordsTarget,
             opacity: 0,
             duration: 1500,
-            easing: 'easeOutExpo',
-            delay: 5000
+            easing: 'easeOutExpo'
           })
     }
   }
