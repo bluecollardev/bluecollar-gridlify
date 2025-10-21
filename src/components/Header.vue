@@ -10,7 +10,7 @@
         <img class="logo" src="/images/blue-collar-dev.png" alt=""/>
       </a>
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
-        <ul class="site-menu mb-0">
+        <ul class="site-menu mb-0" v-if="menuDisplayed">
           <li><a href="/" aria-label="Our Team" @click="hideMenu()">{{ $t('nav.home') }}</a></li>
           <li><a href="/#services" aria-label="Services" @click="hideMenu()">{{ $t('nav.whatWeBuild') }}</a></li>
           <li><a href="/company" aria-label="Websites" @click="hideMenu()">{{ $t('nav.ourPeople') }}</a></li>
@@ -32,7 +32,7 @@
             </a>
           </li>
         </ul>
-        <div class="site-navbar-top d-flex">
+        <div class="site-navbar-top d-flex" v-if="menuDisplayed">
           <a href="https://www.instagram.com/bluecollardev" class="d-flex align-items-center mr-4 ml-4">
             <span class="icon-instagram mr-2"></span>
             <!-- TODO: Implement tooltip -->
@@ -68,9 +68,27 @@ export default {
   mixins: [
     MenuMixin
   ],
+  data() {
+    return {
+      menuDisplayed: false
+    }
+  },
   methods: {
     handleMenuDisplay() {
       this.displayMenu()
+      this.$nextTick(() => {
+        if (typeof window !== 'undefined') {
+          const body = document.getElementsByTagName('body')[0]
+          this.menuDisplayed = body.classList.contains('display-menu')
+        }
+      })
+    },
+    hideMenu() {
+      const body = document.getElementsByTagName('body')[0]
+      if (body.classList.contains('display-menu')) {
+        body.classList.remove('display-menu')
+      }
+      this.menuDisplayed = false
     }
   }
 }
