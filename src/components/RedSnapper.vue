@@ -65,7 +65,7 @@ export default {
     // Wiggle intensity during jump (degrees of rotation oscillation, 0 = no wiggle)
     wiggleIntensity: {
       type: Number,
-      default: 3
+      default: 5
     },
     // Wiggle speed during jump (higher = faster wiggle)
     wiggleSpeed: {
