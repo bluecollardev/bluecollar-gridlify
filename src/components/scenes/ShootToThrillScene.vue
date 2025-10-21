@@ -45,6 +45,11 @@ export default {
 }
 
 @media screen and (max-width: 40em) {
+  // TODO: Fix the mobile display, it's disabled for now!
+  .shoot-to-thrill-scene, .guns-comp {
+    display: none;
+  }
+
   .guns-comp {
     height: 30vh;
     width: 100%;
@@ -70,7 +75,12 @@ export default {
   }
 }
 
-@media screen and (min-width: 64em) {
+@media screen and (max-width: 63.999em) {
+  // TODO: Fix the mobile display, it's disabled for now!
+  .shoot-to-thrill-scene, .guns-comp {
+    display: none;
+  }
+
   .shoot-to-thrill-scene {
     position: relative;
     width: 100%;
@@ -96,6 +106,35 @@ export default {
   .right-gun {
     transform: scaleX(-1);
     right: -25%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .shoot-to-thrill-scene {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    top: calc(54px);
+    left: 0;
+    z-index: 1000;
+  }
+
+  .guns-comp {
+    height: 30vh;
+    width: 80%;
+  }
+
+  .left-gun, .right-gun {
+    position: absolute;
+  }
+
+  .left-gun {
+    left: 0;
+  }
+
+  .right-gun {
+    transform: scaleX(-1);
+    right: 0;
   }
 }
 </style>
