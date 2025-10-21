@@ -3,8 +3,12 @@
   <div class="content-block testimonial-block-wrapper text-center sm-space-bottom-half" style="position: relative;">
     <div v-bind:class="classNameString">
       <div class="sm-space-bottom-half g-services">
-        <p v-if="!this.testimonialAnimation" class="g-pstyle10 text-center" style="color: #33587a !important;"
-           v-html="this.testimonial"></p>
+        <p v-if="!this.testimonialAnimation" class="g-pstyle10 text-center testimonial-text"
+           :style="`color: ${textColor} !important;`">
+          <span class="quote-icon quote-start">"</span>
+          <span v-html="this.testimonial"></span>
+          <span class="quote-icon quote-end">"</span>
+        </p>
         <component
             ref="testimonialAnimationContainer"
             v-if="this.testimonialAnimation"
@@ -12,7 +16,12 @@
             :settings="this.testimonialAnimation.settings"
             :loop="false"
             :animate="false">
-          <p class="g-pstyle10 text-center" style="color: #33587a !important;" v-html="this.testimonial"></p>
+          <p class="g-pstyle10 text-center testimonial-text"
+             :style="`color: ${textColor} !important;`">
+            <span class="quote-icon quote-start">"</span>
+            <span v-html="this.testimonial"></span>
+            <span class="quote-icon quote-end">"</span>
+          </p>
         </component>
       </div>
     </div>
@@ -102,3 +111,19 @@ export default {
   ]
 }
 </script>
+
+<style lang="scss" scoped>
+.quote-icon {
+  font-size: 1.5em;
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+.quote-start {
+  margin-right: 0.25rem;
+}
+
+.quote-end {
+  margin-left: 0.25rem;
+}
+</style>

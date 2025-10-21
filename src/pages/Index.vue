@@ -51,6 +51,11 @@
         @link-clicked="handleTestimonialLinkClick"
     />
 
+    <testimonials
+        :testimonials="serviceTestimonials"
+        @link-clicked="handleTestimonialLinkClick"
+    />
+
     <!-- DO NOT DELETE THIS IS THE GUITAR!!! -->
     <hero-layout01-col
         id="rock"
@@ -73,7 +78,7 @@
         <shrink-words-one-by-one-text-effect
             tag="h2"
             :text="$t('home.areYouReadyToRock')"
-            class="title text-center pad-bottom pad-top-2x"
+            class="title text-center pad-bottom space-bottom-half pad-top-2x"
             :loop="true">
         </shrink-words-one-by-one-text-effect>
       </template>
@@ -134,6 +139,7 @@ import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue'
 
 // Import page components
 import Services from '~/components/home/Services.vue'
+import Testimonials from '~/components/home/Testimonials.vue'
 import PortfolioVerticalTimeline from '~/components/portfolio/PortfolioVerticalTimeline.vue'
 import TeamBlock from '~/components/TeamBlock.vue'
 import Contact from '~/components/Contact.vue'
@@ -175,6 +181,7 @@ export default {
     Layout,
     // Inject components
     Services,
+    Testimonials,
     PortfolioVerticalTimeline,
     TeamBlock,
     Contact,
