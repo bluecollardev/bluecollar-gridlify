@@ -68,6 +68,16 @@
                 </span>
               </div>
             </div>
+
+            <div class="missions-section">
+              <div class="label">RECENT MISSIONS:</div>
+              <div class="missions-list">
+                <div v-for="(mission, index) in profileData.recentMissions" :key="index" class="mission-item">
+                  <div class="mission-company">{{ mission.company }}</div>
+                  <div class="mission-role">{{ mission.role }}</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -107,6 +117,20 @@ export default {
         yearsOfService: this.calculateYearsOfService(),
         clearance: 'TOP SECRET',
         about: 'Providing discerning international clients with intuitive, engaging, reliable and secure software solutions, solving complex business problems for a wide range of industries.',
+        recentMissions: [
+          {
+            company: 'Opn Payments (Thailand)',
+            role: 'Technical Lead'
+          },
+          {
+            company: 'CGI Inc. (Canada)',
+            role: 'Team Lead'
+          },
+          {
+            company: 'BC Developers Exchange',
+            role: 'Application Delivery Lead'
+          }
+        ],
         primaryTech: [
           'TypeScript',
           'React',
@@ -324,6 +348,46 @@ export default {
     line-height: 1.4;
     color: #2c3e50;
     font-style: italic;
+  }
+}
+
+.missions-section {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #ccc;
+
+  .label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+
+  .missions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .mission-item {
+    background: rgba(120, 183, 214, 0.1);
+    padding: 0.4rem 0.6rem;
+    border-left: 3px solid #78b7d6;
+    border-radius: 2px;
+  }
+
+  .mission-company {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+  }
+
+  .mission-role {
+    font-size: 0.65rem;
+    color: #555;
+    margin-top: 0.1rem;
   }
 }
 
