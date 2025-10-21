@@ -21,7 +21,7 @@
 				<input name="bot-field" />
 			</div>
 
-			<div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
+			<div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
 				<div>
 					<p class="text-center">{{ $t('contact.location') }}</p>
 					<p class="text-center">

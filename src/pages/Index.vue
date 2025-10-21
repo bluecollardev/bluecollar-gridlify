@@ -27,7 +27,7 @@
       </template>
 
       <template>
-        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top">
+        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
           <div>
             <p class="text-center">{{ $t('home.intro1') }}</p>
             <p class="text-center xs-hide">{{ $t('home.intro2') }}</p>
