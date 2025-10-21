@@ -26,7 +26,7 @@
         isCasting: false,
         isOnHook: false,
         resizeHandler: null,
-        fishCaughtOffset: 470 // Vertical offset for fish-caught position on line
+        fishCaughtOffset: 150 // Vertical offset for fish-caught position on line
       }
     },
     methods: {
@@ -149,8 +149,8 @@
 
             const fishX = coords.left;
             //console.log(`fish x: ${fishX}, y: ${endY}`);
-            // Subtract half the width of the fish so it's centered
-            document.querySelector('.fish-caught').style.left = `${fishX - 69}px`;
+            // Adjust for transform-origin: top right (move 300px left from previous position)
+            document.querySelector('.fish-caught').style.left = `${fishX - 369}px`;
 
             requestId = requestAnimationFrame(updatePosition);
           }
@@ -380,7 +380,7 @@
     max-width: 400px;
     bottom: -350px;
     transform: rotate(270deg);
-    transform-origin: top left;
+    transform-origin: top right;
     animation: fish_caught 1.75s ease-in-out alternate infinite;
     z-index: 1;
 
