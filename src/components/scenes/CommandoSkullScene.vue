@@ -73,6 +73,11 @@ export default {
   left: 0
 }
 
+.special-forces-skull {
+  transform: scale(0.5);
+  transform-origin: center center;
+}
+
 @media screen and (max-width: 40em) {
   .special-forces-skull {
     top: 0;
