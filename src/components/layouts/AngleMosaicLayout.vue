@@ -41,7 +41,8 @@
       <!-- END Slot 3 -->
     </section>
 
-    <section :class="`top-row-under slot2-container hero-section angle shift-section-up ${primaryColor} xs-hide sm-hide md-hide pad-top no-pad-bottom lg-flex flex-justify-center`">
+    <section
+        :class="`top-row-under slot2-container hero-section angle shift-section-up ${primaryColor} xs-hide sm-hide md-hide pad-top no-pad-bottom lg-flex flex-justify-center`">
       <div class="col-3-squares pad-top pad-bottom lg-flex flex-justify-center">
         <!-- Slot 2 -->
         <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third xs-hide sm-hide">
@@ -62,7 +63,8 @@
     <section :class="`bottom-row hero-section angle shift-section-up ${primaryColor} no-pad-bottom lg-flex`">
       <div :class="`col-3-squares no-pad-bottom lg-flex flex-basis-full`">
         <!-- Slot 4 -->
-        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
+        <div
+            class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
           <slot name="slot4Bg"></slot>
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
@@ -76,7 +78,8 @@
         <!-- END Slot 4 -->
 
         <!-- Slot 5 -->
-        <div class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third flex-grow">
+        <div
+            class="service-detail-card-top fixed-height-mobile flex flex-center flex-justify-center flex-basis-third flex-grow">
           <slot name="slot5Bg"></slot>
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
@@ -89,7 +92,8 @@
         <!-- END Slot 5 -->
 
         <!-- Slot 6 -->
-        <div class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
+        <div
+            class="service-detail-card-top flex flex-center flex-justify-center flex-basis-third flex-grow xs-hide sm-hide md-hide">
           <slot name="slot6Bg"></slot>
           <div class="service-detail-card-inner space-left space-right sm-space-top-2x sm-space-bottom-2x">
             <div class="service-detail-card-front">
@@ -111,96 +115,97 @@
 import FlipCardsMixin from '~/core/mixins/FlipCardsMixin'
 
 export default {
-    props: {
-      bgColor: {
-        type: String,
-        default: ''
-      },
-      primaryColor: {
-        type: String,
-        default: ''
-      },
-      secondaryColor: {
-        type: String,
-        default: ''
-      }
+  props: {
+    bgColor: {
+      type: String,
+      default: ''
     },
-    mixins: [
-      FlipCardsMixin
-    ],
-    data() {
-      return {
-        repaint: Math.random()
-      }
+    primaryColor: {
+      type: String,
+      default: ''
     },
-    mounted() {
-      const flipCardSelector = '.service-detail-card-inner';
-      const flipCardsContent = document.querySelectorAll(flipCardSelector);
+    secondaryColor: {
+      type: String,
+      default: ''
+    }
+  },
+  mixins: [
+    FlipCardsMixin
+  ],
+  data() {
+    return {
+      repaint: Math.random()
+    }
+  },
+  mounted() {
+    const flipCardSelector = '.service-detail-card-inner'
+    const flipCardsContent = document.querySelectorAll(flipCardSelector)
 
-      this.initFlipCards(
+    this.initFlipCards(
         flipCardsContent,
         '.service-detail-card-front',
         '.service-detail-card-back'
-      );
+    )
 
-      if (window) {
-        window.addEventListener('resize', () => {
-          this.repaint = Math.random();
-        });
-      }
-
-      this.repaint = Math.random();
-    },
-    beforeUnmount() {
-      console.log('remove wrapTitleText resize listener');
-      window.removeEventListener('resize', this.rewrapTitleText);
+    if (window) {
+      window.addEventListener('resize', () => {
+        this.repaint = Math.random()
+      })
     }
+
+    this.repaint = Math.random()
+  },
+  beforeUnmount() {
+    console.log('remove wrapTitleText resize listener')
+    window.removeEventListener('resize', this.rewrapTitleText)
   }
+}
 </script>
 
 <style lang="scss">
-  .top-row {
-    z-index: 3;
-    .service-detail-card-top {
-      z-index: 4;
-    }
+.top-row {
+  z-index: 3;
+
+  .service-detail-card-top {
+    z-index: 4;
+  }
+}
+
+.top-row-under {
+  z-index: 2;
+}
+
+.bottom-row {
+  z-index: 1;
+}
+
+.video-block-bg {
+  // border: 1px solid rgba(255,255,255,0.5);
+}
+
+.slot2-container {
+  width: 100%;
+  /* Override .hero-section */
+  position: absolute !important;
+  top: 0;
+}
+
+@media screen and (min-width: 64em) {
+  .angle-mosaic-layout * {
+    box-sizing: border-box; /* TODO: Implement universally? */
   }
 
-  .top-row-under {
-    z-index: 2;
-  }
-
-  .bottom-row {
-    z-index: 1;
-  }
-
-  .video-block-bg {
-    // border: 1px solid rgba(255,255,255,0.5);
-  }
-
-  .slot2-container {
+  .angle-mosaic-layout {
+    position: relative;
     width: 100%;
-    /* Override .hero-section */
-    position: absolute !important;
-    top: 0;
-  }
+    z-index: 11;
 
-  @media screen and (min-width: 64em) {
-    .angle-mosaic-layout * {
-      box-sizing: border-box; /* TODO: Implement universally? */
-    }
-
-    .angle-mosaic-layout {
-      position: relative;
+    .slot2-container {
       width: 100%;
-      z-index: 11;
-
-      .slot2-container {
-        width: 100%;
-        /* Override .hero-section */
-        position: absolute !important;
-        top: 10rem; /* Need to adjust for padding in Index move this to theme... */
-      }
+      /* Override .hero-section */
+      position: absolute !important;
+      top: 10rem; /* Need to adjust for padding in Index move this to theme... */
     }
   }
+}
 </style>

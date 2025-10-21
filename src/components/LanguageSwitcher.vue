@@ -1,17 +1,17 @@
 <template>
   <div class="language-switcher">
     <button
-      @click="switchLanguage('en')"
-      :class="{ active: currentLocale === 'en' }"
-      class="lang-btn"
+        @click="switchLanguage('en')"
+        :class="{ active: currentLocale === 'en' }"
+        class="lang-btn"
     >
       EN
     </button>
     <span class="separator">|</span>
     <button
-      @click="switchLanguage('th')"
-      :class="{ active: currentLocale === 'th' }"
-      class="lang-btn"
+        @click="switchLanguage('th')"
+        :class="{ active: currentLocale === 'th' }"
+        class="lang-btn"
     >
       TH
     </button>
@@ -22,7 +22,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { locale } = useI18n()
+const {locale} = useI18n()
 
 const currentLocale = computed(() => locale.value)
 

@@ -8,24 +8,24 @@
 import anime from 'animejs'
 
 export default {
-    props: {
-      settings: Object,
-      loop: {
-        type: Boolean,
-        default: false
-      }
-    },
-    data() {
-      return {
-        timeline: null
-      }
-    },
-    methods: {
-      setupAnimation() {
-        try {
-          this.timeline = anime.timeline({ loop: this.loop, autoplay: false });
+  props: {
+    settings: Object,
+    loop: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      timeline: null
+    }
+  },
+  methods: {
+    setupAnimation() {
+      try {
+        this.timeline = anime.timeline({loop: this.loop, autoplay: false})
 
-          this.timeline
+        this.timeline
             .add({
               targets: this.$el,
               opacity: 0,
@@ -39,21 +39,21 @@ export default {
               targets: this.$el,
               duration: 5000
             })
-        } catch (err) {
-          console.log(err);
-        }
-      }
-    },
-    mounted() {
-      if (typeof window !== 'undefined') {
-        this.setupAnimation();
+      } catch (err) {
+        console.log(err)
       }
     }
+  },
+  mounted() {
+    if (typeof window !== 'undefined') {
+      this.setupAnimation()
+    }
   }
+}
 </script>
 
 <style lang="scss">
-  .animation-wrapper {
-    opacity: 0;
-  }
+.animation-wrapper {
+  opacity: 0;
+}
 </style>

@@ -1,12 +1,14 @@
 <template>
   <main class="bg-bc-blue">
     <!--<intro></intro>-->
-    <div :id="this.id" :class="`page-container container relative ${isSafari ? 'is-safari' : isChrome ? 'is-chrome' : ''}`">
+    <div :id="this.id"
+         :class="`page-container container relative ${isSafari ? 'is-safari' : isChrome ? 'is-chrome' : ''}`">
       <div class="notifications" v-if="displayNotifications">
-        <img class="under-construction xs-hide" src="/images/under-construction.svg" alt="" />
+        <img class="under-construction xs-hide" src="/images/under-construction.svg" alt=""/>
         <span class="notification">
           <span><span class="disclaimer-icon">ⓘ</span> <strong>Disclaimer!</strong> This site is currently under construction and is intended as a starting point for both Blue Collar Development, as well as the personal portfolio of Lucas Lopatka. Projects may not be as described.</span>
-          <button class="hide-notification" aria-label="Hide notification" v-on:click="hideNotifications()">&times;</button>
+          <button class="hide-notification" aria-label="Hide notification"
+                  v-on:click="hideNotifications()">&times;</button>
         </span>
       </div>
       <Header>
@@ -24,7 +26,7 @@
         :onRandomClicked="this.onRandomClicked.bind(this, this.soundtrack)"
         :onVolumeChanged="this.onVolumeChanged.bind(this, this.soundtrack)"
       />-->
-      <slot />
+      <slot/>
       <Footer/>
     </div>
   </main>
@@ -44,114 +46,114 @@ import AudioControls from '~/core/components/audio/AudioControls.vue'
 import AudioControlsMixin from '~/core/components/audio/AudioControlsMixin'
 
 export default {
-    props: {
-      id: {
-        type: String,
-        default: 'page-content'
-      }
+  props: {
+    id: {
+      type: String,
+      default: 'page-content'
+    }
+  },
+  components: {
+    // Inject components
+    Header,
+    Blog,
+    Contact,
+    Footer,
+    Intro,
+    // Import audio controls
+    AudioControls,
+  },
+  mixins: [
+    // Import audio controls mixin
+    AudioControlsMixin,
+  ],
+  data() {
+    return {
+      isSafari: null,
+      isChrome: null,
+      displayNotifications: false,
+      lastScroll: 0,
+      soundtrack: null
+    }
+  },
+  methods: {
+    hideNotifications() {
+      this.displayNotifications = false
     },
-    components: {
-      // Inject components
-      Header,
-      Blog,
-      Contact,
-      Footer,
-      Intro,
-      // Import audio controls
-      AudioControls,
+    attachScrollListener() {
+      //window.addEventListener('scroll', this.handleScroll.bind(this));
     },
-    mixins: [
-      // Import audio controls mixin
-      AudioControlsMixin,
-    ],
-    data() {
-      return {
-        isSafari: null,
-        isChrome: null,
-        displayNotifications: false,
-        lastScroll: 0,
-        soundtrack: null
-      }
+    /**
+     * TODO: This is janky... and no longer necessary... besides, it screws up in IE and FF
+     */
+    handleScroll() {
+      /*if (!document.getElementById('loader')) {
+        if (Math.abs(this.lastScroll - window.scrollY) <= 5) return;
+
+        // Strip the hash
+        this.removeHash();
+
+        this.lastScroll = window.scrollY;
+      }*/
     },
-    methods: {
-      hideNotifications() {
-        this.displayNotifications = false
-      },
-      attachScrollListener() {
-        //window.addEventListener('scroll', this.handleScroll.bind(this));
-      },
-      /**
-       * TODO: This is janky... and no longer necessary... besides, it screws up in IE and FF
-       */
-      handleScroll() {
-        /*if (!document.getElementById('loader')) {
-          if (Math.abs(this.lastScroll - window.scrollY) <= 5) return;
+    removeHash() {
+      if (typeof window !== 'undefined') window.location.hash = ''
+    },
+    onSoundtrackPlay() {
+      this.initSoundtrack()
+      this.onPlayPauseClicked(this.soundtrack)
+    },
+    initSoundtrack() {
+      if (!(this.soundtrack instanceof Audio)) {
+        this.soundtrack = new Audio()
+        this.soundtrack.volume = 0.5
 
-          // Strip the hash
-          this.removeHash();
-
-          this.lastScroll = window.scrollY;
-        }*/
-      },
-      removeHash () {
-        if (typeof window !== 'undefined') window.location.hash = '';
-      },
-      onSoundtrackPlay() {
-        this.initSoundtrack();
-        this.onPlayPauseClicked(this.soundtrack);
-      },
-      initSoundtrack() {
-        if (!(this.soundtrack instanceof Audio)) {
-          this.soundtrack = new Audio();
-          this.soundtrack.volume = 0.5;
-
-          if (Math.random() > 0.5) {
-            this.soundtrack.src = '/audio/soundtrack_to_war.mp3';
-          } else {
-            this.soundtrack.src = '/audio/bro_hymn.mp3';
-          }
-
-          this.soundtrack.loop = true;
-
-          if (this.isAutoplayActive()) this.soundtrack.play();
+        if (Math.random() > 0.5) {
+          this.soundtrack.src = '/audio/soundtrack_to_war.mp3'
+        } else {
+          this.soundtrack.src = '/audio/bro_hymn.mp3'
         }
-      },
-      killSoundtrack() {
-        if (this.soundtrack instanceof Audio) {
-          this.soundtrack.pause();
-          this.soundtrack = null;
-        }
+
+        this.soundtrack.loop = true
+
+        if (this.isAutoplayActive()) this.soundtrack.play()
       }
     },
-    mounted() {
-      if (typeof window !== 'undefined') {
-        this.isChrome = this.$browserDetect.isChrome;
-        this.isSafari = this.$browserDetect.isSafari;
-        this.attachScrollListener();
-      }
-    },
-    beforeUnmount() {
-      if (typeof window !== 'undefined') {
-        this.killSoundtrack();
+    killSoundtrack() {
+      if (this.soundtrack instanceof Audio) {
+        this.soundtrack.pause()
+        this.soundtrack = null
       }
     }
+  },
+  mounted() {
+    if (typeof window !== 'undefined') {
+      this.isChrome = this.$browserDetect.isChrome
+      this.isSafari = this.$browserDetect.isSafari
+      this.attachScrollListener()
+    }
+  },
+  beforeUnmount() {
+    if (typeof window !== 'undefined') {
+      this.killSoundtrack()
+    }
   }
+}
 </script>
 
 <style lang="scss">
-  footer path.ampstart-icon {
-    fill: white;
-  }
+footer path.ampstart-icon {
+  fill: white;
+}
 
-  @media screen and (max-width: 40em) {
-    .main-audio-controls {
-      display: none;
-    }
+@media screen and (max-width: 40em) {
+  .main-audio-controls {
+    display: none;
   }
+}
 
-  @media screen and (min-width: 40em) {
-    .nav-audio-controls {
-      display: none;
-    }
+@media screen and (min-width: 40em) {
+  .nav-audio-controls {
+    display: none;
   }
+}
 </style>

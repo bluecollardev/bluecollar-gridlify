@@ -6,61 +6,61 @@ import ServiceData from '~/data/Services.yml'
 export default {
   computed: {
     serviceContent() {
-      return ServiceData;
+      return ServiceData
     }
   },
   methods: {
     getServices(includeActive) {
-      includeActive = typeof includeActive === 'boolean' ? includeActive : true;
+      includeActive = typeof includeActive === 'boolean' ? includeActive : true
 
-      let services = (this.serviceContent.services instanceof Array) ? this.serviceContent.services : [];
+      let services = (this.serviceContent.services instanceof Array) ? this.serviceContent.services : []
 
       if (!includeActive && this.activeService !== null) {
-        return services.filter((service) => service.id !== this.activeService.id);
+        return services.filter((service) => service.id !== this.activeService.id)
       }
 
       services = services.map(item => {
-        item = item || {};
+        item = item || {}
 
         item = Object.assign({}, item, {
           //summary: (item.summary) ? marked(item.summary) : null,
           description: (item.description) ? marked(item.description) : null
-        });
+        })
 
-        return item;
-      });
+        return item
+      })
 
-      return services;
+      return services
     },
     getService(id) {
-      if (!id || !this.serviceContent) return null;
+      if (!id || !this.serviceContent) return null
 
-      let items = this.serviceContent.services || [];
+      let items = this.serviceContent.services || []
 
       if (items instanceof Array && items.length > 0) {
-        items = items.filter(item => item.id === id);
+        items = items.filter(item => item.id === id)
 
-        if (!items.length > 0) return null;
+        if (!items.length > 0) return null
 
-        let item = items.pop();
+        let item = items.pop()
 
         item = Object.assign({}, item, {
           //summary: (item.summary) ? marked(item.summary) : null,
           description: (item.description) ? marked(item.description) : null
-        });
+        })
 
-        return item;
+        return item
       }
 
       return null
     },
     getServiceByIndex(idx) {
-      if (isNaN(idx) || !this.serviceContent) return null;
+      if (isNaN(idx) || !this.serviceContent) return null
 
-      let items = this.serviceContent.services || [];
+      let items = this.serviceContent.services || []
 
       if (items instanceof Array && items.length > idx) {
-        return items[idx];
+        return items[idx]
       }
 
       return null

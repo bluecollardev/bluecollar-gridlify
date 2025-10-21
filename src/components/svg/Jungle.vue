@@ -886,28 +886,28 @@
 import { gsap } from 'gsap'
 
 export default {
-    mounted() {
-      // TODO: Re-enable jungle animations when needed
-      // Only animate elements that exist in the SVG
-      gsap.from("#fernLeftBack, #fernTop", {
-        rotation: -3,
-        repeat: -1,
-        yoyo: true,
-        transformOrigin: "50% 100%",
-        ease: "sine.inOut",
-        duration: 4
-      });
+  mounted() {
+    // TODO: Re-enable jungle animations when needed
+    // Only animate elements that exist in the SVG
+    gsap.from("#fernLeftBack, #fernTop", {
+      rotation: -3,
+      repeat: -1,
+      yoyo: true,
+      transformOrigin: "50% 100%",
+      ease: "sine.inOut",
+      duration: 4
+    })
 
-      gsap.from('#tallFernFront, #fernRightBack', {
-        rotation: 3,
-        repeat: -1,
-        yoyo: true,
-        transformOrigin: "50% 100%",
-        ease: "sine.inOut",
-        duration: 4
-      });
-    }
+    gsap.from('#tallFernFront, #fernRightBack', {
+      rotation: 3,
+      repeat: -1,
+      yoyo: true,
+      transformOrigin: "50% 100%",
+      ease: "sine.inOut",
+      duration: 4
+    })
   }
+}
 </script>
 
 <style>.cls-1 {

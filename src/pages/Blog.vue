@@ -15,7 +15,7 @@
         </div>
       </div>
     </section>
-    <Blog />
+    <Blog/>
     <Footer/>
   </Layout>
 </template>
@@ -39,25 +39,24 @@ import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.
 import TestimonialData from '~/data/Testimonial.yml'
 
 export default {
-    components: {
-      Layout,
-      // Inject components
-      Header,
-      Blog,
-      Contact,
-      Footer,
-      // Inject generic component layouts
-      SectionBlockLayout02Col01,
-      SectionBlockLayout02Col02,
-      ContentBlockLayout,
-      TestimonialBlockLayout,
-    },
-    computed: {
-      testimonialContent() {
-        return TestimonialData;
-      }
-    },
-    methods: {
+  components: {
+    Layout,
+    // Inject components
+    Header,
+    Blog,
+    Contact,
+    Footer,
+    // Inject generic component layouts
+    SectionBlockLayout02Col01,
+    SectionBlockLayout02Col02,
+    ContentBlockLayout,
+    TestimonialBlockLayout,
+  },
+  computed: {
+    testimonialContent() {
+      return TestimonialData
     }
-  }
+  },
+  methods: {}
+}
 </script>

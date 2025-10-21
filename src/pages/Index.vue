@@ -1,16 +1,16 @@
 <template>
   <Layout id="home-page">
     <hero-layout01-col
-      bgColor="transparent"
-      title="We Build User Experiences That Reel in the Results"
-      subtitle=""
-      description=""
-      imageClass="home-page-banner-image"
-      image="/images/jungle-stream.svg"
-      :flipX="true"
-      :angle="true"
-      slotPos="top"
-      className="jungle-stream hero-first sm-pad-top pad-bottom-2x text-shadow relative"
+        bgColor="transparent"
+        title="We Build User Experiences That Reel in the Results"
+        subtitle=""
+        description=""
+        imageClass="home-page-banner-image"
+        image="/images/jungle-stream.svg"
+        :flipX="true"
+        :angle="true"
+        slotPos="top"
+        className="jungle-stream hero-first sm-pad-top pad-bottom-2x text-shadow relative"
     >
       <template v-slot:bg>
         <fishing-scene></fishing-scene>
@@ -18,22 +18,24 @@
 
       <template v-slot:title>
         <shrink-words-one-by-one-text-effect
-          v-if="!isServer"
-          tag="h2"
-          :text="$t('home.deliverResults')"
-          class="title text-center pad-bottom"
-          :loop="true">
+            v-if="!isServer"
+            tag="h2"
+            :text="$t('home.deliverResults')"
+            class="title text-center pad-bottom"
+            :loop="true">
         </shrink-words-one-by-one-text-effect>
       </template>
 
       <template>
-        <div class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+        <div
+            class="relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
           <div>
             <p class="text-center">{{ $t('home.intro1') }}</p>
             <p class="text-center xs-hide">{{ $t('home.intro2') }}</p>
             <p class="text-center xs-hide"><small><small><b>{{ $t('home.fishingHint') }}</b></small></small></p>
             <div class="text-center">
-              <a @click="viewDetail('PORTFOLIO')" class="action-link transparent space-top g-pstyle3">{{ $t('home.browseCaseStudies') }}</a>
+              <a @click="viewDetail('PORTFOLIO')"
+                 class="action-link transparent space-top g-pstyle3">{{ $t('home.browseCaseStudies') }}</a>
             </div>
           </div>
         </div>
@@ -41,23 +43,23 @@
     </hero-layout01-col>
 
     <services
-      :content="servicesContent"
-      :testimonials="serviceTestimonials"
+        :content="servicesContent"
+        :testimonials="serviceTestimonials"
     />
 
     <!-- DO NOT DELETE THIS IS THE GUITAR!!! -->
     <hero-layout01-col
-      id="rock"
-      v-if="servicesHero"
-      bgColor="bg-bc-blue"
-      title="Ready to Rock?"
-      subtitle=""
-      description=""
-      imageClass="home-page-banner-image"
-      :flipX="true"
-      :angle="true"
-      slotPos="top"
-      className="text-shadow sm-pad-top pad-bottom-2x"
+        id="rock"
+        v-if="servicesHero"
+        bgColor="bg-bc-blue"
+        title="Ready to Rock?"
+        subtitle=""
+        description=""
+        imageClass="home-page-banner-image"
+        :flipX="true"
+        :angle="true"
+        slotPos="top"
+        className="text-shadow sm-pad-top pad-bottom-2x"
     >
       <!--<template v-slot:bg2>
         <matrix-bg></matrix-bg>
@@ -65,10 +67,10 @@
 
       <template v-slot:title>
         <shrink-words-one-by-one-text-effect
-          tag="h2"
-          :text="$t('home.areYouReadyToRock')"
-          class="title text-center pad-bottom pad-top-2x"
-          :loop="true">
+            tag="h2"
+            :text="$t('home.areYouReadyToRock')"
+            class="title text-center pad-bottom pad-top-2x"
+            :loop="true">
         </shrink-words-one-by-one-text-effect>
       </template>
 
@@ -77,16 +79,17 @@
       </template>
 
       <template>
-        <div class="guitar-content relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
+        <div
+            class="guitar-content relative flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center">
           <div style="width: 100%;" class="flex flex-column flex-center flex-justify-center">
             <p class="text-center">{{ $t('home.rockIntro1') }}</p>
             <p class="text-center">{{ $t('home.rockIntro2') }}</p>
-            <br />
+            <br/>
             <p class="text-center"><small><small><b>{{ $t('home.guitarHint') }}</b></small></small></p>
             <div
-              class="guitar-block text-center"
-              @mouseenter="startRockin"
-              @mouseleave="stopRockin">
+                class="guitar-block text-center"
+                @mouseenter="startRockin"
+                @mouseleave="stopRockin">
               <interactive-guitar :key="Math.random()"></interactive-guitar>
             </div>
           </div>
@@ -109,7 +112,8 @@
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
       <commando-skull-scene v-if="this.activeDetail === 'CONSULTANTS'"></commando-skull-scene>
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
-      <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline><portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
+      <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
+      <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
     </content-detail-modal>
   </Layout>
 </template>
@@ -162,408 +166,408 @@ import HomeMixin from '~/core/mixins/HomeMixin'
 import HeroData from '~/data/Hero.yml'
 
 export default {
-    components: {
-      Layout,
-      // Inject components
-      Services,
-      PortfolioVerticalTimeline,
-      TeamBlock,
-      Contact,
-      // Inject generic component layouts
-      VideoHeroLayout01Col,
-      HeroLayout01Col,
-      ContentDetailModal,
-      // Inject SVG animations
-      Jungle,
-      Binoculars,
-      GoogleMapBackground,
-      MatrixBg,
-      SimplePartyLights,
-      InteractiveGuitar,
-      // Inject scenes
-      ForestScene,
-      FishingScene,
-      ShootToThrillScene,
-      CommandoSkullScene,
-      RedSnapper,
-      // Inject animated text effects
-      TypewriterTextEffect,
-      ShrinkWordsOneByOneTextEffect,
-      RotateWordsTextEffect,
-      SlideUpTextEffect,
-      FadeInTextEffect,
-      // Inject animated content effects
-      SimpleEffect
+  components: {
+    Layout,
+    // Inject components
+    Services,
+    PortfolioVerticalTimeline,
+    TeamBlock,
+    Contact,
+    // Inject generic component layouts
+    VideoHeroLayout01Col,
+    HeroLayout01Col,
+    ContentDetailModal,
+    // Inject SVG animations
+    Jungle,
+    Binoculars,
+    GoogleMapBackground,
+    MatrixBg,
+    SimplePartyLights,
+    InteractiveGuitar,
+    // Inject scenes
+    ForestScene,
+    FishingScene,
+    ShootToThrillScene,
+    CommandoSkullScene,
+    RedSnapper,
+    // Inject animated text effects
+    TypewriterTextEffect,
+    ShrinkWordsOneByOneTextEffect,
+    RotateWordsTextEffect,
+    SlideUpTextEffect,
+    FadeInTextEffect,
+    // Inject animated content effects
+    SimpleEffect
+  },
+  mixins: [
+    HomeMixin,
+    TestimonialMixin,
+  ],
+  computed: {
+    isServer() {
+      //console.log('vue');
+      //console.log(Vue);
+      console.log('is server?')
+      console.log(Vue.prototype.$isServer)
+      return (typeof Vue.prototype.$isServer === 'boolean') ? Vue.prototype.$isServer : false
     },
-    mixins: [
-      HomeMixin,
-      TestimonialMixin,
-    ],
-    computed: {
-      isServer() {
-        //console.log('vue');
-        //console.log(Vue);
-        console.log('is server?');
-        console.log(Vue.prototype.$isServer);
-        return (typeof Vue.prototype.$isServer === 'boolean') ? Vue.prototype.$isServer : false
-      },
-      heroContent() {
-        return HeroData;
-      },
-      servicesHero() {
-        let items = this.heroContent.items.filter(item => {
-          return item.id === 'services-hero';
-        });
+    heroContent() {
+      return HeroData
+    },
+    servicesHero() {
+      let items = this.heroContent.items.filter(item => {
+        return item.id === 'services-hero'
+      })
 
-        if (items instanceof Array && items.length > 0) {
-          return items[0];
-        }
-
-        return null
-      },
-      servicesContent() {
-        // Use i18n translations instead of YAML data
-        return [
-          {
-            title: this.$t('services.sexyMobileApps.title'),
-            description: this.$t('services.sexyMobileApps.description'),
-            link: '/#contact',
-            linkText: this.$t('services.sexyMobileApps.linkText')
-          },
-          {
-            title: this.$t('services.bulletproofSoftware.title'),
-            description: this.$t('services.bulletproofSoftware.description'),
-            link: '/#contact',
-            linkText: this.$t('services.bulletproofSoftware.linkText')
-          },
-          {
-            title: this.$t('services.deliciousWebsites.title'),
-            description: this.$t('services.deliciousWebsites.description'),
-            link: '/#contact',
-            linkText: this.$t('services.deliciousWebsites.linkText')
-          }
-        ];
-      },
-      serviceTestimonials() {
-        // Use i18n translations instead of YAML data
-        return [
-          {
-            testimonial: this.$t('testimonials.phase3.quote'),
-            reviewedBy: this.$t('testimonials.phase3.reviewer'),
-            position: this.$t('testimonials.phase3.position'),
-            organization: this.$t('testimonials.phase3.organization'),
-            image: '/images/testimonials/phase3.leigh-w.jpg'
-          },
-          {
-            testimonial: this.$t('testimonials.active24.quote'),
-            reviewedBy: this.$t('testimonials.active24.reviewer'),
-            position: this.$t('testimonials.active24.position'),
-            organization: this.$t('testimonials.active24.organization'),
-            image: '/images/testimonials/active24.dirk-s.jpg'
-          },
-          {
-            testimonial: this.$t('testimonials.carsgone.quote'),
-            reviewedBy: this.$t('testimonials.carsgone.reviewer'),
-            position: this.$t('testimonials.carsgone.position'),
-            organization: this.$t('testimonials.carsgone.organization'),
-            image: '/images/testimonials/carsgone.ray-r.jpg'
-          }
-        ];
+      if (items instanceof Array && items.length > 0) {
+        return items[0]
       }
+
+      return null
     },
-    data() {
-      let state = {
-        activeDetail: null,
-        formData: {},
-        repaint: Math.random(),
-        textEffects: {
-          typewriter: TypewriterTextEffect,
-          shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
-          rotateWords: RotateWordsTextEffect,
-          slideUp: SlideUpTextEffect,
-          fadeIn: FadeInTextEffect
+    servicesContent() {
+      // Use i18n translations instead of YAML data
+      return [
+        {
+          title: this.$t('services.sexyMobileApps.title'),
+          description: this.$t('services.sexyMobileApps.description'),
+          link: '/#contact',
+          linkText: this.$t('services.sexyMobileApps.linkText')
         },
-        contentEffects: {
-          simple: SimpleEffect
+        {
+          title: this.$t('services.bulletproofSoftware.title'),
+          description: this.$t('services.bulletproofSoftware.description'),
+          link: '/#contact',
+          linkText: this.$t('services.bulletproofSoftware.linkText')
         },
-        rockAndRoll: false,
-      };
-
-      return state;
-    },
-    methods: {
-      /**
-       * @deprecated
-       * Deprecated as far as this site is concerned right now... this could also be moved to a mixin
-       */
-      /*getProcessStep(idx) {
-        let items = this.homeContent.processSteps;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
+        {
+          title: this.$t('services.deliciousWebsites.title'),
+          description: this.$t('services.deliciousWebsites.description'),
+          link: '/#contact',
+          linkText: this.$t('services.deliciousWebsites.linkText')
         }
-
-        return null
-      },*/
-      startRockin() {
-        console.log('START ROCKIN - rockAndRoll set to true');
-        this.rockAndRoll = true;
-      },
-      stopRockin() {
-        this.rockAndRoll = false;
-      },
-      initSoundtrack() {
-        // TODO: Implement soundtrack initialization if needed
-        // This method was called but never implemented
-      },
-      viewDetail(activeDetail) {
-        if (typeof window !== 'undefined') {
-
-          this.activeDetail = activeDetail;
-          this.$refs.contentDetail.viewDetail(activeDetail, () => {
-            // TODO: Call parent!
-            this.initSoundtrack();
-            if (this.$refs.shootToThrill) {
-              this.$refs.shootToThrill.fireGuns();
-            }
-          });
-        }
-      }
+      ]
     },
-    mounted() {
-
+    serviceTestimonials() {
+      // Use i18n translations instead of YAML data
+      return [
+        {
+          testimonial: this.$t('testimonials.phase3.quote'),
+          reviewedBy: this.$t('testimonials.phase3.reviewer'),
+          position: this.$t('testimonials.phase3.position'),
+          organization: this.$t('testimonials.phase3.organization'),
+          image: '/images/testimonials/phase3.leigh-w.jpg'
+        },
+        {
+          testimonial: this.$t('testimonials.active24.quote'),
+          reviewedBy: this.$t('testimonials.active24.reviewer'),
+          position: this.$t('testimonials.active24.position'),
+          organization: this.$t('testimonials.active24.organization'),
+          image: '/images/testimonials/active24.dirk-s.jpg'
+        },
+        {
+          testimonial: this.$t('testimonials.carsgone.quote'),
+          reviewedBy: this.$t('testimonials.carsgone.reviewer'),
+          position: this.$t('testimonials.carsgone.position'),
+          organization: this.$t('testimonials.carsgone.organization'),
+          image: '/images/testimonials/carsgone.ray-r.jpg'
+        }
+      ]
     }
+  },
+  data() {
+    let state = {
+      activeDetail: null,
+      formData: {},
+      repaint: Math.random(),
+      textEffects: {
+        typewriter: TypewriterTextEffect,
+        shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
+        rotateWords: RotateWordsTextEffect,
+        slideUp: SlideUpTextEffect,
+        fadeIn: FadeInTextEffect
+      },
+      contentEffects: {
+        simple: SimpleEffect
+      },
+      rockAndRoll: false,
+    }
+
+    return state
+  },
+  methods: {
+    /**
+     * @deprecated
+     * Deprecated as far as this site is concerned right now... this could also be moved to a mixin
+     */
+    /*getProcessStep(idx) {
+      let items = this.homeContent.processSteps;
+
+      if (items instanceof Array && items.length > idx) {
+        return items[idx];
+      }
+
+      return null
+    },*/
+    startRockin() {
+      console.log('START ROCKIN - rockAndRoll set to true')
+      this.rockAndRoll = true
+    },
+    stopRockin() {
+      this.rockAndRoll = false
+    },
+    initSoundtrack() {
+      // TODO: Implement soundtrack initialization if needed
+      // This method was called but never implemented
+    },
+    viewDetail(activeDetail) {
+      if (typeof window !== 'undefined') {
+
+        this.activeDetail = activeDetail
+        this.$refs.contentDetail.viewDetail(activeDetail, () => {
+          // TODO: Call parent!
+          this.initSoundtrack()
+          if (this.$refs.shootToThrill) {
+            this.$refs.shootToThrill.fireGuns()
+          }
+        })
+      }
+    }
+  },
+  mounted() {
+
   }
+}
 </script>
 
 <style lang="scss">
-  * {
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+}
+
+.guitar-content {
+  z-index: 11;
+}
+
+/* Temporarily disable labels */
+.ampstart-input label {
+  display: none;
+}
+
+#rock {
+  z-index: 1;
+}
+
+@media screen and (min-width: 52em) {
+  #rock {
+    height: 115vh;
+    position: relative;
+    top: -5vh;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  #rock {
+    top: -20vh;
+  }
+}
+
+#contact {
+  z-index: 0;
+  height: auto;
+  top: 0;
+  position: relative;
+}
+
+@media screen and (min-width: 40em) {
+  #contact {
+    z-index: 0;
+    top: -30vh;
+    height: 130vh;
+    margin-bottom: -5vh;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  #contact {
+    margin-bottom: -30vh;
+  }
+}
+
+/* Override colors */
+#services {
+  //background-color: #bdcad9;
+  //background-image: linear-gradient(315deg, #bdcad9 0%, #e1dada 74%);
+  //background-color: #111822;
+  //background-image: linear-gradient(15deg, #111822 0%, #33587a 90%);
+  background-color: #d2e6d6;
+  background-image: linear-gradient(175deg, #cce3ea 0%, #d2e6d6 74%);
+}
+
+#services .top-row-under * {
+  color: #33587a !important;
+  text-shadow: none !important;
+}
+
+/* Override colors */
+@media screen and (max-width: 64em) {
+  #services {
+    background-color: #111822;
+    background-image: linear-gradient(15deg, #111822 0%, #33587a 90%);
   }
 
-  .guitar-content {
-    z-index: 11;
+  /* iOS background-attachment doesn't play well - Force WebP on mobile */
+  .hero-section-01-col.jungle-stream {
+    background-image: url(/images/jungle-stream.webp) !important;
+    background-position: center bottom !important;
+    background-repeat: no-repeat !important;
   }
 
-  /* Temporarily disable labels */
-  .ampstart-input label {
-    display: none;
+  /* Portrait - contain to show full image */
+  @media screen and (max-width: 64em) and (orientation: portrait) {
+    .hero-section-01-col.jungle-stream {
+      background-size: auto 100% !important;
+    }
+  }
+
+  /* Landscape - cover to fill the space */
+  @media screen and (max-width: 64em) and (orientation: landscape) {
+    .hero-section-01-col.jungle-stream {
+      background-size: cover !important;
+    }
+  }
+}
+
+@media screen and (max-width: 64em) {
+  .jungle-stream {
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hero-section-content {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin-top: -15rem;
+    }
+  }
+
+  #services {
+    z-index: 3;
   }
 
   #rock {
-    z-index: 1;
-  }
-
-  @media screen and (min-width: 52em) {
-    #rock {
-      height: 115vh;
-      position: relative;
-      top: -5vh;
-    }
-  }
-
-  @media screen and (min-width: 64em) {
-    #rock {
-      top: -20vh;
-    }
+    z-index: 2;
   }
 
   #contact {
-    z-index: 0;
-    height: auto;
-    top: 0;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 64em) and (orientation: landscape) {
+  .jungle-stream {
+    padding-bottom: 50vh;
+  }
+
+  #services {
+    top: -10vh;
+    padding-top: 20vh; /* Offset */
+    padding-bottom: 20vh;
     position: relative;
   }
 
-  @media screen and (min-width: 40em) {
-    #contact {
-      z-index: 0;
-      top: -30vh;
-      height: 130vh;
-      margin-bottom: -5vh;
-    }
+  #rock {
   }
 
-  @media screen and (min-width: 64em) {
-    #contact {
-      margin-bottom: -30vh;
-    }
+  #contact {
+    top: 0;
   }
+}
 
-  /* Override colors */
+@media screen and (max-width: 64em) and (orientation: portrait) {
   #services {
-    //background-color: #bdcad9;
-    //background-image: linear-gradient(315deg, #bdcad9 0%, #e1dada 74%);
-    //background-color: #111822;
-    //background-image: linear-gradient(15deg, #111822 0%, #33587a 90%);
-    background-color: #d2e6d6;
-    background-image: linear-gradient(175deg, #cce3ea 0%, #d2e6d6 74%);
+    top: -10vh;
+    padding-top: 10vh; /* Offset */
+    padding-bottom: 10vh;
+    position: relative;
+    border-bottom: none !important;
   }
 
-  #services .top-row-under * {
-    color: #33587a !important;
-    text-shadow: none !important;
+  #rock {
+    padding-bottom: 30vh;
   }
 
-  /* Override colors */
-  @media screen and (max-width: 64em) {
-    #services {
-      background-color: #111822;
-      background-image: linear-gradient(15deg, #111822 0%, #33587a 90%);
-    }
-
-    /* iOS background-attachment doesn't play well - Force WebP on mobile */
-    .hero-section-01-col.jungle-stream {
-      background-image: url(/images/jungle-stream.webp) !important;
-      background-position: center bottom !important;
-      background-repeat: no-repeat !important;
-    }
-
-    /* Portrait - contain to show full image */
-    @media screen and (max-width: 64em) and (orientation: portrait) {
-      .hero-section-01-col.jungle-stream {
-        background-size: auto 100% !important;
-      }
-    }
-
-    /* Landscape - cover to fill the space */
-    @media screen and (max-width: 64em) and (orientation: landscape) {
-      .hero-section-01-col.jungle-stream {
-        background-size: cover !important;
-      }
-    }
+  #contact {
+    top: 0;
   }
+}
 
-  @media screen and (max-width: 64em) {
-    .jungle-stream {
-      z-index: 4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .hero-section-content {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        margin-top: -15rem;
-      }
-    }
-
-    #services {
-      z-index: 3;
-    }
-
-    #rock {
-      z-index: 2;
-    }
-
-    #contact {
-      z-index: 1;
-    }
+@media screen and (max-width: 84em) and (orientation: portrait) {
+  .bottom-row .service-detail-card-top {
+    border-bottom: none !important;
   }
+}
 
-  @media screen and (max-width: 64em) and (orientation: landscape) {
-    .jungle-stream {
-      padding-bottom: 50vh;
-    }
 
-    #services {
-      top: -10vh;
-      padding-top: 20vh; /* Offset */
-      padding-bottom: 20vh;
+.video-block-bg {
+  //background-color: #33587a;
+  //background-image: linear-gradient(135deg, #525E61 0%, #33587a 100%);
+  background-color: #7FB5D5;
+}
+
+.top-row-under *,
+.bottom-row .col-3-squares > .service-detail-card-top:nth-child(2n + 1) * {
+  color: #33587a !important; /* Midnight blue */
+  text-shadow: none !important;
+}
+
+@media screen and (min-width: 64em) {
+  .hero-first {
+    &.hero-section-01-col .hero-block {
       position: relative;
-    }
+      top: -3rem;
+      /* top: 6rem; */
+      max-width: 40%;
 
-    #rock {
-    }
-
-    #contact {
-      top: 0;
-    }
-  }
-
-  @media screen and (max-width: 64em) and (orientation: portrait) {
-    #services {
-      top: -10vh;
-      padding-top: 10vh; /* Offset */
-      padding-bottom: 10vh;
-      position: relative;
-      border-bottom: none !important;
-    }
-
-    #rock {
-      padding-bottom: 30vh;
-    }
-
-    #contact {
-      top: 0;
-    }
-  }
-
-  @media screen and (max-width: 84em) and (orientation: portrait) {
-    .bottom-row .service-detail-card-top {
-      border-bottom: none !important;
-    }
-  }
-
-
-  .video-block-bg {
-    //background-color: #33587a;
-    //background-image: linear-gradient(135deg, #525E61 0%, #33587a 100%);
-    background-color: #7FB5D5;
-  }
-
-  .top-row-under *,
-  .bottom-row .col-3-squares > .service-detail-card-top:nth-child(2n + 1) * {
-    color: #33587a !important; /* Midnight blue */
-    text-shadow: none !important;
-  }
-
-  @media screen and (min-width: 64em) {
-    .hero-first {
-      &.hero-section-01-col .hero-block {
-        position: relative;
-        top: -3rem;
-        /* top: 6rem; */
-        max-width: 40%;
-
-        .text-shadow * {
-          text-shadow: 1px 0 3px rgba(0, 0, 0, 0.975) !important;
-        }
+      .text-shadow * {
+        text-shadow: 1px 0 3px rgba(0, 0, 0, 0.975) !important;
       }
     }
   }
+}
 
-  @media screen and (min-width: 64em) {
-    .jungle-stream {
-      background-position: 60% 0;
+@media screen and (min-width: 64em) {
+  .jungle-stream {
+    background-position: 60% 0;
+  }
+}
+
+@media screen and (min-width: 84em) {
+  .jungle-stream {
+    background-position: -420px 0;
+  }
+}
+
+@media screen and (min-width: 130em) {
+  .jungle-stream {
+    background-position: 50% 50%;
+  }
+}
+
+.panel-header {
+  h2 {
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  #contact .ampstart-input {
+    > * {
+      margin: 0 auto;
+      width: 100%;
     }
   }
-
-  @media screen and (min-width: 84em) {
-    .jungle-stream {
-      background-position: -420px 0;
-    }
-  }
-
-  @media screen and (min-width: 130em) {
-    .jungle-stream {
-      background-position: 50% 50%;
-    }
-  }
-
-  .panel-header {
-    h2 {
-      font-size: 27px;
-    }
-  }
-
-  @media screen and (max-width: 40em) {
-    #contact .ampstart-input {
-      > * {
-        margin: 0 auto;
-        width: 100%;
-      }
-    }
-  }
+}
 </style>

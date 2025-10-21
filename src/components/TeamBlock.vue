@@ -4,12 +4,12 @@
     <div class="sm-flex flex-center flex-justify-center flex-basis-half">
       <div class="content-block">
         <content-block-layout
-          className="pad-top"
-          :title="$t('company.needBackup')"
-          :description="$t('company.backupDescription')"
-          link="/"
-          :linkText="$t('company.backToHome')"
-          :onLinkClicked="this.onHomeLinkClicked"
+            className="pad-top"
+            :title="$t('company.needBackup')"
+            :description="$t('company.backupDescription')"
+            link="/"
+            :linkText="$t('company.backToHome')"
+            :onLinkClicked="this.onHomeLinkClicked"
         />
       </div>
     </div>
@@ -23,72 +23,73 @@ import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.
 import TestimonialMixin from '~/core/mixins/TestimonialMixin'
 
 export default {
-    props: {
-      onHomeLinkClicked: {
-        type: Function,
-        default: (e) => {}
+  props: {
+    onHomeLinkClicked: {
+      type: Function,
+      default: (e) => {
       }
-    },
-    mixins: [
-      TestimonialMixin
-    ],
-    components: {
-      ContentBlockLayout,
-      TestimonialBlockLayout,
-      AngleMosaicLayout
     }
+  },
+  mixins: [
+    TestimonialMixin
+  ],
+  components: {
+    ContentBlockLayout,
+    TestimonialBlockLayout,
+    AngleMosaicLayout
   }
+}
 </script>
 
 <style lang="scss">
+.team-block {
+  .content-block {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content-block-heading {
+    margin-top: 0;
+  }
+
+  .content-block-heading p {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .content-block-body {
+    margin: 2.5rem 0;
+  }
+
+  .content-block-body p {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 40em) {
   .team-block {
     .content-block {
-      max-width: 75%;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 60%;
     }
 
     .content-block-heading {
-      margin-top: 0;
-    }
-
-    .content-block-heading p {
-      display: block;
-      width: 100%;
-      text-align: center;
+      margin-top: 5rem;
+      margin-right: 3rem;
     }
 
     .content-block-body {
-      margin: 2.5rem 0;
-    }
-
-    .content-block-body p {
-      text-align: left;
+      margin: 5rem 0;
     }
   }
+}
 
-  @media screen and (min-width: 40em) {
-    .team-block {
-      .content-block {
-        max-width: 60%;
-      }
-
-      .content-block-heading {
-        margin-top: 5rem;
-        margin-right: 3rem;
-      }
-
-      .content-block-body {
-        margin: 5rem 0;
-      }
+@media screen and (min-width: 84em) {
+  .team-block {
+    .content-block {
+      max-width: 50%;
     }
   }
-
-  @media screen and (min-width: 84em) {
-    .team-block {
-      .content-block {
-        max-width: 50%;
-      }
-    }
-  }
+}
 </style>

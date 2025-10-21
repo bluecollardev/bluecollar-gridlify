@@ -3,11 +3,11 @@
     <div class="sm-flex flex-wrap flex-center flex-justify-center flex-basis-two-thirds">
       <article class="hero-block" v-for="post in blogPosts" :key="post.id">
         <content-block-layout
-          className="pad-top pad-bottom"
-          :title="post.title"
-          :description="post.content"
-          :link="post.path"
-          linkText="Read More"
+            className="pad-top pad-bottom"
+            :title="post.title"
+            :description="post.content"
+            :link="post.path"
+            linkText="Read More"
         />
       </article>
     </div>
@@ -25,17 +25,17 @@ import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue'
 import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue'
 
 export default {
-    components: {
-      HeroLayout02Col02,
-      SectionBlockLayout02Col01,
-      SectionBlockLayout02Col02,
-      ContentBlockLayout,
-      TestimonialBlockLayout,
-    },
-    data() {
-      return {
-        blogPosts: getAllBlogPosts()
-      }
+  components: {
+    HeroLayout02Col02,
+    SectionBlockLayout02Col01,
+    SectionBlockLayout02Col02,
+    ContentBlockLayout,
+    TestimonialBlockLayout,
+  },
+  data() {
+    return {
+      blogPosts: getAllBlogPosts()
     }
   }
+}
 </script>

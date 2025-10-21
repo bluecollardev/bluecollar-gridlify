@@ -1,72 +1,72 @@
 /* Responsive */
 @media screen and (max-width: 40em) {
-    /*h1, h2, h3, h4, h5, h6,
-    p {
-        text-align: center;
-    }*/
+  /*h1, h2, h3, h4, h5, h6,
+  p {
+      text-align: center;
+  }*/
 
-    header .logo {
-        position: relative;
-    }
+  header .logo {
+    position: relative;
+  }
 
-    .banner-image.left,
-    .banner-image.right {
-        float: none;
-    }
+  .banner-image.left,
+  .banner-image.right {
+    float: none;
+  }
 
-    .figure-caption {
-        position: absolute;
-        bottom: 6px;
-        max-width: 100%;
-        padding: 1rem 1rem;
-        text-align: center;
-    }
+  .figure-caption {
+    position: absolute;
+    bottom: 6px;
+    max-width: 100%;
+    padding: 1rem 1rem;
+    text-align: center;
+  }
 
-    .figure-caption p {
-        text-align: center;
-    }
+  .figure-caption p {
+    text-align: center;
+  }
 
-    .content-block {
-        margin-top: 3rem;
-    }
+  .content-block {
+    margin-top: 3rem;
+  }
 
-    .g-footer {
-        margin-top: 3rem;
-    }
+  .g-footer {
+    margin-top: 3rem;
+  }
 
-    .action-link-block {
-        text-align: center;
-    }
+  .action-link-block {
+    text-align: center;
+  }
 
-    .contact-cta .g-cta-contact,
-    .contact-cta .g-cta-contact p {
-        text-align:  center;
-    }
+  .contact-cta .g-cta-contact,
+  .contact-cta .g-cta-contact p {
+    text-align: center;
+  }
 
-    /* TODO: Specify! */
-    footer .logo,
-    footer .copyright,
-    footer .copyright p,
-    footer .site-info,
-    footer .site-info p {
-        text-align: center;
-        font-size: 100%;
-    }
+  /* TODO: Specify! */
+  footer .logo,
+  footer .copyright,
+  footer .copyright p,
+  footer .site-info,
+  footer .site-info p {
+    text-align: center;
+    font-size: 100%;
+  }
 
-    .g-pstyle12 {
-        font-weight: 700;
-        font-size: 27px;
-        line-height: 48px;
-    }
+  .g-pstyle12 {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 48px;
+  }
 
-    .title,
-    .g-pstyle2 {
-        font-weight: 700;
-        font-size: 27px;
-        line-height: 48px;
-    }
+  .title,
+  .g-pstyle2 {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 48px;
+  }
 
-    img {
-        max-width: 100%;
-    }
+  img {
+    max-width: 100%;
+  }
 }

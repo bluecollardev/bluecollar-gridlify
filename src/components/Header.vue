@@ -7,7 +7,7 @@
         <span></span>
       </div>
       <a href="/" aria-label="Home Page" class="logo-wrapper flex flex-center xs-flex-justify-center">
-        <img class="logo" src="/images/blue-collar-dev.png" alt="" />
+        <img class="logo" src="/images/blue-collar-dev.png" alt=""/>
       </a>
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0">
@@ -15,9 +15,10 @@
           <li><a href="/#services" aria-label="Services" @click="hideMenu()">{{ $t('nav.whatWeBuild') }}</a></li>
           <li><a href="/company" aria-label="Websites" @click="hideMenu()">{{ $t('nav.ourPeople') }}</a></li>
           <li><a href="/#contact" aria-label="Enquire" @click="hideMenu()">{{ $t('nav.getInTouch') }}</a></li>
-          <li><a href="https://github.com/bluecollardev" target="_blank" aria-label="GitHub" @click="hideMenu()">{{ $t('nav.github') }}</a></li>
+          <li><a href="https://github.com/bluecollardev" target="_blank" aria-label="GitHub"
+                 @click="hideMenu()">{{ $t('nav.github') }}</a></li>
           <li style="height: auto" class="language-switcher-menu-item">
-            <language-switcher />
+            <language-switcher/>
           </li>
           <li style="height: auto" class="soundtrack-controls-menu-item pad-bottom">
             <a style="flex-direction: column; align-items: flex-start">
@@ -63,43 +64,43 @@ import MenuMixin from '~/core/mixins/MenuMixin'
 import LanguageSwitcher from '~/components/LanguageSwitcher.vue'
 
 export default {
-    components: {
-      LanguageSwitcher
-    },
-    mixins: [
-      MenuMixin
-    ],
-    methods: {
-      handleMenuDisplay() {
-        this.displayMenu();
-      }
+  components: {
+    LanguageSwitcher
+  },
+  mixins: [
+    MenuMixin
+  ],
+  methods: {
+    handleMenuDisplay() {
+      this.displayMenu()
     }
   }
+}
 </script>
 
 <style lang="scss">
-  @media screen and (max-width: 40em) {
-    .site-menu {
-      .controls {
-        button {
-          text-shadow: none;
-        }
+@media screen and (max-width: 40em) {
+  .site-menu {
+    .controls {
+      button {
+        text-shadow: none;
       }
     }
-
-    .social-links-menu-item {
-      border-bottom: none !important;
-    }
-
-    .site-navbar-top {
-      justify-content: flex-start !important;
-    }
   }
 
-  @media screen and (min-width: 40em) {
-    .social-links-menu-item,
-    .soundtrack-controls-menu-item {
-      display: none !important;
-    }
+  .social-links-menu-item {
+    border-bottom: none !important;
   }
+
+  .site-navbar-top {
+    justify-content: flex-start !important;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .social-links-menu-item,
+  .soundtrack-controls-menu-item {
+    display: none !important;
+  }
+}
 </style>

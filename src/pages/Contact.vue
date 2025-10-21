@@ -1,6 +1,7 @@
 <template>
   <Layout :key="repaint">
-    <section id="contact" class="hero-section text-shadow bg-black angle no-pad-top" style="height: 100vh; margin-bottom: 58vh">
+    <section id="contact" class="hero-section text-shadow bg-black angle no-pad-top"
+             style="height: 100vh; margin-bottom: 58vh">
       <google-map-background></google-map-background>
       <div class="flex flex-center flex-justify-center">
         <div class="flex flex-basis-half space-top text-center">
@@ -62,136 +63,136 @@ import TestimonialMixin from '~/core/mixins/TestimonialMixin'
 import HomeMixin from '~/core/mixins/HomeMixin'
 
 export default {
-    components: {
-      Layout,
-      // Inject components
-      Header,
-      Blog,
-      Contact,
-      Footer,
-      // Inject generic component layouts
-      VideoHeroLayout01Col,
-      HeroLayout01Col,
-      HeroLayout02Col02,
-      SectionBlockLayout02Col01,
-      SectionBlockLayout02Col02,
-      ContentBlockLayout,
-      TestimonialBlockLayout,
-      TestimonialHeroLayout,
-      // Inject SVG animations
-      AppFactory,
-      InteractiveGuitar,
-      GoogleMapBackground,
-      GoogleMapCutout,
-      PartyLights,
-      MatrixBg,
-      // Import static HTML blocks
-      ProcessBlock,
-      // Inject animated text effects
-      TypewriterTextEffect,
-      ShrinkWordsOneByOneTextEffect,
-      RotateWordsTextEffect,
-      SlideUpTextEffect,
-      FadeInTextEffect,
-      // Inject animated content effects
-      SimpleEffect
-    },
-    mixins: [
-      HomeMixin,
-      TestimonialMixin,
-      FlipCardsMixin
-    ],
-    data() {
-      return {
-        formData: {},
-        repaint: Math.random(),
-        rockAndRoll: false,
-        textEffects: {
-          typewriter: TypewriterTextEffect,
-          shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
-          rotateWords: RotateWordsTextEffect,
-          slideUp: SlideUpTextEffect,
-          fadeIn: FadeInTextEffect
-        },
-        contentEffects: {
-          simple: SimpleEffect
-        }
-      };
-    },
-    computed: {
-      homeContent() {
-        return HomeData;
+  components: {
+    Layout,
+    // Inject components
+    Header,
+    Blog,
+    Contact,
+    Footer,
+    // Inject generic component layouts
+    VideoHeroLayout01Col,
+    HeroLayout01Col,
+    HeroLayout02Col02,
+    SectionBlockLayout02Col01,
+    SectionBlockLayout02Col02,
+    ContentBlockLayout,
+    TestimonialBlockLayout,
+    TestimonialHeroLayout,
+    // Inject SVG animations
+    AppFactory,
+    InteractiveGuitar,
+    GoogleMapBackground,
+    GoogleMapCutout,
+    PartyLights,
+    MatrixBg,
+    // Import static HTML blocks
+    ProcessBlock,
+    // Inject animated text effects
+    TypewriterTextEffect,
+    ShrinkWordsOneByOneTextEffect,
+    RotateWordsTextEffect,
+    SlideUpTextEffect,
+    FadeInTextEffect,
+    // Inject animated content effects
+    SimpleEffect
+  },
+  mixins: [
+    HomeMixin,
+    TestimonialMixin,
+    FlipCardsMixin
+  ],
+  data() {
+    return {
+      formData: {},
+      repaint: Math.random(),
+      rockAndRoll: false,
+      textEffects: {
+        typewriter: TypewriterTextEffect,
+        shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
+        rotateWords: RotateWordsTextEffect,
+        slideUp: SlideUpTextEffect,
+        fadeIn: FadeInTextEffect
       },
-      heroContent() {
-        return HeroData;
-      },
-      generalContent() {
-        return GeneralData;
-      },
-      homepageHero() {
-        let items = this.heroContent.items.filter(item => {
-          return item.id === 'homepage-hero';
-        });
-
-        if (items instanceof Array && items.length > 0) {
-          return items[0];
-        }
-
-        return null
-      },
-      projectsSection() {
-        let items = this.heroContent.items.filter(item => {
-          return item.id === 'projects-hero';
-        });
-
-        return items instanceof Array && items.length > 0 ? items[0] : null
-      },
-    },
-    methods: {
-      isLoaded() {
-        // let isLoaded = false;
-
-        return sessionStorage.getItem('isLoaded') ? parseInt(sessionStorage.getItem('isLoaded')) === 1 : false;
-      },
-      getProcessStep(idx) {
-        let items = this.homeContent.processSteps;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
+      contentEffects: {
+        simple: SimpleEffect
       }
-    },
-    mounted() {
-      /* TODO: This belongs to one of the SVG components, move it out */
-      /*const svgPath = document.querySelectorAll('.path');
-
-      const svgText = anime({
-        targets: svgPath,
-        loop: true,
-        direction: 'alternate',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutSine',
-        duration: 700,
-        delay: (el, i) => {
-          return i * 500
-        }
-      });*/
-
-      if (window) {
-        window.addEventListener('resize', () => {
-          this.repaint = Math.random();
-        });
-      }
-
-      if (typeof window !== 'undefined') {
-        this.$refs.forestScene.play();
-      }
-    },
-    beforeUnmount() {
-      console.log('remove wrapTitleText resize listener');
-      window.removeEventListener('resize', this.rewrapTitleText);
     }
+  },
+  computed: {
+    homeContent() {
+      return HomeData
+    },
+    heroContent() {
+      return HeroData
+    },
+    generalContent() {
+      return GeneralData
+    },
+    homepageHero() {
+      let items = this.heroContent.items.filter(item => {
+        return item.id === 'homepage-hero'
+      })
+
+      if (items instanceof Array && items.length > 0) {
+        return items[0]
+      }
+
+      return null
+    },
+    projectsSection() {
+      let items = this.heroContent.items.filter(item => {
+        return item.id === 'projects-hero'
+      })
+
+      return items instanceof Array && items.length > 0 ? items[0] : null
+    },
+  },
+  methods: {
+    isLoaded() {
+      // let isLoaded = false;
+
+      return sessionStorage.getItem('isLoaded') ? parseInt(sessionStorage.getItem('isLoaded')) === 1 : false
+    },
+    getProcessStep(idx) {
+      let items = this.homeContent.processSteps
+
+      if (items instanceof Array && items.length > idx) {
+        return items[idx]
+      }
+
+      return null
+    }
+  },
+  mounted() {
+    /* TODO: This belongs to one of the SVG components, move it out */
+    /*const svgPath = document.querySelectorAll('.path');
+
+    const svgText = anime({
+      targets: svgPath,
+      loop: true,
+      direction: 'alternate',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInOutSine',
+      duration: 700,
+      delay: (el, i) => {
+        return i * 500
+      }
+    });*/
+
+    if (window) {
+      window.addEventListener('resize', () => {
+        this.repaint = Math.random()
+      })
+    }
+
+    if (typeof window !== 'undefined') {
+      this.$refs.forestScene.play()
+    }
+  },
+  beforeUnmount() {
+    console.log('remove wrapTitleText resize listener')
+    window.removeEventListener('resize', this.rewrapTitleText)
   }
+}
 </script>

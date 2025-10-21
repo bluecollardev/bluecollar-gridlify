@@ -1,22 +1,23 @@
 <template>
   <Layout :key="repaint">
     <hero-layout01-col
-      bgColor="bg-evening-blue"
-      :title="$t('company.heroTitle')"
-      subtitle=""
-      description=""
-      imageClass="home-page-banner-image"
-      image=""
-      :flipX="true"
-      :angle="true"
-      slotPos="top"
-      className="hero-first sm-pad-top pad-bottom-2x text-shadow"
+        bgColor="bg-evening-blue"
+        :title="$t('company.heroTitle')"
+        subtitle=""
+        description=""
+        imageClass="home-page-banner-image"
+        image=""
+        :flipX="true"
+        :angle="true"
+        slotPos="top"
+        className="hero-first sm-pad-top pad-bottom-2x text-shadow"
     >
       <template v-slot:bg>
         <div class="jungle-bg-container xs-hide" style="align-self: flex-start">
           <jungle class="jungle-bg"></jungle>
           <div style="position: fixed; bottom: 15vh; width: 100%;">
-            <img ref="combatRadio" @click="viewDetail('CONSULTANTS')" class="combat-radio xs-hide sm-hide" src="/images/walkie-talkie.svg" />
+            <img ref="combatRadio" @click="viewDetail('CONSULTANTS')" class="combat-radio xs-hide sm-hide"
+                 src="/images/walkie-talkie.svg"/>
           </div>
         </div>
       </template>
@@ -35,12 +36,15 @@
       </template>-->
 
       <template>
-        <div class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top" style="position: relative; z-index: 10;">
+        <div
+            class="hero-first-content flex xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center flex-center pad-top"
+            style="position: relative; z-index: 10;">
           <div>
             <p class="text-center">{{ $t('company.intro1') }}</p>
             <p class="text-center">{{ $t('company.intro2') }}</p>
             <div class="text-center">
-              <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3" style="cursor: pointer;">{{ $t('company.meetConsultants') }}</a>
+              <a @click="viewDetail('CONSULTANTS')" class="action-link transparent space-top g-pstyle3"
+                 style="cursor: pointer;">{{ $t('company.meetConsultants') }}</a>
             </div>
           </div>
         </div>
@@ -119,191 +123,191 @@ import TestimonialMixin from '~/core/mixins/TestimonialMixin'
 import HomeMixin from '~/core/mixins/HomeMixin'
 
 export default {
-    components: {
-      Layout,
-      // Inject components
-      Header,
-      Blog,
-      Contact,
-      Footer,
-      // Inject generic component layouts
-      Services,
-      VideoHeroLayout01Col,
-      HeroLayout01Col,
-      HeroLayout02Col02,
-      SectionBlockLayout02Col01,
-      SectionBlockLayout02Col02,
-      ContentBlockLayout,
-      TestimonialBlockLayout,
-      TestimonialHeroLayout,
-      // Inject SVG animations
-      AppFactory,
-      InteractiveGuitar,
-      GoogleMapBackground,
-      GoogleMapCutout,
-      PartyLights,
-      MatrixBg,
-      Jungle,
-      // Inject scenes
-      ForestScene,
-      ShootToThrillScene,
-      CommandoSkullScene,
-      // Import static HTML blocks
-      ProcessBlock,
-      ContentDetailModal,
-      TeamBlock,
-      // Inject animated text effects
-      TypewriterTextEffect,
-      ShrinkWordsOneByOneTextEffect,
-      RotateWordsTextEffect,
-      SlideUpTextEffect,
-      FadeInTextEffect,
-      // Inject animated content effects
-      SimpleEffect
-    },
-    mixins: [
-      HomeMixin,
-      TestimonialMixin,
-      FlipCardsMixin
-    ],
-    data() {
-      return {
-        formData: {},
-        repaint: Math.random(),
-        rockAndRoll: false,
-        activeDetail: null,
-        textEffects: {
-          typewriter: TypewriterTextEffect,
-          shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
-          rotateWords: RotateWordsTextEffect,
-          slideUp: SlideUpTextEffect,
-          fadeIn: FadeInTextEffect
-        },
-        contentEffects: {
-          simple: SimpleEffect
-        }
-      };
-    },
-    computed: {
-      homeContent() {
-        return HomeData;
+  components: {
+    Layout,
+    // Inject components
+    Header,
+    Blog,
+    Contact,
+    Footer,
+    // Inject generic component layouts
+    Services,
+    VideoHeroLayout01Col,
+    HeroLayout01Col,
+    HeroLayout02Col02,
+    SectionBlockLayout02Col01,
+    SectionBlockLayout02Col02,
+    ContentBlockLayout,
+    TestimonialBlockLayout,
+    TestimonialHeroLayout,
+    // Inject SVG animations
+    AppFactory,
+    InteractiveGuitar,
+    GoogleMapBackground,
+    GoogleMapCutout,
+    PartyLights,
+    MatrixBg,
+    Jungle,
+    // Inject scenes
+    ForestScene,
+    ShootToThrillScene,
+    CommandoSkullScene,
+    // Import static HTML blocks
+    ProcessBlock,
+    ContentDetailModal,
+    TeamBlock,
+    // Inject animated text effects
+    TypewriterTextEffect,
+    ShrinkWordsOneByOneTextEffect,
+    RotateWordsTextEffect,
+    SlideUpTextEffect,
+    FadeInTextEffect,
+    // Inject animated content effects
+    SimpleEffect
+  },
+  mixins: [
+    HomeMixin,
+    TestimonialMixin,
+    FlipCardsMixin
+  ],
+  data() {
+    return {
+      formData: {},
+      repaint: Math.random(),
+      rockAndRoll: false,
+      activeDetail: null,
+      textEffects: {
+        typewriter: TypewriterTextEffect,
+        shrinkWordsOneByOne: ShrinkWordsOneByOneTextEffect,
+        rotateWords: RotateWordsTextEffect,
+        slideUp: SlideUpTextEffect,
+        fadeIn: FadeInTextEffect
       },
-      heroContent() {
-        return HeroData;
-      },
-      generalContent() {
-        return GeneralData;
-      },
-      homepageHero() {
-        let items = this.heroContent.items.filter(item => {
-          return item.id === 'homepage-hero';
-        });
-
-        if (items instanceof Array && items.length > 0) {
-          return items[0];
-        }
-
-        return null
-      },
-      servicesHero() {
-        let items = this.heroContent.items.filter(item => {
-          return item.id === 'services-hero';
-        });
-
-        if (items instanceof Array && items.length > 0) {
-          return items[0];
-        }
-
-        return null
-      },
-      projectsSection() {
-        let items = this.heroContent.items.filter(item => {
-          return item.id === 'projects-hero';
-        });
-
-        return items instanceof Array && items.length > 0 ? items[0] : null
-      },
-    },
-    methods: {
-      startRockin() {
-        this.rockAndRoll = true;
-      },
-      stopRockin() {
-        this.rockAndRoll = false;
-      },
-      isLoaded() {
-        // let isLoaded = false;
-
-        return sessionStorage.getItem('isLoaded') ? parseInt(sessionStorage.getItem('isLoaded')) === 1 : false;
-      },
-      getProcessStep(idx) {
-        let items = this.homeContent.processSteps;
-
-        if (items instanceof Array && items.length > idx) {
-          return items[idx];
-        }
-
-        return null
-      },
-      viewDetail(activeDetail) {
-        if (typeof window !== 'undefined') {
-          console.log('viewDetail called with:', activeDetail);
-          console.log('contentDetail ref:', this.$refs.contentDetail);
-          this.activeDetail = activeDetail;
-          if (this.$refs.contentDetail) {
-            this.$refs.contentDetail.viewDetail(activeDetail, () => {
-              if (this.$refs.shootToThrill) {
-                this.$refs.shootToThrill.fireGuns();
-              }
-            });
-          } else {
-            console.error('contentDetail ref not found!');
-          }
-        }
+      contentEffects: {
+        simple: SimpleEffect
       }
-    },
-    mounted() {
-      /* TODO: This belongs to one of the SVG components, move it out */
-      /*const svgPath = document.querySelectorAll('.path');
-
-      const svgText = anime({
-        targets: svgPath,
-        loop: true,
-        direction: 'alternate',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutSine',
-        duration: 700,
-        delay: (el, i) => {
-          return i * 500
-        }
-      });*/
-
-      if (window) {
-        window.addEventListener('resize', () => {
-          this.repaint = Math.random();
-        });
-      }
-    },
-    beforeUnmount() {
-      console.log('remove wrapTitleText resize listener');
-      window.removeEventListener('resize', this.rewrapTitleText);
     }
+  },
+  computed: {
+    homeContent() {
+      return HomeData
+    },
+    heroContent() {
+      return HeroData
+    },
+    generalContent() {
+      return GeneralData
+    },
+    homepageHero() {
+      let items = this.heroContent.items.filter(item => {
+        return item.id === 'homepage-hero'
+      })
+
+      if (items instanceof Array && items.length > 0) {
+        return items[0]
+      }
+
+      return null
+    },
+    servicesHero() {
+      let items = this.heroContent.items.filter(item => {
+        return item.id === 'services-hero'
+      })
+
+      if (items instanceof Array && items.length > 0) {
+        return items[0]
+      }
+
+      return null
+    },
+    projectsSection() {
+      let items = this.heroContent.items.filter(item => {
+        return item.id === 'projects-hero'
+      })
+
+      return items instanceof Array && items.length > 0 ? items[0] : null
+    },
+  },
+  methods: {
+    startRockin() {
+      this.rockAndRoll = true
+    },
+    stopRockin() {
+      this.rockAndRoll = false
+    },
+    isLoaded() {
+      // let isLoaded = false;
+
+      return sessionStorage.getItem('isLoaded') ? parseInt(sessionStorage.getItem('isLoaded')) === 1 : false
+    },
+    getProcessStep(idx) {
+      let items = this.homeContent.processSteps
+
+      if (items instanceof Array && items.length > idx) {
+        return items[idx]
+      }
+
+      return null
+    },
+    viewDetail(activeDetail) {
+      if (typeof window !== 'undefined') {
+        console.log('viewDetail called with:', activeDetail)
+        console.log('contentDetail ref:', this.$refs.contentDetail)
+        this.activeDetail = activeDetail
+        if (this.$refs.contentDetail) {
+          this.$refs.contentDetail.viewDetail(activeDetail, () => {
+            if (this.$refs.shootToThrill) {
+              this.$refs.shootToThrill.fireGuns()
+            }
+          })
+        } else {
+          console.error('contentDetail ref not found!')
+        }
+      }
+    }
+  },
+  mounted() {
+    /* TODO: This belongs to one of the SVG components, move it out */
+    /*const svgPath = document.querySelectorAll('.path');
+
+    const svgText = anime({
+      targets: svgPath,
+      loop: true,
+      direction: 'alternate',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInOutSine',
+      duration: 700,
+      delay: (el, i) => {
+        return i * 500
+      }
+    });*/
+
+    if (window) {
+      window.addEventListener('resize', () => {
+        this.repaint = Math.random()
+      })
+    }
+  },
+  beforeUnmount() {
+    console.log('remove wrapTitleText resize listener')
+    window.removeEventListener('resize', this.rewrapTitleText)
   }
+}
 </script>
 
 <style lang="scss" scoped>
-  @media screen and (max-width: 64em) {
-    .hero-first {
-      display: flex;
+@media screen and (max-width: 64em) {
+  .hero-first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hero-section-content {
       align-items: center;
       justify-content: center;
-
-      .hero-section-content {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        margin-top: -20rem;
-      }
+      display: flex;
+      margin-top: -20rem;
     }
   }
+}
 </style>

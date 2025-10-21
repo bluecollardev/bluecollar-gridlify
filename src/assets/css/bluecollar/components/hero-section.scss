@@ -24,7 +24,7 @@ section.hero-section {
 
 .text-shadow * {
   &:not(input):not(select):not(checkbox):not(label):not(textarea) {
-    text-shadow: 1px 0 5px rgba(0,0,0,.666);
+    text-shadow: 1px 0 5px rgba(0, 0, 0, .666);
   }
 }
 

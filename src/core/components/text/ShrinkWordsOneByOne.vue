@@ -1,6 +1,6 @@
 <template>
   <!--<text-wrapper :tag="this.tag" :text="this.text">-->
-    <span ref="textWrapper" class="text-wrapper">
+  <span ref="textWrapper" class="text-wrapper">
       <span class="words">{{ this.text }}</span>
     </span>
   <!--</text-wrapper>-->
@@ -12,51 +12,51 @@ import anime from 'animejs'
 import * as DOMTextEffectUtils from '~/core/utils/DOMTextEffectUtils'
 //import TextWrapper from './TextWrapper.vue'
 
-  export default {
-    components: {
-      //TextWrapper,
+export default {
+  components: {
+    //TextWrapper,
+  },
+  props: {
+    tag: String,
+    text: String,
+    /**
+     * CSS selector for the text
+     */
+    textSelector: {
+      type: String,
+      default: '.title'
     },
-    props: {
-      tag: String,
-      text: String,
-      /**
-       * CSS selector for the text
-       */
-      textSelector: {
-        type: String,
-        default: '.title'
-      },
-      /**
-       * CSS selector for the letters container
-       */
-      wordsSelector: {
-        type: String,
-        default: '.title .words'
-      },
-      /**
-       * CSS selector for individual letters
-       */
-      wordSelector: {
-        type: String,
-        default: '.title .word',
-      },
-      loop: {
-        type: Boolean,
-        default: false
-      }
+    /**
+     * CSS selector for the letters container
+     */
+    wordsSelector: {
+      type: String,
+      default: '.title .words'
     },
-    mounted() {
-      if (typeof window !== 'undefined' && this.$refs.textWrapper) {
-        const wordsTarget = this.$refs.textWrapper.querySelector(this.wordsSelector);
+    /**
+     * CSS selector for individual letters
+     */
+    wordSelector: {
+      type: String,
+      default: '.title .word',
+    },
+    loop: {
+      type: Boolean,
+      default: false
+    }
+  },
+  mounted() {
+    if (typeof window !== 'undefined' && this.$refs.textWrapper) {
+      const wordsTarget = this.$refs.textWrapper.querySelector(this.wordsSelector)
 
-        // Wrap every letter in a span
-        wordsTarget.outerHTML = DOMTextEffectUtils.wrapWords(wordsTarget);
+      // Wrap every letter in a span
+      wordsTarget.outerHTML = DOMTextEffectUtils.wrapWords(wordsTarget)
 
-        const wordTargets = this.$refs.textWrapper.querySelectorAll(this.wordSelector);
+      const wordTargets = this.$refs.textWrapper.querySelectorAll(this.wordSelector)
 
-        let timeline = anime.timeline({loop: this.loop});
+      let timeline = anime.timeline({loop: this.loop})
 
-        timeline
+      timeline
           .add({
             targets: wordsTarget,
             opacity: 0,
@@ -76,23 +76,23 @@ import * as DOMTextEffectUtils from '~/core/utils/DOMTextEffectUtils'
             duration: 1000,
             easing: 'easeOutExpo',
             delay: 5000
-          });
-      }
+          })
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
-  /* TODO: This is ripped clean it up */
-  .title {
-    font-weight: 900;
-  }
+/* TODO: This is ripped clean it up */
+.title {
+  font-weight: 900;
+}
 
-  .title .text-wrapper {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.1em;
-    padding-right: 0.05em;
-    padding-bottom: 0.15em;
-  }
+.title .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
 </style>

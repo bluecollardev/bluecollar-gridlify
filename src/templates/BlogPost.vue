@@ -29,28 +29,28 @@ import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
 
 export default {
-    components: {
-      Layout,
-      Header,
-      Footer
-    },
-    data() {
-      return {
-        post: null
-      }
-    },
-    mounted() {
-      const slug = this.$route.params.slug
-      this.post = getBlogPostBySlug(slug)
+  components: {
+    Layout,
+    Header,
+    Footer
+  },
+  data() {
+    return {
+      post: null
+    }
+  },
+  mounted() {
+    const slug = this.$route.params.slug
+    this.post = getBlogPostBySlug(slug)
 
-      if (this.post) {
-        document.title = this.post.title
-      }
-    },
-    watch: {
-      '$route.params.slug'(newSlug) {
-        this.post = getBlogPostBySlug(newSlug)
-      }
+    if (this.post) {
+      document.title = this.post.title
+    }
+  },
+  watch: {
+    '$route.params.slug'(newSlug) {
+      this.post = getBlogPostBySlug(newSlug)
     }
   }
+}
 </script>

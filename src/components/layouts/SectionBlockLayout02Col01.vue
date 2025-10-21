@@ -1,11 +1,15 @@
 <template>
-  <section :class="`sm-flex pad-top xs-hide ${this.bgColor ? this.bgColor : 'bg-light-grey' } ${this.flipX ? 'flip-x' : 'no-flip' }`">
+  <section
+      :class="`sm-flex pad-top xs-hide ${this.bgColor ? this.bgColor : 'bg-light-grey' } ${this.flipX ? 'flip-x' : 'no-flip' }`">
     <!-- Position relatively, or absolute positioning of the caption will fail -->
     <div :class="`relative flex flex-justify-center flex-basis-half`">
-      <img class="lozad banner-image" v-bind:src="this.image" alt="" />
-      <div v-if="(typeof this.caption === 'string' && this.caption.length > 0) || (typeof this.subCaption === 'string' && this.subCaption.length > 0)"  class="figure-caption bg-bc-blue g-how-does-it-work">
+      <img class="lozad banner-image" v-bind:src="this.image" alt=""/>
+      <div
+          v-if="(typeof this.caption === 'string' && this.caption.length > 0) || (typeof this.subCaption === 'string' && this.subCaption.length > 0)"
+          class="figure-caption bg-bc-blue g-how-does-it-work">
         <p v-if="(typeof this.caption === 'string' && this.caption.length > 0)" class="g-pstyle4">{{ this.caption }}</p>
-        <p v-if="(typeof this.subCaption === 'string' && this.subCaption.length > 0)" class="g-pstyle5">{{ this.subCaption }}</p>
+        <p v-if="(typeof this.subCaption === 'string' && this.subCaption.length > 0)" class="g-pstyle5">
+          {{ this.subCaption }}</p>
       </div>
     </div>
 
@@ -85,11 +89,11 @@ export default {
   },
   computed: {
     Home() {
-      return Home;
+      return Home
     },
     compiledDescription() {
-      return marked(this.description);
+      return marked(this.description)
     }
   }
-};
+}
 </script>

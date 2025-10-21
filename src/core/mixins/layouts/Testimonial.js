@@ -51,7 +51,7 @@ export default {
   },
   computed: {
     classNameString() {
-      return (typeof this.className === 'string' && this.className.length > 0) ? `${this.className}` : '';
+      return (typeof this.className === 'string' && this.className.length > 0) ? `${this.className}` : ''
     }
   },
   methods: {
@@ -73,26 +73,26 @@ export default {
       if (going === this.$waypointMap.GOING_IN) {
         //console.log('testimonial waypoint going in!');
         if (typeof this.$refs.testimonialAnimationContainer !== 'undefined') {
-          this.$refs.testimonialAnimationContainer.timeline.play();
+          this.$refs.testimonialAnimationContainer.timeline.play()
         }
 
         if (typeof this.$refs.reviewedByAnimationContainer !== 'undefined') {
-          this.$refs.reviewedByAnimationContainer.timeline.play();
+          this.$refs.reviewedByAnimationContainer.timeline.play()
         }
       }
 
       if (going === this.$waypointMap.GOING_OUT) {
         //console.log('testimonial waypoint going out!');
         if (typeof this.$refs.testimonialAnimationContainer !== 'undefined') {
-          this.$refs.testimonialAnimationContainer.timeline.seek(0);
-          this.$refs.reviewedByAnimationContainer.timeline.pause();
+          this.$refs.testimonialAnimationContainer.timeline.seek(0)
+          this.$refs.reviewedByAnimationContainer.timeline.pause()
         }
 
         if (typeof this.$refs.reviewedByAnimationContainer !== 'undefined') {
-          this.$refs.reviewedByAnimationContainer.timeline.seek(0);
-          this.$refs.reviewedByAnimationContainer.timeline.pause();
+          this.$refs.reviewedByAnimationContainer.timeline.seek(0)
+          this.$refs.reviewedByAnimationContainer.timeline.pause()
         }
       }
     }
   }
-};
+}

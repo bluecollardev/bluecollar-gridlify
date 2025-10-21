@@ -26,20 +26,20 @@
           }"
         />-->
         <content-block-layout
-          className="content-block pad-top-2x pad-bottom-2x ml-auto mr-auto"
-          v-if="content[0]"
-          image="/images/icons/apps-02.svg"
-          :title="content[0].title"
-          :description="content[0].description"
-          :link="content[0].link"
-          :linkText="content[0].linkText"
+            className="content-block pad-top-2x pad-bottom-2x ml-auto mr-auto"
+            v-if="content[0]"
+            image="/images/icons/apps-02.svg"
+            :title="content[0].title"
+            :description="content[0].description"
+            :link="content[0].link"
+            :linkText="content[0].linkText"
         />
       </template>
 
       <template v-slot:slot2Front>
         <div
-          v-if="testimonials[1]"
-          class="flex flex-column flex-center flex-basis-third">
+            v-if="testimonials[1]"
+            class="flex flex-column flex-center flex-basis-third">
           <!--<testimonial-block-layout
             className="sm-space-top-half sm-space-bottom-half"
             :testimonial="testimonials[1].testimonial"
@@ -65,12 +65,12 @@
             }"
           />-->
           <testimonial-block-layout
-            className="sm-space-top-half sm-space-bottom-half"
-            :testimonial="testimonials[1].testimonial"
-            :reviewedBy="testimonials[1].reviewedBy"
-            :position="testimonials[1].position"
-            :organization="testimonials[1].organization"
-            :image="testimonials[1].image"
+              className="sm-space-top-half sm-space-bottom-half"
+              :testimonial="testimonials[1].testimonial"
+              :reviewedBy="testimonials[1].reviewedBy"
+              :position="testimonials[1].position"
+              :organization="testimonials[1].organization"
+              :image="testimonials[1].image"
           />
         </div>
       </template>
@@ -98,20 +98,20 @@
           }"
         />-->
         <content-block-layout
-          className="content-block pad-top-2x pad-bottom-2x ml-auto mr-auto pad-bottom"
-          v-if="content[2]"
-          image="/images/icons/websites.svg"
-          :title="content[2].title"
-          :description="content[2].description"
-          :link="content[2].link"
-          :linkText="content[2].linkText"
+            className="content-block pad-top-2x pad-bottom-2x ml-auto mr-auto pad-bottom"
+            v-if="content[2]"
+            image="/images/icons/websites.svg"
+            :title="content[2].title"
+            :description="content[2].description"
+            :link="content[2].link"
+            :linkText="content[2].linkText"
         />
       </template>
 
       <template v-slot:slot4Front>
         <div
-          v-if="testimonials[0]"
-          class="sm-flex flex-column flex-center flex-basis-third md-pad-top">
+            v-if="testimonials[0]"
+            class="sm-flex flex-column flex-center flex-basis-third md-pad-top">
           <!--<testimonial-block-layout
             className="sm-space-top-half sm-space-bottom-half"
             :testimonial="testimonials[0].testimonial"
@@ -137,12 +137,12 @@
             }"
           />-->
           <testimonial-block-layout
-            className="sm-space-top-half sm-space-bottom-half"
-            :testimonial="testimonials[0].testimonial"
-            :reviewedBy="testimonials[0].reviewedBy"
-            :position="testimonials[0].position"
-            :organization="testimonials[0].organization"
-            :image="testimonials[0].image"
+              className="sm-space-top-half sm-space-bottom-half"
+              :testimonial="testimonials[0].testimonial"
+              :reviewedBy="testimonials[0].reviewedBy"
+              :position="testimonials[0].position"
+              :organization="testimonials[0].organization"
+              :image="testimonials[0].image"
           />
         </div>
       </template>
@@ -170,20 +170,20 @@
           }"
         />-->
         <content-block-layout
-          className="content-block pad-top-2x pad-bottom-2x ml-auto mr-auto"
-          v-if="content[1]"
-          image="/images/icons/server.svg"
-          :title="content[1].title"
-          :description="content[1].description"
-          :link="content[1].link"
-          :linkText="content[1].linkText"
+            className="content-block pad-top-2x pad-bottom-2x ml-auto mr-auto"
+            v-if="content[1]"
+            image="/images/icons/server.svg"
+            :title="content[1].title"
+            :description="content[1].description"
+            :link="content[1].link"
+            :linkText="content[1].linkText"
         />
       </template>
 
       <template v-slot:slot6Front>
         <div
-          v-if="testimonials[2]"
-          class="sm-flex flex-column flex-center flex-basis-third md-pad-top">
+            v-if="testimonials[2]"
+            class="sm-flex flex-column flex-center flex-basis-third md-pad-top">
           <!--<testimonial-block-layout
             className="sm-space-top-half sm-space-bottom-half"
             :testimonial="testimonials[2].testimonial"
@@ -209,12 +209,12 @@
             }"
           />-->
           <testimonial-block-layout
-            className="sm-space-top-half sm-space-bottom-half"
-            :testimonial="testimonials[2].testimonial"
-            :reviewedBy="testimonials[2].reviewedBy"
-            :position="testimonials[2].position"
-            :organization="testimonials[2].organization"
-            :image="testimonials[2].image"
+              className="sm-space-top-half sm-space-bottom-half"
+              :testimonial="testimonials[2].testimonial"
+              :reviewedBy="testimonials[2].reviewedBy"
+              :position="testimonials[2].position"
+              :organization="testimonials[2].organization"
+              :image="testimonials[2].image"
           />
         </div>
       </template>
@@ -231,35 +231,35 @@ import TestimonialMixin from '~/core/mixins/TestimonialMixin'
 import MatrixBg from '~/components/svg/MatrixBg.vue'
 
 export default {
-    props: {
-      content: {
-        type: Array,
-        default: () => []
-      },
-      testimonials: {
-        type: Array,
-        default: () => []
-      }
+  props: {
+    content: {
+      type: Array,
+      default: () => []
     },
-    mixins: [
-      TestimonialMixin
-    ],
-    components: {
-      // Inject generic component layouts
-      AngleMosaicLayout,
-      ContentBlockLayout,
-      TestimonialBlockLayout,
-      MatrixBg
+    testimonials: {
+      type: Array,
+      default: () => []
     }
+  },
+  mixins: [
+    TestimonialMixin
+  ],
+  components: {
+    // Inject generic component layouts
+    AngleMosaicLayout,
+    ContentBlockLayout,
+    TestimonialBlockLayout,
+    MatrixBg
   }
+}
 </script>
 
 <style lang="scss">
-  @media screen and (max-width: 64em) {
-    #services {
-      .content-block {
-        margin-top: auto;
-      }
+@media screen and (max-width: 64em) {
+  #services {
+    .content-block {
+      margin-top: auto;
     }
   }
+}
 </style>

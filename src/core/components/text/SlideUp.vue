@@ -1,6 +1,6 @@
 <template>
   <!--<text-wrapper :tag="this.tag" :text="this.text">-->
-    <span ref="textWrapper" class="text-wrapper slide-up">
+  <span ref="textWrapper" class="text-wrapper slide-up">
       <span class="words">{{ this.text }}</span>
     </span>
   <!--</text-wrapper>-->
@@ -10,54 +10,54 @@
 import anime from 'animejs'
 //import TextWrapper from './TextWrapper.vue'
 
-  export default {
-    components: {
-      //TextWrapper,
+export default {
+  components: {
+    //TextWrapper,
+  },
+  props: {
+    tag: String,
+    text: String,
+    /**
+     * CSS selector for the text
+     */
+    textSelector: {
+      type: String,
+      default: '.title'
     },
-    props: {
-      tag: String,
-      text: String,
-      /**
-       * CSS selector for the text
-       */
-      textSelector: {
-        type: String,
-        default: '.title'
-      },
-      /**
-       * CSS selector for the letters container
-       */
-      wordsSelector: {
-        type: String,
-        default: '.title .words'
-      },
-      loop: {
-        type: Boolean,
-        default: false
+    /**
+     * CSS selector for the letters container
+     */
+    wordsSelector: {
+      type: String,
+      default: '.title .words'
+    },
+    loop: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      timeline: null
+    }
+  },
+  methods: {
+    setupAnimation() {
+      this.timeline = anime.timeline({loop: this.loop, autoplay: false})
+
+      const wordsTarget = this.$refs.textWrapper.querySelector(this.wordsSelector)
+
+      let settings = {
+        opacityIn: [0, 1],
+        opacityOut: [1, 0],
+        // TODO: Calculate initial y pos based on font size
+        translateY: [60, 0],
+        durationIn: 1000,
+        durationOut: 1000,
+        delay: 0
       }
-    },
-    data() {
-      return {
-        timeline: null
-      }
-    },
-    methods: {
-      setupAnimation() {
-        this.timeline = anime.timeline({ loop: this.loop, autoplay: false });
 
-        const wordsTarget = this.$refs.textWrapper.querySelector(this.wordsSelector);
-
-        let settings = {
-          opacityIn: [0, 1],
-          opacityOut: [1, 0],
-          // TODO: Calculate initial y pos based on font size
-          translateY: [60, 0],
-          durationIn: 1000,
-          durationOut: 1000,
-          delay: 0
-        };
-
-        this.timeline
+      this.timeline
           .add({
             targets: wordsTarget,
             opacity: 0,
@@ -72,38 +72,38 @@ import anime from 'animejs'
           .add({
             targets: wordsTarget,
             duration: 5000
-          });
+          })
 
-         if (this.loop) {
-           timeline
+      if (this.loop) {
+        timeline
             .add({
               targets: wordsTarget,
               opacity: settings.opacityOut,
               duration: settings.durationOut
             })
-         }
-      }
-    },
-    mounted() {
-      if (typeof window !== 'undefined') {
-        this.setupAnimation();
       }
     }
+  },
+  mounted() {
+    if (typeof window !== 'undefined') {
+      this.setupAnimation()
+    }
   }
+}
 </script>
 
 <style lang="scss">
-  .title {
-    font-weight: 900;
-    overflow: visible;
-  }
+.title {
+  font-weight: 900;
+  overflow: visible;
+}
 
-  .title .text-wrapper {
-    &.slide-up {
-      .words {
-        display: inline-block;
-        opacity: 0;
-      }
+.title .text-wrapper {
+  &.slide-up {
+    .words {
+      display: inline-block;
+      opacity: 0;
     }
   }
+}
 </style>
