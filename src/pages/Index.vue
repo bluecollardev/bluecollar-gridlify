@@ -14,6 +14,13 @@
     >
       <template v-slot:bg>
         <fishing-scene></fishing-scene>
+        <red-snapper
+          class="mobile-fish-index"
+          :scale="40"
+          :speed="8"
+          :jumpHeight="150"
+          :jumpDistance="350"
+        />
       </template>
 
       <template v-slot:title>
@@ -142,6 +149,7 @@
   import FishingScene from '~/components/scenes/FishingScene.vue';
   import ShootToThrillScene from '~/components/scenes/ShootToThrillScene.vue';
   import CommandoSkullScene from '~/components/scenes/CommandoSkullScene.vue';
+  import RedSnapper from '~/components/RedSnapper.vue';
 
   // Import animated text effects
   import TypewriterTextEffect from '~/core/components/text/Typewriter.vue';
@@ -185,6 +193,7 @@
       FishingScene,
       ShootToThrillScene,
       CommandoSkullScene,
+      RedSnapper,
       // Inject animated text effects
       TypewriterTextEffect,
       ShrinkWordsOneByOneTextEffect,
@@ -562,6 +571,22 @@
       > * {
         margin: 0 auto;
         width: 100%;
+      }
+    }
+  }
+
+  // Mobile fish on Index page - only show on phones
+  .mobile-fish-index {
+    display: none;
+
+    // Show on mobile phones only (max-width: 48em / 768px)
+    @media screen and (max-width: 48em) {
+      display: block !important;
+
+      // Override default positioning to start from bottom left
+      :deep(.red-snapper) {
+        left: -120px !important;
+        bottom: -80px !important;
       }
     }
   }
