@@ -189,6 +189,23 @@ export default {
       :deep(.circle-composite.testimonial-profile-circle) {
         display: block !important;
       }
+
+      :deep(.flex.flex-center) {
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        width: 100%;
+
+        .testimonial-profile-circle {
+          margin: 0 !important;
+          flex-shrink: 0;
+        }
+
+        > div {
+          flex: 1;
+        }
+      }
     }
   }
 
