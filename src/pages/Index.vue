@@ -17,35 +17,15 @@
       </template>
 
       <template v-slot:title>
-        <div v-if="!isServer" class="phrase-container">
-          <shrink-words-one-by-one-text-effect
-              v-show="currentPhraseIndex === 0"
-              tag="h2"
-              :text="$t('home.deliverResults1')"
-              class="title text-center pad-bottom"
-              :loop="false"
-              :active="currentPhraseIndex === 0"
-              @animationComplete="nextPhrase">
-          </shrink-words-one-by-one-text-effect>
-          <shrink-words-one-by-one-text-effect
-              v-show="currentPhraseIndex === 1"
-              tag="h2"
-              :text="$t('home.deliverResults2')"
-              class="title text-center pad-bottom"
-              :loop="false"
-              :active="currentPhraseIndex === 1"
-              @animationComplete="nextPhrase">
-          </shrink-words-one-by-one-text-effect>
-          <shrink-words-one-by-one-text-effect
-              v-show="currentPhraseIndex === 2"
-              tag="h2"
-              :text="$t('home.deliverResults3')"
-              class="title text-center pad-bottom"
-              :loop="false"
-              :active="currentPhraseIndex === 2"
-              @animationComplete="nextPhrase">
-          </shrink-words-one-by-one-text-effect>
-        </div>
+        <shrink-words-one-by-one-text-effect
+            v-if="!isServer"
+            tag="h2"
+            :text="currentPhraseText"
+            class="title text-center pad-bottom"
+            :loop="false"
+            :key="currentPhraseIndex"
+            @animationComplete="nextPhrase">
+        </shrink-words-one-by-one-text-effect>
       </template>
 
       <template>
@@ -232,6 +212,14 @@ export default {
       console.log('is server?')
       console.log(Vue.prototype.$isServer)
       return (typeof Vue.prototype.$isServer === 'boolean') ? Vue.prototype.$isServer : false
+    },
+    currentPhraseText() {
+      const phrases = [
+        this.$t('home.deliverResults1'),
+        this.$t('home.deliverResults2'),
+        this.$t('home.deliverResults3')
+      ]
+      return phrases[this.currentPhraseIndex]
     },
     heroContent() {
       return HeroData
@@ -492,19 +480,6 @@ export default {
 
   #contact {
     z-index: 1;
-  }
-}
-
-.phrase-container {
-  position: relative;
-  width: 100%;
-  min-height: 4em;
-
-  .shrink-words-one-by-one-text-effect {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
   }
 }
 
