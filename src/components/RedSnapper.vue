@@ -6,9 +6,55 @@
 export default {
   name: 'RedSnapper',
   props: {
+    // Animation speed (pixels per frame)
+    speed: {
+      type: Number,
+      default: 15
+    },
+    // Jump height (yVertex for parabolic path)
+    jumpHeight: {
+      type: Number,
+      default: 300
+    },
+    // Jump distance (xVertex for parabolic path)
+    jumpDistance: {
+      type: Number,
+      default: 700
+    },
+    // Minimum interval between jumps (milliseconds)
+    minJumpInterval: {
+      type: Number,
+      default: 5000
+    },
+    // Maximum interval between jumps (milliseconds)
+    maxJumpInterval: {
+      type: Number,
+      default: 13000
+    },
+    // Starting rotation angle
+    startRotation: {
+      type: Number,
+      default: -65
+    },
+    // Ending rotation angle
+    endRotation: {
+      type: Number,
+      default: 55
+    },
+    // Maximum X distance for rotation calculation
+    rotationMaxX: {
+      type: Number,
+      default: 1200
+    },
+    // Parabolic function for jump path
     parabolicFx: {
       type: Function,
       default: (x, vtx) => -0.001 * Math.pow(x - vtx.x, 2) + vtx.y
+    },
+    // Auto-start jumping on mount
+    autoStart: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -18,18 +64,14 @@ export default {
   },
   methods: {
     setFishJumpRotation(el, { x }) {
-      const xMax = 1200;
-      const startRotation = -65;
-      const completeRotation = 55;
-      const rotationDelta = completeRotation - startRotation;
+      const rotationDelta = this.endRotation - this.startRotation;
+      let xPct = x / this.rotationMaxX;
 
-      let xPct = x / xMax;
-
-      el.style.transform = `rotate(${ startRotation + (rotationDelta * xPct) }deg) scaleX(-1)`;
+      el.style.transform = `rotate(${ this.startRotation + (rotationDelta * xPct) }deg) scaleX(-1)`;
     },
     animateOnParabolicPath(el, fx, vtx, cb) {
       if (typeof window !== 'undefined') {
-        let x = 15;
+        let x = this.speed;
         let requestId = null;
 
         const updatePosition = () => {
@@ -44,7 +86,7 @@ export default {
           if (x > 800 + 800) {
             cancelAnimationFrame(requestId);
           } else {
-            x += 15;
+            x += this.speed;
             requestId = requestAnimationFrame(updatePosition);
           }
         };
@@ -53,8 +95,7 @@ export default {
       }
     },
     scheduleNextJump() {
-      // Random interval between 5 and 13 seconds
-      const randomDelay = Math.random() * (13000 - 5000) + 5000;
+      const randomDelay = Math.random() * (this.maxJumpInterval - this.minJumpInterval) + this.minJumpInterval;
       this.interval = setTimeout(() => {
         this.jump();
         this.scheduleNextJump();
@@ -64,27 +105,31 @@ export default {
       if (typeof window !== 'undefined') {
         const el = this.$refs.redSnapper;
 
-        const xVertex = 700;
-        const yVertex = 300;
-
         // requestAnimationFrame
         this.animateOnParabolicPath(el,
           this.parabolicFx,
-          { x: xVertex, y: yVertex },
+          { x: this.jumpDistance, y: this.jumpHeight },
           this.setFishJumpRotation
         );
+      }
+    },
+    start() {
+      this.scheduleNextJump();
+    },
+    stop() {
+      if (this.interval) {
+        clearTimeout(this.interval);
+        this.interval = null;
       }
     }
   },
   mounted() {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && this.autoStart) {
       this.scheduleNextJump();
     }
   },
   beforeUnmount() {
-    if (typeof window !== 'undefined') {
-      clearTimeout(this.interval);
-    }
+    this.stop();
   }
 }
 </script>
