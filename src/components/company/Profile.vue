@@ -305,6 +305,7 @@ export default {
 
 .field {
   margin-bottom: 0.5rem;
+  padding-left: 1rem;
 
   .label {
     display: inline-block;
