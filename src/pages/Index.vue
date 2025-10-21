@@ -422,6 +422,8 @@
     .hero-section-01-col.jungle-stream {
       background-image: url(/images/jungle-stream.webp) !important;
       background-position: center bottom !important; /* Center horizontally, align to bottom */
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
     }
   }
 
