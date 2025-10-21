@@ -43,6 +43,10 @@ export default {
       type: String,
       default: '',
     },
+    textColor: {
+      type: String,
+      default: '#33587a',
+    },
   },
   data() {
     return {
