@@ -542,14 +542,12 @@
   @media screen and (min-width: 84em) {
     .jungle-stream {
       background-position: -420px 0;
-      background-attachment: fixed;
     }
   }
 
   @media screen and (min-width: 130em) {
     .jungle-stream {
       background-position: 50% 50%;
-      background-attachment: fixed;
     }
   }
 
