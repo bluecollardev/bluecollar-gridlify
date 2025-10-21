@@ -17,6 +17,31 @@
   import 'svg.pathmorphing.js';
   import RedSnapper from '../RedSnapper.vue';
 
+  // Animation & Timing Constants
+  const CAST_ANIMATION_DURATION = 2500;
+  const RESET_CAST_DELAY = 3000;
+  const INITIAL_CAST_DELAY = 1500;
+  const CASTING_LINE_CURVE_DELAY = 333;
+  const CASTING_LINE_STRAIGHTEN_DELAY = 500;
+
+  // Canvas & Line Constants
+  const CANVAS_HEIGHT = 1200;
+  const LINE_END_Y = 1000;
+  const LINE_WIDTH = 1;
+  const REELING_SPEED = 2;
+  const MIN_LINE_LENGTH = 100;
+
+  // Casting Line Animation Constants
+  const CAST_CURVE_CONTROL_X_1 = 400;
+  const CAST_CURVE_CONTROL_X_2 = 500;
+  const CAST_CURVE_CONTROL_Y = 200;
+  const CAST_CURVE_END_Y = 700;
+  const CAST_HORIZONTAL_OFFSET = 500;
+
+  // Fish Positioning Constants
+  const FISH_VERTICAL_OFFSET = 145;
+  const FISH_HORIZONTAL_OFFSET = 369;
+
   export default {
     components: {
       RedSnapper
@@ -25,8 +50,7 @@
       return {
         isCasting: false,
         isOnHook: false,
-        resizeHandler: null,
-        fishCaughtOffset: 150 // Vertical offset for fish-caught position on line
+        resizeHandler: null
       }
     },
     methods: {
@@ -73,7 +97,7 @@
 
         document.querySelector('.fish-caught').style.display = 'none';
 
-        setTimeout(this.drawCastingLine, 2500); // Same time as css animation
+        setTimeout(this.drawCastingLine, CAST_ANIMATION_DURATION);
       },
       resetCast() {
         // Something is making this animationend trigger fire waaaay too fast...
@@ -90,7 +114,7 @@
           this.doFishCaught();
           this.drawReelingLine();
           //this.doFishJump();
-        }, 3000);
+        }, RESET_CAST_DELAY);
       },
       drawCastingLine() {
         const anchorCoords = this.getFishingRodAnchorCoords();
@@ -102,36 +126,36 @@
         //console.log(`start x: ${startX}, y: ${startY}`);
 
         const canvas = SVG('casting-line');
-        canvas.size(document.body.clientWidth, 1200);
+        canvas.size(document.body.clientWidth, CANVAS_HEIGHT);
 
-        const curveDef = `M ${startX} ${startY} C ${startX - 400},${startY} ${startX - 500},${startY + 200} ${startX - 500},700`;
+        const curveDef = `M ${startX} ${startY} C ${startX - CAST_CURVE_CONTROL_X_1},${startY} ${startX - CAST_CURVE_CONTROL_X_2},${startY + CAST_CURVE_CONTROL_Y} ${startX - CAST_HORIZONTAL_OFFSET},${CAST_CURVE_END_Y}`;
         //console.log('curve def ' + curveDef);
         const castingLine = canvas.path(curveDef)
-          .fill('none').stroke({ color: '#000', width: 1 });
+          .fill('none').stroke({ color: '#000', width: LINE_WIDTH });
 
         setTimeout(() => {
-          castingLine.animate().plot(`M ${startX} ${startY} L ${startX - 500} 1000`);
+          castingLine.animate().plot(`M ${startX} ${startY} L ${startX - CAST_HORIZONTAL_OFFSET} ${LINE_END_Y}`);
           setTimeout(() => {
-            castingLine.animate().plot(`M ${startX} ${startY} L ${startX} 1000`);
-          },500);
-        }, 333);
+            castingLine.animate().plot(`M ${startX} ${startY} L ${startX} ${LINE_END_Y}`);
+          }, CASTING_LINE_STRAIGHTEN_DELAY);
+        }, CASTING_LINE_CURVE_DELAY);
       },
       drawReelingLine() {
         document.querySelector('#reeling-line').style.display = 'block';
 
         const canvas = SVG('reeling-line');
-        canvas.size(1, 1000);
+        canvas.size(LINE_WIDTH, LINE_END_Y);
 
-        const reelingLine = canvas.path(`M 1 0 L 1 ${1000}`)
-          .fill('none').stroke({color: '#000', width: 1});
+        const reelingLine = canvas.path(`M 1 0 L 1 ${LINE_END_Y}`)
+          .fill('none').stroke({color: '#000', width: LINE_WIDTH});
 
         let requestId = null;
-        let endY = 1000;
+        let endY = LINE_END_Y;
 
         const updatePosition = () => {
           const coords = this.getFishingRodAnchorCoords();
 
-          endY = endY - 2;
+          endY = endY - REELING_SPEED;
 
           if (endY < coords.top) {
             cancelAnimationFrame(requestId);
@@ -141,16 +165,16 @@
             document.querySelector('#reeling-line').style.left = `${coords.left}px`;
 
             // Update line length
-            if (endY > coords.top + 100) {
+            if (endY > coords.top + MIN_LINE_LENGTH) {
               reelingLine.plot(`M 0 0 L 1 ${endY}`);
               //console.log(`line length: ${endY - coords.top}`);
-              document.querySelector('.fish-caught').style.top = `${endY + this.fishCaughtOffset}px`;
+              document.querySelector('.fish-caught').style.top = `${endY + FISH_VERTICAL_OFFSET}px`;
             }
 
             const fishX = coords.left;
             //console.log(`fish x: ${fishX}, y: ${endY}`);
-            // Adjust for transform-origin: top right (move 300px left from previous position)
-            document.querySelector('.fish-caught').style.left = `${fishX - 369}px`;
+            // Adjust for transform-origin: top right
+            document.querySelector('.fish-caught').style.left = `${fishX - FISH_HORIZONTAL_OFFSET}px`;
 
             requestId = requestAnimationFrame(updatePosition);
           }
@@ -192,7 +216,7 @@
     },
     mounted() {
       if (typeof window !== 'undefined') {
-        setTimeout(this.doCast, 1500);
+        setTimeout(this.doCast, INITIAL_CAST_DELAY);
 
         // Add resize listener to clear fish and reeling line
         this.resizeHandler = this.handleResize.bind(this);
