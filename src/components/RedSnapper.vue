@@ -78,7 +78,8 @@ export default {
       const slope = (maxHeight * Math.PI / maxDistance) * Math.cos(progress * Math.PI);
 
       // Convert slope to angle in degrees
-      const tangentAngle = Math.atan(slope) * (180 / Math.PI);
+      // Negate because SVG is flipped horizontally
+      const tangentAngle = -Math.atan(slope) * (180 / Math.PI);
 
       // Calculate wiggle offset using sine wave
       this.wiggleOffset += this.wiggleSpeed;
