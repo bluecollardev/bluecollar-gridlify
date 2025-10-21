@@ -27,10 +27,8 @@ export default {
 .detailed-content-panel {
   opacity: 1;
   width: 100vw;
-  height: 100vh;
-  position: absolute;
-  /*top: 54px;*/
-  /* Match header */
+  height: calc(100vh - 54px);
+  position: fixed;
   top: 100%;
   left: 0;
   z-index: 99999;
