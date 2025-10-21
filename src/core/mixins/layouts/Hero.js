@@ -1,4 +1,4 @@
-import marked from 'marked';
+import { marked } from 'marked'
 
 export default {
   props: {
@@ -61,7 +61,7 @@ export default {
   },
   computed: {
     compiledDescription() {
-      return marked(this.description);
+      return marked(this.description)
     }
   }
-};
+}

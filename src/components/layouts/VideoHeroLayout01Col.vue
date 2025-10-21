@@ -1,9 +1,10 @@
 <template>
   <section
-    ref="heroLayout"
-    :class="`homepage-hero hero-section text-shadow hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
+      ref="heroLayout"
+      :class="`homepage-hero hero-section text-shadow hero-section-01-col ${this.bgColor ? this.bgColor : 'bg-light-grey' } sm-flex flex-center flex-justify-center ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`"
   >
-    <div class="video-banner text-banner sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-full xl-flex-basis-two-thirds">
+    <div
+        class="video-banner text-banner sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-full xl-flex-basis-two-thirds">
       <video class="is-hidden--sm-down" preload="none" playsinline="" autoplay="" muted="" loop="" poster="">
         <source src="/video/bluecollar-main.mp4" type="video/mp4">
         <!--<source src="/video/bluecollar-main.webm" type="video/webm">
@@ -25,8 +26,8 @@
         <div class="hero-block">
           <div class="flex flex-column">
             <div
-              v-if="typeof this.title === 'string' && !this.$slots.title"
-              class="homepage-hero-title sm-space-bottom-half">
+                v-if="typeof this.title === 'string' && !this.$slots.title"
+                class="homepage-hero-title sm-space-bottom-half">
               <h1 class="title text-center mr-3 ml-3">
                 {{ this.title }}
               </h1>
@@ -37,15 +38,17 @@
             </div>
             <slot></slot>
             <div
-              v-if="typeof this.link === 'string' && this.link.length >0"
-              class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
+                v-if="typeof this.link === 'string' && this.link.length >0"
+                class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
             >
-              <a class="action-link transparent xs-space-top space-bottom g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
+              <a class="action-link transparent xs-space-top space-bottom g-pstyle3" v-bind:href="this.link"
+                 v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
             </div>
             <div
-              v-if="typeof this.link === 'string' && this.link.length >0"
-              class="homepage-hero-action action-link-block xs-hide text-center">
-              <a class="action-link transparent space-top g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
+                v-if="typeof this.link === 'string' && this.link.length >0"
+                class="homepage-hero-action action-link-block xs-hide text-center">
+              <a class="action-link transparent space-top g-pstyle3" v-bind:href="this.link"
+                 v-bind:aria-label="this.linkText">{{ this.linkText }}</a>
             </div>
           </div>
         </div>
@@ -58,8 +61,8 @@
 // vue-markdown is broken, babel deps issues...
 // import VueMarkdown from 'vue-markdown'
 // Use marked instead
-import marked from 'marked';
-import Home from '~/data/Home.yml';
+import { marked } from 'marked'
+import Home from '~/data/Home.yml'
 
 export default {
   //components: {
@@ -121,8 +124,8 @@ export default {
     },
   },
   mounted() {
-    let hero = this.$refs.heroLayout;
-    const speedMultiplier = 0.5;
+    let hero = this.$refs.heroLayout
+    const speedMultiplier = 0.5
 
     /*window.addEventListener('resize', function(event) {
     });*/
@@ -130,18 +133,18 @@ export default {
     //let lastScroll = 0;
     window.addEventListener('scroll', (() => {
       //if (Math.abs(lastScroll - window.scrollY) <= 5) return;
-      const propValue = `50% -${(window.scrollY * speedMultiplier)}px`;
-      hero.style.backgroundPosition = propValue;
-    }).bind(this));
+      const propValue = `50% -${(window.scrollY * speedMultiplier)}px`
+      hero.style.backgroundPosition = propValue
+    }).bind(this))
   },
   computed: {
     Home() {
-      return Home;
+      return Home
     },
     compiledDescription() {
-      return marked(this.description);
+      return marked(this.description)
     }
   }
-};
+}
 </script>
 

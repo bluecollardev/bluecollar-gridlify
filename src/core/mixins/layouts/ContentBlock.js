@@ -1,4 +1,4 @@
-import marked from 'marked';
+import { marked } from 'marked'
 
 export default {
   // TODO: Supply models via props??
@@ -56,10 +56,10 @@ export default {
   },
   computed: {
     classNameString() {
-      return (typeof this.className === 'string' && this.className.length > 0) ? this.className : '';
+      return (typeof this.className === 'string' && this.className.length > 0) ? this.className : ''
     },
     compiledDescription() {
-      return marked(this.description);
+      return marked(this.description)
     }
   },
   data() {
@@ -86,30 +86,30 @@ export default {
      *   console.log('waypoint going top!')
      * }
      */
-    onWaypoint({ going, direction }) {
+    onWaypoint({going, direction}) {
       if (going === this.$waypointMap.GOING_IN) {
         //console.log('contentblock waypoint going in!');
         if (typeof this.$refs.titleAnimationContainer !== 'undefined') {
-          this.$refs.titleAnimationContainer.timeline.play();
+          this.$refs.titleAnimationContainer.timeline.play()
         }
 
         if (typeof this.$refs.descriptionAnimationContainer !== 'undefined') {
-          this.$refs.descriptionAnimationContainer.timeline.play();
+          this.$refs.descriptionAnimationContainer.timeline.play()
         }
       }
 
       if (going === this.$waypointMap.GOING_OUT) {
         //console.log('contentblock waypoint going out!');
         if (typeof this.$refs.titleAnimationContainer !== 'undefined') {
-          this.$refs.titleAnimationContainer.timeline.seek(0);
-          this.$refs.titleAnimationContainer.timeline.pause();
+          this.$refs.titleAnimationContainer.timeline.seek(0)
+          this.$refs.titleAnimationContainer.timeline.pause()
         }
 
         if (typeof this.$refs.descriptionAnimationContainer !== 'undefined') {
-          this.$refs.descriptionAnimationContainer.timeline.seek(0);
-          this.$refs.descriptionAnimationContainer.timeline.pause();
+          this.$refs.descriptionAnimationContainer.timeline.seek(0)
+          this.$refs.descriptionAnimationContainer.timeline.pause()
         }
       }
     }
   }
-};
+}

@@ -7,7 +7,10 @@
             <p class="g-pstyle2">Need help with your digital marketing? We do the heavy lifting for you.</p>
           </div>
           <div class="g-help-with-digital-marketing">
-            <p>Need help posting your content to the right channels online? Our digital marketing team works with our devs to create relevant and highly targeted mobile and in-app experiences for your potential clients.  We save you time, optimize your return on marketing spend, and generate more qualified leads for your business!</p>
+            <p>Need help posting your content to the right channels online? Our digital marketing team works with our
+              devs to create relevant and highly targeted mobile and in-app experiences for your potential clients. We
+              save you time, optimize your return on marketing spend, and generate more qualified leads for your
+              business!</p>
           </div>
         </div>
       </div>
@@ -15,10 +18,11 @@
 
     <div class="sm-flex flex-column flex-center">
       <div class="bg-salmon content-block">
-        <img class="bg-white banner-image" src="/images/digital-marketing-testimonial-person.png" alt="" />
+        <img class="bg-white banner-image" src="/images/digital-marketing-testimonial-person.png" alt=""/>
         <div class="pad-all">
           <div class="space-bottom-half g-help-with-digital-marketing">
-            <p class="g-pstyle6">Blue Collar has been hugely beneficial to our business.  They handle all our online marketing &ndash; the results have been amazing!</p>
+            <p class="g-pstyle6">Blue Collar has been hugely beneficial to our business. They handle all our online
+              marketing &ndash; the results have been amazing!</p>
           </div>
           <div class="g-help-with-digital-marketing">
             <p class="g-pstyle7">Chet Williams</p>
@@ -36,7 +40,7 @@
  * a left column with the heading and text content,
  * and a right column with a testimonial.
  */
-import Home from '~/data/Home.yml';
+import Home from '~/data/Home.yml'
 
 export default {
   // TODO: Supply models via props??
@@ -80,8 +84,8 @@ export default {
   },
   computed: {
     Home() {
-      return Home;
+      return Home
     }
   }
-};
+}
 </script>

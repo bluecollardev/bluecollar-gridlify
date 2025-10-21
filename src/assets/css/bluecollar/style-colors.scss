@@ -16,7 +16,7 @@
 }
 
 /* Background Colors */
-.bg-white{
+.bg-white {
   background-color: #ffffff;
 }
 
@@ -46,6 +46,7 @@
 .bg-midnight-blue {
   background-color: #111822;
   color: #fff;
+
   &.semi-clear {
     background-color: rgba(17, 24, 34, 0.90);
   }
@@ -71,6 +72,6 @@
 }
 
 .bg-black {
-  background-color: rgb(22,22,22) !important;
+  background-color: rgb(22, 22, 22) !important;
   color: #ffffff;
 }

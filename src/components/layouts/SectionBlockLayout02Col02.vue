@@ -15,7 +15,7 @@
 
     <div class="sm-flex flex-column flex-center">
       <div class="bg-salmon content-block">
-        <img class="bg-white banner-image" v-bind:src="this.image" alt="" />
+        <img class="bg-white banner-image" v-bind:src="this.image" alt=""/>
         <div class="pad-all">
           <div class="space-bottom-half g-help-with-digital-marketing">
             <p class="g-pstyle6">{{ this.testimonial }}</p>
@@ -32,7 +32,7 @@
 
 <script>
 
-import Home from '~/data/Home.yml';
+import Home from '~/data/Home.yml'
 
 export default {
   // TODO: Supply models via props??
@@ -80,8 +80,8 @@ export default {
   },
   computed: {
     Home() {
-      return Home;
+      return Home
     }
   }
-};
+}
 </script>

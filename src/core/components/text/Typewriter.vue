@@ -1,6 +1,6 @@
 <template>
   <!--<text-wrapper :tag="this.tag" :text="this.text">-->
-    <span class="text-wrapper">
+  <span ref="textWrapper" class="text-wrapper">
       <span class="line blink">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
              y="0px" viewBox="0 0 100 125" xml:space="preserve">
@@ -16,66 +16,66 @@
 </template>
 
 <script>
-  import anime from 'animejs';
+import anime from 'animejs'
 
-  import * as DOMTextEffectUtils from '~/core/utils/DOMTextEffectUtils';
-  //import TextWrapper from './TextWrapper.vue'
+import * as DOMTextEffectUtils from '~/core/utils/DOMTextEffectUtils'
+//import TextWrapper from './TextWrapper.vue'
 
-  export default {
-    components: {
-      //TextWrapper,
+export default {
+  components: {
+    //TextWrapper,
+  },
+  props: {
+    tag: String,
+    text: String,
+    /**
+     * CSS selector for the text
+     */
+    textSelector: {
+      type: String,
+      default: '.title'
     },
-    props: {
-      tag: String,
-      text: String,
-      /**
-       * CSS selector for the text
-       */
-      textSelector: {
-        type: String,
-        default: '.title'
-      },
-      /**
-       * CSS selector for the letters container
-       */
-      lettersSelector: {
-        type: String,
-        default: '.title .letters'
-      },
-      /**
-       * CSS selector for individual letters
-       */
-      letterSelector: {
-        type: String,
-        default: '.title .letter',
-      },
-      /**
-       * CSS selector for the "line" cursor
-       */
-      lineSelector: String,
-      default: '.title .line'
+    /**
+     * CSS selector for the letters container
+     */
+    lettersSelector: {
+      type: String,
+      default: '.title .letters'
     },
-    mounted() {
-      if (typeof window !== 'undefined' && this.$el) {
-        const textTarget = this.$el.querySelector(this.textSelector);
+    /**
+     * CSS selector for individual letters
+     */
+    letterSelector: {
+      type: String,
+      default: '.title .letter',
+    },
+    /**
+     * CSS selector for the "line" cursor
+     */
+    lineSelector: String,
+    default: '.title .line'
+  },
+  mounted() {
+    if (typeof window !== 'undefined' && this.$refs.textWrapper) {
+      const textTarget = this.$refs.textWrapper.querySelector(this.textSelector)
 
-        const lineTarget = this.$el.querySelector(this.lineSelector);
-        const lettersTarget = this.$el.querySelector(this.lettersSelector);
+      const lineTarget = this.$refs.textWrapper.querySelector(this.lineSelector)
+      const lettersTarget = this.$refs.textWrapper.querySelector(this.lettersSelector)
 
-        // Wrap every letter in a span
-        lettersTarget.outerHTML = DOMTextEffectUtils.wrapLetters(lettersTarget);
+      // Wrap every letter in a span
+      lettersTarget.outerHTML = DOMTextEffectUtils.wrapLetters(lettersTarget)
 
-        const letterTargets = this.$el.querySelectorAll(this.letterSelector);
+      const letterTargets = this.$refs.textWrapper.querySelectorAll(this.letterSelector)
 
-        DOMTextEffectUtils.wrapLettersOnWordBoundary(lettersTarget, lettersTarget, letterTargets);
+      DOMTextEffectUtils.wrapLettersOnWordBoundary(lettersTarget, lettersTarget, letterTargets)
 
-        this.$nextTick(() => {
-          window.addEventListener('resize', DOMTextEffectUtils.rewrapLettersOnWordBoundary.bind(this, lettersTarget, lettersTarget, letterTargets));
-        });
+      this.$nextTick(() => {
+        window.addEventListener('resize', DOMTextEffectUtils.rewrapLettersOnWordBoundary.bind(this, lettersTarget, lettersTarget, letterTargets))
+      })
 
-        let timeline = anime.timeline({ loop: true });
+      let timeline = anime.timeline({loop: true})
 
-        timeline
+      timeline
           .add({
             targets: lineTarget,
             scaleY: [1, 1],
@@ -106,55 +106,55 @@
             easing: 'easeOutExpo',
             duration: 700,
             delay: 10000
-          });
-      }
+          })
     }
   }
+}
 </script>
 
 <style lang="scss">
-  /* TODO: This is ripped clean it up */
-  .title {
-    font-weight: 900;
-  }
+/* TODO: This is ripped clean it up */
+.title {
+  font-weight: 900;
+}
 
-  .title .text-wrapper {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.1em;
-    padding-right: 0.05em;
-    padding-bottom: 0.15em;
-  }
+.title .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
 
-  .title .line {
-    opacity: 0;
-    position: absolute;
-    left: -1em;
-    height: auto;
-    width: 1rem;
-    transform-origin: 0 50%;
-  }
+.title .line {
+  opacity: 0;
+  position: absolute;
+  left: -1em;
+  height: auto;
+  width: 1rem;
+  transform-origin: 0 50%;
+}
 
-  .title .line svg {
-    height: 1.7em;
-    -webkit-filter: drop-shadow(1px 0 5px rgba(0, 0, 0, 0.666));
-    filter: drop-shadow(1px 0 5px rgba(0, 0, 0, 0.666));
-  }
+.title .line svg {
+  height: 1.7em;
+  -webkit-filter: drop-shadow(1px 0 5px rgba(0, 0, 0, 0.666));
+  filter: drop-shadow(1px 0 5px rgba(0, 0, 0, 0.666));
+}
 
-  .title .letter {
-    display: inline-block;
-    line-height: 1em;
-  }
+.title .letter {
+  display: inline-block;
+  line-height: 1em;
+}
 
-  @keyframes blink {
-    50% {
-      opacity: 0.0;
-    }
+@keyframes blink {
+  50% {
+    opacity: 0.0;
   }
+}
 
-  @-webkit-keyframes blink {
-    50% {
-      opacity: 0.0;
-    }
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0.0;
   }
+}
 </style>

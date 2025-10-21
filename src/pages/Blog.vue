@@ -15,46 +15,48 @@
         </div>
       </div>
     </section>
-    <Blog />
+    <Blog/>
     <Footer/>
   </Layout>
 </template>
 
 <script>
-  // Import components
-  import Header from '~/components/Header.vue';
-  import Blog from '~/components/Blog.vue';
-  import Contact from '~/components/Contact.vue';
-  import Footer from '~/components/Footer.vue';
+import Layout from '~/layouts/Default.vue'
 
-  // Import generic component layouts
-  import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue';
-  import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue';
-  import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
-  import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
+// Import components
+import Header from '~/components/Header.vue'
+import Blog from '~/components/Blog.vue'
+import Contact from '~/components/Contact.vue'
+import Footer from '~/components/Footer.vue'
 
-  // Import static data
-  import TestimonialData from '~/data/Testimonial.yml';
+// Import generic component layouts
+import SectionBlockLayout02Col01 from '~/components/layouts/SectionBlockLayout02Col01.vue'
+import SectionBlockLayout02Col02 from '~/components/layouts/SectionBlockLayout02Col02.vue'
+import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue'
+import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue'
 
-  export default {
-    components: {
-      // Inject components
-      Header,
-      Blog,
-      Contact,
-      Footer,
-      // Inject generic component layouts
-      SectionBlockLayout02Col01,
-      SectionBlockLayout02Col02,
-      ContentBlockLayout,
-      TestimonialBlockLayout,
-    },
-    computed: {
-      testimonialContent() {
-        return TestimonialData;
-      }
-    },
-    methods: {
+// Import static data
+import TestimonialData from '~/data/Testimonial.yml'
+
+export default {
+  components: {
+    Layout,
+    // Inject components
+    Header,
+    Blog,
+    Contact,
+    Footer,
+    // Inject generic component layouts
+    SectionBlockLayout02Col01,
+    SectionBlockLayout02Col02,
+    ContentBlockLayout,
+    TestimonialBlockLayout,
+  },
+  computed: {
+    testimonialContent() {
+      return TestimonialData
     }
-  }
+  },
+  methods: {}
+}
 </script>

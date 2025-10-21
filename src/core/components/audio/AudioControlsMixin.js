@@ -2,10 +2,10 @@ export default {
   methods: {
     isAutoplayActive() {
       if (typeof window !== 'undefined') {
-        return parseInt(localStorage.getItem('autoplayMusic'));
+        return parseInt(localStorage.getItem('autoplayMusic'))
       }
 
-      return false;
+      return false
     },
     onPreviousClicked(audio) {
 
@@ -16,9 +16,9 @@ export default {
     onPlayPauseClicked(audio) {
       if (typeof window !== 'undefined') {
         if (audio.paused) {
-          localStorage.setItem('autoplayMusic', '1');
+          localStorage.setItem('autoplayMusic', '1')
         } else {
-          localStorage.setItem('autoplayMusic', '0');
+          localStorage.setItem('autoplayMusic', '0')
         }
       }
 

@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "title": "Blue Collar Dev - Local Software and App Development in Bangkok, Thailand",
+    "description": "Blue Collar Development is a boutique software development house located in Bangkok, Thailand. Specializing in mobile (iOS/Android), hybrid and web app development, Blue Collar creates amazing applications using cutting edge technology to help you bring your concept to life.",
+    "keywords": "blue collar, boutique software, software development, hybrid app development, mobile app development, website development, local developers, IT consulting, bangkok, thailand"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "location": "Blue Collar is located in Bangkok, Thailand, and provides IT consulting services for customers in Bangkok, Thailand. We're also open to remote work.",
+    "contactInfo": "If you'd like to get in touch with one of our people, please call {phone}, send us an {email}, or use the handy form below and let one of our experts help you today.",
+    "phone": "+66 65-807-1545",
+    "email": "e-mail",
+    "form": {
+      "fullname": "Full name",
+      "phone": "Phone",
+      "email": "Email",
+      "budget": "Project Budget",
+      "city": "City",
+      "country": "Country",
+      "message": "Message",
+      "nda": "NDA Required",
+      "submit": "Submit Form",
+      "botField": "Hello bee"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Blue Collar Development",
+    "location": "Bangkok, Thailand. All rights reserved."
+  },
+  "pricing": {
+    "services": {
+      "apps": {
+        "title": "Apps + PWAs",
+        "description": "We create amazing experiences for iOS, Android and Responsive Web. Front-end to back-end development, we do it all. With our user-first approach and API-driven architecture, we create apps that can evolve to take advantage of new capabilities.",
+        "link": "/apps",
+        "linkText": "Learn More"
+      },
+      "customSoftware": {
+        "title": "Custom Software",
+        "description": "Custom software serves the unique processes of your business, solves your specific problems, satisfies your exclusive needs and makes your workflows easier, faster, and more efficient. Our team of versatile custom software developers can architect & develop software for even the most complex business logic & workflow.",
+        "link": "/software",
+        "linkText": "Learn More"
+      },
+      "webDesign": {
+        "title": "Web Design",
+        "description": "We collaborate with our clients to deliver a professionally designed accelerated mobile website, integrated with high conversion landing pages and the client company's branding. Our talent comes the Bangkok community, all of whom are passionate about building products optimized for both desktop and mobile.",
+        "link": "/websites",
+        "linkText": "Learn More"
+      },
+      "advertising": {
+        "title": "Advertising",
+        "description": "Paid social content is fast becoming the most effective channel for connecting with qualified leads. Blue Collar's team are experts at creating social ad campaigns, with professionally designed, chat-enabled landing pages.",
+        "link": "/services-digital-marketing#advertising",
+        "linkText": "Learn More"
+      },
+      "landingPages": {
+        "title": "Landing Pages",
+        "description": "We work with you to deliver a professionally designed accelerated landing pages complete with lead-gen fields, and your company's branding built in. Your landing pages are optimized for mobile usage, but work on desktop as well.",
+        "link": "/services-landing-pages",
+        "linkText": "Learn More"
+      },
+      "socialMedia": {
+        "title": "Social Media",
+        "description": "New to social media marketing? We can get you set up on the major platforms with professional business pages continually updated with quality posts, promotions, and sales announcements to drive engagement with your brand and generate qualified leads.",
+        "link": "/services-digital-marketing#social-media",
+        "linkText": "Learn More"
+      }
+    }
+  },
+  "common": {
+    "siteName": "Blue Collar Development",
+    "siteDescription": "Blue Collar Development, Bangkok, Thailand"
+  },
+  "nav": {
+    "home": "Home",
+    "whatWeBuild": "What We Build",
+    "ourPeople": "Our People",
+    "getInTouch": "Get In Touch",
+    "github": "GitHub"
+  },
+  "home": {
+    "heroTitle": "We Build User Experiences That Reel in the Results",
+    "deliverResults1": "Simple IT Solutions",
+    "deliverResults2": "Cutting Edge Tech",
+    "deliverResults3": "Mouth Watering Results",
+    "intro1": "At Blue Collar, we use cutting-edge technologies and employ the latest software design methodologies to drive the creation of amazing user experiences.",
+    "intro2": "Our seasoned team of experience experts and software vetrans at Blue Collar Development specialize in helping you reel in the prize catch of your dreams.",
+    "fishingHint": "Hint: Click the fishing rod's handle to catch a Red Snapper! Very tasty!",
+    "browseCaseStudies": "Browse Case Studies",
+    "readyToRock": "Ready to Rock?",
+    "areYouReadyToRock": "Are You Ready to Rock?",
+    "rockIntro1": "Don't stop believin! Being a rock star's a journey when you're born and raised in South Detroit.",
+    "rockIntro2": "We'll take the midnight train to your dream.",
+    "guitarHint": "Hint: Click the strings to the beat of \"Smoke on the Water\".",
+    "caseStudies": "Case Studies"
+  },
+  "services": {
+    "sexyMobileApps": {
+      "title": "Sexy Mobile Apps",
+      "description": "Our timeless look and feel and sleek experience will drive your customers wild with desire.",
+      "linkText": "Get Started"
+    },
+    "bulletproofSoftware": {
+      "title": "Bulletproof Software",
+      "description": "Feature creep, maintenance, and bad actors will try to shoot you down. We stop those bullets so you don't have to.",
+      "linkText": "Get Started"
+    },
+    "deliciousWebsites": {
+      "title": "Delicious Websites",
+      "description": "Our Red Seal software chefs will blow your mind with great plates and great tastes.",
+      "linkText": "Get Started"
+    }
+  },
+  "testimonials": {
+    "phase3": {
+      "quote": "The people at Blue Collar just really want to make sure that their customers are satisfied. I'm looking forward to working with Blue Collar again on future projects.",
+      "reviewer": "Leigh W.",
+      "position": "President",
+      "organization": "Phase 3 Dev, Inc."
+    },
+    "active24": {
+      "quote": "Working with Blue Collar was a positive experience. Their work was of high standard and their high availabilty made working with them across timezones easy.",
+      "reviewer": "Dirk S.",
+      "position": "Enterprise Architect",
+      "organization": "Active24"
+    },
+    "carsgone": {
+      "quote": "Blue Collar has done great work with us on Carsgone.com. We recommend Blue Collar as a competent and valuable partner in web development.",
+      "reviewer": "Ray R.",
+      "position": "President",
+      "organization": "Carsgone.com"
+    },
+    "jimmyp": {
+      "quote": "Blue Collar designed and implemented an amazing website for our business, combining the effective elements of a solid technical design with the functionality and visual appeal to engage our customers. We've seen an immediate increase in sales and flow through business.",
+      "reviewer": "Greg L.",
+      "position": "Owner",
+      "organization": "Jimmy Poblanos"
+    },
+    "spasation": {
+      "quote": "I would highly recommend Blue Collar!",
+      "reviewer": "Danny A.",
+      "position": "Director",
+      "organization": "Spasation"
+    },
+    "bincvfx": {
+      "quote": "Blue Collar designed our current application and database for client management and asset tracking. We have also collaborated on several prototyping projects where their participation was enthusiastic and their contributions were innovative and valued.",
+      "reviewer": "Brynley C.",
+      "position": "Director",
+      "organization": "Binc BKK VFX"
+    }
+  },
+  "company": {
+    "heroTitle": "Lost in the Software Jungle?",
+    "intro1": "To survive and thrive in the 21st century's digital battleground, you need the right skills. At Blue Collar, our elite technology warriors build software that's ready for tomorrow's challenges.",
+    "intro2": "Let our seasoned vets guide you on the path to your dreams.",
+    "meetConsultants": "Meet Our Consultants",
+    "ourTeam": "Our Team",
+    "needBackup": "Need Backup? We Got You.",
+    "backupDescription": "To survive and thrive in the 21st century's digital battleground, you need the right skills. We use cutting-edge technologies and employ the latest software design methodologies to drive the creation of amazing user experiences. With over 15 years of professional experience in the private and public sector, you can count on Blue Collar to help you and your organization solve complex business problems and build great modern software applications.\n\nSo don't let feature creep, maintenance, and bad actors shoot you and your project down. Give us a call today to learn more about how we can build better software together, and make dreams come true.",
+    "backToHome": "Back to Home"
+  },
+  "portfolio": {
+    "client": "Client",
+    "employedBy": "Employed By",
+    "disclaimer": {
+      "title": "Disclaimer!",
+      "message": "My portfolio is under construction. Projects details may not be 100% accurate or complete. Please check again in a couple days."
+    },
+    "sections": {
+      "theClient": "The Client",
+      "theStakeholder": "The Stakeholder",
+      "theProblem": "The Problem",
+      "ourSolution": "Our Solution",
+      "technologies": "Technologies"
+    },
+    "months": {
+      "jan": "Jan",
+      "feb": "Feb",
+      "mar": "Mar",
+      "apr": "Apr",
+      "may": "May",
+      "jun": "Jun",
+      "jul": "Jul",
+      "aug": "Aug",
+      "sep": "Sep",
+      "oct": "Oct",
+      "nov": "Nov",
+      "dec": "Dec"
+    }
+  }
+}

@@ -37,7 +37,7 @@
 }
 
 .service-detail-card-top {
-  text-shadow: 1px 0 5px rgba(0,0,0,.666)
+  text-shadow: 1px 0 5px rgba(0, 0, 0, .666)
 }
 
 @media screen and (min-width: 40em) {
@@ -54,7 +54,7 @@
       }
 
       .service-detail-card-inner {
-        height: auto! important; /* Kill inline JS height when using fixed height mobile */
+        height: auto ! important; /* Kill inline JS height when using fixed height mobile */
       }
 
       .service-detail-card-front,

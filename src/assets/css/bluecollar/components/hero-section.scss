@@ -24,7 +24,7 @@ section.hero-section {
 
 .text-shadow * {
   &:not(input):not(select):not(checkbox):not(label):not(textarea) {
-    text-shadow: 1px 0 5px rgba(0,0,0,.666);
+    text-shadow: 1px 0 5px rgba(0, 0, 0, .666);
   }
 }
 
@@ -198,14 +198,15 @@ section.hero-section {
 /* Layout specific */
 .hero-section-01-col {
   background-size: cover;
-  /* Smooth parallax scrolling */
-  background-attachment: fixed;
   background-repeat: no-repeat;
   transition: 0s linear;
   transition-property: background-position;
 }
 
 @media screen and (min-width: 64em) {
+  .hero-section-01-col {
+    background-attachment: fixed;
+  }
   .hero-section-content {
     position: relative;
   }

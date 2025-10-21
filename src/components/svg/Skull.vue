@@ -1,5 +1,6 @@
 <template>
-  <svg class="skull" viewBox="0 0 612 792" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg class="skull" viewBox="0 0 612 792" xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink">
     <g class="Layer_4">
       <path class="st0" d="M301.2 352l-.4 80.2"/>
       <path class="st0" d="M83.7 207.5c-1.5 10.4-2.3 21-2.3 31.9v-13.9c0-6.2.8-12.2 2.3-18z"/>
@@ -113,197 +114,196 @@
 </template>
 
 <script>
-  import anime from 'animejs';
+import anime from 'animejs'
 
-  export default {
-    computed: {
+export default {
+  computed: {},
+  methods: {
+    createSVGElement(tag) {
+      tag = typeof tag === 'string' ? tag : 'path'
+      return document.createElementNS('http://www.w3.org/2000/svg', tag)
     },
-    methods: {
-      createSVGElement(tag) {
-        tag = typeof tag === 'string' ? tag : 'path';
-        return document.createElementNS('http://www.w3.org/2000/svg', tag);
-      },
-      startSVGAnimation(parentElement) {
-        this.drawSVGPaths(parentElement, 250, 500, 25);
-      },
-      drawSVGPaths(parentElement, timeMin, timeMax, timeDelay) {
-        let paths = parentElement.querySelectorAll('path');
-
-        paths.forEach((el, idx) => {
-          let totalLength = el.getTotalLength();
-
-          // TODO: We need to polyfill for IE11 to assign styles!
-          Object.assign(el.style, {
-            strokeDashoffset: totalLength,
-            strokeDasharray: totalLength + ' ' + totalLength
-          });
-
-          anime({
-            targets: el,
-            delay: timeDelay * idx,
-            duration: Math.floor(Math.random() * timeMax) + timeMin,
-            strokeDashoffset: 0,
-            easing: 'easeInOutQuad'
-          });
-        });
-      },
-      replaceWithPaths(parentElement) {
-        this.replaceRectsWithPaths(parentElement);
-        this.replaceLinesWithPaths(parentElement);
-        this.replaceEllipsesWithPaths(parentElement);
-        this.replaceCirclesWithPaths(parentElement);
-        this.replacePolygonsWithPaths(parentElement);
-        this.replacePolylinesWithPaths(parentElement);
-      },
-      replaceRectsWithPaths(parentElement) {
-        let rects = parentElement.querySelectorAll('rect');
-
-        rects.forEach((el) => {
-          let rectX = el.x;
-          let rectY = el.y;
-
-          let rectX2 = parseFloat(rectX) + parseFloat(el.width);
-          let rectY2 = parseFloat(rectY) + parseFloat(el.height);
-
-          let convertedPath = 'M' + rectX + ',' + rectY + ' ' + rectX2 + ',' + rectY + ' ' + rectX2 + ',' + rectY2 + ' ' + rectX + ',' + rectY2 + ' ' + rectX + ',' + rectY;
-
-          let svgEl = this.createSVGElement();
-          svgEl.d = convertedPath;
-          this.generateSVGAttributes(el, svgEl);
-          el.parentNode.insertBefore(svgEl, el.nextSibling);
-        });
-
-        rects.forEach((el) => el.remove());
-        rects.forEach((el) => el.remove());
-      },
-      replaceLinesWithPaths(parentElement) {
-        let lines = parentElement.querySelectorAll('line');
-
-        lines.forEach((el) => {
-          let lineX1 = el.x1;
-          let lineY1 = el.y1;
-
-          let lineX2 = el.x2;
-          let lineY2 = el.y2;
-
-          let convertedPath = 'M' + lineX1 + ',' + lineY1 + ' ' + lineX2 + ',' + lineY2;
-
-          let svgEl = this.createSVGElement();
-          svgEl.d = convertedPath;
-          this.generateSVGAttributes(el, svgEl);
-          el.parentNode.insertBefore(svgEl, el.nextSibling);
-        });
-
-        lines.forEach((el) => el.remove());
-      },
-
-      replaceCirclesWithPaths(parentElement) {
-        let circles = parentElement.querySelectorAll('circle');
-
-        circles.forEach((el) => {
-          let cX = el.cx;
-          let cY = el.cy;
-          let r = el.r;
-          let r2 = parseFloat(r * 2);
-
-          let convertedPath = 'M' + cX + ', ' + cY + ' m' + (-r) + ', 0 ' + 'a ' + r + ', ' + r + ' 0 1,0 ' + r2 + ',0 ' + 'a ' + r + ', ' + r + ' 0 1,0 ' + (-r2) + ',0 ';
-
-          let svgEl = this.createSVGElement();
-          svgEl.d = convertedPath;
-          this.generateSVGAttributes(el, svgEl);
-          el.parentNode.insertBefore(svgEl, el.nextSibling);
-        });
-
-        circles.forEach((el) => el.remove());
-      },
-      replaceEllipsesWithPaths(parentElement) {
-        let ellipses = parentElement.querySelectorAll('ellipse');
-
-        ellipses.forEach((el) => {
-          let cX = el.cx;
-          let cY = el.cy;
-          let rX = el.rx;
-          let rY = el.ry;
-
-          let convertedPath = 'M' + cX + ', ' + cY + ' m' + (-rX) + ', 0 ' + 'a ' + rX + ', ' + rY + ' 0 1,0 ' + rX * 2 + ',0 ' + 'a ' + rX + ', ' + rY + ' 0 1,0 ' + (-rX * 2) + ',0 ';
-
-          let svgEl = this.createSVGElement();
-          svgEl.d = convertedPath;
-          this.generateSVGAttributes(el, svgEl);
-          el.parentNode.insertBefore(svgEl, el.nextSibling);
-        });
-
-        ellipses.forEach((el) => el.remove());
-      },
-
-
-      replacePolygonsWithPaths(parentElement) {
-        let polygons = parentElement.querySelectorAll('polygon');
-
-        polygons.forEach((el) => {
-          let points = el.points;
-          let polyPoints = points.split(/[ ,]+/);
-          let endPoint = polyPoints[0] + ', ' + polyPoints[1];
-
-          let svgEl = this.createSVGElement();
-          svgEl.d = 'M' + points + ' ' + endPoint;
-          this.generateSVGAttributes(el, svgEl);
-          el.parentNode.insertBefore(svgEl, el.nextSibling);
-        });
-
-        polygons.forEach((el) => el.remove());
-      },
-
-      replacePolylinesWithPaths(parentElement) {
-        let polylines = parentElement.querySelectorAll('polyline');
-
-        polylines.forEach((el) => {
-          let points = el.points;
-
-          let svgEl = this.createSVGElement();
-          svgEl.d = 'M' + points;
-          this.generateSVGAttributes(el, svgEl);
-          el.parentNode.insertBefore(svgEl, el.nextSibling);
-        });
-
-        polylines.forEach((el) => el.remove());
-      },
-      generateSVGAttributes(src, target) {
-        target['fill'] = src['fill'];
-        target['stroke'] = src['stroke'];
-        target['stroke-width'] = src['stroke-width'];
-        target['stroke-linecap'] = src['stroke-linecap'];
-      }
+    startSVGAnimation(parentElement) {
+      this.drawSVGPaths(parentElement, 250, 500, 25)
     },
-    mounted() {
-      this.replaceWithPaths(document.querySelector('.skull'));
+    drawSVGPaths(parentElement, timeMin, timeMax, timeDelay) {
+      let paths = parentElement.querySelectorAll('path')
 
-      setTimeout(() => {
-        this.startSVGAnimation(document.querySelector('.skull'));
-      }, 1000);
+      paths.forEach((el, idx) => {
+        let totalLength = el.getTotalLength()
+
+        // TODO: We need to polyfill for IE11 to assign styles!
+        Object.assign(el.style, {
+          strokeDashoffset: totalLength,
+          strokeDasharray: totalLength + ' ' + totalLength
+        })
+
+        anime({
+          targets: el,
+          delay: timeDelay * idx,
+          duration: Math.floor(Math.random() * timeMax) + timeMin,
+          strokeDashoffset: 0,
+          easing: 'easeInOutQuad'
+        })
+      })
+    },
+    replaceWithPaths(parentElement) {
+      this.replaceRectsWithPaths(parentElement)
+      this.replaceLinesWithPaths(parentElement)
+      this.replaceEllipsesWithPaths(parentElement)
+      this.replaceCirclesWithPaths(parentElement)
+      this.replacePolygonsWithPaths(parentElement)
+      this.replacePolylinesWithPaths(parentElement)
+    },
+    replaceRectsWithPaths(parentElement) {
+      let rects = parentElement.querySelectorAll('rect')
+
+      rects.forEach((el) => {
+        let rectX = el.x
+        let rectY = el.y
+
+        let rectX2 = parseFloat(rectX) + parseFloat(el.width)
+        let rectY2 = parseFloat(rectY) + parseFloat(el.height)
+
+        let convertedPath = 'M' + rectX + ',' + rectY + ' ' + rectX2 + ',' + rectY + ' ' + rectX2 + ',' + rectY2 + ' ' + rectX + ',' + rectY2 + ' ' + rectX + ',' + rectY
+
+        let svgEl = this.createSVGElement()
+        svgEl.d = convertedPath
+        this.generateSVGAttributes(el, svgEl)
+        el.parentNode.insertBefore(svgEl, el.nextSibling)
+      })
+
+      rects.forEach((el) => el.remove())
+      rects.forEach((el) => el.remove())
+    },
+    replaceLinesWithPaths(parentElement) {
+      let lines = parentElement.querySelectorAll('line')
+
+      lines.forEach((el) => {
+        let lineX1 = el.x1
+        let lineY1 = el.y1
+
+        let lineX2 = el.x2
+        let lineY2 = el.y2
+
+        let convertedPath = 'M' + lineX1 + ',' + lineY1 + ' ' + lineX2 + ',' + lineY2
+
+        let svgEl = this.createSVGElement()
+        svgEl.d = convertedPath
+        this.generateSVGAttributes(el, svgEl)
+        el.parentNode.insertBefore(svgEl, el.nextSibling)
+      })
+
+      lines.forEach((el) => el.remove())
+    },
+
+    replaceCirclesWithPaths(parentElement) {
+      let circles = parentElement.querySelectorAll('circle')
+
+      circles.forEach((el) => {
+        let cX = el.cx
+        let cY = el.cy
+        let r = el.r
+        let r2 = parseFloat(r * 2)
+
+        let convertedPath = 'M' + cX + ', ' + cY + ' m' + (-r) + ', 0 ' + 'a ' + r + ', ' + r + ' 0 1,0 ' + r2 + ',0 ' + 'a ' + r + ', ' + r + ' 0 1,0 ' + (-r2) + ',0 '
+
+        let svgEl = this.createSVGElement()
+        svgEl.d = convertedPath
+        this.generateSVGAttributes(el, svgEl)
+        el.parentNode.insertBefore(svgEl, el.nextSibling)
+      })
+
+      circles.forEach((el) => el.remove())
+    },
+    replaceEllipsesWithPaths(parentElement) {
+      let ellipses = parentElement.querySelectorAll('ellipse')
+
+      ellipses.forEach((el) => {
+        let cX = el.cx
+        let cY = el.cy
+        let rX = el.rx
+        let rY = el.ry
+
+        let convertedPath = 'M' + cX + ', ' + cY + ' m' + (-rX) + ', 0 ' + 'a ' + rX + ', ' + rY + ' 0 1,0 ' + rX * 2 + ',0 ' + 'a ' + rX + ', ' + rY + ' 0 1,0 ' + (-rX * 2) + ',0 '
+
+        let svgEl = this.createSVGElement()
+        svgEl.d = convertedPath
+        this.generateSVGAttributes(el, svgEl)
+        el.parentNode.insertBefore(svgEl, el.nextSibling)
+      })
+
+      ellipses.forEach((el) => el.remove())
+    },
+
+
+    replacePolygonsWithPaths(parentElement) {
+      let polygons = parentElement.querySelectorAll('polygon')
+
+      polygons.forEach((el) => {
+        let points = el.points
+        let polyPoints = points.split(/[ ,]+/)
+        let endPoint = polyPoints[0] + ', ' + polyPoints[1]
+
+        let svgEl = this.createSVGElement()
+        svgEl.d = 'M' + points + ' ' + endPoint
+        this.generateSVGAttributes(el, svgEl)
+        el.parentNode.insertBefore(svgEl, el.nextSibling)
+      })
+
+      polygons.forEach((el) => el.remove())
+    },
+
+    replacePolylinesWithPaths(parentElement) {
+      let polylines = parentElement.querySelectorAll('polyline')
+
+      polylines.forEach((el) => {
+        let points = el.points
+
+        let svgEl = this.createSVGElement()
+        svgEl.d = 'M' + points
+        this.generateSVGAttributes(el, svgEl)
+        el.parentNode.insertBefore(svgEl, el.nextSibling)
+      })
+
+      polylines.forEach((el) => el.remove())
+    },
+    generateSVGAttributes(src, target) {
+      target['fill'] = src['fill']
+      target['stroke'] = src['stroke']
+      target['stroke-width'] = src['stroke-width']
+      target['stroke-linecap'] = src['stroke-linecap']
     }
+  },
+  mounted() {
+    this.replaceWithPaths(document.querySelector('.skull'))
+
+    setTimeout(() => {
+      this.startSVGAnimation(document.querySelector('.skull'))
+    }, 1000)
   }
+}
 </script>
 
 <style lang="scss">
-  $color: white;
+$color: white;
 
-  svg.skull {
-    height: 85vh;
-    margin: auto;
-    display: block;
+svg.skull {
+  height: 85vh;
+  margin: auto;
+  display: block;
 
-    path {
-      fill: none;
-      stroke: $color;
-      stroke-width: 5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-miterlimit: 10;
+  path {
+    fill: none;
+    stroke: $color;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
 
-      &.st1 {
-        stroke-width: 2;
-      }
+    &.st1 {
+      stroke-width: 2;
     }
   }
+}
 </style>

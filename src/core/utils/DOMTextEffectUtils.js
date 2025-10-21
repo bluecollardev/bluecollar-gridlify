@@ -11,28 +11,28 @@
  * @param letterTargets NodeList The individual letters
  */
 function wrapLettersOnWordBoundary(text, lettersTarget, letterTargets) {
-  let letters = [...letterTargets]; // Map NodeList to array
-  let lastLetter = null;
-  let currentLetter = null;
-  let words = text.innerText.split(/\s/); // Explode text on whitespace
+  let letters = [...letterTargets] // Map NodeList to array
+  let lastLetter = null
+  let currentLetter = null
+  let words = text.innerText.split(/\s/) // Explode text on whitespace
 
-  let letterPos = 1;
-  let wordStartPos = null;
+  let letterPos = 1
+  let wordStartPos = null
   while ((currentLetter = letters.shift()) && letters.length > -1) {
     if (lastLetter !== null) {
       // Is the currentLetter's y position different than lastLetter's?
       if (currentLetter.getBoundingClientRect().y !== lastLetter.getBoundingClientRect().y) {
         // If so, detect if the line break is occurring in the middle of a word!
-        let wordLengths = words.map(val => val.length);
+        let wordLengths = words.map(val => val.length)
 
-        let total = 0;
-        let wordLength = 0;
+        let total = 0
+        let wordLength = 0
         while ((wordLength = wordLengths.shift()) && wordLengths.length > -1) {
           // If the current letter index is greater than the total word count
           // add the number of letters in the next word and repeat
           if (letterPos > total) {
-            let prevTotal = total;
-            total += wordLength;
+            let prevTotal = total
+            total += wordLength
 
             // What was the starting index
             //console.log('prev total ' + prevTotal);
@@ -40,23 +40,23 @@ function wrapLettersOnWordBoundary(text, lettersTarget, letterTargets) {
             //console.log('new total ' + total);
             //console.log('-----')
 
-            wordStartPos = prevTotal++;
+            wordStartPos = prevTotal++
           } else {
-            break;
+            break
           }
         }
       }
     }
 
-    lastLetter = currentLetter;
-    letterPos++;
+    lastLetter = currentLetter
+    letterPos++
   }
 
-  console.log('word start char pos ' + wordStartPos);
+  console.log('word start char pos ' + wordStartPos)
   // Insert line break on word boundary
   // Subtract, NodeList is zero-indexed
   if (wordStartPos !== null && lettersTarget.contains(letterTargets.item(wordStartPos))) {
-    lettersTarget.insertBefore(document.createElement('br'), letterTargets.item(wordStartPos));
+    lettersTarget.insertBefore(document.createElement('br'), letterTargets.item(wordStartPos))
   }
 }
 
@@ -67,8 +67,8 @@ function wrapLettersOnWordBoundary(text, lettersTarget, letterTargets) {
  */
 function rewrapLettersOnWordBoundary(text, lettersTarget, letterTargets) {
   // Sanitize the text first, clear any <br> elements that we previously inserted
-  lettersTarget.querySelectorAll('br').forEach(el => el.remove());
-  wrapLettersOnWordBoundary(text, lettersTarget, letterTargets);
+  lettersTarget.querySelectorAll('br').forEach(el => el.remove())
+  wrapLettersOnWordBoundary(text, lettersTarget, letterTargets)
 }
 
 /**
@@ -78,7 +78,7 @@ function rewrapLettersOnWordBoundary(text, lettersTarget, letterTargets) {
  * @returns {string}
  */
 function wrapLetters(text) {
-  return `<span class="letters">${text.textContent.replace(/([\S\?\']|\w)/g, '<span class="letter">$&</span>')}</span>`;
+  return `<span class="letters">${text.textContent.replace(/([\S\?\']|\w)/g, '<span class="letter">$&</span>')}</span>`
 }
 
 /**
@@ -88,7 +88,7 @@ function wrapLetters(text) {
  * @returns {string}
  */
 function wrapWords(text) {
-  return `<span class="words">${text.textContent.replace(/([\S]+)/g, '<span class="word">$&</span>')}</span>`;
+  return `<span class="words">${text.textContent.replace(/([\S]+)/g, '<span class="word">$&</span>')}</span>`
 }
 
-export { wrapLettersOnWordBoundary, rewrapLettersOnWordBoundary, wrapLetters, wrapWords };
+export { wrapLettersOnWordBoundary, rewrapLettersOnWordBoundary, wrapLetters, wrapWords }

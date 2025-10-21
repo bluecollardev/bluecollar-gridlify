@@ -99,11 +99,11 @@
 }
 
 $breakpoints: xs sm sm-md md-lg lg;
-$breakpoint-xs: (max-width: 40em);
-$breakpoint-sm: (min-width: 40em);
-$breakpoint-sm-md: (min-width: 40em) and (max-width: 52em);
-$breakpoint-md-lg: (min-width: 52em) and (max-width: 64em);
-$breakpoint-lg: (min-width: 64em);
+$breakpoint-xs: '(max-width: 40em)';
+$breakpoint-sm: '(min-width: 40em)';
+$breakpoint-sm-md: '(min-width: 40em) and (max-width: 52em)';
+$breakpoint-md-lg: '(min-width: 52em) and (max-width: 64em)';
+$breakpoint-lg: '(min-width: 64em)';
 
 $queries: $breakpoint-xs $breakpoint-sm $breakpoint-sm-md $breakpoint-md-lg $breakpoint-lg;
 @for $i from 1 through 4 {

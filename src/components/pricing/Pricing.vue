@@ -1,48 +1,53 @@
 <template>
   <div>
     <section class="lg-flex" style="box-shadow: 1px 0 5px rgba(11,11,11,0.6);">
-      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('APPS') ? 'is-active' : '' }`">
+      <div
+          :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('APPS') ? 'is-active' : '' }`">
         <div class="pad-top pad-bottom" v-on:click="setPricing('APPS')">
           <content-block-layout
-            v-if="getService(0).linkText"
-            :title="getService(0).title"
+              v-if="getService(0).linkText"
+              :title="getService(0).title"
           ></content-block-layout>
         </div>
       </div>
-      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('SOFTWARE') ? 'is-active' : '' }`">
+      <div
+          :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('SOFTWARE') ? 'is-active' : '' }`">
         <div class="pad-top pad-bottom" v-on:click="setPricing('SOFTWARE')">
           <content-block-layout
-            className="py-0"
-            v-if="getService(1).linkText"
-            :title="getService(1).title"
+              className="py-0"
+              v-if="getService(1).linkText"
+              :title="getService(1).title"
           ></content-block-layout>
         </div>
       </div>
-      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('WEB_SITES') ? 'is-active' : '' }`">
+      <div
+          :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('WEB_SITES') ? 'is-active' : '' }`">
         <div class="pad-top pad-bottom" v-on:click="setPricing('WEB_SITES')">
           <content-block-layout
-            className="py-0"
-            v-if="getService(2).linkText"
-            :title="getService(2).title"
+              className="py-0"
+              v-if="getService(2).linkText"
+              :title="getService(2).title"
           ></content-block-layout>
         </div>
       </div>
 
-      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('ADVERTISING') ? 'is-active' : '' }`">
+      <div
+          :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('ADVERTISING') ? 'is-active' : '' }`">
         <div class="pad-top pad-bottom" v-on:click="setPricing('ADVERTISING')">
           <content-block-layout
-            v-if="getService(3).linkText"
-            :title="getService(3).title"
-            v-on:click="setPricing('ADVERTISING')"
+              v-if="getService(3).linkText"
+              :title="getService(3).title"
+              v-on:click="setPricing('ADVERTISING')"
           ></content-block-layout>
         </div>
       </div>
-      <div :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('LANDING_PAGES') ? 'is-active' : '' }`">
+      <div
+          :class="`pricing-switcher-item sm-flex flex-center flex-justify-center flex-basis-quarter bg-bc-blue transparent ${pricingIsActive('LANDING_PAGES') ? 'is-active' : '' }`">
         <div class="pad-top pad-bottom" v-on:click="setPricing('LANDING_PAGES')">
           <content-block-layout
-            v-if="getService(4).linkText"
-            :title="getService(4).title"
-            v-on:click="setPricing('LANDING_PAGES')"
+              v-if="getService(4).linkText"
+              :title="getService(4).title"
+              v-on:click="setPricing('LANDING_PAGES')"
           ></content-block-layout>
         </div>
       </div>
@@ -89,7 +94,7 @@
                   <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">1,500 +</span>
                 </div>
 
-                <hr class="space-top-half space-bottom-half" />
+                <hr class="space-top-half space-bottom-half"/>
 
                 <!--<div class="h4 line-height-2">
                   <div class="inline-block relative mr1 h3 line-height-2">
@@ -108,7 +113,7 @@
                     <li>Social media integration</li>
                     <li>Google Analytics<sup>&reg;</sup></li>
                     <li>Includes up to 5 free pages*</li>
-                    <hr class="space-top-half space-bottom-half" />
+                    <hr class="space-top-half space-bottom-half"/>
                     <li>Extra pages are $200 each</li>
                     <li>Extra products or services are $15 each</li>
                     <li>Professional copywriting (optional) is $300/page</li>
@@ -159,7 +164,7 @@
                   <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">4,500 +</span>
                 </div>
 
-                <hr class="space-top-half space-bottom-half" />
+                <hr class="space-top-half space-bottom-half"/>
 
                 <!--<div class="h4 line-height-2">
                   <div class="inline-block relative mr1 h3 line-height-2">
@@ -182,7 +187,7 @@
                     <li>Google Analytics<sup>&reg;</sup></li>
                     <li>XML Sitemap</li>
                     <li>Includes up to 10 free pages*</li>
-                    <hr class="space-top-half space-bottom-half" />
+                    <hr class="space-top-half space-bottom-half"/>
                     <li>Extra pages are $200 each</li>
                     <li>Extra products or services are $15 each</li>
                     <li>Professional copywriting (optional) is $300/page</li>
@@ -230,7 +235,7 @@
                   <span class="travel-results-result-subtext h3">&nbsp;</span><span class="black bold">Contact</span>
                 </div>
 
-                <hr class="space-top-half space-bottom-half" />
+                <hr class="space-top-half space-bottom-half"/>
 
                 <!--<div class="h4 line-height-2">
                   <div class="inline-block relative mr1 h3 line-height-2">
@@ -261,14 +266,16 @@
         <!-- Position relatively, or absolute positioning of the caption will fail -->
         <div class="sm-flex flex-center flex-justify-center flex-basis-third">
           <div class="content-block">
-            <img class="banner-image circle text-center" src="/images/greg-and-steph-jimmy-poblanos.jpg" alt="" />
+            <img class="banner-image circle text-center" src="/images/greg-and-steph-jimmy-poblanos.jpg" alt=""/>
           </div>
         </div>
         <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
           <div>
             <div class="space-all">
               <div class="g-services">
-                <p class="g-pstyle8">Blue Collar designed and implemented an amazing website for our business, combining the effective elements of a solid technical design with the functionality and visual appeal to engage our customers. We've seen an immediate increase in sales and flow through business.</p>
+                <p class="g-pstyle8">Blue Collar designed and implemented an amazing website for our business, combining
+                  the effective elements of a solid technical design with the functionality and visual appeal to engage
+                  our customers. We've seen an immediate increase in sales and flow through business.</p>
               </div>
               <div class="g-services">
                 <p>Greg L.</p>
@@ -335,7 +342,7 @@
                   <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">7,500 +</span>
                 </div>
 
-                <hr class="space-top-half space-bottom-half" />
+                <hr class="space-top-half space-bottom-half"/>
 
                 <!--<div class="h4 line-height-2">
                   <div class="inline-block relative mr1 h3 line-height-2">
@@ -399,7 +406,7 @@
                   <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">12,500 +</span>
                 </div>
 
-                <hr class="space-top-half space-bottom-half" />
+                <hr class="space-top-half space-bottom-half"/>
 
                 <!--<div class="h4 line-height-2">
                   <div class="inline-block relative mr1 h3 line-height-2">
@@ -460,7 +467,7 @@
                   <span class="travel-results-result-subtext h3">&nbsp;</span><span class="black bold">Contact</span>
                 </div>
 
-                <hr class="space-top-half space-bottom-half" />
+                <hr class="space-top-half space-bottom-half"/>
 
                 <!--<div class="h4 line-height-2">
                   <div class="inline-block relative mr1 h3 line-height-2">
@@ -496,14 +503,16 @@
         <!-- Position relatively, or absolute positioning of the caption will fail -->
         <div class="sm-flex flex-center flex-justify-center flex-basis-third">
           <div class="content-block">
-            <img class="banner-image circle text-center" src="/images/greg-and-steph-jimmy-poblanos.jpg" alt="" />
+            <img class="banner-image circle text-center" src="/images/greg-and-steph-jimmy-poblanos.jpg" alt=""/>
           </div>
         </div>
         <div class="sm-flex flex-center flex-justify-start flex-basis-two-thirds">
           <div>
             <div class="space-all">
               <div class="g-services">
-                <p class="g-pstyle8">Blue Collar designed and implemented an amazing website for our business, combining the effective elements of a solid technical design with the functionality and visual appeal to engage our customers. We've seen an immediate increase in sales and flow through business.</p>
+                <p class="g-pstyle8">Blue Collar designed and implemented an amazing website for our business, combining
+                  the effective elements of a solid technical design with the functionality and visual appeal to engage
+                  our customers. We've seen an immediate increase in sales and flow through business.</p>
               </div>
               <div class="g-services">
                 <p>Greg L.</p>
@@ -537,7 +546,8 @@
                 <p class="g-pstyle2 text-center-force">Social Ad Budgets</p>
               </div>
               <div class="g-banner">
-                <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $50 - $100. This will cover the cost for ad placements on social media platforms where your business is being promoted.</p>
+                <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $50 - $100. This will
+                  cover the cost for ad placements on social media platforms where your business is being promoted.</p>
 
                 <p>To learn more about how the social media ad spend is used, please contact us.</p>
               </div>
@@ -547,7 +557,8 @@
       </section>
 
       <!-- Popular -->
-      <section v-if="pricingFor === 'ADVERTISING'" id="advertising" class="pad-top pad-bottom travel-popular pb4 pt3 relative">
+      <section v-if="pricingFor === 'ADVERTISING'" id="advertising"
+               class="pad-top pad-bottom travel-popular pb4 pt3 relative">
         <div class="overflow-scroll">
           <div class="travel-overflow-container">
             <div class="sm-flex px1 md-px2 mxn1 flex-justify-evenly">
@@ -584,10 +595,11 @@
                 <div class="h2 line-height-2 mb1">
                   <span class="travel-results-result-text">Basic</span>
                   <span class="travel-results-result-subtext h3">&bull;</span>
-                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">299 <small>/ mo.</small></span>
+                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span
+                    class="black bold">299 <small>/ mo.</small></span>
                 </div>
 
-                <hr class="space-top-half space-bottom-half" />
+                <hr class="space-top-half space-bottom-half"/>
 
                 <!--<div class="h4 line-height-2">
                   <div class="inline-block relative mr1 h3 line-height-2">
@@ -650,10 +662,11 @@
                 <div class="h2 line-height-2 mb1">
                   <span class="travel-results-result-text">Premium</span>
                   <span class="travel-results-result-subtext h3">&bull;</span>
-                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">499 <small>/ mo.</small></span>
+                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span
+                    class="black bold">499 <small>/ mo.</small></span>
                 </div>
 
-                <hr class="space-top-half space-bottom-half" />
+                <hr class="space-top-half space-bottom-half"/>
 
                 <!--<div class="h4 line-height-2">
                   <div class="inline-block relative mr1 h3 line-height-2">
@@ -719,7 +732,7 @@
                   <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">Contact</span>
                 </div>
 
-                <hr class="space-top-half space-bottom-half" />
+                <hr class="space-top-half space-bottom-half"/>
 
                 <!--<div class="h4 line-height-2">
                   <div class="inline-block relative mr1 h3 line-height-2">
@@ -754,7 +767,9 @@
                 <p class="g-pstyle2 text-center-force">PPC Ad Budgets</p>
               </div>
               <div class="g-banner">
-                <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $200 - $300. This will cover the cost for ad placements on digital ad platforms (Google, Bing, etc.) where your business is being promoted.</p>
+                <p>If you select the Basic or Premium package, we recommend a monthly ad spend of $200 - $300. This will
+                  cover the cost for ad placements on digital ad platforms (Google, Bing, etc.) where your business is
+                  being promoted.</p>
 
                 <p>To learn more about how the PPC ad spend is used, please contact us.</p>
               </div>
@@ -764,7 +779,8 @@
       </section>
 
       <!-- Popular -->
-      <section v-if="pricingFor === 'ADVERTISING'" id="ppc" class="space-bottom pad-top travel-popular pb4 pt3 relative">
+      <section v-if="pricingFor === 'ADVERTISING'" id="ppc"
+               class="space-bottom pad-top travel-popular pb4 pt3 relative">
         <div class="overflow-scroll">
           <div class="travel-overflow-container">
             <div class="sm-flex px1 md-px2 mxn1 flex-justify-evenly">
@@ -801,10 +817,11 @@
                 <div class="h2 line-height-2 mb1">
                   <span class="travel-results-result-text">Basic</span>
                   <span class="travel-results-result-subtext h3">&bull;</span>
-                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">500 <small>/ mo.</small></span>
+                  <span class="travel-results-result-subtext h3">$&nbsp;</span><span
+                    class="black bold">500 <small>/ mo.</small></span>
                 </div>
 
-                <hr class="space-top-half space-bottom-half" />
+                <hr class="space-top-half space-bottom-half"/>
 
                 <!--<div class="h4 line-height-2">
                   <div class="inline-block relative mr1 h3 line-height-2">
@@ -871,7 +888,7 @@
                   <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">1000 <small>/ mo.</small></span>
                 </div>
 
-                <hr class="space-top-half space-bottom-half" />
+                <hr class="space-top-half space-bottom-half"/>
 
                 <!--<div class="h4 line-height-2">
                   <div class="inline-block relative mr1 h3 line-height-2">
@@ -935,7 +952,7 @@
                   <span class="travel-results-result-subtext h3">$&nbsp;</span><span class="black bold">Contact</span>
                 </div>
 
-                <hr class="space-top-half space-bottom-half" />
+                <hr class="space-top-half space-bottom-half"/>
 
                 <!--<div class="h4 line-height-2">
                   <div class="inline-block relative mr1 h3 line-height-2">
@@ -966,34 +983,34 @@
 </template>
 
 <script>
-  import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
+import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue'
 
-  export default {
-    components: {
-      // Inject components
-      // Inject generic component layouts
-      ContentBlockLayout
+export default {
+  components: {
+    // Inject components
+    // Inject generic component layouts
+    ContentBlockLayout
+  },
+  props: {
+    testimonialContent: {
+      type: Object
     },
-    props: {
-      testimonialContent: {
-        type: Object
-      },
-      pricingContent: {
-        type: Object
-      },
+    pricingContent: {
+      type: Object
     },
-		data() {
-      return {
-        pricingFor: 'WEB_SITES'
-      }
-    },
-    methods: {
-      setPricing(pricing) {
-        this.pricingFor = pricing;
-      },
-      pricingIsActive(pricing) {
-        return this.pricingFor === pricing;
-      }
+  },
+  data() {
+    return {
+      pricingFor: 'WEB_SITES'
     }
-	}
+  },
+  methods: {
+    setPricing(pricing) {
+      this.pricingFor = pricing
+    },
+    pricingIsActive(pricing) {
+      return this.pricingFor === pricing
+    }
+  }
+}
 </script>

@@ -883,35 +883,31 @@
 </template>
 
 <script>
-  import { TweenMax } from 'gsap';
+import { gsap } from 'gsap'
 
-  export default {
-    mounted() {
-      TweenMax.from("#fernLeftBack, #fernTop", 4, {
-        rotation: -3,
-        repeat: -1,
-        yoyo: true,
-        transformOrigin: "50% 100%",
-        ease: Sine.easeInOut
-      });
+export default {
+  mounted() {
+    // TODO: Re-enable jungle animations when needed
+    // Only animate elements that exist in the SVG
+    gsap.from("#fernLeftBack, #fernTop", {
+      rotation: -3,
+      repeat: -1,
+      yoyo: true,
+      transformOrigin: "50% 100%",
+      ease: "sine.inOut",
+      duration: 4
+    })
 
-      TweenMax.from('#tallFernFront, #leafRightBack, #fernRightBack', 4, {
-        rotation: 3,
-        repeat: -1,
-        yoyo: true,
-        transformOrigin: "50% 100%",
-        ease: Sine.easeInOut
-      });
-
-      TweenMax.from('#leafRightRightBack, #leafLeftBack', 3.5, {
-        rotation: -3,
-        repeat: -1,
-        yoyo: true,
-        transformOrigin: "50% 100%",
-        ease: Sine.easeInOut
-      });
-    }
+    gsap.from('#tallFernFront, #fernRightBack', {
+      rotation: 3,
+      repeat: -1,
+      yoyo: true,
+      transformOrigin: "50% 100%",
+      ease: "sine.inOut",
+      duration: 4
+    })
   }
+}
 </script>
 
 <style>.cls-1 {

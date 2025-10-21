@@ -57,65 +57,83 @@
           </g>
         <g>
           <line class="ground1-19-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-        stroke-linejoin="round" stroke-miterlimit="22.9256" x1="22.897" y1="251.018" x2="18.629"
-        y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="22.897" y1="251.018" x2="18.629"
+                y2="255.286"></line>
 
           <line class="ground1-18-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="27.537" y1="251.018" x2="23.269" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="27.537" y1="251.018" x2="23.269"
+                y2="255.286"></line>
 
           <line class="ground1-17-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="32.177" y1="251.018" x2="27.909" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="32.177" y1="251.018" x2="27.909"
+                y2="255.286"></line>
 
           <line class="ground1-16-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="36.817" y1="251.018" x2="32.55" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="36.817" y1="251.018" x2="32.55"
+                y2="255.286"></line>
 
           <line class="ground1-15-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="41.458" y1="251.018" x2="37.19" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="41.458" y1="251.018" x2="37.19"
+                y2="255.286"></line>
 
           <line class="ground1-14-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="46.098" y1="251.018" x2="41.83" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="46.098" y1="251.018" x2="41.83"
+                y2="255.286"></line>
 
           <line class="ground1-13-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="50.738" y1="251.018" x2="46.47" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="50.738" y1="251.018" x2="46.47"
+                y2="255.286"></line>
 
           <line class="ground1-12-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="55.378" y1="251.018" x2="51.11" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="55.378" y1="251.018" x2="51.11"
+                y2="255.286"></line>
 
           <line class="ground1-11-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="60.018" y1="251.018" x2="55.75" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="60.018" y1="251.018" x2="55.75"
+                y2="255.286"></line>
 
           <line class="ground1-10-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="64.658" y1="251.018" x2="60.39" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="64.658" y1="251.018" x2="60.39"
+                y2="255.286"></line>
 
           <line class="ground1-9-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="69.299" y1="251.018" x2="65.03" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="69.299" y1="251.018" x2="65.03"
+                y2="255.286"></line>
 
           <line class="ground1-8-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="73.939" y1="251.018" x2="69.671" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="73.939" y1="251.018" x2="69.671"
+                y2="255.286"></line>
 
           <line class="ground1-7-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="78.579" y1="251.018" x2="74.311" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="78.579" y1="251.018" x2="74.311"
+                y2="255.286"></line>
 
           <line class="ground1-6-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="83.219" y1="251.018" x2="78.951" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="83.219" y1="251.018" x2="78.951"
+                y2="255.286"></line>
 
           <line class="ground1-1-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="87.859" y1="251.018" x2="83.591" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="87.859" y1="251.018" x2="83.591"
+                y2="255.286"></line>
 
           <line class="ground1-2-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="92.499" y1="251.018" x2="88.231" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="92.499" y1="251.018" x2="88.231"
+                y2="255.286"></line>
 
           <line class="ground1-3-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="97.139" y1="251.018" x2="92.871" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="97.139" y1="251.018" x2="92.871"
+                y2="255.286"></line>
 
           <line class="ground1-4-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="101.779" y1="251.018" x2="97.511" y2="255.286"></line>
+                stroke-linejoin="round" stroke-miterlimit="22.9256" x1="101.779" y1="251.018" x2="97.511"
+                y2="255.286"></line>
 
           <line class="ground1-5-" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
                 stroke-linejoin="round" stroke-miterlimit="22.9256" x1="106.419" y1="251.018" x2="102.152"
                 y2="255.286"></line>
 
-          <line class="ground1" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round" stroke-linejoin="round"
+          <line class="ground1" fill="none" stroke="#ffffff" stroke-width="1.4173" stroke-linecap="round"
+                stroke-linejoin="round"
                 stroke-miterlimit="22.9256" x1="111.06" y1="251.018" x2="106.792" y2="255.286"></line>
         </g>
 
@@ -155,43 +173,56 @@
         <circle class="round" fill="#FFFFFF" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
                 stroke-linejoin="round" stroke-miterlimit="22.9256" cx="16.909" cy="248.475" r="3.819"></circle>
 
-        <line class="line1" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line1" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="16.533" y1="41.061" x2="16.533" y2="69.844"></line>
 
-        <line class="line2" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line2" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="16.533" y1="80.139" x2="16.533" y2="92.758"></line>
 
-        <line class="line3" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line3" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="16.533" y1="105.709" x2="16.533" y2="205.497"></line>
 
-        <line class="line4" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line4" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="20.352" y1="209.316" x2="49.136" y2="209.316"></line>
 
-        <line class="line5" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line5" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="55.289" y1="209.316" x2="59.108" y2="209.316"></line>
 
-        <line class="line6" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line6" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="65.536" y1="209.316" x2="111.365" y2="209.316"></line>
 
-        <line class="line7" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line7" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="115.184" y1="205.497" x2="115.184" y2="176.713"></line>
 
-        <line class="line8" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line8" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="115.184" y1="171.566" x2="115.184" y2="165.423"></line>
 
-        <line class="line9" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line9" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="115.184" y1="72.771" x2="115.184" y2="41.061"></line>
 
-        <line class="line10" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line10" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="115.184" y1="159.893" x2="115.184" y2="153.75"></line>
 
-        <line class="line11" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line11" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="115.184" y1="148.598" x2="115.184" y2="78.031"></line>
 
-        <line class="line12" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line12" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="20.352" y1="36.112" x2="87.823" y2="36.112"></line>
 
-        <line class="line13" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round" stroke-linejoin="round"
+        <line class="line13" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
+              stroke-linejoin="round"
               stroke-miterlimit="22.9256" x1="95.921" y1="36.112" x2="111.365" y2="36.112"></line>
 
         <!--<polyline class="crush1" fill="none" stroke="#ffffff" stroke-width="2.8346" stroke-linecap="round"
@@ -218,214 +249,214 @@
 </template>
 
 <script>
-  export default {
-    mounted() {
-      const phoneSvgSelector = '.phone-app svg';
-      const phoneFailSvgSelector = '.phone-app-svg';
-      const cogSelector = '.cogwheel';
+export default {
+  mounted() {
+    const phoneSvgSelector = '.phone-app svg'
+    const phoneFailSvgSelector = '.phone-app-svg'
+    const cogSelector = '.cogwheel'
 
-      // SSR screws this up? Delay so animation works...
-      setTimeout(() => {
-        document.querySelector(phoneSvgSelector).classList.add('phone-app-svg', 'draw');
+    // SSR screws this up? Delay so animation works...
+    setTimeout(() => {
+      document.querySelector(phoneSvgSelector).classList.add('phone-app-svg', 'draw')
 
-        document.querySelector(cogSelector).addEventListener('click', (e) => {
-          document.querySelector(phoneFailSvgSelector).classList.add('draw-cr');
-        });
-      }, 1000);
-    }
+      document.querySelector(cogSelector).addEventListener('click', (e) => {
+        document.querySelector(phoneFailSvgSelector).classList.add('draw-cr')
+      })
+    }, 1000)
   }
+}
 </script>
 
 <style lang="scss" scoped>
-  .phone-app {
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: -moz-box;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    -moz-box-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -webkit-justify-content: center;
-    justify-content: center;
-  }
+.phone-app {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -moz-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
 
-  .draw path.cogwheel {
-    -webkit-transform: rotateZ(180deg);
-    -moz-transform: rotateZ(180deg);
-    transform: rotateZ(180deg);
-    -webkit-transition-duration: 2s;
-    -moz-transition-duration: 2s;
-    transition-duration: 2s;
-  }
+.draw path.cogwheel {
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  transition-duration: 2s;
+}
 
-  path.cogwheel {
-    -webkit-transform-origin: center;
-    -moz-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-    -webkit-transform: rotateZ(0deg);
-    -moz-transform: rotateZ(0deg);
-    transform: rotateZ(0deg);
-    fill: rgba(7, 7, 7, 0);
-    cursor: pointer;
-  }
-
-
-  path.corner1, path.corner2, path.corner3, path.corner4, .side-x5F-down, .side-x5F-right, .side-x5F-top, .side-x5F-left, .line1, .line2, .line3, .line4, .line5, .line6, .line7, .line8, .line9, .line10, .line11, .line12, .line13, polyline.crush1, polyline.crush2, .crush3, line.crush4, polyline.crush5, .ground1, .ground1-1-, .ground1-5-, .ground1-2-, .ground1-3-, .ground1-4-, .ground1-6-, .ground1-7-, .ground1-8-, .ground1-9-, .ground1-10-, .ground1-11-, .ground1-12-, .ground1-13-, .ground1-14-, .ground1-15-, .ground1-16-, .ground1-17-, .ground1-18-, .ground1-19- {
-    stroke: rgba(255, 255, 255, 0.95);
-    stroke-dasharray: 30 1000;
-    stroke-dashoffset: 37;
-    /* stroke: #C3C1C1; */
-    -webkit-transition-duration: 3s;
-    -moz-transition-duration: 3s;
-    transition-duration: 3s;
-    -webkit-transition-timing-function: linear;
-    -moz-transition-timing-function: linear;
-    transition-timing-function: linear;
-  }
+path.cogwheel {
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
+  fill: rgba(7, 7, 7, 0);
+  cursor: pointer;
+}
 
 
-  .draw path.corner1, .draw path.corner2, .draw path.corner3, .draw path.corner4, .draw .side-x5F-down, .draw .side-x5F-right, .draw .side-x5F-top, .draw .side-x5F-top, .draw .side-x5F-left, .draw .line1, .draw .line2, .draw .line3, .draw .line4, .draw .line5, .draw .line6, .draw .line7, .draw .line8, .draw .line9, .draw .line10, .draw .line11, .draw .line12, .draw .line13, .draw polyline.crush1, .draw polyline.crush2, .draw .crush3, .draw line.crush4, .draw polyline.crush5, .draw .ground1, .draw .ground1-5-, .draw .ground1-1-, .draw .ground1-2-, .draw .ground1-3-, .draw .ground1-4-, .draw .ground1-6-, .draw .ground1-7-, .draw .ground1-8-, .draw .ground1-9-, .draw .ground1-10-, .draw .ground1-11-, .draw .ground1-12-, .draw .ground1-13-, .draw .ground1-14-, .draw .ground1-15-, .draw .ground1-16-, .draw .ground1-17-, .draw .ground1-18-, .draw .ground1-19- {
-    stroke: rgba(255, 255, 255, 1);
-    stroke-dasharray: 1000 1000;
-    stroke-dashoffset: 0;
-    -webkit-transition-duration: 3s;
-    -moz-transition-duration: 3s;
-    transition-duration: 6s;
-  }
-
-  .phone-app-svg circle, .hole2, .hole1, .button-phone {
-    stroke: rgba(255, 255, 255, 0);
-    fill: rgba(255, 255, 255, 0);
-  }
-
-
-  .draw circle, .draw .hole2, .draw .hole1, .draw .button-phone {
-
-    -webkit-transition-delay: 0.5s;
-    -moz-transition-delay: 0.5s;
-    transition-delay: 0.5s;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    stroke: rgba(255, 255, 255, 1);
-    fill: rgb(237, 237, 237);
-  }
-
-  .draw path.cogwheel {
-    -webkit-transform: rotateZ(180deg);
-    -moz-transform: rotateZ(180deg);
-    transform: rotateZ(180deg);
-    -webkit-transition-duration: 2s;
-    -moz-transition-duration: 2s;
-    transition-duration: 2s;
-  }
-
-  path.cogwheel {
-    -webkit-transform-origin: center;
-    -moz-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-    -webkit-transform: rotateZ(0deg);
-    -moz-transform: rotateZ(0deg);
-    transform: rotateZ(0deg);
-    fill: rgba(7, 7, 7, 0);
-    cursor: pointer;
-  }
-
-  .draw polyline.crush1, .draw polyline.crush2, .draw .crush3, .draw line.crush4, .draw polyline.crush5 {
-
-    -webkit-transition-delay: 1s;
-    stroke-dasharray: 179 1000;
-    -moz-transition-delay: 1s;
-
-    -webkit-transition-delay: 1s;
-
-    transition-delay: 1s;
-    -webkit-transition-duration: 5s;
-    -moz-transition-duration: 5s;
-    transition-duration: 1s;
-  }
+path.corner1, path.corner2, path.corner3, path.corner4, .side-x5F-down, .side-x5F-right, .side-x5F-top, .side-x5F-left, .line1, .line2, .line3, .line4, .line5, .line6, .line7, .line8, .line9, .line10, .line11, .line12, .line13, polyline.crush1, polyline.crush2, .crush3, line.crush4, polyline.crush5, .ground1, .ground1-1-, .ground1-5-, .ground1-2-, .ground1-3-, .ground1-4-, .ground1-6-, .ground1-7-, .ground1-8-, .ground1-9-, .ground1-10-, .ground1-11-, .ground1-12-, .ground1-13-, .ground1-14-, .ground1-15-, .ground1-16-, .ground1-17-, .ground1-18-, .ground1-19- {
+  stroke: rgba(255, 255, 255, 0.95);
+  stroke-dasharray: 30 1000;
+  stroke-dashoffset: 37;
+  /* stroke: #C3C1C1; */
+  -webkit-transition-duration: 3s;
+  -moz-transition-duration: 3s;
+  transition-duration: 3s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
 
 
-  .draw.draw-cr polyline.crush1, .draw.draw-cr polyline.crush2, .draw.draw-cr .crush3, .draw.draw-cr line.crush4, .draw.draw-cr polyline.crush5 {
+.draw path.corner1, .draw path.corner2, .draw path.corner3, .draw path.corner4, .draw .side-x5F-down, .draw .side-x5F-right, .draw .side-x5F-top, .draw .side-x5F-top, .draw .side-x5F-left, .draw .line1, .draw .line2, .draw .line3, .draw .line4, .draw .line5, .draw .line6, .draw .line7, .draw .line8, .draw .line9, .draw .line10, .draw .line11, .draw .line12, .draw .line13, .draw polyline.crush1, .draw polyline.crush2, .draw .crush3, .draw line.crush4, .draw polyline.crush5, .draw .ground1, .draw .ground1-5-, .draw .ground1-1-, .draw .ground1-2-, .draw .ground1-3-, .draw .ground1-4-, .draw .ground1-6-, .draw .ground1-7-, .draw .ground1-8-, .draw .ground1-9-, .draw .ground1-10-, .draw .ground1-11-, .draw .ground1-12-, .draw .ground1-13-, .draw .ground1-14-, .draw .ground1-15-, .draw .ground1-16-, .draw .ground1-17-, .draw .ground1-18-, .draw .ground1-19- {
+  stroke: rgba(255, 255, 255, 1);
+  stroke-dasharray: 1000 1000;
+  stroke-dashoffset: 0;
+  -webkit-transition-duration: 3s;
+  -moz-transition-duration: 3s;
+  transition-duration: 6s;
+}
 
-    stroke: rgba(255, 255, 255, 0.95);
-    stroke-dasharray: 30 1000;
-    stroke-dashoffset: 37;
-    /* stroke: #C3C1C1; */
-    -webkit-transition-duration: 4s;
-    -moz-transition-duration: 4s;
-    transition-duration: 1s;
-    -webkit-transition-timing-function: linear;
-    -moz-transition-timing-function: linear;
-    transition-timing-function: linear;
-    -webkit-transition-delay: 0s;
-
-    -moz-transition-delay: 0s;
-
-    transition-delay: inherit;
-  }
-
-  .text-process p {
-    font-size: 16pt;
-    font-weight: 400;
-  }
-
-  .dinamic-procc {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-
-    -webkit-box-align: stretch;
-
-    -webkit-align-items: stretch;
-
-    -moz-box-align: stretch;
-
-    -ms-flex-align: stretch;
-
-    align-items: stretch;
-
-    -ms-flex-line-pack: space-between;
-    -webkit-align-content: space-between;
-    align-content: space-between;
-  }
-
-  .img-process {
-    width: 100%;
-    min-height: 60vh;
-    background: #E7E7E7
-  }
+.phone-app-svg circle, .hole2, .hole1, .button-phone {
+  stroke: rgba(255, 255, 255, 0);
+  fill: rgba(255, 255, 255, 0);
+}
 
 
-  .draw.draw-cr path.cogwheel {
-    -webkit-transform: rotateZ(200deg);
-    -moz-transform: rotateZ(200deg);
-    transform: rotateZ(200deg);
-    -webkit-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    transition-duration: 1s;
-  }
+.draw circle, .draw .hole2, .draw .hole1, .draw .button-phone {
 
-  .active-process {
-    opacity: 1;
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  stroke: rgba(255, 255, 255, 1);
+  fill: rgb(237, 237, 237);
+}
 
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    color: white;
-  }
+.draw path.cogwheel {
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  transition-duration: 2s;
+}
+
+path.cogwheel {
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
+  fill: rgba(7, 7, 7, 0);
+  cursor: pointer;
+}
+
+.draw polyline.crush1, .draw polyline.crush2, .draw .crush3, .draw line.crush4, .draw polyline.crush5 {
+
+  -webkit-transition-delay: 1s;
+  stroke-dasharray: 179 1000;
+  -moz-transition-delay: 1s;
+
+  -webkit-transition-delay: 1s;
+
+  transition-delay: 1s;
+  -webkit-transition-duration: 5s;
+  -moz-transition-duration: 5s;
+  transition-duration: 1s;
+}
+
+
+.draw.draw-cr polyline.crush1, .draw.draw-cr polyline.crush2, .draw.draw-cr .crush3, .draw.draw-cr line.crush4, .draw.draw-cr polyline.crush5 {
+
+  stroke: rgba(255, 255, 255, 0.95);
+  stroke-dasharray: 30 1000;
+  stroke-dashoffset: 37;
+  /* stroke: #C3C1C1; */
+  -webkit-transition-duration: 4s;
+  -moz-transition-duration: 4s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+
+  -moz-transition-delay: 0s;
+
+  transition-delay: inherit;
+}
+
+.text-process p {
+  font-size: 16pt;
+  font-weight: 400;
+}
+
+.dinamic-procc {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  -webkit-box-align: stretch;
+
+  -webkit-align-items: stretch;
+
+  -moz-box-align: stretch;
+
+  -ms-flex-align: stretch;
+
+  align-items: stretch;
+
+  -ms-flex-line-pack: space-between;
+  -webkit-align-content: space-between;
+  align-content: space-between;
+}
+
+.img-process {
+  width: 100%;
+  min-height: 60vh;
+  background: #E7E7E7
+}
+
+
+.draw.draw-cr path.cogwheel {
+  -webkit-transform: rotateZ(200deg);
+  -moz-transform: rotateZ(200deg);
+  transform: rotateZ(200deg);
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.active-process {
+  opacity: 1;
+
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  color: white;
+}
 </style>

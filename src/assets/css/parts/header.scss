@@ -1,5 +1,6 @@
 header {
-  /*padding: 1rem 2rem;*/ /* Use amp-start spacing */
+  /*padding: 1rem 2rem;*/
+  /* Use amp-start spacing */
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -30,6 +31,7 @@ header .wrap {
   align-items: center;
   justify-content: space-between;
 }
+
 /*header img {
   width: 100px;
 }*/
@@ -50,11 +52,18 @@ header .wrap {
     flex-direction: row;
     flex: 1;
     justify-content: flex-end;
+    align-items: center;
   }
 
   header #menu > ul > li {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 64em) and (max-width: 102em) {
+  header #menu > ul > li:first-child {
+    display: none;
   }
 }
 
@@ -64,8 +73,8 @@ header .wrap {
   }
 
   header #menu > ul > li {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
@@ -75,7 +84,14 @@ header #menu li {
   margin-left: 20px;
   margin-right: 20px;
   display: flex;
-  i.menu-icon {margin-left: 0.5rem; width: 12px; height: 12px; background-color: var(--cgrey);}
+
+  i.menu-icon {
+    margin-left: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background-color: var(--cgrey);
+  }
+
   a {
     color: var(--cgrey);
     cursor: pointer;
@@ -86,6 +102,7 @@ header #menu li {
     letter-spacing: 0.1em;
     font-size: 0.9rem;
     font-weight: normal;
+
     &:hover {
       text-decoration: none;
     }
@@ -103,6 +120,7 @@ header .drop-menu {
   transition: 0.25s;
   padding-bottom: 10px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+
   a {
     margin-left: 20px;
     display: block;
@@ -115,6 +133,7 @@ header .drop-menu {
 
 header .drop-menu.display {
   transform: scaleY(1);
+
   a {
     opacity: 1;
   }
@@ -124,7 +143,7 @@ header #hamburger {
   cursor: pointer;
   border-radius: 50%;
   position: absolute;
-  left: 3%;
+  right: 3%;
   top: 30px;
   display: none;
   transform: translateY(-50%);
@@ -140,7 +159,7 @@ header #hamburger {
     cursor: pointer;
     border-radius: 50%;
     position: absolute;
-    left: 3%;
+    right: 3%;
     top: 25px;
     display: none;
     -webkit-transform: translateY(-50%);
@@ -153,8 +172,9 @@ header #hamburger {
     display: flex;
     height: 48px;
     flex: 1 1 auto;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 1rem;
   }
 
   .site-navbar-top {
@@ -180,14 +200,32 @@ header #hamburger span {
   background-color: var(--cblue);
   display: block;
   transition: 0.33s;
-  &:nth-child(1) {width: 32px;}
-  &:nth-child(2) {width: 32px;}
-  &:nth-child(3) {width: 32px;}
+
+  &:nth-child(1) {
+    width: 32px;
+  }
+
+  &:nth-child(2) {
+    width: 32px;
+  }
+
+  &:nth-child(3) {
+    width: 32px;
+  }
 }
+
 .display-menu header #hamburger {
-  span:nth-child(1) {transform: rotate(45deg) translate(8px, 8px); }
-  span:nth-child(2) {transform: rotate(-45deg) ;}
-  span:nth-child(3) {transform: rotate(45deg) translate(-8px, -8px);}
+  span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  span:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+
+  span:nth-child(3) {
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
 }
 
 #loader {
@@ -201,6 +239,7 @@ header #hamburger span {
   margin-left: -25px;
   margin-top: -25px;
   animation: spin 1s infinite linear;
+
   span {
     display: block;
     width: 100%;
@@ -212,19 +251,66 @@ header #hamburger span {
     border-width: 0px 0px 10px 10px;
     border-style: solid;
     border-color: transparent;
-    &:nth-child(0) {border-left-color: var(--cblue);}
-    &:nth-child(1) {transform: rotate(-40deg); border-left-color: var(--cblue);}
-    &:nth-child(2) {transform: rotate(-80deg); border-left-color: var(--cblue);}
-    &:nth-child(3) {transform: rotate(-130deg); border-left-color: var(--cgrey_green);}
-    &:nth-child(4) {transform: rotate(-170deg); border-left-color: var(--cgrey_green);}
-    &:nth-child(5) {transform: rotate(-210deg); border-left-color: var(--cgrey_green);}
-    &:nth-child(6) {transform: rotate(-250deg); border-left-color: var(--cgrey);}
-    &:nth-child(7) {transform: rotate(-280deg); border-left-color: var(--cgrey);}
-    &:nth-child(8) {transform: rotate(-320deg); border-left-color: var(--cgrey);}
-    &:nth-child(9) {transform: rotate(-360deg); border-left-color: var(--cblue);}
+
+    &:nth-child(0) {
+      border-left-color: var(--cblue);
+    }
+
+    &:nth-child(1) {
+      transform: rotate(-40deg);
+      border-left-color: var(--cblue);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(-80deg);
+      border-left-color: var(--cblue);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-130deg);
+      border-left-color: var(--cgrey_green);
+    }
+
+    &:nth-child(4) {
+      transform: rotate(-170deg);
+      border-left-color: var(--cgrey_green);
+    }
+
+    &:nth-child(5) {
+      transform: rotate(-210deg);
+      border-left-color: var(--cgrey_green);
+    }
+
+    &:nth-child(6) {
+      transform: rotate(-250deg);
+      border-left-color: var(--cgrey);
+    }
+
+    &:nth-child(7) {
+      transform: rotate(-280deg);
+      border-left-color: var(--cgrey);
+    }
+
+    &:nth-child(8) {
+      transform: rotate(-320deg);
+      border-left-color: var(--cgrey);
+    }
+
+    &:nth-child(9) {
+      transform: rotate(-360deg);
+      border-left-color: var(--cblue);
+    }
   }
 }
-@keyframes spin { from {transform: rotate(0deg);} to {transform: rotate(-360deg);}}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
 
 #overlay {
   display: block;
@@ -237,8 +323,11 @@ header #hamburger span {
   background-color: var(--cgrey);
   opacity: 0.5;
 }
+
 @media screen and (max-width: 64em) {
-  body {padding-top: 48px;}
+  body {
+    padding-top: 48px;
+  }
   header .wrap {
     height: 48px;
     justify-content: center;
@@ -264,14 +353,16 @@ header #hamburger span {
     /*height: calc(100vh - 48px);*/
     background: white;
     position: absolute;
-    top: 0; /* Required for Safari/iOS */
-    z-index: -1;
+    top: 48px; /* Position below the header */
+    z-index: 2999;
+
     li {
       height: var(--body_height_8);
       border-bottom: 1px solid var(--clightgrey);
       transition: 0.25s ease;
       opacity: 1;
       display: block;
+
       a {
       }
     }
@@ -282,6 +373,7 @@ header #hamburger span {
     margin-left: 0;
     margin-right: 0;
     transition: 0.25s ease;
+
     a {
       left: 0;
       line-height: var(--body_height_8);
@@ -294,9 +386,13 @@ header #hamburger span {
       &:hover {
         color: var(--cwhite) !important;
         background-color: var(--cblue);
-        i.menu-icon {background-color: var(--cwhite);}
+
+        i.menu-icon {
+          background-color: var(--cwhite);
+        }
       }
     }
+
     i.menu-icon {
       position: absolute;
       right: 20px;
@@ -311,6 +407,7 @@ header #hamburger span {
     left: 0;
     padding-bottom: 0;
     width: 100%;
+
     a {
       width: 100%;
       padding: 0 !important;
@@ -320,11 +417,10 @@ header #hamburger span {
     }
   }
 }
-@media screen
-and(max-width: 660px)
-and(max-height: 500px){
 
-  .display-menu header  {
+@media screen and (max-width: 660px) and (max-height: 500px) {
+
+  .display-menu header {
     max-height: 100vh;
     overflow-y: scroll;
   }
@@ -342,6 +438,7 @@ and(max-height: 500px){
     top: 67px;
   }
 }
+
 i {
   vertical-align: middle;
   display: inline-block;
@@ -368,4 +465,5 @@ i {
 .site-navbar-top {
   text-transform: uppercase;
   justify-content: flex-end;
+  align-items: center;
 }

@@ -1,8 +1,11 @@
 <template>
-  <section :class="`hero-section hero-testimonial ${this.bgColor ? this.bgColor : 'bg-light-grey' } flex ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`">
+  <section
+      :class="`hero-section hero-testimonial ${this.bgColor ? this.bgColor : 'bg-light-grey' } flex ${this.angle ? 'angle' : 'no-angle'} ${this.flipX ? 'flip-x' : 'no-flip' } ${this.className ? this.className : '' }`">
     <!-- Position relatively, or absolute positioning of the caption will fail -->
-    <div :class="`relative flex flex-wrap xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center ${this.leftPaneClassSuffix}`">
-      <div class="hero-image-wrapper"><img :class="`banner-image ${this.imageClass}`" v-bind:src="this.image" alt="" /></div>
+    <div
+        :class="`relative flex flex-wrap xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half flex-justify-center ${this.leftPaneClassSuffix}`">
+      <div class="hero-image-wrapper"><img :class="`banner-image ${this.imageClass}`" v-bind:src="this.image" alt=""/>
+      </div>
       <div v-if="typeof this.caption === 'string' && this.caption.length >0" class="figure-caption bg-bc-blue g-hero">
         <p class="g-pstyle4" style="text-align: right;">{{ this.caption }}</p>
         <p class="g-pstyle5" style="text-align: right;">{{ this.subCaption }}</p>
@@ -11,10 +14,11 @@
       <div class="banner-block testimonial flex">
         <div class="space-top-2x space-all">
           <div class="g-services">
-            <p class="g-pstyle8">"Blue Collar designed and implemented an amazing website for our business. We've seen an immediate increase in sales and flow through business."</p>
+            <p class="g-pstyle8">"Blue Collar designed and implemented an amazing website for our business. We've seen
+              an immediate increase in sales and flow through business."</p>
           </div>
           <div class="g-services flex flex-center space-top">
-            <img class="banner-image badge" src="/images/greg-and-steph-jimmy-poblanos.jpg" alt="" />
+            <img class="banner-image badge" src="/images/greg-and-steph-jimmy-poblanos.jpg" alt=""/>
             <div class="space-left">
               <p><strong>Greg L.</strong></p>
               <p><small>Jimmy Poblanos</small></p>
@@ -25,7 +29,8 @@
     </div>
 
     <!-- TODO: Allow changing of bg colors -->
-    <div :class="`sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half ${this.rightPaneClassSuffix}`">
+    <div
+        :class="`sm-flex flex-center flex-justify-center xs-flex-basis-full sm-flex-basis-full md-lg-flex-basis-full lg-flex-basis-half xl-flex-basis-half ${this.rightPaneClassSuffix}`">
       <div class="hero-block">
         <div class="flex flex-column">
           <div class="homepage-hero-title sm-space-bottom">
@@ -38,18 +43,19 @@
           </div>
           <slot></slot>
           <div
-            v-if="typeof this.link === 'string' && this.link.length >0"
-            class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
+              v-if="typeof this.link === 'string' && this.link.length >0"
+              class="homepage-hero-action action-link-block sm-hide md-hide lg-hide text-center"
           >
-            <a class="action-link xs-space-top space-bottom g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText"
-              >{{ this.linkText }}</a
+            <a class="action-link xs-space-top space-bottom g-pstyle3" v-bind:href="this.link"
+               v-bind:aria-label="this.linkText"
+            >{{ this.linkText }}</a
             >
           </div>
           <div
-            v-if="typeof this.link === 'string' && this.link.length >0"
-            class="homepage-hero-action action-link-block xs-hide text-center">
+              v-if="typeof this.link === 'string' && this.link.length >0"
+              class="homepage-hero-action action-link-block xs-hide text-center">
             <a class="action-link space-top g-pstyle3" v-bind:href="this.link" v-bind:aria-label="this.linkText"
-              >{{ this.linkText }}</a
+            >{{ this.linkText }}</a
             >
           </div>
         </div>
@@ -62,8 +68,8 @@
 // vue-markdown is broken, babel deps issues...
 // import VueMarkdown from 'vue-markdown'
 // Use marked instead
-import marked from 'marked';
-import Home from '~/data/Home.yml';
+import { marked } from 'marked'
+import Home from '~/data/Home.yml'
 
 export default {
   // TODO: Supply models via props??
@@ -131,36 +137,36 @@ export default {
   },
   computed: {
     Home() {
-      return Home;
+      return Home
     },
     compiledDescription() {
-      return marked(this.description);
+      return marked(this.description)
     }
   }
-};
+}
 </script>
 
 <style lang="scss">
-  img.badge {
-    width: 100px;
-    height: 100px;
-    -o-object-fit: cover;
-    max-width: none;
-    object-fit: cover;
+img.badge {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+  max-width: none;
+  object-fit: cover;
+}
+
+.badge {
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 1400px) {
+  .hero-testimonial .hero-image-wrapper img {
+    top: 10vh !important;
   }
 
-  .badge {
-      border-radius: 50%;
+  .hero-testimonial .testimonial {
+    position: relative;
+    top: -7vh;
   }
-
-  @media screen and (min-width: 1400px) {
-    .hero-testimonial .hero-image-wrapper img {
-      top: 10vh !important;
-    }
-
-    .hero-testimonial .testimonial {
-      position: relative;
-      top: -7vh;
-    }
-  }
+}
 </style>

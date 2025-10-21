@@ -127,7 +127,7 @@ items:
   - client: Jimmy Poblano's Mexican Cantina
     description: >-
       **The Client**
-  
+      
       
       **Our Solution**
       
@@ -144,7 +144,7 @@ items:
       HTML5, jQuery, LESS, Webpack, Gulp, Customized OpenCart
       build, PHP, Sim, Doctrine ORM/DBAL, MySQL, RESTful APIs, Adobe CC
       (Photoshop, Illustrator, etc.), Git
-    
+
     image: /images/portfolio/bc-showcase-jimmy-poblanos.png
     projectName: Jimmy Poblanos Food Truck Website
     testimonialId: jimmyp
@@ -179,17 +179,17 @@ items:
   - client: Baan Saowanee
     description: >-
       **The Client**
-  
-  
+      
+      
       We designed a custom SPA-style mobile-friendly theme for their website
       featuring completely parallax scrollingeffects and a animated page
       transitions. A customized build of OpenCart is used on the backend for
       content and product management.
-  
-  
+      
+      
       **Our Solution**
-  
-  
+      
+      
       Baan Saowanee is a collection of holiday home rentals situated on the
       north side of Ko Samui island, a short 2 minute drive to scenic Mae Nam
       Beach. Baan Saowanee guests have a range of rental options to choose from,
@@ -203,24 +203,24 @@ items:
   - client: Caffe Tech 2004 Ltd.
     description: >-
       **The Client**
-  
-  
+      
+      
       Caffe Tech is an Edmonton based importer and distributor of premium
       (primarily Italian and Swiss) commercial and home coffee equipment which
       provides many popular Albertan establishments with their restaurant and
       coffee making equipment.
       
-  
+      
       **Our Solution**
       
-  
+      
       We designed a custom e-commerce platform including a custom payment
       extension for Global Payments (Canada) and a shipping extension for
       Purolator’s Shipping API (SOAP) featuring item tracking, support for
       multiple items per package, label printing, international documents
       generation, and automatically scheduled package pickups.
-  
-  
+      
+      
       **Technologies**
       
       
@@ -246,14 +246,14 @@ items:
       
       **Our Solution**
       
-  
+      
       We were contracted to develop a hybrid mobile application for deployment
       on tablets, Linux kiosks and smart televisions which replicates (and furthers)
       the functionality available in their existing kiosk system. These tablets are
       currently being deployed in multiple off-track-betting locations in the
       continental USA.
-  
-  
+      
+      
       **Technologies**
       
       
@@ -281,7 +281,7 @@ items:
       
       **Our Solution**
       
-  
+      
       As Caffe Tech was expanding their business and opening multiple new
       locations, they needed an inventory management solution that would
       synchronize their QuickBooks Desktop / Online customers, inventory and
@@ -292,8 +292,8 @@ items:
       that automatically handled synchronization of all data across multiple
       installations and software systems using a combination of PHP, Slim,
       Doctrine ORM/DBAL, MySQL and the QuickBooks Online API and Desktop SDK.
-  
-  
+      
+      
       **Technologies**
       
       
@@ -357,8 +357,8 @@ items:
       We designed and developed a custom Windows Desktop application to
       help track corrosion levels of pipelines and storage tanks at thousands of
       industrial locations across Alberta.
-  
-  
+      
+      
       **Technologies**
       
       
@@ -379,7 +379,7 @@ items:
       The Alberta Motor Association was looking to replace its legacy and
       end-of-life ‘FrontTier’ insurance policy management system with an
       in-house, web-based application and backend service network.
-
+      
       
       **Our Solution**
       
@@ -514,7 +514,7 @@ items:
       magazine and website with a print distribution network across Alberta and
       Ontario.
       
-  
+      
       **Our Solution**
       
       
@@ -524,8 +524,8 @@ items:
       aggregated using data providers from organizations including Strathcom
       Media and Boost Motor Group for display. At its peak they had over 90,000
       vehicles and vehicles from over 600 dealerships listed on their website.
-  
-  
+      
+      
       **Scope of Work**
       
       
@@ -538,8 +538,8 @@ items:
       •	Combined SEO optimization and dynamic content generation
       •	Designed and built Print->PDF->Web publishing application using Kohana and ImageMagick
       •	Optimized image caching mechanisms
-  
-  
+      
+      
       **Technologies**
       
       
@@ -593,15 +593,15 @@ items:
       
       
       **Our Solution**
-  
-  
+      
+      
       We designed and built WordPress plugins to create, display, and update product matrices
       which were displayed on their corporate website and online "stores". It featured a GUI
       to create grid/matrix supporting CRUD functions for resource (product) rows, columns and cells,
       inline AJAX-based editing, cell content overriding as well as a style editor for formatting
       resource rows, columns and cells
       
-
+      
       **Technologies**
       
       
@@ -624,7 +624,7 @@ items:
       
       **Our Solution**
       
-
+      
       We developed a custom Magento "base" theme and several Magento extensions for
       product display, inventory management and administration. We also assisted
       with QA testing and debugging of (other) Magento e-commerce installations.
@@ -762,6 +762,7 @@ items:
       Linux, Apache, PHP, MySQL, jQuery, FFmpeg, Adobe Flash
     endDate: 2009-08-01T12:00:00.000Z
     projectName: Binc VFX Website and Asset Management System
+    testimonialId: bincvfx
     startDate: 2009-08-01T12:00:00.000Z
     isPublic: true
     displayImage: true
@@ -864,24 +865,24 @@ items:
   - client: Nfineon
     description: >-
       **The Client**
-  
-  
+      
+      
       **Our Solution**
-  
-  
+      
+      
       We developed a community biofuel-centric community portal for GRES, a California, USA based biofuels
       research think-tank featuring file-sharing, document management, and social media integration with Facebook.
-  
-  
+      
+      
       **Technologies**
-  
-  
+      
+      
       Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg, Adobe Flash
     endDate: 2008-04-01T12:00:00.000Z
     projectName: Global Renewable Energy Services Portal
     startDate: 2008-04-01T12:00:00.000Z
     isPublic: true
     displayImage: true
-  
-    
-  
+
+
+

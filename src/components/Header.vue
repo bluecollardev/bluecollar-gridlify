@@ -7,15 +7,19 @@
         <span></span>
       </div>
       <a href="/" aria-label="Home Page" class="logo-wrapper flex flex-center xs-flex-justify-center">
-        <img class="logo" src="/images/blue-collar-dev.png" alt="" />
+        <img class="logo" src="/images/blue-collar-dev.png" alt=""/>
       </a>
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0">
-          <li><a href="/" aria-label="Our Team" @click="hideMenu()">Home</a></li>
-          <li><a href="/#services" aria-label="Services" @click="hideMenu()">What We Build</a></li>
-          <!--<li><a href="/company" aria-label="Websites" @click="hideMenu()">Our People</a></li>-->
-          <li><a href="/#contact" aria-label="Enquire" @click="hideMenu()">Get In Touch</a></li>
-          <li><a href="https://github.com/bluecollardev" target="_blank" aria-label="GitHub" @click="hideMenu()">GitHub</a></li>
+          <li><a href="/" aria-label="Our Team" @click="hideMenu()">{{ $t('nav.home') }}</a></li>
+          <li><a href="/#services" aria-label="Services" @click="hideMenu()">{{ $t('nav.whatWeBuild') }}</a></li>
+          <li><a href="/company" aria-label="Websites" @click="hideMenu()">{{ $t('nav.ourPeople') }}</a></li>
+          <li><a href="/#contact" aria-label="Enquire" @click="hideMenu()">{{ $t('nav.getInTouch') }}</a></li>
+          <li><a href="https://github.com/bluecollardev" target="_blank" aria-label="GitHub"
+                 @click="hideMenu()">{{ $t('nav.github') }}</a></li>
+          <li style="height: auto" class="language-switcher-menu-item">
+            <language-switcher/>
+          </li>
           <li style="height: auto" class="soundtrack-controls-menu-item pad-bottom">
             <a style="flex-direction: column; align-items: flex-start">
               <span style="display: block">Soundtrack Controls</span>
@@ -32,7 +36,6 @@
           <a href="https://www.instagram.com/bluecollardev" class="d-flex align-items-center mr-4 ml-4">
             <span class="icon-instagram mr-2"></span>
             <!-- TODO: Implement tooltip -->
-            <!--<span class="d-none d-md-inline-block">@bluecollardev</span>-->
           </a>
           <a href="https://www.facebook.com/bluecollardev" class="d-flex align-items-center mr-4">
             <span class="icon-facebook mr-2"></span>
@@ -47,7 +50,6 @@
           <a href="#" class="d-flex align-items-center">
             <span class="icon-envelope mr-2"></span>
             <!-- TODO: Implement tooltip -->
-            <!--<span class="d-none d-lg-inline-block">info@bluecollardev.com</span>-->
           </a>
         </div>
       </nav>
@@ -56,43 +58,47 @@
 </template>
 
 <script>
-  import MenuMixin from '~/core/mixins/MenuMixin';
+import MenuMixin from '~/core/mixins/MenuMixin'
+import LanguageSwitcher from '~/components/LanguageSwitcher.vue'
 
-  export default {
-    mixins: [
-      MenuMixin
-    ],
-    methods: {
-      handleMenuDisplay() {
-        this.displayMenu();
-      }
+export default {
+  components: {
+    LanguageSwitcher
+  },
+  mixins: [
+    MenuMixin
+  ],
+  methods: {
+    handleMenuDisplay() {
+      this.displayMenu()
     }
   }
+}
 </script>
 
 <style lang="scss">
-  @media screen and (max-width: 40em) {
-    .site-menu {
-      .controls {
-        button {
-          text-shadow: none;
-        }
+@media screen and (max-width: 40em) {
+  .site-menu {
+    .controls {
+      button {
+        text-shadow: none;
       }
     }
-
-    .social-links-menu-item {
-      border-bottom: none !important;
-    }
-
-    .site-navbar-top {
-      justify-content: flex-start !important;
-    }
   }
 
-  @media screen and (min-width: 40em) {
-    .social-links-menu-item,
-    .soundtrack-controls-menu-item {
-      display: none !important;
-    }
+  .social-links-menu-item {
+    border-bottom: none !important;
   }
+
+  .site-navbar-top {
+    justify-content: flex-start !important;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .social-links-menu-item,
+  .soundtrack-controls-menu-item {
+    display: none !important;
+  }
+}
 </style>

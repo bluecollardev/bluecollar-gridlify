@@ -6,7 +6,7 @@
           <div>
             <div class="space-bottom g-get-started process-segment sm-flex">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 270 220"
+                   x="0px" y="0px" viewBox="0 0 270 220"
                    xml:space="preserve">
                   <path fill="white" d="M214.8,55.3c-2.1,0-4.2,0.1-6.3,0.3c-7-22.8-28.1-38.9-52.7-38.9c-2.9,0-6.8,0.2-10.4,0.7
                     C131.4,5.5,116.7,0,99.4,0C62.6,0,32.7,26.5,26.6,63.6C10.5,73.6,0,90.4,0,106.8c0,28.4,23.6,51.5,52.6,51.5h16.6l-0.3,51.4
@@ -38,7 +38,7 @@
           <div class="sm-space-left">
             <div class="space-bottom g-get-started process-segment sm-flex">
               <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
-                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 220"
+                   x="0px" y="0px" viewBox="0 0 256 220"
                    xml:space="preserve">
                   <g>
                     <path fill="white" d="M36.1,107.5v4.1c0,2.8,2.3,5.1,5.1,5.1h131.9c2.8,0,5.1-2.3,5.1-5.1v-4.1c0-2.8-2.3-5.2-5.1-5.2H41.2
@@ -81,7 +81,7 @@
           <div>
             <div class="space-bottom g-get-started process-segment sm-flex">
               <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg"
-                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 259 220"
+                   x="0px" y="0px" viewBox="0 0 259 220"
                    xml:space="preserve">
                   <g>
                     <path fill="white" d="M250,0H9C4,0,0,4,0,9v201.2c0,5,4,9,9,9h241c5,0,9-4,9-9V9C259,4,255,0,250,0z M223,18.3c5,0,9.1,4.1,9.1,9.1
@@ -115,7 +115,7 @@
           <div class="sm-space-left">
             <div class="space-bottom g-get-started process-segment sm-flex">
               <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg"
-                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 224 220"
+                   x="0px" y="0px" viewBox="0 0 224 220"
                    xml:space="preserve">
                   <g>
                     <path fill="white" d="M215.6,203.1H7.9c-4.4,0-7.9,3.6-7.9,7.9s3.5,7.9,7.9,7.9h207.7c4.4,0,7.9-3.6,7.9-7.9S220,203.1,215.6,203.1z

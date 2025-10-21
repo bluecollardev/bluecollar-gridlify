@@ -178,46 +178,46 @@
 </template>
 
 <script>
-  export default {
-    mounted() {
+export default {
+  mounted() {
 
-    }
   }
+}
 </script>
 
 
 <style lang="scss" scoped>
-  .intro-maze {
-    .shape {
-      stroke-dasharray: 280;
-      stroke-dashoffset: 280;
-      animation: dash 8s forwards;
-      -webkit-animation: dash 8s forwards;
-      animation-timing-function: cubic-bezier(0.195, 0.010, 0.940, 1.030);
-      -webkit-animation-timing-function: cubic-bezier(0.195, 0.010, 0.940, 1.030);
+.intro-maze {
+  .shape {
+    stroke-dasharray: 280;
+    stroke-dashoffset: 280;
+    animation: dash 8s forwards;
+    -webkit-animation: dash 8s forwards;
+    animation-timing-function: cubic-bezier(0.195, 0.010, 0.940, 1.030);
+    -webkit-animation-timing-function: cubic-bezier(0.195, 0.010, 0.940, 1.030);
 
-    }
+  }
 
-    .shape:nth-child(even) {
-      animation-delay: 1s;
-      -webkit-animation-delay: 1s;
-    }
+  .shape:nth-child(even) {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+  }
 
-    .shape:nth-child(4n+0) {
-      animation-delay: 2.2s;
-      -webkit-animation-delay: 2.2s;
-    }
+  .shape:nth-child(4n+0) {
+    animation-delay: 2.2s;
+    -webkit-animation-delay: 2.2s;
+  }
 
-    @keyframes dash {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    @-webkit-keyframes dash {
-      to {
-        stroke-dashoffset: 0;
-      }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
     }
   }
+
+  @-webkit-keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}
 </style>
