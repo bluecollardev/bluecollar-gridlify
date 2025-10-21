@@ -62,13 +62,13 @@
     ],
     data() {
       return {
-        isMobile: false
+        windowWidth: 1920
       };
     },
     computed: {
       backgroundImage() {
         // Use WebP on mobile for jungle-stream
-        if (this.image === '/images/jungle-stream.svg' && this.isMobile) {
+        if (this.image === '/images/jungle-stream.svg' && this.windowWidth <= 1024) {
           return '/images/jungle-stream.webp';
         }
         return this.image;
@@ -76,9 +76,9 @@
     },
     mounted() {
       if (typeof window !== 'undefined') {
-        this.isMobile = window.innerWidth <= 1024;
+        this.windowWidth = window.innerWidth;
         window.addEventListener('resize', () => {
-          this.isMobile = window.innerWidth <= 1024;
+          this.windowWidth = window.innerWidth;
         });
       }
 

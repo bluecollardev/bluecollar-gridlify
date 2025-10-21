@@ -418,12 +418,10 @@
       background-image: linear-gradient(15deg, #111822 0%, #33587a 90%);
     }
 
-    /* iOS background-attachment doesn't play well */
-    .hero-section-01-col {
-      &.jungle-stream {
-        background-image: url(/images/jungle-stream.webp) !important;
-        background-position: center bottom; /* Center horizontally, align to bottom */
-      }
+    /* iOS background-attachment doesn't play well - Force WebP on mobile */
+    .hero-section-01-col.jungle-stream {
+      background-image: url(/images/jungle-stream.webp) !important;
+      background-position: center bottom !important; /* Center horizontally, align to bottom */
     }
   }
 
