@@ -13,7 +13,7 @@
       className="jungle-stream hero-first sm-pad-top pad-bottom-2x text-shadow relative"
     >
       <template v-slot:bg>
-        <fishing-scene class="xs-hide sm-hide"></fishing-scene>
+        <fishing-scene></fishing-scene>
       </template>
 
       <template v-slot:title>

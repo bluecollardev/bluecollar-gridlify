@@ -1,12 +1,14 @@
 <template>
   <div class="fishing-scene">
-    <span ref="fishingRod" @click="doCast()" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
-      <span class="line-anchor"></span><img :class="`fishing-rod`" src="/images/fishing-rod.svg" />
-    </span>
-    <img ref="redSnapper" class="red-snapper fish" src="/images/red-snapper.svg" />
-    <img ref="fishCaught" class="fish-caught fish" src="/images/red-snapper.svg" />
-    <div id="casting-line"></div>
-    <div id="reeling-line"></div>
+    <div class="fishing-interactive">
+      <span ref="fishingRod" @click="doCast()" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
+        <span class="line-anchor"></span><img :class="`fishing-rod`" src="/images/fishing-rod.svg" />
+      </span>
+      <img ref="redSnapper" class="red-snapper fish" src="/images/red-snapper.svg" />
+      <img ref="fishCaught" class="fish-caught fish" src="/images/red-snapper.svg" />
+      <div id="casting-line"></div>
+      <div id="reeling-line"></div>
+    </div>
   </div>
 </template>
 <script>
@@ -275,6 +277,12 @@
     position: absolute;
     width: 100%;
     height: 100%;
+  }
+
+  .fishing-interactive {
+    @media screen and (max-width: 52em) {
+      display: none !important;
+    }
   }
 
   #casting-line {
