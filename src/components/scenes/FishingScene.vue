@@ -1,10 +1,10 @@
 <template>
   <div class="fishing-scene">
+    <RedSnapper ref="redSnapper" />
     <div class="fishing-interactive">
       <span ref="fishingRod" @click="doCast()" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
         <span class="line-anchor"></span><img :class="`fishing-rod`" src="/images/fishing-rod.svg" />
       </span>
-      <img ref="redSnapper" class="red-snapper fish" src="/images/red-snapper.svg" />
       <img ref="fishCaught" class="fish-caught fish" src="/images/red-snapper.svg" />
       <div id="casting-line"></div>
       <div id="reeling-line"></div>
@@ -15,8 +15,12 @@
   import anime from 'animejs';
   import SVG from 'svg.js';
   import 'svg.pathmorphing.js';
+  import RedSnapper from '../RedSnapper.vue';
 
   export default {
+    components: {
+      RedSnapper
+    },
     props: {
       parabolicFx: {
         type: Function,
@@ -47,7 +51,7 @@
       },
       animateOnParabolicPath(el, fx, vtx, cb) {
         if (typeof window !== 'undefined') {
-          let x = 25;
+          let x = 15;
           let requestId = null;
 
           const updatePosition = () => {
@@ -63,7 +67,7 @@
             if (x > 800 + 800) {
               cancelAnimationFrame(requestId);
             } else {
-              x += 25;
+              x += 15;
               requestId = requestAnimationFrame(updatePosition);
             }
           };
@@ -74,12 +78,20 @@
       reelInFish() {
         this.doFishJump();
       },
+      scheduleNextJump() {
+        // Random interval between 5 and 13 seconds
+        const randomDelay = Math.random() * (13000 - 5000) + 5000;
+        this.interval = setTimeout(() => {
+          this.doFishJump();
+          this.scheduleNextJump();
+        }, randomDelay);
+      },
       doFishJump() {
         if (typeof window !== 'undefined') {
           const el = document.querySelector('.fish');
 
           const xVertex = 700;
-          const yVertex = 500;
+          const yVertex = 300;
 
           // requestAnimationFrame
           this.animateOnParabolicPath(el,
@@ -251,7 +263,7 @@
     },
     mounted() {
       if (typeof window !== 'undefined') {
-        this.interval = setInterval(this.doFishJump, 30000);
+        this.scheduleNextJump();
         setTimeout(this.doCast, 1500);
 
         // Add resize listener to clear fish and reeling line
@@ -261,7 +273,7 @@
     },
     beforeUnmount() {
       if (typeof window !== 'undefined') {
-        clearInterval(this.interval);
+        clearTimeout(this.interval);
 
         // Remove resize listener
         if (this.resizeHandler) {
@@ -425,20 +437,9 @@
     }
   }
 
-  .red-snapper, .fish-caught {
+  .fish-caught {
     width: 301px;
     height: 120px;
-  }
-
-  .red-snapper {
-    position: absolute;
-    max-width: 400px;
-    left: -200px;
-    bottom: -200px;
-    transform: rotate(-45deg) scaleX(-1);
-  }
-
-  .fish-caught {
     position: absolute;
     max-width: 400px;
     bottom: -350px;
