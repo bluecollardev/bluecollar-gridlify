@@ -33,7 +33,7 @@ export default {
   /* Match header */
   top: 100%;
   left: 0;
-  z-index: 5000;
+  z-index: 10000;
   overflow-y: auto;
 }
 
