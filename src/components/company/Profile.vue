@@ -53,6 +53,13 @@
               </div>
             </div>
 
+            <div class="about-section">
+              <div class="label">ABOUT:</div>
+              <div class="about-text">
+                {{ profileData.about }}
+              </div>
+            </div>
+
             <div class="skills-section">
               <div class="label">PRIMARY TECHNOLOGIES:</div>
               <div class="tech-badges">
@@ -117,6 +124,7 @@ export default {
         specialty: 'FULL-STACK DEVELOPMENT',
         yearsOfService: this.calculateYearsOfService(),
         clearance: 'TOP SECRET',
+        about: 'Providing discerning international clients with intuitive, engaging, reliable and secure software solutions, solving complex business problems for a wide range of industries.',
         primaryTech: [
           'TypeScript',
           'React',
@@ -153,7 +161,6 @@ export default {
   justify-content: center;
   padding: 2rem;
   padding-bottom: 15vh;
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   position: relative;
 }
 
@@ -164,7 +171,7 @@ export default {
 }
 
 .military-id-card {
-  width: 600px;
+  width: 800px;
   max-width: 95vw;
   background: linear-gradient(to bottom, #d4d4d4 0%, #e8e8e8 50%, #d4d4d4 100%);
   border: 3px solid #2c3e50;
@@ -191,15 +198,15 @@ export default {
 .card-header {
   background: linear-gradient(to bottom, #1a1a1a 0%, #2c2c2c 100%);
   padding: 0.5rem;
-  border-bottom: 2px solid #ffd700;
+  border-bottom: 2px solid #78b7d6;
   position: relative;
 
   .header-stripe {
     height: 3px;
     background: repeating-linear-gradient(
       90deg,
-      #ffd700 0px,
-      #ffd700 10px,
+      #78b7d6 0px,
+      #78b7d6 10px,
       #000 10px,
       #000 20px
     );
@@ -216,7 +223,7 @@ export default {
     width: 50px;
     height: 50px;
     background: url('/images/blue-collar-dev.png') center/contain no-repeat;
-    border: 2px solid #ffd700;
+    border: 2px solid #78b7d6;
     border-radius: 50%;
     flex-shrink: 0;
   }
@@ -226,7 +233,7 @@ export default {
     text-align: center;
 
     h3 {
-      color: #ffd700;
+      color: #78b7d6;
       font-size: 1.2rem;
       font-weight: 900;
       letter-spacing: 2px;
@@ -280,7 +287,7 @@ export default {
     font-weight: bold;
     letter-spacing: 1px;
     background: #000;
-    color: #ffd700;
+    color: #78b7d6;
     padding: 0.25rem 0.5rem;
     border-radius: 3px;
   }
@@ -320,6 +327,27 @@ export default {
   }
 }
 
+.about-section {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #ccc;
+
+  .label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-text {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: #2c3e50;
+    font-style: italic;
+  }
+}
+
 .skills-section {
   margin-top: 0.5rem;
 
@@ -339,13 +367,13 @@ export default {
 
   .tech-badge {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    color: #ffd700;
+    color: #78b7d6;
     font-size: 0.65rem;
     padding: 0.3rem 0.6rem;
     border-radius: 3px;
     font-weight: bold;
     letter-spacing: 0.5px;
-    border: 1px solid #ffd700;
+    border: 1px solid #78b7d6;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 }
@@ -356,7 +384,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 2px solid #ffd700;
+  border-top: 2px solid #78b7d6;
 }
 
 .barcode-section {
@@ -374,12 +402,12 @@ export default {
       #fff 2px,
       #fff 4px
     );
-    border: 1px solid #ffd700;
+    border: 1px solid #78b7d6;
   }
 
   .issue-date {
     font-size: 0.65rem;
-    color: #ffd700;
+    color: #78b7d6;
     letter-spacing: 1px;
     font-weight: bold;
   }
@@ -391,13 +419,13 @@ export default {
   .signature-line {
     width: 150px;
     height: 30px;
-    border-bottom: 2px solid #ffd700;
+    border-bottom: 2px solid #78b7d6;
     margin-bottom: 0.25rem;
   }
 
   .signature-label {
     font-size: 0.6rem;
-    color: #ffd700;
+    color: #78b7d6;
     letter-spacing: 1px;
     font-weight: bold;
   }
