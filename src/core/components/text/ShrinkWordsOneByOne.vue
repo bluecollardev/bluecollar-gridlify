@@ -67,7 +67,7 @@ export default {
           .add({
             targets: wordsTarget,
             opacity: 0,
-            duration: 1000
+            duration: 500
           })
           // Animate each word in one by one
           .add({
