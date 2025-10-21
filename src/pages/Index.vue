@@ -430,6 +430,16 @@
   @media screen and (max-width: 64em) {
     .jungle-stream {
       z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .hero-section-content {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-top: -72px;
+      }
     }
 
     #services {

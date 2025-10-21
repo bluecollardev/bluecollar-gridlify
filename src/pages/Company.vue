@@ -291,3 +291,20 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  @media screen and (max-width: 64em) {
+    .hero-first {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .hero-section-content {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-top: -72px;
+      }
+    }
+  }
+</style>
