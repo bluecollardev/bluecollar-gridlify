@@ -2,12 +2,21 @@ import { createApp } from 'vue'
 import router from './router'
 import App from './App.vue'
 import i18n from './i18n'
+import VueGoogleMaps from '@fawmi/vue-google-maps'
 
 // Import global CSS
 import '~/assets/css/main.scss'
 import '~/assets/fonts/icomoon/style.css'
 
 const app = createApp(App)
+
+// Configure Google Maps
+app.use(VueGoogleMaps, {
+  load: {
+    key: import.meta.env.VITE_GOOGLE_MAP_KEY || 'AIzaSyCZtfAbHrh4EpCTnNFmFveLQ0MUg1S3hG8',
+    libraries: 'places'
+  }
+})
 
 // Browser detection utility
 const browserDetect = () => {

@@ -1,21 +1,18 @@
 <template>
   <div class="google-map flex">
-    <GmapMap
+    <GMapMap
         ref="mapRef"
         class="map-01"
-        :center="this.gmapCenter"
+        :center="gmapCenter"
         :zoom="14"
         style="width: 100%; height: 100%"
-        :options="this.gmapOptions"
+        :options="gmapOptions"
     >
-    </GmapMap>
+    </GMapMap>
   </div>
 </template>
 
 <script>
-// TODO: Update to use @fawmi/vue-google-maps or alternative
-// import { gmapApi } from '@fawmi/vue-google-maps';
-
 export default {
   data: () => ({
     lastWindowScroll: {
@@ -25,8 +22,8 @@ export default {
     scrollThreshold: 5,
     parallaxMultiplier: 5,
     gmapCenter: {
-      lat: 48.455,
-      lng: -123.35
+      lat: 12.9236,
+      lng: 100.9200
     },
     gmapOptions: {
       zoomControl: false,
@@ -44,7 +41,9 @@ export default {
     gmapEl: null
   }),
   computed: {
-    // google: gmapApi
+    google() {
+      return window.google
+    }
   },
   methods: {
     initializeMap() {
