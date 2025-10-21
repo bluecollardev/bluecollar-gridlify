@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss">
 .shoot-to-thrill-scene {
-  transform: scale(0.5);
+  transform: scale(0.625);
   transform-origin: center center;
 }
 
