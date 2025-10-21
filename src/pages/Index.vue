@@ -421,6 +421,7 @@
     /* iOS background-attachment doesn't play well */
     .hero-section-01-col {
       &.jungle-stream {
+        background-image: url(/images/jungle-stream.webp) !important;
         background-position: center bottom; /* Center horizontally, align to bottom */
       }
     }
