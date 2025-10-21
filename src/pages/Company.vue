@@ -303,7 +303,7 @@
         align-items: center;
         justify-content: center;
         display: flex;
-        margin-top: -72px;
+        margin-top: -20rem;
       }
     }
   }
