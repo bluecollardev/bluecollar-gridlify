@@ -159,8 +159,9 @@ header #hamburger {
     display: flex;
     height: 48px;
     flex: 1 1 auto;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 1rem;
   }
 
   .site-navbar-top {
