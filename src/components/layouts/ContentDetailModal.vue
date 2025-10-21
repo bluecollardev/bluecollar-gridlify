@@ -33,6 +33,20 @@ export default {
   left: 0;
   z-index: 99999;
   overflow: hidden;
+
+  .panel-header {
+    h2 {
+      font-size: 1rem;
+    }
+
+    b {
+      font-size: 1.2rem;
+    }
+  }
+
+  .panel-content {
+    font-size: 0.875rem;
+  }
 }
 
 @media screen and (min-width: 40em) {
@@ -40,6 +54,20 @@ export default {
     opacity: 1;
     top: 100%;
     left: 0;
+
+    .panel-header {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      b {
+        font-size: 1.5rem;
+      }
+    }
+
+    .panel-content {
+      font-size: 1rem;
+    }
   }
 }
 </style>
