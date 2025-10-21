@@ -35,7 +35,7 @@
             <p class="text-center">{{ $t('company.intro2') }}</p>
             <div class="text-center">
               <a @click="scrollToTeam" class="action-link transparent space-top g-pstyle3"
-                 style="cursor: pointer;">{{ $t('company.meetConsultants') }}</a>
+                 style="cursor: pointer;">{{ $t('company.learnMore') }}</a>
             </div>
           </div>
         </div>
