@@ -26,7 +26,7 @@
         isCasting: false,
         isOnHook: false,
         resizeHandler: null,
-        fishCaughtOffset: 420 // Vertical offset for fish-caught position on line
+        fishCaughtOffset: 470 // Vertical offset for fish-caught position on line
       }
     },
     methods: {
