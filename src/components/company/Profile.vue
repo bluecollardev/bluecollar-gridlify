@@ -115,7 +115,7 @@ export default {
         rank: 'SENIOR SOFTWARE ENGINEER',
         specialty: 'FULL-STACK DEVELOPMENT',
         yearsOfService: this.calculateYearsOfService(),
-        clearance: 'TOP SECRET',
+        clearance: 'CSIS-LVL-2',
         about: 'Providing discerning international clients with intuitive, engaging, reliable and secure software solutions, solving complex business problems for a wide range of industries.',
         recentMissions: [
           {
