@@ -1,6 +1,6 @@
 <template>
   <div class="fishing-scene">
-    <RedSnapper ref="redSnapper" class="desktop-fish" />
+    <RedSnapper ref="redSnapper" class="desktop-fish" :jumpDistance="jumpDistance" />
     <div class="fishing-interactive">
       <span ref="fishingRod" @click="doCast()" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
         <span class="line-anchor"></span><img :class="`fishing-rod`" src="/images/fishing-rod.svg" />
@@ -40,7 +40,10 @@
 
   // Fish Positioning Constants
   const FISH_VERTICAL_OFFSET = 145;
-  const FISH_HORIZONTAL_OFFSET = 369;
+  const FISH_HORIZONTAL_OFFSET = 360;
+
+  // Red Snapper Jump Distance (as percentage of page width)
+  const JUMP_DISTANCE_PERCENTAGE = 0.68; // 1300px / ~1920px ≈ 68%
 
   export default {
     components: {
@@ -50,7 +53,13 @@
       return {
         isCasting: false,
         isOnHook: false,
-        resizeHandler: null
+        resizeHandler: null,
+        pageWidth: typeof window !== 'undefined' ? window.innerWidth : 1920
+      }
+    },
+    computed: {
+      jumpDistance() {
+        return Math.round(this.pageWidth * JUMP_DISTANCE_PERCENTAGE);
       }
     },
     methods: {
@@ -201,6 +210,11 @@
         }
       },
       handleResize() {
+        // Update page width for reactive jumpDistance calculation
+        if (typeof window !== 'undefined') {
+          this.pageWidth = window.innerWidth;
+        }
+
         // Clear the fish and reeling line on resize
         const fishCaught = document.querySelector('.fish-caught');
         if (fishCaught) {
