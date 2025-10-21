@@ -24,6 +24,7 @@
               :text="$t('home.deliverResults1')"
               class="title text-center pad-bottom"
               :loop="false"
+              :active="currentPhraseIndex === 0"
               @animationComplete="nextPhrase">
           </shrink-words-one-by-one-text-effect>
           <shrink-words-one-by-one-text-effect
@@ -32,6 +33,7 @@
               :text="$t('home.deliverResults2')"
               class="title text-center pad-bottom"
               :loop="false"
+              :active="currentPhraseIndex === 1"
               @animationComplete="nextPhrase">
           </shrink-words-one-by-one-text-effect>
           <shrink-words-one-by-one-text-effect
@@ -40,6 +42,7 @@
               :text="$t('home.deliverResults3')"
               class="title text-center pad-bottom"
               :loop="false"
+              :active="currentPhraseIndex === 2"
               @animationComplete="nextPhrase">
           </shrink-words-one-by-one-text-effect>
         </div>

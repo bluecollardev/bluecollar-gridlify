@@ -43,10 +43,33 @@ export default {
     loop: {
       type: Boolean,
       default: false
+    },
+    active: {
+      type: Boolean,
+      default: true
+    }
+  },
+  watch: {
+    active(newVal) {
+      if (newVal && !this.hasAnimated) {
+        this.startAnimation()
+      }
+    }
+  },
+  data() {
+    return {
+      hasAnimated: false
     }
   },
   mounted() {
-    if (typeof window !== 'undefined' && this.$refs.textWrapper) {
+    if (this.active) {
+      this.startAnimation()
+    }
+  },
+  methods: {
+    startAnimation() {
+      if (typeof window !== 'undefined' && this.$refs.textWrapper && !this.hasAnimated) {
+        this.hasAnimated = true
       const wordsTarget = this.$refs.textWrapper.querySelector(this.wordsSelector)
 
       // Wrap every letter in a span
@@ -98,6 +121,7 @@ export default {
             duration: 1500,
             easing: 'easeOutExpo'
           })
+      }
     }
   }
 }
