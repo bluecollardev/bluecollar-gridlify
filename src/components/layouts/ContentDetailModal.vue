@@ -51,6 +51,8 @@ export default {
 
   .panel-content {
     font-size: 0.875rem;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -72,6 +74,8 @@ export default {
 
     .panel-content {
       font-size: 1rem;
+      position: relative;
+      z-index: 1;
     }
   }
 }
