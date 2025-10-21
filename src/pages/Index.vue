@@ -18,9 +18,8 @@
           class="mobile-fish-index"
           :scale="30"
           :speed="3"
-          :jumpHeight="200"
-          :jumpDistance="150"
-          :maxDistance="300"
+          :jumpHeight="100"
+          :jumpDistance="250"
         />
       </template>
 

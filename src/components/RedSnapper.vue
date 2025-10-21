@@ -11,12 +11,12 @@ export default {
       type: Number,
       default: 15
     },
-    // Jump height (yVertex for parabolic path)
+    // Maximum height the fish jumps (pixels above starting point)
     jumpHeight: {
       type: Number,
       default: 300
     },
-    // Jump distance (xVertex for parabolic path)
+    // Total horizontal distance the fish travels (pixels)
     jumpDistance: {
       type: Number,
       default: 700
@@ -46,11 +46,6 @@ export default {
       type: Number,
       default: 1200
     },
-    // Parabolic function for jump path
-    parabolicFx: {
-      type: Function,
-      default: (x, vtx) => -0.001 * Math.pow(x - vtx.x, 2) + vtx.y
-    },
     // Auto-start jumping on mount
     autoStart: {
       type: Boolean,
@@ -71,11 +66,6 @@ export default {
     wiggleSpeed: {
       type: Number,
       default: 0.3
-    },
-    // Maximum distance fish will travel before stopping animation (pixels)
-    maxDistance: {
-      type: Number,
-      default: 1600
     }
   },
   data() {
@@ -106,21 +96,23 @@ export default {
 
       el.style.transform = `rotate(${ baseRotation + wiggle }deg) scaleX(-${scalePercent}) scaleY(${scalePercent})`;
     },
-    animateOnParabolicPath(el, fx, vtx, cb) {
+    animateOnParabolicPath(el, maxDistance, maxHeight, cb) {
       if (typeof window !== 'undefined') {
         let x = this.speed;
         let requestId = null;
 
         const updatePosition = () => {
-          const y = fx(x, vtx);
+          // Simple parabola: apex at middle of jump
+          const progress = x / maxDistance;
+          const y = maxHeight * Math.sin(progress * Math.PI);
 
           el.style.bottom =  `${y}px`;
           el.style.left = `${x}px`;
 
           if (typeof cb === 'function') cb(el, { x, y });
 
-          // Stop animation when max distance is reached
-          if (x > this.maxDistance) {
+          // Stop when we reach the jump distance
+          if (x >= maxDistance) {
             cancelAnimationFrame(requestId);
           } else {
             x += this.speed;
@@ -145,10 +137,11 @@ export default {
         // Reset wiggle offset for each jump
         this.wiggleOffset = 0;
 
-        // requestAnimationFrame
-        this.animateOnParabolicPath(el,
-          this.parabolicFx,
-          { x: this.jumpDistance, y: this.jumpHeight },
+        // Animate: jumpDistance = how far horizontally, jumpHeight = max height
+        this.animateOnParabolicPath(
+          el,
+          this.jumpDistance,
+          this.jumpHeight,
           this.setFishJumpRotation
         );
       }
