@@ -74,7 +74,7 @@ export default {
 }
 
 .special-forces-skull {
-  transform: scale(0.5);
+  transform: scale(0.5) translateY(-10rem);
   transform-origin: center center;
 }
 
