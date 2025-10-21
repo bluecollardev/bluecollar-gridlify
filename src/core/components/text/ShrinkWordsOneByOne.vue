@@ -84,11 +84,11 @@ export default {
             duration: 500,
             delay: (el, i) => 500 * i
           })
-          // Wait 5 seconds then fade out (for loop)
+          // Wait 5 seconds then slowly fade out over 1.5 seconds
           .add({
             targets: wordsTarget,
             opacity: 0,
-            duration: 1000,
+            duration: 1500,
             easing: 'easeOutExpo',
             delay: 5000
           })
