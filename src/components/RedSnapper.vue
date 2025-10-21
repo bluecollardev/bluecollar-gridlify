@@ -61,11 +61,22 @@ export default {
       type: Number,
       default: 100,
       validator: (value) => value > 0
+    },
+    // Wiggle intensity during jump (degrees of rotation oscillation, 0 = no wiggle)
+    wiggleIntensity: {
+      type: Number,
+      default: 3
+    },
+    // Wiggle speed during jump (higher = faster wiggle)
+    wiggleSpeed: {
+      type: Number,
+      default: 0.3
     }
   },
   data() {
     return {
-      interval: null
+      interval: null,
+      wiggleOffset: 0
     }
   },
   computed: {
@@ -82,7 +93,13 @@ export default {
       let xPct = x / this.rotationMaxX;
       const scalePercent = this.scale / 100;
 
-      el.style.transform = `rotate(${ this.startRotation + (rotationDelta * xPct) }deg) scaleX(-${scalePercent}) scaleY(${scalePercent})`;
+      // Calculate wiggle offset using sine wave
+      this.wiggleOffset += this.wiggleSpeed;
+      const wiggle = Math.sin(this.wiggleOffset) * this.wiggleIntensity;
+
+      const baseRotation = this.startRotation + (rotationDelta * xPct);
+
+      el.style.transform = `rotate(${ baseRotation + wiggle }deg) scaleX(-${scalePercent}) scaleY(${scalePercent})`;
     },
     animateOnParabolicPath(el, fx, vtx, cb) {
       if (typeof window !== 'undefined') {
@@ -119,6 +136,9 @@ export default {
     jump() {
       if (typeof window !== 'undefined') {
         const el = this.$refs.redSnapper;
+
+        // Reset wiggle offset for each jump
+        this.wiggleOffset = 0;
 
         // requestAnimationFrame
         this.animateOnParabolicPath(el,
