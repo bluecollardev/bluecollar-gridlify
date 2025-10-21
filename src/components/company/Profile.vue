@@ -145,29 +145,35 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #team-profile {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  padding-top: 12vh;
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   position: relative;
-  margin-top: -9vh;
+  z-index: 0;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/images/camo-texture.jpg');
-    opacity: 0.05;
-    pointer-events: none;
+@media screen and (min-width: 40em) {
+  #team-profile {
+    padding-top: 15vh;
+    top: -15vh;
   }
+}
+
+#team-profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/images/camo-texture.jpg');
+  opacity: 0.05;
+  pointer-events: none;
 }
 
 .military-id-card-container {
