@@ -377,19 +377,19 @@
     height: 120px;
     position: absolute;
     max-width: 400px;
-    bottom: -350px;
-    transform: rotate(90deg);
+    bottom: -400px;
+    transform: rotate(270deg);
     transform-origin: top left;
     animation: fish_caught 1.75s ease-in-out alternate infinite;
     z-index: 1;
 
     @keyframes fish_caught {
       0%, 100% {
-        transform: rotate(87deg);
+        transform: rotate(267deg);
       }
 
       50% {
-        transform: rotate(93deg);
+        transform: rotate(273deg);
       }
     }
   }
