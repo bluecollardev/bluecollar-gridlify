@@ -72,7 +72,7 @@ export default {
     fishStyle() {
       const scalePercent = this.scale / 100;
       return {
-        transform: `rotate(-45deg) scale(${scalePercent}, -${scalePercent})`
+        transform: `rotate(-45deg) scaleX(-${scalePercent}) scaleY(${scalePercent})`
       };
     }
   },
@@ -82,7 +82,7 @@ export default {
       let xPct = x / this.rotationMaxX;
       const scalePercent = this.scale / 100;
 
-      el.style.transform = `rotate(${ this.startRotation + (rotationDelta * xPct) }deg) scale(${scalePercent}, -${scalePercent})`;
+      el.style.transform = `rotate(${ this.startRotation + (rotationDelta * xPct) }deg) scaleX(-${scalePercent}) scaleY(${scalePercent})`;
     },
     animateOnParabolicPath(el, fx, vtx, cb) {
       if (typeof window !== 'undefined') {
