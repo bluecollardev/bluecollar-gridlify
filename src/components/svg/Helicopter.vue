@@ -1,5 +1,5 @@
 <template>
-  <div class="helicopter" @mouseenter="getToTheChopper()">
+  <div class="helicopter" @click="getToTheChopper()">
     <p class="speech-bubble">Get to the chopper!!!</p>
     <div class="helicopter-inner">
       <img
