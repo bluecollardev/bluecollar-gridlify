@@ -155,18 +155,6 @@ export default {
   padding-bottom: 15vh;
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/images/camo-texture.jpg');
-    opacity: 0.05;
-    pointer-events: none;
-  }
 }
 
 .military-id-card-container {
