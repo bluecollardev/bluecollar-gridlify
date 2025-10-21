@@ -31,6 +31,11 @@ export default {
 </script>
 
 <style lang="scss">
+.shoot-to-thrill-scene {
+  transform: scale(0.5);
+  transform-origin: center center;
+}
+
 @media screen and (max-width: 40em) {
   .guns-comp {
     height: 30vh;
