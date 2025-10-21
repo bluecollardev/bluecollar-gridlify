@@ -32,7 +32,7 @@ export default {
   top: 100%;
   left: 0;
   z-index: 99999;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 40em) {
