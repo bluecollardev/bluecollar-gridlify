@@ -35,7 +35,7 @@
             <p class="text-center">{{ $t('company.intro2') }}</p>
             <div class="text-center">
               <a @click="scrollToTeam" class="action-link transparent space-top g-pstyle3"
-                 style="cursor: pointer;">{{ $t('company.meetConsultants') }}</a>
+                 style="cursor: pointer;">{{ $t('company.learnMore') }}</a>
             </div>
           </div>
         </div>
@@ -43,6 +43,18 @@
     </hero-layout01-col>
 
     <team ref="team" :activeDetail="'CONSULTANTS'" />
+    <profile ref="profile" @view-resume="viewResume" />
+
+    <!-- Resume Modal -->
+    <content-detail-modal ref="resumeModal" title="Resume - Lucas Michael Lopatka">
+      <div class="resume-viewer" style="padding-top: 5rem; height: 100%;">
+        <iframe
+          src="/docs/resume.lucas_lopatka.2025.pdf#toolbar=1&navpanes=0&scrollbar=1"
+          width="100%"
+          style="border: none; height: calc(100vh - 54px - 5rem);"
+        ></iframe>
+      </div>
+    </content-detail-modal>
 
     <!--<content-detail-modal ref="contentDetail" :title="this.activeDetail === 'CONSULTANTS' ? $t('company.ourTeam') : ''">
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
@@ -75,6 +87,7 @@ import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue'
 // Import page components
 import Services from '~/components/home/Services.vue'
 import Team from '~/components/company/Team.vue'
+import Profile from '~/components/company/Profile.vue'
 
 // Import static blocks
 import ProcessBlock from '~/blocks/ProcessBlock.vue'
@@ -127,6 +140,7 @@ export default {
     // Inject generic component layouts
     Services,
     Team,
+    Profile,
     VideoHeroLayout01Col,
     HeroLayout01Col,
     HeroLayout02Col02,
@@ -284,6 +298,11 @@ export default {
         } else {
           console.error('contentDetail ref not found!')
         }
+      }
+    },
+    viewResume() {
+      if (this.$refs.resumeModal) {
+        this.$refs.resumeModal.viewDetail()
       }
     }
   },

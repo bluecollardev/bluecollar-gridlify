@@ -90,6 +90,7 @@ export default {
 
 <style lang="scss">
 #team {
-  min-height: 50vh;
+  position: relative;
+  z-index: 1;
 }
 </style>

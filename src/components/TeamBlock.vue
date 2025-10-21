@@ -7,9 +7,9 @@
             className="pad-top"
             :title="$t('company.needBackup')"
             :description="$t('company.backupDescription')"
-            link="/"
-            :linkText="$t('company.backToHome')"
-            :onLinkClicked="this.onHomeLinkClicked"
+            link="#team-profile"
+            :linkText="$t('company.meetOurConsultants')"
+            :onLinkClicked="this.scrollToProfile"
         />
       </div>
     </div>
@@ -37,12 +37,26 @@ export default {
     ContentBlockLayout,
     TestimonialBlockLayout,
     AngleMosaicLayout
+  },
+  methods: {
+    scrollToProfile(e) {
+      e.preventDefault()
+      if (typeof window !== 'undefined') {
+        const profileSection = document.getElementById('team-profile')
+        if (profileSection) {
+          profileSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }
+    }
   }
 }
 </script>
 
 <style lang="scss">
 .team-block {
+  position: relative;
+  z-index: 1001;
+
   .content-block {
     max-width: 75%;
     margin-left: auto;

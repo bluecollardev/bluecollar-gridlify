@@ -5,6 +5,10 @@ export default {
     title: {
       type: String,
       default: null
+    },
+    scrollable: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
@@ -34,7 +38,7 @@ export default {
       const detailEl = detail
 
       if (detailEl) {
-        document.body.style.overflowY = 'scroll'
+        document.body.style.overflowY = 'auto'
 
         anime({
           targets: detailEl,
