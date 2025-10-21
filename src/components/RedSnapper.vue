@@ -63,7 +63,7 @@ export default {
     fishStyle() {
       const scalePercent = this.scale / 100;
       return {
-        transform: `rotate(-45deg) scaleX(-${scalePercent}) scaleY(${scalePercent})`
+        transform: `rotate(-45deg) scale(${scalePercent})`
       };
     }
   },
@@ -86,7 +86,7 @@ export default {
 
       const rotation = tangentAngle + wiggle;
 
-      el.style.transform = `rotate(${ rotation }deg) scaleX(-${scalePercent}) scaleY(${scalePercent})`;
+      el.style.transform = `rotate(${ rotation }deg) scale(${scalePercent})`;
     },
     animateOnParabolicPath(el, maxDistance, maxHeight, cb) {
       if (typeof window !== 'undefined') {
