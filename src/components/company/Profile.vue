@@ -156,7 +156,8 @@ export default {
           'Python',
           'AWS',
           'Azure',
-          'Kubernetes'
+          'Kubernetes',
+          'UX/UI'
         ],
         issueDate: new Date().getFullYear()
       }
