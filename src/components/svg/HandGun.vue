@@ -10,7 +10,10 @@
         version="1.1"
         viewBox="0 0 260 180"
         height="180mm"
-        width="260mm">
+        width="260mm"
+        shape-rendering="geometricPrecision"
+        text-rendering="geometricPrecision"
+        image-rendering="optimizeQuality">
       <defs
           class="defs3716"/>
       <metadata
@@ -238,6 +241,12 @@ export default {
   -webkit-box-pack: end;
   -webkit-justify-content: center;
   justify-content: center;
+
+  svg {
+    shape-rendering: geometricPrecision;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
 
   svg {
     overflow: visible;
