@@ -28,7 +28,7 @@ export default {
   opacity: 1;
   width: 100vw;
   height: calc(100vh - 54px);
-  position: fixed;
+  position: absolute;
   /*top: 54px;*/
   /* Match header */
   top: 100%;
