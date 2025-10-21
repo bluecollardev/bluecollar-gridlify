@@ -120,7 +120,7 @@ export default {
         photo: '/images/lucas-lopatka-profile.png',
         idNumber: 'BC-' + new Date().getFullYear() + '-001',
         rank: 'SOFTWARE CAPTAIN',
-        specialty: 'FULL-STACK DEVELOPMENT',
+        specialty: 'FULL-STACK MERCENARY',
         yearsOfService: this.calculateYearsOfService(),
         clearance: 'CSIS-LVL-2',
         about: 'Providing discerning international clients with intuitive, engaging, reliable and secure software solutions, solving complex business problems for a wide range of industries.',
