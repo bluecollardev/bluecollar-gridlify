@@ -1,6 +1,7 @@
 <template>
   <div class="fishing-scene">
-    <RedSnapper ref="redSnapper" />
+    <RedSnapper ref="redSnapper" class="desktop-fish" />
+    <RedSnapper ref="redSnapperMobile" class="mobile-fish" />
     <div class="fishing-interactive">
       <span ref="fishingRod" @click="doCast()" :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
         <span class="line-anchor"></span><img :class="`fishing-rod`" src="/images/fishing-rod.svg" />
@@ -214,6 +215,26 @@
     position: absolute;
     width: 100%;
     height: 100%;
+  }
+
+  // Show desktop fish on tablets and desktop
+  .desktop-fish {
+    display: block;
+
+    // Hide on mobile phones only (max-width: 48em / 768px)
+    @media screen and (max-width: 48em) {
+      display: none !important;
+    }
+  }
+
+  // Show mobile fish on mobile phones only
+  .mobile-fish {
+    display: none;
+
+    // Show on mobile phones only (max-width: 48em / 768px)
+    @media screen and (max-width: 48em) {
+      display: block !important;
+    }
   }
 
   .fishing-interactive {
