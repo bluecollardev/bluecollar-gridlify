@@ -91,10 +91,11 @@ export default {
     },
     animateOnParabolicPath(el, maxDistance, maxHeight, cb) {
       if (typeof window !== 'undefined') {
-        // Get the initial bottom and left positions from CSS
-        const computedStyle = window.getComputedStyle(el)
-        const initialBottom = parseFloat(computedStyle.bottom) || -200
-        const initialLeft = parseFloat(computedStyle.left) || -200
+        // Get the default CSS positions (not computed, to avoid drift)
+        // These should match the CSS defaults in the style section
+        const defaultBottom = -200
+        const defaultLeft = el.classList.contains('mobile-fish-index') ?
+          (typeof window !== 'undefined' ? -0.3 * window.innerWidth : -200) : -200
 
         let x = this.speed
         let requestId = null
@@ -104,16 +105,19 @@ export default {
           const progress = x / maxDistance
           const y = maxHeight * Math.sin(progress * Math.PI)
 
-          // Add the parabolic offset to the initial bottom position
-          el.style.bottom = `${initialBottom + y}px`
-          // Start from initial left position and move horizontally
-          el.style.left = `${initialLeft + x}px`
+          // Add the parabolic offset to the default bottom position
+          el.style.bottom = `${defaultBottom + y}px`
+          // Start from default left position and move horizontally
+          el.style.left = `${defaultLeft + x}px`
 
           if (typeof cb === 'function') cb(el, {x, y, maxDistance, maxHeight})
 
           // Stop when we reach the jump distance
           if (x >= maxDistance) {
             cancelAnimationFrame(requestId)
+            // Reset to default position after jump completes
+            el.style.bottom = `${defaultBottom}px`
+            el.style.left = `${defaultLeft}px`
           } else {
             x += this.speed
             requestId = requestAnimationFrame(updatePosition)
