@@ -31,7 +31,7 @@ export default {
   position: fixed;
   top: 100%;
   left: 0;
-  z-index: 9989;
+  z-index: 9993;
   overflow: hidden;
 
   &.scrollable {
