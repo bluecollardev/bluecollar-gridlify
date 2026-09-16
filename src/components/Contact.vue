@@ -6,9 +6,7 @@
       name="contact"
       method="post"
       v-on:submit.prevent="handleSubmit"
-      action="/"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
+      action="/api/contact"
   >
     <fieldset class="border-none p0 m0 pad-all">
       <typewriter-text-effect
@@ -27,12 +25,25 @@
           <p class="text-center">{{ $t('contact.location') }}</p>
           <p class="text-center">
             <i18n-t keypath="contact.contactInfo" tag="span">
-              <template #phone>{{ $t('contact.phone') }}</template>
+              <template #phone>
+                <a style="color: white; text-decoration: underline"
+                   :href="`tel:${phoneE164}`">{{ $t('contact.phone') }}</a>
+              </template>
               <template #email>
                 <a style="color: white; text-decoration: underline"
-                   href="mailto:lucas@bluecollardev.com">{{ $t('contact.email') }}</a>
+                   href="mailto:info@bluecollardev.com">{{ $t('contact.email') }}</a>
               </template>
             </i18n-t>
+          </p>
+          <p class="text-center" style="margin-top: 0.75rem;">
+            <a
+                v-for="channel in messagingChannels"
+                :key="channel.name"
+                :href="channel.href"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: white; text-decoration: underline; margin: 0 0.5rem; white-space: nowrap;"
+            >{{ channel.name }}</a>
           </p>
         </div>
       </div>
@@ -223,11 +234,24 @@
             <input
                 type="submit"
                 name="submit"
-                :value="$t('contact.form.submit')"
+                :value="status === 'sending' ? $t('contact.form.sending') : $t('contact.form.submit')"
                 id="submit"
                 class="action-link transparent space-top g-pstyle3"
-                style=""
+                :disabled="status === 'sending'"
+                :style="status === 'sending' ? 'opacity: 0.6; cursor: wait;' : ''"
             />
+            <p
+                v-if="status === 'sent'"
+                class="text-center"
+                style="margin-top: 1rem; color: #6bff9e;"
+                role="status"
+            >{{ $t('contact.form.sent') }}</p>
+            <p
+                v-if="status === 'error'"
+                class="text-center"
+                style="margin-top: 1rem; color: #ff6b6b;"
+                role="alert"
+            >{{ errorMessage || $t('contact.form.error') }}</p>
           </div>
           <!-- End Submit -->
         </div>
@@ -248,30 +272,67 @@ export default {
   props: {
     formData: Object
   },
-  // TODO: encode and handleSubmit should be moved to a mixin or something
-  methods: {
-    encode(data) {
-      return Object.keys(data)
-          .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-          .join('&')
+  data() {
+    return {
+      status: 'idle', // idle | sending | sent | error
+      errorMessage: ''
+    }
+  },
+  computed: {
+    // The displayed number is formatted for humans ("+66 65-807-1545"); links need digits.
+    phoneDigits() {
+      return String(this.$t('contact.phone')).replace(/\D/g, '')
     },
+    phoneE164() {
+      return `+${this.phoneDigits}`
+    },
+    messagingChannels() {
+      const channels = [
+        { name: 'WhatsApp', href: `https://wa.me/${this.phoneDigits}` },
+        { name: 'Viber', href: `viber://chat?number=${encodeURIComponent(this.phoneE164)}` },
+        { name: 'SMS', href: `sms:${this.phoneE164}` }
+      ]
+      // LINE has no phone-number deep link — it needs a LINE ID or Official Account ID.
+      // Set VITE_LINE_ID to switch it on.
+      const lineId = import.meta.env.VITE_LINE_ID
+      if (lineId) {
+        channels.splice(1, 0, { name: 'LINE', href: `https://line.me/R/ti/p/~${lineId}` })
+      }
+      return channels
+    }
+  },
+  methods: {
     async handleSubmit(e) {
+      if (this.status === 'sending') return
+      this.status = 'sending'
+      this.errorMessage = ''
+
       try {
-        await fetch('https://bluecollardev.netlify.com/', {
+        const response = await fetch('/api/contact', {
           method: 'POST',
-          headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-          body: this.encode({
-            'form-name': e.target.getAttribute('name'),
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            'bot-field': e.target.elements['bot-field']?.value || '',
             ...this.formData
           })
         })
+
+        const result = await response.json().catch(() => ({}))
+
+        if (!response.ok) {
+          this.status = 'error'
+          this.errorMessage = result.error || ''
+          return
+        }
+
+        this.status = 'sent'
+        Object.keys(this.formData).forEach(key => {
+          this.formData[key] = typeof this.formData[key] === 'boolean' ? false : ''
+        })
       } catch (err) {
-        console.error
-      } finally {
-        this.$router.push('/')
+        console.error('Contact form submission failed:', err)
+        this.status = 'error'
       }
-      // .then(() =>then this.$router.push('/'));
-      //.catch(error => alert(error));
     }
   }
 }

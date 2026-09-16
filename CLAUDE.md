@@ -49,6 +49,7 @@ Verified installed as of 16 September 2026:
 | gsap | 3.13.0 |
 | animejs | 3.0.1 |
 | marked | 12.0.2 |
+| resend | 6.28.1 |
 
 `npm install` reports 24 vulnerabilities (17 high). They are all in the build/dev
 dependency tree, not shipped to the browser. Do not run `npm audit fix --force` — it
@@ -101,26 +102,48 @@ warning threshold; that warning is expected.
 
 ## Deployment
 
-`vercel.json` drives it: build `npm run build`, output `dist/`, with a filesystem
-handler and an SPA fallback rewriting unmatched paths to `/index.html`. The SPA
-fallback is required — client-side routes 404 without it.
+`vercel.json` drives it: build `npm run build`, output `dist/`, and an SPA fallback
+rewriting unmatched paths to `/index.html`. The rewrite excludes `/api/` so serverless
+functions stay reachable. The SPA fallback is required — client-side routes 404 without
+it.
 
 Pushing a branch produces a Vercel preview deployment. Merging to `master` deploys
 production.
+
+## Environment variables
+
+Set in the Vercel project (Settings → Environment Variables), not in the repo:
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `RESEND_API_KEY` | yes | Server-side. Used by `api/contact.mjs` to send the contact form. Without it the endpoint returns 500 and the form shows an error. |
+| `VITE_LINE_ID` | no | Client-side, baked in at build time. A LINE ID or Official Account ID. When set, a LINE link appears alongside WhatsApp in the contact block. |
+
+Anything prefixed `VITE_` is exposed in the browser bundle. Never put a secret behind
+that prefix.
+
+## Contact form
+
+`src/components/Contact.vue` POSTs JSON to `/api/contact`, a Vercel serverless function
+at `api/contact.mjs`. The function validates, checks the `bot-field` honeypot, and sends
+through Resend to **info@bluecollardev.com** with the visitor's address as `Reply-To`.
+
+The `from` address must be on a Resend-verified domain — it sends as
+`site@bluecollardev.com`, never as the visitor, which would fail SPF/DKIM.
+
+The function is `.mjs` deliberately: `package.json` has no `"type": "module"`, so a
+plain `.js` file in `api/` would be treated as CommonJS and the `import` would fail.
 
 ## Known issues
 
 Do not treat these as bugs introduced by your change:
 
-- **The contact form is broken.** `src/components/Contact.vue` carries Netlify Forms
-  attributes (`data-netlify`, `data-netlify-honeypot`) and `handleSubmit` POSTs to
-  `https://bluecollardev.netlify.com/`. Netlify Forms do not exist on Vercel, and that
-  hostname is stale. The form needs a real endpoint — a Vercel serverless function or a
-  third-party form service.
-- **`public/admin/` is Netlify CMS**, loading `netlify-cms@^2.0.0` from unpkg and
-  pointing at the `bluecollardev/bluecollar-gridlify` GitHub backend on branch
-  `master`. Its `media_folder` still points at `static/images`, a Gridsome path that no
-  longer exists. Unverified whether it still works; it is a candidate for removal.
+- **`public/admin/` is Decap CMS, under its old name.** It loads `netlify-cms@^2.0.0`
+  from unpkg — the package was renamed `decap-cms` at v3 when Netlify handed the project
+  to the community. The v2 build is unmaintained. Its `media_folder` also still points at
+  `static/images`, a Gridsome path that no longer exists, and its GitHub backend
+  previously authenticated through Netlify's OAuth service, which this site no longer
+  uses. Assume the admin panel does not currently log in.
 - **`build/config.gypi`** at the repo root is a stray artifact, unrelated to the Vite
   build.
 - `vite-plugin-vue-devtools` is registered unconditionally in `vite.config.js`, so
