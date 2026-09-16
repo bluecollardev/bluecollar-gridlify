@@ -1,5 +1,5 @@
 {
-	"name": "gridsome-starter-netlifycms",
+	"name": "bluecollar-website",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
