@@ -791,6 +791,7 @@ items:
     endDate: 2009-03-01T12:00:00.000Z
     projectName: Kantana Animation Studios Website
     startDate: 2009-03-01T12:00:00.000Z
+    isPublic: true
   - client: Nfineon
     description: >-
       **The Client**

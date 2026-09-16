@@ -100,6 +100,61 @@ own — do not do it incidentally.
 `animations` (animejs, gsap) into manual chunks. The main chunk is over the 500 kB
 warning threshold; that warning is expected.
 
+## Portfolio / case studies
+
+All case-study content lives in `src/data/Portfolio.yml`. There is no CMS step: the YAML
+is imported directly by `@rollup/plugin-yaml` at build time, so publishing means editing
+that file and deploying.
+
+The render chain is:
+
+```
+src/data/Portfolio.yml
+  -> PortfolioVerticalTimeline.vue   filters on isPublic
+    -> PortfolioItem.vue             markdown, dates, srcset
+      <- src/pages/Index.vue         mounted in the Case Studies modal
+```
+
+Entry shape — `projectName`, `client`, `description` and `isPublic` are the ones that
+matter:
+
+```yaml
+  - projectName: Phobulous Restaurant Website
+    client: Phobulous Noodle House
+    jobTypeText: Employed By        # omit for "Client"; "Employed By" is special-cased
+    startDate: 2017-04-01T12:00:00.000Z
+    endDate: 2017-06-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-phobulous.png
+    displayImage: true
+    isPublic: true
+    testimonialId: some-id          # optional, looked up in Testimonial.yml
+    description: >-
+      **The Client**
+
+      Prose here.
+```
+
+Rules that are easy to get wrong:
+
+- **`isPublic: true` is mandatory and fails silently.** The filter is
+  `isPublic === true`, so an absent key hides the project exactly like `false` does.
+- **Order is YAML order.** Nothing sorts by `startDate`, despite every entry having one.
+  The list renders top to bottom as written.
+- **The five section headings are localised by literal string replacement**, not by
+  structure. `PortfolioItem.vue:84-88` matches the exact strings `**The Client**`,
+  `**The Stakeholder**`, `**The Problem**`, `**Our Solution**` and `**Technologies**` and
+  substitutes `portfolio.sections.*`. Any other heading stays English on the Thai site,
+  and a typo silently skips translation. Body prose is never translated.
+- **`description` is Markdown**, rendered with `marked`.
+- **Images are convention-based.** `image: /images/portfolio/foo.png` makes
+  `PortfolioItem.vue` build a srcset expecting `foo-small.png`, `foo-small@2x.png`,
+  `foo-small@3x.png`, `foo.png`, `foo@2x.png` and `foo@3x.png` to sit beside each other
+  in `public/images/portfolio/`. Missing variants 404 individually. The image block is
+  guarded, so an entry with no `image` key renders fine without one.
+
+`PortfolioTemp.vue`, `components/portfolio/Portfolio.vue` and `PortfolioDisclaimer.vue`
+are unreferenced leftovers. Ignore them.
+
 ## Deployment
 
 `vercel.json` drives it: build `npm run build`, output `dist/`, and an SPA fallback

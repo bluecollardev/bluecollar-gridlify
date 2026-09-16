@@ -85,7 +85,6 @@ export default {
       }
       return this.portfolioItems
           .filter(project => project.isPublic === true)
-          .slice(0, 10)
     },
     testimonialContent() {
       return TestimonialData

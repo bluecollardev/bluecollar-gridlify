@@ -55,12 +55,18 @@ architecture, conventions and environment variables.
 - [ ] **`/projects` is a dead link.** `src/core/mixins/DropMenuMixin.js:31` links the
       "Portfolio" nav item to `/projects`, but `src/router.js` has no such route. Either
       add the route or point it at the `#portfolio` section on the home page.
-- [ ] **Only 10 case studies can ever appear.** `PortfolioVerticalTimeline.vue:88` ends
-      with `.slice(0, 10)`. There are 22 public projects in `Portfolio.yml`, so 12 are
-      silently invisible. Remove the slice, paginate, or make the cap deliberate.
-- [ ] **One project is hidden by omission.** "Kantana Animation Studios Website" in
-      `Portfolio.yml` has no `isPublic` key. The filter tests `isPublic === true`, so a
-      missing key hides the project. Set it explicitly either way.
+- [x] ~~**Only 10 case studies can ever appear.**~~ Fixed: the `.slice(0, 10)` in
+      `PortfolioVerticalTimeline.vue` is gone; all 23 public projects now render.
+- [x] ~~**One project is hidden by omission.**~~ Fixed: "Kantana Animation Studios
+      Website" now has `isPublic: true`. Every entry has the key explicitly.
+- [x] ~~**Case studies render twice.**~~ Fixed: `src/pages/Index.vue` rendered
+      `<portfolio-vertical-timeline>` on two consecutive lines under the identical
+      `v-if`, so every project appeared twice in the Case Studies modal.
+- [ ] **Two projects share one screenshot.** "iOS Tablet Point-of-Sale" and "Caffe Tech
+      Inventory Management and Data Bridge" both point `image` at
+      `/images/portfolio/bc-showcase-app-quickcommerce.png`, and both are public with
+      `displayImage: true`. Same client, same picture, so they read as a duplicate entry.
+      One of them needs its own screenshot — which is a content decision, not a code fix.
 - [ ] **Several case studies are empty shells.** "Procurement Services Division Time
       Machine" and others have the `**The Stakeholder**` / `**The Problem**` /
       `**Our Solution**` / `**Technologies**` headings with no prose underneath. They
