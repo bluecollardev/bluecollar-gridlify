@@ -18,7 +18,8 @@
       :min-jump-interval="3000"
       :max-jump-interval="8000"
     />-->
-    <RedSnapper ref="redSnapper" class="desktop-fish" :jumpDistance="jumpDistance"/>
+    <!-- speed is px/frame; 10.5 is the component default (15) slowed by 30% -->
+    <RedSnapper ref="redSnapper" class="desktop-fish" :speed="10.5" :jumpDistance="jumpDistance"/>
     <div class="fishing-interactive">
       <span ref="fishingRod" @click="doCast()"
             :class="`fishing-rod-object ${isCasting ? 'is-casting' : isOnHook ? 'fish-is-attached' : 'idle'}`">
@@ -57,7 +58,9 @@ const CAST_CURVE_END_Y = 700
 const CAST_HORIZONTAL_OFFSET = 500
 
 // Fish Positioning Constants
-const FISH_VERTICAL_OFFSET = 145
+// The fish image is rotated 270deg about its top-right corner, so its visual top
+// edge is the right edge of the source image, where the mouth's ink starts 4px in.
+const FISH_MOUTH_INSET = 4
 const FISH_HORIZONTAL_OFFSET = 360
 
 // Red Snapper Jump Distance (as percentage of page width)
@@ -194,8 +197,11 @@ export default {
           // Update line length
           if (endY > coords.top + MIN_LINE_LENGTH) {
             reelingLine.plot(`M 0 0 L 1 ${endY}`)
-            //console.log(`line length: ${endY - coords.top}`);
-            document.querySelector('.fish-caught').style.top = `${endY + FISH_VERTICAL_OFFSET}px`
+            // The line is drawn inside #reeling-line, which is positioned at the rod
+            // anchor, so its end sits at coords.top + endY. The fish was positioned at
+            // endY alone, leaving it adrift from the line by the height of the anchor
+            // (which moves with the viewport, so the gap changed per screen size).
+            document.querySelector('.fish-caught').style.top = `${coords.top + endY - FISH_MOUTH_INSET}px`
           }
 
           const fishX = coords.left

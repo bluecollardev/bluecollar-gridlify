@@ -22,7 +22,11 @@ bottom of the relevant section.
 - [x] Header icons: GitHub (icon, no menu text), LinkedIn, SMS chat bubble, phone
       that reveals the number as a tel: link, email to lucas@bluecollardev.com.
       Instagram and Twitter removed, Facebook commented out.
-- [x] Footer: LinkedIn only, matched to the same glyph size; Twitter removed.
+- [x] Footer: social icons removed entirely (the header row covers it) and the
+      copyright reads 2006-2026.
+- [x] Fishing scene: the caught fish hung ~200px off the end of the line (the fish
+      was positioned without the rod-anchor offset, so the gap changed per screen);
+      the big jumping fish is 30% slower.
 - [x] Contact: Viber removed from the messaging links.
 
 ## Portfolio / case studies (`src/data/Portfolio.yml`)
