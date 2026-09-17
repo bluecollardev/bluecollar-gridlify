@@ -117,7 +117,6 @@
       <commando-skull-scene v-if="this.activeDetail === 'CONSULTANTS'"></commando-skull-scene>
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
       <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
-      <portfolio-vertical-timeline v-if="this.activeDetail === 'PORTFOLIO'"></portfolio-vertical-timeline>
     </content-detail-modal>
   </Layout>
 </template>
@@ -738,6 +737,17 @@ export default {
         text-shadow: 1px 0 3px rgba(0, 0, 0, 0.975) !important;
       }
     }
+  }
+}
+
+/* The hero content wrapper spans the full width below ~100em and sits over the
+   fishing rod handle, swallowing the recast click. Let clicks fall through to the
+   scene, but keep the actual text block (and its buttons) interactive. */
+.jungle-stream .hero-section-content {
+  pointer-events: none;
+
+  .hero-block {
+    pointer-events: auto;
   }
 }
 

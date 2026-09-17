@@ -20,7 +20,10 @@
       "message": "Message",
       "nda": "NDA Required",
       "submit": "Submit Form",
-      "botField": "Hello bee"
+      "botField": "Hello bee",
+      "sending": "Sending…",
+      "sent": "Thanks — your message is on its way. We'll be in touch shortly.",
+      "error": "Sorry, your message could not be sent. Please email info@bluecollardev.com directly."
     }
   },
   "footer": {
@@ -168,6 +171,7 @@
       "title": "Disclaimer!",
       "message": "My portfolio is under construction. Projects details may not be 100% accurate or complete. Please check again in a couple days."
     },
+    "present": "Present",
     "sections": {
       "theClient": "The Client",
       "theStakeholder": "The Stakeholder",

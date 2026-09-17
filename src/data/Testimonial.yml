@@ -9,6 +9,15 @@ items:
     link: ""
     linkText: ""
     image: /images/testimonials/phase3.leigh-w.jpg
+  - id: adamfehr
+    testimonial: >-
+      "I hired Blue Collar to build a mobile app to house and allow me to easily share exercise videos with my patients and clients. My experience has been great. They are very patient, attentive to detail, and work hard to ensure my needs and concept are met."
+    reviewedBy: Adam F.
+    position: MD, DPT
+    organization: PocketPT
+    link: ""
+    linkText: ""
+    image: /images/testimonials/pocketpt.adam-f.jpg
   - id: active24
     testimonial: >-
       "Working with Blue Collar was a positive experience. Their work was of high standard and their high availabilty made working with them across timezones easy."
