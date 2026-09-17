@@ -740,6 +740,17 @@ export default {
   }
 }
 
+/* The hero content wrapper spans the full width below ~100em and sits over the
+   fishing rod handle, swallowing the recast click. Let clicks fall through to the
+   scene, but keep the actual text block (and its buttons) interactive. */
+.jungle-stream .hero-section-content {
+  pointer-events: none;
+
+  .hero-block {
+    pointer-events: auto;
+  }
+}
+
 @media screen and (min-width: 64em) {
   .jungle-stream {
     background-position: 60% 0;
