@@ -284,7 +284,7 @@ $timeline-content-description-color: #333;
     color: $timeline-date-color;
     border-radius: 6px;
     font-size: 14px;
-    z-index: 0;
+    z-index: 1;
   }
 
   &__item__date strong {
@@ -338,6 +338,43 @@ $timeline-content-description-color: #333;
       font-size: 1.2rem;
       font-weight: 700;
     }
+
+    .portfolio-section {
+      /* Headings keep the look they had as <strong> paragraphs */
+      &__heading {
+        display: block;
+        margin: 1rem 0 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        list-style: none;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+      }
+
+      &:first-child &__heading {
+        margin-top: 0;
+      }
+
+      &__body > p:first-child {
+        margin-top: 0;
+      }
+    }
+
+    ul {
+      list-style: disc;
+      margin: 0.5rem 0 1rem;
+      padding-left: 1.25rem;
+    }
+
+    li {
+      /* theme.scss resets every li to list-style: none */
+      list-style: disc;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.25rem;
+    }
   }
 
   &__item__content__techs {
@@ -355,6 +392,43 @@ $timeline-content-description-color: #333;
     position: relative;
     max-width: 100%;
     margin: 0 auto;
+  }
+
+  /* Collapse the case-study sections on mobile: tap a heading to expand it */
+  .portfolio-section {
+    border-top: 1px solid #e6e6e6;
+
+    &:last-child {
+      border-bottom: 1px solid #e6e6e6;
+    }
+
+    &__heading {
+      position: relative;
+      cursor: pointer;
+      margin: 0;
+      padding: 0.75rem 1.75rem 0.75rem 0;
+      font-size: 1.05rem;
+
+      &::after {
+        content: '+';
+        position: absolute;
+        top: 50%;
+        right: 0.25rem;
+        transform: translateY(-50%);
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1;
+        color: #78b7d6;
+      }
+    }
+
+    &[open] > &__heading::after {
+      content: '\2212';
+    }
+
+    &__body {
+      padding-bottom: 0.75rem;
+    }
   }
 
   .timeline__item {
@@ -460,7 +534,8 @@ $timeline-content-description-color: #333;
 
       .project-image img {
         position: absolute;
-        top: -5%;
+        /* Sit below the date badge (top: 27.5px, ~41px tall) so the image never covers it */
+        top: 5rem;
         left: 115%;
         right: auto;
       }
@@ -484,7 +559,8 @@ $timeline-content-description-color: #333;
 
       .project-image img {
         position: absolute;
-        top: -5%;
+        /* Sit below the date badge (top: 27.5px, ~41px tall) so the image never covers it */
+        top: 5rem;
         right: 115%;
         left: auto;
       }

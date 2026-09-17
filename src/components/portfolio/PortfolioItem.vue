@@ -18,10 +18,22 @@
       </span>
       <div v-if="typeof this.project.image === 'string' && this.project.image.length > 3"
            class="project-image xs-pad-top xs-pad-bottom">
-        <img v-if="this.project.displayImage" class="lozad space-top" v-bind:src="this.project.image"
-             sizes="(max-width: 40rem) 320px, 1280px" v-bind:srcset="getImagesSrcSet(this.project.image)" alt=""/>
+        <img v-if="this.project.displayImage" class="lozad space-top project-image__trigger" v-bind:src="this.project.image"
+             sizes="(max-width: 40rem) 320px, 1280px" v-bind:srcset="getImagesSrcSet(this.project.image)"
+             :alt="`${this.project.projectName} – open image gallery`"
+             role="button" tabindex="0"
+             @click="openGallery" @keydown.enter.prevent="openGallery" @keydown.space.prevent="openGallery"/>
+        <portfolio-gallery v-if="this.project.displayImage" ref="gallery" :images="galleryImages"
+                           :title="this.project.projectName"/>
       </div>
-      <div class="timeline__item__content__description" v-html="compiledDescription"></div>
+      <div class="timeline__item__content__description">
+        <!-- Sections collapse on mobile (see isCollapsible); on desktop they stay open -->
+        <details v-for="(section, i) in descriptionSections" :key="i" class="portfolio-section"
+                 :open="section.heading === null || !isCollapsible">
+          <summary v-if="section.heading" class="portfolio-section__heading">{{ section.heading }}</summary>
+          <div class="portfolio-section__body" v-html="section.html"></div>
+        </details>
+      </div>
       <hr v-if="this.testimonial" class="space-top-half space-bottom-half"/>
       <div v-if="this.testimonial" class="timeline__item__content__description">
         <!-- Testimonial -->
@@ -60,8 +72,12 @@ import lozad from 'lozad'
 // import VueMarkdown from 'vue-markdown'
 // Use marked instead
 import { marked } from 'marked'
+import PortfolioGallery from './PortfolioGallery.vue'
 
 export default {
+  components: {
+    PortfolioGallery
+  },
   props: {
     project: {
       type: Object
@@ -75,7 +91,46 @@ export default {
       return "background-image: url(" + text.substring(length) + ")"
     }
   },
+  data() {
+    return {
+      // Matches the 40em mobile breakpoint used across the timeline styles
+      isCollapsible: typeof window !== 'undefined' ? window.matchMedia('(max-width: 40em)').matches : false,
+      mobileQuery: null
+    }
+  },
   computed: {
+    galleryImages() {
+      const images = Array.isArray(this.project.gallery) && this.project.gallery.length > 0
+        ? this.project.gallery
+        : [this.project.image]
+
+      return images.filter(src => typeof src === 'string' && src.length > 3).map(this.getGalleryImageSrc)
+    },
+    /**
+     * Splits the rendered description into its **The Client** / **The Problem** / ...
+     * sections so each can collapse on mobile. Text before the first heading (there
+     * shouldn't be any) is kept in a headingless, always-open section.
+     */
+    descriptionSections() {
+      const html = this.compiledDescription
+
+      if (!html) {
+        return []
+      }
+
+      const parts = html.split(/<p><strong>(.+?)<\/strong><\/p>/)
+      const sections = []
+
+      if (parts[0] && parts[0].trim().length > 0) {
+        sections.push({heading: null, html: parts[0]})
+      }
+
+      for (let i = 1; i < parts.length; i += 2) {
+        sections.push({heading: parts[i], html: parts[i + 1] || ''})
+      }
+
+      return sections.length > 0 ? sections : [{heading: null, html}]
+    },
     compiledDescription() {
       if (this.project && this.project.description) {
         let description = this.project.description
@@ -110,6 +165,22 @@ export default {
     }
   },
   methods: {
+    openGallery() {
+      if (this.$refs.gallery) {
+        this.$refs.gallery.show(0)
+      }
+    },
+    /**
+     * Device mockups have @2x variants beside them; gallery/ screenshots are used as-is.
+     * @param src
+     */
+    getGalleryImageSrc(src) {
+      if (src.startsWith('/images/portfolio/') && !src.includes('/gallery/') && /\.png$/.test(src) && !/@\dx\.png$/.test(src)) {
+        return src.replace(/\.png$/, '@2x.png')
+      }
+
+      return src
+    },
     /**
      * Allows the browser to choose an appropriate resolution image by using srcset with x-descriptors and without sizes.
      * @param path
@@ -144,6 +215,11 @@ export default {
       return `${this.months[startDate.getMonth()]} ${startDate.getFullYear()}`
     },
     getFormattedEndDate(project) {
+      // Ongoing engagements have no endDate
+      if (!project.endDate) {
+        return this.$t('portfolio.present')
+      }
+
       const startDate = new Date(project.startDate)
       const endDate = new Date(project.endDate)
       // Normalize dates, we don't care about exact time anyway
@@ -157,6 +233,19 @@ export default {
   mounted() {
     const observer = lozad() // lazy loads elements with default selector as '.lozad'
     observer.observe()
+
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      this.mobileQuery = window.matchMedia('(max-width: 40em)')
+      this.onBreakpointChange = event => {
+        this.isCollapsible = event.matches
+      }
+      this.mobileQuery.addEventListener('change', this.onBreakpointChange)
+    }
+  },
+  beforeUnmount() {
+    if (this.mobileQuery && this.onBreakpointChange) {
+      this.mobileQuery.removeEventListener('change', this.onBreakpointChange)
+    }
   }
 }
 </script>
