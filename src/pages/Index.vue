@@ -562,7 +562,10 @@ export default {
 
 @media screen and (min-width: 52em) {
   #rock {
-    height: 115vh;
+    /* min-height, not height: the section is overflow:hidden, so a fixed 115vh
+       clipped the guitar on shorter screens (at 1280x800 it overflowed by ~90px) */
+    min-height: 115vh;
+    height: auto;
     position: relative;
     top: -5vh;
     /* Keep the guitar clear of the angled clip-path along the bottom edge */

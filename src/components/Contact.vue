@@ -289,7 +289,6 @@ export default {
     messagingChannels() {
       const channels = [
         { name: 'WhatsApp', href: `https://wa.me/${this.phoneDigits}` },
-        { name: 'Viber', href: `viber://chat?number=${encodeURIComponent(this.phoneE164)}` },
         { name: 'SMS', href: `sms:${this.phoneE164}` }
       ]
       // LINE has no phone-number deep link — it needs a LINE ID or Official Account ID.

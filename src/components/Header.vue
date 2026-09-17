@@ -15,8 +15,6 @@
           <li><a href="/#services" aria-label="Services" @click="hideMenu()">{{ $t('nav.whatWeBuild') }}</a></li>
           <li><a href="/company" aria-label="Websites" @click="hideMenu()">{{ $t('nav.ourPeople') }}</a></li>
           <li><a href="/#contact" aria-label="Enquire" @click="hideMenu()">{{ $t('nav.getInTouch') }}</a></li>
-          <li><a href="https://github.com/bluecollardev" target="_blank" aria-label="GitHub"
-                 @click="hideMenu()">{{ $t('nav.github') }}</a></li>
           <li style="height: auto" class="language-switcher-menu-item">
             <language-switcher/>
           </li>
@@ -33,23 +31,32 @@
           </li>
         </ul>
         <div class="site-navbar-top d-flex" v-if="isMobile ? menuDisplayed : true">
-          <a href="https://www.instagram.com/bluecollardev" class="d-flex align-items-center mr-4 ml-4">
-            <span class="icon-instagram mr-2"></span>
+          <a href="https://github.com/bluecollardev" target="_blank" rel="noopener"
+             aria-label="GitHub" class="d-flex align-items-center mr-4 ml-4">
+            <span class="icon-github mr-2"></span>
+          </a>
+          <a href="https://www.linkedin.com/in/lucaslopatka" target="_blank" rel="noopener"
+             aria-label="Link to LinkedIn" class="d-flex align-items-center mr-4">
+            <span class="icon-linkedin mr-2"></span>
             <!-- TODO: Implement tooltip -->
           </a>
+          <!-- Facebook disabled for now
           <a href="https://www.facebook.com/bluecollardev" class="d-flex align-items-center mr-4">
             <span class="icon-facebook mr-2"></span>
-            <!-- TODO: Implement tooltip -->
-            <!--<span class="d-none d-md-inline-block">bluecollardev</span>-->
           </a>
-          <a href="#" class="d-flex align-items-center mr-4">
+          -->
+          <a :href="`sms:${phoneE164}`" aria-label="Text us" class="d-flex align-items-center mr-4">
+            <span class="icon-chat_bubble mr-2"></span>
+          </a>
+          <a href="#" class="d-flex align-items-center mr-4 header-phone" :aria-expanded="String(phoneDisplayed)"
+             aria-label="Show phone number" @click.prevent="phoneDisplayed = !phoneDisplayed">
             <span class="icon-phone mr-2"></span>
-            <!-- TODO: Implement tooltip -->
-            <!--<span class="d-none d-lg-inline-block">(250) 532-0083</span>-->
           </a>
-          <a href="#" class="d-flex align-items-center">
+          <a v-if="phoneDisplayed" :href="`tel:${phoneE164}`" class="d-flex align-items-center mr-4 header-phone__number">
+            {{ phoneNumber }}
+          </a>
+          <a href="mailto:lucas@bluecollardev.com" aria-label="Email us" class="d-flex align-items-center">
             <span class="icon-envelope mr-2"></span>
-            <!-- TODO: Implement tooltip -->
           </a>
         </div>
       </nav>
@@ -71,12 +78,19 @@ export default {
   data() {
     return {
       menuDisplayed: false,
+      phoneDisplayed: false,
       windowWidth: typeof window !== 'undefined' ? window.innerWidth : 1024
     }
   },
   computed: {
     isMobile() {
       return this.windowWidth <= 640
+    },
+    phoneNumber() {
+      return this.$t('contact.phone')
+    },
+    phoneE164() {
+      return `+${String(this.phoneNumber).replace(/\D/g, '')}`
     }
   },
   methods: {
@@ -116,6 +130,33 @@ export default {
 </script>
 
 <style lang="scss">
+/* The phone icon reveals the number, which is itself a tel: link */
+.header-phone__number {
+  white-space: nowrap;
+  text-decoration: underline;
+}
+
+/* The d-flex/align-items-center classes on these anchors are Bootstrap names the
+   site's CSS never defined, so the anchors stayed display:inline and the 24px
+   icons baseline-aligned against the 16px phone number, which read low. */
+.site-navbar-top {
+  display: flex;
+  align-items: center;
+}
+
+.site-navbar-top > a {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.site-navbar-top [class^='icon-'],
+.site-navbar-top [class*=' icon-'] {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
 @media screen and (max-width: 40em) {
   .site-menu {
     .controls {

@@ -17,7 +17,13 @@ bottom of the relevant section.
 - [x] Contact form: `#contact` had a fixed `height: 130vh` with `overflow: hidden`,
       which cut the Submit button off on desktop. Now grows with the form and keeps
       clear of the 9vh angled clip-path.
-- [x] Guitar section: bottom padding so the guitar clears the angled edge.
+- [x] Guitar section: bottom padding so the guitar clears the angled edge, and
+      min-height instead of a fixed 115vh (it was clipping the guitar at 1280x800).
+- [x] Header icons: GitHub (icon, no menu text), LinkedIn, SMS chat bubble, phone
+      that reveals the number as a tel: link, email to lucas@bluecollardev.com.
+      Instagram and Twitter removed, Facebook commented out.
+- [x] Footer: LinkedIn only, matched to the same glyph size; Twitter removed.
+- [x] Contact: Viber removed from the messaging links.
 
 ## Portfolio / case studies (`src/data/Portfolio.yml`)
 

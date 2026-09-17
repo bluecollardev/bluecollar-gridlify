@@ -17,6 +17,7 @@
           class="sm-flex xs-flex-basis-full sm-flex-basis-half md-flex-basis-half md-lg-flex-basis-quarter lg-flex-basis-quarter xl-flex-basis-quarter flex-justify-end">
         <div class="social">
           <ul class="ampstart-social-follow list-reset flex justify-around xs-flex-justify-center items-center flex-wrap m0">
+            <!-- Facebook disabled for now
             <li>
               <a href="https://www.facebook.com/bluecollardev/" target="_blank" class="inline-block p1"
                  aria-label="Link to Facebook">
@@ -28,25 +29,15 @@
                 </svg>
               </a>
             </li>
+            -->
             <li>
-              <a href="https://www.facebook.com/bluecollardev/" target="_blank" class="inline-block p1"
-                 aria-label="Link to Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 54 54"><title>
-                  Instagram</title>
+              <a href="https://www.linkedin.com/in/lucaslopatka" target="_blank" rel="noopener" class="inline-block p1"
+                 aria-label="Link to LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="47.2" viewBox="-5.1 -4.6 32.7 32.7"><title>
+                  LinkedIn</title>
                   <path
-                      d="M27.2 6.1c-5.1 0-5.8 0-7.8.1s-3.4.4-4.6.9c-1.2.5-2.3 1.1-3.3 2.2-1.1 1-1.7 2.1-2.2 3.3-.5 1.2-.8 2.6-.9 4.6-.1 2-.1 2.7-.1 7.8s0 5.8.1 7.8.4 3.4.9 4.6c.5 1.2 1.1 2.3 2.2 3.3 1 1.1 2.1 1.7 3.3 2.2 1.2.5 2.6.8 4.6.9 2 .1 2.7.1 7.8.1s5.8 0 7.8-.1 3.4-.4 4.6-.9c1.2-.5 2.3-1.1 3.3-2.2 1.1-1 1.7-2.1 2.2-3.3.5-1.2.8-2.6.9-4.6.1-2 .1-2.7.1-7.8s0-5.8-.1-7.8-.4-3.4-.9-4.6c-.5-1.2-1.1-2.3-2.2-3.3-1-1.1-2.1-1.7-3.3-2.2-1.2-.5-2.6-.8-4.6-.9-2-.1-2.7-.1-7.8-.1zm0 3.4c5 0 5.6 0 7.6.1 1.9.1 2.9.4 3.5.7.9.3 1.6.7 2.2 1.4.7.6 1.1 1.3 1.4 2.2.3.6.6 1.6.7 3.5.1 2 .1 2.6.1 7.6s0 5.6-.1 7.6c-.1 1.9-.4 2.9-.7 3.5-.3.9-.7 1.6-1.4 2.2-.7.7-1.3 1.1-2.2 1.4-.6.3-1.7.6-3.5.7-2 .1-2.6.1-7.6.1-5.1 0-5.7 0-7.7-.1-1.8-.1-2.9-.4-3.5-.7-.9-.3-1.5-.7-2.2-1.4-.7-.7-1.1-1.3-1.4-2.2-.3-.6-.6-1.7-.7-3.5 0-2-.1-2.6-.1-7.6 0-5.1.1-5.7.1-7.7.1-1.8.4-2.8.7-3.5.3-.9.7-1.5 1.4-2.2.7-.6 1.3-1.1 2.2-1.4.6-.3 1.6-.6 3.5-.7h7.7zm0 5.8c-5.4 0-9.7 4.3-9.7 9.7 0 5.4 4.3 9.7 9.7 9.7 5.4 0 9.7-4.3 9.7-9.7 0-5.4-4.3-9.7-9.7-9.7zm0 16c-3.5 0-6.3-2.8-6.3-6.3s2.8-6.3 6.3-6.3 6.3 2.8 6.3 6.3-2.8 6.3-6.3 6.3zm12.4-16.4c0 1.3-1.1 2.3-2.3 2.3-1.3 0-2.3-1-2.3-2.3 0-1.2 1-2.3 2.3-2.3 1.2 0 2.3 1.1 2.3 2.3z"
-                      class="ampstart-icon ampstart-icon-instagram"></path>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/bluecollardev/" target="_blank" class="inline-block p1"
-                 aria-label="Link to Twitter">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="44.4" viewBox="0 0 53 49"><title>
-                  Twitter</title>
-                  <path
-                      d="M45 6.9c-1.6 1-3.3 1.6-5.2 2-1.5-1.6-3.6-2.6-5.9-2.6-4.5 0-8.2 3.7-8.2 8.3 0 .6.1 1.3.2 1.9-6.8-.4-12.8-3.7-16.8-8.7C8.4 9 8 10.5 8 12c0 2.8 1.4 5.4 3.6 6.9-1.3-.1-2.6-.5-3.7-1.1v.1c0 4 2.8 7.4 6.6 8.1-.7.2-1.5.3-2.2.3-.5 0-1 0-1.5-.1 1 3.3 4 5.7 7.6 5.7-2.8 2.2-6.3 3.6-10.2 3.6-.6 0-1.3-.1-1.9-.1 3.6 2.3 7.9 3.7 12.5 3.7 15.1 0 23.3-12.6 23.3-23.6 0-.3 0-.7-.1-1 1.6-1.2 3-2.7 4.1-4.3-1.4.6-3 1.1-4.7 1.3 1.7-1 3-2.7 3.6-4.6"
-                      class="ampstart-icon ampstart-icon-twitter"></path>
+                      d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.02h4.52V24H.24V8.02zM8.34 8.02h4.33v2.18h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.52v-7.3c0-1.74-.03-3.98-2.42-3.98-2.43 0-2.8 1.9-2.8 3.86V24H8.34V8.02z"
+                      class="ampstart-icon ampstart-icon-linkedin"></path>
                 </svg>
               </a>
             </li>
