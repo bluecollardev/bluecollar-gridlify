@@ -3,6 +3,9 @@
 Blue Collar Development marketing site — `bluecollardev.com`. Vue 3 SPA built with Vite,
 deployed on Vercel.
 
+Open work is tracked in [`docs/TODO.md`](docs/TODO.md) — check it before starting, and
+update it as items land.
+
 ## Commands
 
 ```bash

@@ -1,23 +1,227 @@
 title: Portfolio
 items:
+  - client: Skin Tyee First Nation
+    description: >-
+      **The Client**
+
+
+      Skin Tyee First Nation is a proud Wet'suwet'en community on the shores of
+      Francois Lake in northern British Columbia.
+
+
+      **The Problem**
+
+
+      The Nation needed modern technology it could own and govern itself: identity
+      and single sign-on for staff, a website it controls, and a way to keep band
+      members informed and involved, with the design kept auditable and the data
+      governable by the Nation.
+
+
+      **Our Solution**
+
+
+      Contracted as the Nation's IT System Architect, we took on its technology end
+      to end (identity, cloud, network, data sovereignty, security and custom
+      software) and delivered a working, cloud-first Microsoft and Azure stack
+      alongside a suite of purpose-built applications.
+
+      - A role-gated community app in React Native and Expo (public, band member, and admin and staff views): dashboard, member directory, community events, notifications, band meetings, public records and transparency reporting, and polling and surveys
+
+      - A billable time-keeping module with account coding, pay periods, approvals, charts and branded PDF timesheet reports
+
+      - A Consultation Referrals system with reserve and territory GIS map layers (PostGIS), versioned records and branded PDF reports, with documents stored in both SharePoint and Azure Blob Storage, plus an MCP server for AI search across referrals and documents
+
+      - Migrated skintyee.ca off Site123 to a self-hosted, headless WordPress stack on Azure Container Apps, with Azure DevOps CI/CD and a managed database with automated backups and point-in-time restore
+
+      - A contract-first NestJS API (OpenAPI) with PostGIS for land allocation and mapping, role-gated through Microsoft Entra ID
+
+      - Single sign-on on Microsoft Entra ID across Microsoft 365 and the custom apps, with Microsoft Graph integration
+
+      - Data-sovereignty policy for First Nations data governance, and backup and disaster-recovery planning
+
+
+      **Technologies**
+
+
+      Microsoft Azure (Container Apps, Blob Storage, managed databases, DNS/TLS),
+      Microsoft 365, Microsoft Entra ID, Microsoft Graph, SharePoint, TypeScript,
+      React Native, Expo, Node.js, NestJS, Prisma, PostgreSQL, PostGIS, ArcGIS,
+      WordPress, Azure DevOps, Aspire, PowerShell, Anthropic Claude, MCP
+    image: /images/portfolio/bc-showcase-skintyee.png
+    gallery:
+      - /images/portfolio/bc-showcase-skintyee.png
+      - /images/portfolio/gallery/skintyee-1.jpg
+      - /images/portfolio/gallery/skintyee-2.jpg
+      - /images/portfolio/gallery/skintyee-3.jpg
+      - /images/portfolio/gallery/skintyee-4.jpg
+      - /images/portfolio/gallery/skintyee-5.jpg
+      - /images/portfolio/gallery/skintyee-6.jpg
+      - /images/portfolio/gallery/skintyee-7.jpg
+    projectName: Skin Tyee First Nation Technology Platform
+    startDate: 2026-05-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
+  - client: CrashPad411.com
+    description: >-
+      **The Client**
+
+
+      CrashPad411.com is the #1 listings site for air-crew accommodation in the USA,
+      serving more than 46,000 in-flight crew members in 69 cities, with over 4,000
+      crashpad listings and more than 270,000 messages sent. A crashpad is a place
+      for airline personnel to stay when on reserve duty, on early-morning flights,
+      or commuting to base. Under the hood it is a multi-tenant rental-listings SaaS,
+      white-labeled into the dot.properties network.
+
+
+      **The Problem**
+
+
+      Brought on by the founder to modernize the stack, our brief was to give the
+      platform its first automated DevOps foundation — CI/CD, containerized
+      deployment and multi-tenant provisioning — and to modernize the full stack
+      end to end, from the customer web and mobile apps through to the Laravel
+      backend and its payments engine.
+
+
+      **Our Solution**
+
+
+      As Technical Lead we owned the architecture and led all six repositories end
+      to end, modernizing the full stack and consolidating the platform's separate
+      applications into a scalable, financially reconcilable, multi-tenant SaaS.
+
+      - Set up the platform's first CI/CD, GitLab pipelines deploying to DigitalOcean, moving deployment onto automated, version-controlled, containerized releases
+
+      - Authored the Azure DevOps pipelines that followed, deploying to DigitalOcean with Azure Key Vault secrets, Azure DNS, a declaratively configured Kong gateway behind an Nginx reverse proxy with Let's Encrypt SSL, and MySQL backup and restore to Azure Blob Storage
+
+      - Led the Vue 2 to Vue 3 (Composition API) migration, consolidating the customer web app, the merchant dashboard and six shared @properties/* packages into a single pnpm monorepo
+
+      - Built server-side rendering for the customer web app on Express, with performance work on assets, bundles and lazy-loaded translations
+
+      - Shipped iOS and Android apps with Capacitor (push notifications and geolocation), built through Fastlane and TestFlight
+
+      - Rebuilt the payments and subscription engine from scratch on Stripe (Connect merchant payouts, subscriptions, AutoPay rent collection, duplicate-charge protection) with a complete, auditable ledger that reconciles with Stripe
+
+      - Drove the PHP 7 to 8 and Laravel 8 to 11 upgrades; delivered single sign-on and login-as-user impersonation over OAuth2, a Laravel Nova admin, websockets and a Laravel MCP server exposing the listings API to AI agents
+
+      - Architected the 9-node white-label network (a dot.properties master federating tenant sites over RabbitMQ) and a self-service SaaS onboarding portal with Stripe billing, trials and partner referrals
+
+      - Led a complete UI/UX redesign, with Stripe checkout, subscription and AutoPay flows and Google Maps listing search
+
+
+      **Technologies**
+
+
+      Vue 3 (SSR, Composition API), TypeScript, Vite, pnpm, Vuex, Node.js,
+      Express, Capacitor, Laravel 11, PHP 8.2, Laravel Nova, Laravel Passport
+      (OAuth2), Reverb, Socket.io, Python, Bottle, MySQL, MongoDB, Redis, Stripe
+      Connect, RabbitMQ, Kong, Nginx, Docker, GitLab CI, Azure DevOps, DigitalOcean,
+      Azure (Static Web Apps, DNS, Key Vault, Blob Storage), Cypress, Storybook
+    endDate: 2026-01-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-crashpad411.png
+    gallery:
+      - /images/portfolio/bc-showcase-crashpad411.png
+      - /images/portfolio/gallery/crashpad411-1.jpg
+      - /images/portfolio/gallery/crashpad411-2.jpg
+      - /images/portfolio/gallery/crashpad411-3.jpg
+      - /images/portfolio/gallery/crashpad411-4.jpg
+    projectName: CrashPad411 Platform Modernization
+    startDate: 2024-02-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
+  - client: Dr. Adam Fehr
+    description: >-
+      **The Client**
+
+
+      Dr. Adam Fehr, MD, DPT, wanted a mobile app to house and easily share his
+      exercise videos with his patients and clients.
+
+
+      **The Problem**
+
+
+      Dr. Fehr needed one place to house a growing library of instructional
+      videos, and an easy way to share a whole session's worth of them with a
+      patient or client.
+
+
+      **Our Solution**
+
+
+      We designed and built PocketPT (Pocket Physical Therapist) end to end, and
+      continue to develop it. It is an instructional-video media-sharing platform
+      where users follow playlists of 5 to 10 short videos, a typical physiotherapy
+      or workout session, drawn from a catalogue of around 1,000 instructional
+      videos. It is live at app.drafehr.com.
+
+      - A cross-platform mobile and web app in React Native and Expo with Redux Toolkit and a shared component library: playlist creation and playback, media sharing, user connections, email invitations, search and tagging
+
+      - Programs organized by body region, program and training focus, with exercise progressions ordered by intensity
+
+      - An Nx monorepo of four NestJS microservices (media, users, tagging, and analytics and tracking) over MongoDB, with OpenAPI specs and generated, typed clients
+
+      - Authentication on AWS Cognito and media storage on AWS S3, deployed to AWS Lightsail in Docker containers with automated GitLab CI/CD and a Node provisioning CLI
+
+
+      **Technologies**
+
+
+      TypeScript, React Native, Expo, Redux Toolkit, NestJS, Nx, MongoDB, TypeORM,
+      OpenAPI, AWS (Cognito, S3, Lightsail), Docker, GitLab CI
+    image: /images/portfolio/bc-showcase-pocketpt.png
+    gallery:
+      - /images/portfolio/bc-showcase-pocketpt.png
+      - /images/portfolio/gallery/pocketpt-1.jpg
+      - /images/portfolio/gallery/pocketpt-2.jpg
+      - /images/portfolio/gallery/pocketpt-3.jpg
+      - /images/portfolio/gallery/pocketpt-4.jpg
+      - /images/portfolio/gallery/pocketpt-5.jpg
+      - /images/portfolio/gallery/pocketpt-6.jpg
+    projectName: PocketPT (Pocket Physical Therapist)
+    testimonialId: adamfehr
+    startDate: 2020-01-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
   - client: AOT Technologies / Government of British Columbia
     description: >-
       **The Stakeholder**
-      
-      
+
+
+      The Ministry of Citizens' Services, Procurement Services Division,
+      Government of British Columbia. We delivered this work through AOT
+      Technologies.
+
+
       **The Problem**
-      
-      
-      The Ministry of Citizens' Services, Procurement Services Division's
-      TimeMachine system is an operationally critical application that provides
-      time tracking and project information to support the Procurement Services
-      Division’s billing processes.
-      
-      
+
+
+      The Procurement Services Division's TimeMachine system is an operationally
+      critical application that provides time tracking and project information to
+      support the division's billing processes.
+
+
       **Our Solution**
-      
-      
+
+
+      We led UI development of a Vue-based time-tracking and scheduling
+      application, built around a reusable, library-style calendar component.
+
+      - Collaborated with stakeholders and business analysts to design the application
+
+      - Led development of the UI components and screens
+
+      - Structured the development team to deliver using scrum / agile
+
+      - Automated load, regression, smoke and integration tests
+
+
       **Technologies**
+
+
+      ES7, Vue.js, Vuex, Node.js, Koa, TypeORM, PostgreSQL, OpenShift, Git
     endDate: 2019-04-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-timemachine.png
     projectName: Procurement Services Division Time Machine
@@ -28,35 +232,60 @@ items:
   - client: Interdynamix
     description: >-
       **The Client**
-      
-      
-      Ideal is an automotive fintech startup (incubated in-house by a company
-      called Interdynamix) whose main product offering is a SaaS-style
-      machine-learning enhanced Business Intelligence platform for automotive
-      inventory holders, retailers, and lenders.
-      
-      
+
+
+      Ideal is an automotive fintech startup, incubated in-house by Interdynamix
+      (now Carbeeza), whose product is a SaaS-style, machine-learning enhanced
+      business intelligence platform for automotive inventory holders, retailers
+      and lenders. The platform uses AI to make car-buying easier, matching buyers
+      to their ideal vehicle and folding financing discovery into the process.
+
+
+      **The Problem**
+
+
+      The platform had to draw on data held separately by inventory holders,
+      retailers and lenders and bring it into one consumer portal and dealer
+      application, behind a single sign-on — with its first iteration ready for
+      the company's initial funding round.
+
+
       **Our Solution**
-      
-      
-      We created a hybrid client-side app which communicates using RESTful APIs
-      with headless web API service instances representing the inventory holders,
-      retailers, and lenders to a particular organization. SSO-style authentication
-      is handled using Red Hat’s Keycloak.The distributed backends (API) are written
-      in Java using Spring Boot and Hibernate, and communicate with each other using
-      RabbitMQ message broker software; information is stored in PostgreSQL databases.
-      Software is deployed using Docker containers via Kubernetes.
+
+
+      We joined at the early-stage startup phase as Frontend Applications Lead and
+      drove the front-end for the platform's first iteration, through the
+      company's initial funding round.
+
+      - Built the consumer portal and dealer applications in React, and made the front-end platform decisions
+
+      - Prototyped application screens and workflows with stakeholders
+
+      - Integrated SSO-style authentication using Red Hat's Keycloak
+
+      - Built and tested Node.js microservices supporting the front-end
+
+      - Integrated against documented, contract-first service APIs owned by the backend team
+
+      - Containerized the front-end applications for deployment on OpenShift
+
+
+      The client-side apps communicate over RESTful APIs with headless web API
+      service instances representing the inventory holders, retailers and lenders
+      within an organization. The distributed backends are written in Java using
+      Spring Boot and Hibernate, communicate with each other through the RabbitMQ
+      message broker, and store data in PostgreSQL.
 
 
       **Technologies**
-      
-      
-      HTML5, ES6, ES7, SASS, JSX, ReactJS, Flux, Material-UI,
-      MobX, React-Bootstrap, DevExpress, Bluebird, Java, Spring Boot, Hibernate,
-      Swagger, Swagger Codegen, OpenAPI, PostgreSQL, RabbitMQ, Keycloak, Gulp,
-      Webpack, Karma, Mocha, Chai, Expect.js, Jest, Docker, Kubernetes,
-      VirtualBox, WebStorm, Spring Tool Suite, Adobe CC (Photoshop, Illustrator,
-      etc.), RESTful API design, UI Design, GitLab, Git
+
+
+      HTML5, ES6, ES7, SASS, JSX, ReactJS, Flux, Material-UI, MobX,
+      React-Bootstrap, DevExpress, Bluebird, Node.js, Java, Spring Boot,
+      Hibernate, Swagger, Swagger Codegen, OpenAPI, PostgreSQL, RabbitMQ,
+      Keycloak, Gulp, Webpack, Karma, Mocha, Chai, Expect.js, Jest, Docker,
+      Kubernetes, OpenShift, VirtualBox, WebStorm, Spring Tool Suite, Adobe CC
+      (Photoshop, Illustrator, etc.), RESTful API design, UI Design, GitLab, Git
     endDate: 2019-02-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-ideal.png
     projectName: Ideal Automotive Finance Solutions
@@ -66,23 +295,39 @@ items:
   - client: Phobulous Noodle House
     description: >-
       **The Client**
-      
-      
-      We designed a custom SPA-style mobile-friendly Asian-styled theme for
-      their website featuring CSS animations and a custom menu component. A
-      customized build of OpenCart is used on the backend for content and
-      product management.
-      
-      
+
+
+      Phobulous is a noodle house restaurant in Edmonton, Alberta.
+
+
+      **The Problem**
+
+
+      The restaurant needed a site that worked as well on a phone as on a
+      desktop, with a menu that could be kept up to date as content rather than
+      rebuilt each time it changed.
+
+
       **Our Solution**
 
 
+      We designed a custom, Asian-styled website theme and built it as a
+      mobile-friendly React single-page app running on a headless OpenCart
+      backend.
+
+      - Custom SPA front-end in React with CSS animations throughout
+
+      - A custom menu component
+
+      - A customized, headless build of OpenCart for content and product management, exposed to the front-end over RESTful APIs
+
+
       **Technologies**
-      
-      
-      HTML5, ReactJS, SASS, Webpack, Gulp, Customized OpenCart
-      build, PHP, Sim, Doctrine ORM/DBAL, MySQL, RESTful APIs, Adobe CC
-      (Photoshop, Illustrator, etc.), Git
+
+
+      HTML5, ReactJS, SASS, Webpack, Gulp, customized OpenCart build (headless),
+      PHP, Slim, Doctrine ORM/DBAL, MySQL, RESTful APIs, Adobe CC (Photoshop,
+      Illustrator, etc.), Git
     endDate: 2017-05-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-phobulous.png
     projectName: Phobulous Restaurant Website
@@ -92,32 +337,47 @@ items:
   - client: Caffe Tech 2004 Ltd.
     description: >-
       **The Client**
-      
-      
-      Caffe Tech is an Edmonton based importer and distributor of premium
-      (primarily Italian and Swiss) commercial and home coffee equipment which
-      provides many popular Albertan establishments with their restaurant and
-      coffee making equipment.
+
+
+      Caffe Tech is an Edmonton-based importer and distributor of premium
+      (primarily Italian and Swiss) commercial and home espresso equipment,
+      supplying many popular Albertan establishments with their restaurant and
+      coffee-making equipment. The owner also runs Leva Cafe and Ace Coffee
+      Roasters in Edmonton.
+
+
+      **The Problem**
+
+
+      Caffe Tech needed a tablet-based point-of-sale app to replace its existing
+      PixelPoint point-of-sale systems. It had to support dedicated point-of-sale
+      hardware and integrate with the business's existing e-commerce and
+      accounting APIs.
 
 
       **Our Solution**
-      
-      
-      Caffe Tech required a tablet-based point-of-sale app, supporting
-      peripheral devices including Star Micronics point-of-sale equipment, that
-      would integrate with their existing e-commerce/accounting APIs, and
-      replace their existing PixelPoint point-of-sale systems. Supported
-      peripheral devices included Star Micronics Bluetooth and Wireless cash
-      drawers, ticket and receipt printers, and barcode scanners.
+
+
+      We designed and built a hybrid tablet point-of-sale app in React and
+      Cordova, including a custom restaurant POS for Leva Cafe with its menu and
+      QR ordering.
+
+      - Integrated Star Micronics hardware through its native (Java / iOS) SDKs: Bluetooth and wireless cash drawers, ticket and receipt printers, and barcode scanners
+
+      - Connected the POS to the business's e-commerce store and accounting data, so sales and stock stayed in sync
+
+      - Built supporting inventory-management and invoicing micro-apps
+
+      - Local SQLite storage and OAuth2-secured RESTful APIs
 
 
       **Technologies**
-      
-      
-      ReactJS, Redux, Material-UI, MobX, React-Bootstrap,
-      Bluebird, Star Micronics Android/iOS SDKs, SQLite, OAuth2, RESTful APIs,
-      Cordova, PhoneGap Build, Gulp, Webpack, Mocha, Chai, Expect.js, Jest,
-      Adobe CC (Photoshop, Illustrator, etc.), Git, Jira, Sketch
+
+
+      ReactJS, Redux, Material-UI, MobX, React-Bootstrap, Bluebird, Star
+      Micronics Android/iOS SDKs, SQLite, OAuth2, RESTful APIs, Cordova, PhoneGap
+      Build, Gulp, Webpack, Mocha, Chai, Expect.js, Jest, Adobe CC (Photoshop,
+      Illustrator, etc.), Git, Jira, Sketch
     endDate: 2017-07-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-quickcommerce.png
     projectName: iOS Tablet Point-of-Sale
@@ -127,24 +387,41 @@ items:
   - client: Jimmy Poblano's Mexican Cantina
     description: >-
       **The Client**
-      
-      
+
+
+      Jimmy Poblano's Mexican Cantina is an Edmonton restaurant and food truck.
+
+
+      **The Problem**
+
+
+      The cantina and its food truck needed a site with a personality of its
+      own, and a menu that could be kept current as what they served changed.
+
+
       **Our Solution**
-      
-      
-      We designed a custom SPA-style mobile-friendly Mexican-styled theme for
-      their website featuring completely custom artwork, parallax scrolling
-      effects and a custom menu component. A customized build of OpenCart is
-      used on the backend for content and product management.
+
+
+      We designed a custom, Mexican-styled website with completely custom
+      artwork, built as a mobile-friendly single-page app on a headless OpenCart
+      backend. We knew the business from the inside, having also helped run the
+      food truck.
+
+      - Completely custom illustration and artwork
+
+      - Parallax scrolling effects
+
+      - A custom menu component
+
+      - A customized, headless build of OpenCart for content and product management
 
 
       **Technologies**
-      
-      
-      HTML5, jQuery, LESS, Webpack, Gulp, Customized OpenCart
-      build, PHP, Sim, Doctrine ORM/DBAL, MySQL, RESTful APIs, Adobe CC
-      (Photoshop, Illustrator, etc.), Git
 
+
+      HTML5, ReactJS, jQuery, LESS, Webpack, Gulp, customized OpenCart build
+      (headless), PHP, Slim, Doctrine ORM/DBAL, MySQL, RESTful APIs, Adobe CC
+      (Photoshop, Illustrator, etc.), Git
     image: /images/portfolio/bc-showcase-jimmy-poblanos.png
     projectName: Jimmy Poblanos Food Truck Website
     testimonialId: jimmyp
@@ -155,21 +432,37 @@ items:
   - client: Caffe Tech / Cafe Leva
     description: >-
       **The Client**
-      
-      
-      Caffe Tech is an Edmonton based importer and distributor of premium
-      (primarily Italian and Swiss) commercial and home coffee equipment which
-      provides many popular Albertan establishments with their restaurant and
-      coffee making equipment.
-      
-      
+
+
+      Leva Cafe is an Edmonton cafe and sister business to Caffe Tech, an
+      importer and distributor of premium (primarily Italian and Swiss)
+      commercial and home espresso equipment, and Ace Coffee Roasters.
+
+
+      **The Problem**
+
+
+      Leva needed its own customer website, distinct from Caffe Tech's, with its
+      products and stock kept in step with the group's inventory.
+
+
       **Our Solution**
-      
-      
-      We designed a custom SPA-style mobile-friendly Mexican-styled theme for
-      their website featuring completely custom artwork, parallax scrolling
-      effects and a custom menu component. A customized build of OpenCart is
-      used on the backend for content and product management.
+
+
+      We designed and built the customer website for Leva, one of three sites we
+      built across the owner's businesses (alongside Caffe Tech and Ace Coffee
+      Roasters).
+
+      - Custom, mobile-friendly theme
+
+      - Integrated with the group's e-commerce and QuickBooks inventory through our custom data bridge
+
+
+      **Technologies**
+
+
+      HTML5, SASS, JavaScript, jQuery, PHP, MySQL, Adobe CC (Photoshop,
+      Illustrator, etc.), Git
     endDate: 2016-12-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-cafe-leva.png
     projectName: Leva Website
@@ -179,21 +472,37 @@ items:
   - client: Baan Saowanee
     description: >-
       **The Client**
-      
-      
-      We designed a custom SPA-style mobile-friendly theme for their website
-      featuring completely parallax scrollingeffects and a animated page
-      transitions. A customized build of OpenCart is used on the backend for
-      content and product management.
-      
-      
+
+
+      Baan Saowanee is a collection of holiday home rentals on the north side of
+      Ko Samui island, a short two-minute drive from scenic Mae Nam Beach. Guests
+      choose from a range of rental options depending on the size of their group
+      and the quality of accommodation they want.
+
+
+      **The Problem**
+
+
+      The rentals needed a site that showed the properties off and let guests
+      weigh up the options for their group and budget.
+
+
       **Our Solution**
-      
-      
-      Baan Saowanee is a collection of holiday home rentals situated on the
-      north side of Ko Samui island, a short 2 minute drive to scenic Mae Nam
-      Beach. Baan Saowanee guests have a range of rental options to choose from,
-      dependent upon the number of persons and quality of accommodation.
+
+
+      We designed a custom, mobile-friendly single-page website that shows off the
+      properties.
+
+      - Parallax scrolling effects and animated page transitions
+
+      - A customized build of OpenCart for content and product management
+
+
+      **Technologies**
+
+
+      HTML5, SASS, JavaScript, jQuery, PHP, customized OpenCart build, MySQL,
+      Adobe CC (Photoshop, Illustrator, etc.), Git
     image: /images/portfolio/bc-showcase-app-baansao.png
     projectName: Baan Saowanee
     startDate: 2016-09-01T12:00:00.000Z
@@ -203,64 +512,102 @@ items:
   - client: Caffe Tech 2004 Ltd.
     description: >-
       **The Client**
-      
-      
-      Caffe Tech is an Edmonton based importer and distributor of premium
-      (primarily Italian and Swiss) commercial and home coffee equipment which
-      provides many popular Albertan establishments with their restaurant and
-      coffee making equipment.
-      
-      
+
+
+      Caffe Tech is an Edmonton-based importer and distributor of premium
+      (primarily Italian and Swiss) commercial and home espresso equipment, with
+      sister businesses Leva Cafe and Ace Coffee Roasters.
+
+
+      **The Problem**
+
+
+      With its stores migrated from Magento to QuickCommerce, and the business
+      expanding and opening new locations, Caffe Tech needed an inventory
+      management solution that would synchronize QuickBooks customers, inventory
+      and stock levels, invoices, work orders and more with its e-commerce
+      websites (Caffe Tech, Leva and Ace Coffee Roasters). Its catalogue of 5,000
+      to 10,000 espresso-machine parts had also never been properly catalogued.
+
+
       **Our Solution**
-      
-      
-      We designed a custom e-commerce platform including a custom payment
-      extension for Global Payments (Canada) and a shipping extension for
-      Purolator’s Shipping API (SOAP) featuring item tracking, support for
-      multiple items per package, label printing, international documents
-      generation, and automatically scheduled package pickups.
-      
-      
+
+
+      We designed an event-driven software bridge: an OAuth2-secured RESTful
+      microservice plus custom "client" extensions for QuickCommerce (OpenCart)
+      that automatically synchronized data across multiple installations and
+      software systems.
+
+      - Kept inventory synced live between QuickBooks Online and the online stores
+
+      - Catalogued the full parts inventory into QuickBooks, reconciled stock quantities for tax records, then migrated the business to QuickBooks Online
+
+      - Built custom inventory-management and invoicing micro-apps
+
+      - Brought the network infrastructure under control, running Microsoft Small Business Server virtualized on new Apple equipment, and trained staff across all three businesses
+
+
       **Technologies**
-      
-      
-      Magento, Linux, Apache, PHP, MySQL, Prototype, GD,
-      ImageMagick & Imagick for PHP, GhostScript (PDF), Git
+
+
+      HTML5, SASS, JavaScript, jQuery, PHP, Slim, Doctrine ORM/DBAL, QuickBooks
+      PHP SDK, QuickBooks Online API, QuickBooks Desktop SDK, OpenCart,
+      QuickCommerce, Bash, PHPUnit, REST, JSON, Swagger, Swagger Codegen, OAuth2,
+      MySQL, CentOS, Windows Small Business Server, Parallels, Git
+    image: /images/portfolio/bc-showcase-app-quickcommerce.png
+    projectName: Caffe Tech Inventory Management and Data Bridge
     endDate: 2016-08-01T12:00:00.000Z
-    image: /images/portfolio/bc-showcase-caffe-tech.png
-    projectName: Caffe Tech E-Commerce Store
     startDate: 2016-03-01T12:00:00.000Z
     isPublic: true
     displayImage: true
   - client: Video Entertainment Systems Technology Ltd.
     description: >-
       **The Client**
-      
-      
-      Video Systems Entertainment Technology (VEST) is an Edmonton company that
-      provides self-serve program kiosks to (horse/harness/greyhound) racetracks
-      and off-track-betting sites in Canada, the US and the Caribbean. Some of
-      the products offered on the kiosks are full programs, profile sheets,
-      singles races and IP sheets.
-      
-      
+
+
+      Video Systems Entertainment Technology (VEST) is an Edmonton gaming and
+      entertainment-technology company that provides self-serve program kiosks to
+      horse, harness and greyhound racetracks and off-track-betting sites in
+      Canada, the US and the Caribbean. Products offered on the kiosks include
+      full programs, profile sheets, single races and IP sheets.
+
+
+      **The Problem**
+
+
+      VEST wanted everything its self-serve kiosks could do — full programs,
+      profile sheets, single races and IP sheets — available on tablets, Linux
+      kiosks and smart televisions, and extended beyond what the existing system
+      offered.
+
+
       **Our Solution**
-      
-      
-      We were contracted to develop a hybrid mobile application for deployment
-      on tablets, Linux kiosks and smart televisions which replicates (and furthers)
-      the functionality available in their existing kiosk system. These tablets are
-      currently being deployed in multiple off-track-betting locations in the
+
+
+      We were contracted as primary UI designer and application developer to
+      build a hybrid app for tablets, Linux kiosks and smart televisions that
+      replicates, and extends, the functionality of VEST's existing kiosk system.
+      The tablets were deployed in multiple off-track-betting locations in the
       continental USA.
-      
-      
+
+      - Collaborated with stakeholders to design the system
+
+      - Built a custom hybrid Android app in Angular and Cordova, deployed to a fleet of SIM-connected kiosks and tablets
+
+      - Users can view programs through a personal account, print them at the kiosk, or have them emailed
+
+      - Built the backend services the kiosks dial up to over cellular, using Slim, Doctrine and MySQL
+
+      - Set up CI/CD pipelines with Docker, AWS and Azure to build and roll out to the kiosk fleet
+
+
       **Technologies**
-      
-      
-      HTML5, SASS, Angular, Kendo UI for Angular, JavaScript,
-      Webpack, Karma, Mocha, Chai, Expect.js, Cordova, PhoneGap Build, PHP,
-      Slim, Doctrine DBAL/ORM, PHPUnit, REST, XML, Bash, MySQL, Sphinx OSSS,
-      Memcached, GD, ImageMagick, Docker, CentOS, Git
+
+
+      HTML5, SASS, Angular, Kendo UI for Angular, JavaScript, Webpack, Karma,
+      Mocha, Chai, Expect.js, Cordova, PhoneGap Build, Android, PHP, Slim,
+      Doctrine DBAL/ORM, PHPUnit, REST, XML, Bash, MySQL, Sphinx, Memcached, GD,
+      ImageMagick, Docker, AWS, Azure, CentOS, Git
     image: /images/portfolio/bc-showcase-app-vest.png
     projectName: VEST Tablet & Kiosk Apps
     testimonialId: phase3
@@ -271,68 +618,90 @@ items:
   - client: Caffe Tech 2004 Ltd.
     description: >-
       **The Client**
-      
-      
-      Caffe Tech is an Edmonton based importer and distributor of premium
-      (primarily Italian and Swiss) commercial and home coffee equipment which
-      provides many popular Albertan establishments with their restaurant and
-      coffee making equipment.
-      
-      
+
+
+      With over 15 years of experience, Caffe Tech is an Edmonton-based importer
+      and distributor of premium (primarily Italian and Swiss) commercial and home
+      espresso equipment, selling to the retail, commercial and wholesale markets
+      both online and in store. Its spare-parts catalogue alone runs to 5,000 to
+      10,000 individual parts.
+
+
+      **The Problem**
+
+
+      Caffe Tech's Magento store had been left half-built by another firm that
+      couldn't complete it, and the business needed an e-commerce platform it
+      could grow on.
+
+
       **Our Solution**
-      
-      
-      As Caffe Tech was expanding their business and opening multiple new
-      locations, they needed an inventory management solution that would
-      synchronize their QuickBooks Desktop / Online customers, inventory and
-      stock levels, invoices, work orders and more with their existing
-      e-commerce websites (Caffe Tech, Leva, ACE Coffee Roasters). We designed
-      an event-driven software bridge, composed of an OAuth2 secured RESTful
-      micro-service, and custom ‘client’ extensions for Magento and OpenCart,
-      that automatically handled synchronization of all data across multiple
-      installations and software systems using a combination of PHP, Slim,
-      Doctrine ORM/DBAL, MySQL and the QuickBooks Online API and Desktop SDK.
-      
-      
+
+
+      We took over the Magento store and ran it, then migrated the business onto
+      QuickCommerce, our customized OpenCart e-commerce platform.
+
+      - Migrated the store from Magento to QuickCommerce, our customized OpenCart platform
+
+      - Canada Post and Purolator shipping integrations for the new store, with label printing on a thermal printer
+
+      - Custom QuickCommerce extensions, laying the groundwork for our QuickBooks data bridge, which followed
+
+
       **Technologies**
-      
-      
-      HTML5, SASS, JavaScript, jQuery, PHP, Slim, Doctrine
-      ORM/DBAL, QuickBooks PHP SDK, QuickBooks Online API, OpenCart, Magento,
-      Bash, PHPUnit, REST, JSON, Swagger, Swagger Codegen, OAuth2, MySQL,
-      CentOS, Windows Small Business Server, Git
-    image: /images/portfolio/bc-showcase-app-quickcommerce.png
-    projectName: Caffe Tech Inventory Management and Data Bridge
+
+
+      OpenCart, QuickCommerce, Magento, Linux, Apache, PHP, MySQL, jQuery, SOAP,
+      GD, ImageMagick & Imagick for PHP, GhostScript (PDF), Git
     endDate: 2016-02-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-caffe-tech.png
+    projectName: Caffe Tech E-Commerce Store
     startDate: 2015-07-01T12:00:00.000Z
     isPublic: true
     displayImage: true
   - client: Challenger Fleet Management Solutions
     description: >-
       **The Stakeholder**
-      
-      
-      Challenger Fleet Management Solutions specializes in long term vehicle
+
+
+      Challenger Fleet Management Solutions specializes in long-term vehicle
       rentals for industrial projects.
-      
-      
+
+
+      **The Problem**
+
+
+      Challenger's custom fleet-management ERP had been left partly unfinished by
+      a previous development team, with key features missing and stability
+      problems in the backend.
+
+
       **Our Solution**
-      
-      
-      We architected, designed and spearheaded the development of a custom fleet-management
-      application which served to streamline business processes including tracking vehicle inventory,
-      coordinating the equipment of vehicles with specialized accessories required for industrial
-      projects, coordinating deliveries on or before the time vehicle units are required on site, monitoring
-      manufacturer recall programs, invoicing and basic accounting, and the generation of customized
-      reports to clients while vehicle units are on rent.
+
+
+      Working under subcontract from Pure Logic Solutions (Edmonton), we were
+      brought in to complete and stabilize the system. It streamlines tracking
+      vehicle inventory, fitting vehicles with the specialized accessories
+      industrial projects require, coordinating deliveries so units arrive on site
+      on time, monitoring manufacturer recall programs, invoicing and basic
+      accounting, and generating customized reports for clients while units are on
+      rent.
+
+      - Completed the missing features, mostly around invoicing and inventory management
+
+      - Fixed bugs and hardened the ASP.NET Web API and SQL Server / Entity Framework backend
+
+      - Built out automated load, regression, smoke and integration test coverage
+
+      - Delivered within the team's scrum / agile process
 
 
       **Technologies**
-      
-      
-      HTML5, JavaScript, Angular, LESS, Require.js, C#,
-      ASP.NET Web API, ASP.NET MVC, Razer, Entity Framework, T-SQL, SQL Server,
-      Visual Studio, Windows Server, IIS, SVN
+
+
+      HTML5, JavaScript, Angular, LESS, Require.js, C#, ASP.NET Web API, ASP.NET
+      MVC, Razor, Entity Framework, T-SQL, SQL Server, Visual Studio, Windows
+      Server, IIS, SVN
     endDate: 2015-07-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-challenger-02.png
     projectName: Challenger Fleet Management System
@@ -343,26 +712,43 @@ items:
   - client: Corrpro (Canada)
     description: >-
       **The Stakeholder**
-      
-      
-      Corrpro provides corrosion control materials and services including -
+
+
+      Corrpro provides corrosion control materials and services, including
       engineering, pipeline integrity, construction and protective coating
-      inspection - throughout North America, Europe, the Middle East and South
+      inspection, throughout North America, Europe, the Middle East and South
       Africa.
-      
-      
+
+
+      **The Problem**
+
+
+      Corrpro needed a way to track corrosion levels of pipelines and storage
+      tanks at thousands of industrial locations across Alberta, and to report
+      on what it found.
+
+
       **Our Solution**
-      
-      
-      We designed and developed a custom Windows Desktop application to
-      help track corrosion levels of pipelines and storage tanks at thousands of
-      industrial locations across Alberta.
-      
-      
+
+
+      Working under subcontract from Pure Logic Solutions (Edmonton), we designed
+      and developed a custom Windows desktop application to track corrosion levels
+      of pipelines and storage tanks at thousands of industrial locations across
+      Alberta.
+
+      - Collaborated with stakeholders to design the tracking application
+
+      - Built the desktop app in WinForms, with reporting through SQL Server Reporting Services (SSRS)
+
+      - Structured the development team to deliver using scrum / agile
+
+      - Automated load, regression, smoke and integration tests
+
+
       **Technologies**
-      
-      
-      C#, WinForms, Windows User Interface, T-SQL, SQL Server,
+
+
+      C#, WinForms, Windows User Interface, Entity Framework, T-SQL, SQL Server,
       SSRS, SVN
     endDate: 2015-07-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-corrpro.png
@@ -371,34 +757,105 @@ items:
     jobTypeText: Employed By
     isPublic: false
     displayImage: true
-  - client: Alberta Motor Association
+  - client: Caffe Tech 2004 Ltd.
     description: >-
-      **The Stakeholder**
-      
-      
-      The Alberta Motor Association was looking to replace its legacy and
-      end-of-life ‘FrontTier’ insurance policy management system with an
-      in-house, web-based application and backend service network.
-      
-      
+      **The Client**
+
+
+      With over 15 years of experience, Caffe Tech is an Edmonton-based importer
+      and distributor of premium (primarily Italian and Swiss) espresso machines
+      and coffee-related products, selling to the retail, commercial and wholesale
+      markets both online and in store.
+
+
+      **The Problem**
+
+
+      The store was running on Magento 1.2.x and needed to move to a current
+      version, and the shipping and payment integrations the business depended
+      on did not exist off the shelf.
+
+
       **Our Solution**
-      
-      
-      We spearheaded the overhaul of AMA’s web-based AgentView insurance
-      management system and the network of .NET Web API and WCF services that
-      supports it. The scope of work involved a complete rewrite of AgentView’s
-      client and server applications as well as complete UI redesign (a previous
-      external contractor had failed). We was also responsible for UI/UX design
-      related to internal and external web-based applications.
+
+
+      We were contracted to overhaul Caffe Tech's original Magento 1.2.x store and
+      as its extension developer.
+
+      - Reconstructed the store's template for compatibility with Magento 1.7.x
+
+      - Developed the only comprehensive Purolator shipping extension for Magento, using Purolator's SOAP Shipping API: international shipments, custom packaging and multiple items per package, document generation, label printing, pickup scheduling and tracking
+
+      - Built a custom payment extension for Global Payments (Canada)
 
 
       **Technologies**
-      
-      
-      HTML5, Modular JavaScript, Kendo UI, Foundation, jQuery,
-      LESS, Require.js, C#, ASP.NET Web API, ASP.NET Web Forms, Entity
-      Framework, WCF, N-Tier, T-SQL, SQL Server, Visual Studio, Windows Server,
-      IIS, RTC, TFS
+
+
+      Magento, Linux, Apache, PHP, MySQL, Prototype, SOAP, GD, ImageMagick &
+      Imagick for PHP, GhostScript (PDF), Git
+    endDate: 2015-06-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-caffe-tech-magento.png
+    gallery:
+      - /images/portfolio/bc-showcase-caffe-tech-magento.png
+      - /images/portfolio/gallery/caffe-tech-magento-1.jpg
+    projectName: Caffe Tech Magento Store
+    startDate: 2015-01-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
+  - client: Alberta Motor Association
+    description: >-
+      **The Stakeholder**
+
+
+      The Alberta Motor Association (AMA) was replacing its legacy, end-of-life
+      FRONT-TIER insurance system, a Progress 4GL workflow and policy
+      administration ERP, with an in-house, web-based application and backend
+      service network. The new platform, AgentView, is used across AMA's
+      insurance operations and reaches every AMA policyholder in Alberta.
+
+
+      **The Problem**
+
+
+      The functionality of the legacy FRONT-TIER system had to be reproduced in
+      a web-based platform used across AMA's Alberta insurance operations —
+      including its large, complex vehicle-insurance forms and its integrations
+      with external rating engines and data sources.
+
+
+      **Our Solution**
+
+
+      We helped lead the overhaul of AgentView and the network of .NET Web API and
+      WCF services that supports it: a complete rewrite of the client and server
+      applications and a complete UI redesign, following an unsuccessful attempt
+      by a previous external contractor. AgentView was delivered by a team of six
+      to seven, and we were also responsible for UI/UX design across related
+      internal and external web applications.
+
+      - Cloned the functionality of the legacy FRONT-TIER ERP into the web-based AgentView platform
+
+      - Built a custom JavaScript rendering framework on Telerik Kendo UI to drive AgentView's massive vehicle-insurance forms (policyholder, vehicle, trailer and coverage), which significantly sped up delivery of these complex pages
+
+      - Integrated AgentView with external rating engines and data sources, including CGI AutoPlus, Kanetix and Equifax, largely over SOAP
+
+      - Redesigned and hardened the Web API and WCF domain service contracts
+
+      - Prototyped application screens and workflows with product owners and business analysts
+
+
+      The result was a more streamlined claims process: agents handled customer
+      claim calls an estimated 30 to 50% faster, cutting the time customers spent
+      on the phone.
+
+
+      **Technologies**
+
+
+      HTML5, Modular JavaScript, Kendo UI, Foundation, jQuery, LESS, Require.js,
+      C#, ASP.NET Web API, ASP.NET Web Forms, Entity Framework, WCF, SOAP, N-Tier,
+      T-SQL, SQL Server, Visual Studio, Windows Server, IIS, RTC, TFS
     endDate: 2014-12-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-agentview.png
     projectName: AgentView Insurance Policy Management System
@@ -409,33 +866,43 @@ items:
   - client: Alberta Motor Association
     description: >-
       **The Stakeholder**
-      
-      
+
+
+      The Alberta Motor Association (AMA) provides home, tenant and automobile
+      insurance to its members across Alberta.
+
+
       **The Problem**
-      
-      
-      The Alberta Motor Association needed a new web-based and mobile friendly
-      system to provide customers with customized home and tenant insurance
-      quotes. The new application replaced their legacy web application,
-      developed in C# using ASP.NET Web Forms, which was not mobile friendly.
+
+
+      AMA needed a new web-based, mobile-friendly system to provide customers with
+      customized home and tenant insurance quotes. It would replace the legacy
+      quote application, built in C# using ASP.NET Web Forms, which was not
+      mobile-friendly.
 
 
       **Our Solution**
-      
-      
-      We designed and developed a new web application consisting of a
-      responsive, mobile-friendly JavaScript client and a ASP.NET Web API
-      backend, re-using code for certain procedures, functions and business
-      logic where possible.
+
+
+      We designed and developed a new web application consisting of a responsive,
+      mobile-friendly JavaScript client and an ASP.NET Web API backend, reusing
+      code for existing procedures, functions and business logic where possible.
+
+      - Collaborated with the product owner and business analysts to design the application
+
+      - Designed responsive application screens and the quote workflow
+
+      - Built the customer-facing signup pages and online quote flow
+
+      - Designed the supporting Web API and WCF domain services
 
 
       **Technologies**
-      
-      
-      HTML5, Modular JavaScript, Kendo UI, Foundation, jQuery,
-      LESS, Require.js, C#, ASP.NET Web API, ASP.NET Web Forms, Entity
-      Framework, WCF, N-Tier, T-SQL, SQL Server, Visual Studio, Windows Server,
-      IIS, RTC, TFS
+
+
+      HTML5, Modular JavaScript, Kendo UI, Foundation, jQuery, LESS, Require.js,
+      C#, Razor, ASP.NET Web API, ASP.NET Web Forms, Entity Framework, WCF,
+      N-Tier, T-SQL, SQL Server, Visual Studio, Windows Server, IIS, RTC, TFS
     endDate: 2013-05-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-homequote.png
     projectName: Home Insurance Quote Web Application
@@ -446,33 +913,43 @@ items:
   - client: Alberta Motor Association
     description: >-
       **The Stakeholder**
-      
-      
+
+
+      The Alberta Motor Association (AMA) provides home, tenant and automobile
+      insurance to its members across Alberta.
+
+
       **The Problem**
-      
-      
-      The Alberta Motor Association needed a new web-based and mobile friendly
-      system to provide customers with customized automobile insurance quotes.
-      The new application replaced their legacy web application, developed in C#
-      using ASP.NET Web Forms, which was not mobile friendly.
+
+
+      AMA needed a new web-based, mobile-friendly system to provide customers with
+      customized automobile insurance quotes. It would replace the legacy quote
+      application, built in C# using ASP.NET Web Forms, which was not
+      mobile-friendly.
 
 
       **Our Solution**
-      
-      
-      We designed and developed a new web application consisting of a
-      responsive, mobile-friendly JavaScript client and a ASP.NET Web API
-      backend, re-using code for certain procedures, functions and business
-      logic where possible.
+
+
+      We designed and developed a new web application consisting of a responsive,
+      mobile-friendly JavaScript client and an ASP.NET Web API backend, reusing
+      code for existing procedures, functions and business logic where possible.
+
+      - Collaborated with the product owner and business analysts to design the application
+
+      - Designed responsive application screens and the quote workflow
+
+      - Built the customer-facing signup pages and online quote flow
+
+      - Designed the supporting Web API and WCF domain services
 
 
       **Technologies**
-      
-      
-      HTML5, Modular JavaScript, Kendo UI, Foundation, jQuery,
-      LESS, Require.js, C#, ASP.NET Web API, ASP.NET Web Forms, Entity
-      Framework, WCF, N-Tier, T-SQL, SQL Server, Visual Studio, Windows Server,
-      IIS, RTC, TFS
+
+
+      HTML5, Modular JavaScript, Kendo UI, Foundation, jQuery, LESS, Require.js,
+      C#, Razor, ASP.NET Web API, ASP.NET Web Forms, Entity Framework, WCF,
+      N-Tier, T-SQL, SQL Server, Visual Studio, Windows Server, IIS, RTC, TFS
     endDate: 2013-05-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-app-autoquote.png
     projectName: Auto Insurance Quote Web Application
@@ -483,69 +960,94 @@ items:
   - client: Spasation
     description: >-
       **The Client**
-      
-      
-      Spasation is an Alberta-based chain of spas/salons.
-      
-      
+
+
+      Spasation is an Alberta-based chain of spas and salons.
+
+
+      **The Problem**
+
+
+      The chain needed an online store to sell alongside its spas and salons,
+      with Canada Post shipping handled at checkout.
+
+
       **Our Solution**
-      
-      
-      Uses a customized build of OpenCart for content and product management.
+
+
+      We designed and built Spasation's website and online store.
+
+      - A custom, responsive theme for OpenCart
+
+      - A custom Canada Post shipping extension for the online store
+
+      - A customized OpenCart build for content and product management
 
 
       **Technologies**
-      
-      
-      OpenCart, Linux, Apache, PHP, MySQL, jQuery
-    endDate: 2013-01-01T12:00:00.000Z
+
+
+      OpenCart, Linux, Apache, PHP, MySQL, jQuery, HTML, CSS
+    endDate: 2011-08-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-spasation.png
     projectName: Spasation Website and Online Store
-    startDate: 2012-11-01T12:00:00.000Z
+    startDate: 2011-06-01T12:00:00.000Z
     testimonialId: spasation
     isPublic: true
     displayImage: true
   - client: Carsgone (Magazine)
     description: >-
       **The Client**
-      
-      
-      CarsGone is an Edmonton-based, nationally spanning automotive classifieds
-      magazine and website with a print distribution network across Alberta and
-      Ontario.
-      
-      
+
+
+      Carsgone is an Edmonton-based, nationally spanning automotive classifieds
+      magazine and website, with a print distribution network across Alberta and
+      Ontario. The site is supported by partnerships with data providers as well
+      as the magazine's print operation. The project was delivered with Strathcom
+      Media (Edmonton) as an original virtual-dealership concept.
+
+
+      **The Problem**
+
+
+      Listings arrived both from end users and as high-volume feeds from data
+      providers, and the site had to stay fast and findable as the catalogue
+      grew to tens of thousands of vehicles — while the magazine's print edition
+      needed to reach the web too.
+
+
       **Our Solution**
-      
-      
-      We rebuilt an online marketplace/classifieds site for listing vehicles
+
+
+      We rebuilt the online marketplace and classifieds site for listing vehicles,
       serving independent buyers and sellers as well as hundreds of dealerships
-      across Canada. Vehicle listings were either posted by end-users or
-      aggregated using data providers from organizations including Strathcom
-      Media and Boost Motor Group for display. At its peak they had over 90,000
-      vehicles and vehicles from over 600 dealerships listed on their website.
-      
-      
-      **Scope of Work**
-      
-      
-      •	Re-designed application components and classes
-      •	Re-designed end-user and administrative user interfaces
-      •	Re-designed database and DAL entities, leveraging Doctrine DBAL and Doctrine ORM
-      •	Designed and developed SOAP/REST/XML-RPC solutions for parsing massive data feeds from providers including
-      Boost Motor Group, Strathcom Media, and dozens of independent auto dealerships across Canada
-      •	Optimized search indexing and caching using Sphinx Open Source Search Server and other technologies
-      •	Combined SEO optimization and dynamic content generation
-      •	Designed and built Print->PDF->Web publishing application using Kohana and ImageMagick
-      •	Optimized image caching mechanisms
-      
-      
+      across Canada. Listings were either posted by end users or aggregated from
+      data providers including Strathcom Media and Boost Motor Group. At its peak
+      the site listed over 90,000 vehicles from more than 600 dealerships.
+
+      - Architected, designed and developed the web application and API
+
+      - Redesigned application components and classes, and the associated databases and data access layer
+
+      - Redesigned the end-user and administrative user interfaces
+
+      - Designed and developed SOAP, REST and XML-RPC solutions for parsing massive, high-density data feeds from Boost Motor Group, Strathcom Media and dozens of independent dealerships, using a multi-threaded parser
+
+      - Optimized search indexing and caching using the Sphinx open-source search server
+
+      - Combined SEO optimization with dynamic content generation, growing indexed pages from 350,000 to over 3.2 million
+
+      - Designed and built a Print to PDF to Web publishing application for the magazine, using Kohana and ImageMagick
+
+      - Optimized image caching, and handled QC/QA testing and debugging
+
+
       **Technologies**
-      
-      
-      HdTML, CSS, JavaScript, jQuery, PHP, Kohana/CodeIgniter,
-      Kohana ORM, SOAP, REST, XML,MySQL, Sphinx OSSS, Memcached, GD,
-      ImageMagick, Photoshop, Illustrator, Git
+
+
+      HTML, CSS, JavaScript, jQuery, PHP, Kohana/CodeIgniter, Kohana ORM, SOAP,
+      REST, XML-RPC, XML, MySQL, Sphinx, Memcached, GD, ImageMagick, Photoshop,
+      Illustrator, Git
     endDate: 2012-10-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-carsgone.png
     projectName: Carsgone.com
@@ -556,24 +1058,38 @@ items:
   - client: RMG Selection
     description: >-
       **The Client**
-      
-      
-      RMG Selection is an award-winning, China-focused international recruitment
-      and HR consultancy business with over 30 offices around the world.
-      
-      
+
+
+      RMG Selection is an award-winning, China-focused international executive
+      recruitment and HR consultancy with over 30 offices around the world.
+
+
+      **The Problem**
+
+
+      The site needed a responsive rebuild, with a job board RMG could run
+      itself.
+
+
       **Our Solution**
-      
-      
-      We designed, developed and helped maintain the RMG Selection’s HR recruitment
-      website for over 6 years. This 2014 rebuild of the site was the winner of
-      the ‘Best Job Board’ award at the 2014 Global Recruiter Asia Pacific
-      Awards ceremony in Singapore.
+
+
+      Version 3 of RMG Selection's recruitment website was a complete rebuild on
+      WordPress. We had built the previous, 2009 version of the site, starting
+      through Smart Traffic before working with RMG directly.
+
+      - A responsive WordPress theme designed for the new site
+
+      - A custom Job Board extension for WordPress
+
+
+      This rebuild won the Best Job Board award at the 2014 Global Recruiter Asia
+      Pacific Awards in Singapore.
 
 
       **Technologies**
-      
-      
+
+
       WordPress, Linux, Apache, PHP, MySQL, jQuery, GhostScript (PDF)
     endDate: 2011-06-01T12:00:00.000Z
     image: /images/portfolio/bc-showcase-rmg-selection.png
@@ -581,32 +1097,58 @@ items:
     startDate: 2011-04-01T12:00:00.000Z
     isPublic: true
     displayImage: true
-  - client: Active24
+  - client: Active 24 (now Visma)
     description: >-
       **The Client**
-      
-      
-      Active 24 is an independent pan-European provider of Internet hosting
-      services. The company focuses on providing small and medium-sized
-      companies and private individuals with hosted solutions that combine
-      scalable and standardized products.
-      
-      
+
+
+      Active 24 (now Visma) is an independent, pan-European provider of internet
+      hosting services. The company focuses on providing small and medium-sized companies
+      and private individuals with hosted solutions that combine scalable and
+      standardized products.
+
+
+      **The Problem**
+
+
+      Active 24's hosting packages are presented as comparison matrices that
+      change often, and staff needed to create and update them on the corporate
+      site and stores without touching page markup.
+
+
       **Our Solution**
-      
-      
-      We designed and built WordPress plugins to create, display, and update product matrices
-      which were displayed on their corporate website and online "stores". It featured a GUI
-      to create grid/matrix supporting CRUD functions for resource (product) rows, columns and cells,
-      inline AJAX-based editing, cell content overriding as well as a style editor for formatting
-      resource rows, columns and cells
-      
-      
+
+
+      We designed and built a WordPress plugin to create, display and update the
+      product matrices that compare Active 24's hosting packages on its corporate
+      website (active24.no) and online stores, with a WYSIWYG, Excel-style matrix
+      editor.
+
+      - A GUI to create grids and matrices, with full CRUD for resource (product) rows, columns and cells
+
+      - Matrix resource integration, so rows and columns are bound to real products and categories
+
+      - Inline, AJAX-based editing
+
+      - Cell content overriding
+
+      - A style editor for formatting resource rows, columns and cells
+
+      - Revisions and live output monitoring while editing
+
+
       **Technologies**
-      
-      
-      WordPress, Linux, Apache, PHP, MySQL, ProtoType
+
+
+      WordPress, Linux, Apache, PHP, MySQL, Prototype, AJAX
     endDate: 2011-06-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-active24.png
+    gallery:
+      - /images/portfolio/bc-showcase-active24.png
+      - /images/portfolio/gallery/active24-1.jpg
+      - /images/portfolio/gallery/active24-2.jpg
+      - /images/portfolio/gallery/active24-3.jpg
+      - /images/portfolio/gallery/active24-4.jpg
     projectName: Product Matrix WordPress Extension
     startDate: 2011-04-01T12:00:00.000Z
     testimonialId: active24
@@ -615,27 +1157,47 @@ items:
   - client: SoftControl
     description: >-
       **The Client**
-      
-      
+
+
       Founded in Bangkok in 1993 by a team of German and Thai entrepreneurs,
-      SoftControl delivers enterprise IT services and solutions to hundreds of local and
-      international customers.
-      
-      
+      SoftControl delivers enterprise IT services and solutions to hundreds of
+      local and international customers. ExtremeAudio, one of its clients, is a
+      German online car-audio store.
+
+
+      **The Problem**
+
+
+      SoftControl needed product display, inventory and administration features
+      that Magento did not provide for its client's store, and QA on the
+      installation itself.
+
+
       **Our Solution**
-      
-      
-      We developed a custom Magento "base" theme and several Magento extensions for
-      product display, inventory management and administration. We also assisted
-      with QA testing and debugging of (other) Magento e-commerce installations.
+
+
+      Subcontracted by SoftControl, we developed a custom Magento "base" theme and
+      multiple extensions for ExtremeAudio covering product display, inventory
+      management and administration, and handled QA testing and debugging of the
+      Magento installation.
+
+      - An AJAX product search extension
+
+      - A module to attach actions to admin system events and hooks
+
+      - An extension to display categories by price range
 
 
       **Technologies**
-      
-      
-      Magento, Linux, Apache, PHP, MySQL, Prototype, GD, ImageMagick & Imagick for PHP,
-      GhostScript (PDF), SVN
+
+
+      Magento, Linux, Apache, PHP, MySQL, Prototype, AJAX, GD, ImageMagick &
+      Imagick for PHP, GhostScript (PDF), SVN
     endDate: 2011-02-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-extremeaudio.png
+    gallery:
+      - /images/portfolio/bc-showcase-extremeaudio.png
+      - /images/portfolio/gallery/extremeaudio-1.jpg
     projectName: ExtremeAudio E-Commerce Website
     startDate: 2010-11-01T12:00:00.000Z
     isPublic: true
@@ -643,26 +1205,58 @@ items:
   - client: Xtend-Life
     description: >-
       **The Client**
-      
-      
+
+
+      Xtend-Life Natural Products is a maker of natural health supplements.
+
+
+      **The Problem**
+
+
+      Every affiliate needed their own site and marketing material without
+      anything being built from scratch each time, and their business cards had
+      to be produced at print resolution from the browser.
+
+
       **Our Solution**
-      
-      
-      Developed a business card publishing plugin for WordPress CMS with
-      features including AJAX WYSIWYG editing, custom file upload and placement,
-      live style editing, adjustable print resolution output, image processing
-      via GD or Imagick, and export to major publishing formats including TIFF,
-      EPS and PDF.
+
+
+      We developed a custom affiliate website and marketing platform for
+      Xtend-Life.
+
+      - Individual affiliate sites are auto-generated using a custom WordPress MU (multisite) implementation
+
+      - A global administrative interface built with ASP.NET MVC
+
+
+      We also developed a business card publishing plugin for
+      WordPress MU.
+
+      - AJAX WYSIWYG editing, with user and admin layout modes
+
+      - Custom file upload and placement
+
+      - Live colour, font size and coordinate changes
+
+      - Adjustable print resolution output (300 dpi by default)
+
+      - Image processing via GD or Imagick, with export to major publishing formats including TIFF, EPS and PDF
+
+      - Compatibility with the Cimy User Extra Fields plugin
 
 
       **Technologies**
-      
-      
-      WordPress, Linux, Apache, PHP, MySQL, jQuery, Mootools,
-      Moo4Q, GD, ImageMagick & Imagick for PHP, GhostScript (PDF), C#, ASP.NET
-      MVC, Entity Framework, T-SQL, SQL Server, Visual Studio, Windows Server,
-      IIS, SVN
+
+
+      WordPress MU, Linux, Apache, PHP, MySQL, jQuery, Mootools, Moo4Q, GD,
+      ImageMagick & Imagick for PHP, GhostScript (PDF), C#, ASP.NET MVC, Entity
+      Framework, T-SQL, SQL Server, Visual Studio, Windows Server, IIS, SVN
     endDate: 2010-09-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-xtend-life.png
+    gallery:
+      - /images/portfolio/bc-showcase-xtend-life.png
+      - /images/portfolio/gallery/xtend-life-1.jpg
+      - /images/portfolio/gallery/xtend-life-2.jpg
     projectName: Online Affiliate Portal
     startDate: 2010-04-01T12:00:00.000Z
     isPublic: true
@@ -670,21 +1264,56 @@ items:
   - client: Smart Traffic/Smart Site
     description: >-
       **The Client**
-      
-      
+
+
+      MyFoneRecycle is a UK-based mobile phone recycling website. We built it in
+      partnership with Smart Traffic, an Australian digital agency operating in
+      Bangkok.
+
+
+      **The Problem**
+
+
+      Selling a phone for recycling had to be quick, repeat sellers needed a
+      reason to come back, and staff needed to manage products and orders in
+      bulk — none of which OpenCart did out of the box.
+
+
       **Our Solution**
-      
-      
-      Designed and implemented a custom e-commerce theme and several extensions
-      for the OpenCart e-commerce system.
+
+
+      We designed a custom e-commerce theme and carried out an extensive, radical
+      overhaul of the OpenCart e-commerce system's core and peripheral classes,
+      with strict MVC development throughout. Custom components included:
+
+      - A custom-built one-step checkout
+
+      - An extensive customer rewards system
+
+      - Customer feedback and testimonial components
+
+      - New and improved product and order filters in the administration
+
+      - Batch product and category actions
+
+      - User-defined category options and fields
+
+      - A mail and post options component
 
 
       **Technologies**
-      
-      
-      OpenCart, Linux, Apache, PHP, MySQL, jQuery, GD,
-      ImageMagick & Imagick for PHP, GhostScript (PDF)
+
+
+      OpenCart, Linux, Apache, PHP, MySQL, jQuery, GD, ImageMagick & Imagick for
+      PHP, GhostScript (PDF)
     endDate: 2010-06-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-myfonerecycle.png
+    gallery:
+      - /images/portfolio/bc-showcase-myfonerecycle.png
+      - /images/portfolio/gallery/myfonerecycle-1.jpg
+      - /images/portfolio/gallery/myfonerecycle-2.jpg
+      - /images/portfolio/gallery/myfonerecycle-3.jpg
+      - /images/portfolio/gallery/myfonerecycle-4.jpg
     projectName: MyFoneRecycle E-Commerce Website
     startDate: 2010-06-01T12:00:00.000Z
     isPublic: true
@@ -692,23 +1321,41 @@ items:
   - client: Smart Traffic/Smart Site
     description: >-
       **The Client**
-      
-      
+
+
+      Gorilla Print is a UK-based print company. We built its store in
+      partnership with Smart Traffic, an Australian digital agency operating in
+      Bangkok.
+
+
+      **The Problem**
+
+
+      A print business needed an online store where customers could prepare
+      their artwork in the browser and order it, with output produced at print
+      resolution.
+
+
       **Our Solution**
-      
-      
-      Designed and implemented a custom e-commerce theme and a series of extensions
-      for the OpenCart e-commerce system. Customizations include a one-step
-      checkout system as well a publishing plugin for OpenCart with features
-      including AJAX WYSIWYG editing, custom file upload and placement, live
-      style editing, adjustable print resolution output, image processing via GD
-      or Imagick, and export to major publishing formats including TIFF, EPS and
-      PDF.
+
+
+      We designed and implemented a custom e-commerce theme and a series of
+      extensions for the OpenCart e-commerce system.
+
+      - A custom one-step checkout
+
+      - A publishing plugin for OpenCart with AJAX WYSIWYG editing
+
+      - Custom file upload and placement, and live style editing
+
+      - Adjustable print resolution output
+
+      - Image processing via GD or Imagick, with export to major publishing formats including TIFF, EPS and PDF
 
 
       **Technologies**
-      
-      
+
+
       OpenCart, Linux, Apache, PHP, MySQL, jQuery, Mootools, Moo4Q, GD,
       ImageMagick & Imagick for PHP, GhostScript (PDF)
     endDate: 2010-04-01T12:00:00.000Z
@@ -719,22 +1366,46 @@ items:
   - client: Smart Traffic/Smart Site
     description: >-
       **The Client**
-      
-      
+
+
+      Wholesale Silver Jewelry is a Thailand-based manufacturer and wholesaler of
+      sterling silver jewelry and gemstones, selling to trade customers worldwide.
+      We built its store in partnership with Smart Traffic, an Australian digital
+      agency operating in Bangkok.
+
+
+      **The Problem**
+
+
+      Selling wholesale to trade customers around the world meant pricing in
+      several currencies, a checkout that could be completed in one step, and
+      card payments through a Thai gateway.
+
+
       **Our Solution**
-      
-      
-      Designed and implemented a custom e-commerce theme and several extensions
-      for the OpenCart e-commerce system. Customizations include a one-step
-      checkout system as well as a custom payment extension for ‘Thai e-Payments’.
+
+
+      We designed and implemented a custom e-commerce theme and several extensions
+      for the OpenCart e-commerce system.
+
+      - A custom-built one-step checkout, with address, shipping route, payment and review steps on a single page
+
+      - A custom payment gateway integration with Thai e-Pay for credit and debit card payments, alongside PayPal, bank transfer and Western Union
+
+      - Multi-currency pricing
 
 
       **Technologies**
-      
-      
-      OpenCart, Linux, Apache, PHP, MySQL, jQuery, GD,
-      ßImageMagick & Imagick for PHP, GhostScript (PDF)
+
+
+      OpenCart, Linux, Apache, PHP, MySQL, jQuery, GD, ImageMagick & Imagick for
+      PHP, GhostScript (PDF)
     endDate: 2010-01-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-wholesale-silver-jewelry.png
+    gallery:
+      - /images/portfolio/bc-showcase-wholesale-silver-jewelry.png
+      - /images/portfolio/gallery/wholesale-silver-jewelry-1.jpg
+      - /images/portfolio/gallery/wholesale-silver-jewelry-2.jpg
     projectName: Wholesale Silver Jewelry E-Commerce Website
     startDate: 2010-01-01T12:00:00.000Z
     isPublic: true
@@ -742,23 +1413,35 @@ items:
   - client: Nfineon
     description: >-
       **The Client**
-      
-      
-      Binc VFX was a boutique visual effects studio in Bangkok, Thailand.
-      
-      
+
+
+      Binc BKK VFX was a boutique visual effects studio in Bangkok, Thailand.
+
+
+      **The Problem**
+
+
+      The studio needed a website, and behind it somewhere to manage clients and
+      track the assets moving through its projects.
+
+
       **Our Solution**
-      
-      
-      We designed a custom website that integrated with their custom asset
-      management platform, which we also built, based on a project we helped
-      contribute to called the TACGA (Thai Animation and Computer Graphics
-      Association) Media Management System.
+
+
+      We designed the studio's website and built the client-management and
+      asset-tracking database behind it, based on a project we helped contribute
+      to: the TACGA (Thai Animation and Computer Graphics Association) Media
+      Management System. We also collaborated with the studio on several
+      prototyping projects.
+
+      - Custom website design, integrated with the studio's asset management platform
+
+      - A client-management and asset-tracking database
 
 
       **Technologies**
-      
-      
+
+
       Linux, Apache, PHP, MySQL, jQuery, FFmpeg, Adobe Flash
     endDate: 2009-08-01T12:00:00.000Z
     projectName: Binc VFX Website and Asset Management System
@@ -769,51 +1452,186 @@ items:
   - client: Nfineon
     description: >-
       **The Client**
-      
-      
-      Kantana PCL (Public Company Limited) is Thailand's largest media
-      organization.
-      
-      
+
+
+      The Human Development Foundation and the Mercy Centre are a non-profit
+      organization in Bangkok. They build and operate schools, improve family
+      health and welfare, protect street children's rights, combat the AIDS
+      crisis, respond to daily emergencies, and offer shelter to orphans, street
+      children and children with AIDS.
+
+
+      **The Problem**
+
+
+      The foundation needed donating, sponsoring a child and its wish list to be
+      easy to find and act on, alongside news, events and somewhere for
+      supporters to talk to each other.
+
+
       **Our Solution**
-      
-      
-      We were contracted to redesign their animation studio’s website to
-      correspond with the release of Khan Kluay 2 (a domestic CG movie featuring a
-      family of elephants). We designed a custom theme and several custom
-      extensions for Joomla CMS, including extensions for managing photo/video assets.
+
+
+      We designed and built the Mercy Centre's website on Joomla, with a
+      blog-style layout that puts donations and sponsorship front and centre.
+
+      - A Joomla-powered, blog-style layout
+
+      - An integrated phpBB forum system, powering the web board
+
+      - A custom-designed AJAX event management system
+
+      - Donate Today, Sponsor a Child and Wish List sections, with a PayPal donation panel
+
+      - Picture galleries, downloads and multi-language support
 
 
       **Technologies**
-      
-      
-      Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg, Adobe Flash
-    endDate: 2009-03-01T12:00:00.000Z
-    projectName: Kantana Animation Studios Website
-    startDate: 2009-03-01T12:00:00.000Z
+
+
+      Joomla CMS, phpBB, Linux, Apache, PHP, MySQL, jQuery, AJAX, PayPal
+    endDate: 2009-05-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-hdf-mercy-centre.png
+    gallery:
+      - /images/portfolio/bc-showcase-hdf-mercy-centre.png
+      - /images/portfolio/gallery/hdf-mercy-centre-1.jpg
+    projectName: HDF Mercy Centre Website
+    startDate: 2009-05-01T12:00:00.000Z
     isPublic: true
+    displayImage: true
   - client: Nfineon
     description: >-
       **The Client**
-      
-      
-      R1 Club was a membership-based luxury vehicle/yacht rental club in
-      Thailand, Malaysia and Singapore.
-      
-      
+
+
+      Kantana Group PCL (Public Company Limited) is Thailand's largest media
+      organization.
+
+
+      **The Problem**
+
+
+      The studio's site had to be ready for the release of Khan Kluay 2 and
+      carry a great deal of photo and video material.
+
+
       **Our Solution**
-      
-      
-      We designed a custom theme and several
-      custom extensions for Joomla CMS, including extensions for managing
-      photo/video assets, and a custom-made membership component.
+
+
+      We were contracted to redesign the website for Kantana Animation Studios to
+      accompany the release of Kantana's hit CG movie Khan Kluay 2, a domestic
+      animated feature about a family of elephants. We also built the website for
+      the Khan Kluay animated feature itself.
+
+      - A redesigned "web 2.0" interface with a Joomla-powered, blog-style layout
+
+      - Media-rich pages with serious interactivity
+
+      - A custom theme and several custom Joomla extensions, including extensions for managing photo and video assets
 
 
       **Technologies**
-      
-      
+
+
+      Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg, Adobe Flash
+    endDate: 2009-03-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-kantana.png
+    gallery:
+      - /images/portfolio/bc-showcase-kantana.png
+      - /images/portfolio/gallery/kantana-1.jpg
+    projectName: Kantana Animation Studios Website
+    startDate: 2009-03-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
+  - client: RMG Selection
+    description: >-
+      **The Client**
+
+
+      RMG Selection is a China-focused international executive recruitment and HR
+      consultancy, with offices including Hong Kong and Singapore.
+
+
+      **The Problem**
+
+
+      The site had to serve candidates and clients in more than one language,
+      let candidates send a CV straight from the page, and work for visitors
+      arriving on the first generation of smartphones.
+
+
+      **Our Solution**
+
+
+      We designed and built the 2009 version of RMG Selection's executive
+      recruitment website, together with a dedicated mobile section built for
+      early mobile device adoption, at a time when very few recruitment sites had
+      one.
+
+      - Customized the off-the-shelf Jobs! component to support additional languages, and designed a suite of modules for the front-end display requirements
+
+      - Job search by location, specialisation and salary range, with vacancies grouped by specialist area and location
+
+      - A Send CV module so candidates can upload their CV and submit it to the site as an email attachment
+
+      - A dedicated mobile section (m.rmgselection.com) built for early mobile device adoption, with browse jobs, client services and candidate services
+
+      - A custom WURFL-powered plugin that detects the visitor's device and automatically switches between the desktop and mobile templates
+
+      - Multi-language support, news sign-up and a web poll
+
+
+      **Technologies**
+
+
+      HTML, CSS, JavaScript, jQuery, PHP, MySQL, WURFL, Linux, Apache
+    endDate: 2009-12-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-rmg-selection-2009.png
+    gallery:
+      - /images/portfolio/bc-showcase-rmg-selection-2009.png
+      - /images/portfolio/gallery/rmg-selection-2009-1.jpg
+      - /images/portfolio/gallery/rmg-selection-2009-2.jpg
+    projectName: RMG Selection Recruitment Portal (2009 Version)
+    startDate: 2009-01-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
+  - client: Nfineon
+    description: >-
+      **The Client**
+
+
+      R1 Club was an exclusive, membership-based Southeast Asian club providing
+      luxury services, including vehicle and yacht rentals, to members in
+      Thailand, Malaysia and Singapore. It was a sister site to LUXE Galleria.
+
+
+      **The Problem**
+
+
+      A members-only club needed a site that presented its collection of cars,
+      yachts, estates and jets, and handled membership.
+
+
+      **Our Solution**
+
+
+      We designed a custom theme, a custom Joomla-based CMS and several custom
+      extensions for the club.
+
+      - Extensions for managing photo and video assets
+
+      - A custom-made membership component
+
+
+      **Technologies**
+
+
       Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg, Adobe Flash
     endDate: 2008-10-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-r1-club.png
+    gallery:
+      - /images/portfolio/bc-showcase-r1-club.png
+      - /images/portfolio/gallery/r1-club-1.jpg
     projectName: R1 Club Website
     startDate: 2008-10-01T12:00:00.000Z
     isPublic: true
@@ -821,23 +1639,43 @@ items:
   - client: Nfineon
     description: >-
       **The Client**
-      LUXE was a membership-based publication targeting haute-couture in South
-      East Asia.
-      
-      
+
+
+      LUXE Galleria was a membership-based publication and television network
+      targeting haute couture and luxury lifestyle in Southeast Asia.
+
+
+      **The Problem**
+
+
+      The network needed to publish high-quality video and photography on the
+      web, with blogs, forums, comments and downloads for its members.
+
+
       **Our Solution**
-      
-      
-      We designed a custom theme and several custom extensions for
-      Joomla CMS, including extensions for managing photo/video assets, and a
-      custom-made membership component.
+
+
+      We designed a media- and feature-rich site for the LUXE Galleria network,
+      with a custom theme and several custom extensions for Joomla CMS.
+
+      - A powerful Flash-based media management system
+
+      - A custom FFdshow-powered showcase plugin to feed high-quality video and pictures through the front-end
+
+      - Front-end access to blogs, forums, article comments, RSS feeds and media downloads, all managed through the CMS
+
+      - A custom-made membership component
 
 
       **Technologies**
-      
-      
-      Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg, Adobe Flash
+
+
+      Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg, FFdshow, Adobe Flash
     endDate: 2008-07-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-luxe-galleria.png
+    gallery:
+      - /images/portfolio/bc-showcase-luxe-galleria.png
+      - /images/portfolio/gallery/luxe-galleria-1.jpg
     projectName: LUXE Galleria Website
     startDate: 2008-07-01T12:00:00.000Z
     isPublic: true
@@ -845,20 +1683,46 @@ items:
   - client: Nfineon
     description: >-
       **The Client**
-      
-      
+
+
+      The Bangkok International Film Festival is an annual international film
+      festival held in Bangkok, Thailand.
+
+
+      **The Problem**
+
+
+      The festival needed a site for an international audience for its 2008
+      edition: film media, galleries, registration, and news in more than one
+      language.
+
+
       **Our Solution**
-      
-      
-      We designed a custom theme and several custom extensions for Joomla CMS,
-      including extensions for managing photo/video assets.
+
+
+      We designed a media-heavy website for the 2008 festival, with a custom theme
+      and several custom extensions for Joomla CMS.
+
+      - Streaming media technologies, including an in-page film media player
+
+      - Advanced Flash-based photo and video galleries
+
+      - Multiple-language translation capabilities
+
+      - Extensions for managing photo and video assets
+
+      - Festival registration, news and event update sections
 
 
       **Technologies**
-      
-      
+
+
       Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg, Adobe Flash
     endDate: 2008-04-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-bkk-film-festival.png
+    gallery:
+      - /images/portfolio/bc-showcase-bkk-film-festival.png
+      - /images/portfolio/gallery/bkk-film-festival-1.jpg
     projectName: Bangkok International Film Festival 2008 Website
     startDate: 2008-04-01T12:00:00.000Z
     isPublic: true
@@ -866,24 +1730,92 @@ items:
   - client: Nfineon
     description: >-
       **The Client**
-      
-      
+
+
+      Global Renewable Energy Services (GRES) is a California, USA-based biofuels
+      research think tank.
+
+
+      **The Problem**
+
+
+      The think tank wanted somewhere for the biofuels industry to discuss the
+      technology, share documents and find each other.
+
+
       **Our Solution**
-      
-      
-      We developed a community biofuel-centric community portal for GRES, a California, USA based biofuels
-      research think-tank featuring file-sharing, document management, and social media integration with Facebook.
-      
-      
+
+
+      We developed a biofuel-centric community portal for GRES, giving members of
+      the industry a place to discuss renewable energy technologies and connect
+      with key players.
+
+      - A fully fledged, interactive portal with file sharing and document management
+
+      - Discussion forums covering biofuel topics and feedstock growing
+
+      - Integrated social networking, with member profiles, friends, photos, groups and activity feeds
+
+      - Custom extensions for integration with popular third-party sites, including Facebook
+
+
       **Technologies**
-      
-      
+
+
       Joomla CMS, Linux, Apache, PHP, MySQL, jQuery, FFmpeg, Adobe Flash
     endDate: 2008-04-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-gres.png
+    gallery:
+      - /images/portfolio/bc-showcase-gres.png
+      - /images/portfolio/gallery/gres-1.jpg
+      - /images/portfolio/gallery/gres-2.jpg
     projectName: Global Renewable Energy Services Portal
     startDate: 2008-04-01T12:00:00.000Z
     isPublic: true
     displayImage: true
+  - client: Nfineon
+    description: >-
+      **The Client**
 
 
+      DP Piranha is a supplier of stylish, quality automotive accessories, including
+      aero parts, skirt sets, spoilers, visors and lamp guards, exporting worldwide
+      to automotive brands, international dealers and large distributors.
 
+
+      **The Problem**
+
+
+      Accessories only fit particular vehicles, so customers had to be able to
+      narrow the catalogue by brand, model, year and style — and staff had to
+      manage a large product range without editing it one item at a time.
+
+
+      **Our Solution**
+
+
+      We built DP Piranha's online store on Joomla and a heavily modified Zen Cart
+      build.
+
+      - A heavily modified Zen Cart build with a redesigned database, optimized to improve search performance
+
+      - Enhanced, bulk product management features in the administration
+
+      - Vehicle-based product search by brand, model, year and style
+
+      - Dealership inquiry, product brochure download and OEM / custom order sections
+
+
+      **Technologies**
+
+
+      Joomla CMS, Zen Cart, Linux, Apache, PHP, MySQL, jQuery
+    endDate: 2007-12-01T12:00:00.000Z
+    image: /images/portfolio/bc-showcase-dp-piranha.png
+    gallery:
+      - /images/portfolio/bc-showcase-dp-piranha.png
+      - /images/portfolio/gallery/dp-piranha-1.jpg
+    projectName: DP Piranha Automotive Accessories Store
+    startDate: 2007-01-01T12:00:00.000Z
+    isPublic: true
+    displayImage: true
