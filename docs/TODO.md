@@ -14,6 +14,10 @@ bottom of the relevant section.
 
 - [x] Fishing rod handle does not recast on a 14" MacBook (1512px): the hero text
       wrapper covered the handle. `pointer-events` fix in `src/pages/Index.vue`.
+- [x] Contact form: `#contact` had a fixed `height: 130vh` with `overflow: hidden`,
+      which cut the Submit button off on desktop. Now grows with the form and keeps
+      clear of the 9vh angled clip-path.
+- [x] Guitar section: bottom padding so the guitar clears the angled edge.
 
 ## Portfolio / case studies (`src/data/Portfolio.yml`)
 

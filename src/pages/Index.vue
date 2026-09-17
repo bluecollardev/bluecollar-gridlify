@@ -565,6 +565,8 @@ export default {
     height: 115vh;
     position: relative;
     top: -5vh;
+    /* Keep the guitar clear of the angled clip-path along the bottom edge */
+    padding-bottom: calc(9vh + 4rem);
   }
 }
 
@@ -585,7 +587,12 @@ export default {
   #contact {
     z-index: 0;
     top: -30vh;
-    height: 130vh;
+    /* Was a fixed height with overflow:hidden, which sliced the Submit button off
+       the bottom of the form on shorter screens. Let the section grow with the
+       form, and keep the content clear of the 9vh angled clip-path. */
+    min-height: 130vh;
+    height: auto;
+    padding-bottom: calc(9vh + 3rem);
     margin-bottom: -5vh;
   }
 }
