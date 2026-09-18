@@ -17,6 +17,12 @@
           <li><a href="/company" aria-label="Websites" @click="hideMenu()">{{ $t('nav.ourPeople') }}</a></li>
           <li><a href="/case-studies" aria-label="Case Studies"
                  @click.prevent="viewCaseStudies()">{{ $t('nav.caseStudies') }}</a></li>
+          <!-- The products sit in the home page's Open Source section; on mobile the
+               menu is the only way to reach them without scrolling for it -->
+          <li v-if="isMobile" v-for="product in products" :key="product.slug" class="product-menu-item">
+            <a :href="`/products/${product.slug}`" :aria-label="product.name"
+               @click.prevent="viewProduct(product.slug)">{{ product.name }}</a>
+          </li>
           <li><a href="/#contact" aria-label="Enquire" @click="hideMenu()">{{ $t('nav.getInTouch') }}</a></li>
           <li style="height: auto" class="language-switcher-menu-item">
             <language-switcher/>
@@ -68,6 +74,7 @@
 </template>
 
 <script>
+import ProductsData from '~/data/Products.yml'
 import MenuMixin from '~/core/mixins/MenuMixin'
 import LanguageSwitcher from '~/components/LanguageSwitcher.vue'
 
@@ -89,6 +96,9 @@ export default {
     isMobile() {
       return this.windowWidth <= 640
     },
+    products() {
+      return ProductsData.items
+    },
     phoneNumber() {
       return this.$t('contact.phone')
     },
@@ -101,6 +111,10 @@ export default {
      * Case Studies live in a modal on the home page; /case-studies renders the
      * home page and opens it, so the link works from any page and can be shared.
      */
+    viewProduct(slug) {
+      this.hideMenu()
+      this.$router.push(`/products/${slug}`).catch(() => {})
+    },
     viewCaseStudies() {
       this.hideMenu()
       this.$router.push('/case-studies').catch(() => {})
@@ -169,6 +183,13 @@ export default {
 }
 
 @media screen and (max-width: 40em) {
+  /* Products read as a group under the main links */
+  .product-menu-item a {
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+    opacity: 0.85;
+  }
+
   .site-menu {
     .controls {
       button {
