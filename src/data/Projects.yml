@@ -14,7 +14,7 @@ items:
     openSource: true
   - name: Rental.Cloud
     icon: /images/projects/rental-cloud.svg
-    tagline: The open-source, self-hosted alternative to Airbnb and Booking.com
+    tagline: The self-hosted alternative to Airbnb and Booking.com
     description: >-
       Run your own rental marketplace instead of renting space on someone else's.
       A multi-tenant, white-label listings platform behind CrashPad411 and others:
