@@ -12,6 +12,7 @@
                    :rel="project.url ? 'noopener' : null"
                    class="project-card">
           <div class="project-card__head">
+            <img v-if="project.icon" class="project-card__icon" :src="project.icon" alt="" aria-hidden="true"/>
             <h3 class="project-card__name">{{ project.name }}</h3>
             <a v-if="project.openSource && project.github" :href="project.github" target="_blank" rel="noopener"
                class="project-card__source" :aria-label="`${project.name} on GitHub`" @click.stop>
@@ -104,13 +105,19 @@ export default {
   &__head {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    gap: 0.75rem;
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex: 0 0 auto;
   }
 
   &__name {
     font-size: 1.35rem;
     margin: 0;
+    margin-right: auto;
   }
 
   &__source {

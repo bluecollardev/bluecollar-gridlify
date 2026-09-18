@@ -1,7 +1,8 @@
-title: Projects
+title: Open Source at Heart
 subtitle: Products and platforms we build and maintain.
 items:
   - name: Mediashare
+    icon: /images/projects/mediashare.svg
     tagline: Open-source media sharing for React Native and NestJS
     description: >-
       The platform behind PocketPT (Pocket Physical Therapist): playlists of short
@@ -12,6 +13,7 @@ items:
     url: https://app.drafehr.com
     openSource: true
   - name: Rental.Cloud
+    icon: /images/projects/rental-cloud.svg
     tagline: The open-source, self-hosted alternative to Airbnb and Booking.com
     description: >-
       Run your own rental marketplace instead of renting space on someone else's.
@@ -23,6 +25,7 @@ items:
     url: https://crashpad411.com
     openSource: false
   - name: Entraprise
+    icon: /images/projects/entraprise.svg
     tagline: Member and operations apps on Microsoft Entra ID
     description: >-
       Role-gated applications for member-based organizations: a member app with events,

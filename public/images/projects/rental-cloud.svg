@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Rental.Cloud">
+  <path d="M17 44a10 10 0 0 1-.8-19.97A14 14 0 0 1 43.6 22.2 9.4 9.4 0 0 1 47 44H17z" stroke="#78b7d6" stroke-width="3.2" stroke-linejoin="round"/>
+  <path d="M20 39.5 32 29l12 10.5" stroke="#33587a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M23.5 37v13h17V37" stroke="#33587a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M29 50v-7h6v7" stroke="#33587a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
