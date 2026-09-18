@@ -85,23 +85,60 @@ items:
           A Vue 3 front end with server-side rendering, plus iOS and Android builds from
           the same codebase through Capacitor, with push notifications and geolocation.
     screenshots:
-      - src: /images/products/rental-cloud/home.jpg
-        caption: The network's own site, where operators sign up
-      - src: /images/products/rental-cloud/compare.jpg
-        caption: Fees compared against the platforms you would otherwise pay
-      - src: /images/products/rental-cloud/dashboard.jpg
-        caption: An operator's dashboard, with their instance and deployment logs
-      - src: /images/products/rental-cloud/payouts.jpg
-        caption: Payouts and commissions in the admin
-      - src: /images/products/rental-cloud/tenant-categories.jpg
+      - src: /images/products/rental-cloud/suparide/categories.jpg
         portrait: true
         caption: One tenant renting rooms and motorbikes side by side
-      - src: /images/products/rental-cloud/tenant-listings.jpg
+      - src: /images/products/rental-cloud/suparide/listing.jpg
         portrait: true
-        caption: Featured listings on a tenant's own storefront
-      - src: /images/products/rental-cloud/mobile.jpg
+        caption: A listing, with location, availability and a line to the owner
+      - src: /images/products/rental-cloud/suparide/booking.jpg
         portrait: true
-        caption: The network site on a phone
+        caption: Booking against a live availability calendar
+      - src: /images/products/rental-cloud/suparide/messages.jpg
+        portrait: true
+        caption: Booking requests and confirmations in one thread
+      - src: /images/products/rental-cloud/suparide/my-rentals.jpg
+        portrait: true
+        caption: What a renter has out, with deposits and payments due
+      - src: /images/products/rental-cloud/suparide/home.jpg
+        portrait: true
+        caption: The tenant's own front page
+    examples:
+      - name: SupaRide
+        blurb: Motorbike and room rentals in Thailand
+        screenshots:
+          - src: /images/products/rental-cloud/suparide/categories.jpg
+            portrait: true
+            caption: Rooms and motorbikes side by side
+          - src: /images/products/rental-cloud/suparide/listing.jpg
+            portrait: true
+            caption: A listing, with location and availability
+          - src: /images/products/rental-cloud/suparide/booking.jpg
+            portrait: true
+            caption: Booking against a live calendar
+          - src: /images/products/rental-cloud/suparide/messages.jpg
+            portrait: true
+            caption: Requests and confirmations in one thread
+          - src: /images/products/rental-cloud/suparide/my-rentals.jpg
+            portrait: true
+            caption: What a renter has out, with payments due
+          - src: /images/products/rental-cloud/suparide/home.jpg
+            portrait: true
+            caption: The tenant's own front page
+      - name: timeandmoney.io
+        blurb: Property rentals — houses, suites, hostels, hotels, land
+        screenshots:
+          - src: /images/products/rental-cloud/timeandmoney/featured.jpg
+            portrait: true
+            caption: Featured listings on the tenant's storefront
+          - src: /images/products/rental-cloud/timeandmoney/categories.jpg
+            portrait: true
+            caption: Listing types are configured per tenant
+      - name: thai.properties
+        blurb: Property listings across Thailand
+        screenshots:
+          - src: /images/products/rental-cloud/thai/search.jpg
+            caption: Search and filters on the desktop site
   - name: Entraprise
     slug: entraprise
     icon: /images/projects/entraprise.svg

@@ -29,15 +29,24 @@
       </div>
     </section>
 
-    <section v-if="product.screenshots" class="product-shots">
+    <section v-if="shots.length" class="product-shots">
       <div class="product-shots__inner">
         <h2 class="product-shots__title text-center">A look inside</h2>
+
+        <div v-if="product.examples" class="product-examples">
+          <label class="product-examples__label" :for="`example-${product.slug}`">Live example</label>
+          <select :id="`example-${product.slug}`" v-model="exampleIndex" class="product-examples__select">
+            <option v-for="(example, i) in product.examples" :key="example.name" :value="i">{{ example.name }}</option>
+          </select>
+          <span v-if="activeExample && activeExample.blurb" class="product-examples__blurb">{{ activeExample.blurb }}</span>
+        </div>
+
         <p class="product-shots__hint text-center">Scroll for more →</p>
       </div>
       <!-- A carousel rather than a grid: the shots are a mix of wide and tall, which
            never lined up in columns -->
       <div class="product-shots__track">
-        <figure v-for="shot in product.screenshots" :key="shot.src" class="product-shot"
+        <figure v-for="shot in shots" :key="shot.src" class="product-shot"
                 :class="{ 'product-shot--portrait': shot.portrait }">
           <img class="lozad" :src="shot.src" :alt="shot.caption"/>
           <figcaption>{{ shot.caption }}</figcaption>
@@ -67,7 +76,20 @@ export default {
   components: {
     Layout
   },
+  data() {
+    return {
+      exampleIndex: 0
+    }
+  },
   computed: {
+    activeExample() {
+      return this.product && this.product.examples ? this.product.examples[this.exampleIndex] : null
+    },
+    /** The dropdown swaps the whole carousel; without examples it is the product's own list. */
+    shots() {
+      if (!this.product) return []
+      return (this.activeExample && this.activeExample.screenshots) || this.product.screenshots || []
+    },
     product() {
       return ProductsData.items.find(item => item.slug === this.$route.params.slug) || null
     }
@@ -239,6 +261,8 @@ export default {
     margin: 0 0 2.5rem;
   }
 
+  &__examples-spacer { display: none; }
+
   &__hint {
     color: #7b8794;
     font-size: 0.85rem;
@@ -263,13 +287,18 @@ export default {
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
+  /* Without this the figure's default align-items:stretch pulls each image out to
+     the caption's width, squashing phone captures sideways */
+  align-items: center;
 
   img {
     display: block;
-    /* One height for every card, so the row lines up whatever the shape */
+    /* One height for every card, so the row lines up whatever the shape.
+       width:auto keeps the aspect ratio - phones must not stretch sideways. */
     height: 22rem;
     width: auto;
     max-width: none;
+    object-fit: contain;
     border-radius: 6px;
     /* The shadow follows the image itself; letterboxing it inside a wider box
        left the shadow floating around empty space */
@@ -289,6 +318,48 @@ export default {
     text-align: center;
     max-width: 22rem;
     align-self: center;
+  }
+}
+
+.product-examples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  /* A notice panel, so the switcher reads as a control rather than stray text */
+  max-width: 44rem;
+  margin: 0 auto 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #c3ced9;
+  border-left: 4px solid #78b7d6;
+  border-radius: 6px;
+  background: #fff;
+
+  &__label {
+    color: #52606d;
+    font-size: 0.9rem;
+  }
+
+  &__select {
+    font: inherit;
+    font-size: 0.95rem;
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    border: 1px solid #c3ced9;
+    border-radius: 4px;
+    background: #fff;
+    color: #33587a;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid #78b7d6;
+      outline-offset: 2px;
+    }
+  }
+
+  &__blurb {
+    color: #7b8794;
+    font-size: 0.9rem;
   }
 }
 
