@@ -124,42 +124,46 @@ export default {
         specialty: 'FULL-STACK MERCENARY',
         yearsOfService: this.calculateYearsOfService(),
         clearance: 'CSIS-LVL-2',
-        about: 'Providing discerning international clients with intuitive, engaging, reliable and secure software solutions, solving complex business problems for a wide range of industries.',
+        about: 'Full-stack and platform engineer with 15+ years shipping production software across payments, identity, government and e-commerce. Works from fundamentals over frameworks and moves fluidly between stacks.',
         recentMissions: [
           {
-            company: 'Omise + Opn Payments (Thailand)',
+            company: 'Skin Tyee First Nation (Canada)',
+            role: 'Software Developer, Contract'
+          },
+          {
+            company: 'CrashPad411 (USA)',
             role: 'Technical Lead'
           },
           {
-            company: 'CGI Inc. (Canada)',
-            role: 'Team Lead'
+            company: 'Opn / Omise (Thailand)',
+            role: 'Senior Software Engineer, SSO + Identity'
           },
           {
-            company: 'BC Developers Exchange',
-            role: 'Application Delivery Lead'
+            company: 'CGI — BC Provincial Government',
+            role: 'Frontend Apps Lead'
           },
           {
-            company: 'Carbeeza Inc. (Canada)',
-            role: 'Frontend Applications Lead'
-          },
-          {
-            company: 'Alberta Motor Association',
-            role: 'Technical Lead'
+            company: 'Agereh Technologies, formerly Carbeeza (Canada)',
+            role: 'Frontend Apps Lead'
           }
         ],
         primaryTech: [
           'TypeScript',
           'React',
-          'Node.js',
+          'React Native',
           'Vue.js',
-          'Go',
+          'Node.js',
+          'NestJS',
+          'Laravel',
           'PHP',
           'Python',
+          'Go',
+          'Keycloak',
+          'PostgreSQL',
           'AWS',
           'Azure',
           'Kubernetes',
-          'UX/UI',
-          'e-Commerce'
+          'UX/UI'
         ],
         issueDate: new Date().getFullYear()
       }
