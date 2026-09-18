@@ -38,14 +38,20 @@
               <span>More</span>
             </div>
           </div>
-          <!-- A grid per calendar year, so a multi-year project shows every year -->
-          <div v-for="year in product.git.years" :key="year.year" class="commit-year">
+          <!-- One year at a time; the tabs switch between them -->
+          <div v-if="product.git.years.length > 1" class="commit-years" role="tablist">
+            <button v-for="(year, i) in product.git.years" :key="year.year" type="button" role="tab"
+                    class="commit-years__tab" :class="{ 'is-active': i === yearIndex }"
+                    :aria-selected="i === yearIndex" @click="yearIndex = i">{{ year.year }}</button>
+          </div>
+
+          <div v-if="activeYear" class="commit-year">
             <div class="commit-year__label">
-              <strong>{{ year.year }}</strong>
-              <span>{{ year.total }} commits</span>
+              <strong>{{ activeYear.year }}</strong>
+              <span>{{ activeYear.total }} commits</span>
             </div>
-            <div class="commit-graph__grid" role="img" :aria-label="`${year.total} commits in ${year.year}`">
-              <div v-for="(week, w) in weeksFor(year.levels)" :key="w" class="commit-graph__week">
+            <div class="commit-graph__grid" role="img" :aria-label="`${activeYear.total} commits in ${activeYear.year}`">
+              <div v-for="(week, w) in weeksFor(activeYear.levels)" :key="w" class="commit-graph__week">
                 <i v-for="(level, d) in week" :key="d" :class="`commit-graph__cell commit-graph__cell--${level}`"></i>
               </div>
             </div>
@@ -125,10 +131,16 @@ export default {
   },
   data() {
     return {
-      exampleIndex: 0
+      exampleIndex: 0,
+      // start on the most recent year
+      yearIndex: 0
     }
   },
   computed: {
+    activeYear() {
+      const years = this.product && this.product.git ? this.product.git.years : null
+      return years ? years[this.yearIndex] || years[years.length - 1] : null
+    },
     activeExample() {
       return this.product && this.product.examples ? this.product.examples[this.exampleIndex] : null
     },
@@ -154,10 +166,14 @@ export default {
     }
   },
   watch: {
-    // The same component serves every product, so re-title on navigation
+    // The same component serves every product: re-title, and reset the switchers
+    // so a new product opens on its latest year and first example
     product: {
       immediate: true,
       handler(product) {
+        this.exampleIndex = 0
+        this.yearIndex = product && product.git ? product.git.years.length - 1 : 0
+
         if (typeof document !== 'undefined' && product) {
           document.title = `${product.name} — Blue Collar Development`
         }
@@ -349,6 +365,41 @@ export default {
     &--4 { background: #2b4a63; }
   }
 
+}
+
+.commit-years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 1.25rem;
+
+  &__tab {
+    font: inherit;
+    font-size: 0.85rem;
+    line-height: 1;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid #c3ced9;
+    border-radius: 999px;
+    background: #fff;
+    color: #52606d;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #78b7d6;
+      color: #33587a;
+    }
+
+    &.is-active {
+      background: #33587a;
+      border-color: #33587a;
+      color: #fff;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #78b7d6;
+      outline-offset: 2px;
+    }
+  }
 }
 
 .commit-year {
