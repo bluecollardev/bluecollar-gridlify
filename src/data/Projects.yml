@@ -1,0 +1,30 @@
+title: Projects
+subtitle: Products and platforms we build and maintain.
+items:
+  - name: Mediashare
+    tagline: Open-source media sharing for React Native and NestJS
+    description: >-
+      The platform behind PocketPT (Pocket Physical Therapist): playlists of short
+      instructional videos, sharing, connections and tagging. A React Native and Expo
+      app over an Nx monorepo of NestJS microservices, with OpenAPI-generated clients.
+    technologies: TypeScript, React Native, Expo, NestJS, Nx, MongoDB, OpenAPI, AWS
+    github: https://github.com/bluecollardev/mediashare
+    url: https://app.drafehr.com
+    openSource: true
+  - name: Rental.Cloud
+    tagline: Multi-tenant rental listings SaaS
+    description: >-
+      A white-label rental listings platform for enterprise and B2B customers, running
+      CrashPad411 among others: listings and search, Stripe payments and subscriptions,
+      merchant payouts, iOS and Android apps, and per-tenant provisioning.
+    technologies: Vue 3, TypeScript, Capacitor, Laravel, PHP, MySQL, Stripe, RabbitMQ, Docker
+    url: https://crashpad411.com
+    openSource: false
+  - name: Entraprise
+    tagline: Community and operations apps for First Nations
+    description: >-
+      Role-gated community applications built for Skin Tyee First Nation: a member app
+      with events, notifications, records and billable time keeping, plus a consultation
+      referrals system with GIS mapping, all on Microsoft Entra ID and Azure.
+    technologies: TypeScript, React Native, Expo, NestJS, PostgreSQL, PostGIS, Microsoft Entra ID, Azure
+    openSource: false

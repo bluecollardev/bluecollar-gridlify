@@ -51,6 +51,8 @@
         @link-clicked="handleTestimonialLinkClick"
     />
 
+    <projects/>
+
     <!-- DO NOT DELETE THIS IS THE GUITAR!!! -->
     <hero-layout01-col
         id="rock"
@@ -151,6 +153,7 @@ import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue'
 
 // Import page components
 import Services from '~/components/home/Services.vue'
+import Projects from '~/components/home/Projects.vue'
 import PortfolioVerticalTimeline from '~/components/portfolio/PortfolioVerticalTimeline.vue'
 import TeamBlock from '~/components/TeamBlock.vue'
 import Contact from '~/components/Contact.vue'
@@ -192,6 +195,7 @@ export default {
     Layout,
     // Inject components
     Services,
+    Projects,
     PortfolioVerticalTimeline,
     TeamBlock,
     Contact,
