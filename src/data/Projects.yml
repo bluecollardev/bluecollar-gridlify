@@ -12,11 +12,13 @@ items:
     url: https://app.drafehr.com
     openSource: true
   - name: Rental.Cloud
-    tagline: Multi-tenant rental listings SaaS
+    tagline: The open-source, self-hosted alternative to Airbnb and Booking.com
     description: >-
-      A white-label rental listings platform for enterprise and B2B customers, running
-      CrashPad411 among others: listings and search, Stripe payments and subscriptions,
-      merchant payouts, iOS and Android apps, and per-tenant provisioning.
+      Run your own rental marketplace instead of renting space on someone else's.
+      A multi-tenant, white-label listings platform behind CrashPad411 and others:
+      listings and search, Stripe payments, subscriptions and merchant payouts, and
+      iOS and Android apps. The front end is open source and ties into the network,
+      so customers can fine tune their own product.
     technologies: Vue 3, TypeScript, Capacitor, Laravel, PHP, MySQL, Stripe, RabbitMQ, Docker
     url: https://crashpad411.com
     openSource: false
