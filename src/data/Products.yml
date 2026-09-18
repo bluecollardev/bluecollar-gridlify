@@ -73,6 +73,24 @@ items:
         portrait: true
         caption: Playback and sharing on mobile
   - name: Rental.Cloud
+    builds:
+      checked: 18 Sep 2026
+      items:
+        - name: Customer site
+          status: passing
+        - name: Merchant dashboard
+          status: passing
+        - name: Marketing site
+          status: passing
+    slug: rental-cloud
+    icon: /images/projects/rental-cloud.svg
+    tagline: The self-hosted alternative to Airbnb and Booking.com
+    description: >-
+      An open-concept rental marketplace app that ties into the Rental.Cloud network,
+      so customers run and fine tune their own product rather than renting space on
+      someone else's. Behind it sits a multi-tenant platform: listings and search,
+      Stripe payments, subscriptions and merchant payouts with configurable fees and
+      commissions, and iOS and Android builds.
     ai:
       title: AI that does the typing for you
       intro: >-
@@ -118,11 +136,10 @@ items:
             the assistant stays switched off until you add one. The AI runs on your
             account, against your data, on the node you host.
         - title: Talk to it — voice chat
-          status: soon
+          status: coming soon
           body: >-
             Voice in and out over the same assistant, with ElevenLabs doing the speech, so
-            a lister could add or change a property while driving. Not built yet — tell us
-            you want it and we will move it up the list.
+            a lister can add or change a property while driving, hands on the wheel.
       note: >-
         Everything marked live runs today against the listings API and has been tested end
         to end. Want a demo, or the same thing pointed at your own data? Get in touch.

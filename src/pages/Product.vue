@@ -99,7 +99,7 @@
             <h3 class="product-ai-card__title">{{ item.title }}</h3>
             <p class="product-ai-card__body">{{ item.body }}</p>
             <span v-if="item.status" class="product-ai-card__status"
-                  :class="`product-ai-card__status--${item.status}`">{{ item.status }}</span>
+                  :class="`product-ai-card__status--${item.status.replace(/\s+/g, '-')}`">{{ item.status }}</span>
           </div>
         </div>
 
@@ -624,11 +624,11 @@ export default {
       background: #f0b429;
     }
 
-    &--soon {
+    &--coming-soon {
       color: rgba(255, 255, 255, 0.5);
     }
 
-    &--soon::before {
+    &--coming-soon::before {
       background: transparent;
       border: 1px solid rgba(255, 255, 255, 0.5);
     }
