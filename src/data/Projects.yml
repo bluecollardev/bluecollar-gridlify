@@ -18,7 +18,7 @@ items:
     icon: /images/projects/rental-cloud.svg
     tagline: The self-hosted alternative to Airbnb and Booking.com
     description: >-
-      An open-source rental marketplace app that ties into the Rental.Cloud network,
+      An open-concept rental marketplace app that ties into the Rental.Cloud network,
       so customers run and fine tune their own product rather than renting space on
       someone else's. Behind it sits a multi-tenant platform: listings and search,
       Stripe payments, subscriptions and merchant payouts, and iOS and Android
@@ -29,8 +29,9 @@ items:
     icon: /images/projects/entraprise.svg
     tagline: Member and operations apps on Microsoft Entra ID
     description: >-
-      Role-gated applications for member-based organizations: a member app with events,
-      notifications, public records and billable time keeping, plus a referrals system
-      with GIS mapping. Single sign-on through Microsoft Entra ID, deployed on Azure.
+      Role-gated applications for member-based organizations: user management with
+      roles and permissions, timekeeping, expenses, event calendars, notifications and
+      WordPress integration, plus a referrals system with GIS mapping. Single sign-on
+      and Microsoft 365 gating through Microsoft Entra ID, deployed on Azure.
     technologies: TypeScript, React Native, Expo, NestJS, PostgreSQL, PostGIS, Microsoft Entra ID, Azure
     openSource: false

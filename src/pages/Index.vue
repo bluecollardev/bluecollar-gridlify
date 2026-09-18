@@ -616,10 +616,11 @@ export default {
   display: none;
 }
 
-#services {
+/* Each section must paint over the one after it or its angled edge is covered.
+   theme.scss sets `#home-page #services { z-index: 2 }`, so match that specificity. */
+#home-page section#services {
   position: relative;
-  /* Must paint over the Projects section below it, so its angle stays visible */
-  z-index: 3;
+  z-index: 4;
 }
 
 #rock {

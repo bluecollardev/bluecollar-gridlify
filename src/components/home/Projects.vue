@@ -55,16 +55,16 @@ export default {
 .projects-section {
   /* Dark enough for the white animated heading, and gives the angled clip-path
      something to cut against */
-  background-color: #33587a;
+  background-color: #2b6b96;
   color: #fff;
   padding: 9rem 1.5rem 12rem;
   /* Start above the previous section's clipped edge so its 9vh chevron cuts into
      this section, rather than into the page behind it (which showed as a blue band) */
   margin-top: calc(-9vh - 0.75rem - 9vh);
   position: relative;
-  /* Above #rock (1) so this section's own chevron cuts into it, below #services (3)
-     so the chevron above cuts into this one */
-  z-index: 2;
+  /* Between #services (4) and #rock (1 desktop / 2 mobile): the chevron above cuts
+     into this section, and this section's own chevron cuts into the guitar section */
+  z-index: 3;
 
   &__inner {
     max-width: 72rem;
