@@ -32,13 +32,16 @@
     <section v-if="product.screenshots" class="product-shots">
       <div class="product-shots__inner">
         <h2 class="product-shots__title text-center">A look inside</h2>
-        <div class="product-shots__grid">
+        <p class="product-shots__hint text-center">Scroll for more →</p>
+      </div>
+      <!-- A carousel rather than a grid: the shots are a mix of wide and tall, which
+           never lined up in columns -->
+      <div class="product-shots__track">
         <figure v-for="shot in product.screenshots" :key="shot.src" class="product-shot"
                 :class="{ 'product-shot--portrait': shot.portrait }">
           <img class="lozad" :src="shot.src" :alt="shot.caption"/>
           <figcaption>{{ shot.caption }}</figcaption>
         </figure>
-        </div>
       </div>
     </section>
 
@@ -95,6 +98,10 @@ export default {
 .product-hero {
   background-color: #4c7896;
   color: #fff;
+  /* Paint above the section below so the angled cut reveals it, not the page
+     background - which showed as a second, lighter chevron */
+  position: relative;
+  z-index: 2;
   /* Just enough room under the mockup for the angled edge */
   padding: 7rem 1.5rem calc(9vh + 3rem);
   text-align: center;
@@ -183,7 +190,11 @@ export default {
 
 .product-features {
   background: #fff;
-  padding: 5rem 1.5rem;
+  /* Tuck under the hero's 9vh angled edge */
+  margin-top: -9vh;
+  padding: calc(5rem + 9vh) 1.5rem 5rem;
+  position: relative;
+  z-index: 1;
 
   &__inner {
     max-width: 66rem;
@@ -228,46 +239,56 @@ export default {
     margin: 0 0 2.5rem;
   }
 
-  /* Landscape shots take a row each; phone shots sit side by side */
-  &__grid {
+  &__hint {
+    color: #7b8794;
+    font-size: 0.85rem;
+    margin: -1.5rem 0 2rem;
+  }
+
+  /* Horizontal carousel: cards snap, captions label each one */
+  &__track {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.5rem;
-    align-items: flex-start;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 max(1.5rem, calc((100vw - 62rem) / 2)) 1.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: #c3ced9 transparent;
   }
 }
 
 .product-shot {
-  /* Full row for landscape captures */
-  flex: 1 1 100%;
+  flex: 0 0 auto;
   margin: 0;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
 
   img {
     display: block;
-    width: 100%;
-    height: auto;
+    /* One height for every card, so the row lines up whatever the shape */
+    height: 22rem;
+    width: auto;
+    max-width: none;
     border-radius: 6px;
     /* The shadow follows the image itself; letterboxing it inside a wider box
        left the shadow floating around empty space */
     box-shadow: 0 10px 28px rgba(51, 88, 122, 0.18);
   }
 
-  /* Phone captures are tall and narrow, and sit beside each other */
-  &--portrait {
-    flex: 0 1 auto;
-
+  @media screen and (max-width: 40em) {
     img {
-      width: 15rem;
-      max-width: 100%;
+      height: 16rem;
     }
   }
 
   figcaption {
     margin-top: 0.75rem;
     color: #52606d;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-align: center;
+    max-width: 22rem;
+    align-self: center;
   }
 }
 
