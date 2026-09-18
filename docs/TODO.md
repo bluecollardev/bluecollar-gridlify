@@ -23,13 +23,20 @@ bottom of the relevant section.
 - [ ] Rental.Cloud publishes the frontend only; the API stays private.
 - [ ] Once live, add the GitHub links to `src/data/Projects.yml`
       (`github:` + `openSource: true`) so the cards show the source badge.
+- [x] `/open-source` directory: every public repository grouped by owning GitHub
+      account (bcgov, bluecollardev) and then by project, with commits,
+      contributors, pull requests and the active window. Data in
+      `src/data/OpenSource.yml`; counts from the GitHub API for `bcdevlucas`.
+- [x] The same summary sits inside the ID card on `/company`, after recent
+      missions, linking out to every repository.
+- [ ] `nr-fom` shows no authored pull requests — the 59 commits landed on branches
+      merged by others. Left blank rather than guessed at.
 
 ## Deploy
 
-- [ ] Accept the Xcode licence on this Mac (`sudo xcodebuild -license accept`) — git
-      refuses to run until it is accepted, so nothing below can be committed yet.
-- [ ] Put the pending work on a branch off `master`, push for a Vercel preview,
-      then merge to `master` for production.
+- [x] Accept the Xcode licence on this Mac (`sudo xcodebuild -license accept`).
+- [x] Everything below is committed and pushed to `master`, which Vercel deploys
+      to production.
 
 ## Home page
 
@@ -96,7 +103,8 @@ bottom of the relevant section.
 
 - [x] `src/data/Products.yml` drives the home page cards and one landing page each
       at `/products/:slug` (`src/pages/Product.vue`).
-- [x] Contact map: plugin registered, component renamed, key read from
+- [x] Contact map renders locally, centred on the Thonburi riverside by Wat Arun:
+      plugin registered, component renamed, key read from
       `VITE_GOOGLE_MAP_KEY`, centred on the Thonburi riverside by Wat Arun.
 - [ ] Set `VITE_GOOGLE_MAP_KEY` in Vercel or production keeps the plain overlay.
 - [ ] Add the GitHub links for Rental.Cloud and Entraprise once those repos exist.
