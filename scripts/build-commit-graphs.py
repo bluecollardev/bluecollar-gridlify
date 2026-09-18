@@ -32,17 +32,35 @@ def build(slug, repos):
     if not counts: return None
     days = sorted(counts)
     first, last = datetime.date.fromisoformat(days[0]), datetime.date.fromisoformat(days[-1])
-    # 53 columns of 7 days, ending on the Saturday of the last commit's week
-    end = last + datetime.timedelta(days=(6 - last.weekday()) % 7)
-    start = end - datetime.timedelta(days=53*7 - 1)
-    window = [counts.get((start + datetime.timedelta(days=i)).isoformat(), 0) for i in range(53*7)]
-    peak = max(window) or 1
-    levels = ''.join(str(0 if c == 0 else min(4, 1 + int(3 * (c - 1) / max(peak - 1, 1)))) for c in window)
-    months = (last.year - first.year) * 12 + last.month - first.month
-    years, rem = divmod(months, 12)
-    duration = ' '.join(filter(None, [f'{years} yr' if years else '', f'{rem} mo' if rem else ''])) or '<1 mo'
-    return {'slug': slug, 'total': sum(counts.values()), 'duration': duration,
-            'windowFrom': start.strftime('%b %Y'), 'windowTo': end.strftime('%b %Y'),
-            'windowTotal': sum(window), 'levels': levels}
+    peak = max(counts.values()) or 1
 
-print(json.dumps([build(s, r) for s, r in PRODUCTS.items()], indent=1)[:900])
+    def level(c):
+        return 0 if c == 0 else min(4, 1 + int(3 * (c - 1) / max(peak - 1, 1)))
+
+    # One grid per calendar year that saw commits, so multi-year projects show it
+    years = []
+    for year in range(first.year, last.year + 1):
+        jan1 = datetime.date(year, 1, 1)
+        start = jan1 - datetime.timedelta(days=(jan1.weekday() + 1) % 7)   # back to Sunday
+        dec31 = datetime.date(year, 12, 31)
+        end = dec31 + datetime.timedelta(days=(5 - dec31.weekday()) % 7)   # on to Saturday
+        grid, total = [], 0
+        d = start
+        while d <= end:
+            c = counts.get(d.isoformat(), 0) if d.year == year else 0
+            total += c
+            grid.append(str(level(c)))
+            d += datetime.timedelta(days=1)
+        if total:
+            years.append({'year': str(year), 'total': f'{total:,}', 'levels': ''.join(grid)})
+
+    months = (last.year - first.year) * 12 + last.month - first.month
+    yy, mm = divmod(months, 12)
+    duration = ' '.join(filter(None, [f'{yy} yr' if yy else '', f'{mm} mo' if mm else ''])) or '<1 mo'
+    return {'slug': slug, 'total': sum(counts.values()), 'duration': duration,
+            'first': first.strftime('%b %Y'), 'last': last.strftime('%b %Y'), 'years': years}
+
+if __name__ == '__main__':
+    for slug, repos in PRODUCTS.items():
+        d = build(slug, repos)
+        print(slug, d['total'], d['duration'], [f"{y['year']}:{y['total']}" for y in d['years']])

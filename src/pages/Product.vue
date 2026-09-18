@@ -31,20 +31,25 @@
       <div class="product-stats__inner">
         <div class="commit-graph">
           <div class="commit-graph__head">
-            <h2 class="commit-graph__title">{{ product.git.activity.total }} commits in the year to {{ product.git.activity.to }}</h2>
+            <h2 class="commit-graph__title">{{ product.git.total }} commits, {{ product.git.first }} to {{ product.git.last }}</h2>
             <div class="commit-graph__legend">
               <span>Less</span>
               <i v-for="l in [0, 1, 2, 3, 4]" :key="l" :class="`commit-graph__cell commit-graph__cell--${l}`"></i>
               <span>More</span>
             </div>
           </div>
-          <div class="commit-graph__grid" role="img"
-               :aria-label="`Commit activity from ${product.git.activity.from} to ${product.git.activity.to}`">
-            <div v-for="(week, w) in weeks" :key="w" class="commit-graph__week">
-              <i v-for="(level, d) in week" :key="d" :class="`commit-graph__cell commit-graph__cell--${level}`"></i>
+          <!-- A grid per calendar year, so a multi-year project shows every year -->
+          <div v-for="year in product.git.years" :key="year.year" class="commit-year">
+            <div class="commit-year__label">
+              <strong>{{ year.year }}</strong>
+              <span>{{ year.total }} commits</span>
+            </div>
+            <div class="commit-graph__grid" role="img" :aria-label="`${year.total} commits in ${year.year}`">
+              <div v-for="(week, w) in weeksFor(year.levels)" :key="w" class="commit-graph__week">
+                <i v-for="(level, d) in week" :key="d" :class="`commit-graph__cell commit-graph__cell--${level}`"></i>
+              </div>
             </div>
           </div>
-          <p class="commit-graph__range">{{ product.git.activity.from }} — {{ product.git.activity.to }}</p>
         </div>
 
         <ul class="repo-list">
@@ -127,17 +132,6 @@ export default {
     activeExample() {
       return this.product && this.product.examples ? this.product.examples[this.exampleIndex] : null
     },
-    /** The activity string is one character per day, Sunday first; chunk it into weeks. */
-    weeks() {
-      const levels = this.product && this.product.git ? this.product.git.activity.levels : ''
-      const out = []
-
-      for (let i = 0; i < levels.length; i += 7) {
-        out.push(levels.slice(i, i + 7).split(''))
-      }
-
-      return out
-    },
     /** The dropdown swaps the whole carousel; without examples it is the product's own list. */
     shots() {
       if (!this.product) return []
@@ -145,6 +139,18 @@ export default {
     },
     product() {
       return ProductsData.items.find(item => item.slug === this.$route.params.slug) || null
+    }
+  },
+  methods: {
+    /** Each year's levels are one character per day, Sunday first; chunk into weeks. */
+    weeksFor(levels) {
+      const out = []
+
+      for (let i = 0; i < levels.length; i += 7) {
+        out.push(levels.slice(i, i + 7).split(''))
+      }
+
+      return out
     }
   },
   watch: {
@@ -320,9 +326,8 @@ export default {
   &__grid {
     display: flex;
     gap: 3px;
-    margin-top: 1rem;
     overflow-x: auto;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
   }
 
   &__week {
@@ -344,10 +349,26 @@ export default {
     &--4 { background: #2b4a63; }
   }
 
-  &__range {
-    color: #7b8794;
-    font-size: 0.8rem;
-    margin: 0.25rem 0 0;
+}
+
+.commit-year {
+  margin-top: 1.25rem;
+
+  &__label {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.4rem;
+
+    strong {
+      color: #33587a;
+      font-size: 0.95rem;
+    }
+
+    span {
+      color: #7b8794;
+      font-size: 0.8rem;
+    }
   }
 }
 
