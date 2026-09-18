@@ -95,7 +95,8 @@ export default {
 .product-hero {
   background-color: #4c7896;
   color: #fff;
-  padding: 7rem 1.5rem 12rem;
+  /* Just enough room under the mockup for the angled edge */
+  padding: 7rem 1.5rem calc(9vh + 3rem);
   text-align: center;
 
   * {
@@ -117,12 +118,15 @@ export default {
     font-size: 2.75rem;
     margin: 1rem 0 0;
     color: #fff;
+    text-align: center;
   }
 
   &__tagline {
     font-size: 1.35rem;
     margin: 0.75rem 0 0;
     color: rgba(255, 255, 255, 0.9);
+    /* The site's paragraph styles win over the section's text-align */
+    text-align: center;
   }
 
   &__intro {
@@ -130,6 +134,7 @@ export default {
     max-width: 44rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
+    text-align: center;
   }
 
   &__actions {
@@ -223,34 +228,39 @@ export default {
     margin: 0 0 2.5rem;
   }
 
-  /* Portrait shots sit two-up so they do not each take a full screen */
+  /* Landscape shots take a row each; phone shots sit side by side */
   &__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem 2rem;
-    align-items: start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    align-items: flex-start;
   }
 }
 
 .product-shot {
-  margin: 0 0 2.5rem;
+  /* Full row for landscape captures */
+  flex: 1 1 100%;
+  margin: 0;
 
   img {
     display: block;
     width: 100%;
-    max-height: 34rem;
-    object-fit: contain;
-    object-position: top;
+    height: auto;
     border-radius: 6px;
+    /* The shadow follows the image itself; letterboxing it inside a wider box
+       left the shadow floating around empty space */
     box-shadow: 0 10px 28px rgba(51, 88, 122, 0.18);
   }
 
-  /* Phone captures are tall and narrow; at column width they tower over the page */
-  &--portrait img {
-    width: auto;
-    max-width: 17rem;
-    max-height: 36rem;
-    margin: 0 auto;
+  /* Phone captures are tall and narrow, and sit beside each other */
+  &--portrait {
+    flex: 0 1 auto;
+
+    img {
+      width: 15rem;
+      max-width: 100%;
+    }
   }
 
   figcaption {
@@ -275,6 +285,7 @@ export default {
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.9rem;
     margin: 0 0 2rem;
+    text-align: center;
   }
 
   &__actions {
