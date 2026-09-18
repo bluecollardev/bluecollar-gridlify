@@ -43,8 +43,10 @@ items:
       - src: /images/products/mediashare/playlist.jpg
         caption: A playlist plays start to finish, with its own description and tags
       - src: /images/products/mediashare/phone-playlists.jpg
+        portrait: true
         caption: The same library on a phone
       - src: /images/products/mediashare/phone-playlist.jpg
+        portrait: true
         caption: Playback and sharing on mobile
   - name: Rental.Cloud
     slug: rental-cloud
@@ -89,6 +91,7 @@ items:
       - src: /images/products/rental-cloud/tablet-search.jpg
         caption: Search on a tablet
       - src: /images/products/rental-cloud/phone-home.jpg
+        portrait: true
         caption: The same site on a phone
   - name: Entraprise
     slug: entraprise
@@ -130,6 +133,8 @@ items:
       - src: /images/products/entraprise/events.jpg
         caption: Event calendars and notices
       - src: /images/products/entraprise/phone-events.jpg
+        portrait: true
         caption: Events on a phone
       - src: /images/products/entraprise/phone-timekeeping.jpg
+        portrait: true
         caption: Timekeeping with approvals

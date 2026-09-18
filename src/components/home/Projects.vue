@@ -160,6 +160,7 @@ export default {
   &__tagline {
     font-weight: 700;
     margin: 0.75rem 0 0;
+    text-align: center;
   }
 
   &__description {

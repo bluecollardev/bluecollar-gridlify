@@ -32,10 +32,13 @@
     <section v-if="product.screenshots" class="product-shots">
       <div class="product-shots__inner">
         <h2 class="product-shots__title text-center">A look inside</h2>
-        <figure v-for="shot in product.screenshots" :key="shot.src" class="product-shot">
+        <div class="product-shots__grid">
+        <figure v-for="shot in product.screenshots" :key="shot.src" class="product-shot"
+                :class="{ 'product-shot--portrait': shot.portrait }">
           <img class="lozad" :src="shot.src" :alt="shot.caption"/>
           <figcaption>{{ shot.caption }}</figcaption>
         </figure>
+        </div>
       </div>
     </section>
 
@@ -219,6 +222,14 @@ export default {
     color: #33587a;
     margin: 0 0 2.5rem;
   }
+
+  /* Portrait shots sit two-up so they do not each take a full screen */
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem 2rem;
+    align-items: start;
+  }
 }
 
 .product-shot {
@@ -227,8 +238,19 @@ export default {
   img {
     display: block;
     width: 100%;
+    max-height: 34rem;
+    object-fit: contain;
+    object-position: top;
     border-radius: 6px;
     box-shadow: 0 10px 28px rgba(51, 88, 122, 0.18);
+  }
+
+  /* Phone captures are tall and narrow; at column width they tower over the page */
+  &--portrait img {
+    width: auto;
+    max-width: 17rem;
+    max-height: 36rem;
+    margin: 0 auto;
   }
 
   figcaption {
