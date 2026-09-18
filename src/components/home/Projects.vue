@@ -55,7 +55,7 @@ export default {
 .projects-section {
   /* Dark enough for the white animated heading, and gives the angled clip-path
      something to cut against */
-  background-color: #2b6b96;
+  background-color: #4c7896;
   color: #fff;
   padding: 9rem 1.5rem 12rem;
   /* Start above the previous section's clipped edge so its 9vh chevron cuts into
