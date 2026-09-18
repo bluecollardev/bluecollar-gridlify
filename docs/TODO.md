@@ -3,6 +3,27 @@
 Running task list for the site. Tick items off as they land; add new work at the
 bottom of the relevant section.
 
+## Security
+
+- [ ] **Rotate the Google Maps API key.** `props-apps` hardcodes a live key as a
+      default in `packages/app-config/src/components/SystemConfiguration.vue`
+      (`VITE_GOOGLE_MAP_KEY`). It is billable, sits in that repo's history and in
+      every build made from it, and the frontend is going open source. Rotate it,
+      restrict the new key by HTTP referrer, and read it from an env var. The
+      prepared public snapshot already has the value blanked.
+
+## Open source
+
+- [ ] Create empty GitHub repos `bluecollardev/mediashare` and
+      `bluecollardev/rental-cloud-app`, then push the prepared snapshots (no `gh`
+      CLI or token on this machine; SSH pushes work).
+- [ ] Snapshots are single "Initial public release" commits, not mirrors: both
+      private histories carry `.env.*` files, a Google service-account key and an
+      Apple signing certificate.
+- [ ] Rental.Cloud publishes the frontend only; the API stays private.
+- [ ] Once live, add the GitHub links to `src/data/Projects.yml`
+      (`github:` + `openSource: true`) so the cards show the source badge.
+
 ## Deploy
 
 - [ ] Accept the Xcode licence on this Mac (`sudo xcodebuild -license accept`) — git

@@ -6,6 +6,11 @@ deployed on Vercel.
 Open work is tracked in [`docs/TODO.md`](docs/TODO.md) — check it before starting, and
 update it as items land.
 
+> **Outstanding:** a live Google Maps API key is hardcoded in `props-apps`
+> (`packages/app-config/src/components/SystemConfiguration.vue`) and that frontend is
+> going open source as Rental.Cloud. It needs rotating and restricting — mention this
+> at the start of a session until it is done. Details in `docs/TODO.md`.
+
 ## Commands
 
 ```bash
