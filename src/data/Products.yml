@@ -144,8 +144,8 @@ items:
         - title: Talk to it — voice chat
           status: coming soon
           body: >-
-            Voice in and out over the same assistant, with ElevenLabs doing the speech, so
-            a lister can add or change a property while driving, hands on the wheel.
+            Voice in and out over the same assistant, with ElevenLabs doing the speech,
+            so a lister can add or change a property without stopping to type.
       note: >-
         Everything marked live runs today against the listings API and has been tested end
         to end. Want a demo, or the same thing pointed at your own data? Get in touch.
