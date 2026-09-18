@@ -1,0 +1,61 @@
+{
+  "_comment": [
+    "What the build pills on the product pages report. Refresh with `npm run builds:refresh`.",
+    "type ado    — needs ADO_PAT (Build: Read). Replace `definition` with the pipeline's exact name.",
+    "type github — public repos need no token; GITHUB_TOKEN raises the rate limit.",
+    "type local  — runs the command here and records the exit status. Used while the pipelines are private."
+  ],
+  "checks": [
+    {
+      "product": "Rental.Cloud",
+      "label": "Customer site",
+      "type": "local",
+      "cwd": "/Users/lucas/Workspaces/props-apps",
+      "command": "pnpm --filter dotproperties build"
+    },
+    {
+      "product": "Rental.Cloud",
+      "label": "Merchant dashboard",
+      "type": "local",
+      "cwd": "/Users/lucas/Workspaces/props-apps",
+      "command": "pnpm --filter merchant-dashboard build"
+    },
+    {
+      "product": "Rental.Cloud",
+      "label": "Marketing site",
+      "type": "local",
+      "cwd": "/Users/lucas/Workspaces/props-site",
+      "command": "npm run build"
+    },
+    {
+      "product": "Mediashare",
+      "label": "Monorepo build",
+      "type": "local",
+      "cwd": "/Users/lucas/Workspaces/ppt/mediashare",
+      "command": "NX_DAEMON=false npx nx run-many --target=build --all"
+    },
+    {
+      "product": "Mediashare",
+      "label": "154 suites, 1,407 tests",
+      "type": "local",
+      "cwd": "/Users/lucas/Workspaces/ppt/mediashare",
+      "command": "npm test"
+    },
+    {
+      "product": "Entraprise",
+      "label": "API",
+      "type": "local",
+      "cwd": "/Users/lucas/Workspaces/skintyee",
+      "command": "pnpm --filter @skintyee/api build"
+    }
+  ],
+  "_pending": [
+    "Azure DevOps (org dotproperties, project 'Dot Properties') serves only the generic",
+    "'set up now' badge anonymously, so real pipeline status needs either ADO_PAT set here",
+    "or Project Settings -> Settings -> anonymous badge access enabled. Swap the Rental.Cloud",
+    "entries to {\"type\": \"ado\", \"org\": \"dotproperties\", \"project\": \"Dot Properties\",",
+    "\"definition\": \"<pipeline name>\"} once one of those is in place.",
+    "GitHub Actions entries can replace the Mediashare and Entraprise locals once",
+    "bluecollardev/mediashare and bluecollardev/rental-cloud-app exist with workflows."
+  ]
+}

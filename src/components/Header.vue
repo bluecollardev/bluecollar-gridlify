@@ -14,10 +14,10 @@
           <!-- Home hidden for now; the logo still links to / -->
           <li v-if="false"><a href="/" aria-label="Our Team" @click="hideMenu()">{{ $t('nav.home') }}</a></li>
           <li><a href="/#services" aria-label="Services" @click="hideMenu()">{{ $t('nav.whatWeBuild') }}</a></li>
-          <li><a href="/company" aria-label="Websites" @click="hideMenu()">{{ $t('nav.ourPeople') }}</a></li>
-          <li><a href="/case-studies" aria-label="Case Studies"
+          <li class="menu-item--our-people"><a href="/company" aria-label="Websites" @click="hideMenu()">{{ $t('nav.ourPeople') }}</a></li>
+          <li class="menu-item--case-studies"><a href="/case-studies" aria-label="Case Studies"
                  @click.prevent="viewCaseStudies()">{{ $t('nav.caseStudies') }}</a></li>
-          <li><a href="/open-source" aria-label="Open Source"
+          <li class="menu-item--open-source"><a href="/open-source" aria-label="Open Source"
                  @click.prevent="viewOpenSource()">{{ $t('nav.openSource') }}</a></li>
           <!-- The products sit in the home page's Open Source section; on mobile the
                menu is the only way to reach them without scrolling for it -->
@@ -96,7 +96,9 @@ export default {
   },
   computed: {
     isMobile() {
-      return this.windowWidth <= 640
+      /* Must match the CSS drawer breakpoint (64em) in parts/header.scss — the
+         hamburger appears there, so tablets get the drawer too */
+      return this.windowWidth <= 1024
     },
     products() {
       return ProductsData.items
@@ -210,6 +212,27 @@ export default {
 
   .site-navbar-top {
     justify-content: flex-start !important;
+  }
+}
+
+/* Above the drawer breakpoint (64em) the bar still runs into the logo as it
+   narrows, so items drop out one at a time — open source first, then case
+   studies, then our people. All of them stay in the drawer below 64em. */
+@media screen and (min-width: 64.0625em) and (max-width: 85em) {
+  header #menu .site-menu li.menu-item--open-source {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 64.0625em) and (max-width: 76em) {
+  header #menu .site-menu li.menu-item--case-studies {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 64.0625em) and (max-width: 67.5em) {
+  header #menu .site-menu li.menu-item--our-people {
+    display: none;
   }
 }
 

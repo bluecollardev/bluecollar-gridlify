@@ -11,6 +11,13 @@
           <span>{{ product.git.duration }} of work</span>
           <span v-if="product.git.tests">{{ product.git.tests }} test suites</span>
         </p>
+        <p v-if="product.builds" class="product-hero__builds">
+          <span v-for="build in product.builds.items" :key="build.name" class="product-build">
+            <span class="product-build__dot" aria-hidden="true"></span>
+            {{ build.name }} <em>{{ build.status }}</em>
+          </span>
+          <span class="product-hero__builds-note">verified {{ product.builds.checked }}</span>
+        </p>
 
         <p v-if="product.intro" class="product-hero__intro">{{ product.intro }}</p>
 
@@ -313,6 +320,45 @@ export default {
     content: '·';
     margin-right: 1.5rem;
     color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.product-hero__builds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+
+  &-note {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+  }
+}
+
+.product-build {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+
+  &__dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #4ad07d;
+    box-shadow: 0 0 0 3px rgba(74, 208, 125, 0.25);
+  }
+
+  em {
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.7);
   }
 }
 

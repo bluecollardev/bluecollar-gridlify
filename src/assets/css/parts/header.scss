@@ -61,12 +61,6 @@ header .wrap {
   }
 }
 
-@media screen and (min-width: 64em) and (max-width: 102em) {
-  header #menu > ul > li:first-child {
-    display: none;
-  }
-}
-
 @media screen and (min-width: 102em) {
   header .wrap {
     padding: 0 10% 0 11%;
@@ -349,11 +343,20 @@ header #hamburger span {
   }
 
   .display-menu header #menu {
-    height: 100vh;
-    /*height: calc(100vh - 48px);*/
+    /* Full bleed under the bar: the header is 54px tall, so the drawer takes the
+       rest of the viewport and scrolls if the list is longer */
+    height: calc(100vh - 54px);
+    height: calc(100dvh - 54px);
+    overflow-y: auto;
     background: white;
-    position: absolute;
-    top: 48px; /* Position below the header */
+    /* Fixed, not absolute: the wrap around it is padded, so an absolute drawer
+       stopped short of the viewport edges */
+    position: fixed;
+    top: 54px; /* Position below the header */
+    left: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 100%;
     z-index: 9995;
 
     li {

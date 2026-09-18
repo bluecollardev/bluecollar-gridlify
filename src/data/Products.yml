@@ -4,6 +4,13 @@ subtitle: >-
   community that we build on.
 items:
   - name: Mediashare
+    builds:
+      checked: 18 Sep 2026
+      items:
+        - name: Monorepo build
+          status: passing
+        - name: 154 suites, 1,407 tests
+          status: passing
     slug: mediashare
     icon: /images/projects/mediashare.svg
     tagline: Open-source media sharing for React Native and NestJS
@@ -66,6 +73,15 @@ items:
         portrait: true
         caption: Playback and sharing on mobile
   - name: Rental.Cloud
+    builds:
+      checked: 18 Sep 2026
+      items:
+        - name: Customer site
+          status: passing
+        - name: Merchant dashboard
+          status: passing
+        - name: Marketing site
+          status: passing
     slug: rental-cloud
     icon: /images/projects/rental-cloud.svg
     tagline: The self-hosted alternative to Airbnb and Booking.com
@@ -220,6 +236,11 @@ items:
           - src: /images/products/rental-cloud/thai/search.jpg
             caption: Search and filters on the desktop site
   - name: Entraprise
+    builds:
+      checked: 18 Sep 2026
+      items:
+        - name: API
+          status: passing
     slug: entraprise
     icon: /images/projects/entraprise.svg
     tagline: Member and operations apps on Microsoft Entra ID
