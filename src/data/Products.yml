@@ -97,7 +97,8 @@ items:
           status: live
           body: >-
             One endpoint exposes the listing tools to any MCP client — Claude Desktop, an
-            editor, your own agent. Reads are open; anything that writes goes through the
+            editor, your own agent. Reads are scoped to what is public anyway — active,
+            undeleted listings on that node — and anything that writes goes through the
             same token and ownership checks as the rest of the API.
         - title: Built on Claude
           status: live
