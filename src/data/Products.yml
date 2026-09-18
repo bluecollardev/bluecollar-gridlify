@@ -145,7 +145,8 @@ items:
           status: coming soon
           body: >-
             Voice in and out over the same assistant, with ElevenLabs doing the speech,
-            so a lister can add or change a property without stopping to type.
+            so a lister can add or change a property while getting on with the rest of
+            their day.
       note: >-
         Everything marked live runs today against the listings API and has been tested end
         to end. Want a demo, or the same thing pointed at your own data? Get in touch.
