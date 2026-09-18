@@ -73,6 +73,53 @@ items:
         portrait: true
         caption: Playback and sharing on mobile
   - name: Rental.Cloud
+    ai:
+      title: AI that does the typing for you
+      intro: >-
+        The platform speaks Model Context Protocol, so an AI assistant can work your
+        listings the way a person would — search them, read them, write them and keep
+        them current — through the same API and the same permissions as the app.
+      items:
+        - title: Write a listing for me
+          status: live
+          body: >-
+            Describe the place in a sentence and the assistant drafts the title,
+            description and details, then creates the listing on your account. It can
+            update one later just as easily — change the price, rewrite the blurb, add
+            photos — without you opening a form.
+        - title: Search in plain language
+          status: live
+          body: >-
+            "Two-bedroom near the beach in Hua Hin under 20,000 a month" resolves to a
+            real query — city lookup, listing type, price range, bedrooms — and comes
+            back with the matching properties and their full details.
+        - title: An MCP server, not a chatbot bolted on
+          status: live
+          body: >-
+            One endpoint exposes the listing tools to any MCP client — Claude Desktop, an
+            editor, your own agent. Reads are open; anything that writes goes through the
+            same token and ownership checks as the rest of the API.
+        - title: Built on Claude
+          status: live
+          body: >-
+            The assistant runs on Anthropic's Claude Sonnet with the listing tools handed
+            to it directly, so it chains steps by itself: find the city, check what is
+            there, then write the listing.
+        - title: Your own key, your own account
+          status: live
+          body: >-
+            Each node holds its own Anthropic key in configuration, so the AI features run
+            on your account and your terms — no shared quota, and nothing leaves the node
+            you host.
+        - title: Talk to it — voice chat
+          status: soon
+          body: >-
+            Voice in and out over the same assistant, with ElevenLabs doing the speech, so
+            a lister can add or change a property while driving. Not built yet — tell us
+            if you want it and we will move it up.
+      note: >-
+        Everything marked live runs today against the listings API and has been tested
+        end to end. Want a demo, or the same thing pointed at your own data? Get in touch.
     builds:
       checked: 18 Sep 2026
       items:

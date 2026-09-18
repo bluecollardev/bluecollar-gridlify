@@ -89,6 +89,24 @@
       </div>
     </section>
 
+    <section v-if="product.ai" class="product-ai">
+      <div class="product-ai__inner">
+        <h2 class="product-ai__title text-center">{{ product.ai.title }}</h2>
+        <p class="product-ai__intro text-center">{{ product.ai.intro }}</p>
+
+        <div class="product-ai__grid">
+          <div v-for="item in product.ai.items" :key="item.title" class="product-ai-card">
+            <h3 class="product-ai-card__title">{{ item.title }}</h3>
+            <p class="product-ai-card__body">{{ item.body }}</p>
+            <span v-if="item.status" class="product-ai-card__status"
+                  :class="`product-ai-card__status--${item.status}`">{{ item.status }}</span>
+          </div>
+        </div>
+
+        <p v-if="product.ai.note" class="product-ai__note text-center">{{ product.ai.note }}</p>
+      </div>
+    </section>
+
     <section v-if="shots.length" class="product-shots">
       <div class="product-shots__inner">
         <h2 class="product-shots__title text-center">A look inside</h2>
@@ -501,6 +519,119 @@ export default {
     color: #52606d;
     font-size: 0.85rem;
     white-space: nowrap;
+  }
+}
+
+.product-ai {
+  background: #33587a;
+  color: #fff;
+  padding: 4rem 1.5rem 4.5rem;
+  position: relative;
+  z-index: 1;
+
+  * {
+    text-shadow: none !important;
+  }
+
+  &__inner {
+    max-width: 66rem;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 1.85rem;
+    color: #fff;
+    margin: 0;
+  }
+
+  &__intro {
+    max-width: 44rem;
+    margin: 1rem auto 0;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+
+    @media screen and (max-width: 64em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 40em) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__note {
+    margin: 2rem auto 0;
+    max-width: 44rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+.product-ai-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: 1.5rem 1.35rem;
+
+  &__title {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0;
+  }
+
+  &__body {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0.6rem 0 0;
+  }
+
+  &__status {
+    margin-top: auto;
+    padding-top: 0.9rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      margin-right: 0.45rem;
+      vertical-align: middle;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    &--live::before {
+      background: #4ad07d;
+    }
+
+    &--beta::before {
+      background: #f0b429;
+    }
+
+    &--soon {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &--soon::before {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
   }
 }
 
