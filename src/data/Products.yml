@@ -65,12 +65,15 @@ items:
       Rental.Cloud is a rental marketplace you run yourself. Take the app, connect it to
       the network, and you have your own listings site — your brand, your rules, your
       commission — instead of paying a platform for access to your own customers. It
-      runs hotels and hostels, villa and condo rentals, and motorbike and car hire.
+      runs hotels and hostels, villa and condo rentals, and motorbike and car rentals
+      and hire.
     features:
       - title: Your marketplace, your terms
         body: >-
           Multi-tenant and white-label from the ground up: your branding, content,
-          currency, pricing and maps, with tenants provisioned per site.
+          currency, pricing and maps, with tenants provisioned per site. Rent out
+          rooms, whole properties, or motorbikes and cars — listing types are yours
+          to configure.
       - title: Payments that reconcile
         body: >-
           Stripe checkout, subscriptions, automatic rent collection and merchant payouts
