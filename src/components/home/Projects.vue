@@ -1,5 +1,5 @@
 <template>
-  <section id="projects" class="hero-section projects-section angle bg-white text-shadow-none">
+  <section id="projects" class="hero-section projects-section angle text-shadow-none">
     <div class="projects-section__inner">
       <h2 class="projects-section__title text-center">{{ content.title }}</h2>
       <p v-if="content.subtitle" class="projects-section__subtitle text-center">{{ content.subtitle }}</p>
@@ -43,7 +43,8 @@ export default {
 
 <style lang="scss">
 .projects-section {
-  background-color: #f2f1ed;
+  /* Needs its own colour or the angled clip-path is invisible against the page */
+  background-color: #e3ecf2;
   color: #33587a;
   padding: 6rem 1.5rem 12rem;
 
