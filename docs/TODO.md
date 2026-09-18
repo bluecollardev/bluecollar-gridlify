@@ -17,6 +17,10 @@ bottom of the relevant section.
 - [ ] Create empty GitHub repos `bluecollardev/mediashare` and
       `bluecollardev/rental-cloud-app`, then push the prepared snapshots (no `gh`
       CLI or token on this machine; SSH pushes work).
+      Note: `github.com/bluecollardev/mediashare` currently 301-redirects to
+      `mediashare-api` — that repository was renamed at some point, so GitHub still
+      holds the old name. Creating a fresh `mediashare` repo is allowed and simply
+      retires the redirect; decide that deliberately rather than by surprise.
 - [ ] Snapshots are single "Initial public release" commits, not mirrors: both
       private histories carry `.env.*` files, a Google service-account key and an
       Apple signing certificate.
@@ -107,6 +111,10 @@ bottom of the relevant section.
       plugin registered, component renamed, key read from
       `VITE_GOOGLE_MAP_KEY`, centred on the Thonburi riverside by Wat Arun.
 - [ ] Set `VITE_GOOGLE_MAP_KEY` in Vercel or production keeps the plain overlay.
+      Confirmed still missing on 18 September 2026: no `AIza…` string in the
+      deployed bundle and no `.gm-style` element on the live contact section.
+      There is no Vercel CLI or token on this machine, so this can only be done
+      from the dashboard.
 - [ ] Add the GitHub links for Rental.Cloud and Entraprise once those repos exist.
 
 ## Portfolio PDF
