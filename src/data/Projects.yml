@@ -18,11 +18,10 @@ items:
     description: >-
       An open-source rental marketplace app that ties into the Rental.Cloud network,
       so customers run and fine tune their own product rather than renting space on
-      someone else's. Behind it sits the multi-tenant platform powering CrashPad411
-      and others: listings and search, Stripe payments, subscriptions and merchant
-      payouts, and iOS and Android builds.
+      someone else's. Behind it sits a multi-tenant platform: listings and search,
+      Stripe payments, subscriptions and merchant payouts, and iOS and Android
+      builds.
     technologies: Vue 3, TypeScript, Capacitor, Laravel, PHP, MySQL, Stripe, RabbitMQ, Docker
-    url: https://crashpad411.com
     openSource: false
   - name: Entraprise
     icon: /images/projects/entraprise.svg
