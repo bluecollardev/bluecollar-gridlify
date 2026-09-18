@@ -47,6 +47,7 @@ export default {
           complete: () => {
             detailEl.style.opacity = 0
             detailEl.style.zIndex = 0
+            this.$emit('closed')
             if (typeof callback === 'function') callback(detailEl)
           }
         })

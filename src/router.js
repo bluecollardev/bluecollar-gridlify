@@ -14,6 +14,12 @@ const routes = [
     component: Index
   },
   {
+    // Case Studies is a modal on the home page; this path just opens it
+    path: '/case-studies',
+    name: 'CaseStudies',
+    component: Index
+  },
+  {
     path: '/company',
     name: 'Company',
     component: Company

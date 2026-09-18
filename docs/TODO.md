@@ -62,6 +62,15 @@ bottom of the relevant section.
 - [ ] Galleries for the older entries (Phobulous, Caffe Tech, Carsgone, AMA, …) —
       only the mockup today; add raw screenshots if they turn up.
 
+## Navigation
+
+- [x] Home hidden from the nav (kept in the markup behind `v-if="false"`).
+- [x] Case Studies menu item -> /case-studies, which renders the home page with the
+      Case Studies modal open; closing it returns the URL to /. Works from any page
+      and as a direct link.
+- [x] Hero background: `cover` in portrait too — at ~828px the old `auto 100%`
+      left the section colour showing down both sides.
+
 ## Portfolio UI
 
 - [x] Ongoing engagements (no `endDate`) show the start date alone, no "Present".

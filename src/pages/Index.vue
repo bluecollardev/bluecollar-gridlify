@@ -112,7 +112,8 @@
       </div>
     </section>
 
-    <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'PORTFOLIO' ? $t('home.caseStudies') : ''" :scrollable="true">
+    <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'PORTFOLIO' ? $t('home.caseStudies') : ''" :scrollable="true"
+                          @closed="onDetailClosed">
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
       <commando-skull-scene v-if="this.activeDetail === 'CONSULTANTS'"></commando-skull-scene>
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
@@ -507,6 +508,23 @@ export default {
     handleTestimonialLinkClick(testimonialId) {
       this.viewDetail('PORTFOLIO', testimonialId)
     },
+    /**
+     * /case-studies renders the home page with the Case Studies modal open.
+     * Closing it returns the URL to / (see onDetailClosed), so the same link works
+     * again afterwards.
+     */
+    openDetailFromRoute() {
+      if (this.$route.path !== '/case-studies') {
+        return
+      }
+
+      this.$nextTick(() => this.viewDetail('PORTFOLIO'))
+    },
+    onDetailClosed() {
+      if (this.$route.path === '/case-studies') {
+        this.$router.replace('/').catch(() => {})
+      }
+    },
     viewDetail(activeDetail, testimonialId = null) {
       if (typeof window !== 'undefined') {
 
@@ -534,6 +552,12 @@ export default {
   mounted() {
     // Start testimonial cycling when component is mounted
     this.startTestimonialCycle()
+    this.openDetailFromRoute()
+  },
+  watch: {
+    '$route.path'() {
+      this.openDetailFromRoute()
+    }
   },
   beforeUnmount() {
     // Clean up timer when component is destroyed
@@ -635,18 +659,13 @@ export default {
     background-repeat: no-repeat !important;
   }
 
-  /* Portrait - contain to show full image */
-  @media screen and (max-width: 64em) and (orientation: portrait) {
-    .hero-section-01-col.jungle-stream {
-      background-size: auto 100% !important;
-    }
-  }
-
-  /* Landscape - cover to fill the space */
-  @media screen and (max-width: 64em) and (orientation: landscape) {
-    .hero-section-01-col.jungle-stream {
-      background-size: cover !important;
-    }
+  /* Cover in both orientations. Portrait used to scale to height only
+     (auto 100%), which left the section's background colour showing down both
+     sides once the viewport was wider than the image's aspect ratio - visible at
+     around 828px. Cover scales by height on narrow phones anyway, so it only
+     changes the wide-portrait case. */
+  .hero-section-01-col.jungle-stream {
+    background-size: cover !important;
   }
 }
 

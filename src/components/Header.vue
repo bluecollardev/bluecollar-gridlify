@@ -11,9 +11,12 @@
       </a>
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0" v-if="isMobile ? menuDisplayed : true">
-          <li><a href="/" aria-label="Our Team" @click="hideMenu()">{{ $t('nav.home') }}</a></li>
+          <!-- Home hidden for now; the logo still links to / -->
+          <li v-if="false"><a href="/" aria-label="Our Team" @click="hideMenu()">{{ $t('nav.home') }}</a></li>
           <li><a href="/#services" aria-label="Services" @click="hideMenu()">{{ $t('nav.whatWeBuild') }}</a></li>
           <li><a href="/company" aria-label="Websites" @click="hideMenu()">{{ $t('nav.ourPeople') }}</a></li>
+          <li><a href="/case-studies" aria-label="Case Studies"
+                 @click.prevent="viewCaseStudies()">{{ $t('nav.caseStudies') }}</a></li>
           <li><a href="/#contact" aria-label="Enquire" @click="hideMenu()">{{ $t('nav.getInTouch') }}</a></li>
           <li style="height: auto" class="language-switcher-menu-item">
             <language-switcher/>
@@ -94,6 +97,14 @@ export default {
     }
   },
   methods: {
+    /**
+     * Case Studies live in a modal on the home page; /case-studies renders the
+     * home page and opens it, so the link works from any page and can be shared.
+     */
+    viewCaseStudies() {
+      this.hideMenu()
+      this.$router.push('/case-studies').catch(() => {})
+    },
     handleMenuDisplay() {
       this.displayMenu()
       this.$nextTick(() => {
