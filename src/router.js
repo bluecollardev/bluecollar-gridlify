@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 // Import pages
 import Index from '~/pages/Index.vue'
 import Company from '~/pages/Company.vue'
+import Product from '~/pages/Product.vue'
 import Contact from '~/pages/Contact.vue'
 import Blog from '~/pages/Blog.vue'
 import BlogPost from '~/templates/BlogPost.vue'
@@ -12,6 +13,12 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Index
+  },
+  {
+    // One page per product, driven by src/data/Products.yml
+    path: '/products/:slug',
+    name: 'Product',
+    component: Product
   },
   {
     // Case Studies is a modal on the home page; this path just opens it

@@ -8,12 +8,8 @@
       <p v-if="content.subtitle" class="projects-section__subtitle text-center">{{ content.subtitle }}</p>
 
       <div class="projects-grid">
-        <component v-for="project in content.items" :key="project.name"
-                   :is="project.url ? 'a' : 'div'"
-                   :href="project.url || null"
-                   :target="project.url ? '_blank' : null"
-                   :rel="project.url ? 'noopener' : null"
-                   class="project-card">
+        <router-link v-for="project in content.items" :key="project.name"
+                     :to="`/products/${project.slug}`" class="project-card">
           <div class="project-card__head">
             <img v-if="project.icon" class="project-card__icon" :src="project.icon" alt="" aria-hidden="true"/>
             <h3 class="project-card__name">{{ project.name }}</h3>
@@ -26,14 +22,15 @@
           <p class="project-card__tagline">{{ project.tagline }}</p>
           <p class="project-card__description">{{ project.description }}</p>
           <p v-if="project.technologies" class="project-card__tech">{{ project.technologies }}</p>
-        </component>
+          <span class="project-card__more">Learn more →</span>
+        </router-link>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import ProjectsData from '~/data/Projects.yml'
+import ProductsData from '~/data/Products.yml'
 import TypewriterTextEffect from '~/core/components/text/Typewriter.vue'
 
 export default {
@@ -42,7 +39,7 @@ export default {
   },
   computed: {
     content() {
-      return ProjectsData
+      return ProductsData
     },
     isServer() {
       return typeof window === 'undefined'
@@ -121,8 +118,8 @@ export default {
   color: inherit;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-  &[href]:hover,
-  &[href]:focus-visible {
+  &:hover,
+  &:focus-visible {
     transform: translateY(-4px);
     box-shadow: 0 14px 32px rgba(51, 88, 122, 0.2);
   }
@@ -177,6 +174,13 @@ export default {
     font-size: 0.8rem;
     line-height: 1.5;
     margin: 1.25rem 0 0;
+  }
+
+  &__more {
+    margin-top: 1rem;
+    color: #33587a;
+    font-weight: 700;
+    font-size: 0.9rem;
   }
 }
 </style>

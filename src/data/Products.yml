@@ -4,6 +4,7 @@ subtitle: >-
   community that we build on.
 items:
   - name: Mediashare
+    slug: mediashare
     icon: /images/projects/mediashare.svg
     tagline: Open-source media sharing for React Native and NestJS
     description: >-
@@ -12,26 +13,123 @@ items:
       app over an Nx monorepo of NestJS microservices, with OpenAPI-generated clients.
     technologies: TypeScript, React Native, Expo, NestJS, Nx, MongoDB, OpenAPI, AWS
     github: https://github.com/bluecollardev/mediashare
-    url: https://app.drafehr.com
     openSource: true
+    mockup: /images/portfolio/bc-showcase-pocketpt.png
+    intro: >-
+      Mediashare is a media-sharing platform for people who teach with video. Content
+      is organised into playlists — a session, a programme, a course — that can be
+      shared with a person, a group or the public, and watched on a phone as easily as
+      on a laptop.
+    features:
+      - title: Playlists, not clips
+        body: >-
+          Group videos into a session someone can follow from beginning to end, ordered
+          the way you want them taught, with tagging and search across the library.
+      - title: Share with people you choose
+        body: >-
+          Connections, email invitations and per-item visibility, so a playlist reaches
+          a patient, a class or everyone, and nothing else leaks.
+      - title: One app, every device
+        body: >-
+          React Native and Expo give you iOS, Android and web from a single codebase,
+          with a shared component library keeping them consistent.
+      - title: Services you can host yourself
+        body: >-
+          An Nx monorepo of NestJS microservices — media, users, tagging and analytics —
+          over MongoDB, documented with OpenAPI and shipped with generated typed clients.
+    screenshots:
+      - src: /images/products/mediashare/playlists.jpg
+        caption: Browse the library by body region, programme and training focus
+      - src: /images/products/mediashare/playlist.jpg
+        caption: A playlist plays start to finish, with its own description and tags
+      - src: /images/products/mediashare/phone-playlists.jpg
+        caption: The same library on a phone
+      - src: /images/products/mediashare/phone-playlist.jpg
+        caption: Playback and sharing on mobile
   - name: Rental.Cloud
+    slug: rental-cloud
     icon: /images/projects/rental-cloud.svg
     tagline: The self-hosted alternative to Airbnb and Booking.com
     description: >-
       An open-concept rental marketplace app that ties into the Rental.Cloud network,
       so customers run and fine tune their own product rather than renting space on
       someone else's. Behind it sits a multi-tenant platform: listings and search,
-      Stripe payments, subscriptions and merchant payouts, and iOS and Android
-      builds.
+      Stripe payments, subscriptions and merchant payouts with configurable fees and
+      commissions, and iOS and Android builds.
     technologies: Vue 3, TypeScript, Capacitor, Laravel, PHP, MySQL, Stripe, RabbitMQ, Docker
-    openSource: false
+    openSource: true
+    mockup: /images/portfolio/bc-showcase-crashpad411.png
+    intro: >-
+      Rental.Cloud is a rental marketplace you run yourself. Take the app, connect it to
+      the network, and you have your own listings site — your brand, your rules, your
+      commission — instead of paying a platform for access to your own customers.
+    features:
+      - title: Your marketplace, your terms
+        body: >-
+          Multi-tenant and white-label from the ground up: your branding, content,
+          currency, pricing and maps, with tenants provisioned per site.
+      - title: Payments that reconcile
+        body: >-
+          Stripe checkout, subscriptions, automatic rent collection and merchant payouts
+          through Stripe Connect, with configurable fees and commissions, on an auditable
+          ledger that balances against Stripe.
+      - title: Listings and search
+        body: >-
+          Map-based search, filters and featured placement, with a multi-step listing
+          editor and occupancy flows for the people posting.
+      - title: Web and mobile
+        body: >-
+          A Vue 3 front end with server-side rendering, plus iOS and Android builds from
+          the same codebase through Capacitor, with push notifications and geolocation.
+    screenshots:
+      - src: /images/products/rental-cloud/search.jpg
+        caption: Map-based search across a city's listings
+      - src: /images/products/rental-cloud/home.jpg
+        caption: A tenant's landing page with featured listings
+      - src: /images/products/rental-cloud/tablet-search.jpg
+        caption: Search on a tablet
+      - src: /images/products/rental-cloud/phone-home.jpg
+        caption: The same site on a phone
   - name: Entraprise
+    slug: entraprise
     icon: /images/projects/entraprise.svg
     tagline: Member and operations apps on Microsoft Entra ID
     description: >-
       Role-gated applications for member-based organizations: user management with
       roles and permissions, timekeeping, expenses, event calendars, notifications and
-      WordPress integration, plus a referrals system with GIS mapping. Single sign-on
-      and Microsoft 365 gating through Microsoft Entra ID, deployed on Azure.
-    technologies: TypeScript, React Native, Expo, NestJS, PostgreSQL, PostGIS, Microsoft Entra ID, Azure
-    openSource: false
+      WordPress integration. Single sign-on and Microsoft 365 gating through Microsoft
+      Entra ID, deployed on Azure.
+    technologies: TypeScript, React Native, Expo, NestJS, PostgreSQL, Microsoft Entra ID, Azure
+    openSource: true
+    mockup: /images/portfolio/bc-showcase-skintyee.png
+    intro: >-
+      Entraprise runs the day to day of a member-based organization: who belongs, what
+      they are entitled to see, the hours worked, the money spent and the events coming
+      up — with sign-in and access handled by the Microsoft account the organization
+      already pays for.
+    features:
+      - title: Members, roles and permissions
+        body: >-
+          User management with role-gated access, so the public, members and staff each
+          see their own view of the same application.
+      - title: Single sign-on and 365 gating
+        body: >-
+          Microsoft Entra ID for sign-in and Microsoft 365 gating, with Graph integration
+          for password self-service and silent token refresh.
+      - title: Timekeeping and expenses
+        body: >-
+          Billable time entry with account coding, pay periods and approvals, expense
+          tracking, and branded PDF reports.
+      - title: Events, notices and records
+        body: >-
+          Event calendars, notifications and public records, alongside WordPress
+          integration for the public site.
+    screenshots:
+      - src: /images/products/entraprise/dashboard.jpg
+        caption: The dashboard, on desktop
+      - src: /images/products/entraprise/events.jpg
+        caption: Event calendars and notices
+      - src: /images/products/entraprise/phone-events.jpg
+        caption: Events on a phone
+      - src: /images/products/entraprise/phone-timekeeping.jpg
+        caption: Timekeeping with approvals

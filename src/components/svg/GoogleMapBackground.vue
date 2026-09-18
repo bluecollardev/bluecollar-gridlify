@@ -1,6 +1,7 @@
 <template>
   <div class="google-map flex">
-    <GmapMap
+    <GMapMap
+        v-if="hasMapKey"
         ref="mapRef"
         class="map-01"
         :center="this.gmapCenter"
@@ -8,7 +9,8 @@
         style="width: 100%; height: 100%"
         :options="this.gmapOptions"
     >
-    </GmapMap>
+    </GMapMap>
+    <div v-else class="map-01 map-01--placeholder"></div>
   </div>
 </template>
 
@@ -18,6 +20,9 @@
 
 export default {
   data: () => ({
+    // The map only renders when a key is configured; without one the section keeps
+    // its overlay rather than logging Google errors
+    hasMapKey: Boolean(import.meta.env.VITE_GOOGLE_MAP_KEY),
     lastWindowScroll: {
       x: 0,
       y: 0,
@@ -25,8 +30,9 @@ export default {
     scrollThreshold: 5,
     parallaxMultiplier: 5,
     gmapCenter: {
-      lat: 48.455,
-      lng: -123.35
+      // Thonburi riverside, by Wat Arun
+      lat: 13.7437,
+      lng: 100.4885
     },
     gmapOptions: {
       zoomControl: false,
@@ -73,7 +79,9 @@ export default {
 
         gmap.panBy(initialScroll.x, initialScroll.y / this.parallaxMultiplier)
 
-        this.google.maps.event.addDomListener(window, 'scroll', this.scrollGoogleMap.bind(this, gmap))
+        // `this.google` never existed here (the gmapApi import above is commented
+        // out); the API is on window once the plugin has loaded it
+        window.google.maps.event.addDomListener(window, 'scroll', this.scrollGoogleMap.bind(this, gmap))
       })
     },
     scrollGoogleMap(gmap) {
@@ -125,6 +133,13 @@ export default {
       cursor: default;
     }
   }
+}
+
+.map-01--placeholder {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .map-01 {

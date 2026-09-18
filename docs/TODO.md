@@ -92,6 +92,15 @@ bottom of the relevant section.
 - [x] Hero background: `cover` in portrait too — at ~828px the old `auto 100%`
       left the section colour showing down both sides.
 
+## Products
+
+- [x] `src/data/Products.yml` drives the home page cards and one landing page each
+      at `/products/:slug` (`src/pages/Product.vue`).
+- [x] Contact map: plugin registered, component renamed, key read from
+      `VITE_GOOGLE_MAP_KEY`, centred on the Thonburi riverside by Wat Arun.
+- [ ] Set `VITE_GOOGLE_MAP_KEY` in Vercel or production keeps the plain overlay.
+- [ ] Add the GitHub links for Rental.Cloud and Entraprise once those repos exist.
+
 ## Portfolio PDF
 
 - [x] `npm run portfolio:pdf` builds two PDFs into `public/docs/` from
