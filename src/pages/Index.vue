@@ -616,12 +616,20 @@ export default {
   display: none;
 }
 
+#services {
+  position: relative;
+  /* Must paint over the Projects section below it, so its angle stays visible */
+  z-index: 3;
+}
+
 #rock {
   z-index: 1;
 }
 
 @media screen and (min-width: 52em) {
   #rock {
+    /* Breathing room between the Projects chevron and the heading */
+    padding-top: 6rem;
     /* min-height, not height: the section is overflow:hidden, so a fixed 115vh
        clipped the guitar on shorter screens (at 1280x800 it overflowed by ~90px) */
     min-height: 115vh;

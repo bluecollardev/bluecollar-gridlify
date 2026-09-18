@@ -1,7 +1,10 @@
 <template>
   <section id="projects" class="hero-section projects-section angle text-shadow-none">
     <div class="projects-section__inner">
-      <h2 class="projects-section__title text-center">{{ content.title }}</h2>
+      <typewriter-text-effect v-if="!isServer" tag="h2" :text="content.title"
+                              class="title projects-section__title text-center"
+                              lettersSelector=".letters" letterSelector=".letter" lineSelector=".line"/>
+      <h2 v-else class="projects-section__title text-center">{{ content.title }}</h2>
       <p v-if="content.subtitle" class="projects-section__subtitle text-center">{{ content.subtitle }}</p>
 
       <div class="projects-grid">
@@ -31,11 +34,18 @@
 
 <script>
 import ProjectsData from '~/data/Projects.yml'
+import TypewriterTextEffect from '~/core/components/text/Typewriter.vue'
 
 export default {
+  components: {
+    TypewriterTextEffect
+  },
   computed: {
     content() {
       return ProjectsData
+    },
+    isServer() {
+      return typeof window === 'undefined'
     }
   }
 }
@@ -43,10 +53,18 @@ export default {
 
 <style lang="scss">
 .projects-section {
-  /* Needs its own colour or the angled clip-path is invisible against the page */
-  background-color: #e3ecf2;
-  color: #33587a;
-  padding: 6rem 1.5rem 12rem;
+  /* Dark enough for the white animated heading, and gives the angled clip-path
+     something to cut against */
+  background-color: #33587a;
+  color: #fff;
+  padding: 9rem 1.5rem 12rem;
+  /* Start above the previous section's clipped edge so its 9vh chevron cuts into
+     this section, rather than into the page behind it (which showed as a blue band) */
+  margin-top: calc(-9vh - 0.75rem - 9vh);
+  position: relative;
+  /* Above #rock (1) so this section's own chevron cuts into it, below #services (3)
+     so the chevron above cuts into this one */
+  z-index: 2;
 
   &__inner {
     max-width: 72rem;
@@ -54,18 +72,24 @@ export default {
   }
 
   &__title {
+    display: block;
     font-size: 2rem;
+    color: #fff;
     margin: 0;
   }
 
   &__subtitle {
-    color: #52606d;
-    margin: 0.75rem 0 0;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 1.25rem 0 0;
   }
 
   /* The section's own text should not inherit the hero text shadow */
   * {
     text-shadow: none !important;
+  }
+
+  .project-card {
+    color: #33587a;
   }
 }
 
