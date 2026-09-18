@@ -23,10 +23,10 @@ items:
     url: https://crashpad411.com
     openSource: false
   - name: Entraprise
-    tagline: Community and operations apps for First Nations
+    tagline: Member and operations apps on Microsoft Entra ID
     description: >-
-      Role-gated community applications built for Skin Tyee First Nation: a member app
-      with events, notifications, records and billable time keeping, plus a consultation
-      referrals system with GIS mapping, all on Microsoft Entra ID and Azure.
+      Role-gated applications for member-based organizations: a member app with events,
+      notifications, public records and billable time keeping, plus a referrals system
+      with GIS mapping. Single sign-on through Microsoft Entra ID, deployed on Azure.
     technologies: TypeScript, React Native, Expo, NestJS, PostgreSQL, PostGIS, Microsoft Entra ID, Azure
     openSource: false
