@@ -76,7 +76,7 @@ items:
     builds:
       checked: 18 Sep 2026
       items:
-        - name: Customer site
+        - name: Customer instances
           status: passing
         - name: Merchant dashboard
           status: passing

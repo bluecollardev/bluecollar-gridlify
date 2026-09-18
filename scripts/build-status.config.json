@@ -8,7 +8,7 @@
   "checks": [
     {
       "product": "Rental.Cloud",
-      "label": "Customer site",
+      "label": "Customer instances",
       "type": "local",
       "cwd": "/Users/lucas/Workspaces/props-apps",
       "command": "pnpm --filter dotproperties build"
