@@ -71,6 +71,16 @@ bottom of the relevant section.
 - [x] Hero background: `cover` in portrait too — at ~828px the old `auto 100%`
       left the section colour showing down both sides.
 
+## Portfolio PDF
+
+- [x] `npm run portfolio:pdf` builds two PDFs into `public/docs/` from
+      `src/data/Portfolio.yml`, so they cannot drift from the site:
+      `blue-collar-portfolio.pdf` (case studies, ~2 MB) and
+      `blue-collar-portfolio-with-screenshots.pdf` (plus an appendix, ~7 MB).
+      Needs `puppeteer-core` installed locally; it is not a project dependency.
+- [x] Download menu in the Case Studies header (icon-only on phones).
+- [ ] Re-run the build whenever Portfolio.yml or the images change.
+
 ## Portfolio UI
 
 - [x] Ongoing engagements (no `endDate`) show the start date alone, no "Present".

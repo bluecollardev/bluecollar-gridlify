@@ -114,6 +114,23 @@
 
     <content-detail-modal ref="contentDetail" :title="this.activeDetail === 'PORTFOLIO' ? $t('home.caseStudies') : ''" :scrollable="true"
                           @closed="onDetailClosed">
+      <template #actions>
+        <div v-if="this.activeDetail === 'PORTFOLIO'" class="portfolio-downloads">
+          <button type="button" class="portfolio-downloads__toggle" aria-haspopup="true"
+                  :aria-expanded="String(downloadsOpen)" @click.stop="downloadsOpen = !downloadsOpen">
+            <span class="icon-download" aria-hidden="true"></span>
+            <span class="portfolio-downloads__label">{{ $t('portfolio.download') }}</span>
+          </button>
+          <div v-if="downloadsOpen" class="portfolio-downloads__menu" @click.stop>
+            <a href="/docs/blue-collar-portfolio.pdf" download @click="downloadsOpen = false">
+              {{ $t('portfolio.downloadPdf') }}<small>{{ $t('portfolio.downloadPdfNote') }}</small>
+            </a>
+            <a href="/docs/blue-collar-portfolio-with-screenshots.pdf" download @click="downloadsOpen = false">
+              {{ $t('portfolio.downloadPdfShots') }}<small>{{ $t('portfolio.downloadPdfShotsNote') }}</small>
+            </a>
+          </div>
+        </div>
+      </template>
       <shoot-to-thrill-scene ref="shootToThrill" v-if="this.activeDetail === 'CONSULTANTS'"></shoot-to-thrill-scene>
       <commando-skull-scene v-if="this.activeDetail === 'CONSULTANTS'"></commando-skull-scene>
       <team-block v-if="this.activeDetail === 'CONSULTANTS'"></team-block>
@@ -334,6 +351,7 @@ export default {
   data() {
     let state = {
       activeDetail: null,
+      downloadsOpen: false,
       formData: {},
       repaint: Math.random(),
       textEffects: {
@@ -520,7 +538,12 @@ export default {
 
       this.$nextTick(() => this.viewDetail('PORTFOLIO'))
     },
+    closeDownloads() {
+      this.downloadsOpen = false
+    },
     onDetailClosed() {
+      this.downloadsOpen = false
+
       if (this.$route.path === '/case-studies') {
         this.$router.replace('/').catch(() => {})
       }
@@ -553,6 +576,11 @@ export default {
     // Start testimonial cycling when component is mounted
     this.startTestimonialCycle()
     this.openDetailFromRoute()
+
+    if (typeof window !== 'undefined') {
+      // Close the download menu on any outside click
+      document.addEventListener('click', this.closeDownloads)
+    }
   },
   watch: {
     '$route.path'() {
@@ -562,6 +590,10 @@ export default {
   beforeUnmount() {
     // Clean up timer when component is destroyed
     this.stopTestimonialCycle()
+
+    if (typeof window !== 'undefined') {
+      document.removeEventListener('click', this.closeDownloads)
+    }
   }
 }
 </script>
@@ -795,6 +827,104 @@ export default {
 @media screen and (min-width: 130em) {
   .jungle-stream {
     background-position: 50% 50%;
+  }
+}
+
+/* Download menu in the Case Studies header */
+.portfolio-downloads {
+  position: relative;
+  margin-right: 1rem;
+  flex: 0 0 auto;
+
+  &__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font: inherit;
+    font-size: 0.9rem;
+    line-height: 1;
+    padding: 0.55rem 0.9rem;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background: rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    min-width: 17rem;
+    max-width: calc(100vw - 2rem);
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    z-index: 20;
+
+    a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: #33587a;
+      text-decoration: none;
+      text-shadow: none;
+      font-size: 0.95rem;
+      line-height: 1.3;
+
+      & + a {
+        border-top: 1px solid #e6e6e6;
+      }
+
+      small {
+        display: block;
+        color: #7b8794;
+        font-size: 0.78rem;
+        margin-top: 0.15rem;
+      }
+
+      &:hover,
+      &:focus-visible {
+        background: #f0f4f8;
+      }
+    }
+  }
+}
+
+/* Phones: icon-only button, and the menu spans the header instead of hanging off it */
+@media screen and (max-width: 40em) {
+  .portfolio-downloads {
+    margin-right: 0.75rem;
+
+    &__label {
+      /* Visually hidden, still read out */
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    &__toggle {
+      padding: 0.5rem 0.65rem;
+      font-size: 1rem;
+    }
+
+    &__menu {
+      position: fixed;
+      /* Below the header bar: the modal starts at 54px and the bar is 5rem tall */
+      top: 8.6rem;
+      left: 0.75rem;
+      right: 0.75rem;
+      min-width: 0;
+      max-width: none;
+    }
   }
 }
 

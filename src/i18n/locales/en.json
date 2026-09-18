@@ -192,6 +192,11 @@
       "oct": "Oct",
       "nov": "Nov",
       "dec": "Dec"
-    }
+    },
+    "download": "Download",
+    "downloadPdf": "Portfolio (PDF)",
+    "downloadPdfNote": "Case studies only · 2 MB",
+    "downloadPdfShots": "Portfolio + screenshots (PDF)",
+    "downloadPdfShotsNote": "With the screenshot appendix · 7 MB"
   }
 }

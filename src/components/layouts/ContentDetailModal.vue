@@ -5,7 +5,8 @@
       <div class="flex-grow">
         <h2 v-if="this.title" class="text-center no-space-top no-space-bottom">{{ this.title }}</h2>
       </div>
-      <b @click="hideDetail()" style="font-size: 1.5rem; cursor: pointer">X</b>
+      <slot name="actions"></slot>
+      <b @click="hideDetail()" class="panel-header__close" style="font-size: 1.5rem; cursor: pointer">X</b>
     </div>
     <div class="panel-content">
       <slot></slot>

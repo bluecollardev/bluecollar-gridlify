@@ -190,6 +190,11 @@
       "oct": "ต.ค.",
       "nov": "พ.ย.",
       "dec": "ธ.ค."
-    }
+    },
+    "download": "ดาวน์โหลด",
+    "downloadPdf": "พอร์ตโฟลิโอ (PDF)",
+    "downloadPdfNote": "เฉพาะกรณีศึกษา · 2 MB",
+    "downloadPdfShots": "พอร์ตโฟลิโอ + ภาพหน้าจอ (PDF)",
+    "downloadPdfShotsNote": "พร้อมภาคผนวกภาพหน้าจอ · 7 MB"
   }
 }
