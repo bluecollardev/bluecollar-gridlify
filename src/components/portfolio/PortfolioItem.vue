@@ -14,7 +14,7 @@
         {{ this.project.projectName }}
       </h3>
       <span class="timeline__item__content__subtitle">
-        {{ `${getFormattedStartDate(this.project)} - ${getFormattedEndDate(this.project)}` }}
+        {{ dateRange }}
       </span>
       <div v-if="typeof this.project.image === 'string' && this.project.image.length > 3"
            class="project-image xs-pad-top xs-pad-bottom">
@@ -111,6 +111,15 @@ export default {
      * sections so each can collapse on mobile. Text before the first heading (there
      * shouldn't be any) is kept in a headingless, always-open section.
      */
+    /**
+     * Ongoing engagements have no endDate; show the start date alone rather than
+     * a dangling range.
+     */
+    dateRange() {
+      const start = this.getFormattedStartDate(this.project)
+
+      return this.project.endDate ? `${start} - ${this.getFormattedEndDate(this.project)}` : start
+    },
     descriptionSections() {
       const html = this.compiledDescription
 
@@ -215,11 +224,6 @@ export default {
       return `${this.months[startDate.getMonth()]} ${startDate.getFullYear()}`
     },
     getFormattedEndDate(project) {
-      // Ongoing engagements have no endDate
-      if (!project.endDate) {
-        return this.$t('portfolio.present')
-      }
-
       const startDate = new Date(project.startDate)
       const endDate = new Date(project.endDate)
       // Normalize dates, we don't care about exact time anyway

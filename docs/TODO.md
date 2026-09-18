@@ -43,7 +43,6 @@ bottom of the relevant section.
 - [ ] Confirm placeholder dates: RMG 2009 version (Jan–Dec 2009), DP Piranha (2007),
       PocketPT start (Jan 2020).
 - [x] Every entry has a **The Problem** section.
-- [ ] Skin Tyee: confirm the engagement is still current (shows "May 2026 – Present").
 - [x] Add PocketPT (Dr. Adam Fehr) with a device mockup from live app screenshots, plus
       his LinkedIn recommendation as a testimonial.
 - [x] Add CrashPad411 (base: resume portfolio entry) with screenshots of crashpad411.com.
@@ -65,7 +64,7 @@ bottom of the relevant section.
 
 ## Portfolio UI
 
-- [x] Ongoing engagements (no `endDate`) show "Present" (EN/TH).
+- [x] Ongoing engagements (no `endDate`) show the start date alone, no "Present".
 - [x] Date badge was covered by the leading image on desktop — image moved below it.
 - [x] Bullet lists in descriptions (theme.scss resets `li` list-style).
 - [x] Click the leading image to open a lightbox gallery
