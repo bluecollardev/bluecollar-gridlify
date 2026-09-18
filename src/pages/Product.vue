@@ -5,6 +5,13 @@
         <img v-if="product.icon" class="product-hero__icon" :src="product.icon" alt="" aria-hidden="true"/>
         <h1 class="product-hero__name">{{ product.name }}</h1>
         <p class="product-hero__tagline">{{ product.tagline }}</p>
+        <p v-if="product.git" class="product-hero__git">
+          <span>{{ product.git.repos.length }} {{ product.git.repos.length === 1 ? 'repository' : 'repositories' }}</span>
+          <span>{{ product.git.total }} commits</span>
+          <span>{{ product.git.duration }} of work</span>
+          <span v-if="product.git.tests">{{ product.git.tests }} test suites</span>
+        </p>
+
         <p v-if="product.intro" class="product-hero__intro">{{ product.intro }}</p>
 
         <div class="product-hero__actions">
@@ -17,6 +24,41 @@
 
         <img v-if="product.mockup" class="product-hero__mockup lozad" :src="product.mockup"
              :alt="`${product.name} running on desktop, tablet and phone`"/>
+      </div>
+    </section>
+
+    <section v-if="product.git" class="product-stats">
+      <div class="product-stats__inner">
+        <div class="commit-graph">
+          <div class="commit-graph__head">
+            <h2 class="commit-graph__title">{{ product.git.activity.total }} commits in the year to {{ product.git.activity.to }}</h2>
+            <div class="commit-graph__legend">
+              <span>Less</span>
+              <i v-for="l in [0, 1, 2, 3, 4]" :key="l" :class="`commit-graph__cell commit-graph__cell--${l}`"></i>
+              <span>More</span>
+            </div>
+          </div>
+          <div class="commit-graph__grid" role="img"
+               :aria-label="`Commit activity from ${product.git.activity.from} to ${product.git.activity.to}`">
+            <div v-for="(week, w) in weeks" :key="w" class="commit-graph__week">
+              <i v-for="(level, d) in week" :key="d" :class="`commit-graph__cell commit-graph__cell--${level}`"></i>
+            </div>
+          </div>
+          <p class="commit-graph__range">{{ product.git.activity.from }} — {{ product.git.activity.to }}</p>
+        </div>
+
+        <ul class="repo-list">
+          <li v-for="repo in product.git.repos" :key="repo.name" class="repo">
+            <div class="repo__main">
+              <span class="repo__name">{{ repo.name }}</span>
+              <span class="repo__note">{{ repo.note }}</span>
+            </div>
+            <div class="repo__meta">
+              <span><strong>{{ repo.commits }}</strong> commits</span>
+              <span><strong>{{ repo.contributors }}</strong> contributors</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -84,6 +126,17 @@ export default {
   computed: {
     activeExample() {
       return this.product && this.product.examples ? this.product.examples[this.exampleIndex] : null
+    },
+    /** The activity string is one character per day, Sunday first; chunk it into weeks. */
+    weeks() {
+      const levels = this.product && this.product.git ? this.product.git.activity.levels : ''
+      const out = []
+
+      for (let i = 0; i < levels.length; i += 7) {
+        out.push(levels.slice(i, i + 7).split(''))
+      }
+
+      return out
     },
     /** The dropdown swaps the whole carousel; without examples it is the product's own list. */
     shots() {
@@ -210,11 +263,132 @@ export default {
   }
 }
 
-.product-features {
+.product-stats {
   background: #fff;
   /* Tuck under the hero's 9vh angled edge */
   margin-top: -9vh;
-  padding: calc(5rem + 9vh) 1.5rem 5rem;
+  padding: calc(3.5rem + 9vh) 1.5rem 0;
+  position: relative;
+  z-index: 1;
+
+  &__inner {
+    max-width: 66rem;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+  }
+}
+
+.product-hero__git {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+
+  span + span::before {
+    content: '·';
+    margin-right: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.commit-graph {
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    color: #33587a;
+    margin: 0;
+  }
+
+  &__legend {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #7b8794;
+    font-size: 0.75rem;
+  }
+
+  &__grid {
+    display: flex;
+    gap: 3px;
+    margin-top: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  &__week {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  &__cell {
+    display: block;
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    background: #e8ecef;
+
+    &--1 { background: #c6dcea; }
+    &--2 { background: #8fbcd9; }
+    &--3 { background: #4c7896; }
+    &--4 { background: #2b4a63; }
+  }
+
+  &__range {
+    color: #7b8794;
+    font-size: 0.8rem;
+    margin: 0.25rem 0 0;
+  }
+}
+
+.repo-list {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 0;
+}
+
+.repo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid #e6e6e6;
+
+  &__name {
+    font-weight: 700;
+    color: #33587a;
+    margin-right: 0.75rem;
+  }
+
+  &__note {
+    color: #7b8794;
+    font-size: 0.9rem;
+  }
+
+  &__meta {
+    display: flex;
+    gap: 1.5rem;
+    color: #52606d;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+}
+
+.product-features {
+  background: #fff;
+  padding: 3.5rem 1.5rem 5rem;
   position: relative;
   z-index: 1;
 

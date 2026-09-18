@@ -14,6 +14,22 @@ items:
     technologies: TypeScript, React Native, Expo, NestJS, Nx, MongoDB, OpenAPI, AWS
     github: https://github.com/bluecollardev/mediashare
     openSource: true
+    git:
+      summary: 1 repository · 549 commits · Nx monorepo
+      total: '549'
+      duration: 3 mo
+      activity:
+        from: Sep 2025
+        to: Sep 2026
+        total: '549'
+        levels: '00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012110000000000000000000000000000000000000000000000000000000000000000341100003200000101000000100000'
+      tests: '181'
+      repos:
+        - name: mediashare
+          note: Mobile app, four NestJS services and shared libraries
+          commits: '549'
+          contributors: '2'
+          span: 2026
     mockup: /images/portfolio/bc-showcase-pocketpt.png
     intro: >-
       Mediashare is a media-sharing platform for people who teach with video. Content
@@ -60,6 +76,47 @@ items:
       commissions, and iOS and Android builds.
     technologies: Vue 3, TypeScript, Capacitor, Laravel, PHP, MySQL, Stripe, RabbitMQ, Docker
     openSource: true
+    git:
+      summary: 6 repositories · 5,487 commits · 2020–2026
+      total: '5,487'
+      duration: 5 yr 9 mo
+      activity:
+        from: Apr 2025
+        to: Apr 2026
+        total: '3,164'
+        levels: '00100111111101111111111110001011111110201111010111111100101100011211101111111111101111101110111111111111011011100111111000110000000001000011111113221111111111210221112231231111112212211121111111100000011011111100111012111111111111111111111111111100011111111111100010100000010000000020000001010101110211010011000011211101000011101111000111000000001111010001000001041120000'
+      tests: '81'
+      repos:
+        - name: Web and mobile apps
+          note: Vue 3 monorepo — customer site, merchant dashboard, iOS and Android
+          commits: 3,048
+          contributors: '20'
+          span: Jul 2020 – Apr 2026
+        - name: Listings API
+          note: Laravel — listings, payments, subscriptions, admin
+          commits: 1,571
+          contributors: '22'
+          span: Feb 2021 – Apr 2026
+        - name: Deployment pipelines
+          note: Azure DevOps — provisioning, DNS, SSL, backups
+          commits: '618'
+          contributors: '4'
+          span: Oct 2025 – Apr 2026
+        - name: Onboarding portal
+          note: Self-service signup, billing and trials
+          commits: '179'
+          contributors: '3'
+          span: Sep 2025 – Mar 2026
+        - name: Marketing site
+          note: Template browser and network signup
+          commits: '39'
+          contributors: '2'
+          span: Oct 2025 – Jan 2026
+        - name: Build agents
+          note: Self-hosted Dockerised CI agents
+          commits: '32'
+          contributors: '3'
+          span: Oct 2025 – Apr 2026
     mockup: /images/products/rental-cloud/mockup.png
     intro: >-
       Rental.Cloud is a rental marketplace you run yourself. Take the app, connect it to
@@ -153,6 +210,21 @@ items:
       Entra ID, deployed on Azure.
     technologies: TypeScript, React Native, Expo, NestJS, PostgreSQL, Microsoft Entra ID, Azure
     openSource: true
+    git:
+      summary: 1 repository · 1,511 commits · mobile, API and infrastructure
+      total: '1,511'
+      duration: 4 mo
+      activity:
+        from: Sep 2025
+        to: Sep 2026
+        total: '1,511'
+        levels: '00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002122331101000122100000000001001321011123211100002001110010000003101201400000000000001000000000000000000000000001000000'
+      repos:
+        - name: entraprise
+          note: React Native app, NestJS API, Azure infrastructure and docs
+          commits: 1,511
+          contributors: '3'
+          span: May 2026 – Sep 2026
     mockup: /images/products/entraprise/mockup.png
     intro: >-
       Entraprise runs the day to day of a member-based organization: who belongs, what
