@@ -110,8 +110,11 @@
                     <span class="open-source-item__name">{{ project.name }}</span>
                     <span class="open-source-item__meta">
                       {{ project.repos.length }} {{ project.repos.length === 1 ? 'repo' : 'repos' }}
-                      · {{ projectCommits(project) }} commits
+                      · {{ projectCommits(project) }} commits<template v-if="project.prs"> · {{ project.prs }} PRs</template>
                     </span>
+                  </div>
+                  <div v-if="project.active" class="open-source-active">
+                    {{ project.active }}<template v-if="project.cadence"> · {{ project.cadence }}</template>
                   </div>
                   <div v-for="repo in project.repos" :key="repo.name" class="open-source-repo">
                     <span v-if="repo.pending" class="open-source-repo__name">
@@ -564,6 +567,12 @@ export default {
 
   .open-source-project {
     margin-bottom: 0.4rem;
+  }
+
+  .open-source-active {
+    font-size: 0.7rem;
+    color: #7f8c8d;
+    padding-left: 0.75rem;
   }
 
   .open-source-repo {

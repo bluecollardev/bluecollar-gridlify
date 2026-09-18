@@ -16,6 +16,9 @@ owners:
     note: Our own libraries, platforms and tools
 projects:
   - name: Sheriff Scheduling
+    active: Dec 2019 – Jun 2020
+    prs: '60'
+    cadence: 4.1 pull requests per two-week sprint
     owner: bcgov
     org: BC Ministry of Justice & Attorney General
     role: Lead developer and top frontend committer
@@ -26,16 +29,23 @@ projects:
     technologies: React, TypeScript, Node.js, PostgreSQL, Keycloak, OpenShift
     repos:
       - name: bcgov/jag-shuber-frontend
+        prs: '26'
+        active: Jan – Jun 2020
         url: https://github.com/bcgov/jag-shuber-frontend
         commits: '847'
         contributors: '9'
         note: Scheduling UI
       - name: bcgov/jag-shuber-api
+        prs: '34'
+        active: Dec 2019 – Jun 2020
         url: https://github.com/bcgov/jag-shuber-api
         commits: '380'
         contributors: '10'
         note: Scheduling API
   - name: Name Request / NameX
+    active: Mar 2020 – Jan 2021
+    prs: '119'
+    cadence: 5.4 pull requests per two-week sprint
     owner: bcgov
     org: Service BC — BC Registries
     role: Lead developer on the public-facing application
@@ -48,21 +58,28 @@ projects:
     live: https://names.bcregistry.gov.bc.ca
     repos:
       - name: bcgov/namex
+        prs: '76'
+        active: Mar 2020 – Jan 2021
         url: https://github.com/bcgov/namex
         commits: '226'
         contributors: '42'
         note: Examination and approval engine
       - name: bcgov/namerequest
+        prs: '37'
+        active: Jun – Dec 2020
         url: https://github.com/bcgov/namerequest
         commits: '73'
         contributors: '39'
         note: Public front end
       - name: bcgov/namex-synonyms-api-py-client
+        prs: '6'
+        active: Apr – May 2020
         url: https://github.com/bcgov/namex-synonyms-api-py-client
         commits: '8'
         contributors: '4'
         note: Synonyms API client
   - name: Forest Operations Map
+    active: 2022 – 2023
     owner: bcgov
     org: BC Ministry of Forests / Natural Resources
     role: Senior developer
@@ -73,11 +90,13 @@ projects:
     live: https://fom.nrs.gov.bc.ca
     repos:
       - name: bcgov/nr-fom
+        active: 2022 – 2023
         url: https://github.com/bcgov/nr-fom
         commits: '59'
         contributors: '16'
         note: Public map, admin and API
   - name: Mediashare
+    active: Jun 2026 – Sep 2026
     owner: bluecollardev
     org: Blue Collar Development
     role: Author
@@ -88,12 +107,14 @@ projects:
     technologies: TypeScript, React Native, Expo, NestJS, MongoDB, Nx, AWS
     repos:
       - name: bluecollardev/mediashare
+        active: Jun – Sep 2026
         url: https://github.com/bluecollardev/mediashare
         commits: '549'
         contributors: '2'
         pending: true
         note: Monorepo — app, services and shared libraries (181 test suites)
   - name: QuickCommerce
+    active: 2014 – 2024
     owner: bluecollardev
     org: Blue Collar Development
     role: Author
@@ -104,26 +125,31 @@ projects:
     technologies: PHP, OpenCart, React, JavaScript, MySQL
     repos:
       - name: bluecollardev/quickcommerce
+        active: 2017 – 2024
         url: https://github.com/bluecollardev/quickcommerce
         commits: '1'
         contributors: '1'
         note: PHP vendor library and micro-service
       - name: bluecollardev/quickcommerce-react
+        active: 2017 – 2019
         url: https://github.com/bluecollardev/quickcommerce-react
         commits: '10'
         contributors: '1'
         note: React / Flux components
       - name: bluecollardev/quickcommerce-oc
+        active: 2017 – 2019
         url: https://github.com/bluecollardev/quickcommerce-oc
         commits: '—'
         contributors: '—'
         note: OpenCart enhancement pack
       - name: bluecollardev/quickcommerce-pos
+        active: 2017
         url: https://github.com/bluecollardev/quickcommerce-pos
         commits: '—'
         contributors: '—'
         note: Point-of-sale terminal in React
   - name: Rental.Cloud
+    active: Jul 2020 – Apr 2026
     owner: bluecollardev
     org: Blue Collar Development
     role: Author and technical lead
@@ -135,12 +161,14 @@ projects:
     live: https://thai.properties
     repos:
       - name: bluecollardev/rental-cloud-app
+        active: Jul 2020 – Apr 2026
         url: https://github.com/bluecollardev/rental-cloud-app
         commits: '3,048'
         contributors: '20'
         pending: true
         note: Vue 3 monorepo — customer site, merchant dashboard, mobile apps
   - name: Aries Cloud demo client
+    active: Sep 2019 – Jan 2023
     owner: bluecollardev
     org: BC Developer Exchange
     role: Author
@@ -150,11 +178,13 @@ projects:
     technologies: TypeScript, Hyperledger Aries
     repos:
       - name: bluecollardev/edx-ariescloud-client
+        active: 2019 – 2023
         url: https://github.com/bluecollardev/edx-ariescloud-client
         commits: '166'
         contributors: '3'
         note: Demo client
   - name: Strapi Launcher
+    active: 2022
     owner: bluecollardev
     org: Blue Collar Development
     role: Author
@@ -164,6 +194,7 @@ projects:
     technologies: JavaScript, Docker
     repos:
       - name: bluecollardev/strapi-launcher
+        active: 2022
         url: https://github.com/bluecollardev/strapi-launcher
         commits: '3'
         contributors: '1'

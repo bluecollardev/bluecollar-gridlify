@@ -28,6 +28,11 @@
             <div>
               <h3 class="os-project__name">{{ project.name }}</h3>
               <p class="os-project__org">{{ project.org }} · {{ project.role }}</p>
+              <p class="os-project__activity">
+                <span v-if="project.active">Active {{ project.active }}</span>
+                <span v-if="project.prs">{{ project.prs }} pull requests</span>
+                <span v-if="project.cadence">{{ project.cadence }}</span>
+              </p>
             </div>
             <a v-if="project.live" class="os-project__live" :href="project.live" target="_blank" rel="noopener">
               Live site ↗
@@ -48,7 +53,9 @@
               </a>
               <span class="os-repo__note">{{ repo.note }}</span>
               <span class="os-repo__meta">
+                <span v-if="repo.active">{{ repo.active }}</span>
                 <span><strong>{{ repo.commits }}</strong> commits</span>
+                <span v-if="repo.prs"><strong>{{ repo.prs }}</strong> PRs</span>
                 <span><strong>{{ repo.contributors }}</strong> contributors</span>
               </span>
             </li>
@@ -241,6 +248,21 @@ export default {
     color: #33587a;
     font-size: 0.9rem;
     white-space: nowrap;
+  }
+
+  &__activity {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    margin: 0.4rem 0 0;
+    color: #52606d;
+    font-size: 0.8rem;
+
+    span + span::before {
+      content: '·';
+      margin-right: 1rem;
+      color: #b6bcc0;
+    }
   }
 
   &__summary {
