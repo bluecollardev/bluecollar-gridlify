@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Index from '~/pages/Index.vue'
 import Company from '~/pages/Company.vue'
 import Product from '~/pages/Product.vue'
+import OpenSource from '~/pages/OpenSource.vue'
 import Contact from '~/pages/Contact.vue'
 import Blog from '~/pages/Blog.vue'
 import BlogPost from '~/templates/BlogPost.vue'
@@ -13,6 +14,12 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Index
+  },
+  {
+    // Directory of the public repositories, grouped by project
+    path: '/open-source',
+    name: 'OpenSource',
+    component: OpenSource
   },
   {
     // One page per product, driven by src/data/Products.yml

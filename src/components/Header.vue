@@ -17,6 +17,8 @@
           <li><a href="/company" aria-label="Websites" @click="hideMenu()">{{ $t('nav.ourPeople') }}</a></li>
           <li><a href="/case-studies" aria-label="Case Studies"
                  @click.prevent="viewCaseStudies()">{{ $t('nav.caseStudies') }}</a></li>
+          <li><a href="/open-source" aria-label="Open Source"
+                 @click.prevent="viewOpenSource()">{{ $t('nav.openSource') }}</a></li>
           <!-- The products sit in the home page's Open Source section; on mobile the
                menu is the only way to reach them without scrolling for it -->
           <li v-if="isMobile" v-for="product in products" :key="product.slug" class="product-menu-item">
@@ -111,6 +113,10 @@ export default {
      * Case Studies live in a modal on the home page; /case-studies renders the
      * home page and opens it, so the link works from any page and can be shared.
      */
+    viewOpenSource() {
+      this.hideMenu()
+      this.$router.push('/open-source').catch(() => {})
+    },
     viewProduct(slug) {
       this.hideMenu()
       this.$router.push(`/products/${slug}`).catch(() => {})

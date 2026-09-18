@@ -6,3 +6,8 @@ dist
 .idea
 .idea/**/*
 .vercel
+
+# Local env files (VITE_* values end up in the bundle - keep the files out of git)
+.env
+.env.*
+!.env.example

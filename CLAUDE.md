@@ -180,6 +180,7 @@ Set in the Vercel project (Settings → Environment Variables), not in the repo:
 | Variable | Required | Purpose |
 |---|---|---|
 | `RESEND_API_KEY` | yes | Server-side. Used by `api/contact.mjs` to send the contact form. Without it the endpoint returns 500 and the form shows an error. |
+| `VITE_GOOGLE_MAP_KEY` | no | Client-side, baked in at build time. Google Maps JavaScript API key for the contact section's map background. Without it the section falls back to its plain overlay. Restrict the key by HTTP referrer — anything `VITE_` prefixed is readable in the bundle. |
 | `VITE_LINE_ID` | no | Client-side, baked in at build time. A LINE ID or Official Account ID. When set, a LINE link appears alongside WhatsApp in the contact block. |
 
 Anything prefixed `VITE_` is exposed in the browser bundle. Never put a secret behind

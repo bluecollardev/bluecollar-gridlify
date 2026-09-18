@@ -1,0 +1,170 @@
+title: Open Source
+subtitle: >-
+  Public work, grouped by project. Commit and contributor counts come from the
+  GitHub API; where a project is a fork of a government repository, the count is
+  what we contributed, not the repository total.
+owners:
+  - id: bcgov
+    name: Government of British Columbia
+    account: github.com/bcgov
+    url: https://github.com/bcgov
+    note: Public-sector work, developed in the open and contributed as bcdevlucas
+  - id: bluecollardev
+    name: Blue Collar Development
+    account: github.com/bluecollardev
+    url: https://github.com/bluecollardev
+    note: Our own libraries, platforms and tools
+projects:
+  - name: Sheriff Scheduling
+    owner: bcgov
+    org: BC Ministry of Justice & Attorney General
+    role: Lead developer and top frontend committer
+    summary: >-
+      Scheduling for the BC Sheriff Service — roles and authorisation, admin,
+      sheriff locations, the scheduling components and UTC cross-timezone handling,
+      with Liquibase migrations. Internal government software, developed in the open.
+    technologies: React, TypeScript, Node.js, PostgreSQL, Keycloak, OpenShift
+    repos:
+      - name: bcgov/jag-shuber-frontend
+        url: https://github.com/bcgov/jag-shuber-frontend
+        commits: '847'
+        contributors: '9'
+        note: Scheduling UI
+      - name: bcgov/jag-shuber-api
+        url: https://github.com/bcgov/jag-shuber-api
+        commits: '380'
+        contributors: '10'
+        note: Scheduling API
+  - name: Name Request / NameX
+    owner: bcgov
+    org: Service BC — BC Registries
+    role: Lead developer on the public-facing application
+    summary: >-
+      The business- and organisation-name examination, research and approval engine
+      and its public UI: a synonyms API and Python client, word classification,
+      extra-provincial name handling, conflict analysis, payments, and NATS event
+      queues for state changes and notifications.
+    technologies: Python, Flask, Marshmallow, PostgreSQL, Solr, NATS, Vue.js, Keycloak
+    live: https://names.bcregistry.gov.bc.ca
+    repos:
+      - name: bcgov/namex
+        url: https://github.com/bcgov/namex
+        commits: '226'
+        contributors: '42'
+        note: Examination and approval engine
+      - name: bcgov/namerequest
+        url: https://github.com/bcgov/namerequest
+        commits: '73'
+        contributors: '39'
+        note: Public front end
+      - name: bcgov/namex-synonyms-api-py-client
+        url: https://github.com/bcgov/namex-synonyms-api-py-client
+        commits: '8'
+        contributors: '4'
+        note: Synonyms API client
+  - name: Forest Operations Map
+    owner: bcgov
+    org: BC Ministry of Forests / Natural Resources
+    role: Senior developer
+    summary: >-
+      The public map of forest operations, where people can see and comment on
+      planned harvesting in their area.
+    technologies: TypeScript, Angular, NestJS, PostGIS, OpenShift
+    live: https://fom.nrs.gov.bc.ca
+    repos:
+      - name: bcgov/nr-fom
+        url: https://github.com/bcgov/nr-fom
+        commits: '59'
+        contributors: '16'
+        note: Public map, admin and API
+  - name: Mediashare
+    owner: bluecollardev
+    org: Blue Collar Development
+    role: Author
+    summary: >-
+      The instructional-video platform behind PocketPT: playlists, sharing,
+      connections and tagging, as a React Native app over four NestJS services,
+      consolidated into a single Nx monorepo.
+    technologies: TypeScript, React Native, Expo, NestJS, MongoDB, Nx, AWS
+    repos:
+      - name: bluecollardev/mediashare
+        url: https://github.com/bluecollardev/mediashare
+        commits: '549'
+        contributors: '2'
+        pending: true
+        note: Monorepo — app, services and shared libraries (181 test suites)
+  - name: QuickCommerce
+    owner: bluecollardev
+    org: Blue Collar Development
+    role: Author
+    summary: >-
+      An e-commerce platform built on a customised OpenCart, with a PHP service
+      layer, React components and a set of storefront themes. Used across client
+      projects for a decade.
+    technologies: PHP, OpenCart, React, JavaScript, MySQL
+    repos:
+      - name: bluecollardev/quickcommerce
+        url: https://github.com/bluecollardev/quickcommerce
+        commits: '1'
+        contributors: '1'
+        note: PHP vendor library and micro-service
+      - name: bluecollardev/quickcommerce-react
+        url: https://github.com/bluecollardev/quickcommerce-react
+        commits: '10'
+        contributors: '1'
+        note: React / Flux components
+      - name: bluecollardev/quickcommerce-oc
+        url: https://github.com/bluecollardev/quickcommerce-oc
+        commits: '—'
+        contributors: '—'
+        note: OpenCart enhancement pack
+      - name: bluecollardev/quickcommerce-pos
+        url: https://github.com/bluecollardev/quickcommerce-pos
+        commits: '—'
+        contributors: '—'
+        note: Point-of-sale terminal in React
+  - name: Rental.Cloud
+    owner: bluecollardev
+    org: Blue Collar Development
+    role: Author and technical lead
+    summary: >-
+      The self-hosted alternative to Airbnb and Booking.com. The customer site,
+      merchant dashboard and iOS/Android builds are published as open source; the
+      listings API that ties a node into the network stays private.
+    technologies: Vue 3, TypeScript, Vite, Capacitor, Tailwind, Stripe, Google Maps
+    live: https://thai.properties
+    repos:
+      - name: bluecollardev/rental-cloud-app
+        url: https://github.com/bluecollardev/rental-cloud-app
+        commits: '3,048'
+        contributors: '20'
+        pending: true
+        note: Vue 3 monorepo — customer site, merchant dashboard, mobile apps
+  - name: Aries Cloud demo client
+    owner: bluecollardev
+    org: BC Developer Exchange
+    role: Author
+    summary: >-
+      A demo client showing how to implement verifiable credentials against
+      Hyperledger Aries Cloud Agent.
+    technologies: TypeScript, Hyperledger Aries
+    repos:
+      - name: bluecollardev/edx-ariescloud-client
+        url: https://github.com/bluecollardev/edx-ariescloud-client
+        commits: '166'
+        contributors: '3'
+        note: Demo client
+  - name: Strapi Launcher
+    owner: bluecollardev
+    org: Blue Collar Development
+    role: Author
+    summary: >-
+      Installs and runs a first Strapi project in Docker, on Windows, macOS and
+      Linux.
+    technologies: JavaScript, Docker
+    repos:
+      - name: bluecollardev/strapi-launcher
+        url: https://github.com/bluecollardev/strapi-launcher
+        commits: '3'
+        contributors: '1'
+        note: Launcher

@@ -51,6 +51,10 @@
                 <span class="label">CLEARANCE:</span>
                 <span class="value security-clearance">{{ profileData.clearance }}</span>
               </div>
+              <div class="field">
+                <span class="label">LANGUAGES:</span>
+                <span class="value">{{ profileData.languages }}</span>
+              </div>
             </div>
 
             <div class="about-section">
@@ -62,10 +66,13 @@
 
             <div class="skills-section">
               <div class="label">PRIMARY TECHNOLOGIES:</div>
-              <div class="tech-badges">
-                <span v-for="tech in profileData.primaryTech" :key="tech" class="tech-badge">
-                  {{ tech }}
-                </span>
+              <div v-for="category in profileData.techCategories" :key="category.name" class="tech-category">
+                <div class="tech-category__name">{{ category.name }}</div>
+                <div class="tech-badges">
+                  <span v-for="tech in category.items" :key="tech.name" class="tech-badge">
+                    {{ tech.name }} <em>{{ tech.years }}</em>
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -80,10 +87,45 @@
               <div class="label">RECENT MISSIONS:</div>
               <div class="missions-list">
                 <div v-for="(mission, index) in profileData.recentMissions" :key="index" class="mission-item">
-                  <div class="mission-company">{{ mission.company }}</div>
+                  <div class="mission-company">
+                    {{ mission.company }}
+                    <span v-if="mission.years" class="mission-years">{{ mission.years }}</span>
+                  </div>
                   <div class="mission-role">{{ mission.role }}</div>
                 </div>
               </div>
+            </div>
+
+            <div class="open-source-section">
+              <div class="label">OPEN SOURCE:</div>
+              <div class="open-source-stats">
+                <span>{{ openSource.totals.projects }} projects</span>
+                <span>{{ openSource.totals.repos }} repositories</span>
+                <span>{{ openSource.totals.commits }} commits</span>
+              </div>
+              <div v-for="group in openSource.groups" :key="group.owner.id" class="open-source-group">
+                <div class="open-source-group__name">{{ group.owner.account }}</div>
+                <div v-for="project in group.projects" :key="project.name" class="open-source-project">
+                  <div class="open-source-item">
+                    <span class="open-source-item__name">{{ project.name }}</span>
+                    <span class="open-source-item__meta">
+                      {{ project.repos.length }} {{ project.repos.length === 1 ? 'repo' : 'repos' }}
+                      · {{ projectCommits(project) }} commits
+                    </span>
+                  </div>
+                  <div v-for="repo in project.repos" :key="repo.name" class="open-source-repo">
+                    <span v-if="repo.pending" class="open-source-repo__name">
+                      {{ repo.name }} <em>publishing</em>
+                    </span>
+                    <a v-else class="open-source-repo__name" :href="repo.url" target="_blank"
+                       rel="noopener" @click.stop>{{ repo.name }}</a>
+                    <span class="open-source-repo__meta">{{ repo.commits }}</span>
+                  </div>
+                </div>
+              </div>
+              <button class="view-report-btn" @click.stop="viewOpenSource">
+                OPEN THE FULL DIRECTORY
+              </button>
             </div>
           </div>
         </div>
@@ -106,6 +148,8 @@
 </template>
 
 <script>
+import OpenSourceData from '~/data/OpenSource.yml'
+
 // Import resume data from JSON
 const resumeData = {
   personalInfo: {
@@ -124,52 +168,148 @@ export default {
         specialty: 'FULL-STACK MERCENARY',
         yearsOfService: this.calculateYearsOfService(),
         clearance: 'CSIS-LVL-2',
+        languages: 'ENGLISH · FRENCH · THAI',
         about: 'Full-stack and platform engineer with 15+ years shipping production software across payments, identity, government and e-commerce. Works from fundamentals over frameworks and moves fluidly between stacks.',
         recentMissions: [
           {
             company: 'Skin Tyee First Nation (Canada)',
-            role: 'Software Developer, Contract'
+            role: 'Software Developer, Contract',
+            years: '2026'
           },
           {
             company: 'CrashPad411 (USA)',
-            role: 'Technical Lead'
+            role: 'Technical Lead',
+            years: '2024 – 2026'
           },
           {
             company: 'Opn / Omise (Thailand)',
-            role: 'Senior Software Engineer, SSO + Identity'
+            role: 'Senior Software Engineer, SSO + Identity',
+            years: '2021 – 2024'
           },
           {
             company: 'CGI — BC Provincial Government',
-            role: 'Frontend Apps Lead'
+            role: 'Frontend Apps Lead',
+            years: '2019 – 2021'
           },
           {
             company: 'Agereh Technologies, formerly Carbeeza (Canada)',
-            role: 'Frontend Apps Lead'
+            role: 'Frontend Apps Lead',
+            years: '2017 – 2019'
           }
         ],
-        primaryTech: [
-          'TypeScript',
-          'React',
-          'React Native',
-          'Vue.js',
-          'Node.js',
-          'NestJS',
-          'Laravel',
-          'PHP',
-          'Python',
-          'Go',
-          'Keycloak',
-          'PostgreSQL',
-          'AWS',
-          'Azure',
-          'Kubernetes',
-          'UX/UI'
+        techCategories: [
+          {
+            name: 'Languages',
+            items: [
+              {name: 'JavaScript', years: '20 yr'},
+              {name: 'HTML / CSS', years: '20 yr'},
+              {name: 'PHP', years: '15 yr'},
+              {name: 'TypeScript', years: '10 yr'},
+              {name: 'Python', years: '3 yr'},
+              {name: 'Go', years: '3 yr'},
+              {name: 'C#', years: '3 yr'},
+              {name: 'Java', years: '2 yr'}
+            ]
+          },
+          {
+            name: 'Frontend',
+            items: [
+              {name: 'React', years: '8 yr'},
+              {name: 'React Native / Expo', years: '8 yr'},
+              {name: 'Vue.js', years: '8 yr'},
+              {name: 'Angular', years: '1 yr'}
+            ]
+          },
+          {
+            name: 'Backend & APIs',
+            items: [
+              {name: 'REST / OpenAPI', years: '15 yr'},
+              {name: 'WebSockets', years: '15 yr'},
+              {name: 'Node / Express', years: '10 yr'},
+              {name: 'Laravel', years: '10 yr'},
+              {name: 'NestJS', years: '5 yr'},
+              {name: 'Flask', years: '3 yr'},
+              {name: 'Spring Boot', years: '3 yr'},
+              {name: 'gRPC', years: '3 yr'},
+              {name: 'Quarkus', years: '2 yr'}
+            ]
+          },
+          {
+            name: 'Data',
+            items: [
+              {name: 'PostgreSQL / PostGIS', years: '10 yr'},
+              {name: 'MySQL', years: '10 yr'},
+              {name: 'ORMs', years: '15 yr'},
+              {name: 'MongoDB', years: '5 yr'},
+              {name: 'SQL Server', years: '3 yr'},
+              {name: 'Solr', years: '2 yr'}
+            ]
+          },
+          {
+            name: 'Cloud & DevOps',
+            items: [
+              {name: 'CI/CD', years: '10 yr'},
+              {name: 'AWS', years: '7 yr'},
+              {name: 'Docker', years: '7 yr'},
+              {name: 'Helm', years: '5 yr'},
+              {name: 'OpenShift', years: '4 yr'},
+              {name: 'Azure', years: '3 yr'},
+              {name: 'Kubernetes', years: '3 yr'},
+              {name: 'FluxCD', years: '3 yr'}
+            ]
+          },
+          {
+            name: 'Identity & messaging',
+            items: [
+              {name: 'OAuth2 / OIDC', years: '10 yr'},
+              {name: 'Keycloak', years: '7 yr'},
+              {name: 'RabbitMQ', years: '4 yr'},
+              {name: 'PCI-DSS scope', years: '3 yr'},
+              {name: 'NATS', years: '2 yr'},
+              {name: 'Kafka', years: '2 yr'},
+              {name: 'Microsoft Entra ID', years: '6 mo'}
+            ]
+          },
+          {
+            name: 'AI',
+            items: [
+              {name: 'Claude / Claude Code', years: '1 yr'},
+              {name: 'MCP servers', years: '1 yr'}
+            ]
+          }
         ],
         issueDate: new Date().getFullYear()
       }
     }
   },
+  computed: {
+    /** Open-source totals and per-owner grouping, counted from the data file. */
+    openSource() {
+      const groups = OpenSourceData.owners
+        .map(owner => ({owner, projects: OpenSourceData.projects.filter(p => p.owner === owner.id)}))
+        .filter(group => group.projects.length)
+      const repos = OpenSourceData.projects.flatMap(p => p.repos)
+
+      return {
+        groups,
+        totals: {
+          projects: OpenSourceData.projects.length,
+          repos: repos.length,
+          commits: repos.reduce((sum, r) => sum + this.toNumber(r.commits), 0).toLocaleString('en-US')
+        }
+      }
+    }
+  },
   methods: {
+    toNumber(value) {
+      return parseInt(String(value).replace(/,/g, ''), 10) || 0
+    },
+    projectCommits(project) {
+      return project.repos.reduce((sum, r) => sum + this.toNumber(r.commits), 0).toLocaleString('en-US')
+    },
+    viewOpenSource() {
+      this.$router.push('/open-source')
+    },
     calculateYearsOfService() {
       const startYear = 2006
       const currentYear = new Date().getFullYear()
@@ -213,12 +353,12 @@ export default {
     inset 0 -1px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
   font-family: 'Courier New', monospace;
-  transform: rotateX(2deg) rotateY(-2deg);
-  transition: all 0.3s ease;
+  transform: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 
   &:hover {
-    transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+    transform: rotateX(1deg) rotateY(-1deg) scale(1.01);
     box-shadow:
       0 15px 50px rgba(0, 0, 0, 0.7),
       inset 0 1px 0 rgba(255, 255, 255, 0.3),
@@ -385,6 +525,103 @@ export default {
   }
 }
 
+.open-source-section {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #ccc;
+
+  /* The bare .label further up the card renders white on the dark header; inside
+     the body it has to match the other section headings */
+  > .label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+
+  .open-source-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    font-size: 0.75rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+
+  .open-source-group {
+    margin-bottom: 0.5rem;
+
+    &__name {
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      color: #7f8c8d;
+      border-bottom: 1px solid #b6bcc0;
+      padding-bottom: 0.15rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .open-source-project {
+    margin-bottom: 0.4rem;
+  }
+
+  .open-source-repo {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    padding: 0.05rem 0 0.05rem 0.75rem;
+
+    &__name {
+      color: #34495e;
+      text-decoration: none;
+      word-break: break-all;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      em {
+        font-style: normal;
+        color: #7f8c8d;
+        border: 1px solid #b6bcc0;
+        border-radius: 3px;
+        padding: 0 0.25rem;
+        margin-left: 0.2rem;
+      }
+    }
+
+    &__meta {
+      color: #7f8c8d;
+      white-space: nowrap;
+    }
+  }
+
+  .open-source-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.15rem 0.75rem;
+    font-size: 0.75rem;
+    padding: 0.1rem 0;
+
+    &__name {
+      color: #2c3e50;
+      font-weight: 700;
+    }
+
+    &__meta {
+      color: #7f8c8d;
+      white-space: nowrap;
+    }
+  }
+
+  .view-report-btn {
+    margin-top: 0.5rem;
+  }
+}
+
 .missions-section {
   margin-top: 0.5rem;
   padding-top: 0.5rem;
@@ -409,6 +646,12 @@ export default {
     padding: 0.4rem 0.6rem;
     border-left: 3px solid #78b7d6;
     border-radius: 2px;
+  }
+
+  .mission-years {
+    float: right;
+    opacity: 0.7;
+    font-weight: 400;
   }
 
   .mission-company {
@@ -436,6 +679,18 @@ export default {
     margin-bottom: 0.5rem;
   }
 
+  .tech-category {
+    margin-top: 0.5rem;
+
+    &__name {
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #7b8794;
+      margin-bottom: 0.2rem;
+    }
+  }
+
   .tech-badges {
     display: flex;
     flex-wrap: wrap;
@@ -452,7 +707,13 @@ export default {
     letter-spacing: 0.5px;
     border: 1px solid #78b7d6;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+  em {
+    font-style: normal;
+    opacity: 0.65;
+    margin-left: 0.2rem;
   }
+}
 }
 
 .scouting-report-section {

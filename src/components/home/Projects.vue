@@ -6,6 +6,9 @@
                               lettersSelector=".letters" letterSelector=".letter" lineSelector=".line"/>
       <h2 v-else class="projects-section__title text-center">{{ content.title }}</h2>
       <p v-if="content.subtitle" class="projects-section__subtitle text-center">{{ content.subtitle }}</p>
+      <p class="projects-section__link text-center">
+        <router-link to="/open-source">See everything we have published →</router-link>
+      </p>
 
       <div class="projects-grid">
         <router-link v-for="project in content.items" :key="project.name"
@@ -78,6 +81,16 @@ export default {
   &__subtitle {
     color: rgba(255, 255, 255, 0.85);
     margin: 1.25rem 0 0;
+  }
+
+  &__link {
+    margin: 0.75rem 0 0;
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+      font-size: 0.95rem;
+    }
   }
 
   /* The section's own text should not inherit the hero text shadow */

@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import VueGoogleMaps from '@fawmi/vue-google-maps'
 import router from './router'
 import App from './App.vue'
 import i18n from './i18n'
@@ -26,4 +27,18 @@ app.config.globalProperties.$browserDetect = browserDetect()
 
 app.use(router)
 app.use(i18n)
+
+// The maps plugin was never registered after the Vue 3 migration, so <GMapMap>
+// rendered as an unknown element and the contact background stayed empty. Only
+// register it when a key is configured; without one the section keeps its overlay.
+const googleMapKey = import.meta.env.VITE_GOOGLE_MAP_KEY
+
+if (googleMapKey) {
+  app.use(VueGoogleMaps, {
+    load: {
+      key: googleMapKey
+    }
+  })
+}
+
 app.mount('#app')
