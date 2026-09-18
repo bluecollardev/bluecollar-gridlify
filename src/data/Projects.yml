@@ -16,11 +16,11 @@ items:
     icon: /images/projects/rental-cloud.svg
     tagline: The self-hosted alternative to Airbnb and Booking.com
     description: >-
-      Run your own rental marketplace instead of renting space on someone else's.
-      A multi-tenant, white-label listings platform behind CrashPad411 and others:
-      listings and search, Stripe payments, subscriptions and merchant payouts, and
-      iOS and Android apps. The front end is open source and ties into the network,
-      so customers can fine tune their own product.
+      An open-source rental marketplace app that ties into the Rental.Cloud network,
+      so customers run and fine tune their own product rather than renting space on
+      someone else's. Behind it sits the multi-tenant platform powering CrashPad411
+      and others: listings and search, Stripe payments, subscriptions and merchant
+      payouts, and iOS and Android builds.
     technologies: Vue 3, TypeScript, Capacitor, Laravel, PHP, MySQL, Stripe, RabbitMQ, Docker
     url: https://crashpad411.com
     openSource: false
