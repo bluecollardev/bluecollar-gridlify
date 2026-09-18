@@ -28,6 +28,27 @@
       "command": "npm run build"
     },
     {
+      "product": "Rental.Cloud",
+      "label": "Listings API",
+      "type": "local",
+      "cwd": "/Users/lucas/Workspaces/props-api",
+      "command": "php artisan route:list --json"
+    },
+    {
+      "product": "Rental.Cloud",
+      "label": "Onboarding portal",
+      "type": "local",
+      "cwd": "/Users/lucas/Workspaces/props-onboarding/frontend",
+      "command": "npm run build"
+    },
+    {
+      "product": "Rental.Cloud",
+      "label": "Build agents",
+      "type": "local",
+      "cwd": "/Users/lucas/Workspaces/props-agents",
+      "command": "docker compose config"
+    },
+    {
       "product": "Mediashare",
       "label": "Monorepo build",
       "type": "local",
@@ -56,6 +77,7 @@
     "entries to {\"type\": \"ado\", \"org\": \"dotproperties\", \"project\": \"Dot Properties\",",
     "\"definition\": \"<pipeline name>\"} once one of those is in place.",
     "GitHub Actions entries can replace the Mediashare and Entraprise locals once",
-    "bluecollardev/mediashare and bluecollardev/rental-cloud-app exist with workflows."
+    "bluecollardev/mediashare and bluecollardev/rental-cloud-app exist with workflows.",
+    "Deployment pipelines has no check: Deployments/templates/deploy-api-local-Report.yml does not parse (a '- pwsh:' step at line 145 sits outside the deployment job), so a repo-wide YAML check would report red on a template nothing references."
   ]
 }

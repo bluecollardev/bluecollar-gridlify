@@ -5,7 +5,7 @@ subtitle: >-
 items:
   - name: Mediashare
     builds:
-      checked: 18 Sep 2026
+      checked: 19 Sep 2026
       items:
         - name: Monorepo build
           status: passing
@@ -74,13 +74,19 @@ items:
         caption: Playback and sharing on mobile
   - name: Rental.Cloud
     builds:
-      checked: 18 Sep 2026
+      checked: 19 Sep 2026
       items:
         - name: Customer instances
           status: passing
         - name: Merchant dashboard
           status: passing
         - name: Marketing site
+          status: passing
+        - name: Listings API
+          status: passing
+        - name: Onboarding portal
+          status: passing
+        - name: Build agents
           status: passing
     slug: rental-cloud
     icon: /images/projects/rental-cloud.svg
@@ -92,7 +98,7 @@ items:
       Stripe payments, subscriptions and merchant payouts with configurable fees and
       commissions, and iOS and Android builds.
     ai:
-      title: AI that does the typing for you
+      title: AI that does the data entry for you
       intro: >-
         The platform speaks Model Context Protocol, so an assistant can work your listings
         the way a person would — search them, read them, write them and keep them current —
@@ -289,7 +295,7 @@ items:
             caption: Search and filters on the desktop site
   - name: Entraprise
     builds:
-      checked: 18 Sep 2026
+      checked: 19 Sep 2026
       items:
         - name: API
           status: passing
