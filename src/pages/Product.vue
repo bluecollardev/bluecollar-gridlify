@@ -66,7 +66,7 @@
         </div>
 
         <ul class="repo-list">
-          <li v-for="repo in product.git.repos" :key="repo.name" class="repo">
+          <li v-for="(repo, repoIndex) in product.git.repos" :key="repo.name" class="repo">
             <div class="repo__main">
               <span class="repo__name">{{ repo.name }}</span>
               <!-- Only the parts we publish carry the mark; the rest stay private -->
@@ -79,7 +79,7 @@
                 <span class="icon-github" aria-hidden="true"></span>
                 <span class="repo__source-label">Open source — publishing</span>
               </span>
-              <span class="repo__note">{{ repo.note }}</span>
+              <span class="repo__note">{{ tr(`products.${product.slug}.repos.${repoIndex}`, repo.note) }}</span>
             </div>
             <div class="repo__meta">
               <span><strong>{{ repo.commits }}</strong> {{ tr('products.ui.commits', 'commits') }}</span>
@@ -126,7 +126,7 @@
           <select :id="`example-${product.slug}`" v-model="exampleIndex" class="product-examples__select">
             <option v-for="(example, i) in product.examples" :key="example.name" :value="i">{{ example.name }}</option>
           </select>
-          <span v-if="activeExample && activeExample.blurb" class="product-examples__blurb">{{ activeExample.blurb }}</span>
+          <span v-if="activeExample && activeExample.blurb" class="product-examples__blurb">{{ tr(`products.${product.slug}.examples.${exampleIndex}`, activeExample.blurb) }}</span>
         </div>
 
         <p class="product-shots__hint text-center">{{ tr('products.ui.scrollForMore', 'Scroll for more →') }}</p>
@@ -136,8 +136,8 @@
       <div class="product-shots__track">
         <figure v-for="shot in shots" :key="shot.src" class="product-shot"
                 :class="{ 'product-shot--portrait': shot.portrait }">
-          <img class="lozad" :src="shot.src" :alt="shot.caption"/>
-          <figcaption>{{ shot.caption }}</figcaption>
+          <img class="lozad" :src="shot.src" :alt="caption(shot.caption)"/>
+          <figcaption>{{ caption(shot.caption) }}</figcaption>
         </figure>
       </div>
     </section>
@@ -191,6 +191,11 @@ export default {
     }
   },
   methods: {
+    /** Screenshot captions are keyed by their English text: the carousel swaps
+        whole lists when an example is picked, so positional keys would drift. */
+    caption (text) {
+      return this.tr(`products.captions.${text}`, text)
+    },
     /** Each year's levels are one character per day, Sunday first; chunk into weeks. */
     weeksFor(levels) {
       const out = []

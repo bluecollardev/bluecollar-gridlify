@@ -261,5 +261,22 @@
       "live": "live",
       "failing": "failing"
     }
+  },
+  "openSource": {
+    "title": "Open Source",
+    "ui": {
+      "projects": "projects",
+      "repositories": "repositories",
+      "commits": "commits",
+      "contributors": "contributors",
+      "prs": "PRs",
+      "active": "Active",
+      "liveSite": "Live site ↗",
+      "publishing": "publishing",
+      "footer": "Everything above is public. The accounts are",
+      "and": "and",
+      "getInTouch": "Get in touch",
+      "backHome": "Back to Blue Collar"
+    }
   }
 }

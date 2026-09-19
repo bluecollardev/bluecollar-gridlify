@@ -2,12 +2,12 @@
   <Layout id="open-source-page">
     <section class="os-hero hero-section angle">
       <div class="os-hero__inner">
-        <h1 class="os-hero__title">{{ content.title }}</h1>
-        <p class="os-hero__subtitle">{{ content.subtitle }}</p>
+        <h1 class="os-hero__title">{{ tr('openSource.title', content.title) }}</h1>
+        <p class="os-hero__subtitle">{{ tr('openSource.subtitle', content.subtitle) }}</p>
         <p class="os-hero__stats">
-          <span>{{ totals.projects }} projects</span>
-          <span>{{ totals.repos }} repositories</span>
-          <span>{{ totals.commits }} commits</span>
+          <span>{{ totals.projects }} {{ tr('openSource.ui.projects', 'projects') }}</span>
+          <span>{{ totals.repos }} {{ tr('openSource.ui.repositories', 'repositories') }}</span>
+          <span>{{ totals.commits }} {{ tr('openSource.ui.commits', 'commits') }}</span>
         </p>
       </div>
     </section>
@@ -16,37 +16,38 @@
       <div class="os-list__inner">
         <div v-for="group in groups" :key="group.owner.id" class="os-group">
           <div class="os-group__head">
-            <h2 class="os-group__name">{{ group.owner.name }}</h2>
+            <h2 class="os-group__name">{{ tr(`openSource.owners.${group.owner.id}.name`, group.owner.name) }}</h2>
             <a class="os-group__account" :href="group.owner.url" target="_blank" rel="noopener">{{ group.owner.account }} ↗</a>
           </div>
-          <p class="os-group__note">{{ group.owner.note }}</p>
+          <p class="os-group__note">{{ tr(`openSource.owners.${group.owner.id}.note`, group.owner.note) }}</p>
 
         <article v-for="project in group.projects" :key="project.name" class="os-project">
+          <!-- index into the flat project list so keys survive regrouping -->
           <!-- a div, not <header>: the site styles every header element as the fixed
                site header, which flung this to the top of the page -->
           <div class="os-project__head">
             <div>
               <h3 class="os-project__name">{{ project.name }}</h3>
-              <p class="os-project__org">{{ project.org }} · {{ project.role }}</p>
+              <p class="os-project__org">{{ project.org }} · {{ tr(`openSource.projects.${indexOf(project)}.role`, project.role) }}</p>
               <p class="os-project__activity">
-                <span v-if="project.active">Active {{ project.active }}</span>
-                <span v-if="project.prs">{{ project.prs }} pull requests</span>
-                <span v-if="project.cadence">{{ project.cadence }}</span>
+                <span v-if="project.active">{{ tr('openSource.ui.active', 'Active') }} {{ project.active }}</span>
+                <span v-if="project.prs">{{ project.prs }} {{ tr('openSource.ui.prs', 'pull requests') }}</span>
+                <span v-if="project.cadence">{{ tr(`openSource.projects.${indexOf(project)}.cadence`, project.cadence) }}</span>
               </p>
             </div>
             <a v-if="project.live" class="os-project__live" :href="project.live" target="_blank" rel="noopener">
-              Live site ↗
+              {{ tr('openSource.ui.liveSite', 'Live site ↗') }}
             </a>
           </div>
 
-          <p class="os-project__summary">{{ project.summary }}</p>
+          <p class="os-project__summary">{{ tr(`openSource.projects.${indexOf(project)}.summary`, project.summary) }}</p>
           <p v-if="project.technologies" class="os-project__tech">{{ project.technologies }}</p>
 
           <ul class="os-repos">
             <li v-for="repo in project.repos" :key="repo.name" class="os-repo">
               <span v-if="repo.pending" class="os-repo__name os-repo__name--pending">
                 <span class="icon-github" aria-hidden="true"></span> {{ repo.name }}
-                <em>publishing</em>
+                <em>{{ tr('openSource.ui.publishing', 'publishing') }}</em>
               </span>
               <a v-else class="os-repo__name" :href="repo.url" target="_blank" rel="noopener">
                 <span class="icon-github" aria-hidden="true"></span> {{ repo.name }}
@@ -54,9 +55,9 @@
               <span class="os-repo__note">{{ repo.note }}</span>
               <span class="os-repo__meta">
                 <span v-if="repo.active">{{ repo.active }}</span>
-                <span><strong>{{ repo.commits }}</strong> commits</span>
-                <span v-if="repo.prs"><strong>{{ repo.prs }}</strong> PRs</span>
-                <span><strong>{{ repo.contributors }}</strong> contributors</span>
+                <span><strong>{{ repo.commits }}</strong> {{ tr('openSource.ui.commits', 'commits') }}</span>
+                <span v-if="repo.prs"><strong>{{ repo.prs }}</strong> {{ tr('openSource.ui.prs', 'PRs') }}</span>
+                <span><strong>{{ repo.contributors }}</strong> {{ tr('openSource.ui.contributors', 'contributors') }}</span>
               </span>
             </li>
           </ul>
@@ -67,14 +68,14 @@
 
     <section class="os-footer">
       <div class="os-footer__inner">
-        <p>Everything above is public. The accounts are
+        <p>{{ tr('openSource.ui.footer', 'Everything above is public. The accounts are') }}
           <a href="https://github.com/bluecollardev" target="_blank" rel="noopener">github.com/bluecollardev</a>
-          and
+          {{ tr('openSource.ui.and', 'and') }}
           <a href="https://github.com/bcdevlucas" target="_blank" rel="noopener">github.com/bcdevlucas</a>.
         </p>
         <div class="os-footer__actions">
-          <a class="os-button os-button--primary" href="/#contact">Get in touch</a>
-          <router-link class="os-button" to="/">Back to Blue Collar</router-link>
+          <a class="os-button os-button--primary" href="/#contact">{{ tr('openSource.ui.getInTouch', 'Get in touch') }}</a>
+          <router-link class="os-button" to="/">{{ tr('openSource.ui.backHome', 'Back to Blue Collar') }}</router-link>
         </div>
       </div>
     </section>
@@ -83,11 +84,20 @@
 
 <script>
 import Layout from '~/layouts/Default.vue'
+import LocalizedContent from '~/core/mixins/LocalizedContentMixin'
 import OpenSourceData from '~/data/OpenSource.yml'
 
 export default {
+  mixins: [LocalizedContent],
   components: {
     Layout
+  },
+  methods: {
+    /** Translations are keyed by position in the flat project list, which the
+        owner grouping reorders — so look the index up rather than assume it. */
+    indexOf (project) {
+      return this.content.projects.indexOf(project)
+    }
   },
   computed: {
     content() {
