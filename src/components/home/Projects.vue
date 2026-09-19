@@ -1,13 +1,13 @@
 <template>
   <section id="projects" class="hero-section projects-section angle text-shadow-none">
     <div class="projects-section__inner">
-      <typewriter-text-effect v-if="!isServer" tag="h2" :text="content.title"
+      <typewriter-text-effect v-if="!isServer" tag="h2" :text="tr('products.section.title', content.title)"
                               class="title projects-section__title text-center"
                               lettersSelector=".letters" letterSelector=".letter" lineSelector=".line"/>
-      <h2 v-else class="projects-section__title text-center">{{ content.title }}</h2>
-      <p v-if="content.subtitle" class="projects-section__subtitle text-center">{{ content.subtitle }}</p>
+      <h2 v-else class="projects-section__title text-center">{{ tr('products.section.title', content.title) }}</h2>
+      <p v-if="content.subtitle" class="projects-section__subtitle text-center">{{ tr('products.section.subtitle', content.subtitle) }}</p>
       <p class="projects-section__link text-center">
-        <router-link to="/open-source">See everything we have published →</router-link>
+        <router-link to="/open-source">{{ tr('products.section.seeAll', 'See everything we have published →') }}</router-link>
       </p>
 
       <div class="projects-grid">
@@ -19,13 +19,13 @@
             <a v-if="project.openSource && project.github" :href="project.github" target="_blank" rel="noopener"
                class="project-card__source" :aria-label="`${project.name} on GitHub`" @click.stop>
               <span class="icon-github" aria-hidden="true"></span>
-              <span class="project-card__source-label">Open source</span>
+              <span class="project-card__source-label">{{ tr('products.section.openSource', 'Open source') }}</span>
             </a>
           </div>
-          <p class="project-card__tagline">{{ project.tagline }}</p>
-          <p class="project-card__description">{{ project.description }}</p>
+          <p class="project-card__tagline">{{ tr(`products.${project.slug}.tagline`, project.tagline) }}</p>
+          <p class="project-card__description">{{ tr(`products.${project.slug}.description`, project.description) }}</p>
           <p v-if="project.technologies" class="project-card__tech">{{ project.technologies }}</p>
-          <span class="project-card__more">Learn more →</span>
+          <span class="project-card__more">{{ tr('products.section.learnMore', 'Learn more →') }}</span>
         </router-link>
       </div>
     </div>
@@ -35,8 +35,10 @@
 <script>
 import ProductsData from '~/data/Products.yml'
 import TypewriterTextEffect from '~/core/components/text/Typewriter.vue'
+import LocalizedContent from '~/core/mixins/LocalizedContentMixin'
 
 export default {
+  mixins: [LocalizedContent],
   components: {
     TypewriterTextEffect
   },

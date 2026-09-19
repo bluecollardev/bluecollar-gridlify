@@ -199,5 +199,67 @@
     "downloadPdfNote": "Case studies only · 2 MB",
     "downloadPdfShots": "Portfolio + screenshots (PDF)",
     "downloadPdfShotsNote": "With the screenshot appendix · 7 MB"
+  },
+  "products": {
+    "section": {
+      "title": "Open Source at Heart",
+      "subtitle": "We have worked on open source for years, and we like to give back to the community that we build on.",
+      "seeAll": "See everything we have published →",
+      "learnMore": "Learn more →",
+      "openSource": "Open source"
+    },
+    "ui": {
+      "repositories": "repositories",
+      "repository": "repository",
+      "commits": "commits",
+      "ofWork": "of work",
+      "testSuites": "test suites",
+      "verified": "verified",
+      "viewSource": "View the source",
+      "talkToUs": "Talk to us",
+      "getInTouch": "Get in touch",
+      "backHome": "Back to Blue Collar",
+      "lookInside": "A look inside",
+      "liveExample": "Live example",
+      "scrollForMore": "Scroll for more →",
+      "contributors": "contributors",
+      "prs": "PRs",
+      "passing": "passing",
+      "comingSoon": "coming soon"
+    },
+    "mediashare": {
+      "tagline": "Open-source media sharing for React Native and NestJS",
+      "intro": "Mediashare is a media-sharing platform for people who teach with video. Content is organised into playlists — a session, a programme, a course — that can be shared with a person, a group or the public, and watched on a phone as easily as on a laptop."
+    },
+    "rental-cloud": {
+      "tagline": "The self-hosted alternative to Airbnb and Booking.com",
+      "ai": {
+        "title": "AI that does the data entry for you"
+      }
+    },
+    "entraprise": {
+      "tagline": "Member and operations apps on Microsoft Entra ID"
+    },
+    "duration": {
+      "mediashare": "3 mo",
+      "rental-cloud": "5 yr 9 mo",
+      "entraprise": "4 mo"
+    },
+    "builds": {
+      "Customer instances": "Customer instances",
+      "Merchant dashboard": "Merchant dashboard",
+      "Marketing site": "Marketing site",
+      "Listings API": "Listings API",
+      "Onboarding portal": "Onboarding portal",
+      "Build agents": "Build agents",
+      "Monorepo build": "Monorepo build",
+      "API": "API"
+    },
+    "status": {
+      "passing": "passing",
+      "coming soon": "coming soon",
+      "live": "live",
+      "failing": "failing"
+    }
   }
 }

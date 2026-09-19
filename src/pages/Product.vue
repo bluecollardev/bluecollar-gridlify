@@ -4,29 +4,29 @@
       <div class="product-hero__inner">
         <img v-if="product.icon" class="product-hero__icon" :src="product.icon" alt="" aria-hidden="true"/>
         <h1 class="product-hero__name">{{ product.name }}</h1>
-        <p class="product-hero__tagline">{{ product.tagline }}</p>
+        <p class="product-hero__tagline">{{ tr(`products.${product.slug}.tagline`, product.tagline) }}</p>
         <p v-if="product.git" class="product-hero__git">
-          <span>{{ product.git.repos.length }} {{ product.git.repos.length === 1 ? 'repository' : 'repositories' }}</span>
-          <span>{{ product.git.total }} commits</span>
-          <span>{{ product.git.duration }} of work</span>
-          <span v-if="product.git.tests">{{ product.git.tests }} test suites</span>
+          <span>{{ product.git.repos.length }} {{ product.git.repos.length === 1 ? tr('products.ui.repository', 'repository') : tr('products.ui.repositories', 'repositories') }}</span>
+          <span>{{ product.git.total }} {{ tr('products.ui.commits', 'commits') }}</span>
+          <span>{{ tr(`products.duration.${product.slug}`, product.git.duration) }} {{ tr('products.ui.ofWork', 'of work') }}</span>
+          <span v-if="product.git.tests">{{ product.git.tests }} {{ tr('products.ui.testSuites', 'test suites') }}</span>
         </p>
         <p v-if="product.builds" class="product-hero__builds">
           <span v-for="build in product.builds.items" :key="build.name" class="product-build">
             <span class="product-build__dot" aria-hidden="true"></span>
-            {{ build.name }} <em>{{ build.status }}</em>
+            {{ tr(`products.builds.${build.name}`, build.name) }} <em>{{ tr(`products.status.${build.status}`, build.status) }}</em>
           </span>
-          <span class="product-hero__builds-note">verified {{ product.builds.checked }}</span>
+          <span class="product-hero__builds-note">{{ tr('products.ui.verified', 'verified') }} {{ product.builds.checked }}</span>
         </p>
 
-        <p v-if="product.intro" class="product-hero__intro">{{ product.intro }}</p>
+        <p v-if="product.intro" class="product-hero__intro">{{ tr(`products.${product.slug}.intro`, product.intro) }}</p>
 
         <div class="product-hero__actions">
           <a v-if="product.github" class="product-button product-button--primary" :href="product.github"
              target="_blank" rel="noopener">
-            <span class="icon-github" aria-hidden="true"></span> View the source
+            <span class="icon-github" aria-hidden="true"></span> {{ tr('products.ui.viewSource', 'View the source') }}
           </a>
-          <a class="product-button" href="/#contact">Talk to us</a>
+          <a class="product-button" href="/#contact">{{ tr('products.ui.talkToUs', 'Talk to us') }}</a>
         </div>
 
         <img v-if="product.mockup" class="product-hero__mockup lozad" :src="product.mockup"
@@ -69,11 +69,21 @@
           <li v-for="repo in product.git.repos" :key="repo.name" class="repo">
             <div class="repo__main">
               <span class="repo__name">{{ repo.name }}</span>
+              <!-- Only the parts we publish carry the mark; the rest stay private -->
+              <a v-if="repo.openSource && repo.github" class="repo__source" :href="repo.github"
+                 target="_blank" rel="noopener" :aria-label="`${repo.name} on GitHub`">
+                <span class="icon-github" aria-hidden="true"></span>
+                <span class="repo__source-label">Open source</span>
+              </a>
+              <span v-else-if="repo.openSource" class="repo__source repo__source--pending">
+                <span class="icon-github" aria-hidden="true"></span>
+                <span class="repo__source-label">Open source — publishing</span>
+              </span>
               <span class="repo__note">{{ repo.note }}</span>
             </div>
             <div class="repo__meta">
-              <span><strong>{{ repo.commits }}</strong> commits</span>
-              <span><strong>{{ repo.contributors }}</strong> contributors</span>
+              <span><strong>{{ repo.commits }}</strong> {{ tr('products.ui.commits', 'commits') }}</span>
+              <span><strong>{{ repo.contributors }}</strong> {{ tr('products.ui.contributors', 'contributors') }}</span>
             </div>
           </li>
         </ul>
@@ -82,44 +92,44 @@
 
     <section v-if="product.features" class="product-features">
       <div class="product-features__inner">
-        <div v-for="feature in product.features" :key="feature.title" class="product-feature">
-          <h2 class="product-feature__title">{{ feature.title }}</h2>
-          <p class="product-feature__body">{{ feature.body }}</p>
+        <div v-for="(feature, i) in product.features" :key="feature.title" class="product-feature">
+          <h2 class="product-feature__title">{{ tr(`products.${product.slug}.features.${i}.title`, feature.title) }}</h2>
+          <p class="product-feature__body">{{ tr(`products.${product.slug}.features.${i}.body`, feature.body) }}</p>
         </div>
       </div>
     </section>
 
     <section v-if="product.ai" class="product-ai">
       <div class="product-ai__inner">
-        <h2 class="product-ai__title text-center">{{ product.ai.title }}</h2>
-        <p class="product-ai__intro text-center">{{ product.ai.intro }}</p>
+        <h2 class="product-ai__title text-center">{{ tr(`products.${product.slug}.ai.title`, product.ai.title) }}</h2>
+        <p class="product-ai__intro text-center">{{ tr(`products.${product.slug}.ai.intro`, product.ai.intro) }}</p>
 
         <div class="product-ai__grid">
-          <div v-for="item in product.ai.items" :key="item.title" class="product-ai-card">
-            <h3 class="product-ai-card__title">{{ item.title }}</h3>
-            <p class="product-ai-card__body">{{ item.body }}</p>
+          <div v-for="(item, i) in product.ai.items" :key="item.title" class="product-ai-card">
+            <h3 class="product-ai-card__title">{{ tr(`products.${product.slug}.ai.items.${i}.title`, item.title) }}</h3>
+            <p class="product-ai-card__body">{{ tr(`products.${product.slug}.ai.items.${i}.body`, item.body) }}</p>
             <span v-if="item.status" class="product-ai-card__status"
-                  :class="`product-ai-card__status--${item.status.replace(/\s+/g, '-')}`">{{ item.status }}</span>
+                  :class="`product-ai-card__status--${item.status.replace(/\s+/g, '-')}`">{{ tr(`products.status.${item.status}`, item.status) }}</span>
           </div>
         </div>
 
-        <p v-if="product.ai.note" class="product-ai__note text-center">{{ product.ai.note }}</p>
+        <p v-if="product.ai.note" class="product-ai__note text-center">{{ tr(`products.${product.slug}.ai.note`, product.ai.note) }}</p>
       </div>
     </section>
 
     <section v-if="shots.length" class="product-shots">
       <div class="product-shots__inner">
-        <h2 class="product-shots__title text-center">A look inside</h2>
+        <h2 class="product-shots__title text-center">{{ tr('products.ui.lookInside', 'A look inside') }}</h2>
 
         <div v-if="product.examples" class="product-examples">
-          <label class="product-examples__label" :for="`example-${product.slug}`">Live example</label>
+          <label class="product-examples__label" :for="`example-${product.slug}`">{{ tr('products.ui.liveExample', 'Live example') }}</label>
           <select :id="`example-${product.slug}`" v-model="exampleIndex" class="product-examples__select">
             <option v-for="(example, i) in product.examples" :key="example.name" :value="i">{{ example.name }}</option>
           </select>
           <span v-if="activeExample && activeExample.blurb" class="product-examples__blurb">{{ activeExample.blurb }}</span>
         </div>
 
-        <p class="product-shots__hint text-center">Scroll for more →</p>
+        <p class="product-shots__hint text-center">{{ tr('products.ui.scrollForMore', 'Scroll for more →') }}</p>
       </div>
       <!-- A carousel rather than a grid: the shots are a mix of wide and tall, which
            never lined up in columns -->
@@ -136,8 +146,8 @@
       <div class="product-footer__inner">
         <p v-if="product.technologies" class="product-footer__tech">{{ product.technologies }}</p>
         <div class="product-footer__actions">
-          <a class="product-button product-button--primary" href="/#contact">Get in touch</a>
-          <router-link class="product-button" to="/">Back to Blue Collar</router-link>
+          <a class="product-button product-button--primary" href="/#contact">{{ tr('products.ui.getInTouch', 'Get in touch') }}</a>
+          <router-link class="product-button" to="/">{{ tr('products.ui.backHome', 'Back to Blue Collar') }}</router-link>
         </div>
       </div>
     </section>
@@ -148,9 +158,11 @@
 import lozad from 'lozad'
 
 import Layout from '~/layouts/Default.vue'
+import LocalizedContent from '~/core/mixins/LocalizedContentMixin'
 import ProductsData from '~/data/Products.yml'
 
 export default {
+  mixins: [LocalizedContent],
   components: {
     Layout
   },
@@ -483,6 +495,36 @@ export default {
     span {
       color: #7b8794;
       font-size: 0.8rem;
+    }
+  }
+}
+
+.repo__source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.6rem;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid #cbd6e0;
+  border-radius: 999px;
+  color: #33587a;
+  font-size: 0.7rem;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus-visible {
+    border-color: #33587a;
+    background: rgba(51, 88, 122, 0.06);
+  }
+
+  &--pending {
+    color: #7b8794;
+
+    &:hover {
+      background: none;
+      border-color: #cbd6e0;
     }
   }
 }
