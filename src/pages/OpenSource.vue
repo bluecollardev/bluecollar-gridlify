@@ -364,7 +364,9 @@ export default {
     text-align: center;
   }
 
-  a {
+  /* Only the inline links: a bare `a` here outranked .os-button--primary and
+     turned the Get in touch label white on its white button */
+  p a {
     color: #fff;
   }
 
