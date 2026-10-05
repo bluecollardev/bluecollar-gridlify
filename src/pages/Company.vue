@@ -47,12 +47,8 @@
 
     <!-- Resume Modal -->
     <content-detail-modal ref="resumeModal" title="Resume - Lucas Michael Lopatka">
-      <div class="resume-viewer" style="padding-top: 5rem; height: 100%;">
-        <iframe
-          src="/docs/resume.lucas-lopatka.pdf#toolbar=1&navpanes=0&scrollbar=1"
-          width="100%"
-          style="border: none; height: calc(100vh - 54px - 5rem);"
-        ></iframe>
+      <div class="resume-viewer" style="padding-top: 5rem;">
+        <resume-viewer ref="resumeViewer" src="/docs/resume.lucas-lopatka.pdf" />
       </div>
     </content-detail-modal>
 
@@ -88,6 +84,7 @@ import ContentDetailModal from '~/components/layouts/ContentDetailModal.vue'
 import Services from '~/components/home/Services.vue'
 import Team from '~/components/company/Team.vue'
 import Profile from '~/components/company/Profile.vue'
+import ResumeViewer from '~/components/company/ResumeViewer.vue'
 
 // Import static blocks
 import ProcessBlock from '~/blocks/ProcessBlock.vue'
@@ -141,6 +138,7 @@ export default {
     Services,
     Team,
     Profile,
+    ResumeViewer,
     VideoHeroLayout01Col,
     HeroLayout01Col,
     HeroLayout02Col02,
@@ -303,6 +301,7 @@ export default {
     viewResume() {
       if (this.$refs.resumeModal) {
         this.$refs.resumeModal.viewDetail()
+        this.$nextTick(() => this.$refs.resumeViewer && this.$refs.resumeViewer.load())
       }
     }
   },
