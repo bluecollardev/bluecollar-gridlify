@@ -1,6 +1,7 @@
 <template>
   <Layout id="home-page">
     <hero-layout01-col
+        id="hero"
         bgColor="transparent"
         title="We Build User Experiences That Reel in the Results"
         subtitle=""
@@ -621,6 +622,13 @@ export default {
 #home-page section#services {
   position: relative;
   z-index: 4;
+}
+
+/* The fishing hero sits above #services, or #services (which overlaps it) covers
+   the hero's angled bottom edge. */
+#home-page section#hero {
+  position: relative;
+  z-index: 5;
 }
 
 #rock {

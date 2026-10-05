@@ -46,7 +46,7 @@
     <profile ref="profile" @view-resume="viewResume" />
 
     <!-- Resume Modal -->
-    <content-detail-modal ref="resumeModal" title="Resume - Lucas Michael Lopatka">
+    <content-detail-modal ref="resumeModal" title="Resume - Lucas Michael Lopatka" :scrollable="true">
       <div class="resume-viewer" style="padding-top: 5rem;">
         <resume-viewer ref="resumeViewer" src="/docs/resume.lucas-lopatka.pdf" />
       </div>

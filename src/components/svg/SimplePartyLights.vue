@@ -29,12 +29,14 @@ export default {
 
 <style lang="scss">
 .party-lights-wrapper {
+  /* Fill the whole section (top to bottom) so the section's angled clip-path trims
+     the lights to the same edge, instead of a fixed height stopping short of it */
   width: 100%;
-  height: 130vh;
   position: absolute;
   z-index: 1;
   overflow: hidden;
   top: 0;
+  bottom: 0;
 }
 
 .backdrop {
