@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .resume-pages {
   display: flex;
   flex-direction: column;
@@ -76,6 +76,31 @@ export default {
 }
 .resume-download {
   cursor: pointer;
+}
+
+/* On desktop, match the profile's "View resume" button */
+@media screen and (min-width: 52em) {
+  .resume-download {
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #78b7d6 0%, #5a9db8 100%);
+    color: #1a1a1a;
+    font-size: 0.75rem;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #78b7d6;
+    border-radius: 3px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: linear-gradient(135deg, #5a9db8 0%, #78b7d6 100%);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      transform: translateY(-2px);
+    }
+  }
 }
 .resume-page {
   max-width: 100%;

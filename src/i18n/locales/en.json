@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Blue Collar Dev - Local Software and App Development in Bangkok, Thailand",
-    "description": "Blue Collar Development is a boutique software development house located in Bangkok, Thailand. Specializing in mobile (iOS/Android), hybrid and web app development, Blue Collar creates amazing applications using cutting edge technology to help you bring your concept to life.",
-    "keywords": "blue collar, boutique software, software development, hybrid app development, mobile app development, website development, local developers, IT consulting, bangkok, thailand"
+    "title": "Blue Collar Dev - Software and App Development",
+    "description": "Blue Collar Development is a boutique software development house working online with clients anywhere. Specializing in mobile (iOS/Android), hybrid and web app development, Blue Collar creates amazing applications using cutting edge technology to help you bring your concept to life.",
+    "keywords": "blue collar, boutique software, software development, hybrid app development, mobile app development, website development, remote developers, IT consulting"
   },
   "contact": {
     "title": "Get in Touch",
-    "location": "Blue Collar is located in Bangkok, Thailand, and provides IT consulting services for customers in Bangkok, Thailand. We're also open to remote work.",
+    "location": "Blue Collar works online, with clients anywhere in the world.",
     "contactInfo": "If you'd like to get in touch with one of our people, please call {phone}, send us an {email}, or use the handy form below and let one of our experts help you today.",
     "phone": "+66 65-807-1545",
     "email": "e-mail",
@@ -28,7 +28,7 @@
   },
   "footer": {
     "copyright": "© 2006-2026 Blue Collar Development",
-    "location": "Bangkok, Thailand. All rights reserved."
+    "location": "All rights reserved."
   },
   "pricing": {
     "services": {
@@ -46,7 +46,7 @@
       },
       "webDesign": {
         "title": "Web Design",
-        "description": "We collaborate with our clients to deliver a professionally designed accelerated mobile website, integrated with high conversion landing pages and the client company's branding. Our talent comes the Bangkok community, all of whom are passionate about building products optimized for both desktop and mobile.",
+        "description": "We collaborate with our clients to deliver a professionally designed accelerated mobile website, integrated with high conversion landing pages and the client company's branding. Our people are all passionate about building products optimized for both desktop and mobile.",
         "link": "/websites",
         "linkText": "Learn More"
       },
@@ -72,7 +72,7 @@
   },
   "common": {
     "siteName": "Blue Collar Development",
-    "siteDescription": "Blue Collar Development, Bangkok, Thailand"
+    "siteDescription": "Blue Collar Development"
   },
   "nav": {
     "home": "Home",
